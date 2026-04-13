@@ -128,7 +128,9 @@ export default function AccountPage() {
       { label: "Owned Assets", value: purchasedItems.length, tone: "text-white" },
       {
         label: "Latest Order",
-        value: latestOrder ? latestOrder.id.replace("order-", "#") : "None",
+        value: latestOrder
+          ? `#${latestOrder.id.replace("order-", "").slice(0, 12)}`
+          : "None",
         tone: "text-grey-azure",
       },
     ],
@@ -161,7 +163,7 @@ export default function AccountPage() {
 
   return (
     <PageTransition>
-      <div className="mx-auto max-w-7xl px-6 pb-16 pt-12">
+      <div className="mx-auto max-w-7xl px-6 pb-16 pt-4">
         <section className="glass mb-8 overflow-hidden rounded-3xl p-6 md:p-8">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-2xl">
@@ -188,10 +190,16 @@ export default function AccountPage() {
               {libraryStats.map((stat) => (
                 <div
                   key={stat.label}
-                  className="rounded-2xl border border-white/[0.06] bg-white/[0.03] px-4 py-3"
+                  className="min-w-0 overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.03] px-4 py-3"
                 >
                   <p className="text-[10px] uppercase tracking-wider text-muted/60">{stat.label}</p>
-                  <p className={cn("mt-2 text-lg font-bold", stat.tone)}>{stat.value}</p>
+                  <p className={cn(
+                    "mt-2 font-bold break-all",
+                    stat.label === "Latest Order" ? "text-sm" : "text-lg",
+                    stat.tone
+                  )}>
+                    {stat.value}
+                  </p>
                 </div>
               ))}
             </div>
@@ -418,20 +426,40 @@ export default function AccountPage() {
                           </div>
                           <button
                             type="button"
-                            onClick={() =>
+                            onClick={() => {
+                              const trackMeta = item.type === "track" ? findTrackById(item.id) : null;
                               downloadTextFile(
                                 `${item.title.replace(/\s+/g, "-").toLowerCase()}-license.txt`,
                                 [
-                                  "KEVAL SOUND Ownership Manifest",
-                                  `Item: ${item.title}`,
-                                  `Type: ${item.type}`,
-                                  `Credit: ${item.artist ?? "N/A"}`,
-                                  `License: ${license}`,
-                                  `Price Paid: ${formatPrice(item.price)}`,
-                                  `Purchased By: ${user?.name} <${user?.email}>`,
-                                ].join("\n")
-                              )
-                            }
+                                  "=== KEVAL SOUND Ownership Manifest ===",
+                                  "",
+                                  "[ Asset Details ]",
+                                  `Title      : ${item.title}`,
+                                  `Type       : ${item.type}`,
+                                  `Artist     : ${item.artist ?? "N/A"}`,
+                                  "",
+                                  "[ Technical Metadata ]",
+                                  trackMeta ? `Genre      : ${trackMeta.genre}` : null,
+                                  trackMeta ? `BPM        : ${trackMeta.bpm}` : null,
+                                  trackMeta ? `Key        : ${trackMeta.key}` : null,
+                                  trackMeta ? `Mood       : ${trackMeta.mood}` : null,
+                                  trackMeta ? `Region     : ${trackMeta.region}` : null,
+                                  trackMeta ? `Language   : ${trackMeta.language}` : null,
+                                  trackMeta ? `Duration   : ${trackMeta.duration}s` : null,
+                                  trackMeta ? `Stems      : ${trackMeta.stems ? "Yes" : "No"}` : null,
+                                  trackMeta ? `Tags       : ${trackMeta.tags.join(", ")}` : null,
+                                  "",
+                                  "[ License Details ]",
+                                  `License    : ${license}`,
+                                  `Price Paid : ${formatPrice(item.price)}`,
+                                  `Purchased  : ${user?.name} <${user?.email}>`,
+                                  "",
+                                  "=== End of Manifest ===",
+                                ]
+                                  .filter((line) => line !== null)
+                                  .join("\n")
+                              );
+                            }}
                             className="inline-flex items-center gap-2 rounded-xl bg-vivid-blue/10 px-4 py-2.5 text-sm font-semibold text-vivid-blue transition-colors hover:bg-vivid-blue/20"
                           >
                             <Download className="h-4 w-4" />

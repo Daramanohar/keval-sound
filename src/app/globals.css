@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+/* ===== GLOBAL SMOOTHING ===== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /* ===== KEVAL SOUND DESIGN SYSTEM ===== */
 
 @theme inline {

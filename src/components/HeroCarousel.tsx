@@ -109,7 +109,7 @@ export default function HeroCarousel() {
 
   return (
     <div
-      className="relative w-full h-[420px] lg:h-[480px] rounded-2xl overflow-hidden"
+      className="relative w-full h-[240px] lg:h-[260px] rounded-2xl overflow-hidden"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
@@ -139,82 +139,82 @@ export default function HeroCarousel() {
             </div>
 
             <motion.div
-              animate={{ y: [0, -15, 0], rotate: [0, 5, 0] }}
+              animate={{ y: [0, -10, 0], rotate: [0, 5, 0] }}
               transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute top-16 right-[15%] w-20 h-20 rounded-full bg-white/[0.03] blur-sm"
+              className="absolute top-8 right-[15%] w-14 h-14 rounded-full bg-white/[0.03] blur-sm"
             />
             <motion.div
-              animate={{ y: [0, 10, 0], rotate: [0, -3, 0] }}
+              animate={{ y: [0, 8, 0], rotate: [0, -3, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-              className="absolute bottom-20 right-[30%] w-32 h-32 rounded-full bg-white/[0.02] blur-sm"
+              className="absolute bottom-8 right-[28%] w-20 h-20 rounded-full bg-white/[0.02] blur-sm"
             />
 
-            <div className="h-full w-full flex items-center justify-center">
-              <div className="relative z-10 w-full px-10 md:px-16 max-w-2xl">
-              {slide.badge && (
-                <motion.span
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.1 }}
-                  className={cn(
-                    "inline-flex items-center gap-1.5 w-fit px-3 py-1 rounded-full text-[11px] font-semibold text-white mb-4",
-                    slide.accent
-                  )}
-                >
-                  <Sparkles className="w-3 h-3" />
-                  {slide.badge}
-                </motion.span>
-              )}
-
-              <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.15, duration: 0.5 }}
-                className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight"
-              >
-                {slide.title}
-              </motion.h2>
-
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.25, duration: 0.5 }}
-                className="mt-3 text-sm md:text-base text-white/60 leading-relaxed max-w-lg"
-              >
-                {slide.subtitle}
-              </motion.p>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.35, duration: 0.5 }}
-                className="mt-6 flex items-center gap-3"
-              >
-                <Link
-                  href={slide.ctaHref}
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-vampire-black text-sm font-semibold hover:bg-white/90 transition-all hover:-translate-y-0.5 shadow-lg"
-                >
-                  {slide.cta}
-                </Link>
-                {slide.previewPackId ? (
-                  <button
-                    type="button"
-                    onClick={() => {
-                      const pack = packs.find((entry) => entry.id === slide.previewPackId);
-                      if (!pack) return;
-                      if (activePackId === pack.id) {
-                        togglePlayback();
-                        return;
-                      }
-                      playPack(pack);
-                    }}
-                    className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/[0.1] text-white text-sm font-medium hover:bg-white/[0.15] transition-all backdrop-blur-sm"
+            <div className="h-full w-full flex items-center">
+              <div className="relative z-10 w-full px-8 md:px-12 max-w-xl">
+                {slide.badge && (
+                  <motion.span
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 }}
+                    className={cn(
+                      "inline-flex items-center gap-1.5 w-fit px-2.5 py-0.5 rounded-full text-[10px] font-semibold text-white mb-3",
+                      slide.accent
+                    )}
                   >
-                    <Play className="w-4 h-4" />
-                    Preview
-                  </button>
-                ) : null}
-              </motion.div>
+                    <Sparkles className="w-2.5 h-2.5" />
+                    {slide.badge}
+                  </motion.span>
+                )}
+
+                <motion.h2
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.15, duration: 0.4 }}
+                  className="text-xl md:text-2xl lg:text-3xl font-bold text-white leading-tight"
+                >
+                  {slide.title}
+                </motion.h2>
+
+                <motion.p
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.22, duration: 0.4 }}
+                  className="mt-2 text-xs md:text-sm text-white/60 leading-relaxed max-w-md line-clamp-2"
+                >
+                  {slide.subtitle}
+                </motion.p>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3, duration: 0.4 }}
+                  className="mt-4 flex items-center gap-2.5"
+                >
+                  <Link
+                    href={slide.ctaHref}
+                    className="inline-flex items-center gap-2 px-5 py-2 rounded-xl bg-white text-vampire-black text-xs font-semibold hover:bg-white/90 transition-all hover:-translate-y-0.5 shadow-md"
+                  >
+                    {slide.cta}
+                  </Link>
+                  {slide.previewPackId ? (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        const pack = packs.find((entry) => entry.id === slide.previewPackId);
+                        if (!pack) return;
+                        if (activePackId === pack.id) {
+                          togglePlayback();
+                          return;
+                        }
+                        playPack(pack);
+                      }}
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/[0.1] text-white text-xs font-medium hover:bg-white/[0.15] transition-all backdrop-blur-sm"
+                    >
+                      <Play className="w-3.5 h-3.5" />
+                      Preview
+                    </button>
+                  ) : null}
+                </motion.div>
               </div>
             </div>
           </motion.div>
@@ -223,18 +223,18 @@ export default function HeroCarousel() {
         <button
           type="button"
           onClick={prev}
-          className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center text-white/70 hover:text-white hover:bg-black/50 transition-all z-20"
+          className="absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center text-white/70 hover:text-white hover:bg-black/50 transition-all z-20"
           aria-label="Previous slide"
         >
-          <ChevronLeft className="w-5 h-5" />
+          <ChevronLeft className="w-4 h-4" />
         </button>
         <button
           type="button"
           onClick={next}
-          className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center text-white/70 hover:text-white hover:bg-black/50 transition-all z-20"
+          className="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center text-white/70 hover:text-white hover:bg-black/50 transition-all z-20"
           aria-label="Next slide"
         >
-          <ChevronRight className="w-5 h-5" />
+          <ChevronRight className="w-4 h-4" />
         </button>
 
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 z-20">

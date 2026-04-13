@@ -14,6 +14,7 @@ import {
   Heart,
   HelpCircle,
   LogOut,
+  Menu,
   MessageCircle,
   Monitor,
   Search,
@@ -112,7 +113,11 @@ const supportLinks = [
   },
 ];
 
-export default function TopBar() {
+interface TopBarProps {
+  onMenuToggle?: () => void;
+}
+
+export default function TopBar({ onMenuToggle }: TopBarProps) {
   const { user, isAuthenticated, logout } = useAuth();
   const { cartCount, wishlistCount } = useStore();
   const router = useRouter();
@@ -207,7 +212,17 @@ export default function TopBar() {
   if (!isAuthenticated) return null;
 
   return (
-    <div className="sticky top-0 z-30 h-16 flex items-center gap-4 px-6 bg-[#0c0d1c]/80 backdrop-blur-xl border-b border-white/[0.04]">
+    <div className="sticky top-0 z-30 h-16 flex items-center gap-3 px-4 lg:px-6 bg-[#0c0d1c]/80 backdrop-blur-xl border-b border-white/[0.04]">
+      {onMenuToggle && (
+        <button
+          type="button"
+          onClick={onMenuToggle}
+          className="flex h-10 w-10 items-center justify-center rounded-xl text-muted hover:text-white hover:bg-white/[0.05] transition-all lg:hidden shrink-0"
+          aria-label="Open navigation menu"
+        >
+          <Menu className="w-5 h-5" />
+        </button>
+      )}
       <div className="flex-1 min-w-0 relative">
         <div
           className={cn(

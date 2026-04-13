@@ -256,12 +256,14 @@ function AuthenticatedHome() {
   const sampleLabTracks = useMemo(() => allTracks.slice(2, 10), [allTracks]);
 
   return (
-    <div className="flex flex-col gap-8 lg:flex-row lg:items-start">
-      <div className="flex-1 min-w-0 space-y-8">
-        <div className="w-full rounded-xl overflow-hidden">
-          <HeroCarousel />
-        </div>
+    <div className="space-y-6">
+      {/* Hero spans full width above the two-column layout */}
+      <div className="w-full rounded-2xl overflow-hidden">
+        <HeroCarousel />
+      </div>
 
+      <div className="flex flex-col gap-8 lg:flex-row lg:items-start">
+      <div className="flex-1 min-w-0 space-y-8">
         <ContentSection
           title="Trending Now"
           badge="Hot"
@@ -271,8 +273,8 @@ function AuthenticatedHome() {
           linkText="See All"
         >
           {trendingTracks.map((track, index) => (
-            <div key={track.id} className="snap-start flex-shrink-0 w-[240px] lg:w-[260px]">
-              <MusicCard track={track} index={index} />
+            <div key={track.id} className="snap-start flex-shrink-0 w-[160px]">
+              <MusicCard track={track} index={index} variant="compact" />
             </div>
           ))}
         </ContentSection>
@@ -286,8 +288,8 @@ function AuthenticatedHome() {
           linkText="See All"
         >
           {sellingFast.map((track, index) => (
-            <div key={track.id} className="snap-start flex-shrink-0 w-[240px] lg:w-[260px]">
-              <MusicCard track={track} index={index} />
+            <div key={track.id} className="snap-start flex-shrink-0 w-[160px]">
+              <MusicCard track={track} index={index} variant="compact" />
             </div>
           ))}
         </ContentSection>
@@ -300,8 +302,8 @@ function AuthenticatedHome() {
           href="/explore"
         >
           {freshFinds.map((track, index) => (
-            <div key={track.id} className="snap-start flex-shrink-0 w-[240px] lg:w-[260px]">
-              <MusicCard track={track} index={index} />
+            <div key={track.id} className="snap-start flex-shrink-0 w-[160px]">
+              <MusicCard track={track} index={index} variant="compact" />
             </div>
           ))}
         </ContentSection>
@@ -314,8 +316,8 @@ function AuthenticatedHome() {
           href="/explore"
         >
           {regionalRoots.map((track, index) => (
-            <div key={track.id} className="snap-start flex-shrink-0 w-[240px] lg:w-[260px]">
-              <MusicCard track={track} index={index} />
+            <div key={track.id} className="snap-start flex-shrink-0 w-[160px]">
+              <MusicCard track={track} index={index} variant="compact" />
             </div>
           ))}
         </ContentSection>
@@ -328,8 +330,8 @@ function AuthenticatedHome() {
           href="/explore"
         >
           {sonicSelections.map((track, index) => (
-            <div key={track.id} className="snap-start flex-shrink-0 w-[240px] lg:w-[260px]">
-              <MusicCard track={track} index={index} />
+            <div key={track.id} className="snap-start flex-shrink-0 w-[160px]">
+              <MusicCard track={track} index={index} variant="compact" />
             </div>
           ))}
         </ContentSection>
@@ -342,8 +344,8 @@ function AuthenticatedHome() {
           href="/explore"
         >
           {moodDrops.map((track, index) => (
-            <div key={track.id} className="snap-start flex-shrink-0 w-[240px] lg:w-[260px]">
-              <MusicCard track={track} index={index} />
+            <div key={track.id} className="snap-start flex-shrink-0 w-[160px]">
+              <MusicCard track={track} index={index} variant="compact" />
             </div>
           ))}
         </ContentSection>
@@ -360,7 +362,7 @@ function AuthenticatedHome() {
             <Link
               key={pack.id}
               href={`/pack/${pack.id}`}
-              className="group snap-start flex-shrink-0 w-[240px] lg:w-[260px]"
+              className="group snap-start flex-shrink-0 w-[160px]"
             >
               <motion.div
                 initial={{ opacity: 0, y: 16 }}
@@ -369,25 +371,24 @@ function AuthenticatedHome() {
                 transition={{ delay: index * 0.05, duration: 0.35 }}
                 className="overflow-hidden rounded-2xl border border-transparent bg-white/[0.03] transition-all hover:border-white/[0.08]"
               >
-                <div className="relative h-40 overflow-hidden">
+                <div className="relative h-36 overflow-hidden">
                   <div
                     className={`absolute inset-0 bg-gradient-to-br ${pack.coverUrl} transition-transform duration-700 group-hover:scale-110`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-vampire-black/80 to-transparent" />
-                  <div className="absolute bottom-3 left-3 right-3">
-                    <p className="truncate text-sm font-bold text-white">{pack.title}</p>
-                    <p className="text-[11px] text-white/55">{pack.trackCount} tracks</p>
+                  <div className="absolute bottom-2.5 left-2.5 right-2.5">
+                    <p className="truncate text-xs font-bold text-white">{pack.title}</p>
+                    <p className="text-[10px] text-white/55">{pack.trackCount} tracks</p>
                   </div>
                   {pack.featured ? (
-                    <span className="absolute right-2 top-2 rounded-full bg-dandelion/80 px-2 py-0.5 text-[9px] font-bold uppercase text-vampire-black">
+                    <span className="absolute right-2 top-2 rounded-full bg-dandelion/80 px-1.5 py-0.5 text-[9px] font-bold uppercase text-vampire-black">
                       Featured
                     </span>
                   ) : null}
                 </div>
-                <div className="p-4">
-                  <p className="line-clamp-2 text-xs leading-relaxed text-muted/55">{pack.description}</p>
-                  <div className="mt-3 flex items-center justify-between">
-                    <span className="text-xs text-muted/40 line-through">{formatPrice(pack.originalPrice)}</span>
+                <div className="p-3">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="text-[10px] text-muted/40 line-through">{formatPrice(pack.originalPrice)}</span>
                     <span className="text-sm font-bold text-vivid-blue">{formatPrice(pack.price)}</span>
                   </div>
                 </div>
@@ -404,8 +405,8 @@ function AuthenticatedHome() {
           href="/explore"
         >
           {stageBuilders.map((track, index) => (
-            <div key={track.id} className="snap-start flex-shrink-0 w-[240px] lg:w-[260px]">
-              <MusicCard track={track} index={index} />
+            <div key={track.id} className="snap-start flex-shrink-0 w-[160px]">
+              <MusicCard track={track} index={index} variant="compact" />
             </div>
           ))}
         </ContentSection>
@@ -419,16 +420,17 @@ function AuthenticatedHome() {
           linkText="Browse samples"
         >
           {sampleLabTracks.map((track, index) => (
-            <div key={track.id} className="snap-start flex-shrink-0 w-[240px] lg:w-[260px]">
-              <MusicCard track={track} index={index} />
+            <div key={track.id} className="snap-start flex-shrink-0 w-[160px]">
+              <MusicCard track={track} index={index} variant="compact" />
             </div>
           ))}
         </ContentSection>
       </div>
 
-      <div className="w-full lg:w-[320px] lg:sticky lg:top-24 lg:h-fit lg:shrink-0">
+      <div className="w-full lg:w-[320px] lg:shrink-0">
         <TrendingDiscoveryPanel />
       </div>
+    </div>
     </div>
   );
 }

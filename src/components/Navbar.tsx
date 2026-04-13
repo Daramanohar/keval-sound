@@ -1,6 +1,6 @@
 "use client";
 
-import { startTransition, useCallback, useEffect, useState } from "react";
+import { startTransition, useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
@@ -32,11 +32,23 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
+  const userMenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    function handleOutsideClick(event: MouseEvent) {
+      if (userMenuRef.current && !userMenuRef.current.contains(event.target as Node)) {
+        setUserMenuOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => document.removeEventListener("mousedown", handleOutsideClick);
   }, []);
 
   useEffect(() => {
@@ -146,7 +158,7 @@ export default function Navbar() {
                 </Link>
 
                 {/* User Menu */}
-                <div className="relative">
+                <div className="relative" ref={userMenuRef}>
                   <button
                     onClick={() => setUserMenuOpen(!userMenuOpen)}
                     className="flex items-center gap-2 px-3 py-2 rounded-xl glass-subtle text-sm font-medium text-muted hover:text-white hover:bg-white/[0.08] transition-all"

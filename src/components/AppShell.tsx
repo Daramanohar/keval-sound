@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense, useEffect, type ReactNode } from "react";
+import { Suspense, useCallback, useEffect, useState, type ReactNode } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { useAuth } from "@/lib/auth-context";
@@ -62,6 +62,16 @@ export default function AppShell({ children }: AppShellProps) {
 
   const isAuthPage = pathname === "/auth";
 
+  const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
+
+  const toggleMobileSidebar = useCallback(() => {
+    setMobileSidebarOpen((prev) => !prev);
+  }, []);
+
+  const closeMobileSidebar = useCallback(() => {
+    setMobileSidebarOpen(false);
+  }, []);
+
   useEffect(() => {
     if (!isReady) return;
 
@@ -114,9 +124,9 @@ export default function AppShell({ children }: AppShellProps) {
 
   return (
     <>
-      <Sidebar />
+      <Sidebar mobileOpen={mobileSidebarOpen} onMobileClose={closeMobileSidebar} />
       <div className="flex min-h-screen flex-col transition-all duration-300 lg:pl-[248px]">
-        <TopBar />
+        <TopBar onMenuToggle={toggleMobileSidebar} />
         <AnimatePresence mode="sync" initial={false}>
           <motion.main
             key={pathname}

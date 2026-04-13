@@ -7,7 +7,7 @@ import PackCard from "@/components/PackCard";
 import { packs } from "@/lib/mock-data";
 import { cn } from "@/lib/utils";
 
-const categories = ["All", "Featured", "Bollywood", "Hip Hop", "Electronic", "Folk Fusion", "Lo-fi"];
+const categories = ["All", "Featured", "Bollywood", "South Indian", "Hip Hop", "Electronic", "Folk Fusion", "Lo-fi", "Bhangra", "Classical Fusion"];
 
 export default function PacksPage() {
   const [activeCategory, setActiveCategory] = useState("All");

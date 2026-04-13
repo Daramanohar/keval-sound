@@ -12,7 +12,7 @@ import {
   ShoppingCart,
   Tag,
 } from "lucide-react";
-import { cn, formatDuration, formatPrice } from "@/lib/utils";
+import { cn, formatPrice } from "@/lib/utils";
 import type { Pack, Track } from "@/lib/mock-data";
 import { usePlayerControls } from "@/lib/player-context";
 import { useStore } from "@/lib/store-context";
@@ -101,10 +101,10 @@ const PackCard = memo(function PackCard({ pack, index = 0 }: PackCardProps) {
     >
       <button type="button" onClick={() => router.push(`/pack/${pack.id}`)} className="block w-full text-left">
         <div className="relative">
-          <div className={cn("h-48 bg-gradient-to-br", pack.coverUrl)} />
+          <div className={cn("h-36 bg-gradient-to-br", pack.coverUrl)} />
           <div className="absolute inset-0 bg-gradient-to-t from-vampire-black/90 via-vampire-black/30 to-transparent" />
 
-          <div className="absolute bottom-0 left-0 right-0 p-6">
+          <div className="absolute bottom-0 left-0 right-0 p-4">
             <div className="flex items-start justify-between">
               <div>
                 {pack.featured && (
@@ -145,7 +145,7 @@ const PackCard = memo(function PackCard({ pack, index = 0 }: PackCardProps) {
         </div>
       </button>
 
-      <div className="p-6">
+      <div className="p-4">
         <p className="text-sm leading-relaxed text-muted">{pack.description}</p>
 
         <div className="mt-4 flex flex-wrap gap-2">
@@ -227,7 +227,7 @@ const PackCard = memo(function PackCard({ pack, index = 0 }: PackCardProps) {
                   return (
                     <div
                       key={track.id}
-                      className="group flex items-center gap-3 rounded-xl p-3 transition-all hover:bg-white/[0.04]"
+                      className="group flex items-center gap-2 rounded-xl p-2.5 transition-all hover:bg-white/[0.04]"
                     >
                       <button
                         type="button"
@@ -235,25 +235,22 @@ const PackCard = memo(function PackCard({ pack, index = 0 }: PackCardProps) {
                           event.stopPropagation();
                           toggleTrack(track, { queue: pack.tracks, pack });
                         }}
-                        className="flex h-9 w-9 items-center justify-center rounded-full bg-white/[0.06] transition-colors group-hover:bg-vivid-blue/20"
+                        className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/[0.06] transition-colors group-hover:bg-vivid-blue/20"
                       >
                         {trackPlaying ? (
-                          <Pause className="h-3.5 w-3.5 text-vivid-blue" />
+                          <Pause className="h-3 w-3 text-vivid-blue" />
                         ) : (
-                          <Play className="ml-0.5 h-3.5 w-3.5 text-muted" />
+                          <Play className="ml-0.5 h-3 w-3 text-muted" />
                         )}
                       </button>
-                      <span className="w-5 text-xs text-muted">{trackIndex + 1}</span>
+                      <span className="w-4 shrink-0 text-center text-[10px] text-muted/60">{trackIndex + 1}</span>
                       <div className="min-w-0 flex-1">
-                        <p className="truncate text-sm text-white">{track.title}</p>
-                        <p className="truncate text-xs text-muted">
-                          {track.artist} · {track.genre} · {track.bpm} BPM
+                        <p className="truncate text-xs font-medium text-white">{track.title}</p>
+                        <p className="truncate text-[10px] text-muted/70">
+                          {track.artist} · {track.bpm} BPM
                         </p>
                       </div>
-                      <span className="hidden text-xs text-muted sm:block">
-                        {formatDuration(track.duration)}
-                      </span>
-                      <span className="w-20 text-right text-xs font-semibold text-vivid-blue">
+                      <span className="shrink-0 text-[11px] font-semibold text-vivid-blue">
                         {trackOwned ? "Owned" : formatPrice(track.price)}
                       </span>
                       <button
@@ -263,7 +260,7 @@ const PackCard = memo(function PackCard({ pack, index = 0 }: PackCardProps) {
                           handleTrackAdd(track);
                         }}
                         className={cn(
-                          "rounded-lg px-3 py-1.5 text-[11px] font-semibold transition-colors",
+                          "shrink-0 rounded-lg px-2 py-1 text-[10px] font-semibold transition-colors",
                           trackOwned
                             ? "bg-white/[0.06] text-white/70"
                             : trackInCart
@@ -271,7 +268,7 @@ const PackCard = memo(function PackCard({ pack, index = 0 }: PackCardProps) {
                               : "bg-vivid-blue/10 text-vivid-blue hover:bg-vivid-blue/20"
                         )}
                       >
-                        {trackOwned ? "Owned" : trackInCart ? "In Cart" : "Add to Cart"}
+                        {trackOwned ? "✓" : trackInCart ? "In Cart" : "Add"}
                       </button>
                     </div>
                   );

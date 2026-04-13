@@ -22,6 +22,7 @@ export interface PlayableItem {
   type: PlayableType;
   title: string;
   artist: string;
+  audioUrl?: string;
   duration: number;
   waveform: number[];
   coverUrl: string;
@@ -108,6 +109,7 @@ function toPlayableTrack(track: Track, pack?: Pack): PlayableItem {
     type: "track",
     title: track.title,
     artist: track.artist,
+    audioUrl: track.audioUrl,
     duration: track.duration,
     waveform: track.waveform,
     coverUrl: track.coverUrl,
@@ -122,6 +124,7 @@ function toPlayableSample(sample: Sample): PlayableItem {
     type: "sample",
     title: sample.name,
     artist: sample.instrument,
+    audioUrl: sample.audioUrl,
     duration: sample.duration,
     waveform: sample.waveform,
     coverUrl: "from-grey-azure to-vivid-blue",
@@ -158,14 +161,16 @@ function PlayerSessionProvider({
   const [volume, setVolumeState] = useState(0.75);
   const [isShuffle, setIsShuffle] = useState(false);
   const [repeatMode, setRepeatMode] = useState<RepeatMode>("all");
+  const [mediaDuration, setMediaDuration] = useState(0);
   const [dismissed, setDismissed] = useState(false);
   const [recentlyPlayed, setRecentlyPlayed] = useState<RecentPreviewItem[]>(() =>
     readRecentPreviews(storageKey)
   );
   const endHandledRef = useRef(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const currentItem = queue[currentIndex] ?? null;
-  const duration = currentItem?.duration ?? 0;
+  const duration = mediaDuration > 0 ? mediaDuration : currentItem?.duration ?? 0;
   const progress = duration ? clamp(currentTime / duration, 0, 1) : 0;
   const activePackId = currentItem?.sourcePackId ?? null;
 
@@ -197,6 +202,7 @@ function PlayerSessionProvider({
 
       rememberRecentTrack(nextItem);
       setCurrentIndex(nextIndex);
+      setMediaDuration(nextItem.duration);
       setCurrentTime(0);
       setIsPlaying(true);
       setDismissed(false);
@@ -213,6 +219,7 @@ function PlayerSessionProvider({
       rememberRecentTrack(nextItem);
       setQueue(items);
       setCurrentIndex(safeIndex);
+      setMediaDuration(nextItem?.duration ?? 0);
       setCurrentTime(0);
       setIsPlaying(true);
       setDismissed(false);
@@ -282,7 +289,7 @@ function PlayerSessionProvider({
     const atQueueEnd = currentIndex >= queue.length - 1;
 
     if (repeatMode === "off" && atQueueEnd && !isShuffle) {
-      setCurrentTime(currentItem?.duration ?? 0);
+      setCurrentTime(duration);
       setIsPlaying(false);
       endHandledRef.current = false;
       return;
@@ -300,7 +307,7 @@ function PlayerSessionProvider({
     }
 
     moveToQueueIndex(currentIndex < queue.length - 1 ? currentIndex + 1 : 0);
-  }, [currentIndex, currentItem?.duration, isShuffle, moveToQueueIndex, queue.length, repeatMode]);
+  }, [currentIndex, duration, isShuffle, moveToQueueIndex, queue.length, repeatMode]);
 
   const previousTrack = useCallback(() => {
     if (!queue.length) return;
@@ -327,10 +334,16 @@ function PlayerSessionProvider({
   const seekToTime = useCallback(
     (nextTime: number) => {
       if (!duration) return;
-      setCurrentTime(clamp(nextTime, 0, duration));
+      const safeTime = clamp(nextTime, 0, duration);
+
+      if (currentItem?.audioUrl && audioRef.current) {
+        audioRef.current.currentTime = safeTime;
+      }
+
+      setCurrentTime(safeTime);
       endHandledRef.current = false;
     },
-    [duration]
+    [currentItem?.audioUrl, duration]
   );
 
   const seekToProgress = useCallback(
@@ -362,7 +375,103 @@ function PlayerSessionProvider({
   }, [currentIndex, currentItem, isShuffle, nextTrack, queue.length, repeatMode]);
 
   useEffect(() => {
-    if (!isPlaying || !currentItem) return;
+    if (!audioRef.current) {
+      const audio = new Audio();
+      audio.preload = "metadata";
+      audioRef.current = audio;
+    }
+
+    return () => {
+      const audio = audioRef.current;
+      if (!audio) return;
+
+      audio.pause();
+      audio.removeAttribute("src");
+      audio.load();
+    };
+  }, []);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    if (!currentItem?.audioUrl) {
+      if (audio.src) {
+        audio.pause();
+        audio.removeAttribute("src");
+        audio.load();
+      }
+      return;
+    }
+
+    audio.src = currentItem.audioUrl;
+    audio.load();
+  }, [currentItem?.id, currentItem?.audioUrl]);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    audio.volume = volume;
+  }, [volume]);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio || !currentItem?.audioUrl) return;
+
+    if (isPlaying) {
+      const playPromise = audio.play();
+
+      if (playPromise) {
+        playPromise.catch(() => {
+          setIsPlaying(false);
+        });
+      }
+
+      return;
+    }
+
+    audio.pause();
+  }, [currentItem?.id, currentItem?.audioUrl, isPlaying]);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    const syncDuration = () => {
+      const resolvedDuration =
+        Number.isFinite(audio.duration) && audio.duration > 0
+          ? audio.duration
+          : currentItem?.duration ?? 0;
+
+      setMediaDuration(resolvedDuration);
+    };
+
+    const syncTime = () => {
+      setCurrentTime(audio.currentTime);
+      endHandledRef.current = false;
+    };
+
+    const handleAudioEnded = () => {
+      endHandledRef.current = false;
+      handleTrackEnd();
+    };
+
+    audio.addEventListener("loadedmetadata", syncDuration);
+    audio.addEventListener("durationchange", syncDuration);
+    audio.addEventListener("timeupdate", syncTime);
+    audio.addEventListener("ended", handleAudioEnded);
+
+    return () => {
+      audio.removeEventListener("loadedmetadata", syncDuration);
+      audio.removeEventListener("durationchange", syncDuration);
+      audio.removeEventListener("timeupdate", syncTime);
+      audio.removeEventListener("ended", handleAudioEnded);
+    };
+  }, [currentItem?.duration, handleTrackEnd]);
+
+  useEffect(() => {
+    if (!isPlaying || !currentItem || currentItem.audioUrl) return;
 
     const timer = window.setInterval(() => {
       setCurrentTime((previousTime) => {

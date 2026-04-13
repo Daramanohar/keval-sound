@@ -2,6 +2,7 @@ export interface Track {
   id: string;
   title: string;
   artist: string;
+  audioUrl?: string;
   genre: string;
   mood: string;
   bpm: number;
@@ -39,6 +40,7 @@ export interface Pack {
 export interface Sample {
   id: string;
   name: string;
+  audioUrl?: string;
   type: "loop" | "one-shot" | "stem" | "sfx";
   bpm: number;
   key: string;
@@ -344,6 +346,19 @@ export const tracks: Track[] = [
   },
 ];
 
+function expandPackTracks(packId: string, count: number): Track[] {
+  return Array.from({ length: count }, (_, i) => {
+    const base = tracks[i % tracks.length];
+    return {
+      ...base,
+      id: `${packId}-t${i + 1}`,
+      title: i < tracks.length
+        ? base.title
+        : `${base.title} (Alt Mix ${Math.floor(i / tracks.length)})`,
+    };
+  });
+}
+
 export const packs: Pack[] = [
   {
     id: "p1",
@@ -356,7 +371,7 @@ export const packs: Pack[] = [
     originalPrice: 49999,
     genre: "Bollywood",
     mood: "Mixed",
-    tracks: tracks.slice(0, 4),
+    tracks: expandPackTracks("p1", 25),
     tags: ["bollywood", "film", "scoring", "premium"],
     featured: true,
   },
@@ -371,7 +386,7 @@ export const packs: Pack[] = [
     originalPrice: 59999,
     genre: "South Indian",
     mood: "Energetic",
-    tracks: tracks.slice(2, 6),
+    tracks: expandPackTracks("p2", 25),
     tags: ["south-indian", "carnatic", "fusion", "pop"],
     featured: true,
   },
@@ -386,7 +401,7 @@ export const packs: Pack[] = [
     originalPrice: 29999,
     genre: "Lo-fi",
     mood: "Chill",
-    tracks: tracks.slice(5, 8),
+    tracks: expandPackTracks("p3", 25),
     tags: ["lofi", "chill", "study", "ambient"],
     featured: false,
   },
@@ -401,7 +416,7 @@ export const packs: Pack[] = [
     originalPrice: 69999,
     genre: "Hip Hop",
     mood: "Aggressive",
-    tracks: tracks.slice(6, 10),
+    tracks: expandPackTracks("p4", 25),
     tags: ["hiphop", "rap", "desi", "street"],
     featured: true,
   },
@@ -416,7 +431,7 @@ export const packs: Pack[] = [
     originalPrice: 39999,
     genre: "Folk Fusion",
     mood: "Cultural",
-    tracks: tracks.slice(1, 5),
+    tracks: expandPackTracks("p5", 25),
     tags: ["folk", "fusion", "traditional", "modern"],
     featured: false,
   },
@@ -431,9 +446,99 @@ export const packs: Pack[] = [
     originalPrice: 54999,
     genre: "Electronic",
     mood: "Euphoric",
-    tracks: tracks.slice(4, 8),
+    tracks: expandPackTracks("p6", 25),
     tags: ["electronic", "trance", "house", "techno"],
     featured: true,
+  },
+  {
+    id: "p7",
+    title: "Rajasthani Folk Revival",
+    description: "Authentic Rajasthani folk tracks blending sarangi, dholak, and Manganiyar vocals for film and brand storytelling.",
+    coverUrl: "from-orange-600 to-amber-500",
+    trackCount: 25,
+    totalDuration: 4600,
+    price: 19999,
+    originalPrice: 34999,
+    genre: "Folk Fusion",
+    mood: "Earthy",
+    tracks: expandPackTracks("p7", 25),
+    tags: ["rajasthani", "folk", "sarangi", "dholak", "manganiyar"],
+    featured: false,
+  },
+  {
+    id: "p8",
+    title: "Kerala Waves",
+    description: "Tracks rooted in Kerala's classical and contemporary soundscape — Sopana, fusion jazz, and Mollywood drama scores.",
+    coverUrl: "from-teal-700 to-cyan-500",
+    trackCount: 25,
+    totalDuration: 4700,
+    price: 22999,
+    originalPrice: 39999,
+    genre: "Classical Fusion",
+    mood: "Serene",
+    tracks: expandPackTracks("p8", 25),
+    tags: ["kerala", "sopana", "mollywood", "classical", "fusion"],
+    featured: false,
+  },
+  {
+    id: "p9",
+    title: "Punjabi Dhol Power",
+    description: "High-energy Punjabi tracks built around dhol, tumbi, and bhangra pop rhythms for weddings, reels, and stage.",
+    coverUrl: "from-yellow-500 to-orange-500",
+    trackCount: 25,
+    totalDuration: 5100,
+    price: 26999,
+    originalPrice: 44999,
+    genre: "Bhangra",
+    mood: "Energetic",
+    tracks: expandPackTracks("p9", 25),
+    tags: ["punjabi", "bhangra", "dhol", "wedding", "tumbi"],
+    featured: false,
+  },
+  {
+    id: "p10",
+    title: "Bengali Monsoon Stories",
+    description: "Spanning Rabindra Sangeet influences, Baul folk, and Lo-fi Bengali ambient for cinematic and lyrical use.",
+    coverUrl: "from-blue-800 to-indigo-600",
+    trackCount: 25,
+    totalDuration: 4200,
+    price: 21499,
+    originalPrice: 37999,
+    genre: "Lo-fi",
+    mood: "Melancholic",
+    tracks: expandPackTracks("p10", 25),
+    tags: ["bengali", "baul", "rabindra", "lofi", "monsoon"],
+    featured: false,
+  },
+  {
+    id: "p11",
+    title: "Tamil Cinematic Gold",
+    description: "Tracks drawing from AR Rahman-era orchestration, Kollywood percussion, and Carnatic raga blends for premium sync.",
+    coverUrl: "from-rose-700 to-pink-500",
+    trackCount: 25,
+    totalDuration: 5800,
+    price: 29999,
+    originalPrice: 49999,
+    genre: "South Indian",
+    mood: "Epic",
+    tracks: expandPackTracks("p11", 25),
+    tags: ["tamil", "kollywood", "carnatic", "cinematic", "orchestra"],
+    featured: false,
+  },
+  {
+    id: "p12",
+    title: "Marathi Lavani Luxe",
+    description: "Marathi Lavani and Powada traditions reimagined for modern content with full stems and production-ready mixes.",
+    coverUrl: "from-purple-700 to-violet-500",
+    trackCount: 25,
+    totalDuration: 3400,
+    price: 17999,
+    originalPrice: 31999,
+    genre: "Folk Fusion",
+    mood: "Playful",
+    tracks: expandPackTracks("p12", 25),
+    tags: ["marathi", "lavani", "powada", "folk", "stems"],
+    featured: false,
   },
 ];
 

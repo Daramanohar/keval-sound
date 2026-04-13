@@ -74,6 +74,131 @@ const MusicCard = memo(function MusicCard({
     );
   }, [addTrackToCart, owned, showToast, track]);
 
+  if (variant === "compact") {
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: index * 0.04, duration: 0.32 }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        className="group overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.03] transition-all duration-300 hover:-translate-y-1 hover:border-white/[0.12] hover:bg-white/[0.05]"
+      >
+        {/* Cover */}
+        <div className="relative aspect-square overflow-hidden rounded-t-2xl">
+          <div
+            className={cn(
+              "absolute inset-0 bg-gradient-to-br transition-transform duration-700",
+              track.coverUrl,
+              isHovered && "scale-105"
+            )}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-vampire-black/70 via-black/5 to-transparent" />
+
+          {/* Badge */}
+          <div className="absolute left-2 top-2">
+            {owned ? (
+              <span className="rounded-full bg-dandelion px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wide text-vampire-black">
+                Owned
+              </span>
+            ) : (
+              <span className="rounded-full bg-black/40 px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-white/75 backdrop-blur-sm">
+                Track
+              </span>
+            )}
+          </div>
+
+          {/* Wishlist */}
+          <button
+            type="button"
+            onClick={() => toggleTrackWishlist(track)}
+            className={cn(
+              "absolute right-2 top-2 flex h-7 w-7 items-center justify-center rounded-full backdrop-blur-sm transition-all",
+              liked
+                ? "bg-zesty-red/85 text-white"
+                : "bg-black/35 text-white/0 group-hover:text-white/70 hover:bg-black/50 hover:text-white"
+            )}
+            aria-label="Toggle wishlist"
+          >
+            <Heart className={cn("h-3 w-3", liked && "fill-current")} />
+          </button>
+
+          {/* Play/pause overlay */}
+          <div
+            className={cn(
+              "absolute inset-0 flex items-center justify-center transition-opacity duration-200",
+              isHovered || isPlaying ? "opacity-100" : "opacity-0"
+            )}
+          >
+            <motion.button
+              type="button"
+              whileTap={{ scale: 0.93 }}
+              onClick={handlePreview}
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30 bg-white/20 text-white backdrop-blur-sm transition-all hover:bg-white/30"
+              aria-label={isPlaying ? "Pause preview" : "Play preview"}
+            >
+              {isPlaying ? <Pause className="h-4 w-4" /> : <Play className="ml-0.5 h-4 w-4" />}
+            </motion.button>
+          </div>
+
+          {/* Cart shortcut on hover */}
+          <motion.button
+            type="button"
+            whileTap={{ scale: 0.9 }}
+            animate={cartPulse ? { scale: [1, 1.08, 1] } : undefined}
+            onClick={handleAddToCart}
+            className={cn(
+              "absolute bottom-2 right-2 flex h-7 w-7 items-center justify-center rounded-full backdrop-blur-sm transition-all duration-200",
+              isHovered ? "opacity-100" : "opacity-0",
+              owned
+                ? "bg-white/20 text-white/60"
+                : inCart
+                  ? "bg-vivid-blue text-white"
+                  : "bg-black/40 text-white/80 hover:bg-vivid-blue hover:text-white"
+            )}
+            aria-label={owned ? "Already owned" : inCart ? "In cart" : "Add to cart"}
+          >
+            <ShoppingCart className="h-3 w-3" />
+          </motion.button>
+
+          {/* Active waveform */}
+          {isActive && (
+            <div className="absolute bottom-0 left-0 right-0 p-2">
+              <WaveformVisualizer
+                data={track.waveform}
+                isPlaying={isPlaying}
+                progress={progress}
+                height={14}
+                gap={1}
+                stretch
+                className="w-full"
+                activeColor="bg-white"
+                inactiveColor="bg-white/20"
+              />
+            </div>
+          )}
+        </div>
+
+        {/* Compact info */}
+        <div className="p-3">
+          <div className="flex items-start justify-between gap-1.5">
+            <h4 className="truncate text-[11px] font-semibold leading-tight text-white">
+              {track.title}
+            </h4>
+            <span className="shrink-0 text-[11px] font-bold text-vivid-blue">
+              {owned ? "Owned" : formatPrice(track.price)}
+            </span>
+          </div>
+          <p className="mt-0.5 truncate text-[10px] text-muted/70">{track.artist}</p>
+          <p className="mt-0.5 truncate text-[10px] text-muted/50">
+            {track.genre} · {track.bpm} BPM
+          </p>
+        </div>
+      </motion.div>
+    );
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 16 }}
