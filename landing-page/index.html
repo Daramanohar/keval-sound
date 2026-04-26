@@ -147,9 +147,18 @@
   .hero-particles{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden}
   .hero-particles span{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;box-shadow:0 0 6px currentColor;will-change:transform,opacity;transform:translateZ(0)}
 
+  /* Cinematic grade on the hero video so brand colors read on top */
+  .hero-video{filter:saturate(.92) contrast(1.05) brightness(.88)}
+
   .hero-img-mask{position:absolute;inset:0;z-index:2;pointer-events:none;background:
-    radial-gradient(ellipse 90% 70% at 50% 50%,transparent 0%,rgba(3,3,8,.15) 45%,rgba(3,3,8,.7) 78%,#030308 100%),
-    linear-gradient(180deg,rgba(3,3,8,.35) 0%,transparent 28%,transparent 72%,rgba(3,3,8,.92) 100%)}
+    /* Left-side legibility wash — protects the headline column */
+    linear-gradient(90deg,rgba(3,3,8,.78) 0%,rgba(3,3,8,.55) 24%,rgba(3,3,8,.18) 48%,transparent 70%),
+    /* Edge vignette */
+    radial-gradient(ellipse 95% 75% at 50% 50%,transparent 0%,rgba(3,3,8,.12) 50%,rgba(3,3,8,.6) 80%,#030308 100%),
+    /* Top + bottom fade into page bg */
+    linear-gradient(180deg,rgba(3,3,8,.55) 0%,rgba(3,3,8,.18) 22%,transparent 50%,rgba(3,3,8,.55) 82%,#030308 100%),
+    /* Whisper of brand magenta→indigo so the clip feels part of the palette */
+    linear-gradient(135deg,rgba(199,70,143,.10) 0%,transparent 38%,transparent 62%,rgba(79,137,255,.08) 100%)}
   .hero-inner{position:relative;z-index:3;max-width:1100px;width:100%}
   .hero-badge{display:inline-flex;align-items:center;gap:10px;padding:6px 14px 6px 6px;border-radius:999px;font-size:12px;color:rgba(255,255,255,.85);margin-bottom:32px}
   .hero-badge .dot{width:22px;height:22px;border-radius:50%;background:rgba(199,70,143,.18);display:flex;align-items:center;justify-content:center;color:#c7468f}
@@ -158,8 +167,8 @@
   h1.hero-h{font-family:var(--font-serif);font-weight:400;font-size:clamp(40px,6.5vw,88px);line-height:1;letter-spacing:-.025em;margin:0;color:#fff;text-shadow:0 4px 40px rgba(0,0,0,.6)}
   h1.hero-h em{font-style:italic;background:linear-gradient(135deg,#ffeb99 0%,#ff8a3d 40%,#c7468f 80%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 4px 30px rgba(255,138,61,.3))}
   /* Viktor-Oddy-style: ultra-transparent glass card, slight right+down offset to nest in disk */
-  .hero-sub-wrap{display:flex;justify-content:center;margin:62px auto 0;padding:0 20px;max-width:560px;transform:translateX(14%)}
-  .hero-sub{font-size:clamp(13.5px,1.05vw,14.5px);color:rgba(255,255,255,.92);margin:0;line-height:1.6;font-weight:300;text-align:center;letter-spacing:.005em;
+  .hero-sub-wrap{display:flex;justify-content:center;margin:62px auto 0;padding:0 20px;max-width:620px;transform:none}
+  .hero-sub{font-size:clamp(13px,1vw,14px);color:rgba(255,255,255,.92);margin:0;line-height:1.6;font-weight:300;text-align:center;letter-spacing:.005em;
     background:rgba(255,255,255,.025);
     backdrop-filter:blur(8px) saturate(1.05);-webkit-backdrop-filter:blur(8px) saturate(1.05);
     border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:16px 26px;
@@ -167,7 +176,7 @@
     position:relative;text-shadow:0 1px 12px rgba(0,0,0,.45)}
   .hero-sub b{color:#fff;font-weight:500}
   .hero-sub::before{content:'';position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,0) 40%,rgba(255,255,255,0) 60%,rgba(255,255,255,.12));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
-  @media(max-width:780px){.hero-sub-wrap{margin-top:40px;transform:none}}
+  @media(max-width:780px){.hero-sub-wrap{margin-top:40px;max-width:520px}}
   .hero-ctas{display:flex;gap:14px;justify-content:center;margin-top:42px;flex-wrap:wrap}
   .btn{display:inline-flex;align-items:center;gap:10px;padding:13px 22px;border-radius:999px;font-size:13.5px;font-weight:500;transition:transform .3s cubic-bezier(.16,1,.3,1),background .3s,box-shadow .3s}
   .btn-w{background:#fff;color:#000;padding:6px 6px 6px 20px;box-shadow:0 0 0 1px rgba(255,255,255,.2),0 12px 40px rgba(255,255,255,.15)}
@@ -187,10 +196,15 @@
   @keyframes scrollDot{0%{top:-40%}100%{top:100%}}
 
   /* Hero stat strip (below fold) */
-  .hero-stats{position:relative;z-index:3;display:flex;justify-content:center;gap:60px;margin-top:80px;flex-wrap:wrap;opacity:.85}
+  .hero-stats{position:relative;z-index:3;display:flex;justify-content:center;gap:60px;margin-top:80px;flex-wrap:wrap;opacity:1}
   .hero-stats .s{text-align:center}
   .hero-stats .s .n{font-family:var(--font-serif);font-size:clamp(32px,4vw,48px);line-height:1;color:#fff}
-  .hero-stats .s .l{font-size:10px;text-transform:uppercase;letter-spacing:.25em;color:rgba(255,255,255,.4);margin-top:10px}
+  .hero-stats .s .n{text-shadow:0 2px 18px rgba(0,0,0,.55),0 0 24px rgba(0,0,0,.4)}
+  .hero-stats .s .l{font-size:11px;text-transform:uppercase;letter-spacing:.26em;color:rgba(255,255,255,.92);margin-top:12px;font-weight:500;text-shadow:0 1px 14px rgba(0,0,0,.7),0 0 22px rgba(0,0,0,.5)}
+
+
+  /* ========== SHARED SECTION ========== */
+  /* (rules below) */
 
   /* ========== MARQUEE ========== */
   .trust{position:relative;padding:40px 0 60px;overflow:hidden;-webkit-mask-image:linear-gradient(to right,transparent,#000 15%,#000 85%,transparent);mask-image:linear-gradient(to right,transparent,#000 15%,#000 85%,transparent);z-index:5}
@@ -200,7 +214,6 @@
   .mq-logo{font-family:var(--font-serif);font-size:24px;color:rgba(255,255,255,.5);letter-spacing:.08em;white-space:nowrap;transition:color .3s}
   .mq-logo:hover{color:rgba(255,255,255,.9)}
 
-  /* ========== SHARED SECTION ========== */
   section{position:relative;z-index:5}
   .sec-label{font-family:var(--font-mono);font-size:12px;text-transform:uppercase;letter-spacing:.34em;color:rgba(255,255,255,.78);margin-bottom:20px;display:inline-flex;align-items:center;gap:10px;font-weight:500;text-shadow:0 1px 14px rgba(0,0,0,.55),0 0 24px rgba(0,0,0,.4)}
   .sec-label::before{content:'';width:28px;height:1px;background:linear-gradient(90deg,transparent,currentColor);opacity:.85}
@@ -231,58 +244,72 @@
 
   /* 4-column row pinned to the bottom of the section */
   .why-feed{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:1400px;width:100%;margin:0 auto;padding:0 24px;align-items:stretch;position:relative;z-index:2}
-  .why-pillar{padding:22px 20px 24px;border-radius:18px;
-    background:linear-gradient(180deg,rgba(10,10,18,.55),rgba(10,10,18,.32));
-    border:1px solid rgba(255,255,255,.09);
-    backdrop-filter:blur(18px) saturate(1.15);-webkit-backdrop-filter:blur(18px) saturate(1.15);
-    position:relative;overflow:hidden;transition:border-color .4s,transform .4s,background .4s;
-    display:flex;flex-direction:column;min-height:230px;
-    box-shadow:0 20px 60px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.06)}
-  .why-pillar:hover{border-color:rgba(255,255,255,.22);transform:translateY(-4px);
-    background:linear-gradient(180deg,rgba(15,15,24,.62),rgba(10,10,18,.42))}
+
+  /* Glass card — restored from pre-flip optimized version */
+  .why-pillar{padding:30px 28px 32px;border-radius:22px;
+    background:rgba(255,255,255,.025);
+    border:1px solid rgba(255,255,255,.085);
+    backdrop-filter:blur(28px) saturate(1.4);
+    -webkit-backdrop-filter:blur(28px) saturate(1.4);
+    position:relative;overflow:hidden;transition:transform .5s cubic-bezier(.16,1,.3,1),border-color .4s,background .4s,box-shadow .4s;
+    display:flex;flex-direction:column;min-height:280px;
+    box-shadow:0 14px 50px rgba(0,0,0,.28),0 0 0 1px rgba(255,255,255,.02) inset,0 1px 0 rgba(255,255,255,.08) inset}
+  .why-pillar:hover{border-color:rgba(255,255,255,.18);transform:translateY(-4px);
+    background:rgba(255,255,255,.05);
+    box-shadow:0 22px 70px rgba(0,0,0,.36),0 0 32px rgba(255,255,255,.04),0 1px 0 rgba(255,255,255,.12) inset}
   .why-pillar::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--ac,#c7468f),transparent);opacity:.45;transition:opacity .4s}
-  .why-pillar.active::before,.why-pillar:hover::before{opacity:1}
+  .why-pillar:hover::before,.why-pillar.active::before{opacity:1}
   .why-pillar[data-ac="1"]{--ac:#c7468f}
   .why-pillar[data-ac="2"]{--ac:#4f89ff}
   .why-pillar[data-ac="3"]{--ac:#ff8a3d}
   .why-pillar[data-ac="4"]{--ac:#a988e0}
-  .why-pillar .ix{display:flex;align-items:center;gap:9px;font-family:var(--font-mono);font-size:9.5px;color:rgba(255,255,255,.55);margin-bottom:14px;letter-spacing:.16em;line-height:1.3}
+  .why-pillar .ix{display:flex;align-items:center;gap:9px;font-family:var(--font-mono);font-size:10px;color:rgba(255,255,255,.55);margin-bottom:16px;letter-spacing:.16em;line-height:1.3}
   .why-pillar .ix .dot{width:7px;height:7px;border-radius:50%;background:var(--ac);box-shadow:0 0 10px var(--ac);flex-shrink:0}
-  .why-pillar h3{font-family:var(--font-serif);font-weight:400;font-size:clamp(19px,1.5vw,23px);line-height:1.15;letter-spacing:-.012em;margin-bottom:11px;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.5)}
+  .why-pillar h3{font-family:var(--font-serif);font-weight:400;font-size:clamp(20px,1.6vw,24px);line-height:1.18;letter-spacing:-.012em;margin-bottom:14px;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.6)}
   .why-pillar h3 em{font-style:italic;color:var(--ac)}
-  .why-pillar p{font-size:12.5px;line-height:1.55;color:rgba(255,255,255,.72);font-weight:300}
+  .why-pillar p{font-size:13.5px;line-height:1.6;color:rgba(255,255,255,.74);font-weight:300}
+
   @media(max-width:1100px){.why-feed{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:640px){.why-feed{grid-template-columns:1fr}}
 
-  /* ========== FEATURES (pinned full-bleed) ========== */
-  .feat{padding:80px 0 80px;position:relative}
-  .feat-head{text-align:center;max-width:920px;margin:0 auto 70px;padding:0 24px}
-  .feat-stage{position:relative;max-width:1400px;margin:0 auto;padding:0 24px}
-  .feat-hero-img{position:relative;width:100%;aspect-ratio:16/9;border-radius:28px;overflow:hidden;background:#050510;margin-bottom:60px}
-  .feat-hero-img img,.feat-hero-img video{width:100%;height:100%;object-fit:cover;filter:saturate(1.12)}
-  .feat-hero-img::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(3,3,8,.8));pointer-events:none}
-  .feat-hero-overlay{position:absolute;bottom:40px;left:40px;right:40px;display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap}
-  .feat-hero-overlay .q{font-family:var(--font-serif);font-style:italic;font-size:clamp(22px,2.4vw,32px);line-height:1.25;color:#fff;max-width:560px;letter-spacing:-.01em}
-  .feat-hero-overlay .meta{display:flex;flex-direction:column;gap:4px;font-size:11px;text-transform:uppercase;letter-spacing:.25em;color:rgba(255,255,255,.6)}
-  .feat-hero-overlay .meta b{font-family:var(--font-serif);font-size:22px;font-weight:400;color:#fff;letter-spacing:0;text-transform:none}
+  /* ========== FEATURES — Why-style full-bleed video + floating glass cards ========== */
+  .feat{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:space-between;padding:90px 0 56px;overflow:hidden;isolation:isolate}
+  .feat-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
+  .feat-bg::after{content:'';position:absolute;inset:0;background:
+    radial-gradient(ellipse 100% 60% at 50% 50%,transparent 0%,rgba(3,3,8,.35) 60%,rgba(3,3,8,.85) 100%),
+    linear-gradient(180deg,rgba(3,3,8,.55) 0%,transparent 22%,transparent 60%,rgba(3,3,8,.92) 100%);
+    pointer-events:none}
+  .feat-img{width:100%;height:100%;object-fit:cover;filter:saturate(1.12) contrast(1.06)}
 
-  .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-  .feat-card{border-radius:24px;padding:32px;background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.005));border:1px solid rgba(255,255,255,.06);position:relative;overflow:hidden;transition:transform .5s cubic-bezier(.16,1,.3,1),border-color .4s;min-height:420px;display:flex;flex-direction:column}
-  .feat-card:hover{transform:translateY(-6px);border-color:rgba(255,255,255,.15)}
-  .feat-card .num{font-family:var(--font-mono);font-size:11px;color:rgba(255,255,255,.4);letter-spacing:.18em;margin-bottom:20px;display:flex;align-items:center;gap:10px}
-  .feat-card .num::before{content:'';width:20px;height:1px;background:currentColor}
-  .feat-card .icn{width:54px;height:54px;border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:22px;position:relative;overflow:hidden}
-  .feat-card[data-c="1"] .icn{background:radial-gradient(circle at 30% 30%,rgba(199,70,143,.35),rgba(199,70,143,.08));color:#c7468f;box-shadow:inset 0 0 0 1px rgba(199,70,143,.3)}
-  .feat-card[data-c="2"] .icn{background:radial-gradient(circle at 30% 30%,rgba(79,137,255,.35),rgba(79,137,255,.08));color:#4f89ff;box-shadow:inset 0 0 0 1px rgba(79,137,255,.3)}
-  .feat-card[data-c="3"] .icn{background:radial-gradient(circle at 30% 30%,rgba(255,138,61,.35),rgba(255,138,61,.08));color:#ff8a3d;box-shadow:inset 0 0 0 1px rgba(255,138,61,.3)}
-  .feat-card h3{font-family:var(--font-serif);font-weight:400;font-size:28px;letter-spacing:-.015em;margin-bottom:14px;line-height:1.12;color:#fff}
-  .feat-card p{font-size:14.5px;line-height:1.65;color:rgba(255,255,255,.55);font-weight:300;margin-bottom:24px}
-  .feat-card ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:auto;padding-top:20px;border-top:1px solid rgba(255,255,255,.05)}
-  .feat-card li{font-size:12.5px;color:rgba(255,255,255,.7);display:flex;align-items:center;gap:10px;font-family:var(--font-mono);letter-spacing:.03em}
-  .feat-card li::before{content:'';width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.4}
-  .feat-card .chev{position:absolute;top:32px;right:32px;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);transition:all .4s;color:rgba(255,255,255,.6)}
-  .feat-card:hover .chev{transform:rotate(-45deg);background:rgba(255,255,255,.08);color:#fff}
-  @media(max-width:900px){.feat-grid{grid-template-columns:1fr}}
+  /* Headline floats on top of the live scene */
+  .feat-head{text-align:center;max-width:1080px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
+  .feat-head .sec-label{text-shadow:0 2px 12px rgba(0,0,0,.7)}
+  .feat-head .sec-h{text-shadow:0 4px 30px rgba(0,0,0,.55)}
+
+  .feat-feed{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1400px;width:100%;margin:0 auto;padding:0 24px;align-items:stretch;position:relative;z-index:2}
+  .feat-pillar{padding:30px 28px 32px;border-radius:22px;
+    background:rgba(255,255,255,.025);
+    border:1px solid rgba(255,255,255,.085);
+    backdrop-filter:blur(28px) saturate(1.4);
+    -webkit-backdrop-filter:blur(28px) saturate(1.4);
+    position:relative;overflow:hidden;transition:transform .5s cubic-bezier(.16,1,.3,1),border-color .4s,background .4s,box-shadow .4s;
+    display:flex;flex-direction:column;min-height:260px;
+    box-shadow:0 14px 50px rgba(0,0,0,.28),0 0 0 1px rgba(255,255,255,.02) inset,0 1px 0 rgba(255,255,255,.08) inset}
+  .feat-pillar:hover{border-color:rgba(255,255,255,.18);transform:translateY(-4px);
+    background:rgba(255,255,255,.05);
+    box-shadow:0 22px 70px rgba(0,0,0,.36),0 0 32px rgba(255,255,255,.04),0 1px 0 rgba(255,255,255,.12) inset}
+  .feat-pillar::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--ac,#c7468f),transparent);opacity:.45;transition:opacity .4s}
+  .feat-pillar:hover::before{opacity:1}
+  .feat-pillar[data-ac="1"]{--ac:#c7468f}
+  .feat-pillar[data-ac="2"]{--ac:#4f89ff}
+  .feat-pillar[data-ac="3"]{--ac:#ff8a3d}
+  .feat-pillar .ix{display:flex;align-items:center;gap:9px;font-family:var(--font-mono);font-size:10px;color:rgba(255,255,255,.55);margin-bottom:16px;letter-spacing:.16em;line-height:1.3}
+  .feat-pillar .ix .dot{width:7px;height:7px;border-radius:50%;background:var(--ac);box-shadow:0 0 10px var(--ac);flex-shrink:0}
+  .feat-pillar h3{font-family:var(--font-serif);font-weight:400;font-size:clamp(22px,1.8vw,26px);line-height:1.15;letter-spacing:-.012em;margin-bottom:14px;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.6)}
+  .feat-pillar h3 em{font-style:italic;color:var(--ac)}
+  .feat-pillar p{font-size:13.5px;line-height:1.6;color:rgba(255,255,255,.74);font-weight:300}
+  @media(max-width:1100px){.feat-feed{grid-template-columns:repeat(1,1fr);max-width:680px}}
+  @media(max-width:640px){.feat-feed{grid-template-columns:1fr}}
 
   /* ========== PRICING (cinematic vinyl stage) ========== */
   .pricing{padding:90px 0 100px;position:relative;overflow:hidden;isolation:isolate}
@@ -308,15 +335,19 @@
   .pr-toggle .save{margin-left:8px;font-size:10px;padding:2px 7px;border-radius:999px;background:linear-gradient(90deg,#ffeb99,#ff8a3d);color:#000;font-weight:700}
 
   .pr-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:1400px;margin:0 auto;padding:0 24px}
-  .pr-card{border-radius:24px;padding:32px 26px 30px;display:flex;flex-direction:column;min-height:600px;position:relative;overflow:hidden;transition:transform .5s cubic-bezier(.16,1,.3,1);background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.008));border:1px solid rgba(255,255,255,.06)}
-  .pr-card:hover{transform:translateY(-6px)}
+  .pr-card{border-radius:24px;padding:32px 26px 30px;display:flex;flex-direction:column;min-height:600px;position:relative;overflow:hidden;transition:transform .5s cubic-bezier(.16,1,.3,1),background .4s,border-color .4s,box-shadow .4s;
+    background:rgba(255,255,255,.025);
+    border:1px solid rgba(255,255,255,.085);
+    backdrop-filter:blur(28px) saturate(1.4);-webkit-backdrop-filter:blur(28px) saturate(1.4);
+    box-shadow:0 14px 50px rgba(0,0,0,.28),0 0 0 1px rgba(255,255,255,.02) inset,0 1px 0 rgba(255,255,255,.08) inset}
+  .pr-card:hover{transform:translateY(-6px);background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.18);box-shadow:0 22px 70px rgba(0,0,0,.36),0 0 32px rgba(255,255,255,.04),0 1px 0 rgba(255,255,255,.12) inset}
   .pr-card .orb{position:absolute;top:-60px;right:-60px;width:180px;height:180px;border-radius:50%;filter:blur(50px);opacity:.35;pointer-events:none;transition:opacity .5s}
   .pr-card:hover .orb{opacity:.6}
   .pr-card[data-tier="Basic"] .orb{background:#4a7e90}
   .pr-card[data-tier="Standard"] .orb{background:#a988e0}
   .pr-card[data-tier="Pro"] .orb{background:linear-gradient(135deg,#c7468f,#ff8a3d)}
   .pr-card[data-tier="Enterprise"] .orb{background:linear-gradient(135deg,#ff8a3d,#ffeb99)}
-  .pr-card[data-tier="Pro"]{background:linear-gradient(180deg,rgba(199,70,143,.18),rgba(79,137,255,.06) 60%,rgba(10,10,21,.8));box-shadow:0 0 0 1px rgba(199,70,143,.3),0 20px 80px rgba(199,70,143,.12),inset 0 0 40px rgba(79,137,255,.04)}
+  .pr-card[data-tier="Pro"]{background:linear-gradient(180deg,rgba(199,70,143,.10),rgba(79,137,255,.04) 60%,rgba(255,255,255,.02));backdrop-filter:blur(28px) saturate(1.45);-webkit-backdrop-filter:blur(28px) saturate(1.45);box-shadow:0 0 0 1px rgba(199,70,143,.22),0 24px 70px rgba(199,70,143,.10),0 1px 0 rgba(255,255,255,.10) inset},inset 0 0 40px rgba(79,137,255,.04)}
   .pr-card[data-tier="Pro"]::after{content:'';position:absolute;inset:-1px;border-radius:inherit;padding:1.5px;background:linear-gradient(135deg,#4f89ff,#c7468f,#ff8a3d,#5b4282,#4f89ff);background-size:300% 300%;animation:borderMove 5s linear infinite;-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
   @keyframes borderMove{to{background-position:300% 0}}
 
@@ -424,7 +455,6 @@
         <a href="#why">Why Keval</a>
         <a href="#features">Features</a>
         <a href="#pricing">Pricing</a>
-        <a href="#">Catalog</a>
       </div>
     </div>
     <div class="nav-right">
@@ -437,10 +467,10 @@
 <!-- ========== HERO ========== -->
 <section class="hero" id="home" data-screen-label="01 Hero" style="--heroOpacity: 1;">
   <!-- Pure cinematic video backdrop (no overlay layers) -->
-  <video class="hero-video" id="heroVideo" src="assets/hero.mp4" poster="assets/hero.png" autoplay muted loop playsinline preload="auto" data-bg-video style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:1;transition:opacity 1.2s ease"></video>
+  <video class="hero-video" id="heroVideo" src="assets/hero.mp4?v=girl-listening" poster="assets/hero.png" autoplay muted loop playsinline preload="auto" data-bg-video style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:1;transition:opacity 1.2s ease"></video>
 
   <!-- Minimal vignette mask for text legibility -->
-  <div class="hero-img-mask" style="z-index:1"></div>
+  <div class="hero-img-mask"></div>
 
   
 
@@ -461,7 +491,7 @@
 
     <div class="hero-sub-wrap rv rv-d4 on">
       <p class="hero-sub">
-        The world’s largest library of regional Indian music. Buy a license <b style="color:#fff">nobody else can ever own</b>. When you purchase, the track leaves the catalog. Forever yours.
+        Discover one of the most expansive music libraries built for <b style="color:#fff">modern creators</b>, featuring expertly curated tracks across every genre.
       </p>
     </div>
 
@@ -471,7 +501,7 @@
       </a>
       <a href="#features" class="btn btn-g lg">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg>
-        Preview the catalog
+        Explore the catalogue
       </a>
     </div>
 
@@ -479,9 +509,9 @@
 
     <div class="hero-stats rv rv-d5 on">
       <div class="s"><div class="n">10K+</div><div class="l">Exclusive tracks</div></div>
-      <div class="s"><div class="n">12</div><div class="l">Regional languages</div></div>
+      <div class="s"><div class="n">150+</div><div class="l">Genres</div></div>
       <div class="s"><div class="n">₹199</div><div class="l">Starting / month</div></div>
-      <div class="s"><div class="n">70%</div><div class="l">Cheaper than Artlist</div></div>
+      <div class="s"><div class="n">70%</div><div class="l">Cheaper than competitors</div></div>
     </div>
   </div>
 
@@ -498,16 +528,15 @@
 
 <!-- TRUST -->
 <section class="trust">
-  <div class="lbl">Trusted by creators building distinctive soundtracks</div>
-  <div class="marquee" id="marquee"><span class="mq-logo">YASHRAJ FILMS</span><span class="mq-logo">T-SERIES</span><span class="mq-logo">DHARMA PRODUCTIONS</span><span class="mq-logo">ZEE STUDIOS</span><span class="mq-logo">SAREGAMA</span><span class="mq-logo">NETFLIX INDIA</span><span class="mq-logo">PRIME VIDEO</span><span class="mq-logo">HOTSTAR</span><span class="mq-logo">EROS MOTION</span><span class="mq-logo">SONY INDIA</span><span class="mq-logo">RED CHILLIES</span><span class="mq-logo">EXCEL ENTERTAINMENT</span><span class="mq-logo">YASHRAJ FILMS</span><span class="mq-logo">T-SERIES</span><span class="mq-logo">DHARMA PRODUCTIONS</span><span class="mq-logo">ZEE STUDIOS</span><span class="mq-logo">SAREGAMA</span><span class="mq-logo">NETFLIX INDIA</span><span class="mq-logo">PRIME VIDEO</span><span class="mq-logo">HOTSTAR</span><span class="mq-logo">EROS MOTION</span><span class="mq-logo">SONY INDIA</span><span class="mq-logo">RED CHILLIES</span><span class="mq-logo">EXCEL ENTERTAINMENT</span></div>
+  <div class="lbl">Some of our major genres</div>
+  <div class="marquee" id="marquee"></div>
 </section>
 
 <!-- ========== WHY KEVAL ========== -->
 <section class="why zoom-sec" id="why" data-screen-label="02 Why Keval">
   <div class="why-head rv on">
     <p class="sec-label">Why Keval</p>
-    <h2 class="sec-h">Crafted in India.<br><em>Owned by you.</em></h2>
-    <p class="sec-body why-intro" style="max-width:760px;margin:26px auto 0">Four pillars no other music licensing platform offers, together in one library. Sound you cannot find on Artlist, Splice, or Epidemic — built by working Indian musicians.</p>
+    <h2 class="sec-h">Curated by experts.<br><em>Owned by you.</em></h2>
   </div>
 
   <div class="why-bg" aria-hidden="true">
@@ -518,25 +547,25 @@
       <div class="why-pillar rv active on" data-ac="1">
         <div class="ix"><span class="dot"></span>01 — EXCLUSIVE RIGHTS MODEL</div>
         <h3>Buy it once. <em>Own it forever.</em></h3>
-        <p>When you purchase an exclusive, the track disappears from the catalog — permanently. Full commercial rights transfer to you alone. No duplication, no expiry, no renewal trap. The first real ownership model in music licensing.</p>
+        <p>Full commercial rights are transferred to the purchaser, granting complete ownership for professional and commercial use. This creates a genuine competitive advantage for content creators and music producers by ensuring their sound remains unique in the market. It also gives brands and creators greater confidence to build distinctive content without duplication.</p>
       </div>
 
       <div class="why-pillar rv rv-d1 active on" data-ac="2">
         <div class="ix"><span class="dot"></span>02 — REGIONAL MUSIC SUBSCRIPTION</div>
         <h3>Hindi, Tamil, Telugu, <em>Punjabi, Bengali</em>.</h3>
-        <p>Sitar, tabla, flute, sarod — Bollywood cinematic to Rajasthani folk fusion, Carnatic classical to Punjabi bhangra. A library that goes miles deeper into South Asian sound than any global platform.</p>
+        <p>Keval Sound bridges the gap in regional music licensing through a strong focus on Indian and culturally diverse content around the world. Our library spans Hindi music, devotional sounds, regional languages, festival and wedding themes, folk influences, and modern fusion genres. By partnering with regional artists and understanding cultural nuances, we deliver authentic music with strong commercial appeal.</p>
       </div>
 
       <div class="why-pillar rv rv-d2 on active" data-ac="3">
         <div class="ix"><span class="dot"></span>03 — FLEXIBLE PRICING ARCHITECTURE</div>
         <h3>Subscribe, <em>or buy à-la-carte</em>.</h3>
-        <p>Monthly subscriptions from ₹199. One-time exclusive purchases from ₹4,999. Mix both. Cancel anytime. No minimum term, no hidden fees, no binding contracts — the only pricing model built around how creators actually work.</p>
+        <p>We offer multiple affordable subscription packages designed for every type of creator, from individuals to enterprises, giving you flexible access based on your needs. Priced up to 70% lower than leading competitors, our plans make professional music licensing more accessible, so you can focus on creating great content, not managing your budget.</p>
       </div>
 
       <div class="why-pillar rv rv-d3 on active" data-ac="4">
         <div class="ix"><span class="dot"></span>04 — EXPERIENCED CURATION TEAM</div>
         <h3>Working musicians, <em>curating worldwide</em>.</h3>
-        <p>Our curation team has credits from Yashraj, T-Series, Dharma — plus session work in London, Dubai, Singapore. Every track is A&amp;R’d by people who have shipped music commercially. No algorithm-dumped catalog.</p>
+        <p>Our platform is powered by a global network of highly experienced musicians, producers, and industry curators who carefully handpick every track and sound featured in our library. With experts across different regions and genres, we ensure only the finest, industry-grade content is made available to our users. This meticulous curation process guarantees high-quality, relevant, and ready-to-use music that creators can access seamlessly with confidence.</p>
       </div>
     </div>
   </div>
@@ -552,73 +581,34 @@
   <span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span>
 </div>
 
-<!-- ========== FEATURES ========== -->
+<!-- ========== FEATURES (Why-style: full-bleed video + floating cards) ========== -->
 <section class="feat zoom-sec" id="features" data-screen-label="03 Features">
-  <div class="feat-head rv on">
-    <p class="sec-label">Features</p>
-    <h2 class="sec-h">Three pillars,<br><em>one platform</em>.</h2>
+  <div class="feat-bg" aria-hidden="true">
+    <video class="feat-img" id="featImg" src="assets/features.mp4" poster="assets/features.png" autoplay muted loop playsinline preload="metadata" data-bg-video></video>
   </div>
 
-  <div class="feat-stage">
-    <div class="feat-hero-img rv on">
-      <video id="featImg" src="assets/features.mp4" poster="assets/features.png" muted loop playsinline preload="metadata" data-bg-video style="object-fit:cover;width:100%;height:100%"></video>
-      <div class="feat-hero-overlay">
-        <p class="q">“A library for creators, a marketplace for producers, and an AI that understands <em>vibe</em>.”</p>
-        <div class="meta">
-          <span>BUILT ON</span>
-          <b>Keval Engine v1.0</b>
-        </div>
-      </div>
+  <div class="feat-head rv on">
+    <p class="sec-label">Features</p>
+    <h2 class="sec-h">Exclusive sounds. Smart tools.<br><em>Seamless creation.</em></h2>
+  </div>
+
+  <div class="feat-feed">
+    <div class="feat-pillar rv on" data-ac="1">
+      <div class="ix"><span class="dot"></span>F-01 — EXCLUSIVE LICENSING</div>
+      <h3>Exclusive licenses for <em>music &amp; samples</em>.</h3>
+      <p>We offer exclusive licenses across both music tracks and samples, giving creators a distinct competitive edge. With exclusive ownership, you can publish your content confidently knowing the same sound or sample won’t be used by others, helping your work stand out with originality and consistency.</p>
     </div>
 
-    <div class="feat-grid">
-      <div class="feat-card rv" data-c="1">
-        <span class="chev"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"></path></svg></span>
-        <div class="num">F-01 — Licensing</div>
-        <div class="icn">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="m9 15 2 2 4-4"></path></svg>
-        </div>
-        <h3>Exclusive licenses for music &amp; samples</h3>
-        <p>One purchase, permanent ownership. Tracks for content creators. Royalty-free sample packs for producers. The license — and the track itself — are yours alone.</p>
-        <ul>
-          <li>Full commercial rights</li>
-          <li>WAV + stems delivery</li>
-          <li>Track pulled from catalog</li>
-          <li>Valid worldwide, in perpetuity</li>
-        </ul>
-      </div>
+    <div class="feat-pillar rv rv-d1 on" data-ac="2">
+      <div class="ix"><span class="dot"></span>F-02 — AI-POWERED DISCOVERY</div>
+      <h3>An engine that <em>understands vibe</em>.</h3>
+      <p>Our AI-powered discovery engine intelligently matches the right music to your content in seconds. By analyzing your style, mood, creator preferences, emerging trends, and cultural context, it delivers smart recommendations that feel relevant, personalized, and audience-ready.</p>
+    </div>
 
-      <div class="feat-card rv rv-d1" data-c="2">
-        <span class="chev"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"></path></svg></span>
-        <div class="num">F-02 — Discovery</div>
-        <div class="icn">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.3 6 6 2.3-6 2.3L12 19.6l-2.3-6-6-2.3 6-2.3Z"></path></svg>
-        </div>
-        <h3>AI-powered discovery engine</h3>
-        <p>Describe a vibe in any language — “warm sunset, sitar, 80 bpm” — the engine reads mood, instrument, and scene context, then returns the ten closest matches in under a second.</p>
-        <ul>
-          <li>Natural-language search</li>
-          <li>Multilingual query support</li>
-          <li>Mood + tempo + instrument filters</li>
-          <li>Smart “sounds like” recommendations</li>
-        </ul>
-      </div>
-
-      <div class="feat-card rv rv-d2" data-c="3">
-        <span class="chev"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"></path></svg></span>
-        <div class="num">F-03 — Experience</div>
-        <div class="icn">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect></svg>
-        </div>
-        <h3>Creator-centric platform experience</h3>
-        <p>Playlists, purchase history, stems, downloads, favourites — all in one dashboard. Sign in anywhere, your library travels with you. Built for working creators, not SEO farms.</p>
-        <ul>
-          <li>Unified library + history</li>
-          <li>Cross-device sync</li>
-          <li>One-click license download</li>
-          <li>Private project collections</li>
-        </ul>
-      </div>
+    <div class="feat-pillar rv rv-d2 on" data-ac="3">
+      <div class="ix"><span class="dot"></span>F-03 — CREATOR EXPERIENCE</div>
+      <h3>Built for <em>working creators</em>.</h3>
+      <p>Built for creators, our platform delivers a seamless and personalized experience. Save your favorite tracks, create playlists for different moods or projects, and stay organized with ease. Your dashboard gives you instant access to recently played, liked, and purchased songs, while allowing you to log in and download your content anytime, anywhere so your library is always within reach.</p>
     </div>
   </div>
 </section>
@@ -641,14 +631,14 @@
 
   <div class="pr-head rv">
     <p class="sec-label">Pricing</p>
-    <h2 class="sec-h">Four tiers,<br><em>one honest promise</em>.</h2>
-    <p class="sec-body" style="margin-top:22px">Pay monthly, annually, or buy exclusive tracks one at a time. Cancel anytime. 70% cheaper than Artlist. No hidden fees, ever.</p>
+    <h2 class="sec-h">Unbeatable Pricing for<br><em>Modern Creators</em>.</h2>
+    <p class="sec-body" style="margin-top:22px">The most affordable music subscription in the market with premium, exclusive tracks at prices no competitor can match.</p>
   </div>
 
   <div class="pr-toggle rv rv-d2">
     <div class="wrap">
       <button class="on" data-bill="monthly">Monthly</button>
-      <button data-bill="annual">Annual<span class="save">-16%</span></button>
+      <button data-bill="annual">Annual<span class="save">-25%</span></button>
     </div>
   </div>
 
@@ -810,9 +800,10 @@ setTimeout(()=>{
   }
 },0);
 
+
 // ========== 4. Marquee ==========
 (function(){
-  const names=['YASHRAJ FILMS','T-SERIES','DHARMA PRODUCTIONS','ZEE STUDIOS','SAREGAMA','NETFLIX INDIA','PRIME VIDEO','HOTSTAR','EROS MOTION','SONY INDIA','RED CHILLIES','EXCEL ENTERTAINMENT'];
+  const names=['HINDI/BOLLYWOOD','POP','HIP-HOP/RAP','EDM','ROCK','LO-FI','R&B/SOUL','PHONK','AMBIENT','TECHNO','SYNTHWAVE','METAL','COUNTRY','ACOUSTIC','HYPERPOP'];
   document.getElementById('marquee').innerHTML=names.concat(names).map(n=>`<span class="mq-logo">${n}</span>`).join('');
 })();
 
@@ -928,8 +919,8 @@ function onScroll(fn){ _scrollBus.subs.push(fn); fn(_scrollBus.lerped, _scrollBu
       inner.style.opacity=1-ease*1.1;
     }
     if(stats){
-      stats.style.transform=`translate3d(0,${-ease*40}px,0)`;
-      stats.style.opacity=1-ease*1.3;
+      stats.style.transform=`translate3d(0,${-ease*28}px,0)`;
+      stats.style.opacity=Math.max(0,1-Math.max(0,ease-0.55)*2.4);
     }
   });
 })();
@@ -968,13 +959,14 @@ function onScroll(fn){ _scrollBus.subs.push(fn); fn(_scrollBus.lerped, _scrollBu
 
 // ========== 10. Why pillars active highlight on scroll ==========
 (function(){
-  const pillars=document.querySelectorAll('.why-pillar');
+  const pillars=document.querySelectorAll('.why-pillar, .feat-pillar');
   const obs=new IntersectionObserver(entries=>{
     entries.forEach(e=>{
       if(e.isIntersecting) e.target.classList.add('active');
     });
   },{rootMargin:'-30% 0px -30% 0px'});
   pillars.forEach(p=>obs.observe(p));
+
 })();
 
 // ========== 11. Features image slight pan on scroll ==========
@@ -993,10 +985,10 @@ function onScroll(fn){ _scrollBus.subs.push(fn); fn(_scrollBus.lerped, _scrollBu
 // ========== 12. Pricing ==========
 (function(){
   const tiers=[
-    {n:'Basic',tier:'Basic',p:199,y:1990,b:'For individual creators & small YouTubers.',f:['10 exclusive tracks / mo','2 premium exclusives','25 exclusive samples','Keval Player access','Standard YouTube license'],c:'Start Basic'},
-    {n:'Standard',tier:'Standard',p:299,y:2990,b:'For regular content creators & podcasters.',f:['20 exclusive tracks / mo','5 premium exclusives','50 exclusive samples','Keval Player access','Remastering included','Social + web license'],c:'Start Standard'},
-    {n:'Pro',tier:'Pro',p:499,y:4990,b:'For production houses, studios, agencies.',f:['30 exclusive tracks / mo','8 premium exclusives','80 exclusive samples','Remastering + full stems','WAV / lossless delivery','Priority email support','Commercial film license'],c:'Go Pro',feat:1},
-    {n:'Enterprise',tier:'Enterprise',p:999,y:9990,b:'For agencies & studios at scale.',f:['60 exclusive tracks / mo','15 premium exclusives','120 exclusive samples','Full stems + isolated vocals','Custom remix requests','Dedicated curator','Broadcast + ad license','Custom contracts'],c:'Contact sales'},
+    {n:'Basic',tier:'Basic',p:199,y:1791,b:'For individual creators & small YouTubers.',f:['10 exclusive tracks / mo','2 premium exclusives','25 exclusive samples','Keval Player access'],c:'Start Basic'},
+    {n:'Standard',tier:'Standard',p:299,y:2691,b:'For regular content creators & podcasters.',f:['20 exclusive tracks / mo','5 premium exclusives','50 exclusive samples','Keval Player access','Remastering included'],c:'Start Standard'},
+    {n:'Pro',tier:'Pro',p:499,y:4491,b:'For production houses, studios, agencies.',f:['30 exclusive tracks / mo','8 premium exclusives','80 exclusive samples','Keval Player access','Remastering included','Music stems'],c:'Go Pro',feat:1},
+    {n:'Enterprise',tier:'Enterprise',p:999,y:8991,b:'For agencies & studios at scale.',f:['60 exclusive tracks / mo','15 premium exclusives','120 exclusive samples','Keval Player access','Remastering included','Music stems','Add vocals or music','Remix / Edits','Personal curator'],c:'Contact sales'},
   ];
   let billing='monthly';
   const grid=document.getElementById('prGrid');
@@ -1031,13 +1023,13 @@ function onScroll(fn){ _scrollBus.subs.push(fn); fn(_scrollBus.lerped, _scrollBu
 (function(){
   const videos = document.querySelectorAll('video[data-bg-video]');
   if(!videos.length) return;
-  const slow = 0.75; // Viktor-style hypnotic playback rate
+  const slow = 0.7; // hypnotic playback rate
   const heroVid = document.getElementById('heroVideo');
 
   // Hero video: try to load. If mp4 missing/404s, hide it so CSS layers show.
   if(heroVid){
     const reveal = ()=>{
-      heroVid.style.opacity = '.9';
+      heroVid.style.opacity = '1';
       heroVid.playbackRate = slow;
       heroVid.play().catch(()=>{});
     };
@@ -1047,6 +1039,18 @@ function onScroll(fn){ _scrollBus.subs.push(fn); fn(_scrollBus.lerped, _scrollBu
     if(heroVid.readyState >= 2) reveal();
     heroVid.addEventListener('error', ()=>{
       heroVid.style.display = 'none';
+    });
+    // Seamless-loop guard: some browsers (Safari/iOS) stutter on the native loop attr.
+    // Manually rewind ~80ms before end so the cut is invisible.
+    heroVid.addEventListener('timeupdate', ()=>{
+      if(heroVid.duration && heroVid.currentTime >= heroVid.duration - 0.08){
+        heroVid.currentTime = 0;
+        heroVid.play().catch(()=>{});
+      }
+    });
+    // Re-kick if the tab was backgrounded
+    document.addEventListener('visibilitychange', ()=>{
+      if(!document.hidden && heroVid.paused) heroVid.play().catch(()=>{});
     });
   }
 
