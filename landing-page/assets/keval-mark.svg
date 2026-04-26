@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f89ff"></stop>
+      <stop offset="50%" stop-color="#5b4282"></stop>
+      <stop offset="100%" stop-color="#6b1454"></stop>
+    </linearGradient>
+    <linearGradient id="gg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6b9dff"></stop>
+      <stop offset="100%" stop-color="#5b4282"></stop>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="44" fill="#0c0d1c"></rect>
+  
+  <g transform="translate(100 100)">
+    <circle r="70" fill="none" stroke="url(#g)" stroke-width="1.5" opacity="0.35"></circle>
+    <circle r="50" fill="none" stroke="url(#g)" stroke-width="1" opacity="0.25"></circle>
+    
+    <g opacity="0.85">
+      <rect x="-3" y="-34" width="6" height="20" rx="3" fill="url(#gg)"></rect>
+      <rect x="-3" y="14" width="6" height="20" rx="3" fill="url(#gg)"></rect>
+      <rect x="14" y="-26" width="6" height="12" rx="3" fill="url(#gg)" transform="rotate(45)"></rect>
+      <rect x="14" y="14" width="6" height="12" rx="3" fill="url(#gg)" transform="rotate(-45)"></rect>
+    </g>
+    <text text-anchor="middle" dominant-baseline="central" font-family="Sora, system-ui, sans-serif" font-weight="800" font-size="72" fill="url(#g)" letter-spacing="-4">K</text>
+  </g>
+</svg>
