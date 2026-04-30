@@ -1,6 +1,6 @@
 "use client";
 
-import { memo, useEffect, useMemo, useState } from "react";
+import { memo, useEffect, useMemo } from "react";
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
@@ -46,6 +46,8 @@ const libraryNav = [
 interface SidebarProps {
   mobileOpen?: boolean;
   onMobileClose?: () => void;
+  collapsed?: boolean;
+  onToggleCollapse?: () => void;
 }
 
 const SidebarNowPlaying = memo(function SidebarNowPlaying({ collapsed }: { collapsed: boolean }) {
@@ -64,23 +66,20 @@ const SidebarNowPlaying = memo(function SidebarNowPlaying({ collapsed }: { colla
           <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-mid-purple to-grey-magenta">
             <Headphones className="h-4 w-4 text-white/55" />
           </div>
-          <AnimatePresence>
-            {!collapsed && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="min-w-0"
-              >
-                <p className="truncate text-xs font-medium text-white">
-                  {currentItem?.title ?? "No preview playing"}
-                </p>
-                <p className="truncate text-[10px] text-muted">
-                  {currentItem?.artist ?? "Start a preview to see it here"}
-                </p>
-              </motion.div>
+          <div
+            aria-hidden={collapsed}
+            className={cn(
+              "min-w-0 transition-opacity duration-150",
+              collapsed ? "pointer-events-none opacity-0" : "opacity-100"
             )}
-          </AnimatePresence>
+          >
+            <p className="truncate text-xs font-medium text-white">
+              {currentItem?.title ?? "No preview playing"}
+            </p>
+            <p className="truncate text-[10px] text-muted">
+              {currentItem?.artist ?? "Start a preview to see it here"}
+            </p>
+          </div>
         </div>
         <div className={cn("mt-2", collapsed && "mt-1")}>
           <div className="h-[2px] rounded-full bg-white/[0.08]">
@@ -95,13 +94,17 @@ const SidebarNowPlaying = memo(function SidebarNowPlaying({ collapsed }: { colla
   );
 });
 
-export default function Sidebar({ mobileOpen = false, onMobileClose }: SidebarProps) {
+export default function Sidebar({
+  mobileOpen = false,
+  onMobileClose,
+  collapsed = false,
+  onToggleCollapse,
+}: SidebarProps) {
   const pathname = usePathname();
   const router = useRouter();
   const searchParams = useSearchParams();
   const activeAccountTab = searchParams.get("tab");
   const { isAuthenticated } = useAuth();
-  const [collapsed, setCollapsed] = useState(false);
 
   const currentMainPath = useMemo(
     () => (pathname === "/" ? "/" : `/${pathname.split("/")[1] ?? ""}`),
@@ -164,12 +167,11 @@ export default function Sidebar({ mobileOpen = false, onMobileClose }: SidebarPr
         )}
       </AnimatePresence>
 
-      <motion.aside
-        initial={false}
-        animate={{ width: collapsed ? 76 : 248 }}
-        transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
+      <aside
+        style={{ width: collapsed ? 76 : 248, willChange: "width" }}
         className={cn(
-          "fixed bottom-0 left-0 top-0 z-40 flex flex-col border-r border-white/[0.06] bg-[#08091a] transition-transform duration-300",
+          "fixed bottom-0 left-0 top-0 z-40 flex flex-col border-r border-white/[0.06] bg-[#08091a]",
+          "transition-[width,transform] duration-200 ease-[cubic-bezier(0.22,0.61,0.36,1)] [contain:layout_paint]",
           mobileOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
         )}
       >
@@ -185,7 +187,7 @@ export default function Sidebar({ mobileOpen = false, onMobileClose }: SidebarPr
 
         <button
           type="button"
-          onClick={() => setCollapsed((prev) => !prev)}
+          onClick={onToggleCollapse}
           className="absolute right-[-12px] top-20 z-50 hidden h-6 w-6 items-center justify-center rounded-full border border-white/[0.1] bg-[#12132a] text-muted transition-all hover:bg-white/[0.08] hover:text-white lg:flex"
           aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
         >
@@ -237,18 +239,15 @@ export default function Sidebar({ mobileOpen = false, onMobileClose }: SidebarPr
                         isActive ? "text-vivid-blue" : "group-hover:text-white"
                       )}
                     />
-                    <AnimatePresence>
-                      {!collapsed && (
-                        <motion.span
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          exit={{ opacity: 0 }}
-                          className="relative z-10 whitespace-nowrap"
-                        >
-                          {item.label}
-                        </motion.span>
+                    <span
+                      aria-hidden={collapsed}
+                      className={cn(
+                        "relative z-10 whitespace-nowrap transition-opacity duration-150",
+                        collapsed ? "pointer-events-none opacity-0" : "opacity-100"
                       )}
-                    </AnimatePresence>
+                    >
+                      {item.label}
+                    </span>
                   </div>
                 </Link>
               );
@@ -280,18 +279,15 @@ export default function Sidebar({ mobileOpen = false, onMobileClose }: SidebarPr
                     )}
                   >
                     <item.icon className="h-[18px] w-[18px] shrink-0" />
-                    <AnimatePresence>
-                      {!collapsed && (
-                        <motion.span
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          exit={{ opacity: 0 }}
-                          className="whitespace-nowrap"
-                        >
-                          {item.label}
-                        </motion.span>
+                    <span
+                      aria-hidden={collapsed}
+                      className={cn(
+                        "whitespace-nowrap transition-opacity duration-150",
+                        collapsed ? "pointer-events-none opacity-0" : "opacity-100"
                       )}
-                    </AnimatePresence>
+                    >
+                      {item.label}
+                    </span>
                   </div>
                 </Link>
               );
@@ -300,7 +296,7 @@ export default function Sidebar({ mobileOpen = false, onMobileClose }: SidebarPr
         </nav>
 
         <SidebarNowPlaying collapsed={collapsed} />
-      </motion.aside>
+      </aside>
     </>
   );
 }

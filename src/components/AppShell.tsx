@@ -4,10 +4,13 @@ import { Suspense, useCallback, useEffect, useState, type ReactNode } from "reac
 import { usePathname, useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { useAuth } from "@/lib/auth-context";
+import { cn } from "@/lib/utils";
 import Sidebar from "./Sidebar";
 import TopBar from "./TopBar";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+
+const SIDEBAR_COLLAPSED_KEY = "keval-sidebar-collapsed";
 
 interface AppShellProps {
   children: ReactNode;
@@ -63,6 +66,16 @@ export default function AppShell({ children }: AppShellProps) {
   const isAuthPage = pathname === "/auth";
 
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+
+  // Restore the user's last sidebar preference once the client mounts.
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    try {
+      const stored = window.localStorage.getItem(SIDEBAR_COLLAPSED_KEY);
+      if (stored === "1") setSidebarCollapsed(true);
+    } catch {}
+  }, []);
 
   const toggleMobileSidebar = useCallback(() => {
     setMobileSidebarOpen((prev) => !prev);
@@ -70,6 +83,16 @@ export default function AppShell({ children }: AppShellProps) {
 
   const closeMobileSidebar = useCallback(() => {
     setMobileSidebarOpen(false);
+  }, []);
+
+  const toggleSidebarCollapse = useCallback(() => {
+    setSidebarCollapsed((prev) => {
+      const next = !prev;
+      try {
+        window.localStorage.setItem(SIDEBAR_COLLAPSED_KEY, next ? "1" : "0");
+      } catch {}
+      return next;
+    });
   }, []);
 
   useEffect(() => {
@@ -124,8 +147,18 @@ export default function AppShell({ children }: AppShellProps) {
 
   return (
     <>
-      <Sidebar mobileOpen={mobileSidebarOpen} onMobileClose={closeMobileSidebar} />
-      <div className="flex min-h-screen flex-col transition-all duration-300 lg:pl-[248px]">
+      <Sidebar
+        mobileOpen={mobileSidebarOpen}
+        onMobileClose={closeMobileSidebar}
+        collapsed={sidebarCollapsed}
+        onToggleCollapse={toggleSidebarCollapse}
+      />
+      <div
+        className={cn(
+          "flex min-h-screen flex-col transition-[padding] duration-200 ease-[cubic-bezier(0.22,0.61,0.36,1)]",
+          sidebarCollapsed ? "lg:pl-[76px]" : "lg:pl-[248px]"
+        )}
+      >
         <TopBar onMenuToggle={toggleMobileSidebar} />
         <AnimatePresence mode="sync" initial={false}>
           <motion.main

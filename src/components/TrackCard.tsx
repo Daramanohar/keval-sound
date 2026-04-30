@@ -76,27 +76,27 @@ const TrackCard = memo(function TrackCard({ track, index = 0, rank }: TrackCardP
       onMouseLeave={() => setIsHovered(false)}
       className="glass-card group overflow-hidden rounded-2xl"
     >
-      <div className="relative aspect-square overflow-hidden">
+      <div className="relative aspect-[4/3] overflow-hidden">
         <div className={cn("absolute inset-0 bg-gradient-to-br transition-transform duration-700", track.coverUrl, isHovered && "scale-105")} />
         <div className="absolute inset-0 bg-gradient-to-t from-vampire-black/80 via-black/25 to-transparent" />
 
-        <div className="absolute left-3 top-3 flex flex-wrap gap-2">
+        <div className="absolute left-2.5 top-2.5 flex flex-wrap gap-1.5">
           {rank && rank <= 10 ? (
-            <span className="flex items-center gap-1 rounded-full bg-gradient-to-r from-zesty-red to-grey-magenta px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white shadow-lg shadow-zesty-red/20">
-              <Zap className="h-3 w-3" /> #{rank}
+            <span className="flex items-center gap-1 rounded-full bg-gradient-to-r from-zesty-red to-grey-magenta px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white shadow-lg shadow-zesty-red/20">
+              <Zap className="h-2.5 w-2.5" /> #{rank}
             </span>
           ) : track.isTrending ? (
-            <span className="flex items-center gap-1 rounded-full bg-zesty-red/90 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white">
-              <Zap className="h-3 w-3" /> Trending
+            <span className="flex items-center gap-1 rounded-full bg-zesty-red/90 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">
+              <Zap className="h-2.5 w-2.5" /> Trending
             </span>
           ) : null}
           {track.isSellingFast && (
-            <span className="rounded-full bg-dandelion/90 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-vampire-black">
+            <span className="rounded-full bg-dandelion/90 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-vampire-black">
               Selling Fast
             </span>
           )}
           {owned && (
-            <span className="rounded-full bg-vivid-blue/90 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white">
+            <span className="rounded-full bg-vivid-blue/90 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">
               Owned
             </span>
           )}
@@ -106,14 +106,14 @@ const TrackCard = memo(function TrackCard({ track, index = 0, rank }: TrackCardP
           type="button"
           onClick={() => toggleTrackWishlist(track)}
           className={cn(
-            "absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full transition-all",
+            "absolute right-2.5 top-2.5 flex h-7 w-7 items-center justify-center rounded-full transition-all",
             isFavorited
               ? "bg-zesty-red text-white"
               : "bg-black/30 text-white/70 hover:bg-black/50 hover:text-white"
           )}
           aria-label="Toggle wishlist"
         >
-          <Heart className={cn("h-4 w-4", isFavorited && "fill-current")} />
+          <Heart className={cn("h-3.5 w-3.5", isFavorited && "fill-current")} />
         </button>
 
         <div
@@ -126,20 +126,20 @@ const TrackCard = memo(function TrackCard({ track, index = 0, rank }: TrackCardP
             type="button"
             whileTap={{ scale: 0.95 }}
             onClick={handlePreview}
-            className="flex h-14 w-14 items-center justify-center rounded-full bg-vivid-blue/90 text-white shadow-lg shadow-vivid-blue/30 transition-all hover:scale-105 hover:bg-vivid-blue"
+            className="flex h-12 w-12 items-center justify-center rounded-full bg-vivid-blue/90 text-white shadow-lg shadow-vivid-blue/30 transition-all hover:scale-105 hover:bg-vivid-blue"
             aria-label={isPlaying ? "Pause preview" : "Play preview"}
           >
-            {isPlaying ? <Pause className="h-6 w-6" /> : <Play className="ml-0.5 h-6 w-6" />}
+            {isPlaying ? <Pause className="h-5 w-5" /> : <Play className="ml-0.5 h-5 w-5" />}
           </motion.button>
         </div>
 
         {isPlaying && (
-          <div className="absolute bottom-0 left-0 right-0 p-3">
+          <div className="absolute bottom-0 left-0 right-0 p-2">
             <WaveformVisualizer
               data={track.waveform}
               isPlaying
               progress={0}
-              height={24}
+              height={18}
               gap={1}
               stretch
             />
@@ -147,46 +147,37 @@ const TrackCard = memo(function TrackCard({ track, index = 0, rank }: TrackCardP
         )}
       </div>
 
-      <div className="p-4">
-        <div className="mb-1 flex items-start justify-between gap-3">
+      <div className="p-3">
+        <div className="flex items-start justify-between gap-2">
           <div className="min-w-0 flex-1">
             <h3 className="truncate text-sm font-semibold text-white">{track.title}</h3>
-            <p className="truncate text-xs text-muted">{track.artist}</p>
+            <p className="truncate text-[11px] text-muted">{track.artist}</p>
           </div>
           <span className="whitespace-nowrap text-sm font-bold text-vivid-blue">
             {owned ? "Owned" : formatPrice(track.price)}
           </span>
         </div>
 
-        <div className="mt-3 flex flex-wrap items-center gap-3 text-[11px] text-muted">
+        <div className="mt-2 flex flex-wrap items-center gap-2 text-[10px] text-muted">
           <span className="flex items-center gap-1">
-            <Clock className="h-3 w-3" />
+            <Clock className="h-2.5 w-2.5" />
             {formatDuration(track.duration)}
           </span>
+          <span>·</span>
           <span>{track.bpm} BPM</span>
+          <span>·</span>
           <span>{track.key}</span>
-          <span className="ml-auto">{track.genre}</span>
+          <span className="ml-auto truncate">{track.genre}</span>
         </div>
 
-        <div className="mt-3 flex flex-wrap gap-1">
-          {track.tags.slice(0, 3).map((tag) => (
-            <span
-              key={tag}
-              className="rounded-full bg-white/[0.05] px-2 py-0.5 text-[10px] text-muted"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-
-        <div className="mt-4 grid grid-cols-2 gap-2">
+        <div className="mt-2.5 grid grid-cols-2 gap-1.5">
           <motion.button
             type="button"
             whileTap={{ scale: 0.97 }}
             onClick={handlePreview}
-            className="flex items-center justify-center gap-2 rounded-xl bg-white/[0.06] px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-white/[0.1]"
+            className="flex items-center justify-center gap-1.5 rounded-lg bg-white/[0.06] px-3 py-1.5 text-xs font-medium text-white transition-colors hover:bg-white/[0.1]"
           >
-            {isPlaying ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
+            {isPlaying ? <Pause className="h-3.5 w-3.5" /> : <Play className="h-3.5 w-3.5" />}
             {isPlaying ? "Pause" : "Preview"}
           </motion.button>
 
@@ -196,7 +187,7 @@ const TrackCard = memo(function TrackCard({ track, index = 0, rank }: TrackCardP
             animate={cartPulse ? { scale: [1, 1.05, 1] } : undefined}
             onClick={handleAddToCart}
             className={cn(
-              "flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-all",
+              "flex items-center justify-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-semibold transition-all",
               owned
                 ? "bg-white/[0.06] text-white/70"
                 : inCart
@@ -204,7 +195,7 @@ const TrackCard = memo(function TrackCard({ track, index = 0, rank }: TrackCardP
                   : "bg-vivid-blue/10 text-vivid-blue hover:bg-vivid-blue hover:text-white"
             )}
           >
-            <ShoppingCart className="h-4 w-4" />
+            <ShoppingCart className="h-3.5 w-3.5" />
             {owned ? "Owned" : inCart ? "In Cart" : "Add to Cart"}
           </motion.button>
         </div>

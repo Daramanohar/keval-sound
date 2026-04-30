@@ -44,11 +44,17 @@ const ContentSection = memo(function ContentSection({
     startX: number;
     startScrollLeft: number;
     dragging: boolean;
+    lastX: number;
+    lastT: number;
+    velocity: number;
   }>({
     pointerId: null,
     startX: 0,
     startScrollLeft: 0,
     dragging: false,
+    lastX: 0,
+    lastT: 0,
+    velocity: 0,
   });
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
@@ -114,6 +120,9 @@ const ContentSection = memo(function ContentSection({
       startX: event.clientX,
       startScrollLeft: rail.scrollLeft,
       dragging: false,
+      lastX: event.clientX,
+      lastT: performance.now(),
+      velocity: 0,
     };
     rail.setPointerCapture(event.pointerId);
   }, []);
@@ -124,7 +133,7 @@ const ContentSection = memo(function ContentSection({
 
     const delta = event.clientX - dragState.current.startX;
 
-    if (Math.abs(delta) > 5 && !dragState.current.dragging) {
+    if (Math.abs(delta) > 4 && !dragState.current.dragging) {
       dragState.current.dragging = true;
       setIsDragging(true);
     }
@@ -132,6 +141,18 @@ const ContentSection = memo(function ContentSection({
     if (!dragState.current.dragging) return;
 
     event.preventDefault();
+
+    // Track instantaneous velocity for fling on release.
+    const now = performance.now();
+    const dt = now - dragState.current.lastT;
+    if (dt > 0) {
+      const dx = event.clientX - dragState.current.lastX;
+      // px/ms — exponential smoothing keeps the value stable across sub-frame events.
+      dragState.current.velocity = dragState.current.velocity * 0.6 + (dx / dt) * 0.4;
+    }
+    dragState.current.lastX = event.clientX;
+    dragState.current.lastT = now;
+
     rail.scrollLeft = dragState.current.startScrollLeft - delta;
   }, []);
 
@@ -139,16 +160,29 @@ const ContentSection = memo(function ContentSection({
     const rail = scrollRef.current;
     if (!rail || dragState.current.pointerId !== event.pointerId) return;
 
+    const wasDragging = dragState.current.dragging;
+    const velocity = dragState.current.velocity; // px/ms, positive = moved right (cards came left)
+
     dragState.current = {
       pointerId: null,
       startX: 0,
       startScrollLeft: 0,
       dragging: false,
+      lastX: 0,
+      lastT: 0,
+      velocity: 0,
     };
     setIsDragging(false);
 
     if (rail.hasPointerCapture(event.pointerId)) {
       rail.releasePointerCapture(event.pointerId);
+    }
+
+    // Fling: if released with momentum, glide further in the direction of motion.
+    if (wasDragging && Math.abs(velocity) > 0.3) {
+      // Convert px/ms to a ~300ms decel distance: scrollLeft moved opposite to drag direction.
+      const flingDistance = -velocity * 220;
+      rail.scrollBy({ left: flingDistance, behavior: "smooth" });
     }
   }, []);
 
@@ -241,12 +275,12 @@ const ContentSection = memo(function ContentSection({
           onPointerCancel={handlePointerUp}
           onWheel={handleWheel}
           className={cn(
-            "w-full scrollbar-hide flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory overflow-y-visible px-6 pr-10 pb-2 cursor-grab active:cursor-grabbing",
+            "w-full scrollbar-hide flex gap-4 overflow-x-auto snap-x snap-proximity overflow-y-visible px-6 pr-10 pb-2 cursor-grab active:cursor-grabbing",
             "overscroll-x-contain",
             "touch-pan-x",
             isDragging && "cursor-grabbing select-none"
           )}
-          style={{ scrollPaddingLeft: 24, scrollPaddingRight: 64 }}
+          style={{ scrollPaddingLeft: 24, scrollPaddingRight: 64, scrollBehavior: "auto" }}
         >
           {children}
         </div>

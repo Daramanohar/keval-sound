@@ -16,6 +16,7 @@ import HeroCarousel from "@/components/HeroCarousel";
 import ContentSection from "@/components/ContentSection";
 import MusicCard from "@/components/MusicCard";
 import TrendingDiscoveryPanel from "@/components/TrendingDiscoveryPanel";
+import StickySidebar from "@/components/StickySidebar";
 import { formatPrice } from "@/lib/utils";
 
 function ensureMinimumTracks(primary: Track[], fallback: Track[], minimum = 8) {
@@ -262,7 +263,7 @@ function AuthenticatedHome() {
         <HeroCarousel />
       </div>
 
-      <div className="flex flex-col gap-8 lg:flex-row lg:items-start">
+      <div className="flex flex-col gap-8 lg:flex-row lg:items-stretch">
       <div className="flex-1 min-w-0 space-y-8">
         <ContentSection
           title="Trending Now"
@@ -428,7 +429,9 @@ function AuthenticatedHome() {
       </div>
 
       <div className="w-full lg:w-[320px] lg:shrink-0">
-        <TrendingDiscoveryPanel />
+        <StickySidebar topOffset={96} bottomOffset={16}>
+          <TrendingDiscoveryPanel />
+        </StickySidebar>
       </div>
     </div>
     </div>
