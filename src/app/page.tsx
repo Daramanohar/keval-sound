@@ -4,6 +4,7 @@ import { useMemo } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Zap } from "lucide-react";
 import Link from "next/link";
+import NextImage from "next/image";
 import { useAuth } from "@/lib/auth-context";
 import { packs, tracks, type Track } from "@/lib/mock-data";
 import GenreShowcase from "@/components/GenreShowcase";
@@ -17,8 +18,6 @@ import ContentSection from "@/components/ContentSection";
 import MusicCard from "@/components/MusicCard";
 import TrendingDiscoveryPanel from "@/components/TrendingDiscoveryPanel";
 import StickySidebar from "@/components/StickySidebar";
-import { formatPrice } from "@/lib/utils";
-
 function ensureMinimumTracks(primary: Track[], fallback: Track[], minimum = 8) {
   if (primary.length >= minimum) return primary;
 
@@ -181,21 +180,27 @@ function LandingPage() {
               transition={{ delay: index * 0.08, duration: 0.4 }}
               className="overflow-hidden rounded-3xl border border-white/[0.06] bg-white/[0.03]"
             >
-              <div className={`h-44 bg-gradient-to-br ${pack.coverUrl}`} />
+              <div className="relative aspect-square overflow-hidden">
+                {pack.coverUrl.startsWith("/") ? (
+                  <NextImage
+                    src={pack.coverUrl}
+                    alt={pack.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 33vw"
+                  />
+                ) : (
+                  <div className={`absolute inset-0 bg-gradient-to-br ${pack.coverUrl}`} />
+                )}
+              </div>
               <div className="p-5">
-                <div className="flex items-start justify-between gap-3">
-                  <div>
-                    <p className="text-lg font-semibold text-white">{pack.title}</p>
-                    <p className="mt-1 text-xs text-muted">{pack.trackCount} tracks · {pack.genre}</p>
-                  </div>
-                  <span className="text-sm font-bold text-vivid-blue">{formatPrice(pack.price)}</span>
-                </div>
-                <p className="mt-4 text-sm leading-relaxed text-muted">{pack.description}</p>
+                <p className="text-lg font-semibold text-white">{pack.title}</p>
+                <p className="mt-1 text-xs text-muted">{pack.category}</p>
                 <Link
-                  href="/auth"
+                  href={`/pack/${pack.id}`}
                   className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-vivid-blue transition-colors hover:text-accent-hover"
                 >
-                  Get Started
+                  Open Pack
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
@@ -372,26 +377,30 @@ function AuthenticatedHome() {
                 transition={{ delay: index * 0.05, duration: 0.35 }}
                 className="overflow-hidden rounded-2xl border border-transparent bg-white/[0.03] transition-all hover:border-white/[0.08]"
               >
-                <div className="relative h-36 overflow-hidden">
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-br ${pack.coverUrl} transition-transform duration-700 group-hover:scale-110`}
-                  />
+                <div className="relative aspect-square overflow-hidden">
+                  {pack.coverUrl.startsWith("/") ? (
+                    <NextImage
+                      src={pack.coverUrl}
+                      alt={pack.title}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      sizes="200px"
+                    />
+                  ) : (
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-br ${pack.coverUrl} transition-transform duration-700 group-hover:scale-110`}
+                    />
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-vampire-black/80 to-transparent" />
                   <div className="absolute bottom-2.5 left-2.5 right-2.5">
                     <p className="truncate text-xs font-bold text-white">{pack.title}</p>
-                    <p className="text-[10px] text-white/55">{pack.trackCount} tracks</p>
+                    <p className="text-[10px] text-white/55">{pack.category}</p>
                   </div>
                   {pack.featured ? (
                     <span className="absolute right-2 top-2 rounded-full bg-dandelion/80 px-1.5 py-0.5 text-[9px] font-bold uppercase text-vampire-black">
                       Featured
                     </span>
                   ) : null}
-                </div>
-                <div className="p-3">
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="text-[10px] text-muted/40 line-through">{formatPrice(pack.originalPrice)}</span>
-                    <span className="text-sm font-bold text-vivid-blue">{formatPrice(pack.price)}</span>
-                  </div>
                 </div>
               </motion.div>
             </Link>

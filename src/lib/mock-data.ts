@@ -1,4 +1,4 @@
-export interface Track {
+﻿export interface Track {
   id: string;
   title: string;
   artist: string;
@@ -102,7 +102,7 @@ export const tracks: Track[] = [
     bpm: 140,
     key: "Am",
     duration: 214,
-    price: 4999,
+    price: 99,
     coverUrl: coverColors[0],
     waveform: generateWaveform("t1"),
     tags: ["trap", "bollywood", "bass", "urban"],
@@ -123,7 +123,7 @@ export const tracks: Track[] = [
     bpm: 95,
     key: "Dm",
     duration: 186,
-    price: 2999,
+    price: 99,
     coverUrl: coverColors[1],
     waveform: generateWaveform("t2"),
     tags: ["folk", "rajasthani", "fusion", "ambient"],
@@ -144,7 +144,7 @@ export const tracks: Track[] = [
     bpm: 128,
     key: "Cm",
     duration: 198,
-    price: 3499,
+    price: 99,
     coverUrl: coverColors[2],
     waveform: generateWaveform("t3"),
     tags: ["edm", "tamil", "bass", "dance"],
@@ -165,7 +165,7 @@ export const tracks: Track[] = [
     bpm: 110,
     key: "G",
     duration: 227,
-    price: 5999,
+    price: 99,
     coverUrl: coverColors[3],
     waveform: generateWaveform("t4"),
     tags: ["bhangra", "pop", "punjabi", "dance"],
@@ -186,7 +186,7 @@ export const tracks: Track[] = [
     bpm: 145,
     key: "Em",
     duration: 312,
-    price: 3999,
+    price: 99,
     coverUrl: coverColors[4],
     waveform: generateWaveform("t5"),
     tags: ["psytrance", "goa", "electronic", "trippy"],
@@ -207,7 +207,7 @@ export const tracks: Track[] = [
     bpm: 82,
     key: "F",
     duration: 243,
-    price: 1999,
+    price: 99,
     coverUrl: coverColors[5],
     waveform: generateWaveform("t6"),
     tags: ["lofi", "bengali", "chill", "rain"],
@@ -228,7 +228,7 @@ export const tracks: Track[] = [
     bpm: 142,
     key: "Bbm",
     duration: 176,
-    price: 4499,
+    price: 99,
     coverUrl: coverColors[6],
     waveform: generateWaveform("t7"),
     tags: ["drill", "telugu", "dark", "hard"],
@@ -249,7 +249,7 @@ export const tracks: Track[] = [
     bpm: 118,
     key: "C",
     duration: 205,
-    price: 2499,
+    price: 99,
     coverUrl: coverColors[7],
     waveform: generateWaveform("t8"),
     tags: ["tropical", "house", "malayalam", "chill"],
@@ -270,7 +270,7 @@ export const tracks: Track[] = [
     bpm: 90,
     key: "Gm",
     duration: 192,
-    price: 6999,
+    price: 99,
     coverUrl: coverColors[0],
     waveform: generateWaveform("t9"),
     tags: ["hiphop", "rap", "delhi", "street"],
@@ -291,7 +291,7 @@ export const tracks: Track[] = [
     bpm: 75,
     key: "D",
     duration: 268,
-    price: 1499,
+    price: 99,
     coverUrl: coverColors[1],
     waveform: generateWaveform("t10"),
     tags: ["ambient", "folk", "assamese", "nature"],
@@ -312,7 +312,7 @@ export const tracks: Track[] = [
     bpm: 174,
     key: "Fm",
     duration: 245,
-    price: 3999,
+    price: 99,
     coverUrl: coverColors[2],
     waveform: generateWaveform("t11"),
     tags: ["dnb", "marathi", "bass", "intense"],
@@ -333,7 +333,7 @@ export const tracks: Track[] = [
     bpm: 135,
     key: "A",
     duration: 199,
-    price: 4499,
+    price: 99,
     coverUrl: coverColors[3],
     waveform: generateWaveform("t12"),
     tags: ["garba", "edm", "gujarati", "festive"],
@@ -360,7 +360,7 @@ function expandPackTracks(packId: string, count: number): Track[] {
   });
 }
 
-// ─── 64 Real Sound Packs ──────────────────────────────────────────────────────
+// â”€â”€â”€ 64 Real Sound Packs â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 // Sequential order matches album art filenames in /public/packs/pack-{N}.png
 // Song counts and categories sourced from Sound PACKS LIST.pdf
 

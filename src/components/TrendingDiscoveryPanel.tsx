@@ -1,7 +1,8 @@
 "use client";
 
-import { useCallback, useMemo, useRef, useState } from "react";
+import { useMemo, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -10,25 +11,21 @@ import {
   Flame,
   Pause,
   Play,
-  ShoppingCart,
   TrendingUp,
 } from "lucide-react";
 import WaveformVisualizer from "./WaveformVisualizer";
-import { packs, type Pack } from "@/lib/mock-data";
-import { formatPrice, resampleWaveform } from "@/lib/utils";
+import { packs } from "@/lib/mock-data";
+import { resampleWaveform } from "@/lib/utils";
 import { usePlayerControls, usePlayerProgress } from "@/lib/player-context";
 import { useStore } from "@/lib/store-context";
-import { useToast } from "@/lib/toast-context";
 
 const featuredPack = packs.find((pack) => pack.featured) ?? packs[0];
 
 export default function TrendingDiscoveryPanel() {
   const panelRef = useRef<HTMLDivElement>(null);
-  const [pulsePackId, setPulsePackId] = useState<string | null>(null);
   const { playPack, togglePlayback, activePackId, isPlaying } = usePlayerControls();
   const { progress } = usePlayerProgress();
-  const { addPackToCart, isInCart, isOwned } = useStore();
-  const { showToast } = useToast();
+  const { isOwned } = useStore();
 
   const rankedPacks = useMemo(
     () =>
@@ -43,41 +40,7 @@ export default function TrendingDiscoveryPanel() {
 
   const isFeaturedActive = activePackId === featuredPack.id;
   const featuredWaveform = resampleWaveform(featuredPack.tracks[0]?.waveform ?? [], 72);
-  const featuredInCart = isInCart(featuredPack.id, "pack");
   const featuredOwned = isOwned(featuredPack.id, "pack");
-
-  const handlePackAdd = useCallback(
-    (pack: Pack) => {
-      const packOwned = isOwned(pack.id, "pack");
-
-      if (packOwned) {
-        showToast({
-          tone: "info",
-          title: `${pack.title} is already owned`,
-          description: "Your pack license is available in Purchases and Downloads.",
-        });
-        return;
-      }
-
-      const added = addPackToCart(pack);
-      setPulsePackId(pack.id);
-      window.setTimeout(() => setPulsePackId((current) => (current === pack.id ? null : current)), 320);
-
-      showToast(
-        added
-          ? {
-              title: `${pack.title} added to cart`,
-              description: `${pack.trackCount} tracks · ${formatPrice(pack.price)}`,
-            }
-          : {
-              tone: "info",
-              title: `${pack.title} is already in your cart`,
-              description: "Complete checkout anytime from the cart.",
-            }
-      );
-    },
-    [addPackToCart, isOwned, showToast]
-  );
 
   useGSAP(
     () => {
@@ -106,9 +69,19 @@ export default function TrendingDiscoveryPanel() {
       >
         {/* Featured pack cover */}
         <div className="relative h-36 overflow-hidden">
-          <div
-            className={`absolute inset-0 bg-gradient-to-br ${featuredPack.coverUrl} transition-transform duration-700 group-hover:scale-105`}
-          />
+          {featuredPack.coverUrl.startsWith("/") ? (
+            <Image
+              src={featuredPack.coverUrl}
+              alt={featuredPack.title}
+              fill
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+              sizes="320px"
+            />
+          ) : (
+            <div
+              className={`absolute inset-0 bg-gradient-to-br ${featuredPack.coverUrl} transition-transform duration-700 group-hover:scale-105`}
+            />
+          )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
 
           <div className="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-dandelion/90 text-vampire-black text-[10px] font-bold uppercase tracking-wider">
@@ -140,7 +113,7 @@ export default function TrendingDiscoveryPanel() {
 
           <div className="absolute bottom-3 left-3 right-3">
             <p className="text-sm font-bold text-white leading-tight">{featuredPack.title}</p>
-            <p className="text-[10px] text-white/55 mt-0.5">{featuredPack.trackCount} exclusive tracks</p>
+            <p className="text-[10px] text-white/55 mt-0.5">{featuredPack.category}</p>
             <div className="mt-2">
               <WaveformVisualizer
                 data={featuredWaveform}
@@ -156,17 +129,8 @@ export default function TrendingDiscoveryPanel() {
           </div>
         </div>
 
-        {/* Featured pack info + actions */}
+        {/* Featured pack actions — preview + open detail */}
         <div className="px-4 py-3 border-b border-white/[0.06]">
-          <div className="flex items-center justify-between gap-3 mb-3">
-            <div className="min-w-0">
-              <p className="text-[10px] text-muted/50 line-clamp-1">{featuredPack.description}</p>
-            </div>
-            <div className="text-right shrink-0">
-              <p className="text-[9px] text-muted/40 line-through">{formatPrice(featuredPack.originalPrice)}</p>
-              <p className="text-sm font-bold text-vivid-blue">{formatPrice(featuredPack.price)}</p>
-            </div>
-          </div>
           <div className="grid grid-cols-2 gap-2">
             <button
               type="button"
@@ -182,21 +146,17 @@ export default function TrendingDiscoveryPanel() {
                 <><Play className="w-3 h-3" /> Preview</>
               )}
             </button>
-            <motion.button
-              type="button"
-              onClick={() => handlePackAdd(featuredPack)}
-              animate={pulsePackId === featuredPack.id ? { scale: [1, 1.05, 1] } : undefined}
+            <Link
+              href={`/pack/${featuredPack.id}`}
               className={`flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
                 featuredOwned
                   ? "bg-white/[0.06] text-white/70"
-                  : featuredInCart
-                    ? "bg-vivid-blue text-white"
-                    : "bg-vivid-blue/20 hover:bg-vivid-blue/30 text-vivid-blue"
+                  : "bg-vivid-blue/20 hover:bg-vivid-blue/30 text-vivid-blue"
               }`}
             >
-              <ShoppingCart className="w-3 h-3" />
-              {featuredOwned ? "Owned" : featuredInCart ? "In Cart" : "Get Pack"}
-            </motion.button>
+              {featuredOwned ? "Owned" : "Open Pack"}
+              <ArrowRight className="w-3 h-3" />
+            </Link>
           </div>
         </div>
 
@@ -219,7 +179,6 @@ export default function TrendingDiscoveryPanel() {
             const packPlaying = activePackId === pack.id && isPlaying;
             const packProgress = activePackId === pack.id ? progress : 0;
             const packWaveform = resampleWaveform(pack.tracks[0]?.waveform ?? [], 28);
-            const inCart = isInCart(pack.id, "pack");
             const owned = isOwned(pack.id, "pack");
 
             return (
@@ -239,10 +198,21 @@ export default function TrendingDiscoveryPanel() {
                     if (activePackId === pack.id) { togglePlayback(); return; }
                     playPack(pack);
                   }}
-                  className={`relative w-9 h-9 rounded-lg overflow-hidden shrink-0 flex items-center justify-center bg-gradient-to-br ${pack.coverUrl}`}
+                  className="relative w-9 h-9 rounded-lg overflow-hidden shrink-0 flex items-center justify-center bg-white/[0.05]"
                   aria-label={`Preview ${pack.title}`}
                 >
-                  <div className="absolute inset-0 bg-black/35" />
+                  {pack.coverUrl.startsWith("/") ? (
+                    <Image
+                      src={pack.coverUrl}
+                      alt={pack.title}
+                      fill
+                      className="object-cover"
+                      sizes="36px"
+                    />
+                  ) : (
+                    <div className={`absolute inset-0 bg-gradient-to-br ${pack.coverUrl}`} />
+                  )}
+                  <div className="absolute inset-0 bg-black/40" />
                   {packPlaying ? (
                     <Pause className="relative z-10 w-3.5 h-3.5 text-white" />
                   ) : (
@@ -254,9 +224,7 @@ export default function TrendingDiscoveryPanel() {
                   <Link href={`/pack/${pack.id}`} className="text-xs font-semibold text-white truncate block hover:text-vivid-blue transition-colors">
                     {pack.title}
                   </Link>
-                  <p className="text-[10px] text-muted/50 truncate">
-                    {pack.trackCount} tracks · {formatPrice(pack.price)}
-                  </p>
+                  <p className="text-[10px] text-muted/50 truncate">{pack.category}</p>
                   <AnimatePresence>
                     {(packPlaying || packProgress > 0) && (
                       <motion.div
@@ -278,20 +246,16 @@ export default function TrendingDiscoveryPanel() {
                   </AnimatePresence>
                 </div>
 
-                <motion.button
-                  type="button"
-                  onClick={() => handlePackAdd(pack)}
-                  animate={pulsePackId === pack.id ? { scale: [1, 1.05, 1] } : undefined}
-                  className={`text-[10px] font-semibold px-2 py-1 rounded-md transition-colors shrink-0 ${
+                <Link
+                  href={`/pack/${pack.id}`}
+                  className={`text-[10px] font-semibold px-2 py-1 rounded-md transition-colors shrink-0 flex items-center gap-0.5 ${
                     owned
                       ? "bg-white/[0.06] text-white/70"
-                      : inCart
-                        ? "bg-vivid-blue text-white"
-                        : "bg-vivid-blue/10 text-vivid-blue hover:bg-vivid-blue/20"
+                      : "bg-vivid-blue/10 text-vivid-blue hover:bg-vivid-blue/20"
                   }`}
                 >
-                  {owned ? "Owned" : inCart ? "In Cart" : "Get"}
-                </motion.button>
+                  {owned ? "Owned" : "Open"}
+                </Link>
               </motion.div>
             );
           })}
