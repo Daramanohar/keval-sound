@@ -3,9 +3,9 @@
 import { memo, useCallback, useState } from "react";
 import { useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import {
   ChevronDown,
-  Clock,
   Music,
   Pause,
   Play,
@@ -100,45 +100,50 @@ const PackCard = memo(function PackCard({ pack, index = 0 }: PackCardProps) {
       className="glass-card overflow-hidden rounded-2xl"
     >
       <button type="button" onClick={() => router.push(`/pack/${pack.id}`)} className="block w-full text-left">
-        <div className="relative">
-          <div className={cn("h-36 bg-gradient-to-br", pack.coverUrl)} />
-          <div className="absolute inset-0 bg-gradient-to-t from-vampire-black/90 via-vampire-black/30 to-transparent" />
+        {/* Cover art — strict 1:1 aspect ratio */}
+        <div className="relative aspect-square w-full overflow-hidden">
+          {pack.coverUrl.startsWith("/") ? (
+            <Image
+              src={pack.coverUrl}
+              alt={pack.title}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+            />
+          ) : (
+            <div className={cn("absolute inset-0 bg-gradient-to-br", pack.coverUrl)} />
+          )}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-          <div className="absolute bottom-0 left-0 right-0 p-4">
-            <div className="flex items-start justify-between">
-              <div>
-                {pack.featured && (
-                  <span className="mb-2 inline-block rounded-full bg-dandelion/90 px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-vampire-black">
-                    Featured
-                  </span>
-                )}
-                {owned && (
-                  <span className="mb-2 ml-2 inline-block rounded-full bg-vivid-blue/90 px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-white">
-                    Owned
-                  </span>
-                )}
-                <h3 className="text-xl font-bold text-white">{pack.title}</h3>
-                <div className="mt-1 flex items-center gap-3 text-sm text-muted">
-                  <span className="flex items-center gap-1">
-                    <Music className="h-3.5 w-3.5" />
-                    {pack.trackCount} tracks
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Clock className="h-3.5 w-3.5" />
-                    {Math.round(pack.totalDuration / 60)} min
-                  </span>
-                </div>
+          {/* Badges */}
+          <div className="absolute left-3 top-3 flex gap-1.5">
+            {pack.featured && (
+              <span className="rounded-full bg-dandelion/90 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-vampire-black">
+                Featured
+              </span>
+            )}
+            {owned && (
+              <span className="rounded-full bg-vivid-blue/90 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">
+                Owned
+              </span>
+            )}
+          </div>
+
+          {/* Title + price overlay at bottom */}
+          <div className="absolute bottom-0 left-0 right-0 p-3">
+            <div className="flex items-end justify-between gap-2">
+              <div className="min-w-0">
+                <h3 className="truncate text-base font-bold text-white">{pack.title}</h3>
+                <span className="flex items-center gap-1 text-xs text-white/60">
+                  <Music className="h-3 w-3" />
+                  {pack.trackCount} songs
+                </span>
               </div>
-              <div className="text-right">
-                <div className="flex items-center gap-2">
-                  <span className="text-sm text-muted line-through">
-                    {formatPrice(pack.originalPrice)}
-                  </span>
-                  <span className="rounded-full bg-zesty-red/20 px-2 py-0.5 text-xs font-bold text-zesty-red">
-                    -{discount}%
-                  </span>
-                </div>
-                <p className="mt-1 text-2xl font-bold text-white">{formatPrice(pack.price)}</p>
+              <div className="shrink-0 text-right">
+                <p className="text-lg font-bold text-white">{formatPrice(pack.price)}</p>
+                <span className="rounded-full bg-zesty-red/80 px-1.5 py-0.5 text-[10px] font-bold text-white">
+                  -{discount}%
+                </span>
               </div>
             </div>
           </div>
