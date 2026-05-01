@@ -78,12 +78,26 @@ The app auto-deploys to Vercel on every push to `master`.
 |---|---|
 | `/` | Home — featured hero, trending tracks, sample lab, top songs list |
 | `/explore` | Full catalog grid (4 columns), genre/mood filters, list/grid toggle |
-| `/packs` | Pack browser with MusicCard grid |
+| `/packs` | **64 real soundpacks**, 1:1 album art, 7 category filters (Commercial / Electronic / Bollywood / Indie / Culture / Occasion / Classic) |
 | `/pack/[id]` | Individual pack detail with track listing |
 | `/samples` | Sample browser |
 | `/cart` | Cart with line items and checkout |
 | `/account` | Tabbed account page: Wishlist, Recently Played, Purchases, Downloads, Playlists |
 | `/auth` | Sign-up / Sign-in |
+
+### 📦 Pack Catalog (64 packs / 2,375 songs)
+
+Album art lives in `public/packs/pack-1.png` through `pack-64.png` (sequential — matches the source ordering in `keval-packs/`). Pack metadata (titles, song counts, categories) lives in `src/lib/mock-data.ts` as the `packDefs[]` array.
+
+| Category | Pack Count |
+|---|---|
+| Commercial | 9 |
+| Electronic | 14 |
+| Bollywood | 10 |
+| Indie | 7 |
+| Culture | 9 |
+| Occasion | 14 |
+| Classic | 1 |
 
 ---
 
