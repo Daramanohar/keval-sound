@@ -38,6 +38,48 @@ This file is the authoritative reference for all Claude sessions working on this
 - Added genre marquee animation
 - Removed duplicate `index.html` from repo root
 
+### Session 4 — Packs UX Refinement: Strip Cards, Fix Dropdown, Remove Pack Pricing
+
+**Pricing model decision** — packs are no longer purchasable. Songs are sold individually at a flat ₹99 each. This changes:
+- All 12 base tracks in `mock-data.ts` now have `price: 99`
+- Pack-level pricing (`pack.price`, `pack.originalPrice`) is no longer surfaced anywhere in the UI (the fields remain in the schema but are not rendered)
+- "Get Pack" button removed from every component and route
+
+**PackCard redesign**
+- Stripped to: 1:1 artwork (full real estate), title, category tag, action row
+- Action row: Preview button (→ detail) + Heart (wishlist) + Share + Chevron (expand)
+- Description text and tag chip row removed from card body
+- Title overlay on cover removed — moved below cover for cleaner artwork
+- Hover state on cover: subtle gradient overlay + center play affordance
+
+**Dropdown bug fix**
+- Root cause: CSS Grid default `align-items: stretch` made all cells in a row match the height of the tallest cell. When one card expanded, sibling cards stretched too — looked like they all expanded
+- Fix: `items-start` on the grid container in `packs/page.tsx`
+- Per-card `useState(expanded)` was already correctly isolated; only the visual stretching was broken
+- Expanded list is `max-h-72 overflow-y-auto` so even 50-track packs don't blow out the layout
+
+**Pack detail page rebuild**
+- The "top gap" was the hero box (`h-72 md:h-[380px]`) being empty because `pack.coverUrl` is now a file path (`/packs/pack-N.png`), but the code was applying it as a Tailwind gradient class (`bg-gradient-to-br /packs/pack-1.png` — invalid CSS)
+- Replaced with side-by-side layout: 256px square album art on the left + title/badges/actions on the right
+- Removed: Get Pack button, pack price, discount badge, track count metadata
+- Song table columns: Play · Song · Waveform · Duration · Price · License (BPM column removed)
+- Every song shows ₹99
+- License action button: "Standard" / "In Cart" / "Owned"
+
+**Cross-component cleanup of pack pricing/Get Pack**
+- `TrendingDiscoveryPanel.tsx`: removed cart-add buttons, replaced with `<Link href="/pack/{id}">Open Pack</Link>`. Featured pack thumbnail and ranked-pack thumbnails now use `next/image` (the gradient-string fallback was broken for file paths). Track count + price subtext replaced with category.
+- `app/page.tsx` (home): Featured Packs preview section now renders 1:1 album art, no price/originalPrice display, "Get Started" CTA changed to "Open Pack" linking to detail. Other packs row also uses `next/image` and shows category instead of "{trackCount} tracks".
+
+**Files modified**
+- `src/lib/mock-data.ts` (12 track prices → 99)
+- `src/components/PackCard.tsx` (rewrite)
+- `src/app/packs/page.tsx` (rewrite — no subtitle, no count badges, no stats banner, items-start grid)
+- `src/app/pack/[id]/page.tsx` (rewrite — side-by-side hero, no BPM, ₹99, no pack pricing)
+- `src/components/TrendingDiscoveryPanel.tsx` (no Get Pack, no pack pricing, real images)
+- `src/app/page.tsx` (Featured Packs section cleanup, NextImage import)
+
+---
+
 ### Session 3 — Real 64 Soundpacks Implementation
 
 **Source data**: `keval-packs/ALBUM ARTS/` (64 PNG files, sequentially numbered) and `keval-packs/Sound PACKS LIST.pdf` (categorized song counts)

@@ -78,7 +78,7 @@ The app auto-deploys to Vercel on every push to `master`.
 |---|---|
 | `/` | Home — featured hero, trending tracks, sample lab, top songs list |
 | `/explore` | Full catalog grid (4 columns), genre/mood filters, list/grid toggle |
-| `/packs` | **64 real soundpacks**, 1:1 album art, 7 category filters (Commercial / Electronic / Bollywood / Indie / Culture / Occasion / Classic) |
+| `/packs` | **64 real soundpacks**, 1:1 album art, 7 category filters (Commercial / Electronic / Bollywood / Indie / Culture / Occasion / Classic). Stripped cards: artwork + title + tag + actions (Preview / Save / Share / Expand). Songs are sold individually at ₹99; packs themselves are not purchasable. |
 | `/pack/[id]` | Individual pack detail with track listing |
 | `/samples` | Sample browser |
 | `/cart` | Cart with line items and checkout |
