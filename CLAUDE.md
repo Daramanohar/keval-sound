@@ -38,6 +38,32 @@ This file is the authoritative reference for all Claude sessions working on this
 - Added genre marquee animation
 - Removed duplicate `index.html` from repo root
 
+### Session 6 — Wishlist Iconography Reverted to Heart; Column Headers Finalized
+
+**User direction**: keep Heart icon for wishlist (not Bookmark). Reverted Session 5's icon change across all surfaces:
+- `PackCard.tsx` pack-level save button → Heart, zesty-red active state
+- `pack/[id]/page.tsx` hero pack-level save button → Heart, zesty-red active state
+- `pack/[id]/page.tsx` per-song "Loved" column → Heart, zesty-red active state
+
+**Final song table column headers** (single line, `whitespace-nowrap`):
+1. Play
+2. Song
+3. Waveform
+4. Duration
+5. Price
+6. Loved (heart icon, wishlist toggle)
+7. License This (Add to Cart at ₹99)
+
+Action button inside the "License This" column reads `License This` / `In Cart` / `Owned` to match the column header.
+
+Grid template: `[48px_1fr_180px_72px_56px_56px_120px]`
+
+**Files modified**
+- `src/components/PackCard.tsx`
+- `src/app/pack/[id]/page.tsx`
+
+---
+
 ### Session 5 — Pack UI: License → Add to Cart, Heart → Bookmark, Per-Song Save
 
 **Decision**: switched pack save iconography from `Heart` (affection) to `Bookmark` (utility/save). Saved state uses vivid-blue accent throughout, matching the primary brand color rather than zesty-red. Applies to:
