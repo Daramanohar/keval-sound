@@ -5,8 +5,8 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import {
+  Bookmark,
   ChevronDown,
-  Heart,
   Pause,
   Play,
   Share2,
@@ -169,15 +169,15 @@ const PackCard = memo(function PackCard({ pack, index = 0 }: PackCardProps) {
         <button
           type="button"
           onClick={handleSave}
-          aria-label={liked ? "Remove from wishlist" : "Save to wishlist"}
+          aria-label={liked ? "Remove from saved" : "Save pack"}
           className={cn(
             "flex h-8 w-8 shrink-0 items-center justify-center rounded-lg transition-colors",
             liked
-              ? "bg-zesty-red/15 text-zesty-red"
+              ? "bg-vivid-blue/15 text-vivid-blue"
               : "bg-white/[0.05] text-muted hover:bg-white/[0.1] hover:text-white"
           )}
         >
-          <Heart className={cn("h-3.5 w-3.5", liked && "fill-current")} />
+          <Bookmark className={cn("h-3.5 w-3.5", liked && "fill-current")} />
         </button>
         <button
           type="button"
