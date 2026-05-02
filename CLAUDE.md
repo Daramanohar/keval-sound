@@ -30,6 +30,114 @@ This file is the authoritative reference for all Claude sessions working on this
 
 ## Completed Work Log
 
+### Session 9 — Pack Detail: Now-Playing Waveform Overlay + Three-Dot Track Menu
+
+Two additions to `src/app/pack/[id]/page.tsx`.
+
+**1. Now-playing waveform overlay on the row thumbnail (YT Music-style)**
+- New inline component `PlayingOverlay` — three white vertical bars pulsing in sequence, centered on a `bg-black/45` scrim
+- Bars reuse the `.waveform-bar` class + `waveform` keyframe already defined in `globals.css` (lines 93–96, 258–271). nth-child(1..3) inherit staggered animation delays from there — no new CSS needed
+- Rendered inside both the `lg+` thumbnail cell and the mobile thumbnail block, gated on `trackPlaying = isItemPlaying(track.id, "track")`
+- Both thumbnail wrappers gained `relative` + `z-10` on the overlay so it floats above the cover image
+
+**2. Three-dot context menu per song row**
+- New 9th column added to the table grid: `[40px_48px_1fr_180px_72px_56px_56px_120px_40px]`
+- Trigger is a `MoreVertical` icon button on the right edge of each row
+- Page-level `openMenu: string | null` state — exactly one menu open at a time (opening another row's menu auto-closes the previous via state replacement)
+- Outside-click dismissal: a `mousedown` document listener installed only when a menu is open. Each menu wrapper carries `data-track-menu={track.id}`; the listener closes the menu unless `target.closest("[data-track-menu]")` matches the currently open id. This pattern handles "click another row's button" correctly — the click first lands in a *different* wrapper, mousedown fires close, then onClick fires open for the new row
+- Dropdown is a `motion.div` with `AnimatePresence` (scale + fade-in, 120ms) — premium feel without being heavy
+- Removed `overflow-hidden` from the outer table container (was clipping the dropdown). Visual side effect: row hover backgrounds now extend slightly past the rounded corners on the first/last row during hover — barely perceptible against the dark theme; not worth a portal solution at this time
+
+**Menu actions**
+| Label | Behavior |
+|---|---|
+| Share Track | Copies `${origin}/pack/${packId}#track-${trackId}` to clipboard, toasts "Track link copied" |
+| Add to Playlist | Toasts "Playlists coming soon" (Phase 2) |
+| Add to Cart | Calls `handleTrackAdd(track)` — same flow as the row's primary CTA |
+| Save to Crate | Toasts "Crates coming soon" (Phase 2 — kept distinct from wishlist intentionally) |
+| View Similar Tracks | Toasts "Similar tracks coming soon" (Phase 2) |
+| Preview Full Track | Calls `toggleTrack(track, { queue: pack.tracks, pack })` |
+| Report an Issue | Toasts "Thanks — issue noted" (Phase 2) |
+
+A divider separates "Report an Issue" from the rest.
+
+**New helper component** `TrackMenuItem({ icon, label, onClick })` — defined at file bottom. Generic dropdown row with icon + label; not exported (page-private).
+
+**Imports added**: `useEffect`, `AnimatePresence`, plus icons `Bookmark`, `Flag`, `ListPlus`, `MoreVertical`, `Plus`, `Sparkles`.
+
+**Files modified**
+- `src/app/pack/[id]/page.tsx`
+
+**Notes for future sessions**
+- The outside-click pattern (`data-track-menu` + `target.closest()`) is preferred over per-row refs when the menus are rendered inside a `.map()` — extends to N rows without a refs map
+- If the dropdown ever needs to escape the table boundary (e.g., row near viewport edge), switch to a portal — the trigger already has `data-track-menu` so the dismissal logic can stay
+- The waveform keyframe in `globals.css` animates `height: 20% → 80%` of parent. The bar markup uses `h-3.5` parent (14px) + `h-full` bars so the height-percent animation has a fixed reference
+
+---
+
+### Session 8 — Pack Detail: "Add to Cart" Label + Per-Song Pack-Art Thumbnail
+
+Two targeted changes to `src/app/pack/[id]/page.tsx`:
+
+**1. Label rename: "License This" → "Add to Cart"**
+- Header column on the song table renamed
+- Per-row button default state simplified to text-only "Add to Cart" (no `Plus` icon)
+- "In Cart" state simplified to text-only as well (no `ShoppingCart` icon) — kept consistent with the directive "no icons, just the label"
+- "Owned" state unchanged
+- `Plus` and `ShoppingCart` imports removed from `lucide-react`
+
+**2. Per-song pack-art thumbnail (YouTube Music-style row leadin)**
+- Every song row now begins with a 40×40 thumbnail of the pack's `coverUrl`
+- Same image is used for every row in the pack (the pack's own cover) — no per-track image generation
+- `rounded-md` corners; `object-cover` to crop properly
+- Falls back to the gradient class string for legacy non-image covers (the `isImageCover` boolean already used by the hero)
+
+**Grid template change** — added a leading 40px column:
+- Old: `[48px_1fr_180px_72px_56px_56px_120px]` (7 cols)
+- New: `[40px_48px_1fr_180px_72px_56px_56px_120px]` (8 cols)
+
+**Mobile** — on `< lg`, the grid is `grid-cols-1` and each cell stacks. The thumbnail is rendered inline with the play button + title in the first cell (alongside the existing mobile-only title block). On `lg+`, it occupies its own 40px leading column. Two thumbnail nodes (one `lg:hidden`, one `hidden lg:block`) — the duplication is intentional to keep mobile/desktop visuals correct without conditional rendering at the layout boundary.
+
+**Final song table column order**
+1. Cover (40px)
+2. Play (48px)
+3. Song (1fr)
+4. Waveform (180px)
+5. Duration (72px)
+6. Price (56px)
+7. Loved (56px)
+8. Add to Cart (120px)
+
+**Files modified**
+- `src/app/pack/[id]/page.tsx`
+
+---
+
+### Session 7 — Trending Packs Sidebar: Self-Contained Scrollable Feed
+
+**Problem**: The "Trending Packs" sidebar on the homepage used a dynamic-top JS sticky algorithm (drift with page, lock to viewport top/bottom). With the catalog growing to 64 packs (and arbitrary growth ahead), the sidebar grew taller than the main column, breaking the drift algorithm's containing-block math and producing visible gaps.
+
+**Decision**: Replace the JS algorithm with a CSS-only sticky + internal-scroll feed. The sidebar pins to the viewport at `top: 80px`, caps its height at `calc(100vh - 96px)`, and the children scroll inside it. The scrollbar is hidden via `.scrollbar-hide`. When the inner feed reaches its end, native scroll-chaining lets the main page continue scrolling underneath while the sidebar stays locked.
+
+**`src/components/StickySidebar.tsx` rewrite**
+- All JS scroll handlers, refs, ResizeObserver, and rAF removed
+- Pure CSS sticky pattern: `position: sticky` + `max-height` + `overflow-y: auto`
+- Element changed from `<div>` to `<aside>` for semantic correctness
+- `topOffset` and `bottomOffset` props retained, fed via CSS custom properties (`--ssb-top`, `--ssb-max-h`) so Tailwind responsive prefixes (`lg:`) apply cleanly
+- `minWidth` prop removed — responsive activation now done via Tailwind's `lg:` breakpoint instead of imperative JS
+
+**Why this matches x.com's invariant** — sidebar locks to the viewport, main page continues scrolling underneath, no layout shift, no item cap. The scroll *mechanism* differs from x.com (internal overflow vs. drift-with-page) but the user-visible behavior is identical AND it scales to an unbounded catalog, which the drift approach cannot.
+
+**Files modified**
+- `src/components/StickySidebar.tsx` (complete rewrite, ~135 lines → ~50 lines)
+
+**Notes for future sessions**
+- The `.scrollbar-hide` utility already exists in `globals.css` (lines 339–348) — Webkit + Firefox + IE
+- Native scroll-chaining is the desired behavior; do NOT add `overscroll-behavior: contain` to the sidebar — that would prevent the main page from scrolling when the sidebar is at its end
+- The wrapper in `src/app/page.tsx` (`<div className="w-full lg:w-[320px] lg:shrink-0">`) is still needed to set the column width; the parent `lg:items-stretch` is fine — sticky inside a stretched flex item works as expected
+
+---
+
 ### Session 1 — Landing Page
 - Fixed waitlist form (Google Apps Script endpoint, see memory)
 - Added optimistic UI on form submit
@@ -209,7 +317,7 @@ Grid template: `[48px_1fr_180px_72px_56px_56px_120px]`
 |---|---|
 | `src/components/AppShell.tsx` | Lifted sidebar collapse state, dynamic padding, localStorage persistence |
 | `src/components/Sidebar.tsx` | CSS transition, no framer-motion on labels, receives collapsed via props |
-| `src/components/StickySidebar.tsx` | **NEW** — dynamic sticky right sidebar |
+| `src/components/StickySidebar.tsx` | Session 7: rewritten as CSS-only sticky + internal-scroll feed (was: dynamic-top JS sticky) |
 | `src/components/ContentSection.tsx` | Velocity fling, snap-proximity, scrollBehavior auto |
 | `src/components/TrackCard.tsx` | aspect-[4/3], tighter spacing |
 | `src/app/page.tsx` | StickySidebar import + wrapper, lg:items-stretch |
