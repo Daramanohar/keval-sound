@@ -1,18 +1,22 @@
 "use client";
 
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound, useParams } from "next/navigation";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import {
+  Bookmark,
   ChevronLeft,
+  Flag,
   Heart,
+  ListPlus,
+  MoreVertical,
   Pause,
   Play,
   Plus,
   Share2,
-  ShoppingCart,
+  Sparkles,
 } from "lucide-react";
 import WaveformVisualizer from "@/components/WaveformVisualizer";
 import { packs, type Track } from "@/lib/mock-data";
@@ -26,6 +30,7 @@ const SONG_PRICE = 99;
 export default function PackDetailPage() {
   const params = useParams<{ id: string }>();
   const [copied, setCopied] = useState(false);
+  const [openMenu, setOpenMenu] = useState<string | null>(null);
   const {
     playPack,
     togglePlayback,
@@ -87,6 +92,60 @@ export default function PackDetailPage() {
       );
     },
     [addTrackToCart, isOwned, showToast]
+  );
+
+  // Close any open track menu when clicking outside its wrapper. Each row's
+  // menu wrapper carries `data-track-menu={track.id}` — we keep the menu open
+  // only when the click lands inside the wrapper for the currently open id.
+  useEffect(() => {
+    if (!openMenu) return;
+    const handler = (event: MouseEvent) => {
+      const target = event.target as Element | null;
+      const wrapper = target?.closest("[data-track-menu]") ?? null;
+      if (!wrapper || wrapper.getAttribute("data-track-menu") !== openMenu) {
+        setOpenMenu(null);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, [openMenu]);
+
+  const handleMenuAction = useCallback(
+    (action: string, track: Track) => {
+      setOpenMenu(null);
+      switch (action) {
+        case "share": {
+          const base =
+            typeof window !== "undefined"
+              ? `${window.location.origin}/pack/${params.id}#track-${track.id}`
+              : `/pack/${params.id}#track-${track.id}`;
+          if (typeof navigator !== "undefined" && navigator.clipboard) {
+            navigator.clipboard.writeText(base).catch(() => {});
+          }
+          showToast({ tone: "info", title: "Track link copied" });
+          return;
+        }
+        case "cart":
+          handleTrackAdd(track);
+          return;
+        case "preview":
+          toggleTrack(track, { queue: pack.tracks, pack });
+          return;
+        case "playlist":
+          showToast({ tone: "info", title: "Playlists coming soon" });
+          return;
+        case "crate":
+          showToast({ tone: "info", title: "Crates coming soon" });
+          return;
+        case "similar":
+          showToast({ tone: "info", title: "Similar tracks coming soon" });
+          return;
+        case "report":
+          showToast({ tone: "info", title: "Thanks — issue noted" });
+          return;
+      }
+    },
+    [handleTrackAdd, pack, params.id, showToast, toggleTrack]
   );
 
   return (
@@ -195,7 +254,7 @@ export default function PackDetailPage() {
       )}
 
       {/* Songs table */}
-      <div className="overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.02]">
+      <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02]">
         <div className="border-b border-white/[0.06] px-6 py-4">
           <h3 className="text-sm font-bold text-white">Songs</h3>
           <p className="mt-1 text-xs text-muted">
@@ -203,15 +262,17 @@ export default function PackDetailPage() {
           </p>
         </div>
 
-        {/* Header — Play · Song · Waveform · Duration · Price · Loved · License This */}
-        <div className="hidden grid-cols-[48px_1fr_180px_72px_56px_56px_120px] gap-4 border-b border-white/[0.04] px-6 py-3 text-[10px] font-medium uppercase tracking-wider text-muted/30 lg:grid">
+        {/* Header — Cover · Play · Song · Waveform · Duration · Price · Loved · Add to Cart · Menu */}
+        <div className="hidden grid-cols-[40px_48px_1fr_180px_72px_56px_56px_120px_40px] gap-4 border-b border-white/[0.04] px-6 py-3 text-[10px] font-medium uppercase tracking-wider text-muted/30 lg:grid">
+          <div aria-hidden />
           <div className="whitespace-nowrap">Play</div>
           <div className="whitespace-nowrap">Song</div>
           <div className="whitespace-nowrap">Waveform</div>
           <div className="whitespace-nowrap">Duration</div>
           <div className="whitespace-nowrap text-center">Price</div>
           <div className="whitespace-nowrap text-center">Loved</div>
-          <div className="whitespace-nowrap text-right">License This</div>
+          <div className="whitespace-nowrap text-right">Add to Cart</div>
+          <div aria-hidden />
         </div>
 
         <div className="divide-y divide-white/[0.04]">
@@ -229,9 +290,39 @@ export default function PackDetailPage() {
                 transition={{ delay: Math.min(index * 0.02, 0.4) }}
                 className="group transition-colors hover:bg-white/[0.03]"
               >
-                <div className="grid grid-cols-1 gap-4 px-6 py-4 lg:grid-cols-[48px_1fr_180px_72px_56px_56px_120px] lg:items-center">
-                  {/* Play */}
+                <div className="grid grid-cols-1 gap-4 px-6 py-4 lg:grid-cols-[40px_48px_1fr_180px_72px_56px_56px_120px_40px] lg:items-center">
+                  {/* Cover thumbnail (lg+ column) — pack art shared by every row */}
+                  <div className="relative hidden h-10 w-10 overflow-hidden rounded-md bg-white/[0.04] lg:block">
+                    {isImageCover ? (
+                      <Image
+                        src={pack.coverUrl}
+                        alt=""
+                        width={40}
+                        height={40}
+                        className="h-full w-full object-cover"
+                      />
+                    ) : (
+                      <div className={cn("h-full w-full bg-gradient-to-br", pack.coverUrl)} />
+                    )}
+                    {trackPlaying && <PlayingOverlay />}
+                  </div>
+
+                  {/* Play (mobile: cover + play + title in one row) */}
                   <div className="flex items-center gap-3 lg:block">
+                    <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-md bg-white/[0.04] lg:hidden">
+                      {isImageCover ? (
+                        <Image
+                          src={pack.coverUrl}
+                          alt=""
+                          width={40}
+                          height={40}
+                          className="h-full w-full object-cover"
+                        />
+                      ) : (
+                        <div className={cn("h-full w-full bg-gradient-to-br", pack.coverUrl)} />
+                      )}
+                      {trackPlaying && <PlayingOverlay />}
+                    </div>
                     <button
                       type="button"
                       onClick={() => toggleTrack(track, { queue: pack.tracks, pack })}
@@ -298,7 +389,7 @@ export default function PackDetailPage() {
                     </button>
                   </div>
 
-                  {/* License This — adds the song to cart at ₹99 */}
+                  {/* Add to Cart — adds the song to cart at ₹99 */}
                   <div className="flex items-center justify-start lg:justify-end">
                     <button
                       type="button"
@@ -313,18 +404,81 @@ export default function PackDetailPage() {
                             : "bg-vivid-blue/10 text-vivid-blue hover:bg-vivid-blue/20"
                       )}
                     >
-                      {trackOwned ? (
-                        "Owned"
-                      ) : trackInCart ? (
-                        <>
-                          <ShoppingCart className="h-3 w-3" /> In Cart
-                        </>
-                      ) : (
-                        <>
-                          <Plus className="h-3 w-3" /> License This
-                        </>
-                      )}
+                      {trackOwned ? "Owned" : trackInCart ? "In Cart" : "Add to Cart"}
                     </button>
+                  </div>
+
+                  {/* Three-dot context menu */}
+                  <div
+                    className="relative flex items-center justify-end"
+                    data-track-menu={track.id}
+                  >
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setOpenMenu((current) => (current === track.id ? null : track.id))
+                      }
+                      aria-label="Track options"
+                      aria-haspopup="menu"
+                      aria-expanded={openMenu === track.id}
+                      className={cn(
+                        "flex h-8 w-8 items-center justify-center rounded-lg transition-colors",
+                        openMenu === track.id
+                          ? "bg-white/[0.1] text-white"
+                          : "text-muted hover:bg-white/[0.08] hover:text-white"
+                      )}
+                    >
+                      <MoreVertical className="h-4 w-4" />
+                    </button>
+                    <AnimatePresence>
+                      {openMenu === track.id && (
+                        <motion.div
+                          role="menu"
+                          initial={{ opacity: 0, scale: 0.96, y: -4 }}
+                          animate={{ opacity: 1, scale: 1, y: 0 }}
+                          exit={{ opacity: 0, scale: 0.96, y: -4 }}
+                          transition={{ duration: 0.12, ease: [0.16, 1, 0.3, 1] }}
+                          className="absolute right-0 top-full z-30 mt-1 w-56 origin-top-right overflow-hidden rounded-xl border border-white/[0.08] bg-[#13142a]/95 p-1 shadow-2xl shadow-black/60 backdrop-blur-xl"
+                        >
+                          <TrackMenuItem
+                            icon={Share2}
+                            label="Share Track"
+                            onClick={() => handleMenuAction("share", track)}
+                          />
+                          <TrackMenuItem
+                            icon={ListPlus}
+                            label="Add to Playlist"
+                            onClick={() => handleMenuAction("playlist", track)}
+                          />
+                          <TrackMenuItem
+                            icon={Plus}
+                            label="Add to Cart"
+                            onClick={() => handleMenuAction("cart", track)}
+                          />
+                          <TrackMenuItem
+                            icon={Bookmark}
+                            label="Save to Crate"
+                            onClick={() => handleMenuAction("crate", track)}
+                          />
+                          <TrackMenuItem
+                            icon={Sparkles}
+                            label="View Similar Tracks"
+                            onClick={() => handleMenuAction("similar", track)}
+                          />
+                          <TrackMenuItem
+                            icon={Play}
+                            label="Preview Full Track"
+                            onClick={() => handleMenuAction("preview", track)}
+                          />
+                          <div className="my-1 h-px bg-white/[0.06]" />
+                          <TrackMenuItem
+                            icon={Flag}
+                            label="Report an Issue"
+                            onClick={() => handleMenuAction("report", track)}
+                          />
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </div>
                 </div>
               </motion.div>
@@ -344,5 +498,43 @@ export default function PackDetailPage() {
         ))}
       </div>
     </div>
+  );
+}
+
+/**
+ * YouTube Music-style "now playing" indicator overlaid on the row thumbnail.
+ * Three white bars pulsing in sequence — the bars use the `waveform` keyframe
+ * defined in globals.css; nth-child(1..3) inherit the staggered delays from
+ * the `.waveform-bar` rule there.
+ */
+function PlayingOverlay() {
+  return (
+    <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/45">
+      <div className="flex h-3.5 items-end gap-[3px]">
+        <span className="block h-full w-[2px] rounded-sm bg-white waveform-bar" />
+        <span className="block h-full w-[2px] rounded-sm bg-white waveform-bar" />
+        <span className="block h-full w-[2px] rounded-sm bg-white waveform-bar" />
+      </div>
+    </div>
+  );
+}
+
+interface TrackMenuItemProps {
+  icon: React.ComponentType<{ className?: string }>;
+  label: string;
+  onClick: () => void;
+}
+
+function TrackMenuItem({ icon: Icon, label, onClick }: TrackMenuItemProps) {
+  return (
+    <button
+      type="button"
+      role="menuitem"
+      onClick={onClick}
+      className="flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-left text-xs font-medium text-white/80 transition-colors hover:bg-white/[0.06] hover:text-white"
+    >
+      <Icon className="h-3.5 w-3.5 text-muted/70" />
+      {label}
+    </button>
   );
 }
