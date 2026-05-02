@@ -38,6 +38,26 @@ This file is the authoritative reference for all Claude sessions working on this
 - Added genre marquee animation
 - Removed duplicate `index.html` from repo root
 
+### Session 5 — Pack UI: License → Add to Cart, Heart → Bookmark, Per-Song Save
+
+**Decision**: switched pack save iconography from `Heart` (affection) to `Bookmark` (utility/save). Saved state uses vivid-blue accent throughout, matching the primary brand color rather than zesty-red. Applies to:
+- `PackCard.tsx` pack-level save button
+- `pack/[id]/page.tsx` hero pack-level save button
+- `pack/[id]/page.tsx` per-song save column (NEW)
+
+**Song table on pack detail**
+- Renamed last column header `License` → `Add to Cart`
+- Action button labels now: `+ Add to Cart` (default) / `🛒 In Cart` / `Owned` (disabled)
+- New column added between `Price` and `Add to Cart` for per-song bookmark
+- Wired to `toggleTrackWishlist` + `isInWishlist(id, "track")` from store-context
+- Grid template: `[48px_1fr_180px_72px_64px_44px_140px]` (7 columns now)
+
+**Files modified**
+- `src/components/PackCard.tsx`
+- `src/app/pack/[id]/page.tsx`
+
+---
+
 ### Session 4 — Packs UX Refinement: Strip Cards, Fix Dropdown, Remove Pack Pricing
 
 **Pricing model decision** — packs are no longer purchasable. Songs are sold individually at a flat ₹99 each. This changes:
