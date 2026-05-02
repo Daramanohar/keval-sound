@@ -6,8 +6,8 @@ import Image from "next/image";
 import { notFound, useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import {
-  Bookmark,
   ChevronLeft,
+  Heart,
   Pause,
   Play,
   Plus,
@@ -162,15 +162,15 @@ export default function PackDetailPage() {
             <button
               type="button"
               onClick={() => togglePackWishlist(pack)}
-              aria-label={liked ? "Remove from saved" : "Save pack"}
+              aria-label={liked ? "Remove from wishlist" : "Add to wishlist"}
               className={cn(
                 "rounded-xl p-3 transition-all",
                 liked
-                  ? "bg-vivid-blue/10 text-vivid-blue"
+                  ? "bg-zesty-red/10 text-zesty-red"
                   : "bg-white/[0.06] text-muted hover:bg-white/[0.1] hover:text-white"
               )}
             >
-              <Bookmark className={cn("h-4 w-4", liked && "fill-current")} />
+              <Heart className={cn("h-4 w-4", liked && "fill-current")} />
             </button>
             <button
               type="button"
@@ -203,15 +203,15 @@ export default function PackDetailPage() {
           </p>
         </div>
 
-        {/* Header — Play · Song · Waveform · Duration · Price · Save · Add to Cart */}
-        <div className="hidden grid-cols-[48px_1fr_180px_72px_64px_44px_140px] gap-4 border-b border-white/[0.04] px-6 py-3 text-[10px] font-medium uppercase tracking-wider text-muted/30 lg:grid">
-          <div>Play</div>
-          <div>Song</div>
-          <div>Waveform</div>
-          <div>Duration</div>
-          <div className="text-center">Price</div>
-          <div className="sr-only">Save</div>
-          <div className="text-right">Add to Cart</div>
+        {/* Header — Play · Song · Waveform · Duration · Price · Loved · License This */}
+        <div className="hidden grid-cols-[48px_1fr_180px_72px_56px_56px_120px] gap-4 border-b border-white/[0.04] px-6 py-3 text-[10px] font-medium uppercase tracking-wider text-muted/30 lg:grid">
+          <div className="whitespace-nowrap">Play</div>
+          <div className="whitespace-nowrap">Song</div>
+          <div className="whitespace-nowrap">Waveform</div>
+          <div className="whitespace-nowrap">Duration</div>
+          <div className="whitespace-nowrap text-center">Price</div>
+          <div className="whitespace-nowrap text-center">Loved</div>
+          <div className="whitespace-nowrap text-right">License This</div>
         </div>
 
         <div className="divide-y divide-white/[0.04]">
@@ -229,7 +229,7 @@ export default function PackDetailPage() {
                 transition={{ delay: Math.min(index * 0.02, 0.4) }}
                 className="group transition-colors hover:bg-white/[0.03]"
               >
-                <div className="grid grid-cols-1 gap-4 px-6 py-4 lg:grid-cols-[48px_1fr_180px_72px_64px_44px_140px] lg:items-center">
+                <div className="grid grid-cols-1 gap-4 px-6 py-4 lg:grid-cols-[48px_1fr_180px_72px_56px_56px_120px] lg:items-center">
                   {/* Play */}
                   <div className="flex items-center gap-3 lg:block">
                     <button
@@ -280,32 +280,32 @@ export default function PackDetailPage() {
                     {trackOwned ? "Owned" : `₹${SONG_PRICE}`}
                   </span>
 
-                  {/* Save — per-row wishlist toggle */}
+                  {/* Loved — per-row wishlist toggle (Heart) */}
                   <div className="flex items-center lg:justify-center">
                     <button
                       type="button"
                       onClick={() => toggleTrackWishlist(track)}
-                      aria-label={trackSaved ? "Remove from saved" : "Save song"}
+                      aria-label={trackSaved ? "Remove from wishlist" : "Add to wishlist"}
                       aria-pressed={trackSaved}
                       className={cn(
                         "flex h-8 w-8 items-center justify-center rounded-lg transition-colors",
                         trackSaved
-                          ? "bg-vivid-blue/15 text-vivid-blue"
+                          ? "bg-zesty-red/15 text-zesty-red"
                           : "bg-white/[0.05] text-muted hover:bg-white/[0.1] hover:text-white"
                       )}
                     >
-                      <Bookmark className={cn("h-3.5 w-3.5", trackSaved && "fill-current")} />
+                      <Heart className={cn("h-3.5 w-3.5", trackSaved && "fill-current")} />
                     </button>
                   </div>
 
-                  {/* Add to Cart */}
+                  {/* License This — adds the song to cart at ₹99 */}
                   <div className="flex items-center justify-start lg:justify-end">
                     <button
                       type="button"
                       onClick={() => handleTrackAdd(track)}
                       disabled={trackOwned}
                       className={cn(
-                        "flex items-center gap-1.5 rounded-lg px-3 py-2 text-xs font-semibold transition-all",
+                        "flex items-center gap-1.5 whitespace-nowrap rounded-lg px-3 py-2 text-xs font-semibold transition-all",
                         trackOwned
                           ? "cursor-not-allowed bg-white/[0.06] text-white/60"
                           : trackInCart
@@ -321,7 +321,7 @@ export default function PackDetailPage() {
                         </>
                       ) : (
                         <>
-                          <Plus className="h-3 w-3" /> Add to Cart
+                          <Plus className="h-3 w-3" /> License This
                         </>
                       )}
                     </button>
