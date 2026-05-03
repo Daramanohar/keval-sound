@@ -30,6 +30,27 @@ This file is the authoritative reference for all Claude sessions working on this
 
 ## Completed Work Log
 
+### Session 12 — Pack Detail: Refine Hover Overlay to Match YouTube Music Exactly
+
+Session 11 left a permanent dark scrim and a floating play triangle on every row even at rest, plus a 1.05 scale-up on hover. Per direct YouTube Music reference, the thumbnail at rest should display **clean image only** — overlay appears only on hover (or always on touch).
+
+**Changes to the merged thumbnail-button**
+
+- **Rest state**: `opacity-0` on the overlay → image displays unmodified
+- **Hover**: overlay fades in over 200ms — `bg-black/45` scrim + a 28px white circle containing a small dark play triangle, centered. Matches the YT Music chip
+- **Touch devices** (`@media (hover: none)`): overlay stays visible always (no hover affordance on touch — keeps the play target obvious)
+- **Playing**: `PlayingOverlay` (3 animated bars) replaces the icon, unchanged from Session 9
+- **Image scale-up removed** — Session 11's `group-hover/cover:scale-105` was a structural change to the artwork; spec said overlay-only
+
+**Files modified**
+- `src/app/pack/[id]/page.tsx`
+
+**Notes**
+- The arbitrary variant `[@media(hover:none)]:opacity-100` is Tailwind v4's syntax for at-rule modifiers — works without any config change
+- White circle is 28px (`h-7 w-7`) with `shadow-lg` and `bg-white`; play triangle inside is `h-3.5 w-3.5`, `fill-vampire-black`, `ml-0.5` for optical centering. These three rules together produce the exact YT Music affordance
+
+---
+
 ### Session 11 — Pack Detail: Merge Cover Thumbnail + Play Button (YouTube Music Pattern)
 
 The song-row layout had a 40px cover thumbnail in column 1 and a separate 48px circular play button in column 2 — visually busy and double-clickable for the same intent. Replaced with the YouTube Music pattern: the cover thumbnail itself is the play button, with a `Play` icon overlaid on a subtle scrim that intensifies on hover. While the track is playing, the existing `PlayingOverlay` (animated waveform bars) replaces the icon — same component, no duplication.
