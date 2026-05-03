@@ -310,7 +310,7 @@ export default function PackDetailPage() {
                           alt=""
                           width={48}
                           height={48}
-                          className="h-full w-full object-cover transition-transform duration-200 group-hover/cover:scale-105"
+                          className="h-full w-full object-cover"
                         />
                       ) : (
                         <div className={cn("h-full w-full bg-gradient-to-br", pack.coverUrl)} />
@@ -318,8 +318,19 @@ export default function PackDetailPage() {
                       {trackPlaying ? (
                         <PlayingOverlay />
                       ) : (
-                        <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/30 transition-colors group-hover/cover:bg-black/55">
-                          <Play className="h-4 w-4 fill-white text-white" />
+                        <div
+                          className={cn(
+                            "absolute inset-0 z-10 flex items-center justify-center bg-black/45",
+                            // Hidden at rest, fades in on hover. Touch devices
+                            // (no hover capability) keep it visible always.
+                            "opacity-0 transition-opacity duration-200",
+                            "group-hover/cover:opacity-100",
+                            "[@media(hover:none)]:opacity-100"
+                          )}
+                        >
+                          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white shadow-lg">
+                            <Play className="ml-0.5 h-3.5 w-3.5 fill-vampire-black text-vampire-black" />
+                          </span>
                         </div>
                       )}
                     </button>
