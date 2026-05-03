@@ -30,6 +30,58 @@ This file is the authoritative reference for all Claude sessions working on this
 
 ## Completed Work Log
 
+### Session 14 — Phases B/C/D/E: Sidebar Gap, Song Detail Drawer, Suno Player Bar, /song/[id] Route
+
+Shipped four phases in one push, completing the Suno-inspired song experience.
+
+**Phase B — Sidebar gap fix**
+- `src/app/pack/[id]/page.tsx`: dropped `mx-auto` from the page-root `<div className="mx-auto max-w-6xl">`. Content now left-aligns flush against the sidebar (modulo `AppShell`'s `px-6`), eliminating the dead space on wide viewports. `max-w-6xl` retained for readability cap on the right.
+
+**Phase C — Right-side song detail drawer**
+- `src/lib/song-detail-context.tsx` (new): tiny global context, `{ opened, isOpen, openSong(track, pack), close }`
+- `src/components/SongDetailDrawer.tsx` (new): backdrop + slide-from-right `<aside>` (Framer spring), keyed on `opened.track.id` so each open re-mounts cleanly
+- Lyrics fetched lazily from `track.lyricsUrl` via `fetch()`; initial state covers the no-URL case so no synchronous setState happens inside the effect (lint-compliant)
+- Action grid: Add to Cart (₹99), Save to Crate (toast — Phase 2), Share (copies `/song/<id>` link)
+- Provider mounted in `src/app/layout.tsx` between `PlayerProvider` and `AppShell`; drawer rendered alongside `PersistentPlayer`
+- Trigger: clicking the song title block on the pack detail row calls `openSong(track, pack)` (both desktop and mobile)
+- Escape closes; backdrop click closes
+
+**Phase D — Suno-style player bar**
+- `src/components/PersistentPlayer.tsx`: replaced the right cluster (was just volume + close) with a richer affordance row
+- Added: Queue (toast), Save (Heart, wired to `toggleTrackWishlist`), Dislike (toast), Comment (toast), Share (copies `/song/<id>`), Volume slider, **Info** (opens drawer for current track), Close
+- Info button is the headline: resolves `currentItem.id` back to `Track` + `Pack` via a local `findTrackContext` helper, then `openSong(track, pack)`
+- New `PlayerIconButton` helper at the bottom of the file — consistent 32×32 hit target with hover/active treatments
+- Mobile: most icons hidden via `md:flex` / `lg:flex` so the bar still fits on phones; Info + close stay always-visible
+
+**Phase E — `/song/[id]` route**
+- `src/app/song/[id]/page.tsx` (new): full standalone song page mirroring the drawer but with comments
+- Hero: 320px cover, large title, artist, "From {pack}" link, play count + meta, full action row (Play/Pause, Add to Cart, Heart, Crate, Share)
+- Lyrics: fetched from `track.lyricsUrl`, same pattern as the drawer
+- Comments: `localStorage`-backed list (`keval:comments:<trackId>`). Form posts `{ id, text, authorName, createdAt }`; relative time helper inline
+- Author name pulled from `useAuth().user.name`; falls back to "Anonymous"
+
+**New trigger surfaces (drawer)**
+1. Pack detail row title click
+2. Player bar Info button (current track)
+3. Direct `/song/[id]` route also exists for permalink/share flow (doesn't use drawer — it's the full-page version)
+
+**Files modified**
+- `src/app/pack/[id]/page.tsx` (gap fix + title-click → drawer trigger)
+- `src/components/PersistentPlayer.tsx` (right cluster rewrite)
+- `src/app/layout.tsx` (provider + drawer mount)
+
+**Files added**
+- `src/lib/song-detail-context.tsx`
+- `src/components/SongDetailDrawer.tsx`
+- `src/app/song/[id]/page.tsx`
+
+**Notes for future sessions**
+- The lyrics-fetch pattern in both `SongDetailDrawer` and `/song/[id]` deliberately uses initial state to cover the "no URL" branch — synchronous setState in `useEffect` triggers `react-hooks/set-state-in-effect`. If you add another lyrics consumer, follow the same pattern
+- `findTrackContext(playableId)` in `PersistentPlayer.tsx` searches every `pack.tracks` array. Cheap for 64 packs but if the catalog grows large this should be memoized into a `Map<id, {track, pack}>` at module load
+- Comments are LS-only and stored per-trackId. When a real backend lands, swap the `useEffect` LS hydration + `persistComments` calls for API requests; the rest of the form flow is reusable
+
+---
+
 ### Session 13 — Phase A: Wire 6 Demo BOLLY V1 Packs With Real Audio + Lyrics
 
 Foundational data layer for the upcoming Suno-style song-detail experience. The 6 demo BOLLY V1 packs now play real MP3s and have real lyrics text available for the right-side detail drawer (Phase C, not yet built).
