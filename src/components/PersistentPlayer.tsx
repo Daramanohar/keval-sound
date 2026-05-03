@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   Music,
@@ -95,9 +96,21 @@ export default function PersistentPlayer() {
 
         <div className="mx-auto max-w-7xl px-4 py-3 flex flex-col gap-3 lg:flex-row lg:items-center lg:gap-4">
           <div className="flex items-center gap-3 min-w-0 lg:w-[280px]">
-            <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${currentItem.coverUrl} flex items-center justify-center shrink-0`}>
-              <Music className="w-4 h-4 text-white/60" />
-            </div>
+            {currentItem.coverUrl?.startsWith("/") ? (
+              <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-lg bg-white/[0.04]">
+                <Image
+                  src={currentItem.coverUrl}
+                  alt=""
+                  width={40}
+                  height={40}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            ) : (
+              <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${currentItem.coverUrl} flex items-center justify-center shrink-0`}>
+                <Music className="w-4 h-4 text-white/60" />
+              </div>
+            )}
             <div className="min-w-0">
               <p className="text-sm font-medium text-white truncate">{currentItem.title}</p>
               <p className="text-xs text-muted truncate">

@@ -112,7 +112,10 @@ function toPlayableTrack(track: Track, pack?: Pack): PlayableItem {
     audioUrl: track.audioUrl,
     duration: track.duration,
     waveform: track.waveform,
-    coverUrl: track.coverUrl,
+    // When a track is played from a pack, carry the pack's cover art forward
+    // — every song in a pack shares the same artwork, and the player should
+    // show that real image rather than the legacy gradient class on the track.
+    coverUrl: pack?.coverUrl ?? track.coverUrl,
     sourcePackId: pack?.id,
     sourcePackTitle: pack?.title,
   };
