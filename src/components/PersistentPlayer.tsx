@@ -4,20 +4,43 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import {
+  Heart,
+  Info,
+  ListMusic,
+  MessageCircle,
   Music,
   Pause,
   Play,
   Repeat,
+  Share2,
   Shuffle,
   SkipBack,
   SkipForward,
+  ThumbsDown,
   Volume2,
   X,
 } from "lucide-react";
 import WaveformVisualizer from "./WaveformVisualizer";
-import { formatDuration, resampleWaveform } from "@/lib/utils";
+import { cn, formatDuration, resampleWaveform } from "@/lib/utils";
 import { useAuth } from "@/lib/auth-context";
 import { usePlayerControls, usePlayerProgress } from "@/lib/player-context";
+import { useStore } from "@/lib/store-context";
+import { useToast } from "@/lib/toast-context";
+import { useSongDetail } from "@/lib/song-detail-context";
+import { packs as allPacks, tracks as allTracks, type Pack, type Track } from "@/lib/mock-data";
+
+/** Lookup the current playing item back to its source Track + Pack so the
+ *  drawer + wishlist actions have full data — PlayableItem only carries id
+ *  and stripped metadata. */
+function findTrackContext(playableId: string | undefined): { track: Track | null; pack: Pack | null } {
+  if (!playableId) return { track: null, pack: null };
+  for (const pack of allPacks) {
+    const track = pack.tracks.find((t) => t.id === playableId);
+    if (track) return { track, pack };
+  }
+  const track = allTracks.find((t) => t.id === playableId) ?? null;
+  return { track, pack: null };
+}
 
 export default function PersistentPlayer() {
   const { isAuthenticated } = useAuth();
@@ -37,6 +60,14 @@ export default function PersistentPlayer() {
     dismissPlayer,
   } = usePlayerControls();
   const { currentTime, duration, progress, seekToProgress: seekToProgressFromProgress } = usePlayerProgress();
+  const { isInWishlist, toggleTrackWishlist } = useStore();
+  const { showToast } = useToast();
+  const { openSong } = useSongDetail();
+
+  // Look up the underlying Track/Pack for richer interactions (drawer, wishlist).
+  // currentItem holds only stripped playable data, so we resolve it back.
+  const { track: currentTrack, pack: currentPack } = findTrackContext(currentItem?.id);
+  const currentTrackSaved = currentTrack ? isInWishlist(currentTrack.id, "track") : false;
 
   const waveformRef = useRef<HTMLDivElement>(null);
   const [waveformWidth, setWaveformWidth] = useState(0);
@@ -192,30 +223,138 @@ export default function PersistentPlayer() {
             </div>
           </div>
 
-          <div className="flex items-center gap-3 justify-end lg:w-[200px]">
-            <div className="hidden sm:flex items-center gap-2">
-              <Volume2 className="w-4 h-4 text-muted" />
+          <div className="flex items-center justify-end gap-1 lg:w-[340px]">
+            {/* Queue (placeholder) */}
+            <PlayerIconButton
+              label="Queue"
+              onClick={() => showToast({ tone: "info", title: "Queue panel coming soon" })}
+              className="hidden md:flex"
+            >
+              <ListMusic className="h-4 w-4" />
+            </PlayerIconButton>
+
+            {/* Save / Like (wishlist toggle) */}
+            <PlayerIconButton
+              label={currentTrackSaved ? "Saved" : "Save to wishlist"}
+              onClick={() => {
+                if (!currentTrack) {
+                  showToast({ tone: "info", title: "Nothing to save" });
+                  return;
+                }
+                toggleTrackWishlist(currentTrack);
+                showToast({ tone: "info", title: currentTrackSaved ? "Removed from wishlist" : "Saved to wishlist" });
+              }}
+              active={currentTrackSaved}
+              activeClassName="text-zesty-red"
+            >
+              <Heart className={cn("h-4 w-4", currentTrackSaved && "fill-current")} />
+            </PlayerIconButton>
+
+            {/* Dislike (placeholder) */}
+            <PlayerIconButton
+              label="Not for me"
+              onClick={() => showToast({ tone: "info", title: "Recommendations feedback coming soon" })}
+              className="hidden md:flex"
+            >
+              <ThumbsDown className="h-4 w-4" />
+            </PlayerIconButton>
+
+            {/* Comment (placeholder) */}
+            <PlayerIconButton
+              label="Comment"
+              onClick={() => showToast({ tone: "info", title: "Comments coming soon" })}
+              className="hidden lg:flex"
+            >
+              <MessageCircle className="h-4 w-4" />
+            </PlayerIconButton>
+
+            {/* Share (copies link to currently playing track) */}
+            <PlayerIconButton
+              label="Share"
+              onClick={() => {
+                if (typeof window === "undefined" || !currentTrack) return;
+                const url = `${window.location.origin}/song/${currentTrack.id}`;
+                if (navigator.clipboard) navigator.clipboard.writeText(url).catch(() => {});
+                showToast({ tone: "info", title: "Track link copied" });
+              }}
+            >
+              <Share2 className="h-4 w-4" />
+            </PlayerIconButton>
+
+            {/* Volume (lg+ inline; smaller screens hide the slider) */}
+            <div className="ml-1 hidden items-center gap-2 lg:flex">
+              <Volume2 className="h-4 w-4 text-muted" />
               <input
                 type="range"
                 min={0}
                 max={100}
                 value={Math.round(volume * 100)}
                 onChange={(event) => setVolume(Number(event.target.value) / 100)}
-                className="w-24 accent-vivid-blue"
+                className="w-20 accent-vivid-blue"
                 aria-label="Adjust volume"
               />
             </div>
-            <button
-              type="button"
-              onClick={dismissPlayer}
-              className="text-muted hover:text-white transition-colors p-1"
-              aria-label="Close player"
+
+            {/* Info — opens the song detail drawer for the active track */}
+            <PlayerIconButton
+              label="Show song details"
+              onClick={() => {
+                if (!currentTrack) {
+                  showToast({ tone: "info", title: "No active track" });
+                  return;
+                }
+                openSong(currentTrack, currentPack);
+              }}
             >
-              <X className="w-4 h-4" />
-            </button>
+              <Info className="h-4 w-4" />
+            </PlayerIconButton>
+
+            {/* Close player — preserved as a small dismiss affordance */}
+            <PlayerIconButton label="Close player" onClick={dismissPlayer}>
+              <X className="h-4 w-4" />
+            </PlayerIconButton>
           </div>
         </div>
       </motion.div>
     </AnimatePresence>
+  );
+}
+
+/**
+ * Compact icon button for the player bar's right cluster. Provides a
+ * consistent 32×32 hit target with hover/active treatments so each
+ * adornment (queue/save/share/info/close/etc.) lines up cleanly.
+ */
+function PlayerIconButton({
+  label,
+  onClick,
+  children,
+  active = false,
+  activeClassName = "text-vivid-blue",
+  className,
+}: {
+  label: string;
+  onClick: () => void;
+  children: React.ReactNode;
+  active?: boolean;
+  activeClassName?: string;
+  className?: string;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-label={label}
+      title={label}
+      className={cn(
+        "flex h-8 w-8 items-center justify-center rounded-full transition-colors",
+        active
+          ? cn(activeClassName, "bg-white/[0.05]")
+          : "text-muted hover:bg-white/[0.06] hover:text-white",
+        className
+      )}
+    >
+      {children}
+    </button>
   );
 }

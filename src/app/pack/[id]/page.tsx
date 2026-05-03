@@ -24,6 +24,7 @@ import { cn, formatDuration, resampleWaveform } from "@/lib/utils";
 import { usePlayerControls } from "@/lib/player-context";
 import { useStore } from "@/lib/store-context";
 import { useToast } from "@/lib/toast-context";
+import { useSongDetail } from "@/lib/song-detail-context";
 
 const SONG_PRICE = 99;
 
@@ -49,6 +50,7 @@ export default function PackDetailPage() {
     getLicense,
   } = useStore();
   const { showToast } = useToast();
+  const { openSong } = useSongDetail();
 
   const pack = useMemo(() => packs.find((entry) => entry.id === params.id) ?? null, [params.id]);
 
@@ -149,7 +151,7 @@ export default function PackDetailPage() {
   );
 
   return (
-    <div className="mx-auto max-w-6xl">
+    <div className="max-w-6xl">
       {/* Back link — compact, no extra top spacing */}
       <Link
         href="/packs"
@@ -334,19 +336,27 @@ export default function PackDetailPage() {
                         </div>
                       )}
                     </button>
-                    <div className="lg:hidden">
-                      <p className="text-sm font-semibold text-white">{track.title}</p>
-                      <p className="text-xs text-muted">{track.artist}</p>
-                    </div>
+                    <button
+                      type="button"
+                      onClick={() => openSong(track, pack)}
+                      className="min-w-0 flex-1 text-left lg:hidden"
+                    >
+                      <p className="truncate text-sm font-semibold text-white hover:underline">{track.title}</p>
+                      <p className="truncate text-xs text-muted">{track.artist}</p>
+                    </button>
                   </div>
 
-                  {/* Song (lg+) */}
-                  <div className="hidden min-w-0 lg:block">
-                    <p className="truncate text-sm font-semibold text-white">{track.title}</p>
+                  {/* Song (lg+) — clicking title/artist opens the song detail drawer */}
+                  <button
+                    type="button"
+                    onClick={() => openSong(track, pack)}
+                    className="hidden min-w-0 text-left lg:block"
+                  >
+                    <p className="truncate text-sm font-semibold text-white hover:underline">{track.title}</p>
                     <p className="truncate text-xs text-muted">
                       {track.artist} · {track.genre}
                     </p>
-                  </div>
+                  </button>
 
                   {/* Waveform */}
                   <div className="lg:block">

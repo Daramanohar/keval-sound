@@ -5,8 +5,10 @@ import { AuthProvider } from "@/lib/auth-context";
 import { PlayerProvider } from "@/lib/player-context";
 import { StoreProvider } from "@/lib/store-context";
 import { ToastProvider } from "@/lib/toast-context";
+import { SongDetailProvider } from "@/lib/song-detail-context";
 import AppShell from "@/components/AppShell";
 import PersistentPlayer from "@/components/PersistentPlayer";
+import SongDetailDrawer from "@/components/SongDetailDrawer";
 
 const sora = Sora({
   variable: "--font-sora",
@@ -42,9 +44,12 @@ export default function RootLayout({
           <StoreProvider>
             <ToastProvider>
               <PlayerProvider>
-                <div className="aurora-bg" aria-hidden="true" />
-                <AppShell>{children}</AppShell>
-                <PersistentPlayer />
+                <SongDetailProvider>
+                  <div className="aurora-bg" aria-hidden="true" />
+                  <AppShell>{children}</AppShell>
+                  <PersistentPlayer />
+                  <SongDetailDrawer />
+                </SongDetailProvider>
               </PlayerProvider>
             </ToastProvider>
           </StoreProvider>
