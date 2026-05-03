@@ -262,10 +262,9 @@ export default function PackDetailPage() {
           </p>
         </div>
 
-        {/* Header — Cover · Play · Song · Waveform · Duration · Price · Loved · Add to Cart · Menu */}
-        <div className="hidden grid-cols-[40px_48px_1fr_180px_72px_56px_56px_120px_40px] gap-4 border-b border-white/[0.04] px-6 py-3 text-[10px] font-medium uppercase tracking-wider text-muted/30 lg:grid">
+        {/* Header — Cover/Play · Song · Waveform · Duration · Price · Loved · Add to Cart · Menu */}
+        <div className="hidden grid-cols-[48px_1fr_180px_72px_56px_56px_120px_40px] gap-4 border-b border-white/[0.04] px-6 py-3 text-[10px] font-medium uppercase tracking-wider text-muted/30 lg:grid">
           <div aria-hidden />
-          <div className="whitespace-nowrap">Play</div>
           <div className="whitespace-nowrap">Song</div>
           <div className="whitespace-nowrap">Waveform</div>
           <div className="whitespace-nowrap">Duration</div>
@@ -290,49 +289,38 @@ export default function PackDetailPage() {
                 transition={{ delay: Math.min(index * 0.02, 0.4) }}
                 className="group transition-colors hover:bg-white/[0.03]"
               >
-                <div className="grid grid-cols-1 gap-4 px-6 py-4 lg:grid-cols-[40px_48px_1fr_180px_72px_56px_56px_120px_40px] lg:items-center">
-                  {/* Cover thumbnail (lg+ column) — pack art shared by every row */}
-                  <div className="relative hidden h-10 w-10 overflow-hidden rounded-md bg-white/[0.04] lg:block">
-                    {isImageCover ? (
-                      <Image
-                        src={pack.coverUrl}
-                        alt=""
-                        width={40}
-                        height={40}
-                        className="h-full w-full object-cover"
-                      />
-                    ) : (
-                      <div className={cn("h-full w-full bg-gradient-to-br", pack.coverUrl)} />
-                    )}
-                    {trackPlaying && <PlayingOverlay />}
-                  </div>
-
-                  {/* Play (mobile: cover + play + title in one row) */}
+                <div className="grid grid-cols-1 gap-4 px-6 py-4 lg:grid-cols-[48px_1fr_180px_72px_56px_56px_120px_40px] lg:items-center">
+                  {/*
+                    Cover/play merged — YouTube Music-style: the pack-art
+                    thumbnail IS the play button. Hovering reveals a play
+                    triangle; while the track plays, the animated waveform
+                    overlay replaces the icon. On mobile this cell also hosts
+                    the song title beside the thumbnail in a single flex row.
+                  */}
                   <div className="flex items-center gap-3 lg:block">
-                    <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-md bg-white/[0.04] lg:hidden">
+                    <button
+                      type="button"
+                      onClick={() => toggleTrack(track, { queue: pack.tracks, pack })}
+                      aria-label={trackPlaying ? `Pause ${track.title}` : `Play ${track.title}`}
+                      className="group/cover relative h-12 w-12 shrink-0 overflow-hidden rounded-md bg-white/[0.04]"
+                    >
                       {isImageCover ? (
                         <Image
                           src={pack.coverUrl}
                           alt=""
-                          width={40}
-                          height={40}
-                          className="h-full w-full object-cover"
+                          width={48}
+                          height={48}
+                          className="h-full w-full object-cover transition-transform duration-200 group-hover/cover:scale-105"
                         />
                       ) : (
                         <div className={cn("h-full w-full bg-gradient-to-br", pack.coverUrl)} />
                       )}
-                      {trackPlaying && <PlayingOverlay />}
-                    </div>
-                    <button
-                      type="button"
-                      onClick={() => toggleTrack(track, { queue: pack.tracks, pack })}
-                      className="flex h-10 w-10 items-center justify-center rounded-full bg-white/[0.05] transition-colors group-hover:bg-vivid-blue/20"
-                      aria-label={trackPlaying ? "Pause" : "Play"}
-                    >
                       {trackPlaying ? (
-                        <Pause className="h-4 w-4 text-vivid-blue" />
+                        <PlayingOverlay />
                       ) : (
-                        <Play className="ml-0.5 h-4 w-4 text-muted" />
+                        <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/30 transition-colors group-hover/cover:bg-black/55">
+                          <Play className="h-4 w-4 fill-white text-white" />
+                        </div>
                       )}
                     </button>
                     <div className="lg:hidden">
