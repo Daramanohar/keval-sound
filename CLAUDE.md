@@ -30,6 +30,29 @@ This file is the authoritative reference for all Claude sessions working on this
 
 ## Completed Work Log
 
+### Session 11 — Pack Detail: Merge Cover Thumbnail + Play Button (YouTube Music Pattern)
+
+The song-row layout had a 40px cover thumbnail in column 1 and a separate 48px circular play button in column 2 — visually busy and double-clickable for the same intent. Replaced with the YouTube Music pattern: the cover thumbnail itself is the play button, with a `Play` icon overlaid on a subtle scrim that intensifies on hover. While the track is playing, the existing `PlayingOverlay` (animated waveform bars) replaces the icon — same component, no duplication.
+
+**Grid template** — dropped from 9 to 8 columns:
+- Old: `[40px_48px_1fr_180px_72px_56px_56px_120px_40px]`
+- New: `[48px_1fr_180px_72px_56px_56px_120px_40px]`
+
+The leading column grew from 40px to 48px since it's now the click target — meets the 44px+ touch-target guideline. Header label "Play" was removed (the column has no header now since the icon is self-explanatory; `aria-hidden` placeholder kept for grid alignment).
+
+**Hover/state matrix** on the merged thumbnail:
+- Inactive: `bg-black/30` scrim + small white play triangle
+- Hover: scrim deepens to `bg-black/55`, image scales `1.05` for a subtle "lift"
+- Playing: `PlayingOverlay` (3 white bars pulsing) — replaces the play icon
+- Click: toggles `toggleTrack(track, { queue: pack.tracks, pack })`
+
+**Mobile** — same pattern. The first grid cell still hosts `cover/play + title` in a flex row on `< lg`, but it's now one button instead of two separate elements.
+
+**Files modified**
+- `src/app/pack/[id]/page.tsx`
+
+---
+
 ### Session 10 — Persistent Player: Show Real Pack Art Instead of Generic Music Icon
 
 The bottom player bar's left-side thumbnail was rendering `bg-gradient-to-br /packs/pack-N.png` — the same Tailwind-class-string-applied-to-a-file-path bug that Session 4 fixed elsewhere. So every song that originated in a pack showed a generic orange gradient + Music icon instead of the actual pack artwork.
