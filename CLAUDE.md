@@ -30,6 +30,22 @@ This file is the authoritative reference for all Claude sessions working on this
 
 ## Completed Work Log
 
+### Session 10 — Persistent Player: Show Real Pack Art Instead of Generic Music Icon
+
+The bottom player bar's left-side thumbnail was rendering `bg-gradient-to-br /packs/pack-N.png` — the same Tailwind-class-string-applied-to-a-file-path bug that Session 4 fixed elsewhere. So every song that originated in a pack showed a generic orange gradient + Music icon instead of the actual pack artwork.
+
+**Two-line root-cause fix**
+
+1. `src/lib/player-context.tsx` (`toPlayableTrack`): the player item's `coverUrl` now prefers `pack?.coverUrl ?? track.coverUrl`. Every track in a pack shares the same pack art, so when a pack is supplied at play time, the player carries the real image forward instead of the legacy track gradient class.
+
+2. `src/components/PersistentPlayer.tsx`: detect file-path covers (`startsWith("/")`) and render `<Image>` from `next/image` (40×40, `rounded-lg`, `object-cover`). Gradient-class covers still fall through to the existing gradient div + Music icon, so non-pack contexts (e.g., samples) are unaffected.
+
+**Files modified**
+- `src/lib/player-context.tsx`
+- `src/components/PersistentPlayer.tsx`
+
+---
+
 ### Session 9 — Pack Detail: Now-Playing Waveform Overlay + Three-Dot Track Menu
 
 Two additions to `src/app/pack/[id]/page.tsx`.
