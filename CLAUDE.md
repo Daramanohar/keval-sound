@@ -30,6 +30,54 @@ This file is the authoritative reference for all Claude sessions working on this
 
 ## Completed Work Log
 
+### Session 13 — Phase A: Wire 6 Demo BOLLY V1 Packs With Real Audio + Lyrics
+
+Foundational data layer for the upcoming Suno-style song-detail experience. The 6 demo BOLLY V1 packs now play real MP3s and have real lyrics text available for the right-side detail drawer (Phase C, not yet built).
+
+**Source → public mapping**
+
+| Source folder (gitignored) | Maps to | Songs |
+|---|---|---|
+| `BOLLY DANCE V1` | pack-27 (Hindi Dance) | 4 |
+| `BOLLY ELECTRO V1` | pack-24 (Hindi Electronic) | 13 |
+| `BOLLY HIP HOP V1` | pack-29 (Hindi Hip-Hop) | 5 |
+| `BOLLY POP V1` | pack-28 (Hindi Pop) | 3 |
+| `BOLLY ROCK V1` | pack-26 (Hindi Rock) | 5 |
+| `BOLLY ROMANCE V1` | pack-25 (Hindi Romance) | 6 |
+| | **Total** | **36 songs** |
+
+**Asset pipeline**
+- `scripts/import-demo-packs.mjs` slugifies each `<title>.mp3` → ASCII-only kebab-case, copies the audio to `public/audio/<pack-id>/<slug>.mp3` and lyrics to `public/lyrics/<pack-id>/<slug>.txt`
+- Strips Devanagari from filenames but keeps it in display titles (later normalized to ASCII-only display)
+- Re-runnable: when new demo packs land, drop them in the source folder and re-run `node scripts/import-demo-packs.mjs > scripts/.demo-songs.snippet.ts` and paste the snippet
+- `MDATA.txt` files are intentionally **never** referenced anywhere — internal-only per spec
+
+**Schema change**
+- `Track` interface gained `lyricsUrl?: string` — fetched lazily by the upcoming song-detail drawer (Phase C). Optional so non-demo placeholder tracks remain valid
+
+**Pack builder**
+- New helper `buildDemoPackTracks(packId, packCoverUrl, packTags)` maps the demo song list into full `Track` objects, deterministic BPM/key rotation for variety, real `audioUrl` + `lyricsUrl`, all sharing the pack's cover art
+- `packs` builder now does: `demoTracks.length > 0 ? demoTracks : expandPackTracks(...)` — placeholder packs unchanged, demo packs use real songs
+- Demo packs' `trackCount` now reflects **actual song count** (3-13), not the marketing 50. Per spec: "for now the demo packs contain fewer songs than the full count, and that is acceptable for testing purposes"
+- Player works automatically: `player-context` already feeds `currentItem.audioUrl` to a real `<audio>` element
+
+**Repo size impact**
+- `public/audio/` ≈ **128 MB** (committed straight per user direction — fastest path for MVP)
+- `public/lyrics/` ≈ **160 KB**
+- `keval-packs/` source folder added to `.gitignore` (was already untracked but now formalized)
+- `scripts/.demo-songs.snippet.ts` gitignored — it's intermediate stdout
+
+**Files modified**
+- `src/lib/mock-data.ts` — `Track` schema + demo data + builder
+- `.gitignore` — exclude source assets and intermediate snippet
+- `scripts/import-demo-packs.mjs` (new)
+- `public/audio/pack-{24..29}/` (new, 36 mp3s)
+- `public/lyrics/pack-{24..29}/` (new, 36 txt files)
+
+**Next**: Phase B (sidebar gap), Phase C (right-side drawer with lyrics), Phase D (Suno player bar), Phase E (`/song/[id]` route).
+
+---
+
 ### Session 12 — Pack Detail: Refine Hover Overlay to Match YouTube Music Exactly
 
 Session 11 left a permanent dark scrim and a floating play triangle on every row even at rest, plus a 1.05 scale-up on hover. Per direct YouTube Music reference, the thumbnail at rest should display **clean image only** — overlay appears only on hover (or always on touch).
