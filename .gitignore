@@ -41,3 +41,9 @@ yarn-error.log*
 next-env.d.ts
 
 .vercel
+
+# Source soundpack assets (only normalized copies under public/ are tracked)
+keval-packs/
+
+# Intermediate output from scripts/import-demo-packs.mjs
+scripts/.demo-songs.snippet.ts
