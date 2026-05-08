@@ -6,7 +6,6 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   ChevronLeft,
-  ChevronRight,
   Clock3,
   Compass,
   Disc3,
@@ -188,10 +187,15 @@ export default function Sidebar({
         <button
           type="button"
           onClick={onToggleCollapse}
-          className="absolute right-[-12px] top-20 z-50 hidden h-6 w-6 items-center justify-center rounded-full border border-white/[0.1] bg-[#12132a] text-muted transition-all hover:bg-white/[0.08] hover:text-white lg:flex"
+          className="absolute right-[-14px] top-[72px] z-50 hidden h-7 w-7 items-center justify-center rounded-full border border-white/[0.2] bg-[#0d0e22] text-muted shadow-lg shadow-black/60 transition-all duration-200 hover:scale-110 hover:border-white/[0.35] hover:bg-white/[0.1] hover:text-white lg:flex"
           aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
         >
-          {collapsed ? <ChevronRight className="h-3 w-3" /> : <ChevronLeft className="h-3 w-3" />}
+          <ChevronLeft
+            className={cn(
+              "h-3.5 w-3.5 transition-transform duration-200",
+              collapsed ? "rotate-180" : "rotate-0"
+            )}
+          />
         </button>
 
         <nav className="mt-6 flex-1 space-y-6 overflow-y-auto overflow-x-hidden px-3">
