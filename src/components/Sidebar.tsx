@@ -14,6 +14,7 @@ import {
   LayoutGrid,
   Library,
   ListMusic,
+  Menu,
   Receipt,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -45,6 +46,7 @@ interface SidebarProps {
   mobileOpen?: boolean;
   onMobileClose?: () => void;
   collapsed?: boolean;
+  onToggleCollapse?: () => void;
 }
 
 const SidebarNowPlaying = memo(function SidebarNowPlaying({ collapsed }: { collapsed: boolean }) {
@@ -95,6 +97,7 @@ export default function Sidebar({
   mobileOpen = false,
   onMobileClose,
   collapsed = false,
+  onToggleCollapse,
 }: SidebarProps) {
   const pathname = usePathname();
   const router = useRouter();
@@ -171,8 +174,27 @@ export default function Sidebar({
           mobileOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
         )}
       >
-        <div className="flex shrink-0 items-center px-4 pb-2 pt-5">
-          <Link href="/" prefetch onClick={handleNavClick}>
+        {/* Sidebar header — YouTube Music pattern: hamburger sits at top-left,
+            logo to its right when expanded; both stack into a vertical column
+            when collapsed so they stay tappable in the 76px rail. */}
+        <div
+          className={cn(
+            "flex shrink-0 items-center gap-2 pb-2 pt-4",
+            collapsed ? "flex-col gap-2 px-2" : "px-3"
+          )}
+        >
+          {onToggleCollapse && (
+            <button
+              type="button"
+              onClick={onToggleCollapse}
+              className="hidden lg:flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-muted hover:text-white hover:bg-white/[0.06] active:bg-white/[0.1] transition-colors"
+              aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
+              aria-expanded={!collapsed}
+            >
+              <Menu className="h-5 w-5" />
+            </button>
+          )}
+          <Link href="/" prefetch onClick={handleNavClick} className="shrink-0">
             {collapsed ? (
               <KevalLogo size="sm" showText={false} showTagline={false} />
             ) : (

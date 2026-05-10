@@ -34,21 +34,26 @@ This file is the authoritative reference for all Claude sessions working on this
 
 Three user-driven UX fixes shipped in one push. All changes scoped to keep the home page (`/`) untouched per explicit user direction.
 
-**Fix 1 — Sidebar toggle reworked into a TopBar hamburger**
+**Fix 1 — Sidebar toggle moved into the sidebar header (YouTube Music pattern)**
 
-The previous floating chevron button at `right-[-14px]` on the sidebar was clipped in half by the browser because the `<aside>` had `[contain:layout_paint]` — paint containment clips anything painted outside the element's box. Replaced the entire affordance with the standard Notion/Linear/Slack pattern: hamburger button at the top-left of the TopBar.
+> ⚠️ **Correction within Session 15**: First pass put the hamburger in the TopBar (Notion/Linear style). User rejected — wanted the YouTube Music pattern where the hamburger lives **inside the sidebar's header, top-left of the brand logo**. Final shipped state matches the YT Music reference.
+
+The previous floating chevron button at `right-[-14px]` on the sidebar was clipped in half by the browser because the `<aside>` had `[contain:layout_paint]` — paint containment clips anything painted outside the element's box. Replaced with the YouTube Music pattern: hamburger button inside the sidebar header, sitting to the left of the `KevalLogo`.
 
 - `src/components/Sidebar.tsx`:
   - Removed the floating chevron button (lines that lived at `right-[-14px] top-[72px]`)
   - Removed `[contain:layout_paint]` from the `<aside>` className (root cause of the clip)
-  - Removed `onToggleCollapse` from `SidebarProps`; removed the `ChevronLeft` import
+  - Header rebuilt: `flex items-center gap-2` with hamburger `<button>` (Lucide `Menu` icon) on the left, `<KevalLogo />` on the right when expanded
+  - When `collapsed`, the header switches to `flex-col gap-2 px-2` so the 40×40 hamburger sits stacked above the icon-only logo inside the 76px rail
+  - Hamburger is `hidden lg:flex` — desktop-only; mobile uses TopBar's hamburger to open the slide-in drawer
+  - `onToggleCollapse` prop is back on `SidebarProps`; passed in by AppShell
 - `src/components/TopBar.tsx`:
-  - Hamburger button is no longer `lg:hidden` — visible on every breakpoint
-  - Icon swaps `Menu` ↔ `X` via `AnimatePresence` (`mode="wait"`, 150ms rotate+scale crossfade) so the open/closed state is unmistakable
-  - New `sidebarCollapsed` and `mobileOpen` props feed accurate `aria-label` / `aria-expanded` (collapse-vs-expand on desktop, open-vs-close on mobile)
+  - Hamburger restored to `lg:hidden` (mobile-only)
+  - Icon swaps `Menu` ↔ `X` via `AnimatePresence` (`mode="wait"`, 150ms rotate+scale crossfade) so drawer open/closed state is unmistakable
+  - `mobileOpen` prop only — `sidebarCollapsed` removed (not relevant on mobile)
 - `src/components/AppShell.tsx`:
-  - One `handleMenuToggle` branches on `window.innerWidth >= 1024`: ≥1024 toggles `sidebarCollapsed`; <1024 toggles `mobileSidebarOpen`. Single button, two contexts.
-  - Bonus: fixed the pre-existing `react-hooks/set-state-in-effect` lint error by hoisting the localStorage read into a `useState` lazy initializer (also eliminates first-paint width flash). The `useEffect` + `setSidebarCollapsed(true)` block is gone.
+  - Two distinct callbacks again: `toggleSidebarCollapse()` (passed to Sidebar's hamburger) and `toggleMobileSidebar()` (passed to TopBar's hamburger). Cleaner than the unified viewport-branched handler — each button has one job.
+  - Fixed the pre-existing `react-hooks/set-state-in-effect` lint error by hoisting the localStorage read into a `useState` lazy initializer (also eliminates first-paint width flash). The `useEffect` + `setSidebarCollapsed(true)` block is gone.
 
 **Fix 2 — Killed the page-width gap on every non-home route**
 

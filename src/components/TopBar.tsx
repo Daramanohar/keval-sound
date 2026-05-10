@@ -115,11 +115,10 @@ const supportLinks = [
 
 interface TopBarProps {
   onMenuToggle?: () => void;
-  sidebarCollapsed?: boolean;
   mobileOpen?: boolean;
 }
 
-export default function TopBar({ onMenuToggle, sidebarCollapsed, mobileOpen }: TopBarProps) {
+export default function TopBar({ onMenuToggle, mobileOpen }: TopBarProps) {
   const { user, isAuthenticated, logout } = useAuth();
   const { cartCount, wishlistCount } = useStore();
   const router = useRouter();
@@ -219,15 +218,9 @@ export default function TopBar({ onMenuToggle, sidebarCollapsed, mobileOpen }: T
         <button
           type="button"
           onClick={onMenuToggle}
-          className="relative flex h-10 w-10 items-center justify-center rounded-xl text-muted hover:text-white hover:bg-white/[0.06] active:bg-white/[0.1] transition-all shrink-0"
-          aria-label={
-            mobileOpen
-              ? "Close navigation menu"
-              : sidebarCollapsed
-                ? "Expand sidebar"
-                : "Collapse sidebar"
-          }
-          aria-expanded={mobileOpen ? true : !sidebarCollapsed}
+          className="relative flex h-10 w-10 items-center justify-center rounded-xl text-muted hover:text-white hover:bg-white/[0.06] active:bg-white/[0.1] transition-all lg:hidden shrink-0"
+          aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={mobileOpen ?? false}
         >
           <AnimatePresence initial={false} mode="wait">
             {mobileOpen ? (

@@ -81,20 +81,20 @@ export default function AppShell({ children }: AppShellProps) {
     setMobileSidebarOpen(false);
   }, []);
 
-  // One hamburger button handles both behaviors: collapse the persistent
-  // sidebar on lg+ viewports, slide-in/out the drawer on smaller ones.
-  const handleMenuToggle = useCallback(() => {
-    if (typeof window !== "undefined" && window.innerWidth >= 1024) {
-      setSidebarCollapsed((prev) => {
-        const next = !prev;
-        try {
-          window.localStorage.setItem(SIDEBAR_COLLAPSED_KEY, next ? "1" : "0");
-        } catch {}
-        return next;
-      });
-    } else {
-      setMobileSidebarOpen((prev) => !prev);
-    }
+  const toggleMobileSidebar = useCallback(() => {
+    setMobileSidebarOpen((prev) => !prev);
+  }, []);
+
+  // Desktop-only: collapses/expands the persistent sidebar.
+  // Driven by the hamburger button inside Sidebar's header (YouTube Music pattern).
+  const toggleSidebarCollapse = useCallback(() => {
+    setSidebarCollapsed((prev) => {
+      const next = !prev;
+      try {
+        window.localStorage.setItem(SIDEBAR_COLLAPSED_KEY, next ? "1" : "0");
+      } catch {}
+      return next;
+    });
   }, []);
 
   useEffect(() => {
@@ -153,6 +153,7 @@ export default function AppShell({ children }: AppShellProps) {
         mobileOpen={mobileSidebarOpen}
         onMobileClose={closeMobileSidebar}
         collapsed={sidebarCollapsed}
+        onToggleCollapse={toggleSidebarCollapse}
       />
       <div
         className={cn(
@@ -160,7 +161,7 @@ export default function AppShell({ children }: AppShellProps) {
           sidebarCollapsed ? "lg:pl-[76px]" : "lg:pl-[248px]"
         )}
       >
-        <TopBar onMenuToggle={handleMenuToggle} sidebarCollapsed={sidebarCollapsed} mobileOpen={mobileSidebarOpen} />
+        <TopBar onMenuToggle={toggleMobileSidebar} mobileOpen={mobileSidebarOpen} />
         <AnimatePresence mode="sync" initial={false}>
           <motion.main
             key={pathname}
