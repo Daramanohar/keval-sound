@@ -30,10 +30,6 @@ export default function ExplorePage() {
 
     return tracks.filter((track) => {
       if (filters.genre !== "All Genres" && track.genre !== filters.genre) return false;
-      if (filters.mood !== "All Moods" && track.mood !== filters.mood) return false;
-      if (filters.region !== "All Regions" && track.region !== filters.region) return false;
-      if (filters.key !== "All Keys" && track.key !== filters.key) return false;
-      if (track.bpm < filters.bpmRange.min || track.bpm > filters.bpmRange.max) return false;
 
       if (!search) return true;
 
@@ -71,7 +67,7 @@ export default function ExplorePage() {
     <PageTransition>
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-mid-purple/10 via-transparent to-transparent pointer-events-none" />
-        <div className="relative z-10 mx-auto max-w-7xl px-6 pt-12 pb-8">
+        <div className="relative z-10 pt-12 pb-8">
           <SectionHeader
             title="Explore Catalog"
             subtitle={`${filteredTracks.length} exclusive tracks available${query ? ` for "${query}"` : ""}`}
@@ -83,7 +79,7 @@ export default function ExplorePage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 pb-16">
+      <div className="pb-16">
         <div className="flex gap-8">
           <aside className="hidden lg:block w-64 shrink-0">
             <div className="sticky top-24">

@@ -66,33 +66,35 @@ export default function AppShell({ children }: AppShellProps) {
   const isAuthPage = pathname === "/auth";
 
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
-  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
-
-  // Restore the user's last sidebar preference once the client mounts.
-  useEffect(() => {
-    if (typeof window === "undefined") return;
+  // Lazy initializer reads localStorage once at mount — avoids the
+  // setState-in-effect lint rule and prevents a width-flash on first paint.
+  const [sidebarCollapsed, setSidebarCollapsed] = useState<boolean>(() => {
+    if (typeof window === "undefined") return false;
     try {
-      const stored = window.localStorage.getItem(SIDEBAR_COLLAPSED_KEY);
-      if (stored === "1") setSidebarCollapsed(true);
-    } catch {}
-  }, []);
-
-  const toggleMobileSidebar = useCallback(() => {
-    setMobileSidebarOpen((prev) => !prev);
-  }, []);
+      return window.localStorage.getItem(SIDEBAR_COLLAPSED_KEY) === "1";
+    } catch {
+      return false;
+    }
+  });
 
   const closeMobileSidebar = useCallback(() => {
     setMobileSidebarOpen(false);
   }, []);
 
-  const toggleSidebarCollapse = useCallback(() => {
-    setSidebarCollapsed((prev) => {
-      const next = !prev;
-      try {
-        window.localStorage.setItem(SIDEBAR_COLLAPSED_KEY, next ? "1" : "0");
-      } catch {}
-      return next;
-    });
+  // One hamburger button handles both behaviors: collapse the persistent
+  // sidebar on lg+ viewports, slide-in/out the drawer on smaller ones.
+  const handleMenuToggle = useCallback(() => {
+    if (typeof window !== "undefined" && window.innerWidth >= 1024) {
+      setSidebarCollapsed((prev) => {
+        const next = !prev;
+        try {
+          window.localStorage.setItem(SIDEBAR_COLLAPSED_KEY, next ? "1" : "0");
+        } catch {}
+        return next;
+      });
+    } else {
+      setMobileSidebarOpen((prev) => !prev);
+    }
   }, []);
 
   useEffect(() => {
@@ -151,7 +153,6 @@ export default function AppShell({ children }: AppShellProps) {
         mobileOpen={mobileSidebarOpen}
         onMobileClose={closeMobileSidebar}
         collapsed={sidebarCollapsed}
-        onToggleCollapse={toggleSidebarCollapse}
       />
       <div
         className={cn(
@@ -159,7 +160,7 @@ export default function AppShell({ children }: AppShellProps) {
           sidebarCollapsed ? "lg:pl-[76px]" : "lg:pl-[248px]"
         )}
       >
-        <TopBar onMenuToggle={toggleMobileSidebar} />
+        <TopBar onMenuToggle={handleMenuToggle} sidebarCollapsed={sidebarCollapsed} mobileOpen={mobileSidebarOpen} />
         <AnimatePresence mode="sync" initial={false}>
           <motion.main
             key={pathname}

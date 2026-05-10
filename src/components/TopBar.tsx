@@ -115,9 +115,11 @@ const supportLinks = [
 
 interface TopBarProps {
   onMenuToggle?: () => void;
+  sidebarCollapsed?: boolean;
+  mobileOpen?: boolean;
 }
 
-export default function TopBar({ onMenuToggle }: TopBarProps) {
+export default function TopBar({ onMenuToggle, sidebarCollapsed, mobileOpen }: TopBarProps) {
   const { user, isAuthenticated, logout } = useAuth();
   const { cartCount, wishlistCount } = useStore();
   const router = useRouter();
@@ -217,10 +219,41 @@ export default function TopBar({ onMenuToggle }: TopBarProps) {
         <button
           type="button"
           onClick={onMenuToggle}
-          className="flex h-10 w-10 items-center justify-center rounded-xl text-muted hover:text-white hover:bg-white/[0.05] transition-all lg:hidden shrink-0"
-          aria-label="Open navigation menu"
+          className="relative flex h-10 w-10 items-center justify-center rounded-xl text-muted hover:text-white hover:bg-white/[0.06] active:bg-white/[0.1] transition-all shrink-0"
+          aria-label={
+            mobileOpen
+              ? "Close navigation menu"
+              : sidebarCollapsed
+                ? "Expand sidebar"
+                : "Collapse sidebar"
+          }
+          aria-expanded={mobileOpen ? true : !sidebarCollapsed}
         >
-          <Menu className="w-5 h-5" />
+          <AnimatePresence initial={false} mode="wait">
+            {mobileOpen ? (
+              <motion.span
+                key="close"
+                initial={{ opacity: 0, rotate: -90, scale: 0.8 }}
+                animate={{ opacity: 1, rotate: 0, scale: 1 }}
+                exit={{ opacity: 0, rotate: 90, scale: 0.8 }}
+                transition={{ duration: 0.15, ease: [0.16, 1, 0.3, 1] }}
+                className="absolute inset-0 flex items-center justify-center"
+              >
+                <X className="w-5 h-5" />
+              </motion.span>
+            ) : (
+              <motion.span
+                key="menu"
+                initial={{ opacity: 0, rotate: 90, scale: 0.8 }}
+                animate={{ opacity: 1, rotate: 0, scale: 1 }}
+                exit={{ opacity: 0, rotate: -90, scale: 0.8 }}
+                transition={{ duration: 0.15, ease: [0.16, 1, 0.3, 1] }}
+                className="absolute inset-0 flex items-center justify-center"
+              >
+                <Menu className="w-5 h-5" />
+              </motion.span>
+            )}
+          </AnimatePresence>
         </button>
       )}
       <div className="flex-1 min-w-0 relative">

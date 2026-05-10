@@ -99,7 +99,7 @@ export const tracks: Track[] = [
     id: "t1",
     title: "Mumbai Nights",
     artist: "Arjun Beats",
-    genre: "Bollywood Trap",
+    genre: "HINDI/BOLLYWOOD",
     mood: "Energetic",
     bpm: 140,
     key: "Am",
@@ -120,7 +120,7 @@ export const tracks: Track[] = [
     id: "t2",
     title: "Rajasthani Sunset",
     artist: "Desert Sounds",
-    genre: "Folk Fusion",
+    genre: "FOLK",
     mood: "Melancholic",
     bpm: 95,
     key: "Dm",
@@ -141,7 +141,7 @@ export const tracks: Track[] = [
     id: "t3",
     title: "Chennai Bass",
     artist: "Tamil Wave",
-    genre: "South Indian EDM",
+    genre: "EDM",
     mood: "Hype",
     bpm: 128,
     key: "Cm",
@@ -162,7 +162,7 @@ export const tracks: Track[] = [
     id: "t4",
     title: "Punjab Groove",
     artist: "Sidhu Productions",
-    genre: "Bhangra Pop",
+    genre: "POP",
     mood: "Happy",
     bpm: 110,
     key: "G",
@@ -183,7 +183,7 @@ export const tracks: Track[] = [
     id: "t5",
     title: "Goa Trance Dreams",
     artist: "Psybaba",
-    genre: "Psytrance",
+    genre: "TECHNO",
     mood: "Euphoric",
     bpm: 145,
     key: "Em",
@@ -204,7 +204,7 @@ export const tracks: Track[] = [
     id: "t6",
     title: "Bengali Rain",
     artist: "Kolkata Collective",
-    genre: "Lo-fi Bengali",
+    genre: "LO-FI",
     mood: "Chill",
     bpm: 82,
     key: "F",
@@ -225,7 +225,7 @@ export const tracks: Track[] = [
     id: "t7",
     title: "Hyderabad Drill",
     artist: "Deccan Beats",
-    genre: "Desi Drill",
+    genre: "HIP-HOP/RAP",
     mood: "Dark",
     bpm: 142,
     key: "Bbm",
@@ -246,7 +246,7 @@ export const tracks: Track[] = [
     id: "t8",
     title: "Kerala Waves",
     artist: "Malabar Sound",
-    genre: "Tropical House",
+    genre: "EDM",
     mood: "Relaxed",
     bpm: 118,
     key: "C",
@@ -267,7 +267,7 @@ export const tracks: Track[] = [
     id: "t9",
     title: "Delhi Streets",
     artist: "Capital Crew",
-    genre: "Indian Hip Hop",
+    genre: "HIP-HOP/RAP",
     mood: "Aggressive",
     bpm: 90,
     key: "Gm",
@@ -288,7 +288,7 @@ export const tracks: Track[] = [
     id: "t10",
     title: "Assamese Dreams",
     artist: "Northeast Vibes",
-    genre: "Ambient Folk",
+    genre: "AMBIENT",
     mood: "Dreamy",
     bpm: 75,
     key: "D",
@@ -309,7 +309,7 @@ export const tracks: Track[] = [
     id: "t11",
     title: "Marathi Thunder",
     artist: "Pune Bass Co.",
-    genre: "Drum & Bass",
+    genre: "EDM",
     mood: "Intense",
     bpm: 174,
     key: "Fm",
@@ -330,7 +330,7 @@ export const tracks: Track[] = [
     id: "t12",
     title: "Gujarati Garba Drop",
     artist: "Navratri Nights",
-    genre: "Garba EDM",
+    genre: "EDM",
     mood: "Festive",
     bpm: 135,
     key: "A",
@@ -377,7 +377,7 @@ const demoPackSongs: Record<string, {
 }> = {
   "pack-27": {
     artist: "Mumbai Floor",
-    genre: "Hindi Dance",
+    genre: "HINDI/BOLLYWOOD",
     mood: "Energetic",
     songs: [
       { slug: "dil-ka-darpan", title: "Dil Ka Darpan", audioUrl: "/audio/pack-27/dil-ka-darpan.mp3", lyricsUrl: "/lyrics/pack-27/dil-ka-darpan.txt" },
@@ -388,7 +388,7 @@ const demoPackSongs: Record<string, {
   },
   "pack-24": {
     artist: "Bombay Wires",
-    genre: "Hindi Electronic",
+    genre: "HINDI/BOLLYWOOD",
     mood: "Hypnotic",
     songs: [
       { slug: "beyond-the-void", title: "Beyond the Void", audioUrl: "/audio/pack-24/beyond-the-void.mp3", lyricsUrl: "/lyrics/pack-24/beyond-the-void.txt" },
@@ -408,7 +408,7 @@ const demoPackSongs: Record<string, {
   },
   "pack-29": {
     artist: "Gully Beats",
-    genre: "Hindi Hip-Hop",
+    genre: "HINDI/BOLLYWOOD",
     mood: "Hard",
     songs: [
       { slug: "bazaar-ka-sher", title: "Bazaar Ka Sher", audioUrl: "/audio/pack-29/bazaar-ka-sher.mp3", lyricsUrl: "/lyrics/pack-29/bazaar-ka-sher.txt" },
@@ -420,7 +420,7 @@ const demoPackSongs: Record<string, {
   },
   "pack-28": {
     artist: "Studio 47",
-    genre: "Hindi Pop",
+    genre: "HINDI/BOLLYWOOD",
     mood: "Bright",
     songs: [
       { slug: "parchai", title: "Parchai", audioUrl: "/audio/pack-28/parchai.mp3", lyricsUrl: "/lyrics/pack-28/parchai.txt" },
@@ -430,7 +430,7 @@ const demoPackSongs: Record<string, {
   },
   "pack-26": {
     artist: "Dilli Riots",
-    genre: "Hindi Rock",
+    genre: "HINDI/BOLLYWOOD",
     mood: "Driving",
     songs: [
       { slug: "chhup-gaye-raastey", title: "Chhup Gaye Raastey", audioUrl: "/audio/pack-26/chhup-gaye-raastey.mp3", lyricsUrl: "/lyrics/pack-26/chhup-gaye-raastey.txt" },
@@ -442,7 +442,7 @@ const demoPackSongs: Record<string, {
   },
   "pack-25": {
     artist: "Velvet Strings",
-    genre: "Hindi Romance",
+    genre: "HINDI/BOLLYWOOD",
     mood: "Romantic",
     songs: [
       { slug: "chand-ki-kahani", title: "Chand Ki Kahani", audioUrl: "/audio/pack-25/chand-ki-kahani.mp3", lyricsUrl: "/lyrics/pack-25/chand-ki-kahani.txt" },
@@ -614,33 +614,34 @@ export const samples: Sample[] = [
   { id: "s16", name: "FX Riser - Bollywood Drop", type: "sfx", bpm: 0, key: "-", duration: 4, format: "WAV", size: "1.2 MB", genre: "Bollywood", instrument: "SFX", tags: ["riser", "fx", "drop"], price: 149, waveform: generateWaveform("s16") },
 ];
 
+// Canonical genre taxonomy — sourced from GENRES.pdf. Every track in the
+// catalog must use one of these values for the explore filter to match.
 export const genres = [
-  "All Genres", "Bollywood", "Hip Hop", "EDM", "Folk Fusion", "Classical",
-  "Bhangra", "Lo-fi", "Psytrance", "Carnatic", "Drill", "Trap",
-  "R&B", "Pop", "Rock", "Ambient", "Devotional",
+  "All Genres",
+  "HINDI/BOLLYWOOD",
+  "POP",
+  "HIP-HOP/RAP",
+  "EDM",
+  "ROCK",
+  "LO-FI",
+  "R&B/SOUL",
+  "PHONK",
+  "AMBIENT",
+  "TECHNO",
+  "SYNTHWAVE",
+  "METAL",
+  "COUNTRY",
+  "ACOUSTIC",
+  "HYPERPOP",
+  "DEVOTIONAL/SPIRITUAL",
+  "FOLK",
+  "CLASSICAL INDIAN",
+  "KOREAN",
+  "MIDDLE EASTERN",
+  "REGGAE",
+  "FUNK/DISCO",
+  "DARKWAVE",
+  "VAPORWAVE",
+  "FUTURE GARAGE",
 ];
 
-export const moods = [
-  "All Moods", "Energetic", "Chill", "Dark", "Happy", "Melancholic",
-  "Hype", "Euphoric", "Aggressive", "Dreamy", "Festive", "Romantic",
-  "Intense", "Relaxed", "Spiritual",
-];
-
-export const regions = [
-  "All Regions", "Maharashtra", "Punjab", "Tamil Nadu", "Rajasthan",
-  "West Bengal", "Kerala", "Telangana", "Delhi", "Goa", "Gujarat",
-  "Assam", "Karnataka",
-];
-
-export const keys = [
-  "All Keys", "C", "Cm", "D", "Dm", "E", "Em", "F", "Fm",
-  "G", "Gm", "A", "Am", "Bb", "Bbm",
-];
-
-export const bpmRanges = [
-  { label: "All BPM", min: 0, max: 300 },
-  { label: "60-90 (Slow)", min: 60, max: 90 },
-  { label: "90-120 (Medium)", min: 90, max: 120 },
-  { label: "120-140 (Fast)", min: 120, max: 140 },
-  { label: "140+ (Very Fast)", min: 140, max: 300 },
-];

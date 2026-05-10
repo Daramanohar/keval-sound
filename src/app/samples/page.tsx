@@ -79,7 +79,7 @@ export default function SamplesPage() {
     <PageTransition>
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-grey-azure/10 via-transparent to-transparent pointer-events-none" />
-        <div className="relative z-10 mx-auto max-w-7xl px-6 pt-12 pb-8">
+        <div className="relative z-10 pt-12 pb-8">
           <SectionHeader
             title="Samples & Loops"
             subtitle="Professional-grade Indian instrument samples, loops, and one-shots"
@@ -119,7 +119,7 @@ export default function SamplesPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 pb-16">
+      <div className="pb-16">
         <div className="glass rounded-2xl overflow-hidden">
           <div className="hidden md:grid grid-cols-[40px_1fr_100px_80px_80px_100px_100px_80px_100px] gap-4 items-center px-6 py-3 border-b border-border">
             <div />
