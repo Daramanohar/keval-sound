@@ -31,7 +31,7 @@ export default function PacksPage() {
       {/* Header */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-grey-magenta/10 via-transparent to-transparent pointer-events-none" />
-        <div className="relative z-10 mx-auto max-w-7xl pt-8 pb-6">
+        <div className="relative z-10 pt-8 pb-6">
           <SectionHeader title="Song Packs" gradient />
 
           {/* Category filter bar */}
@@ -55,7 +55,7 @@ export default function PacksPage() {
       </div>
 
       {/* Packs Grid — items-start prevents row-height stretching when one card expands */}
-      <div className="mx-auto max-w-7xl pb-16">
+      <div className="pb-16">
         {filteredPacks.length > 0 ? (
           <div className="grid grid-cols-2 items-start gap-4 sm:grid-cols-3 lg:grid-cols-4">
             {filteredPacks.map((pack, i) => (

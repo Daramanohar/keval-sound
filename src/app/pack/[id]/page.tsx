@@ -151,7 +151,7 @@ export default function PackDetailPage() {
   );
 
   return (
-    <div className="max-w-6xl">
+    <div>
       {/* Back link — compact, no extra top spacing */}
       <Link
         href="/packs"

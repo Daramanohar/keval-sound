@@ -30,6 +30,90 @@ This file is the authoritative reference for all Claude sessions working on this
 
 ## Completed Work Log
 
+### Session 15 — Hamburger Sidebar Toggle, Page-Width Gap Fix, Genre-Only Filter (25 PDF Buckets)
+
+Three user-driven UX fixes shipped in one push. All changes scoped to keep the home page (`/`) untouched per explicit user direction.
+
+**Fix 1 — Sidebar toggle reworked into a TopBar hamburger**
+
+The previous floating chevron button at `right-[-14px]` on the sidebar was clipped in half by the browser because the `<aside>` had `[contain:layout_paint]` — paint containment clips anything painted outside the element's box. Replaced the entire affordance with the standard Notion/Linear/Slack pattern: hamburger button at the top-left of the TopBar.
+
+- `src/components/Sidebar.tsx`:
+  - Removed the floating chevron button (lines that lived at `right-[-14px] top-[72px]`)
+  - Removed `[contain:layout_paint]` from the `<aside>` className (root cause of the clip)
+  - Removed `onToggleCollapse` from `SidebarProps`; removed the `ChevronLeft` import
+- `src/components/TopBar.tsx`:
+  - Hamburger button is no longer `lg:hidden` — visible on every breakpoint
+  - Icon swaps `Menu` ↔ `X` via `AnimatePresence` (`mode="wait"`, 150ms rotate+scale crossfade) so the open/closed state is unmistakable
+  - New `sidebarCollapsed` and `mobileOpen` props feed accurate `aria-label` / `aria-expanded` (collapse-vs-expand on desktop, open-vs-close on mobile)
+- `src/components/AppShell.tsx`:
+  - One `handleMenuToggle` branches on `window.innerWidth >= 1024`: ≥1024 toggles `sidebarCollapsed`; <1024 toggles `mobileSidebarOpen`. Single button, two contexts.
+  - Bonus: fixed the pre-existing `react-hooks/set-state-in-effect` lint error by hoisting the localStorage read into a `useState` lazy initializer (also eliminates first-paint width flash). The `useEffect` + `setSidebarCollapsed(true)` block is gone.
+
+**Fix 2 — Killed the page-width gap on every non-home route**
+
+The dark vertical strip between the sidebar and content (visible on a 1920px monitor) was caused by `mx-auto max-w-7xl` on page wrappers. With sidebar collapsed (76px) and main padded `px-6`, the available width was ~1820px while content was capped at 1280px and centered — leaving ~270px of dead space on each side.
+
+Dropped `mx-auto max-w-7xl` from page wrappers (and the redundant per-page `px-6` where AppShell already provides it):
+- `src/app/packs/page.tsx` (2 wrappers)
+- `src/app/explore/page.tsx` (2 wrappers)
+- `src/app/account/page.tsx` (1 wrapper)
+- `src/app/cart/page.tsx` (1 wrapper)
+- `src/app/samples/page.tsx` (2 wrappers)
+- `src/app/pack/[id]/page.tsx` (was `max-w-6xl`, now empty `<div>`)
+
+Pages now fill width inside AppShell's standard `px-6` (24px) horizontal padding. Home (`/`) intentionally untouched per user direction. `/song/[id]` keeps its `max-w-4xl` cap deliberately for lyrics + comments readability — flag for future review if user wants it dropped.
+
+**Fix 3 — Explore filter stripped to Genre-only with the 25 PDF buckets**
+
+Source of truth: `GENRES.pdf` at repo root. The 25 canonical genres are: HINDI/BOLLYWOOD, POP, HIP-HOP/RAP, EDM, ROCK, LO-FI, R&B/SOUL, PHONK, AMBIENT, TECHNO, SYNTHWAVE, METAL, COUNTRY, ACOUSTIC, HYPERPOP, DEVOTIONAL/SPIRITUAL, FOLK, CLASSICAL INDIAN, KOREAN, MIDDLE EASTERN, REGGAE, FUNK/DISCO, DARKWAVE, VAPORWAVE, FUTURE GARAGE.
+
+- `src/lib/mock-data.ts`:
+  - Replaced `genres` export with the 25-entry list (with `"All Genres"` prepended for the filter default)
+  - **Remapped every track's `.genre` to a PDF bucket** so filters return real results:
+    - `Bollywood Trap → HINDI/BOLLYWOOD`, `Folk Fusion → FOLK`, `South Indian EDM → EDM`, `Bhangra Pop → POP`, `Psytrance → TECHNO`, `Lo-fi Bengali → LO-FI`, `Desi Drill → HIP-HOP/RAP`, `Tropical House → EDM`, `Indian Hip Hop → HIP-HOP/RAP`, `Ambient Folk → AMBIENT`, `Drum & Bass → EDM`, `Garba EDM → EDM`
+    - All 6 BOLLY V1 demo packs (36 songs total): every Hindi-* sub-genre → `HINDI/BOLLYWOOD`
+  - **Deleted** the now-orphaned `moods`, `regions`, `keys`, `bpmRanges` exports (no consumers remained)
+- `src/components/FilterPanel.tsx` (rewrite, ~170 lines → ~65 lines):
+  - `FilterState` is now `{ genre: string }` only
+  - Removed `FilterSection` collapsible component, the `useState` open-state, `AnimatePresence`, `ChevronDown`
+  - Single flex-wrap row of genre chips; `"All Genres"` renders as `"All"`
+- `src/app/explore/page.tsx`:
+  - `filteredTracks` `useMemo` now only checks `track.genre` — Mood/Region/Key/BPM clauses removed
+  - Search bar still searches across all metadata fields (title, artist, genre, mood, region, language, tags) — only the *filter UI* lost the non-genre dimensions
+
+**Files modified (total: 11)**
+
+| File | Change |
+|---|---|
+| `src/components/Sidebar.tsx` | Remove edge-chevron toggle + `contain:layout_paint`; drop `onToggleCollapse` prop |
+| `src/components/TopBar.tsx` | Hamburger always visible; Menu↔X animated swap; new `sidebarCollapsed`/`mobileOpen` props |
+| `src/components/AppShell.tsx` | Unified `handleMenuToggle` (viewport-branched); localStorage moved to `useState` initializer |
+| `src/components/FilterPanel.tsx` | Stripped to genre-only |
+| `src/lib/mock-data.ts` | 25-genre PDF list; remap all track genres; delete orphan exports |
+| `src/app/explore/page.tsx` | Drop max-w-7xl; genre-only filter logic |
+| `src/app/packs/page.tsx` | Drop max-w-7xl |
+| `src/app/account/page.tsx` | Drop max-w-7xl + redundant px-6 |
+| `src/app/cart/page.tsx` | Drop max-w-7xl + redundant px-6 |
+| `src/app/samples/page.tsx` | Drop max-w-7xl + redundant px-6 |
+| `src/app/pack/[id]/page.tsx` | Drop max-w-6xl |
+
+Net diff: **+137 / −229** (less code).
+
+**Verification**
+- `npm run lint` — clean (also resolved the pre-existing `react-hooks/set-state-in-effect` error)
+- `npx tsc --noEmit` — clean
+- `npm run build` — clean, all 10 routes generated
+
+**Notes for future sessions**
+- The hamburger viewport branch uses `window.innerWidth >= 1024` (matches Tailwind `lg:`). If the breakpoint changes, update `AppShell.handleMenuToggle` *and* the `lg:pl-[76px]` / `lg:pl-[248px]` rules together — they must agree.
+- `FilterState` is now type-narrow (`{ genre: string }`). If you reintroduce a Mood/Key filter later, extend `FilterState` and update both `defaultFilters` and the explore page's `filteredTracks` predicate.
+- The 25-genre list lives in **two** places that must stay in sync: `GENRES.pdf` (source of truth) and `genres` export in `mock-data.ts`. If the PDF is updated, mirror the changes here.
+- Track `genre` field is now case-sensitive and uppercase (e.g. `"HIP-HOP/RAP"`). Anything that displays the genre string verbatim (e.g. `MusicCard`, `TrackCard`) will show it in caps — that matches the chip filter aesthetic, but if a future pass wants Title Case display, do the cosmetic transform at render time, not in the data.
+- The `final.fix.md` document at the repo root is **stale** (predates Sessions 3–14). Most of its fixes are already shipped or superseded. Do not paste it as a brief; rebuild the fix list from real code state.
+
+---
+
 ### Session 14 — Phases B/C/D/E: Sidebar Gap, Song Detail Drawer, Suno Player Bar, /song/[id] Route
 
 Shipped four phases in one push, completing the Suno-inspired song experience.

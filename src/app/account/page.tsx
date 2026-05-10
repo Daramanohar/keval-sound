@@ -163,7 +163,7 @@ export default function AccountPage() {
 
   return (
     <PageTransition>
-      <div className="mx-auto max-w-7xl px-6 pb-16 pt-4">
+      <div className="pb-16 pt-4">
         <section className="glass mb-8 overflow-hidden rounded-3xl p-6 md:p-8">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-2xl">

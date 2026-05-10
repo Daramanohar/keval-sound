@@ -5,7 +5,6 @@ import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import {
-  ChevronLeft,
   Clock3,
   Compass,
   Disc3,
@@ -46,7 +45,6 @@ interface SidebarProps {
   mobileOpen?: boolean;
   onMobileClose?: () => void;
   collapsed?: boolean;
-  onToggleCollapse?: () => void;
 }
 
 const SidebarNowPlaying = memo(function SidebarNowPlaying({ collapsed }: { collapsed: boolean }) {
@@ -97,7 +95,6 @@ export default function Sidebar({
   mobileOpen = false,
   onMobileClose,
   collapsed = false,
-  onToggleCollapse,
 }: SidebarProps) {
   const pathname = usePathname();
   const router = useRouter();
@@ -170,7 +167,7 @@ export default function Sidebar({
         style={{ width: collapsed ? 76 : 248, willChange: "width" }}
         className={cn(
           "fixed bottom-0 left-0 top-0 z-40 flex flex-col border-r border-white/[0.06] bg-[#08091a]",
-          "transition-[width,transform] duration-200 ease-[cubic-bezier(0.22,0.61,0.36,1)] [contain:layout_paint]",
+          "transition-[width,transform] duration-200 ease-[cubic-bezier(0.22,0.61,0.36,1)]",
           mobileOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
         )}
       >
@@ -183,20 +180,6 @@ export default function Sidebar({
             )}
           </Link>
         </div>
-
-        <button
-          type="button"
-          onClick={onToggleCollapse}
-          className="absolute right-[-14px] top-[72px] z-50 hidden h-7 w-7 items-center justify-center rounded-full border border-white/[0.2] bg-[#0d0e22] text-muted shadow-lg shadow-black/60 transition-all duration-200 hover:scale-110 hover:border-white/[0.35] hover:bg-white/[0.1] hover:text-white lg:flex"
-          aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
-        >
-          <ChevronLeft
-            className={cn(
-              "h-3.5 w-3.5 transition-transform duration-200",
-              collapsed ? "rotate-180" : "rotate-0"
-            )}
-          />
-        </button>
 
         <nav className="mt-6 flex-1 space-y-6 overflow-y-auto overflow-x-hidden px-3">
           <div>

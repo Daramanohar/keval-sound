@@ -177,7 +177,7 @@ export default function CartPage() {
 
   return (
     <PageTransition>
-      <div className="mx-auto max-w-7xl px-6 pt-12 pb-16">
+      <div className="pt-12 pb-16">
         <h1 className="text-3xl font-bold text-white mb-2">Your Cart</h1>
         <p className="text-sm text-muted mb-10">
           {cart.length} {cart.length === 1 ? "item" : "items"} ready for checkout across single-track and full-pack licensing.
