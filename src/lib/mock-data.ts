@@ -595,6 +595,20 @@ export const packs: Pack[] = packDefs.map((d) => {
   };
 });
 
+// ─── allTracks ───────────────────────────────────────────────────────────────
+// The explore catalog — every unique song the user can browse and filter by
+// genre. Combines the 12 placeholder seed tracks with every real demo-pack
+// song (those with a real `audioUrl` and `lyricsUrl`). The huge cloned
+// expansion list (`pack-X-tN` repeats of the 12 seeds) is intentionally
+// excluded so the catalog doesn't show "Mumbai Sunset Trap" sixty-four times.
+//
+// When new demo packs land with real audio, they automatically flow into
+// `allTracks` because the filter is `audioUrl ? include : skip`.
+export const allTracks: Track[] = [
+  ...tracks,
+  ...packs.flatMap((p) => p.tracks).filter((t) => Boolean(t.audioUrl)),
+];
+
 export const samples: Sample[] = [
   { id: "s1", name: "Tabla Loop - Fast Teentaal", type: "loop", bpm: 160, key: "-", duration: 8, format: "WAV", size: "2.4 MB", genre: "Classical", instrument: "Tabla", tags: ["tabla", "teentaal", "fast"], price: 299, waveform: generateWaveform("s1") },
   { id: "s2", name: "Sitar Riff - Raag Yaman", type: "one-shot", bpm: 0, key: "C", duration: 4, format: "WAV", size: "1.1 MB", genre: "Classical", instrument: "Sitar", tags: ["sitar", "raag", "yaman"], price: 199, waveform: generateWaveform("s2") },

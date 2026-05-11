@@ -30,6 +30,41 @@ This file is the authoritative reference for all Claude sessions working on this
 
 ## Completed Work Log
 
+### Session 16 — Explore Catalog Flattened: Genre Filter Surfaces the 36 Real Demo Songs
+
+**The bug**: After Session 15 stripped the Explore filter to genre-only and remapped track genres, clicking `HINDI/BOLLYWOOD` returned only **1** track — the placeholder `t1`. The 36 real demo songs (with `audioUrl` + lyrics, all tagged `HINDI/BOLLYWOOD`) were invisible to Explore because they live inside `packs[].tracks`, not in the top-level `tracks` export that `src/app/explore/page.tsx` was iterating.
+
+**The fix** — a new flattened catalog export:
+
+- `src/lib/mock-data.ts`: added `export const allTracks: Track[]` defined as `[...tracks, ...packs.flatMap(p => p.tracks).filter(t => Boolean(t.audioUrl))]`. The `audioUrl` filter is the key — it pulls in the 36 real demo songs (pack-24..pack-29) but skips the thousands of cloned `pack-X-tN` placeholder expansion tracks that would otherwise duplicate "Mumbai Sunset Trap" sixty-four times in the catalog.
+- `src/app/explore/page.tsx`: replaced `import { tracks }` with `import { allTracks }`. `filteredTracks` `useMemo` now filters over `allTracks`.
+
+**Catalog math after the fix**
+
+| Source | Count | Notes |
+|---|---|---|
+| Seed/placeholder tracks (`t1..t12`) | 12 | Distributed across genres post-Session-15 remap |
+| Real demo songs (pack-24..pack-29) | 36 | All tagged `HINDI/BOLLYWOOD`, all with real MP3 + lyrics |
+| **Total in `allTracks`** | **48** | What Explore now iterates |
+| Clicking `HINDI/BOLLYWOOD` chip | **37** | t1 (placeholder) + 36 demo songs |
+
+**Self-extending**: when new demo packs land with real audio in the future, their tracks automatically flow into `allTracks` via the `Boolean(t.audioUrl)` predicate — no further wiring needed.
+
+**Files modified**
+- `src/lib/mock-data.ts` (added `allTracks` export between `packs` and `samples`)
+- `src/app/explore/page.tsx` (one import swap, one var rename in the filter)
+
+**Verification**
+- `npm run lint` — clean
+- `npx tsc --noEmit` — clean
+- `npm run build` — clean, all 10 routes generated
+
+**Notes for future sessions**
+- `tracks` (top-level) is still used by the home page (`/`) for its carousels and `MusicCard` previews. Don't replace those usages with `allTracks` — they want the curated 12-track seed list, not the full catalog.
+- The `audioUrl` filter intentionally **excludes** the 12 seed tracks' clones-with-suffix-IDs (`pack-1-t1` etc.) but **includes** the 12 originals themselves via the `...tracks` spread. If a future change adds real audio to the seed tracks, drop the spread and switch entirely to the `flatMap+filter` path to avoid duplicates.
+
+---
+
 ### Session 15 — Hamburger Sidebar Toggle, Page-Width Gap Fix, Genre-Only Filter (25 PDF Buckets)
 
 Three user-driven UX fixes shipped in one push. All changes scoped to keep the home page (`/`) untouched per explicit user direction.

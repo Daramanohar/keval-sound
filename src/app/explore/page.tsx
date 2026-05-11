@@ -12,7 +12,7 @@ import FilterPanel, {
 } from "@/components/FilterPanel";
 import TrackCard from "@/components/TrackCard";
 import SectionHeader from "@/components/SectionHeader";
-import { tracks } from "@/lib/mock-data";
+import { allTracks } from "@/lib/mock-data";
 import { cn } from "@/lib/utils";
 
 export default function ExplorePage() {
@@ -28,7 +28,7 @@ export default function ExplorePage() {
   const filteredTracks = useMemo(() => {
     const search = deferredQuery.trim().toLowerCase();
 
-    return tracks.filter((track) => {
+    return allTracks.filter((track) => {
       if (filters.genre !== "All Genres" && track.genre !== filters.genre) return false;
 
       if (!search) return true;
