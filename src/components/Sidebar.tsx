@@ -54,11 +54,11 @@ const SidebarNowPlaying = memo(function SidebarNowPlaying({ collapsed }: { colla
   const { progress } = usePlayerProgress();
 
   return (
-    <div className="shrink-0 px-3 pb-4">
+    <div className={cn("shrink-0 pb-4", collapsed ? "px-1" : "px-3")}>
       <div
         className={cn(
           "overflow-hidden rounded-xl border border-white/[0.06] bg-white/[0.04] transition-all",
-          collapsed ? "p-2" : "p-3"
+          collapsed ? "p-1.5" : "p-3"
         )}
       >
         <div className="flex items-center gap-3">
@@ -203,16 +203,19 @@ export default function Sidebar({
           </Link>
         </div>
 
-        <nav className="mt-6 flex-1 space-y-6 overflow-y-auto overflow-x-hidden px-3">
-          <div>
-            <p
-              className={cn(
-                "mb-2 text-[10px] font-semibold uppercase tracking-widest text-muted/40 transition-opacity",
-                collapsed ? "px-0 opacity-0" : "px-2"
-              )}
-            >
-              {collapsed ? "" : "Discover"}
-            </p>
+        <nav
+          className={cn(
+            "mt-4 flex-1 overflow-y-auto overflow-x-hidden",
+            collapsed ? "space-y-2 px-1" : "space-y-6 px-3"
+          )}
+        >
+          <div className={cn(collapsed ? "space-y-1" : "")}>
+            {/* Section heading — hidden when collapsed; YT Music omits it too */}
+            {!collapsed && (
+              <p className="mb-2 px-2 text-[10px] font-semibold uppercase tracking-widest text-muted/40">
+                Discover
+              </p>
+            )}
 
             {mainNav.map((item) => {
               const isActive = item.href === "/" ? currentMainPath === "/" : currentMainPath === item.href;
@@ -221,8 +224,10 @@ export default function Sidebar({
                 <Link key={item.href} href={item.href} prefetch onClick={handleNavClick}>
                   <div
                     className={cn(
-                      "group relative flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-all",
-                      collapsed && "justify-center px-0",
+                      "group relative rounded-xl font-medium transition-all",
+                      collapsed
+                        ? "flex flex-col items-center justify-center gap-1 px-1 py-2.5"
+                        : "flex items-center gap-3 px-3 py-2.5 text-sm",
                       isActive
                         ? "text-white"
                         : "text-muted/70 hover:bg-white/[0.04] hover:text-white"
@@ -235,7 +240,7 @@ export default function Sidebar({
                         transition={{ type: "spring", stiffness: 350, damping: 30 }}
                       />
                     )}
-                    {isActive && (
+                    {isActive && !collapsed && (
                       <motion.div
                         layoutId="sidebar-indicator"
                         className="absolute left-0 top-1/2 h-5 w-[3px] -translate-y-1/2 rounded-r-full bg-vivid-blue"
@@ -244,15 +249,17 @@ export default function Sidebar({
                     )}
                     <item.icon
                       className={cn(
-                        "relative z-10 h-[18px] w-[18px] shrink-0 transition-colors",
+                        "relative z-10 shrink-0 transition-colors",
+                        collapsed ? "h-5 w-5" : "h-[18px] w-[18px]",
                         isActive ? "text-vivid-blue" : "group-hover:text-white"
                       )}
                     />
                     <span
-                      aria-hidden={collapsed}
                       className={cn(
-                        "relative z-10 whitespace-nowrap transition-opacity duration-150",
-                        collapsed ? "pointer-events-none opacity-0" : "opacity-100"
+                        "relative z-10 transition-colors",
+                        collapsed
+                          ? "text-center text-[10px] leading-tight line-clamp-2"
+                          : "whitespace-nowrap"
                       )}
                     >
                       {item.label}
@@ -263,15 +270,18 @@ export default function Sidebar({
             })}
           </div>
 
-          <div>
-            <p
-              className={cn(
-                "mb-2 text-[10px] font-semibold uppercase tracking-widest text-muted/40 transition-opacity",
-                collapsed ? "px-0 opacity-0" : "px-2"
-              )}
-            >
-              {collapsed ? "" : "Your Library"}
-            </p>
+          <div
+            className={cn(
+              collapsed
+                ? "space-y-1 border-t border-white/[0.06] pt-2"
+                : ""
+            )}
+          >
+            {!collapsed && (
+              <p className="mb-2 px-2 text-[10px] font-semibold uppercase tracking-widest text-muted/40">
+                Your Library
+              </p>
+            )}
 
             {libraryNav.map((item) => {
               const isActive = pathname === "/account" && activeAccountTab === item.tab;
@@ -280,19 +290,26 @@ export default function Sidebar({
                 <Link key={item.href} href={item.href} prefetch onClick={handleNavClick}>
                   <div
                     className={cn(
-                      "flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-all",
-                      collapsed && "justify-center px-0",
+                      "rounded-xl font-medium transition-all",
+                      collapsed
+                        ? "flex flex-col items-center justify-center gap-1 px-1 py-2.5"
+                        : "flex items-center gap-3 px-3 py-2.5 text-sm",
                       isActive
                         ? "bg-white/[0.06] text-white"
                         : "text-muted/55 hover:bg-white/[0.03] hover:text-white"
                     )}
                   >
-                    <item.icon className="h-[18px] w-[18px] shrink-0" />
-                    <span
-                      aria-hidden={collapsed}
+                    <item.icon
                       className={cn(
-                        "whitespace-nowrap transition-opacity duration-150",
-                        collapsed ? "pointer-events-none opacity-0" : "opacity-100"
+                        "shrink-0",
+                        collapsed ? "h-5 w-5" : "h-[18px] w-[18px]"
+                      )}
+                    />
+                    <span
+                      className={cn(
+                        collapsed
+                          ? "text-center text-[10px] leading-tight line-clamp-2"
+                          : "whitespace-nowrap"
                       )}
                     >
                       {item.label}

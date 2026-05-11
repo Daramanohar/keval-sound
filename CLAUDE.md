@@ -45,6 +45,10 @@ The previous floating chevron button at `right-[-14px]` on the sidebar was clipp
   - Removed `[contain:layout_paint]` from the `<aside>` className (root cause of the clip)
   - Header rebuilt: `flex items-center gap-2` with hamburger `<button>` (Lucide `Menu` icon) on the left, `<KevalLogo />` on the right when expanded
   - When `collapsed`, the header switches to `flex-col gap-2 px-2` so the 40×40 hamburger sits stacked above the icon-only logo inside the 76px rail
+  - **Collapsed nav rebuilt to match YouTube Music — every nav item shows icon ON TOP and a small `text-[10px]` label BELOW it** (`flex-col items-center gap-1`). Previously labels were just hidden, which made the collapsed rail feel bare. Icons bumped from `h-[18px]` to `h-5` in collapsed mode for extra visual weight. Long labels (e.g. "Recently Played") wrap to two lines via `line-clamp-2`.
+  - Section headers ("Discover", "Your Library") are rendered as `<p>` text only when expanded; when collapsed, the second section gets a `border-t border-white/[0.06]` divider instead — no awkward empty paragraph reserving height.
+  - Active-state left-indicator bar (`layoutId="sidebar-indicator"`) only renders when **not** collapsed — it would look weird hanging off the side of a vertical icon+label stack. The full-rounded background (`layoutId="sidebar-active"`) still shows in both states.
+  - `SidebarNowPlaying` widget switched to `px-1 p-1.5` in collapsed mode so it lines up with the new narrow nav padding.
   - Hamburger is `hidden lg:flex` — desktop-only; mobile uses TopBar's hamburger to open the slide-in drawer
   - `onToggleCollapse` prop is back on `SidebarProps`; passed in by AppShell
 - `src/components/TopBar.tsx`:
