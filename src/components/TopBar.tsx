@@ -162,6 +162,7 @@ export default function TopBar({ onMenuToggle, mobileOpen }: TopBarProps) {
     if (!isAuthenticated) return;
 
     const routes = [
+      "/player",
       "/explore",
       "/packs",
       "/cart",

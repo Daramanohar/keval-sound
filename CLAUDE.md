@@ -30,6 +30,37 @@ This file is the authoritative reference for all Claude sessions working on this
 
 ## Completed Work Log
 
+### Session 17 - Player Route Rebased Onto Latest GitHub App
+
+Pulled `origin/master` first because local `master` was 5 commits behind the working Vercel version. This preserved the latest app shell, page-width fixes, collapsed sidebar behavior, and the genre-only Explore filter from Sessions 15-16.
+
+**Player integration**
+- Added `/player` route via `src/app/player/page.tsx`
+- Added `src/components/KevalPlayer.tsx`
+- Added production catalog bridge files:
+  - `src/lib/production-catalog.ts`
+  - `src/lib/production-catalog.generated.ts`
+  - `scripts/generate-production-catalog.mjs`
+- Sidebar label is intentionally **Player** (not "Keval Player") per latest user direction
+- AppShell, Sidebar, and TopBar now prefetch `/player`
+- `PersistentPlayer` can resolve production-catalog tracks for drawer/wishlist context
+
+**Important integration decision**
+- The latest GitHub application data layer was kept intact so Explore remains the current genre-only catalog experience from production.
+- Demo cloud objects had already been removed from R2 in the previous cloud cleanup, but this commit does not delete the latest app's local demo assets; production Player work is layered on top without regressing Explore.
+
+**Production source**
+- Catalog generator scans `keval-packs/SOUND PACKS(Main Version)`
+- Current generated scan includes 1,333 production records from downloaded source folders
+- Playback remains gated by `NEXT_PUBLIC_KEVAL_STREAMS_READY`; until real production MP3 paths are uploaded and verified in R2, Player shows indexed tracks but blocks playback with a "Cloud stream pending" toast
+
+**Verification target**
+- Validate `/explore` still shows only Genre filtering
+- Validate `/player` loads, defaults to Occasion, and metadata search returns ranked results
+- Run `npm run build` before pushing to `master`; Vercel auto-deploys from `master`
+
+---
+
 ### Session 16 — Explore Catalog Flattened: Genre Filter Surfaces the 36 Real Demo Songs
 
 **The bug**: After Session 15 stripped the Explore filter to genre-only and remapped track genres, clicking `HINDI/BOLLYWOOD` returned only **1** track — the placeholder `t1`. The 36 real demo songs (with `audioUrl` + lyrics, all tagged `HINDI/BOLLYWOOD`) were invisible to Explore because they live inside `packs[].tracks`, not in the top-level `tracks` export that `src/app/explore/page.tsx` was iterating.
@@ -611,6 +642,11 @@ Grid template: `[48px_1fr_180px_72px_56px_56px_120px]`
 | `src/app/page.tsx` | StickySidebar import + wrapper, lg:items-stretch |
 | `src/app/explore/page.tsx` | 4-column grid cap |
 | `src/app/globals.css` | Remove duplicate scroll-behavior |
+| `src/app/player/page.tsx` | Session 17: Player route inside authenticated app shell |
+| `src/components/KevalPlayer.tsx` | Session 17: production-catalog listening surface |
+| `src/lib/production-catalog.ts` | Session 17: generated catalog records mapped into app Track/Pack models |
+| `src/lib/production-catalog.generated.ts` | Session 17: generated scan from `SOUND PACKS(Main Version)` |
+| `scripts/generate-production-catalog.mjs` | Session 17: production soundpack scanner |
 
 ---
 
@@ -625,6 +661,10 @@ Grid template: `[48px_1fr_180px_72px_56px_56px_120px]`
 **CSS tokens:** All brand colors and utility classes live in `src/app/globals.css` under `@theme inline`. Use token names (e.g. `text-vivid-blue`, `bg-glass-card`) not arbitrary hex values.
 
 **No new framer-motion wrappers on navigation elements** — sidebar nav items use plain CSS transitions; adding AnimatePresence back will reintroduce lag.
+
+**Player route:** `/player` is an authenticated app route, not a separate deployment. Keep the sidebar label as `Player` unless the user explicitly changes it again.
+
+**Production Player streams:** Keep `NEXT_PUBLIC_KEVAL_STREAMS_READY` unset until production MP3 paths are uploaded and verified in R2. The Player intentionally indexes tracks without playing broken URLs when the flag is off.
 
 ---
 

@@ -30,8 +30,8 @@ export default function KevalLogo({
         <Image
           src="/logo/keval-logo.png"
           alt="Keval Sound"
-          width={s.px}
-          height={s.px}
+          fill
+          sizes={`${s.px}px`}
           className="object-contain"
           priority
         />
@@ -61,8 +61,8 @@ export function KevalLogoMark({ size = 10, className }: { size?: number; classNa
       <Image
         src="/logo/keval-logo.png"
         alt="Keval Sound"
-        width={px}
-        height={px}
+        fill
+        sizes={`${px}px`}
         className="object-contain"
       />
     </div>

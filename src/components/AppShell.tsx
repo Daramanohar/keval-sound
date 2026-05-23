@@ -113,7 +113,7 @@ export default function AppShell({ children }: AppShellProps) {
   useEffect(() => {
     if (!isReady || !isAuthenticated) return;
 
-    const routes = ["/", "/explore", "/packs", "/samples", "/cart", "/account?tab=wishlist"];
+    const routes = ["/", "/player", "/explore", "/packs", "/samples", "/cart", "/account?tab=wishlist"];
     routes.forEach((route) => {
       router.prefetch(route);
     });

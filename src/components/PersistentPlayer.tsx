@@ -28,12 +28,17 @@ import { useStore } from "@/lib/store-context";
 import { useToast } from "@/lib/toast-context";
 import { useSongDetail } from "@/lib/song-detail-context";
 import { packs as allPacks, tracks as allTracks, type Pack, type Track } from "@/lib/mock-data";
+import { productionPacks } from "@/lib/production-catalog";
 
 /** Lookup the current playing item back to its source Track + Pack so the
  *  drawer + wishlist actions have full data — PlayableItem only carries id
  *  and stripped metadata. */
 function findTrackContext(playableId: string | undefined): { track: Track | null; pack: Pack | null } {
   if (!playableId) return { track: null, pack: null };
+  for (const pack of productionPacks) {
+    const track = pack.tracks.find((t) => t.id === playableId);
+    if (track) return { track, pack };
+  }
   for (const pack of allPacks) {
     const track = pack.tracks.find((t) => t.id === playableId);
     if (track) return { track, pack };

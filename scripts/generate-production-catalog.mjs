@@ -1,0 +1,264 @@
+import fs from "node:fs/promises";
+import path from "node:path";
+
+const PROJECT_ROOT = process.cwd();
+const SOURCE_ROOT = path.join(PROJECT_ROOT, "keval-packs", "SOUND PACKS(Main Version)");
+const OUTPUT_FILE = path.join(PROJECT_ROOT, "src", "lib", "production-catalog.generated.ts");
+const CDN_BASE = "https://cdn.kevalsound.com";
+
+const PACKS = [
+  [1, "Pop", "Commercial"],
+  [2, "Hip-Hop / Rap", "Commercial"],
+  [3, "R&B", "Commercial"],
+  [4, "Rock", "Commercial"],
+  [5, "Latin", "Culture"],
+  [6, "Country", "Culture"],
+  [7, "EDM / Dance", "Electronic"],
+  [8, "K-Pop", "Culture"],
+  [9, "Reggaeton", "Culture"],
+  [10, "Swing", "Electronic"],
+  [11, "Trap", "Electronic"],
+  [12, "Alternative Rock", "Indie"],
+  [13, "Indie Pop", "Indie"],
+  [14, "Pop Rock", "Commercial"],
+  [15, "House", "Electronic"],
+  [16, "Techno", "Electronic"],
+  [17, "Metal", "Commercial"],
+  [18, "Pop Punk", "Commercial"],
+  [19, "Folk", "Indie"],
+  [20, "Soul", "Indie"],
+  [21, "Gospel", "Indie"],
+  [22, "Jazz", "Indie"],
+  [23, "Classical", "Classic"],
+  [24, "Hindi Electronic", "Bollywood"],
+  [25, "Hindi Romance", "Bollywood"],
+  [26, "Hindi Rock", "Bollywood"],
+  [27, "Hindi Dance", "Bollywood"],
+  [28, "Hindi Pop", "Bollywood"],
+  [29, "Hindi Hip-Hop", "Bollywood"],
+  [30, "Hindi Fusion", "Bollywood"],
+  [31, "Hindi Vintage", "Bollywood"],
+  [32, "Hindi Swing", "Bollywood"],
+  [33, "Hindi Epic", "Bollywood"],
+  [34, "Japanese / J-Pop", "Culture"],
+  [35, "Anime", "Culture"],
+  [36, "Chinese / C-Pop", "Culture"],
+  [37, "Acoustic", "Commercial"],
+  [38, "Polish", "Culture"],
+  [39, "Brazilian Funk", "Culture"],
+  [40, "Lo-Fi", "Electronic"],
+  [41, "Ambient", "Electronic"],
+  [42, "Blues", "Indie"],
+  [43, "Hard Rock", "Commercial"],
+  [44, "Drum & Bass", "Electronic"],
+  [45, "Dubstep", "Electronic"],
+  [46, "Trance", "Electronic"],
+  [47, "Afro House", "Electronic"],
+  [48, "Phonk", "Electronic"],
+  [49, "Hyperpop", "Electronic"],
+  [50, "Tech House", "Electronic"],
+  [51, "Gaming & Streaming", "Occasion"],
+  [52, "Meditation & Yoga", "Occasion"],
+  [53, "Content Creator", "Occasion"],
+  [54, "Fitness & Workout", "Occasion"],
+  [55, "Podcast & Interview", "Occasion"],
+  [56, "Travel & Adventure", "Occasion"],
+  [57, "Corporate & Presentation", "Occasion"],
+  [58, "Lifestyle & Food", "Occasion"],
+  [59, "Weddings & Events", "Occasion"],
+  [60, "Study & Productivity", "Occasion"],
+  [61, "420 Sesh", "Occasion"],
+  [62, "Movies & OSTs", "Occasion"],
+  [63, "Love", "Occasion"],
+  [64, "Trippy", "Occasion"],
+];
+
+const PACK_BY_KEY = new Map(
+  PACKS.flatMap(([n, title, category]) => {
+    const meta = { id: `pack-${n}`, title, category, coverUrl: `/packs/pack-${n}.png` };
+    return [
+      [normalizeKey(String(title)), meta],
+      [normalizeKey(String(title).replace(/\s*\/\s*/g, " ")), meta],
+      [normalizeKey(String(title).replace(/\s*&\s*/g, " and ")), meta],
+    ];
+  })
+);
+
+PACK_BY_KEY.set("edm dance", PACK_BY_KEY.get("edm dance") ?? PACK_BY_KEY.get("edm / dance"));
+PACK_BY_KEY.set("content creator background music", PACK_BY_KEY.get("content creator"));
+PACK_BY_KEY.set("trippy", PACK_BY_KEY.get("trippy"));
+
+function normalizeQuotes(value) {
+  return value
+    .replace(/[\u2018\u2019\u201B]/g, "'")
+    .replace(/[\u201C\u201D\u201F]/g, '"')
+    .replace(/[\u2013\u2014]/g, "-")
+    .replace(/\u00A0/g, " ");
+}
+
+function normalizeKey(value) {
+  return normalizeQuotes(value)
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/&/g, " and ")
+    .replace(/\//g, " ")
+    .replace(/[^a-zA-Z0-9]+/g, " ")
+    .trim()
+    .toLowerCase();
+}
+
+function slugify(value) {
+  return normalizeKey(value).replace(/\s+/g, "-");
+}
+
+function displayName(value) {
+  return normalizeQuotes(value)
+    .normalize("NFKC")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+async function exists(target) {
+  try {
+    await fs.access(target);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+async function readMaybeText(target) {
+  if (!target) return "";
+  try {
+    const raw = await fs.readFile(target, "utf8");
+    return normalizeQuotes(raw).replace(/\r\n/g, "\n").trim();
+  } catch {
+    return "";
+  }
+}
+
+async function walkDirs(root) {
+  const dirs = [];
+  const entries = await fs.readdir(root, { withFileTypes: true });
+  for (const entry of entries) {
+    const fullPath = path.join(root, entry.name);
+    if (entry.isDirectory()) {
+      dirs.push(fullPath, ...(await walkDirs(fullPath)));
+    }
+  }
+  return dirs;
+}
+
+function findFile(files, predicate) {
+  return files.find((file) => predicate(file.name));
+}
+
+function extractTags(metadata, category, packTitle) {
+  const firstLine = metadata.split("\n").find((line) => line.trim()) ?? "";
+  const commaTags = firstLine
+    .split(",")
+    .map((tag) => normalizeKey(tag))
+    .filter(Boolean);
+
+  const extra = [category, packTitle]
+    .flatMap((value) => normalizeKey(value).split(" "))
+    .filter((value) => value.length > 2);
+
+  return Array.from(new Set([...commaTags, ...extra])).slice(0, 16);
+}
+
+async function main() {
+  if (!(await exists(SOURCE_ROOT))) {
+    throw new Error(`Production source folder not found: ${SOURCE_ROOT}`);
+  }
+
+  const dirs = await walkDirs(SOURCE_ROOT);
+  const records = [];
+
+  for (const dir of dirs) {
+    const entries = await fs.readdir(dir, { withFileTypes: true });
+    const files = entries
+      .filter((entry) => entry.isFile())
+      .map((entry) => ({ name: entry.name, fullPath: path.join(dir, entry.name) }));
+
+    const mp3 = findFile(files, (name) => name.toLowerCase().endsWith(".mp3"));
+    const wav = findFile(files, (name) => name.toLowerCase().endsWith(".wav"));
+    const mdata = findFile(files, (name) => /^mdata\.txt$/i.test(name));
+
+    if (!mp3 && !wav && !mdata) continue;
+
+    const lyrics = findFile(files, (name) => /lyrics/i.test(name) && name.toLowerCase().endsWith(".txt"));
+    const relativeParts = path.relative(SOURCE_ROOT, dir).split(path.sep);
+    const [categoryFolder, packFolder, ...songParts] = relativeParts;
+    if (!categoryFolder || !packFolder || songParts.length === 0) continue;
+
+    const fallbackPack = {
+      id: `external-${slugify(packFolder)}`,
+      title: displayName(packFolder),
+      category: displayName(categoryFolder),
+      coverUrl: "/packs/pack-1.png",
+    };
+    const packMeta = PACK_BY_KEY.get(normalizeKey(packFolder)) ?? fallbackPack;
+    const titleFromAudio = mp3?.name.replace(/\.mp3$/i, "") ?? wav?.name.replace(/\.wav$/i, "");
+    const songTitle = displayName(songParts.at(-1) || titleFromAudio || "Untitled");
+    const category = displayName(categoryFolder);
+    const metadataText = await readMaybeText(mdata?.fullPath);
+    const songSlug = slugify(songTitle);
+    const categorySlug = slugify(category);
+    const packSlug = slugify(packMeta.title);
+    const cloudBasePath = `${categorySlug}/${packSlug}/${songSlug}`;
+
+    records.push({
+      id: `${packMeta.id}-${songSlug}`,
+      title: songTitle,
+      packId: packMeta.id,
+      packTitle: packMeta.title,
+      category: packMeta.category,
+      sourceCategory: category,
+      coverUrl: packMeta.coverUrl,
+      hasMp3: Boolean(mp3),
+      hasWav: Boolean(wav),
+      hasLyrics: Boolean(lyrics),
+      isInstrumental: !lyrics,
+      mp3Url: `${CDN_BASE}/public/mp3/${cloudBasePath}.mp3`,
+      lyricsUrl: lyrics ? `${CDN_BASE}/public/lyrics/${cloudBasePath}.txt` : undefined,
+      wavPath: `private/wav/${cloudBasePath}.wav`,
+      sourcePath: path.relative(PROJECT_ROOT, dir).replaceAll(path.sep, "/"),
+      metadataText,
+      tags: extractTags(metadataText, category, packMeta.title),
+    });
+  }
+
+  records.sort((a, b) => a.packId.localeCompare(b.packId) || a.title.localeCompare(b.title));
+
+  const output = `// Generated by scripts/generate-production-catalog.mjs. Do not edit by hand.\n\n` +
+    `export interface ProductionSongRecord {\n` +
+    `  id: string;\n` +
+    `  title: string;\n` +
+    `  packId: string;\n` +
+    `  packTitle: string;\n` +
+    `  category: string;\n` +
+    `  sourceCategory: string;\n` +
+    `  coverUrl: string;\n` +
+    `  hasMp3: boolean;\n` +
+    `  hasWav: boolean;\n` +
+    `  hasLyrics: boolean;\n` +
+    `  isInstrumental: boolean;\n` +
+    `  mp3Url: string;\n` +
+    `  lyricsUrl?: string;\n` +
+    `  wavPath: string;\n` +
+    `  sourcePath: string;\n` +
+    `  metadataText: string;\n` +
+    `  tags: string[];\n` +
+    `}\n\n` +
+    `export const productionCatalogGeneratedAt = ${JSON.stringify(new Date().toISOString())};\n\n` +
+    `export const productionSongRecords = ${JSON.stringify(records, null, 2)} satisfies ProductionSongRecord[];\n`;
+
+  await fs.writeFile(OUTPUT_FILE, output, "utf8");
+  console.log(`Generated ${records.length} production song records at ${path.relative(PROJECT_ROOT, OUTPUT_FILE)}`);
+}
+
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});

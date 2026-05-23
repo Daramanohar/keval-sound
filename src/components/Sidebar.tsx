@@ -24,6 +24,7 @@ import KevalLogo from "./KevalLogo";
 
 const mainNav = [
   { label: "Browse", href: "/", icon: Compass },
+  { label: "Player", href: "/player", icon: Headphones },
   { label: "Explore", href: "/explore", icon: LayoutGrid },
   { label: "Packs", href: "/packs", icon: Library },
   { label: "Samples", href: "/samples", icon: Disc3 },

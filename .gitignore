@@ -45,5 +45,6 @@ next-env.d.ts
 # Source soundpack assets (only normalized copies under public/ are tracked)
 keval-packs/
 
-# Intermediate output from scripts/import-demo-packs.mjs
-scripts/.demo-songs.snippet.ts
+# Local agent/browser verification artifacts
+.playwright-cli/
+output/
