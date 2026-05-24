@@ -25,12 +25,14 @@ interface PackCardProps {
 const PackCard = memo(function PackCard({ pack, index = 0 }: PackCardProps) {
   const router = useRouter();
   const [expanded, setExpanded] = useState(false);
-  const { toggleTrack, isItemPlaying } = usePlayerControls();
+  const { toggleTrack, isItemPlaying, playPack, activePackId, isPlaying, togglePlayback } =
+    usePlayerControls();
   const { isInWishlist, isOwned, togglePackWishlist, addTrackToCart, isInCart } = useStore();
   const { showToast } = useToast();
 
   const owned = isOwned(pack.id, "pack");
   const liked = isInWishlist(pack.id, "pack");
+  const packPlaying = activePackId === pack.id && isPlaying;
 
   const goToDetail = useCallback(() => {
     router.push(`/pack/${pack.id}`);
@@ -89,6 +91,28 @@ const PackCard = memo(function PackCard({ pack, index = 0 }: PackCardProps) {
       );
     },
     [addTrackToCart, isOwned, showToast]
+  );
+
+  const handlePackPreview = useCallback(
+    (event: React.MouseEvent) => {
+      event.stopPropagation();
+
+      if (!pack.tracks.length) {
+        showToast({
+          tone: "info",
+          title: `${pack.title} is not stream-ready yet`,
+        });
+        return;
+      }
+
+      if (activePackId === pack.id) {
+        togglePlayback();
+        return;
+      }
+
+      playPack(pack);
+    },
+    [activePackId, pack, playPack, showToast, togglePlayback]
   );
 
   return (
@@ -160,11 +184,11 @@ const PackCard = memo(function PackCard({ pack, index = 0 }: PackCardProps) {
       <div className="flex items-center gap-1.5 px-3 pb-3 pt-3">
         <button
           type="button"
-          onClick={goToDetail}
+          onClick={handlePackPreview}
           className="flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-vivid-blue/10 px-3 py-2 text-xs font-semibold text-vivid-blue transition-colors hover:bg-vivid-blue/20"
         >
-          <Play className="h-3 w-3 fill-current" />
-          Preview
+          {packPlaying ? <Pause className="h-3 w-3" /> : <Play className="h-3 w-3 fill-current" />}
+          {packPlaying ? "Pause" : "Preview"}
         </button>
         <button
           type="button"
