@@ -1,5 +1,5 @@
-import KevalPlayer from "@/components/KevalPlayer";
+import KevalPlayerEntry from "@/components/KevalPlayerEntry";
 
 export default function PlayerPage() {
-  return <KevalPlayer />;
+  return <KevalPlayerEntry />;
 }

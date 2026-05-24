@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import {
@@ -28,17 +28,12 @@ import { useStore } from "@/lib/store-context";
 import { useToast } from "@/lib/toast-context";
 import { useSongDetail } from "@/lib/song-detail-context";
 import { packs as allPacks, tracks as allTracks, type Pack, type Track } from "@/lib/mock-data";
-import { productionPacks } from "@/lib/production-catalog";
 
 /** Lookup the current playing item back to its source Track + Pack so the
  *  drawer + wishlist actions have full data — PlayableItem only carries id
  *  and stripped metadata. */
-function findTrackContext(playableId: string | undefined): { track: Track | null; pack: Pack | null } {
+function findBaseTrackContext(playableId: string | undefined): { track: Track | null; pack: Pack | null } {
   if (!playableId) return { track: null, pack: null };
-  for (const pack of productionPacks) {
-    const track = pack.tracks.find((t) => t.id === playableId);
-    if (track) return { track, pack };
-  }
   for (const pack of allPacks) {
     const track = pack.tracks.find((t) => t.id === playableId);
     if (track) return { track, pack };
@@ -71,7 +66,16 @@ export default function PersistentPlayer() {
 
   // Look up the underlying Track/Pack for richer interactions (drawer, wishlist).
   // currentItem holds only stripped playable data, so we resolve it back.
-  const { track: currentTrack, pack: currentPack } = findTrackContext(currentItem?.id);
+  const baseTrackContext = useMemo(
+    () => findBaseTrackContext(currentItem?.id),
+    [currentItem?.id]
+  );
+  const [productionTrackContext, setProductionTrackContext] = useState<{
+    track: Track | null;
+    pack: Pack | null;
+  }>({ track: null, pack: null });
+  const currentTrack = baseTrackContext.track ?? productionTrackContext.track;
+  const currentPack = baseTrackContext.pack ?? productionTrackContext.pack;
   const currentTrackSaved = currentTrack ? isInWishlist(currentTrack.id, "track") : false;
 
   const waveformRef = useRef<HTMLDivElement>(null);
@@ -91,6 +95,34 @@ export default function PersistentPlayer() {
 
     return () => observer.disconnect();
   }, [currentItem?.id]);
+
+  useEffect(() => {
+    setProductionTrackContext({ track: null, pack: null });
+
+    if (!currentItem?.id || baseTrackContext.track) return;
+
+    let cancelled = false;
+
+    import("@/lib/production-catalog")
+      .then(({ productionPacks }) => {
+        if (cancelled) return;
+
+        for (const pack of productionPacks) {
+          const track = pack.tracks.find((candidate) => candidate.id === currentItem.id);
+          if (track) {
+            setProductionTrackContext({ track, pack });
+            return;
+          }
+        }
+      })
+      .catch(() => {
+        if (!cancelled) setProductionTrackContext({ track: null, pack: null });
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [baseTrackContext.track, currentItem?.id]);
 
   const waveformData = (() => {
     if (!currentItem?.waveform?.length) return [];

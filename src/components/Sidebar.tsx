@@ -20,6 +20,7 @@ import {
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/lib/auth-context";
 import { usePlayerControls, usePlayerProgress } from "@/lib/player-context";
+import { preloadKevalPlayer } from "@/lib/player-route-preload";
 import KevalLogo from "./KevalLogo";
 
 const mainNav = [
@@ -150,6 +151,13 @@ export default function Sidebar({
     onMobileClose?.();
   };
 
+  const prepareNavItem = (href: string) => {
+    router.prefetch(href);
+    if (href === "/player") {
+      void preloadKevalPlayer();
+    }
+  };
+
   return (
     <>
       <AnimatePresence>
@@ -222,7 +230,15 @@ export default function Sidebar({
               const isActive = item.href === "/" ? currentMainPath === "/" : currentMainPath === item.href;
 
               return (
-                <Link key={item.href} href={item.href} prefetch onClick={handleNavClick}>
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  prefetch
+                  onClick={handleNavClick}
+                  onFocus={() => prepareNavItem(item.href)}
+                  onMouseEnter={() => prepareNavItem(item.href)}
+                  onTouchStart={() => prepareNavItem(item.href)}
+                >
                   <div
                     className={cn(
                       "group relative rounded-xl font-medium transition-all",

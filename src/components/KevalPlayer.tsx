@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -16,17 +16,13 @@ import {
 import { usePlayerControls } from "@/lib/player-context";
 import { useStore } from "@/lib/store-context";
 import { useToast } from "@/lib/toast-context";
-import {
-  getProductionPacksByCategory,
-  productionCatalogStats,
-  productionCategories,
-  productionPacks,
-  searchProductionTracks,
-  type CatalogCategory,
-  type ProductionPack,
-  type ProductionTrack,
+import type {
+  CatalogCategory,
+  ProductionPack,
+  ProductionTrack,
 } from "@/lib/production-catalog";
 import { cn, formatDuration } from "@/lib/utils";
+import KevalPlayerLoading from "./KevalPlayerLoading";
 
 const discoveryTabs = [
   "Occasion",
@@ -38,25 +34,73 @@ const discoveryTabs = [
   "Classic",
 ] as const;
 
-function findPackForTrack(track: ProductionTrack): ProductionPack | null {
-  return productionPacks.find((pack) => pack.id === track.packId) ?? null;
-}
+const INITIAL_PACK_ROWS = 4;
+const PACK_ROW_BATCH_SIZE = 4;
+
+type ProductionCatalogModule = typeof import("@/lib/production-catalog");
 
 export default function KevalPlayer() {
+  const [catalog, setCatalog] = useState<ProductionCatalogModule | null>(null);
   const [activeCategory, setActiveCategory] = useState<CatalogCategory>("Occasion");
   const [query, setQuery] = useState("");
+  const [visiblePackLimit, setVisiblePackLimit] = useState(INITIAL_PACK_ROWS);
   const { toggleTrack, isItemPlaying } = usePlayerControls();
   const { addTrackToCart, isInWishlist, toggleTrackWishlist } = useStore();
   const { showToast } = useToast();
 
+  useEffect(() => {
+    let cancelled = false;
+
+    import("@/lib/production-catalog").then((module) => {
+      if (!cancelled) setCatalog(module);
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   const visiblePacks = useMemo(
-    () => getProductionPacksByCategory(activeCategory),
-    [activeCategory]
+    () => catalog?.getProductionPacksByCategory(activeCategory) ?? [],
+    [activeCategory, catalog]
   );
   const searchResults = useMemo(
-    () => searchProductionTracks(query, { category: activeCategory, limit: 48 }),
-    [activeCategory, query]
+    () => catalog?.searchProductionTracks(query, { category: activeCategory, limit: 48 }) ?? [],
+    [activeCategory, catalog, query]
   );
+  const hasQuery = query.trim().length > 0;
+  const displayedPacks = useMemo(
+    () => (hasQuery ? visiblePacks : visiblePacks.slice(0, visiblePackLimit)),
+    [hasQuery, visiblePackLimit, visiblePacks]
+  );
+
+  useEffect(() => {
+    setVisiblePackLimit(INITIAL_PACK_ROWS);
+
+    if (hasQuery || visiblePacks.length <= INITIAL_PACK_ROWS) return;
+
+    let cancelled = false;
+    let timer: number | undefined;
+
+    const revealNextBatch = () => {
+      setVisiblePackLimit((currentLimit) => {
+        const nextLimit = Math.min(currentLimit + PACK_ROW_BATCH_SIZE, visiblePacks.length);
+
+        if (nextLimit < visiblePacks.length && !cancelled) {
+          timer = window.setTimeout(revealNextBatch, 90);
+        }
+
+        return nextLimit;
+      });
+    };
+
+    timer = window.setTimeout(revealNextBatch, 120);
+
+    return () => {
+      cancelled = true;
+      if (timer) window.clearTimeout(timer);
+    };
+  }, [activeCategory, hasQuery, visiblePacks.length]);
 
   const handlePlay = (track: ProductionTrack, pack?: ProductionPack | null) => {
     if (!track.streamReady) {
@@ -78,6 +122,13 @@ export default function KevalPlayer() {
       description: "The ₹49 Player subscription gate will unlock here after auth and payments are wired.",
     });
   };
+
+  if (!catalog) {
+    return <KevalPlayerLoading />;
+  }
+
+  const findPackForTrack = (track: ProductionTrack): ProductionPack | null =>
+    catalog.productionPacks.find((pack) => pack.id === track.packId) ?? null;
 
   return (
     <div className="min-h-[calc(100vh-96px)] space-y-8 pb-28">
@@ -101,9 +152,9 @@ export default function KevalPlayer() {
               </div>
               <div className="flex flex-wrap gap-2">
                 {[
-                  `${productionCatalogStats.tracksReady.toLocaleString("en-IN")} real songs indexed`,
-                  `${productionCatalogStats.instrumentalTracks.toLocaleString("en-IN")} instrumental`,
-                  `${productionCatalogStats.lyricalTracks.toLocaleString("en-IN")} lyrical`,
+                  `${catalog.productionCatalogStats.tracksReady.toLocaleString("en-IN")} real songs indexed`,
+                  `${catalog.productionCatalogStats.instrumentalTracks.toLocaleString("en-IN")} instrumental`,
+                  `${catalog.productionCatalogStats.lyricalTracks.toLocaleString("en-IN")} lyrical`,
                 ].map((label) => (
                   <span
                     key={label}
@@ -137,9 +188,9 @@ export default function KevalPlayer() {
               <Search className="h-4 w-4 shrink-0 text-white/35" />
             </div>
             <div className="grid grid-cols-3 rounded-xl border border-white/[0.06] bg-white/[0.04]">
-              <StatCell label="Packs" value={productionCatalogStats.packsReady} />
-              <StatCell label="MP3" value={productionCatalogStats.mp3Tracks} />
-              <StatCell label="WAV" value={productionCatalogStats.wavTracks} />
+              <StatCell label="Packs" value={catalog.productionCatalogStats.packsReady} />
+              <StatCell label="MP3" value={catalog.productionCatalogStats.mp3Tracks} />
+              <StatCell label="WAV" value={catalog.productionCatalogStats.wavTracks} />
             </div>
           </div>
         </div>
@@ -147,9 +198,9 @@ export default function KevalPlayer() {
 
       <div className="sticky top-[64px] z-20 -mx-6 border-y border-white/[0.04] bg-[#0c0d1c]/85 px-6 py-3 backdrop-blur-xl">
         <div className="flex gap-2 overflow-x-auto scrollbar-hide">
-          {productionCategories.map((category) => {
+          {catalog.productionCategories.map((category) => {
             const active = activeCategory === category;
-            const readyCount = getProductionPacksByCategory(category).filter(
+            const readyCount = catalog.getProductionPacksByCategory(category).filter(
               (pack) => pack.sourceStatus === "ready"
             ).length;
 
@@ -216,7 +267,7 @@ export default function KevalPlayer() {
             }
           />
 
-          {visiblePacks.map((pack) => (
+          {displayedPacks.map((pack) => (
             <PackRow
               key={pack.id}
               pack={pack}
