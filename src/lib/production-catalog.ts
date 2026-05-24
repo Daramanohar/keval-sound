@@ -36,7 +36,7 @@ export interface ProductionPack extends Pack {
   sourceStatus: "ready" | "pending";
 }
 
-const STREAMS_READY = process.env.NEXT_PUBLIC_KEVAL_STREAMS_READY === "1";
+const STREAMS_READY = process.env.NEXT_PUBLIC_KEVAL_STREAMS_READY !== "0";
 const CATEGORIES: CatalogCategory[] = [
   "Occasion",
   "Commercial",
