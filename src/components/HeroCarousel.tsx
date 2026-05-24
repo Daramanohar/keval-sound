@@ -3,10 +3,8 @@
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronLeft, ChevronRight, Play, Sparkles } from "lucide-react";
+import { ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { packs } from "@/lib/mock-data";
-import { usePlayerControls } from "@/lib/player-context";
 
 interface Slide {
   id: string;
@@ -14,7 +12,6 @@ interface Slide {
   subtitle: string;
   cta: string;
   ctaHref: string;
-  previewPackId?: string;
   gradient: string;
   badge?: string;
   accent: string;
@@ -23,36 +20,33 @@ interface Slide {
 const slides: Slide[] = [
   {
     id: "s1",
-    title: "Bollywood Essentials Vol. 1",
+    title: "Pop",
     subtitle:
-      "25 premium cinematic tracks spanning romance, drama, and dance. The definitive Bollywood collection.",
+      "Chart-ready commercial tracks for campaigns, reels, storefronts, and creator videos.",
     cta: "Explore Pack",
-    ctaHref: "/pack/p1",
-    previewPackId: "p1",
+    ctaHref: "/pack/pack-1",
     gradient: "from-mid-purple/40 via-grey-magenta/30 to-vampire-black",
-    badge: "New Release",
+    badge: "Live Pack",
     accent: "bg-mid-purple",
   },
   {
     id: "s2",
-    title: "Desi Hip Hop Starter Kit",
+    title: "EDM / Dance",
     subtitle:
-      "28 hard-hitting beats from Delhi gully rap to Mumbai underground. Built for the streets.",
+      "Festival-ready electronic tracks, club builds, drops, and high-energy background music.",
     cta: "Get Exclusive Access",
-    ctaHref: "/pack/p4",
-    previewPackId: "p4",
+    ctaHref: "/pack/pack-7",
     gradient: "from-vivid-blue/30 via-mid-purple/20 to-vampire-black",
     badge: "Trending",
     accent: "bg-vivid-blue",
   },
   {
     id: "s3",
-    title: "South Indian Beats Collection",
+    title: "Gaming & Streaming",
     subtitle:
-      "30 tracks from Tamil, Telugu, Kannada, and Malayalam - classical Carnatic fusions to modern pop.",
+      "Background loops, hype cues, intro music, and stream-safe tracks for creators.",
     cta: "Preview Collection",
-    ctaHref: "/pack/p2",
-    previewPackId: "p2",
+    ctaHref: "/pack/pack-51",
     gradient: "from-grey-magenta/35 via-zesty-red/20 to-vampire-black",
     badge: "Featured",
     accent: "bg-grey-magenta",
@@ -74,7 +68,6 @@ export default function HeroCarousel() {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(0);
   const [paused, setPaused] = useState(false);
-  const { playPack, activePackId, togglePlayback } = usePlayerControls();
 
   const next = useCallback(() => {
     setDirection(1);
@@ -196,24 +189,6 @@ export default function HeroCarousel() {
                   >
                     {slide.cta}
                   </Link>
-                  {slide.previewPackId ? (
-                    <button
-                      type="button"
-                      onClick={() => {
-                        const pack = packs.find((entry) => entry.id === slide.previewPackId);
-                        if (!pack) return;
-                        if (activePackId === pack.id) {
-                          togglePlayback();
-                          return;
-                        }
-                        playPack(pack);
-                      }}
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/[0.1] text-white text-xs font-medium hover:bg-white/[0.15] transition-all backdrop-blur-sm"
-                    >
-                      <Play className="w-3.5 h-3.5" />
-                      Preview
-                    </button>
-                  ) : null}
                 </motion.div>
               </div>
             </div>

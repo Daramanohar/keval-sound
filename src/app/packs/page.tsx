@@ -4,27 +4,39 @@ import { useState } from "react";
 import PageTransition from "@/components/PageTransition";
 import SectionHeader from "@/components/SectionHeader";
 import PackCard from "@/components/PackCard";
-import { packs } from "@/lib/mock-data";
+import {
+  productionCategories,
+  readyProductionPacks,
+  type CatalogCategory,
+} from "@/lib/production-catalog";
 import { cn } from "@/lib/utils";
 
-const CATEGORIES = [
-  "All",
-  "Commercial",
-  "Electronic",
-  "Bollywood",
-  "Indie",
-  "Culture",
-  "Occasion",
-  "Classic",
-];
+const CATEGORIES = ["All", ...productionCategories] as const;
+type PackCategoryFilter = (typeof CATEGORIES)[number];
 
 export default function PacksPage() {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [activeCategory, setActiveCategory] = useState<PackCategoryFilter>("All");
 
   const filteredPacks =
     activeCategory === "All"
-      ? packs
-      : packs.filter((p) => p.category === activeCategory);
+      ? readyProductionPacks
+      : readyProductionPacks.filter((p) => p.category === activeCategory);
+
+  const livePackCountByCategory = readyProductionPacks.reduce<Record<CatalogCategory, number>>(
+    (acc, pack) => {
+      acc[pack.category as CatalogCategory] += 1;
+      return acc;
+    },
+    {
+      Occasion: 0,
+      Commercial: 0,
+      Electronic: 0,
+      Bollywood: 0,
+      Indie: 0,
+      Culture: 0,
+      Classic: 0,
+    }
+  );
 
   return (
     <PageTransition>
@@ -33,23 +45,34 @@ export default function PacksPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-grey-magenta/10 via-transparent to-transparent pointer-events-none" />
         <div className="relative z-10 pt-8 pb-6">
           <SectionHeader title="Song Packs" gradient />
+          <p className="mt-2 text-sm text-muted">
+            Showing {readyProductionPacks.length.toLocaleString("en-IN")} live production packs from the cloud catalog.
+          </p>
 
           {/* Category filter bar */}
           <div className="mt-5 flex flex-wrap gap-2">
-            {CATEGORIES.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={cn(
-                  "rounded-xl px-4 py-2 text-sm font-medium transition-all",
-                  activeCategory === cat
-                    ? "bg-vivid-blue text-white shadow-lg shadow-vivid-blue/20"
-                    : "glass-subtle text-muted hover:text-white hover:bg-white/[0.08]"
-                )}
-              >
-                {cat}
-              </button>
-            ))}
+            {CATEGORIES.map((cat) => {
+              const count =
+                cat === "All"
+                  ? readyProductionPacks.length
+                  : livePackCountByCategory[cat];
+
+              return (
+                <button
+                  key={cat}
+                  onClick={() => setActiveCategory(cat)}
+                  className={cn(
+                    "rounded-xl px-4 py-2 text-sm font-medium transition-all",
+                    activeCategory === cat
+                      ? "bg-vivid-blue text-white shadow-lg shadow-vivid-blue/20"
+                      : "glass-subtle text-muted hover:text-white hover:bg-white/[0.08]"
+                  )}
+                >
+                  {cat}
+                  <span className="ml-2 text-xs opacity-60">{count}</span>
+                </button>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -64,8 +87,8 @@ export default function PacksPage() {
           </div>
         ) : (
           <div className="py-24 text-center">
-            <h3 className="text-lg font-semibold text-white mb-2">No packs in this category</h3>
-            <p className="text-sm text-muted">Check back soon — new packs are added weekly.</p>
+            <h3 className="text-lg font-semibold text-white mb-2">No live packs in this category yet</h3>
+            <p className="text-sm text-muted">This category will appear here after its production files are uploaded.</p>
           </div>
         )}
       </div>

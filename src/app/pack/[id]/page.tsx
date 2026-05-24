@@ -19,7 +19,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import WaveformVisualizer from "@/components/WaveformVisualizer";
-import { packs, type Track } from "@/lib/mock-data";
+import { readyProductionPacks, type ProductionTrack } from "@/lib/production-catalog";
 import { cn, formatDuration, resampleWaveform } from "@/lib/utils";
 import { usePlayerControls } from "@/lib/player-context";
 import { useStore } from "@/lib/store-context";
@@ -52,7 +52,10 @@ export default function PackDetailPage() {
   const { showToast } = useToast();
   const { openSong } = useSongDetail();
 
-  const pack = useMemo(() => packs.find((entry) => entry.id === params.id) ?? null, [params.id]);
+  const pack = useMemo(
+    () => readyProductionPacks.find((entry) => entry.id === params.id) ?? null,
+    [params.id]
+  );
 
   if (!pack) {
     notFound();
@@ -80,7 +83,7 @@ export default function PackDetailPage() {
   };
 
   const handleTrackAdd = useCallback(
-    (track: Track) => {
+    (track: ProductionTrack) => {
       const trackOwned = isOwned(track.id, "track");
       if (trackOwned) {
         showToast({ tone: "info", title: `${track.title} is already owned` });
@@ -113,7 +116,7 @@ export default function PackDetailPage() {
   }, [openMenu]);
 
   const handleMenuAction = useCallback(
-    (action: string, track: Track) => {
+    (action: string, track: ProductionTrack) => {
       setOpenMenu(null);
       switch (action) {
         case "share": {
