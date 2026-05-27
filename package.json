@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "catalog:generate": "node scripts/generate-production-catalog.mjs",
+    "r2:stage-public": "node scripts/stage-r2-public-assets.mjs",
+    "r2:stage-wav": "node scripts/stage-r2-private-wavs.mjs"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
