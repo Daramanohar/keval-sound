@@ -20,7 +20,7 @@ export interface ProductionSongRecord {
   tags: string[];
 }
 
-export const productionCatalogGeneratedAt = "2026-05-31T11:15:30.806Z";
+export const productionCatalogGeneratedAt = "2026-05-31T11:57:26.748Z";
 
 export const productionSongRecords = [
   {
@@ -19629,7 +19629,7 @@ export const productionSongRecords = [
     "category": "Bollywood",
     "sourceCategory": "Bollywood",
     "coverUrl": "/packs/pack-24.png",
-    "hasMp3": false,
+    "hasMp3": true,
     "hasWav": true,
     "hasLyrics": false,
     "isInstrumental": true,
@@ -24980,7 +24980,7 @@ export const productionSongRecords = [
     "category": "Bollywood",
     "sourceCategory": "Bollywood",
     "coverUrl": "/packs/pack-29.png",
-    "hasMp3": false,
+    "hasMp3": true,
     "hasWav": true,
     "hasLyrics": true,
     "isInstrumental": false,
