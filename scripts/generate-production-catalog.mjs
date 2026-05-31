@@ -15,7 +15,7 @@ const PACKS = [
   [6, "Country", "Culture"],
   [7, "EDM / Dance", "Electronic"],
   [8, "K-Pop", "Culture"],
-  [9, "Reggaeton", "Culture"],
+  [9, "Reggae", "Culture"],
   [10, "Swing", "Electronic"],
   [11, "Trap", "Electronic"],
   [12, "Alternative Rock", "Indie"],
@@ -84,9 +84,27 @@ const PACK_BY_KEY = new Map(
   })
 );
 
-PACK_BY_KEY.set("edm dance", PACK_BY_KEY.get("edm dance") ?? PACK_BY_KEY.get("edm / dance"));
-PACK_BY_KEY.set("content creator background music", PACK_BY_KEY.get("content creator"));
-PACK_BY_KEY.set("trippy", PACK_BY_KEY.get("trippy"));
+const PACK_ALIASES = {
+  "brazilian": "Brazilian Funk",
+  "chinese": "Chinese / C-Pop",
+  "japanese": "Japanese / J-Pop",
+  "korean": "K-Pop",
+  "edm dance": "EDM / Dance",
+  "content creator background music": "Content Creator",
+  "trippy": "Trippy",
+};
+
+for (const [alias, title] of Object.entries(PACK_ALIASES)) {
+  const packMeta = PACK_BY_KEY.get(normalizeKey(title));
+  if (packMeta) PACK_BY_KEY.set(alias, packMeta);
+}
+
+PACK_BY_KEY.set("middle east", {
+  id: "external-middle-east",
+  title: "Middle East",
+  category: "Culture",
+  coverUrl: "/packs/pack-9.png",
+});
 
 function normalizeQuotes(value) {
   return value
@@ -111,11 +129,26 @@ function slugify(value) {
   return normalizeKey(value).replace(/\s+/g, "-");
 }
 
+function shortHash(value) {
+  let hash = 2166136261;
+  for (const char of value) {
+    hash ^= char.codePointAt(0) ?? 0;
+    hash = Math.imul(hash, 16777619);
+  }
+  return (hash >>> 0).toString(36);
+}
+
 function displayName(value) {
   return normalizeQuotes(value)
     .normalize("NFKC")
     .replace(/\s+/g, " ")
     .trim();
+}
+
+function displayCategory(value) {
+  const category = displayName(value);
+  if (normalizeKey(category) === "culture") return "Culture";
+  return category;
 }
 
 async function exists(target) {
@@ -201,9 +234,9 @@ async function main() {
     const packMeta = PACK_BY_KEY.get(normalizeKey(packFolder)) ?? fallbackPack;
     const titleFromAudio = mp3?.name.replace(/\.mp3$/i, "") ?? wav?.name.replace(/\.wav$/i, "");
     const songTitle = displayName(songParts.at(-1) || titleFromAudio || "Untitled");
-    const category = displayName(categoryFolder);
+    const category = displayCategory(categoryFolder);
     const metadataText = await readMaybeText(mdata?.fullPath);
-    const songSlug = slugify(songTitle);
+    const songSlug = slugify(songTitle) || `track-${shortHash(path.relative(SOURCE_ROOT, dir))}`;
     const categorySlug = slugify(category);
     const packSlug = slugify(packMeta.title);
     const cloudBasePath = `${categorySlug}/${packSlug}/${songSlug}`;

@@ -161,8 +161,9 @@ const recordsByPackId = productionSongRecords.reduce<Record<string, ProductionSo
   {}
 );
 
-export const productionPacks: ProductionPack[] = basePacks.map((pack) => {
-  const records = recordsByPackId[pack.id] ?? [];
+const basePackIds = new Set(basePacks.map((pack) => pack.id));
+
+function toProductionPack(pack: Pack, records: ProductionSongRecord[]): ProductionPack {
   const productionTracks = records.map((record, index) => toProductionTrack(record, index));
 
   return {
@@ -174,7 +175,41 @@ export const productionPacks: ProductionPack[] = basePacks.map((pack) => {
     totalDuration: productionTracks.length * 210,
     sourceStatus: productionTracks.length > 0 ? "ready" : "pending",
   };
-});
+}
+
+function createGeneratedPack(records: ProductionSongRecord[]): ProductionPack {
+  const first = records[0];
+  const tracks = records.map((record, index) => toProductionTrack(record, index));
+  const price = tracks.length > 30 ? 14999 : 7499;
+  const originalPrice = tracks.length > 30 ? 24999 : 12999;
+
+  return {
+    id: first.packId,
+    title: first.packTitle,
+    description: `${tracks.length} ${first.packTitle} tracks from the production catalog.`,
+    coverUrl: first.coverUrl,
+    trackCount: tracks.length,
+    totalDuration: tracks.length * 210,
+    price,
+    originalPrice,
+    genre: first.category,
+    category: first.category,
+    mood: "Mixed",
+    tracks,
+    tags: Array.from(new Set(records.flatMap((record) => record.tags))).slice(0, 8),
+    featured: false,
+    availableTrackCount: tracks.length,
+    expectedTrackCount: tracks.length,
+    sourceStatus: "ready",
+  };
+}
+
+export const productionPacks: ProductionPack[] = [
+  ...basePacks.map((pack) => toProductionPack(pack, recordsByPackId[pack.id] ?? [])),
+  ...Object.entries(recordsByPackId)
+    .filter(([packId]) => !basePackIds.has(packId))
+    .map(([, records]) => createGeneratedPack(records)),
+];
 
 export const readyProductionPacks = productionPacks.filter((pack) => pack.sourceStatus === "ready");
 export const productionTracks = productionPacks.flatMap((pack) => pack.tracks);
