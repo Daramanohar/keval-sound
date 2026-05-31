@@ -7,7 +7,7 @@ import Link from "next/link";
 import NextImage from "next/image";
 import { useAuth } from "@/lib/auth-context";
 import { packs, type Track } from "@/lib/mock-data";
-import { productionTracks, readyProductionPacks } from "@/lib/production-catalog";
+import { productionHomePacks, productionHomeTracks } from "@/lib/production-home.generated";
 import GenreShowcase from "@/components/GenreShowcase";
 import HowItWorks from "@/components/HowItWorks";
 import FeaturedArtists from "@/components/FeaturedArtists";
@@ -246,8 +246,8 @@ function LandingPage() {
 }
 
 function AuthenticatedHome() {
-  const allTracks = useMemo(() => productionTracks, []);
-  const livePacks = useMemo(() => readyProductionPacks, []);
+  const allTracks = useMemo(() => productionHomeTracks, []);
+  const livePacks = useMemo(() => productionHomePacks, []);
   const trendingTracks = useMemo(
     () => ensureMinimumTracks(allTracks.filter((track) => track.isTrending), allTracks),
     [allTracks]
@@ -366,19 +366,13 @@ function AuthenticatedHome() {
           href="/packs"
           linkText="Browse all packs"
         >
-          {livePacks.map((pack, index) => (
+          {livePacks.map((pack) => (
             <Link
               key={pack.id}
               href={`/pack/${pack.id}`}
               className="group snap-start flex-shrink-0 w-[160px]"
             >
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05, duration: 0.35 }}
-                className="overflow-hidden rounded-2xl border border-transparent bg-white/[0.03] transition-all hover:border-white/[0.08]"
-              >
+              <div className="overflow-hidden rounded-2xl border border-transparent bg-white/[0.03] transition-all duration-200 hover:-translate-y-0.5 hover:border-white/[0.08]">
                 <div className="relative aspect-square overflow-hidden">
                   {pack.coverUrl.startsWith("/") ? (
                     <NextImage
@@ -404,7 +398,7 @@ function AuthenticatedHome() {
                     </span>
                   ) : null}
                 </div>
-              </motion.div>
+              </div>
             </Link>
           ))}
         </ContentSection>

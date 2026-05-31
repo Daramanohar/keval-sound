@@ -1,11 +1,8 @@
 "use client";
 
-import { useMemo, useRef } from "react";
+import { useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { AnimatePresence, motion } from "framer-motion";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
 import {
   ArrowRight,
   Flame,
@@ -14,45 +11,25 @@ import {
   TrendingUp,
 } from "lucide-react";
 import WaveformVisualizer from "./WaveformVisualizer";
-import { readyProductionPacks } from "@/lib/production-catalog";
+import { productionHomePacks } from "@/lib/production-home.generated";
 import { resampleWaveform } from "@/lib/utils";
 import { usePlayerControls, usePlayerProgress } from "@/lib/player-context";
 import { useStore } from "@/lib/store-context";
 
 export default function TrendingDiscoveryPanel() {
-  const panelRef = useRef<HTMLDivElement>(null);
   const { playPack, togglePlayback, activePackId, isPlaying } = usePlayerControls();
   const { progress } = usePlayerProgress();
   const { isOwned } = useStore();
 
   const rankedPacks = useMemo(
     () =>
-      [...readyProductionPacks].sort((left, right) => {
+      [...productionHomePacks].sort((left, right) => {
         if (left.featured !== right.featured) {
           return left.featured ? -1 : 1;
         }
         return right.trackCount - left.trackCount;
       }),
     []
-  );
-
-  useGSAP(
-    () => {
-      if (!panelRef.current) return;
-
-      gsap.fromTo(
-        panelRef.current.querySelectorAll("[data-discovery-item]"),
-        { opacity: 0, y: 20 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.55,
-          stagger: 0.06,
-          ease: "power3.out",
-        }
-      );
-    },
-    { scope: panelRef }
   );
 
   const featuredPack = rankedPacks[0];
@@ -63,9 +40,8 @@ export default function TrendingDiscoveryPanel() {
   const featuredOwned = isOwned(featuredPack.id, "pack");
 
   return (
-    <div ref={panelRef}>
+    <div>
       <div
-        data-discovery-item
         className="rounded-2xl overflow-hidden bg-white/[0.02] border border-white/[0.06] group"
       >
         {/* Featured pack cover */}
@@ -99,17 +75,13 @@ export default function TrendingDiscoveryPanel() {
             className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
             aria-label={isFeaturedActive && isPlaying ? "Pause pack preview" : "Preview pack"}
           >
-            <motion.div
-              whileHover={{ scale: 1.08 }}
-              whileTap={{ scale: 0.95 }}
-              className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center"
-            >
+            <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center transition-transform duration-150 hover:scale-105 active:scale-95">
               {isFeaturedActive && isPlaying ? (
                 <Pause className="w-5 h-5 text-white" />
               ) : (
                 <Play className="w-5 h-5 text-white ml-0.5" />
               )}
-            </motion.div>
+            </div>
           </button>
 
           <div className="absolute bottom-3 left-3 right-3">
@@ -183,10 +155,8 @@ export default function TrendingDiscoveryPanel() {
             const owned = isOwned(pack.id, "pack");
 
             return (
-              <motion.div
+              <div
                 key={pack.id}
-                data-discovery-item
-                whileHover={{ x: 3 }}
                 className="flex items-center gap-3 px-4 py-2.5 hover:bg-white/[0.03] transition-colors group/row"
               >
                 <span className="w-4 text-center text-[10px] font-bold tabular-nums shrink-0 text-vivid-blue">
@@ -226,25 +196,18 @@ export default function TrendingDiscoveryPanel() {
                     {pack.title}
                   </Link>
                   <p className="text-[10px] text-muted/50 truncate">{pack.category}</p>
-                  <AnimatePresence>
-                    {(packPlaying || packProgress > 0) && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="mt-1"
-                      >
-                        <WaveformVisualizer
-                          data={packWaveform}
-                          isPlaying={packPlaying}
-                          progress={packProgress}
-                          height={10}
-                          gap={1}
-                          stretch
-                        />
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                  {(packPlaying || packProgress > 0) && (
+                    <div className="mt-1">
+                      <WaveformVisualizer
+                        data={packWaveform}
+                        isPlaying={packPlaying}
+                        progress={packProgress}
+                        height={10}
+                        gap={1}
+                        stretch
+                      />
+                    </div>
+                  )}
                 </div>
 
                 <Link
@@ -257,7 +220,7 @@ export default function TrendingDiscoveryPanel() {
                 >
                   {owned ? "Owned" : "Open"}
                 </Link>
-              </motion.div>
+              </div>
             );
           })}
         </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { memo, useCallback, useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Heart, Pause, Play, ShoppingCart, Tag } from "lucide-react";
 import { cn, formatPrice } from "@/lib/utils";
@@ -18,10 +19,8 @@ interface MusicCardProps {
 
 const MusicCard = memo(function MusicCard({
   track,
-  index = 0,
   variant = "default",
 }: MusicCardProps) {
-  const [isHovered, setIsHovered] = useState(false);
   const [cartPulse, setCartPulse] = useState(false);
   const { toggleTrack, isItemActive, isItemPlaying } = usePlayerControls();
   const { currentTime, duration } = usePlayerProgress();
@@ -76,24 +75,25 @@ const MusicCard = memo(function MusicCard({
 
   if (variant === "compact") {
     return (
-      <motion.div
-        initial={{ opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: index * 0.04, duration: 0.32 }}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        className="group overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.03] transition-all duration-300 hover:-translate-y-1 hover:border-white/[0.12] hover:bg-white/[0.05]"
-      >
+      <div className="group overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.03] transition-all duration-200 hover:-translate-y-0.5 hover:border-white/[0.12] hover:bg-white/[0.05]">
         {/* Cover */}
         <div className="relative aspect-square overflow-hidden rounded-t-2xl">
-          <div
-            className={cn(
-              "absolute inset-0 bg-gradient-to-br transition-transform duration-700",
-              track.coverUrl,
-              isHovered && "scale-105"
-            )}
-          />
+          {track.coverUrl.startsWith("/") ? (
+            <Image
+              src={track.coverUrl}
+              alt={track.title}
+              fill
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              sizes="180px"
+            />
+          ) : (
+            <div
+              className={cn(
+                "absolute inset-0 bg-gradient-to-br transition-transform duration-500 group-hover:scale-105",
+                track.coverUrl
+              )}
+            />
+          )}
           <div className="absolute inset-0 bg-gradient-to-t from-vampire-black/70 via-black/5 to-transparent" />
 
           {/* Badge */}
@@ -128,7 +128,7 @@ const MusicCard = memo(function MusicCard({
           <div
             className={cn(
               "absolute inset-0 flex items-center justify-center transition-opacity duration-200",
-              isHovered || isPlaying ? "opacity-100" : "opacity-0"
+              isPlaying ? "opacity-100" : "opacity-0 group-hover:opacity-100"
             )}
           >
             <motion.button
@@ -150,7 +150,7 @@ const MusicCard = memo(function MusicCard({
             onClick={handleAddToCart}
             className={cn(
               "absolute bottom-2 right-2 flex h-7 w-7 items-center justify-center rounded-full backdrop-blur-sm transition-all duration-200",
-              isHovered ? "opacity-100" : "opacity-0",
+              "opacity-0 group-hover:opacity-100",
               owned
                 ? "bg-white/20 text-white/60"
                 : inCart
@@ -195,21 +195,15 @@ const MusicCard = memo(function MusicCard({
             {track.genre} · {track.bpm} BPM
           </p>
         </div>
-      </motion.div>
+      </div>
     );
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 16 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: index * 0.04, duration: 0.32 }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+    <div
       className={cn(
-        "group overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.03] transition-all duration-300",
-        "hover:-translate-y-1 hover:border-white/[0.12] hover:bg-white/[0.06]",
+        "group overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.03] transition-all duration-200",
+        "hover:-translate-y-0.5 hover:border-white/[0.12] hover:bg-white/[0.06]",
         variant === "wide" ? "flex gap-4 p-4" : ""
       )}
     >
@@ -219,13 +213,22 @@ const MusicCard = memo(function MusicCard({
           variant === "wide" ? "h-20 w-20 shrink-0 rounded-xl" : "aspect-square rounded-t-2xl"
         )}
       >
-        <div
-          className={cn(
-            "absolute inset-0 bg-gradient-to-br transition-transform duration-700",
-            track.coverUrl,
-            isHovered && "scale-105"
-          )}
-        />
+        {track.coverUrl.startsWith("/") ? (
+          <Image
+            src={track.coverUrl}
+            alt={track.title}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            sizes={variant === "wide" ? "80px" : "320px"}
+          />
+        ) : (
+          <div
+            className={cn(
+              "absolute inset-0 bg-gradient-to-br transition-transform duration-500 group-hover:scale-105",
+              track.coverUrl
+            )}
+          />
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-vampire-black/80 via-black/10 to-transparent" />
 
         <div className="absolute left-2 top-2 flex flex-wrap gap-1.5">
@@ -259,7 +262,7 @@ const MusicCard = memo(function MusicCard({
         <div
           className={cn(
             "absolute inset-0 flex items-center justify-center transition-opacity duration-250",
-            isHovered || isPlaying ? "opacity-100" : "opacity-0"
+            isPlaying ? "opacity-100" : "opacity-0 group-hover:opacity-100"
           )}
         >
           <motion.button
@@ -350,7 +353,7 @@ const MusicCard = memo(function MusicCard({
           </motion.button>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 });
 

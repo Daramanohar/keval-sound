@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useDeferredValue, useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -21,6 +21,7 @@ import type {
   ProductionPack,
   ProductionTrack,
 } from "@/lib/production-catalog";
+import { preloadProductionCatalog } from "@/lib/production-catalog-preload";
 import { cn, formatDuration } from "@/lib/utils";
 import KevalPlayerLoading from "./KevalPlayerLoading";
 
@@ -33,7 +34,11 @@ export default function KevalPlayer() {
   const [catalog, setCatalog] = useState<ProductionCatalogModule | null>(null);
   const [activeCategory, setActiveCategory] = useState<CatalogCategory>("Occasion");
   const [query, setQuery] = useState("");
-  const [visiblePackLimit, setVisiblePackLimit] = useState(INITIAL_PACK_ROWS);
+  const deferredQuery = useDeferredValue(query);
+  const [packReveal, setPackReveal] = useState<{
+    category: CatalogCategory;
+    limit: number;
+  }>({ category: "Occasion", limit: INITIAL_PACK_ROWS });
   const { toggleTrack, isItemPlaying } = usePlayerControls();
   const { addTrackToCart, isInWishlist, toggleTrackWishlist } = useStore();
   const { showToast } = useToast();
@@ -41,7 +46,7 @@ export default function KevalPlayer() {
   useEffect(() => {
     let cancelled = false;
 
-    import("@/lib/production-catalog").then((module) => {
+    preloadProductionCatalog().then((module) => {
       if (!cancelled) setCatalog(module);
     });
 
@@ -55,36 +60,38 @@ export default function KevalPlayer() {
     [activeCategory, catalog]
   );
   const searchResults = useMemo(
-    () => catalog?.searchProductionTracks(query, { category: activeCategory, limit: 48 }) ?? [],
-    [activeCategory, catalog, query]
+    () => catalog?.searchProductionTracks(deferredQuery, { category: activeCategory, limit: 48 }) ?? [],
+    [activeCategory, catalog, deferredQuery]
   );
-  const hasQuery = query.trim().length > 0;
+  const hasQuery = deferredQuery.trim().length > 0;
+  const visiblePackLimit =
+    !hasQuery && packReveal.category === activeCategory ? packReveal.limit : INITIAL_PACK_ROWS;
   const displayedPacks = useMemo(
     () => (hasQuery ? visiblePacks : visiblePacks.slice(0, visiblePackLimit)),
     [hasQuery, visiblePackLimit, visiblePacks]
   );
 
   useEffect(() => {
-    setVisiblePackLimit(INITIAL_PACK_ROWS);
-
     if (hasQuery || visiblePacks.length <= INITIAL_PACK_ROWS) return;
 
     let cancelled = false;
     let timer: number | undefined;
 
     const revealNextBatch = () => {
-      setVisiblePackLimit((currentLimit) => {
+      setPackReveal((currentReveal) => {
+        const currentLimit =
+          currentReveal.category === activeCategory ? currentReveal.limit : INITIAL_PACK_ROWS;
         const nextLimit = Math.min(currentLimit + PACK_ROW_BATCH_SIZE, visiblePacks.length);
 
         if (nextLimit < visiblePacks.length && !cancelled) {
-          timer = window.setTimeout(revealNextBatch, 90);
+          timer = window.setTimeout(revealNextBatch, 140);
         }
 
-        return nextLimit;
+        return { category: activeCategory, limit: nextLimit };
       });
     };
 
-    timer = window.setTimeout(revealNextBatch, 120);
+    timer = window.setTimeout(revealNextBatch, 180);
 
     return () => {
       cancelled = true;
@@ -310,7 +317,7 @@ function PackRow({
   onToggleSave: (track: ProductionTrack) => void;
 }) {
   return (
-    <div className="space-y-3">
+    <div className="space-y-3" style={{ contentVisibility: "auto", containIntrinsicSize: "360px" }}>
       <div className="flex items-end justify-between gap-4">
         <div className="min-w-0">
           <Link
@@ -331,7 +338,7 @@ function PackRow({
       </div>
 
       {pack.tracks.length ? (
-        <div className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide">
+        <div className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide overscroll-x-contain">
           {pack.tracks.map((track) => (
             <TrackTile
               key={track.id}

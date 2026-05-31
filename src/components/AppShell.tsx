@@ -2,7 +2,6 @@
 
 import { Suspense, useCallback, useEffect, useState, type ReactNode } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { AnimatePresence, motion } from "framer-motion";
 import { useAuth } from "@/lib/auth-context";
 import { cn } from "@/lib/utils";
 import Sidebar from "./Sidebar";
@@ -162,19 +161,9 @@ export default function AppShell({ children }: AppShellProps) {
         )}
       >
         <TopBar onMenuToggle={toggleMobileSidebar} mobileOpen={mobileSidebarOpen} />
-        <AnimatePresence mode="sync" initial={false}>
-          <motion.main
-            key={pathname}
-            layout
-            initial={{ opacity: 0, y: 6 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -6 }}
-            transition={{ duration: 0.12, ease: [0.16, 1, 0.3, 1] }}
-            className="flex-1 px-6 py-6 pb-8 will-change-transform"
-          >
-            <Suspense fallback={<RouteLoading />}>{children}</Suspense>
-          </motion.main>
-        </AnimatePresence>
+        <main className="flex-1 px-6 py-6 pb-8">
+          <Suspense fallback={<RouteLoading />}>{children}</Suspense>
+        </main>
         <Footer />
       </div>
     </>

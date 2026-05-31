@@ -27,6 +27,7 @@ import { usePlayerControls, usePlayerProgress } from "@/lib/player-context";
 import { useStore } from "@/lib/store-context";
 import { useToast } from "@/lib/toast-context";
 import { useSongDetail } from "@/lib/song-detail-context";
+import { preloadProductionCatalog } from "@/lib/production-catalog-preload";
 import { packs as allPacks, tracks as allTracks, type Pack, type Track } from "@/lib/mock-data";
 
 /** Lookup the current playing item back to its source Track + Pack so the
@@ -71,11 +72,14 @@ export default function PersistentPlayer() {
     [currentItem?.id]
   );
   const [productionTrackContext, setProductionTrackContext] = useState<{
+    itemId: string | null;
     track: Track | null;
     pack: Pack | null;
-  }>({ track: null, pack: null });
-  const currentTrack = baseTrackContext.track ?? productionTrackContext.track;
-  const currentPack = baseTrackContext.pack ?? productionTrackContext.pack;
+  }>({ itemId: null, track: null, pack: null });
+  const resolvedProductionContext =
+    productionTrackContext.itemId === currentItem?.id ? productionTrackContext : null;
+  const currentTrack = baseTrackContext.track ?? resolvedProductionContext?.track ?? null;
+  const currentPack = baseTrackContext.pack ?? resolvedProductionContext?.pack ?? null;
   const currentTrackSaved = currentTrack ? isInWishlist(currentTrack.id, "track") : false;
 
   const waveformRef = useRef<HTMLDivElement>(null);
@@ -97,26 +101,27 @@ export default function PersistentPlayer() {
   }, [currentItem?.id]);
 
   useEffect(() => {
-    setProductionTrackContext({ track: null, pack: null });
-
     if (!currentItem?.id || baseTrackContext.track) return;
 
     let cancelled = false;
+    const itemId = currentItem.id;
 
-    import("@/lib/production-catalog")
+    preloadProductionCatalog()
       .then(({ productionPacks }) => {
         if (cancelled) return;
 
         for (const pack of productionPacks) {
-          const track = pack.tracks.find((candidate) => candidate.id === currentItem.id);
+          const track = pack.tracks.find((candidate) => candidate.id === itemId);
           if (track) {
-            setProductionTrackContext({ track, pack });
+            setProductionTrackContext({ itemId, track, pack });
             return;
           }
         }
+
+        setProductionTrackContext({ itemId, track: null, pack: null });
       })
       .catch(() => {
-        if (!cancelled) setProductionTrackContext({ track: null, pack: null });
+        if (!cancelled) setProductionTrackContext({ itemId, track: null, pack: null });
       });
 
     return () => {

@@ -12,7 +12,6 @@ import {
   type WheelEvent as ReactWheelEvent,
   type ReactNode,
 } from "react";
-import { motion } from "framer-motion";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -190,20 +189,14 @@ const ContentSection = memo(function ContentSection({
     const rail = scrollRef.current;
     if (!rail) return;
 
-    if (event.shiftKey || Math.abs(event.deltaY) > Math.abs(event.deltaX)) {
+    if (event.shiftKey) {
       rail.scrollLeft += event.deltaY;
       event.preventDefault();
     }
   }, []);
 
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.4 }}
-      className={cn("mb-8", className)}
-    >
+    <section className={cn("mb-8", className)}>
       <div className="mb-4 flex items-end justify-between gap-3 px-1">
         <div>
           <div className="flex items-center gap-2">
@@ -285,7 +278,7 @@ const ContentSection = memo(function ContentSection({
           {children}
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 });
 
