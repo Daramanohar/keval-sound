@@ -53,8 +53,6 @@ Main marketplace experience on `app.kevalsound.com`.
 | Buyer | Download purchased song | WAV |
 | Buyer | Browse and purchase packs/songs | Catalog metadata + cart |
 
-There is no 5-minute song limit. MP3 previews are full-song previews.
-
 ### Keval Player
 
 Dedicated listening surface inside the same app at `/player`.
