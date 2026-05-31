@@ -46,5 +46,6 @@ next-env.d.ts
 keval-packs/
 
 # Local agent/browser verification artifacts
+.claude/
 .playwright-cli/
 output/

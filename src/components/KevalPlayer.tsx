@@ -24,16 +24,6 @@ import type {
 import { cn, formatDuration } from "@/lib/utils";
 import KevalPlayerLoading from "./KevalPlayerLoading";
 
-const discoveryTabs = [
-  "Occasion",
-  "Commercial",
-  "Electronic",
-  "Bollywood",
-  "Indie",
-  "Culture",
-  "Classic",
-] as const;
-
 const INITIAL_PACK_ROWS = 4;
 const PACK_ROW_BATCH_SIZE = 4;
 

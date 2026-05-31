@@ -103,7 +103,7 @@ PACK_BY_KEY.set("middle east", {
   id: "external-middle-east",
   title: "Middle East",
   category: "Culture",
-  coverUrl: "/packs/pack-9.png",
+  coverUrl: "/packs/middle-east.jpeg",
 });
 
 function normalizeQuotes(value) {

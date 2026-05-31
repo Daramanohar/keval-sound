@@ -14,12 +14,10 @@ import {
   TrendingUp,
 } from "lucide-react";
 import WaveformVisualizer from "./WaveformVisualizer";
-import { packs } from "@/lib/mock-data";
+import { readyProductionPacks } from "@/lib/production-catalog";
 import { resampleWaveform } from "@/lib/utils";
 import { usePlayerControls, usePlayerProgress } from "@/lib/player-context";
 import { useStore } from "@/lib/store-context";
-
-const featuredPack = packs.find((pack) => pack.featured) ?? packs[0];
 
 export default function TrendingDiscoveryPanel() {
   const panelRef = useRef<HTMLDivElement>(null);
@@ -29,7 +27,7 @@ export default function TrendingDiscoveryPanel() {
 
   const rankedPacks = useMemo(
     () =>
-      [...packs].sort((left, right) => {
+      [...readyProductionPacks].sort((left, right) => {
         if (left.featured !== right.featured) {
           return left.featured ? -1 : 1;
         }
@@ -37,10 +35,6 @@ export default function TrendingDiscoveryPanel() {
       }),
     []
   );
-
-  const isFeaturedActive = activePackId === featuredPack.id;
-  const featuredWaveform = resampleWaveform(featuredPack.tracks[0]?.waveform ?? [], 72);
-  const featuredOwned = isOwned(featuredPack.id, "pack");
 
   useGSAP(
     () => {
@@ -60,6 +54,13 @@ export default function TrendingDiscoveryPanel() {
     },
     { scope: panelRef }
   );
+
+  const featuredPack = rankedPacks[0];
+  if (!featuredPack) return null;
+
+  const isFeaturedActive = activePackId === featuredPack.id;
+  const featuredWaveform = resampleWaveform(featuredPack.tracks[0]?.waveform ?? [], 72);
+  const featuredOwned = isOwned(featuredPack.id, "pack");
 
   return (
     <div ref={panelRef}>

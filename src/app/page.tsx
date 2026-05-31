@@ -6,7 +6,8 @@ import { ArrowRight, Sparkles, Zap } from "lucide-react";
 import Link from "next/link";
 import NextImage from "next/image";
 import { useAuth } from "@/lib/auth-context";
-import { packs, tracks, type Track } from "@/lib/mock-data";
+import { packs, type Track } from "@/lib/mock-data";
+import { productionTracks, readyProductionPacks } from "@/lib/production-catalog";
 import GenreShowcase from "@/components/GenreShowcase";
 import HowItWorks from "@/components/HowItWorks";
 import FeaturedArtists from "@/components/FeaturedArtists";
@@ -245,7 +246,8 @@ function LandingPage() {
 }
 
 function AuthenticatedHome() {
-  const allTracks = useMemo(() => tracks, []);
+  const allTracks = useMemo(() => productionTracks, []);
+  const livePacks = useMemo(() => readyProductionPacks, []);
   const trendingTracks = useMemo(
     () => ensureMinimumTracks(allTracks.filter((track) => track.isTrending), allTracks),
     [allTracks]
@@ -364,7 +366,7 @@ function AuthenticatedHome() {
           href="/packs"
           linkText="Browse all packs"
         >
-          {packs.map((pack, index) => (
+          {livePacks.map((pack, index) => (
             <Link
               key={pack.id}
               href={`/pack/${pack.id}`}
