@@ -441,36 +441,6 @@ Setting this disables stream URLs in the generated production catalog during loc
 
 ---
 
-## Resume Summary
-
-Suggested resume entry:
-
-```text
-Keval Sound - Exclusive Music Marketplace and Streaming Player
-
-Built and deployed a production music licensing platform using Next.js 16, React 19, Tailwind CSS, Vercel, and Cloudflare R2. Designed a catalog pipeline that scans local MP3/WAV source folders, extracts metadata, generates searchable TypeScript indexes, stages public MP3/lyrics files and private WAV masters, and syncs assets to Cloudflare R2. Implemented a YouTube Music-inspired player, metadata-ranked search, pack browsing, persistent audio playback, cart/wishlist flows, and production deployment automation through GitHub and Vercel.
-```
-
-Short bullet version:
-
-- Built a Next.js 16 music licensing marketplace with authenticated app shell, cart, wishlist, pack browsing, and persistent audio preview player.
-- Implemented Keval Player, a category-based streaming interface with metadata search and MP3/WAV product logic.
-- Created a production catalog generator for 60 live packs and 2,700+ indexed songs using MP3, WAV, lyrics, and metadata source files.
-- Designed and executed a Cloudflare R2 media pipeline for CDN-backed MP3 streaming and private WAV delivery.
-- Deployed the platform on Vercel with GitHub auto-deploy and Cloudflare DNS/CDN integration.
-
----
-
-## Project Highlights
-
-- Production catalog ingestion from real local music folders.
-- Metadata-ranked search designed around song title, pack title, tags, and detailed `MDATA.txt` descriptions.
-- Cloud storage architecture optimized for audio delivery using Cloudflare R2 to avoid traditional egress costs.
-- Separate business logic for marketplace previews, purchased WAV downloads, free Player MP3 streaming, and paid Player WAV streaming.
-- Smooth app navigation, route prefetching, deferred catalog search, lightweight home catalog, and optimized offscreen Player rendering.
-
----
-
 ## Important Operational Notes
 
 - Do not commit R2 API keys, Cloudflare tokens, or rclone config.
