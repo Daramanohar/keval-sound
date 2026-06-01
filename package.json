@@ -9,7 +9,9 @@
     "lint": "eslint",
     "catalog:generate": "node scripts/generate-production-catalog.mjs",
     "r2:stage-public": "node scripts/stage-r2-public-assets.mjs",
-    "r2:stage-wav": "node scripts/stage-r2-private-wavs.mjs"
+    "r2:stage-wav": "node scripts/stage-r2-private-wavs.mjs",
+    "media:manifest": "node scripts/generate-media-worker-manifest.mjs",
+    "media:token": "node scripts/create-media-gate-token.mjs"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",

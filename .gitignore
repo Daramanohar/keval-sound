@@ -49,3 +49,7 @@ keval-packs/
 .claude/
 .playwright-cli/
 output/
+
+# Cloudflare Worker local secrets/cache
+workers/**/.dev.vars
+workers/**/.wrangler/

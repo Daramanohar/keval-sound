@@ -1,0 +1,15 @@
+name = "keval-media-gate"
+main = "src/index.js"
+compatibility_date = "2026-06-01"
+workers_dev = false
+
+routes = [
+  { pattern = "media.kevalsound.com/*", zone_name = "kevalsound.com" }
+]
+
+[vars]
+ALLOWED_ORIGINS = "https://app.kevalsound.com"
+
+[[r2_buckets]]
+binding = "KEVAL_SOUND_BUCKET"
+bucket_name = "keval-sound-prod"

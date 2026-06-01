@@ -14,6 +14,7 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "output/**",
+    "workers/keval-media-gate/src/catalog.manifest.js",
     "next-env.d.ts",
   ]),
 ]);
