@@ -60,6 +60,7 @@ npx wrangler deploy
 ```
 
 Use a long random secret and keep the same value in the future backend token issuer.
+The Worker is attached as a Cloudflare Worker Custom Domain at `media.kevalsound.com`.
 
 ## Local Token Test
 

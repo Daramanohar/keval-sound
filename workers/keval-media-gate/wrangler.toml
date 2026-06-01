@@ -4,7 +4,7 @@ compatibility_date = "2026-06-01"
 workers_dev = false
 
 routes = [
-  { pattern = "media.kevalsound.com/*", zone_name = "kevalsound.com" }
+  { pattern = "media.kevalsound.com", custom_domain = true }
 ]
 
 [vars]
