@@ -8,7 +8,7 @@ Keval Sound is built around a simple product rule:
 - Buyers purchase songs or packs to receive WAV downloads.
 - Keval Player users can listen in MP3 for free, and a paid INR 49 Player plan unlocks WAV streaming.
 
-The platform is designed as a production music catalog, not a demo library. The current catalog pipeline indexes the local production source folder, generates searchable metadata, stages public MP3/lyrics assets and private WAV assets, and syncs them to Cloudflare R2 for CDN delivery.
+The platform is designed as a production music catalog, not a demo library. The current catalog pipeline indexes the local production source folder, generates searchable metadata, stages MP3/lyrics assets and private WAV assets, and syncs them to Cloudflare R2 for gated delivery.
 
 Live application:
 
@@ -31,7 +31,7 @@ Implemented in this repository:
 - Production catalog generator from the local source folder.
 - Cloudflare R2 staging scripts for MP3, lyrics, and WAV assets.
 - Cloudflare WAF rule blocking public CDN access to `private/*`.
-- Cloudflare Worker scaffold for token-gated private WAV streaming/download delivery.
+- Cloudflare Worker for token-gated MP3/WAV streaming and download delivery.
 - Vercel deployment connected to GitHub `master`.
 
 Current prototype limitations:
@@ -82,7 +82,7 @@ src/lib/production-home.generated.ts
         |
         | staging scripts
         v
-output/r2-public/       -> public MP3 + lyrics
+output/r2-public/       -> MP3 + lyrics staging
 output/r2-private/wav/  -> private WAV
         |
         | rclone sync
@@ -92,13 +92,13 @@ Cloudflare R2 bucket: keval-sound-prod
         v
 Cloudflare CDN: cdn.kevalsound.com
         |
-        | public MP3/lyrics/art only
+        | public lyrics/art only; MP3 should be blocked before paid launch
         v
 Next.js app on Vercel: app.kevalsound.com
 
 Private WAV delivery:
 
-Client -> media.kevalsound.com Worker -> verify signed token -> R2 binding -> stream/download WAV
+Client -> media.kevalsound.com Worker -> verify signed token -> R2 binding -> stream/download MP3/WAV
 ```
 
 ---
@@ -282,12 +282,12 @@ Private assets:
 
 Security note:
 
-`private/wav` must not be served publicly from the CDN. The CDN blocks `/private/*` at Cloudflare, and paid WAV files are served only through the `media.kevalsound.com` Worker after token verification.
+Paid media must not be served publicly from the CDN. The CDN blocks `/private/*` today, and `/public/mp3/*` should also be blocked before the paid launch. MP3 and WAV files are served through the `media.kevalsound.com` Worker after token verification.
 
 Recommended Cloudflare block rule:
 
 ```text
-(http.host eq "cdn.kevalsound.com" and starts_with(http.request.uri.path, "/private/"))
+(http.host eq "cdn.kevalsound.com" and (starts_with(http.request.uri.path, "/private/") or starts_with(http.request.uri.path, "/public/mp3/")))
 ```
 
 Private media Worker:
@@ -380,6 +380,8 @@ Planned API/Worker surface:
 |---|---|
 | `GET /stream?trackId=...&format=mp3` | Public MP3 preview or free Player stream |
 | `POST /api/media-token` | Planned backend token issuer after DB entitlement check |
+| `GET /v1/mp3/stream/:trackId` | Worker MP3 stream endpoint requiring a signed token |
+| `GET /v1/mp3/download/:trackId` | Worker MP3 download endpoint requiring a signed token |
 | `GET /v1/wav/stream/:trackId` | Worker WAV stream endpoint requiring a signed token |
 | `GET /v1/wav/download/:trackId` | Worker WAV download endpoint requiring a signed token |
 | `POST /webhooks/payment` | Payment gateway webhook to create purchase/subscription records |
@@ -389,10 +391,10 @@ Recommended delivery pattern for WAV:
 
 ```text
 Client -> backend API -> verify JWT/session -> check purchases/subscriptions -> issue short-lived signed media token
-Client -> media Worker -> verify media token -> read private WAV from R2 binding -> stream/download
+Client -> media Worker -> verify media token -> read MP3/WAV from R2 binding -> stream/download
 ```
 
-The public CDN private path stays blocked. The Worker reads from the R2 bucket binding directly and forwards byte range responses so audio seeking continues to work.
+The public CDN paid media paths stay blocked. The Worker reads from the R2 bucket binding directly and forwards byte range responses so audio seeking continues to work.
 
 ---
 
@@ -472,8 +474,9 @@ Setting this disables stream URLs in the generated production catalog during loc
 
 - Do not commit R2 API keys, Cloudflare tokens, or rclone config.
 - Keep the Cloudflare CDN block rule active for `cdn.kevalsound.com/private/*`.
-- Do not expose `private/wav` publicly.
-- Deploy the media Worker and entitlement backend before enabling real WAV downloads or WAV streaming in the UI.
+- Add the Cloudflare CDN block rule for `cdn.kevalsound.com/public/mp3/*` before switching the app to paid-only MP3 delivery.
+- Do not expose `private/wav` or direct MP3 object URLs publicly.
+- Deploy the media Worker and entitlement backend before enabling real MP3/WAV downloads or paid streaming in the UI.
 - Regenerate the catalog after changing the local source folder.
 - Regenerate the media Worker manifest after changing the production catalog.
 - Run `rclone check` after every large upload.

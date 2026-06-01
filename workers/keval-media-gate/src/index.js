@@ -1,15 +1,22 @@
-import { mediaCatalog, mediaCatalogRecordCount } from "./catalog.manifest.js";
+import {
+  mediaCatalog,
+  mediaCatalogMp3RecordCount,
+  mediaCatalogRecordCount,
+  mediaCatalogWavRecordCount,
+} from "./catalog.manifest.js";
 
 const DEFAULT_ALLOWED_ORIGINS = "https://app.kevalsound.com";
 const TOKEN_CLOCK_SKEW_SECONDS = 60;
 const MAX_TTL_SECONDS = {
+  "mp3-stream": 2 * 60 * 60,
+  "mp3-download": 15 * 60,
   "wav-stream": 4 * 60 * 60,
   "wav-download": 15 * 60,
 };
 
-const ROUTE_ACCESS = {
-  stream: "wav-stream",
-  download: "wav-download",
+const CONTENT_TYPES = {
+  mp3: "audio/mpeg",
+  wav: "audio/wav",
 };
 
 const mediaGateWorker = {
@@ -33,7 +40,9 @@ async function handleRequest(request, env) {
       {
         ok: true,
         service: "keval-media-gate",
-        wavRecords: mediaCatalogRecordCount,
+        records: mediaCatalogRecordCount,
+        mp3Records: mediaCatalogMp3RecordCount,
+        wavRecords: mediaCatalogWavRecordCount,
       },
       200,
       corsHeaders
@@ -47,21 +56,23 @@ async function handleRequest(request, env) {
     });
   }
 
-  const match = url.pathname.match(/^\/v1\/wav\/(stream|download)\/([^/]+)$/);
+  const match = url.pathname.match(/^\/v1\/(mp3|wav)\/(stream|download)\/([^/]+)$/);
   if (!match) {
     return json({ error: "not_found" }, 404, corsHeaders);
   }
 
-  const mode = match[1];
-  const trackId = decodePathPart(match[2]);
-  const expectedAccess = ROUTE_ACCESS[mode];
+  const format = match[1];
+  const mode = match[2];
+  const trackId = decodePathPart(match[3]);
+  const expectedAccess = `${format}-${mode}`;
   const record = mediaCatalog[trackId];
 
   if (!record) {
     return json({ error: "track_not_found" }, 404, corsHeaders);
   }
 
-  if (!record.wavPath?.startsWith("private/wav/")) {
+  const objectPath = record[`${format}Path`];
+  if (!isAllowedMediaPath(format, objectPath)) {
     return json({ error: "media_path_not_allowed" }, 500, corsHeaders);
   }
 
@@ -70,7 +81,7 @@ async function handleRequest(request, env) {
     return json({ error: authorization.error }, authorization.status, corsHeaders);
   }
 
-  return serveR2Wav(request, env, record, mode, corsHeaders);
+  return serveR2Media(request, env, record, { format, mode, objectPath }, corsHeaders);
 }
 
 async function authorizeRequest(request, env, trackId, expectedAccess) {
@@ -150,22 +161,22 @@ async function verifyToken(token, secret, expectedTrackId, expectedAccess) {
   return { ok: true, payload };
 }
 
-async function serveR2Wav(request, env, record, mode, corsHeaders) {
+async function serveR2Media(request, env, record, media, corsHeaders) {
   if (!env.KEVAL_SOUND_BUCKET) {
     return json({ error: "r2_binding_missing" }, 500, corsHeaders);
   }
 
   if (request.method === "HEAD") {
-    const head = await env.KEVAL_SOUND_BUCKET.head(record.wavPath);
+    const head = await env.KEVAL_SOUND_BUCKET.head(media.objectPath);
     if (!head) {
       return json({ error: "object_not_found" }, 404, corsHeaders);
     }
 
-    const headers = buildMediaHeaders(head, record, mode, corsHeaders);
+    const headers = buildMediaHeaders(head, record, media, corsHeaders);
     return new Response(null, { status: 200, headers });
   }
 
-  const object = await env.KEVAL_SOUND_BUCKET.get(record.wavPath, {
+  const object = await env.KEVAL_SOUND_BUCKET.get(media.objectPath, {
     range: request.headers,
   });
 
@@ -173,14 +184,14 @@ async function serveR2Wav(request, env, record, mode, corsHeaders) {
     return json({ error: "object_not_found" }, 404, corsHeaders);
   }
 
-  const headers = buildMediaHeaders(object, record, mode, corsHeaders);
+  const headers = buildMediaHeaders(object, record, media, corsHeaders);
   const status = setRangeHeaders(headers, object);
   return new Response(object.body, { status, headers });
 }
 
-function buildMediaHeaders(object, record, mode, corsHeaders) {
+function buildMediaHeaders(object, record, media, corsHeaders) {
   const headers = new Headers(corsHeaders);
-  headers.set("Content-Type", "audio/wav");
+  headers.set("Content-Type", CONTENT_TYPES[media.format]);
   headers.set("Accept-Ranges", "bytes");
   headers.set("Cache-Control", "private, no-store, max-age=0");
   headers.set("X-Content-Type-Options", "nosniff");
@@ -194,11 +205,19 @@ function buildMediaHeaders(object, record, mode, corsHeaders) {
     headers.set("Content-Length", String(object.size));
   }
 
-  const filename = toSafeFilename(`${record.title}.wav`);
-  const disposition = mode === "download" ? "attachment" : "inline";
+  const filename = toSafeFilename(`${record.title}.${media.format}`);
+  const disposition = media.mode === "download" ? "attachment" : "inline";
   headers.set("Content-Disposition", `${disposition}; filename="${filename}"`);
 
   return headers;
+}
+
+function isAllowedMediaPath(format, objectPath) {
+  if (format === "mp3") {
+    return typeof objectPath === "string" && objectPath.startsWith("public/mp3/");
+  }
+
+  return typeof objectPath === "string" && objectPath.startsWith("private/wav/");
 }
 
 function setRangeHeaders(headers, object) {

@@ -1,6 +1,8 @@
 import crypto from "node:crypto";
 
 const MAX_TTL_SECONDS = {
+  "mp3-stream": 2 * 60 * 60,
+  "mp3-download": 15 * 60,
   "wav-stream": 4 * 60 * 60,
   "wav-download": 15 * 60,
 };
@@ -8,7 +10,7 @@ const MAX_TTL_SECONDS = {
 function usage() {
   return [
     "Usage:",
-    "  node scripts/create-media-gate-token.mjs --track-id <id> [--grant wav-stream|wav-download] [--subject <user>] [--minutes <n>]",
+    "  node scripts/create-media-gate-token.mjs --track-id <id> [--grant mp3-stream|mp3-download|wav-stream|wav-download] [--subject <user>] [--minutes <n>]",
     "",
     "Environment:",
     "  MEDIA_GATE_SIGNING_SECRET must be set to the same value configured as the Worker secret.",
@@ -59,7 +61,7 @@ function main() {
   const args = readArgs(process.argv.slice(2));
   const secret = process.env.MEDIA_GATE_SIGNING_SECRET;
   const trackId = args["track-id"];
-  const access = args.grant ?? args.access ?? "wav-stream";
+  const access = args.grant ?? args.access ?? "mp3-stream";
   const subject = args.subject ?? "local-test-user";
 
   if (!secret) {
@@ -74,7 +76,7 @@ function main() {
     throw new Error(`Unsupported --grant value: ${access}`);
   }
 
-  const defaultMinutes = access === "wav-download" ? 15 : 240;
+  const defaultMinutes = access.endsWith("-download") ? 15 : access === "wav-stream" ? 240 : 120;
   const minutes = Number(args.minutes ?? defaultMinutes);
   if (!Number.isFinite(minutes) || minutes <= 0) {
     throw new Error("--minutes must be a positive number.");
@@ -96,11 +98,12 @@ function main() {
   };
 
   const token = signPayload(payload, secret);
-  const action = access === "wav-download" ? "download" : "stream";
+  const [format, actionName] = access.split("-");
+  const action = actionName === "download" ? "download" : "stream";
 
   console.log(token);
   console.log("");
-  console.log(`Example URL: https://media.kevalsound.com/v1/wav/${action}/${encodeURIComponent(trackId)}?token=${token}`);
+  console.log(`Example URL: https://media.kevalsound.com/v1/${format}/${action}/${encodeURIComponent(trackId)}?token=${token}`);
 }
 
 try {

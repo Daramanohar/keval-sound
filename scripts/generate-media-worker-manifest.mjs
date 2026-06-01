@@ -10,6 +10,7 @@ const WORKER_MANIFEST = path.join(
   "src",
   "catalog.manifest.js"
 );
+const PUBLIC_MP3_MARKER = "/public/mp3/";
 
 async function readCatalogRecords() {
   const source = await fs.readFile(GENERATED_CATALOG, "utf8");
@@ -27,22 +28,34 @@ function toMediaRecord(record) {
     packId: record.packId,
     packTitle: record.packTitle,
     category: record.category,
+    mp3Path: getMp3ObjectPath(record.mp3Url),
     wavPath: record.wavPath,
   };
+}
+
+function getMp3ObjectPath(mp3Url) {
+  const markerIndex = mp3Url.indexOf(PUBLIC_MP3_MARKER);
+  if (markerIndex === -1) {
+    throw new Error(`Cannot derive public MP3 object path from URL: ${mp3Url}`);
+  }
+
+  return `public/mp3/${mp3Url.slice(markerIndex + PUBLIC_MP3_MARKER.length)}`;
 }
 
 async function main() {
   const records = await readCatalogRecords();
   const manifest = {};
   const skipped = [];
+  let mp3Count = 0;
+  let wavCount = 0;
 
   for (const record of records) {
-    if (!record.hasWav || !record.wavPath) {
-      skipped.push({ id: record.id, title: record.title, reason: "missing_wav" });
+    if (!record.hasMp3 || !record.mp3Url) {
+      skipped.push({ id: record.id, title: record.title, reason: "missing_mp3" });
       continue;
     }
 
-    if (!record.wavPath.startsWith("private/wav/")) {
+    if (record.hasWav && !record.wavPath.startsWith("private/wav/")) {
       skipped.push({ id: record.id, title: record.title, reason: "unexpected_wav_path", wavPath: record.wavPath });
       continue;
     }
@@ -52,6 +65,8 @@ async function main() {
     }
 
     manifest[record.id] = toMediaRecord(record);
+    mp3Count += 1;
+    if (record.hasWav) wavCount += 1;
   }
 
   const source = [
@@ -59,6 +74,8 @@ async function main() {
     "",
     `export const mediaCatalogGeneratedAt = ${JSON.stringify(new Date().toISOString())};`,
     `export const mediaCatalogRecordCount = ${Object.keys(manifest).length};`,
+    `export const mediaCatalogMp3RecordCount = ${mp3Count};`,
+    `export const mediaCatalogWavRecordCount = ${wavCount};`,
     `export const mediaCatalog = ${JSON.stringify(manifest, null, 2)};`,
     "",
   ].join("\n");
@@ -66,7 +83,9 @@ async function main() {
   await fs.mkdir(path.dirname(WORKER_MANIFEST), { recursive: true });
   await fs.writeFile(WORKER_MANIFEST, source, "utf8");
 
-  console.log(`Generated ${path.relative(PROJECT_ROOT, WORKER_MANIFEST)} with ${Object.keys(manifest).length} WAV records.`);
+  console.log(
+    `Generated ${path.relative(PROJECT_ROOT, WORKER_MANIFEST)} with ${mp3Count} MP3 records and ${wavCount} WAV records.`
+  );
   if (skipped.length) {
     console.log(`Skipped ${skipped.length} records without usable WAV paths.`);
     console.log(JSON.stringify(skipped.slice(0, 20), null, 2));

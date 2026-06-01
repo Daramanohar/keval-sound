@@ -1,18 +1,22 @@
 # Keval Media Gate Worker
 
-This Worker is the private WAV access gate for Keval Sound.
+This Worker is the private media access gate for Keval Sound.
 
-The public CDN intentionally blocks `https://cdn.kevalsound.com/private/*` with a Cloudflare security rule. Paid WAV access must go through this Worker instead.
+The public CDN intentionally blocks raw paid media paths with Cloudflare security rules. MP3 and WAV access should go through this Worker once the backend entitlement layer is live.
 
 ## Endpoints
 
 - `GET /health`
+- `GET /v1/mp3/stream/:trackId?token=...`
+- `HEAD /v1/mp3/stream/:trackId?token=...`
+- `GET /v1/mp3/download/:trackId?token=...`
+- `HEAD /v1/mp3/download/:trackId?token=...`
 - `GET /v1/wav/stream/:trackId?token=...`
 - `HEAD /v1/wav/stream/:trackId?token=...`
 - `GET /v1/wav/download/:trackId?token=...`
 - `HEAD /v1/wav/download/:trackId?token=...`
 
-`Authorization: Bearer <token>` is also accepted. Query tokens are supported so browser `<audio src="...">` can stream WAVs after the app receives a short-lived entitlement token.
+`Authorization: Bearer <token>` is also accepted. Query tokens are supported so browser `<audio src="...">` can stream after the app receives a short-lived entitlement token.
 
 ## Token Payload
 
@@ -22,7 +26,7 @@ Tokens are HMAC-SHA256 signed:
 {
   "sub": "user-id",
   "trackId": "external-middle-east-arabian-skyfire",
-  "access": "wav-stream",
+  "access": "mp3-stream",
   "iat": 1770000000,
   "exp": 1770014400,
   "jti": "uuid"
@@ -33,10 +37,13 @@ Allowed access values:
 
 - `wav-stream`: max TTL 4 hours.
 - `wav-download`: max TTL 15 minutes.
+- `mp3-stream`: max TTL 2 hours.
+- `mp3-download`: max TTL 15 minutes.
 
 The future purchase/subscription backend should issue these tokens only after checking:
 
-- purchased song or pack for WAV downloads
+- purchased song or pack for MP3/WAV downloads
+- purchased song/pack or allowed preview policy for MP3 streaming
 - active INR 49 Player subscription for WAV streaming
 
 ## Generate Manifest
@@ -68,7 +75,11 @@ From the repo root:
 
 ```powershell
 $env:MEDIA_GATE_SIGNING_SECRET="same-secret-used-by-worker"
-npm run media:token -- --track-id external-middle-east-arabian-skyfire --grant wav-stream --minutes 10
+npm run media:token -- --track-id external-middle-east-arabian-skyfire --grant mp3-stream --minutes 10
 ```
 
-Open the printed URL after the Worker is deployed. Direct CDN private URLs should continue returning `403`.
+Open the printed URL after the Worker is deployed. Direct CDN private WAV URLs should continue returning `403`. After the app is moved to token-gated MP3 playback, block direct CDN MP3 paths too:
+
+```text
+(http.host eq "cdn.kevalsound.com" and (starts_with(http.request.uri.path, "/private/") or starts_with(http.request.uri.path, "/public/mp3/")))
+```
