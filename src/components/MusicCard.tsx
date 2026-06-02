@@ -193,9 +193,6 @@ const MusicCard = memo(function MusicCard({
           </div>
           <p className="mt-0.5 truncate text-[10px] text-muted/70">{track.artist}</p>
           <TrackTagLine track={track} className="mt-1 text-[10px] text-muted/55" />
-          <p className="mt-0.5 truncate text-[10px] text-muted/50">
-            {track.genre}
-          </p>
         </div>
       </div>
     );
