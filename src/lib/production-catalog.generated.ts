@@ -20,7 +20,7 @@ export interface ProductionSongRecord {
   tags: string[];
 }
 
-export const productionCatalogGeneratedAt = "2026-06-02T10:24:54.592Z";
+export const productionCatalogGeneratedAt = "2026-06-02T11:29:59.212Z";
 
 export const productionSongRecords = [
   {
@@ -42,7 +42,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic house",
       "arabic house",
-      "club dance four on the floor",
+      "club dance four",
       "culture",
       "middle",
       "east"
@@ -68,7 +68,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "house",
-      "arabic tribal arabic house",
+      "arabic tribal arabic",
       "culture",
       "middle",
       "east"
@@ -92,7 +92,7 @@ export const productionSongRecords = [
     "metadataText": "Arabic house, electronic dance music (EDM), hypnotic dance/club\n\nArabic house with a driving four-on-the-floor pulse and syncopated percussion, deep rolling bass, and eastern vocal textures over a desert-night groove; verse rides tight drum loops and a sparse oud-like motif, pre-chorus strips to claps, hand drums, and a rising chant, chorus opens with full kick, bass, and a crowd-ready hook, Layered male-female vocal stacks, delay throws on key phrases, sand-swish risers, metallic hits, bright and punchy festival mix, bright, electronic, vocal, hypnotic, deep",
     "tags": [
       "arabic house",
-      "electronic dance music edm",
+      "electronic dance",
       "hypnotic dance club",
       "culture",
       "middle",
@@ -166,7 +166,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/MIDDLE EAST/Desert Lanterns",
     "metadataText": "Middle Eastern chill fusion; lounge; downtempo (half-time groove)\n\nMiddle Eastern chill fusion with a laid-back half-time groove, soft oud phrases, brushed hand percussion, and warm sub pulses; verse texture stays sparse with airy pads and finger cymbals, the middle section opens with a rising qanun shimmer, and the final pass adds tabla fills and a gentle bass lift, Close, glossy, intimate mix with wide desert-air reverb and silky low end, warm, soft, smooth, relaxing, lounge, sophisticated",
     "tags": [
-      "middle eastern chill fusion lounge downtempo half time groove",
+      "middle eastern chill",
       "culture",
       "middle",
       "east"
@@ -190,7 +190,7 @@ export const productionSongRecords = [
     "metadataText": "dark trap, Middle Eastern / desert fusion, cinematic gritty electronic\n\nDark Middle Eastern trap with hard-hitting 808s, syncopated trap drums, and a haunting oud motif; verse section feels sparse and tense, pre-drop builds with filtered percussion and rising desert winds, the drop opens into huge sub-bass and sharp claps, then a breakdown strips to oud harmonics and low pulse before the final slam, Distant female chant textures, pitch-bent ad-libs, and reverse swells bridge sections, Cinematic, gritty, and wide with a glossy low-end punch, deep",
     "tags": [
       "dark trap",
-      "middle eastern desert fusion",
+      "middle eastern desert",
       "cinematic gritty electronic",
       "culture",
       "middle",
@@ -216,7 +216,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "house",
-      "arabic middle eastern electronic",
+      "arabic middle eastern",
       "hypnotic",
       "festival ready",
       "culture",
@@ -241,7 +241,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/MIDDLE EAST/Desert Silk",
     "metadataText": "Middle Eastern chill fusion, lounge, downtempo\n\nMiddle Eastern chill fusion with a laid-back 92 BPM pulse, brushed percussion and soft oud phrases over warm hand drums and airy pads; verse texture stays sparse with oud and low percussion, then a pre-drop lift adds reversed swells and filtered shakers, while the main section opens with deeper bass, subtle frame-drum accents, and lush atmospheric layers, Breathy top-line doubles, distant ad-lib echoes, and delicate chime flourishes connect transitions; mix is smooth, elegant, wide, and intimate with a polished lounge glow, soft, lounge, sophisticated, warm, relaxing, smooth",
     "tags": [
-      "middle eastern chill fusion",
+      "middle eastern chill",
       "lounge",
       "downtempo",
       "culture",
@@ -291,7 +291,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/MIDDLE EAST/Dunes Beneath the Stars",
     "metadataText": "Middle Eastern chill fusion; lounge; downtempo (half-time groove)\n\nMiddle Eastern chill fusion with a laid-back half-time groove, soft oud phrases, brushed hand percussion, and warm sub pulses; verse texture stays sparse with airy pads and finger cymbals, the middle section opens with a rising qanun shimmer, and the final pass adds tabla fills and a gentle bass lift, Close, glossy, intimate mix with wide desert-air reverb and silky low end, warm, soft, smooth, relaxing, lounge, sophisticated",
     "tags": [
-      "middle eastern chill fusion lounge downtempo half time groove",
+      "middle eastern chill",
       "culture",
       "middle",
       "east"
@@ -314,7 +314,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/MIDDLE EAST/Eastern Mirage",
     "metadataText": "Middle Eastern chill fusion, lounge, downtempo\n\nMiddle Eastern chill fusion with a laid-back 92 BPM sway, soft oud motifs over brushed percussion and deep hand drum pulses; verse-like sections stay minimal with airy pads and filtered drones, then the arrangement opens into a warmer refrain with layered oud harmonies and subtle cymbal shimmer, Breathy ad-libs, distant vocal oohs, and tape-worn room reverb add intimacy, Reverse swells, sand-like shakers, and gliding delay throws bridge each change, Smooth, polished, nocturnal, and upscale, warm, lounge, smooth, soft, relaxing, sophisticated",
     "tags": [
-      "middle eastern chill fusion",
+      "middle eastern chill",
       "lounge",
       "downtempo",
       "culture",
@@ -391,7 +391,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "house",
-      "arabic middle eastern electronic",
+      "arabic middle eastern",
       "hypnotic",
       "festival ready",
       "culture",
@@ -418,7 +418,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic house",
       "arabic house",
-      "vocal chant",
+      "chant",
       "hypnotic",
       "festival ready",
       "culture",
@@ -492,7 +492,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic house",
       "arabic house",
-      "vocal chant",
+      "chant",
       "hypnotic",
       "festival ready",
       "culture",
@@ -519,7 +519,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic house",
       "arabic house",
-      "vocal chant",
+      "chant",
       "hypnotic",
       "festival ready",
       "culture",
@@ -546,7 +546,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic house",
       "arabic house",
-      "vocal chant",
+      "chant",
       "hypnotic",
       "festival ready",
       "culture",
@@ -573,7 +573,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic house",
       "arabic house",
-      "vocal chant",
+      "chant",
       "hypnotic",
       "festival ready",
       "culture",
@@ -600,7 +600,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic house",
       "arabic house",
-      "vocal chant",
+      "chant",
       "hypnotic",
       "festival ready",
       "culture",
@@ -627,7 +627,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic house",
       "arabic house",
-      "vocal chant",
+      "chant",
       "hypnotic",
       "festival ready",
       "culture",
@@ -654,7 +654,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic house",
       "arabic house",
-      "vocal chant",
+      "chant",
       "hypnotic",
       "festival ready",
       "culture",
@@ -1419,7 +1419,7 @@ export const productionSongRecords = [
     "metadataText": "Arabic house, electronic dance music (EDM), festival house\n\nArabic house with a driving four-on-the-floor pulse and syncopated percussion; verse rides tight drum loops and a sparse oud-like motif, pre-chorus strips to claps, hand drums, and a rising chant, chorus opens with full kick, bass, and crowd-ready hook, Layered male-female vocal stacks, delay throws on key phrases, sand-swish risers, metallic hits, bright and punchy festival mix, deep, vocal, bright, electronic, hypnotic",
     "tags": [
       "arabic house",
-      "electronic dance music edm",
+      "electronic dance",
       "festival house",
       "culture",
       "middle",
@@ -1444,7 +1444,7 @@ export const productionSongRecords = [
     "metadataText": "Arabic house, electronic dance music (EDM), festival house\n\nArabic house with a driving four-on-the-floor pulse and syncopated percussion; verse rides tight drum loops and a sparse oud-like motif, pre-chorus strips to claps, hand drums, and a rising chant, chorus opens with full kick, bass, and crowd-ready hook, Layered male-female vocal stacks, delay throws on key phrases, sand-swish risers, metallic hits, bright and punchy festival mix, deep, vocal, bright, electronic, hypnotic",
     "tags": [
       "arabic house",
-      "electronic dance music edm",
+      "electronic dance",
       "festival house",
       "culture",
       "middle",
@@ -1469,7 +1469,7 @@ export const productionSongRecords = [
     "metadataText": "Arabic house, electronic dance music (EDM), festival house\n\nArabic house with a driving four-on-the-floor pulse and syncopated percussion; verse rides tight drum loops and a sparse oud-like motif, pre-chorus strips to claps, hand drums, and a rising chant, chorus opens with full kick, bass, and crowd-ready hook, Layered male-female vocal stacks, delay throws on key phrases, sand-swish risers, metallic hits, bright and punchy festival mix, deep, vocal, bright, electronic, hypnotic",
     "tags": [
       "arabic house",
-      "electronic dance music edm",
+      "electronic dance",
       "festival house",
       "culture",
       "middle",
@@ -1494,7 +1494,7 @@ export const productionSongRecords = [
     "metadataText": "Arabic house, electronic dance music (EDM), festival house\n\nArabic house with a driving four-on-the-floor pulse and syncopated percussion; verse rides tight drum loops and a sparse oud-like motif, pre-chorus strips to claps, hand drums, and a rising chant, chorus opens with full kick, bass, and crowd-ready hook, Layered male-female vocal stacks, delay throws on key phrases, sand-swish risers, metallic hits, bright and punchy festival mix, deep, vocal, bright, electronic, hypnotic",
     "tags": [
       "arabic house",
-      "electronic dance music edm",
+      "electronic dance",
       "festival house",
       "culture",
       "middle",
@@ -1806,10 +1806,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Pop/Electric Dreams at Midnight",
     "metadataText": "pop, electronic, electro\n\nElectro-pop with glitchy synth stabs and punchy electronic drums at a bright dance-pop tempo; verse rides tight muted groove and clipped synth pulses, pre-chorus opens with rising filters and stacked harmonies, chorus hits with a wide hook lead and octave doubles, Vocal production is glossy and vibrant with whispered pickups, stereo ad-libs, and short delay throws on the anchor phrase, Ear candy includes digital blips, reverse swells, and shimmering risers, Mix is crisp, neon-bright, and club-ready, pop, electronic, electro, vocal",
     "tags": [
-      "pop",
       "electronic",
       "electro",
-      "commercial"
+      "commercial",
+      "pop"
     ]
   },
   {
@@ -1829,10 +1829,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Pop/Future Lovers Anonymous",
     "metadataText": "pop, electronic, electro\n\nElectro-pop with glitchy synth stabs and punchy electronic drums at a bright dance-pop tempo; verse rides tight muted groove and clipped synth pulses, pre-chorus opens with rising filters and stacked harmonies, chorus hits with a wide hook lead and octave doubles, Vocal production is glossy and vibrant with whispered pickups, stereo ad-libs, and short delay throws on the anchor phrase, Ear candy includes digital blips, reverse swells, and shimmering risers, Mix is crisp, neon-bright, and club-ready, pop, electronic, electro, vocal",
     "tags": [
-      "pop",
       "electronic",
       "electro",
-      "commercial"
+      "commercial",
+      "pop"
     ]
   },
   {
@@ -1852,10 +1852,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Pop/Glass Shoes",
     "metadataText": "pop, electronic, electro\n\nElectro-pop with glitchy synth stabs and punchy electronic drums at a bright dance-pop tempo; verse rides tight muted groove and clipped synth pulses, pre-chorus opens with rising filters and stacked harmonies, chorus hits with a wide hook lead and octave doubles, Vocal production is glossy and vibrant with whispered pickups, stereo ad-libs, and short delay throws on the anchor phrase, Ear candy includes digital blips, reverse swells, and shimmering risers, Mix is crisp, neon-bright, and club-ready, pop, electronic, electro, vocal",
     "tags": [
-      "pop",
       "electronic",
       "electro",
-      "commercial"
+      "commercial",
+      "pop"
     ]
   },
   {
@@ -1875,10 +1875,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Pop/Golden Hour Ride",
     "metadataText": "pop, electronic, electro\n\nElectro-pop with glitchy synth stabs and punchy electronic drums at a bright dance-pop tempo; verse rides tight muted groove and clipped synth pulses, pre-chorus opens with rising filters and stacked harmonies, chorus hits with a wide hook lead and octave doubles, Vocal production is glossy and vibrant with whispered pickups, stereo ad-libs, and short delay throws on the anchor phrase, Ear candy includes digital blips, reverse swells, and shimmering risers, Mix is crisp, neon-bright, and club-ready, pop, electronic, electro, vocal",
     "tags": [
-      "pop",
       "electronic",
       "electro",
-      "commercial"
+      "commercial",
+      "pop"
     ]
   },
   {
@@ -1898,10 +1898,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Pop/Golden-Waves Dashboard",
     "metadataText": "pop, electronic, electro\n\nElectro-pop with glitchy synth stabs and punchy electronic drums at a bright dance-pop tempo; verse rides tight muted groove and clipped synth pulses, pre-chorus opens with rising filters and stacked harmonies, chorus hits with a wide hook lead and octave doubles, Vocal production is glossy and vibrant with whispered pickups, stereo ad-libs, and short delay throws on the anchor phrase, Ear candy includes digital blips, reverse swells, and shimmering risers, Mix is crisp, neon-bright, and club-ready, pop, electronic, electro, vocal",
     "tags": [
-      "pop",
       "electronic",
       "electro",
-      "commercial"
+      "commercial",
+      "pop"
     ]
   },
   {
@@ -7139,7 +7139,7 @@ export const productionSongRecords = [
       "experimental",
       "alternative rock",
       "trip hop",
-      "gothic urban nocturnal groove",
+      "groove",
       "indie",
       "alternative",
       "rock"
@@ -8101,7 +8101,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "dreamy bedroom pop",
-      "atmospheric indie folk pop",
+      "atmospheric indie folk",
       "indie",
       "pop"
     ]
@@ -8180,7 +8180,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "electropop",
-      "upbeat feel good pop",
+      "upbeat feel good",
       "indie",
       "pop"
     ]
@@ -8455,7 +8455,7 @@ export const productionSongRecords = [
     "metadataText": "indie pop, upbeat feel-good pop, indie rock-pop\n\nIndie pop with upbeat four-on-the-floor energy, bright jangly guitars, tight snare-driven drums, playful synth plucks, and rising chorus lifts; verse stays lean and bouncy, pre-chorus opens with stacked harmonies and a rising bass line, chorus bursts wide with gang doubles and a sing-back hook, bridge drops to claps and a filtered vocal moment before the final festival-sized repeat, Female vocals, glossy but warm mix, crisp and punchy, playful, feel-good, uplifting, bright, female vocals, indie pop",
     "tags": [
       "indie pop",
-      "upbeat feel good pop",
+      "upbeat feel good",
       "indie rock pop",
       "indie",
       "pop"
@@ -8556,7 +8556,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "alternative pop",
-      "cinematic synth pop ballad",
+      "cinematic synth pop",
       "indie",
       "pop"
     ]
@@ -8608,7 +8608,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "lo fi",
-      "indie pop lo fi",
+      "indie pop lo",
       "indie",
       "pop"
     ]
@@ -8683,7 +8683,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "synth pop",
-      "retro groove",
+      "groove",
       "indie",
       "pop"
     ]
@@ -8784,7 +8784,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "lo fi",
-      "warm vocal",
+      "warm",
       "indie",
       "pop"
     ]
@@ -8958,7 +8958,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Indie/Indie Pop/Rain On My Sleeve",
     "metadataText": "lo-fi indie pop, lo-fi, indie pop\n\nLo-fi indie pop with laid-back midtempo swing, soft guitar-led groove, brushed drums, and warm tape saturation; verse stays intimate and close, pre-chorus opens with layered harmonies and filtered percussion, chorus lifts with stacked doubles and a simple sing-back hook, Add rainy room noise, reversed swells into transitions, and little chord-change sighs, Cozy male vocals, close-mic and breathy, with gentle delay throws on key lines; mix feels warm, dusty, and modern-intimate, vocal, soft, lo-fi, indie pop, warm, emotional, male vocals",
     "tags": [
-      "lo fi indie pop",
+      "lo fi indie",
       "lo fi",
       "indie pop",
       "indie",
@@ -9084,9 +9084,9 @@ export const productionSongRecords = [
     "metadataText": "indie pop, pop, upbeat indie electronic\n\nIndie pop with bright guitar riffs, punchy energetic drums, playful synth pops, and a driving festival-ready tempo; verse rides tight palm-muted guitars and clipped kicks, pre-chorus opens with rising claps and a bass lift, chorus hits wide with stacked harmonies and bouncy lead guitars, Female vocals with close-mic verses, layered doubles on hooks, and airy ad-libs, Ear candy: reverse cymbal swells, handclap lifts, and a glockenspiel tag before each chorus, Bright, glossy, and open-air, feel-good, female vocals, uplifting, bright, playful, indie pop",
     "tags": [
       "indie pop",
-      "pop",
       "upbeat indie electronic",
-      "indie"
+      "indie",
+      "pop"
     ]
   },
   {
@@ -10745,7 +10745,7 @@ export const productionSongRecords = [
     "metadataText": "bass house, electronic dance music (EDM), electro house\n\nBass house with a relentless four-on-the-floor shove, swung hats, filthy offbeat bass pulses, and punchy kick drums driving every section, Verse rides lean and tense with clipped vocal lines; pre-chorus strips to a filtered bass drone and snapped handclaps; chorus slams into distorted synth stabs, crowd shouts, and explosive drop energy, Lead vocal stays close-mic and aggressive with doubled hook lines, gang ad-libs, delay throws, and chopped callbacks, Ear candy: reverse risers before each drop, sub-impact hits on transitions, and metallic rave blips, Mix is dark, huge, and club-bright",
     "tags": [
       "bass house",
-      "electronic dance music edm",
+      "electronic dance",
       "electro house",
       "electronic",
       "house"
@@ -10894,8 +10894,7 @@ export const productionSongRecords = [
     "metadataText": "bass house, EDM, festival-driven electronic dance music\n\nBass house with a driving four-on-the-floor pulse, swung offbeat bass punches, punchy kick drums, distorted synth stabs, and explosive drop resets; verse rides lean and tense, pre-chorus tightens with rising chants, chorus slams open with crowd callouts and big gang hooks, Vocal is gritty and close-mic in verses, stacked doubles and shouted ad-libs on the hook, with delay throws on key words, Risers, reversed hits, sub sweeps, and clap fills bridge each section; dark, glossy, wide mix built for the festival pit",
     "tags": [
       "bass house",
-      "edm",
-      "festival driven electronic dance music",
+      "electronic dance",
       "electronic",
       "house"
     ]
@@ -11110,7 +11109,7 @@ export const productionSongRecords = [
     "metadataText": "house, electronic dance music (EDM), club track\n\nHouse with a steady four-on-the-floor pulse, syncopated percussion, and deep bass movement; verse-like sections stay lean with kick, sub, and clipped rim textures, the lift brings filtered synth chords and bright vocal-chop accents, and the drop opens into wider pads and bigger drum snaps, DJ-friendly transitions use risers, reverse swells, and short break-stop fills, Polished, warm, punchy club mix with glossy low end and crisp high-end sheen, deep, smooth, soulful, stylish, vocal, rhythmic, warm, groovy, uplifting, electronic",
     "tags": [
       "house",
-      "electronic dance music edm",
+      "electronic dance",
       "club track",
       "electronic"
     ]
@@ -11184,7 +11183,7 @@ export const productionSongRecords = [
     "metadataText": "bass house, electronic dance music (EDM), rave/dark techno\n\nBass house anthem with driving four-on-the-floor kick, swung percussion, and aggressive distorted basslines; verse rides tight vocal chops and sparse stabs, pre-chorus strips to filtered drums and rising tension, chorus hits with explosive drop, crowd chant, and hammering sub, Lead vocal is close-mic and clipped in verses, doubled and shouted on hooks, with ad-lib pings and delay throws, Ear candy: reversed risers into each drop, metal scrape transitions, laser zaps between lines, Bright, punchy, and club-wide with a dark rave edge",
     "tags": [
       "bass house",
-      "electronic dance music edm",
+      "electronic dance",
       "rave dark techno",
       "electronic",
       "house"
@@ -11235,7 +11234,7 @@ export const productionSongRecords = [
     "tags": [
       "bass house",
       "dance electronic",
-      "big room club rave",
+      "big room club",
       "electronic",
       "house"
     ]
@@ -11642,7 +11641,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Techno/Basslines Across the Arabian Sands",
     "metadataText": "dub, dub techno, hypnotic\n\nDark dub techno with hypnotic half-time kick pulse, deep echoing basslines, spacious atmospheric textures, reggae-inspired dub delays, and sparse warehouse percussion; verse sections breathe with sub pressure and filtered chord haze, mid-track breaks open into tape echo trails and reversed swells, then the groove returns with tighter rims and ghostly snaps, Processed dub throws, long stereo tails, and subtle vinyl grit, Wide, shadowy, subterranean mix with heavy low-end depth, deep, dub, dub techno, hypnotic, reggae",
     "tags": [
-      "dub",
       "dub techno",
       "hypnotic",
       "electronic",
@@ -11666,7 +11664,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Techno/Basslines Across the Skyline",
     "metadataText": "dub, dub techno, hypnotic\n\nDark dub techno with hypnotic half-time kick pulse, deep echoing basslines, spacious atmospheric textures, reggae-inspired dub delays, and sparse warehouse percussion; verse sections breathe with sub pressure and filtered chord haze, mid-track breaks open into tape echo trails and reversed swells, then the groove returns with tighter rims and ghostly snaps, Processed dub throws, long stereo tails, and subtle vinyl grit, Wide, shadowy, subterranean mix with heavy low-end depth, deep, dub, dub techno, hypnotic, reggae",
     "tags": [
-      "dub",
       "dub techno",
       "hypnotic",
       "electronic",
@@ -11690,7 +11687,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Techno/Basslines of the Ancient Tribe",
     "metadataText": "dub, dub techno, hypnotic\n\nDark dub techno with hypnotic half-time kick pulse, deep echoing basslines, spacious atmospheric textures, reggae-inspired dub delays, and sparse warehouse percussion; verse sections breathe with sub pressure and filtered chord haze, mid-track breaks open into tape echo trails and reversed swells, then the groove returns with tighter rims and ghostly snaps, Processed dub throws, long stereo tails, and subtle vinyl grit, Wide, shadowy, subterranean mix with heavy low-end depth, deep, dub, dub techno, hypnotic, reggae",
     "tags": [
-      "dub",
       "dub techno",
       "hypnotic",
       "electronic",
@@ -11714,7 +11710,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Techno/Concrete Rhythm Machine",
     "metadataText": "dub, dub techno, hypnotic\n\nDark dub techno with hypnotic half-time kick pulse, deep echoing basslines, spacious atmospheric textures, reggae-inspired dub delays, and sparse warehouse percussion; verse sections breathe with sub pressure and filtered chord haze, mid-track breaks open into tape echo trails and reversed swells, then the groove returns with tighter rims and ghostly snaps, Processed dub throws, long stereo tails, and subtle vinyl grit, Wide, shadowy, subterranean mix with heavy low-end depth, deep, dub, dub techno, hypnotic, reggae",
     "tags": [
-      "dub",
       "dub techno",
       "hypnotic",
       "electronic",
@@ -11738,7 +11733,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Techno/Cyber Rhythm Protocol",
     "metadataText": "dub, dub techno, hypnotic\n\nDark dub techno with hypnotic half-time kick pulse, deep echoing basslines, spacious atmospheric textures, reggae-inspired dub delays, and sparse warehouse percussion; verse sections breathe with sub pressure and filtered chord haze, mid-track breaks open into tape echo trails and reversed swells, then the groove returns with tighter rims and ghostly snaps, Processed dub throws, long stereo tails, and subtle vinyl grit, Wide, shadowy, subterranean mix with heavy low-end depth, deep, dub, dub techno, hypnotic, reggae",
     "tags": [
-      "dub",
       "dub techno",
       "hypnotic",
       "electronic",
@@ -11762,7 +11756,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Techno/Dark Frequency Transmission",
     "metadataText": "dub, dub techno, hypnotic\n\nDark dub techno with hypnotic half-time kick pulse, deep echoing basslines, spacious atmospheric textures, reggae-inspired dub delays, and sparse warehouse percussion; verse sections breathe with sub pressure and filtered chord haze, mid-track breaks open into tape echo trails and reversed swells, then the groove returns with tighter rims and ghostly snaps, Processed dub throws, long stereo tails, and subtle vinyl grit, Wide, shadowy, subterranean mix with heavy low-end depth, deep, dub, dub techno, hypnotic, reggae",
     "tags": [
-      "dub",
       "dub techno",
       "hypnotic",
       "electronic",
@@ -11786,7 +11779,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Techno/Dark Rooms & Loud Speakers",
     "metadataText": "dub, dub techno, hypnotic\n\nDark dub techno with hypnotic half-time kick pulse, deep echoing basslines, spacious atmospheric textures, reggae-inspired dub delays, and sparse warehouse percussion; verse sections breathe with sub pressure and filtered chord haze, mid-track breaks open into tape echo trails and reversed swells, then the groove returns with tighter rims and ghostly snaps, Processed dub throws, long stereo tails, and subtle vinyl grit, Wide, shadowy, subterranean mix with heavy low-end depth, deep, dub, dub techno, hypnotic, reggae",
     "tags": [
-      "dub",
       "dub techno",
       "hypnotic",
       "electronic",
@@ -11810,7 +11802,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Techno/Desert Pulse After Midnight",
     "metadataText": "dub, dub techno, hypnotic\n\nDark dub techno with hypnotic half-time kick pulse, deep echoing basslines, spacious atmospheric textures, reggae-inspired dub delays, and sparse warehouse percussion; verse sections breathe with sub pressure and filtered chord haze, mid-track breaks open into tape echo trails and reversed swells, then the groove returns with tighter rims and ghostly snaps, Processed dub throws, long stereo tails, and subtle vinyl grit, Wide, shadowy, subterranean mix with heavy low-end depth, deep, dub, dub techno, hypnotic, reggae",
     "tags": [
-      "dub",
       "dub techno",
       "hypnotic",
       "electronic",
@@ -11834,7 +11825,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Techno/Drums Beneath the Neon Moon",
     "metadataText": "dub, dub techno, hypnotic\n\nDark dub techno with hypnotic half-time kick pulse, deep echoing basslines, spacious atmospheric textures, reggae-inspired dub delays, and sparse warehouse percussion; verse sections breathe with sub pressure and filtered chord haze, mid-track breaks open into tape echo trails and reversed swells, then the groove returns with tighter rims and ghostly snaps, Processed dub throws, long stereo tails, and subtle vinyl grit, Wide, shadowy, subterranean mix with heavy low-end depth, deep, dub, dub techno, hypnotic, reggae",
     "tags": [
-      "dub",
       "dub techno",
       "hypnotic",
       "electronic",
@@ -11858,7 +11848,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Techno/Dub Echoes After Midnight",
     "metadataText": "dub, dub techno, hypnotic\n\nDark dub techno with hypnotic half-time kick pulse, deep echoing basslines, spacious atmospheric textures, reggae-inspired dub delays, and sparse warehouse percussion; verse sections breathe with sub pressure and filtered chord haze, mid-track breaks open into tape echo trails and reversed swells, then the groove returns with tighter rims and ghostly snaps, Processed dub throws, long stereo tails, and subtle vinyl grit, Wide, shadowy, subterranean mix with heavy low-end depth, deep, dub, dub techno, hypnotic, reggae",
     "tags": [
-      "dub",
       "dub techno",
       "hypnotic",
       "electronic",
@@ -11882,7 +11871,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Techno/Echoes From Berlin After Dark",
     "metadataText": "dub, dub techno, hypnotic\n\nDub techno with hypnotic four-on-the-floor kicks, deep echoing basslines, reggae-inspired delay feedback, and spacious atmospheric textures; verse-like sections open with sparse kick, sub, and drifting tape echoes, then the groove widens with filtered chords and ping-pong dub throws, while a breakdown strips to rumble and reverb tails before the final pulse returns, Intimate close-mic feel, dark, wide, and warehouse-heavy, hypnotic, reggae, deep, dub techno, dub",
     "tags": [
-      "dub",
       "dub techno",
       "hypnotic",
       "electronic",
@@ -11906,7 +11894,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Techno/Echoes From the Jungle Rave",
     "metadataText": "dub, dub techno, hypnotic\n\nDub techno with hypnotic four-on-the-floor kicks, deep echoing basslines, reggae-inspired delay feedback, and spacious atmospheric textures; verse-like sections open with sparse kick, sub, and drifting tape echoes, then the groove widens with filtered chords and ping-pong dub throws, while a breakdown strips to rumble and reverb tails before the final pulse returns, Intimate close-mic feel, dark, wide, and warehouse-heavy, hypnotic, reggae, deep, dub techno, dub",
     "tags": [
-      "dub",
       "dub techno",
       "hypnotic",
       "electronic",
@@ -11930,7 +11917,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Techno/Echoes Through Concrete Walls",
     "metadataText": "dub, dub techno, hypnotic\n\nDub techno with hypnotic four-on-the-floor kicks, deep echoing basslines, reggae-inspired delay feedback, and spacious atmospheric textures; verse-like sections open with sparse kick, sub, and drifting tape echoes, then the groove widens with filtered chords and ping-pong dub throws, while a breakdown strips to rumble and reverb tails before the final pulse returns, Intimate close-mic feel, dark, wide, and warehouse-heavy, hypnotic, reggae, deep, dub techno, dub",
     "tags": [
-      "dub",
       "dub techno",
       "hypnotic",
       "electronic",
@@ -11954,7 +11940,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Techno/Electric Motion After Midnight",
     "metadataText": "dub, dub techno, hypnotic\n\nDub techno with hypnotic four-on-the-floor kicks, deep echoing basslines, reggae-inspired delay feedback, and spacious atmospheric textures; verse-like sections open with sparse kick, sub, and drifting tape echoes, then the groove widens with filtered chords and ping-pong dub throws, while a breakdown strips to rumble and reverb tails before the final pulse returns, Intimate close-mic feel, dark, wide, and warehouse-heavy, hypnotic, reggae, deep, dub techno, dub",
     "tags": [
-      "dub",
       "dub techno",
       "hypnotic",
       "electronic",
@@ -11978,7 +11963,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Techno/Ghost Frequencies in the Fog",
     "metadataText": "dub, dub techno, hypnotic\n\nDub techno with hypnotic four-on-the-floor kicks, deep echoing basslines, reggae-inspired delay feedback, and spacious atmospheric textures; verse-like sections open with sparse kick, sub, and drifting tape echoes, then the groove widens with filtered chords and ping-pong dub throws, while a breakdown strips to rumble and reverb tails before the final pulse returns, Intimate close-mic feel, dark, wide, and warehouse-heavy, hypnotic, reggae, deep, dub techno, dub",
     "tags": [
-      "dub",
       "dub techno",
       "hypnotic",
       "electronic",
@@ -12002,7 +11986,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Techno/Ghosts Beneath the Subwoofers",
     "metadataText": "dub, dub techno, hypnotic\n\nDub techno with hypnotic four-on-the-floor kicks, deep echoing basslines, reggae-inspired delay feedback, and spacious atmospheric textures; verse-like sections open with sparse kick, sub, and drifting tape echoes, then the groove widens with filtered chords and ping-pong dub throws, while a breakdown strips to rumble and reverb tails before the final pulse returns, Intimate close-mic feel, dark, wide, and warehouse-heavy, hypnotic, reggae, deep, dub techno, dub",
     "tags": [
-      "dub",
       "dub techno",
       "hypnotic",
       "electronic",
@@ -12026,7 +12009,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Techno/Hypnotic Motion Sequence",
     "metadataText": "dub, dub techno, hypnotic\n\nDub techno with hypnotic four-on-the-floor kicks, deep echoing basslines, reggae-inspired delay feedback, and spacious atmospheric textures; verse-like sections open with sparse kick, sub, and drifting tape echoes, then the groove widens with filtered chords and ping-pong dub throws, while a breakdown strips to rumble and reverb tails before the final pulse returns, Intimate close-mic feel, dark, wide, and warehouse-heavy, hypnotic, reggae, deep, dub techno, dub",
     "tags": [
-      "dub",
       "dub techno",
       "hypnotic",
       "electronic",
@@ -13655,7 +13637,7 @@ export const productionSongRecords = [
     "tags": [
       "metal",
       "cinematic metal",
-      "hardcore punk or metalcore",
+      "hardcore punk or",
       "commercial"
     ]
   },
@@ -13678,7 +13660,7 @@ export const productionSongRecords = [
     "tags": [
       "metal",
       "cinematic metal",
-      "hardcore punk or metalcore",
+      "hardcore punk or",
       "commercial"
     ]
   },
@@ -13701,7 +13683,7 @@ export const productionSongRecords = [
     "tags": [
       "metal",
       "cinematic metal",
-      "hardcore punk or metalcore",
+      "hardcore punk or",
       "commercial"
     ]
   },
@@ -13724,7 +13706,7 @@ export const productionSongRecords = [
     "tags": [
       "metal",
       "cinematic metal",
-      "hardcore punk or metalcore",
+      "hardcore punk or",
       "commercial"
     ]
   },
@@ -13747,7 +13729,7 @@ export const productionSongRecords = [
     "tags": [
       "metal",
       "cinematic metal",
-      "hardcore punk or metalcore",
+      "hardcore punk or",
       "commercial"
     ]
   },
@@ -14402,7 +14384,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Backseat Gospel",
     "metadataText": "Melodic hip-hop and rap with swung drum grooves\n\n, warm sub pulses, and soulful piano motifs; verse rides intimate and spacious, pre-chorus lifts with filtered ad-libs and stacked echoes, chorus lands on a sticky melodic chant with doubled lead and gang responses, Use reverse swells, vinyl haze, and delay throws into transitions, Polished, cinematic, close-mic, and glossy, rap, hip-hop, vocal, emotional, smooth, warm, soulful",
     "tags": [
-      "melodic hip hop and rap with swung drum grooves",
+      "hip hop rap",
       "commercial",
       "hip",
       "hop",
@@ -14427,22 +14409,21 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Backseat Halo",
     "metadataText": "Smooth melodic hip-hop and rap with swung drums, warm sub pulses, and soulful piano-driven progressions; verse rides laid-back and intimate, pre-chorus opens with filtered pads and stacked harmonies, chorus lands with a chantable melodic hook and doubled lead vocal, Bridge pulls back to half-time with airy textures, reverse swells, and delay throws, Polished, wide, cinematic urban mix with close-mic presence, warm, hip-hop, soulful, smooth, emotional, vocal, rap",
     "tags": [
-      "smooth melodic hip hop and rap with swung drums",
+      "hip hop rap",
       "warm sub pulses",
-      "and soulful piano driven progressions verse rides laid back and intimate",
-      "pre chorus opens with filtered pads and stacked harmonies",
-      "chorus lands with a chantable melodic hook and doubled lead vocal",
-      "bridge pulls back to half time with airy textures",
-      "reverse swells",
-      "and delay throws",
+      "soulful piano progressions",
+      "reverse",
       "polished",
-      "wide",
-      "cinematic urban mix with close mic presence",
+      "cinematic urban",
       "warm",
       "hip hop",
       "soulful",
       "smooth",
-      "emotional"
+      "emotional",
+      "commercial",
+      "hip",
+      "hop",
+      "rap"
     ]
   },
   {
@@ -14463,7 +14444,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Bend For The Crown",
     "metadataText": "Aggressive modern hip-hop with rapid-fire triplet pockets\n\n syncopated punch drums, and dark cinematic synth stabs; verse rides tense minimal groove with tight doubles and clipped ad-libs, pre-chorus strips to bass and vocal chants, chorus slams with stacked gang hooks and octave bass hits, bridge drops to half-time with filtered voice and risers before a final explosive lift, Raw close-mic lead, gritty shouted layers, sharp delay throws, bright punchy mix with huge low end, lyrical, dramatic, hip-hop, rap, vocal, rapid, emotional, beats, raw",
     "tags": [
-      "aggressive modern hip hop with rapid fire triplet pockets",
+      "modern hip hop",
       "commercial",
       "hip",
       "hop",
@@ -14488,7 +14469,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Black Coat Verdict",
     "metadataText": "Hard-hitting hip-hop at a breakneck tempo with trap swing\n\n jagged hi-hats, booming kick-snare hits, and tense bass pulses, Verse 1 runs dense and confrontational; pre-chorus tightens with half-time drums and stacked shouts; chorus snaps into a short chant with gang doubles and delay throws, Bridge cuts to filtered pads and a lone vocal before the final explode, Dry, upfront lead with gritty doubles, wide ad-libs, and punchy, cinematic mix, rapid, raw, rap, lyrical, emotional, hip-hop, beats, dramatic, vocal",
     "tags": [
-      "hard hitting hip hop at a breakneck tempo with trap swing",
+      "trap swing",
       "commercial",
       "hip",
       "hop",
@@ -14513,7 +14494,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Blacktop Crown",
     "metadataText": "Hip-hop and rap anthem with hard-hitting mid-tempo trap bounce\n\n deep sub pulses, punchy drums, and tense atmospheric synth lines; verse rides sparse and controlled, pre-chorus opens with stacked chants and rising tension, chorus hits with gang doubles and a short chantable hook, Vocal delivery stays close-mic and confident in verses, wider doubled on the hook, with ad-lib throws at line ends, Ear candy includes reversed swells into the drop, metallic risers, and tape-stop flickers before the final chorus, Bright, heavy, cinematic mix with glossy low-end weight, rhythmic, vocal, hip-hop, dynamic, rap, emotional, motivational, deep",
     "tags": [
-      "hip hop and rap anthem with hard hitting mid tempo trap bounce",
+      "rap anthem",
       "commercial",
       "hip",
       "hop",
@@ -14561,21 +14542,21 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Blacktop Verdict",
     "metadataText": "Hard-hitting lyrical rap at a blistering tempo with syncopated drums, grim minor-key synth stabs, and bass that punches under every line; verse runs dense and agile, pre-chorus narrows to half-time tension, chorus snaps into a chantable repeat with gang shouts, bridge drops to vocal-and-kick only before the final surge, Lead rap stays close-mic and aggressive with doubled hooks, ad-lib pings, and sharp delay throws, Bright, aggressive, cinematic mix, lyrical, dramatic, hip-hop, rap, vocal, rapid, emotional, beats, raw",
     "tags": [
-      "hard hitting lyrical rap at a blistering tempo with syncopated drums",
-      "grim minor key synth stabs",
-      "and bass that punches under every line verse runs dense and agile",
-      "pre chorus narrows to half time tension",
-      "chorus snaps into a chantable repeat with gang shouts",
-      "bridge drops to vocal and kick only before the final surge",
-      "lead rap stays close mic and aggressive with doubled hooks",
-      "ad lib pings",
-      "and sharp delay throws",
+      "lyrical rap",
+      "grim minor key",
+      "bass that punches",
+      "pings",
       "bright",
       "aggressive",
-      "cinematic mix",
+      "cinematic",
       "lyrical",
       "dramatic",
       "hip hop",
+      "emotional",
+      "beats",
+      "commercial",
+      "hip",
+      "hop",
       "rap"
     ]
   },
@@ -14597,22 +14578,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Break Me",
     "metadataText": "Hard-hitting modern hip-hop with rapid-fire trap swing, syncopated hi-hats, punchy snares, and a tense half-time bounce; verse rides sparse bass and stabby piano hits, pre-chorus tightens with risers and clipped ad-libs, chorus lands with stacked gang hooks and an octave sub lift, Close-mic lead vocal with aggressive doubles, selective delay throws on punchlines, and shouted responses, Dark, cinematic, bright-punched mix with explosive low end and sharp transient snap, hip-hop, raw, vocal, lyrical, emotional, beats, rap, rapid, dramatic",
     "tags": [
-      "hard hitting modern hip hop with rapid fire trap swing",
+      "trap swing",
       "syncopated hi hats",
-      "punchy snares",
-      "and a tense half time bounce verse rides sparse bass and stabby piano hits",
-      "pre chorus tightens with risers and clipped ad libs",
-      "chorus lands with stacked gang hooks and an octave sub lift",
-      "close mic lead vocal with aggressive doubles",
-      "selective delay throws on punchlines",
-      "and shouted responses",
+      "punchy drums",
+      "tense bounce",
       "dark",
       "cinematic",
-      "bright punched mix with explosive low end and sharp transient snap",
+      "bright punched",
       "hip hop",
-      "raw",
-      "vocal",
-      "lyrical"
+      "lyrical",
+      "emotional",
+      "beats",
+      "dramatic",
+      "commercial",
+      "hip",
+      "hop",
+      "rap"
     ]
   },
   {
@@ -14633,22 +14614,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Bus Stop Psalm",
     "metadataText": "Conscious hip-hop with west-coast swing, jazzy chord stabs, soulful chopped samples, warm bassline glide, and laid-back but tense drum pockets; verse 1 rides conversational storytelling, pre-chorus narrows to half-time spoken-word tension, chorus lands on a short chant with doubled ad-libs and gang repeats, verse 2 switches to tighter internal rhyme and faster cadence, bridge drops to near-silence with close-mic confessions, final chorus returns with stacked harmonies, turntable flourishes, and vinyl crackle, Intimate close-mic lead, occasional whispered lines, dry snare crack, wide cinematic mix with punchy low end, hip-hop, dynamic, rap, soulful, warm, emotional, lyrical, raw, jazz, poetic, deep",
     "tags": [
-      "conscious hip hop with west coast swing",
+      "west coast swing",
       "jazzy chord stabs",
-      "soulful chopped samples",
-      "warm bassline glide",
-      "and laid back but tense drum pockets verse 1 rides conversational storytelling",
-      "pre chorus narrows to half time spoken word tension",
-      "chorus lands on a short chant with doubled ad libs and gang repeats",
-      "verse 2 switches to tighter internal rhyme and faster cadence",
-      "bridge drops to near silence with close mic confessions",
-      "final chorus returns with stacked harmonies",
-      "turntable flourishes",
-      "and vinyl crackle",
-      "intimate close mic lead",
-      "occasional whispered lines",
-      "dry snare crack",
-      "wide cinematic mix with punchy low end"
+      "soul samples",
+      "warm bass",
+      "laid back",
+      "spoken word",
+      "whispered",
+      "punchy drums",
+      "cinematic",
+      "hip hop",
+      "dynamic",
+      "soulful",
+      "warm",
+      "emotional",
+      "lyrical",
+      "jazz"
     ]
   },
   {
@@ -14669,22 +14650,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Cashmere Concrete",
     "metadataText": "Modern hip-hop/trap anthem with a mid-tempo head-nod groove, swung hi-hats, sliding sub hits, and crisp clap snaps; verse rides sparse with tense synth pads and tight drum pockets, pre-chorus opens with filtered chords and rising vocal stacks, chorus drops wide with stacked ad-libs and a hard bass motif, Rap lead stays close-mic and confident, with doubled hook lines, delay throws, and chant replies, Ear candy: reversed swells into each hook, metallic ticks on transitions, and a sub drop before the final chorus, Polished, cinematic, dark, and radio-ready, dynamic, rap, vocal, emotional, hip-hop, motivational, rhythmic, deep",
     "tags": [
-      "modern hip hop trap anthem with a mid tempo head nod groove",
+      "trap anthem",
       "swung hi hats",
-      "sliding sub hits",
-      "and crisp clap snaps verse rides sparse with tense synth pads and tight drum pockets",
-      "pre chorus opens with filtered chords and rising vocal stacks",
-      "chorus drops wide with stacked ad libs and a hard bass motif",
-      "rap lead stays close mic and confident",
-      "with doubled hook lines",
-      "delay throws",
-      "and chant replies",
-      "ear candy reversed swells into each hook",
-      "metallic ticks on transitions",
-      "and a sub drop before the final chorus",
+      "sub bass",
+      "punchy drums",
       "polished",
       "cinematic",
-      "dark"
+      "dark",
+      "dynamic",
+      "emotional",
+      "hip hop",
+      "motivational",
+      "rhythmic",
+      "deep",
+      "commercial",
+      "hip",
+      "hop"
     ]
   },
   {
@@ -14705,22 +14686,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Corner Store Psalm",
     "metadataText": "Conscious rap with a west-coast bounce, swung drums, warm basslines, jazz piano stabs, dusty soul samples, and dynamic flow switches, Verse 1 stays intimate and low-lit; pre-chorus opens with stacked harmonies and spoken-word tension; chorus snaps to a chant over wide drums and brass accents, Final verse speeds up, then a brief bridge strips to sample and voice before the last lift, Close-mic lead, doubled hook lines, ad-lib echoes, vinyl crackle, tape-stop turns, and a bright yet earthy mix, jazz, rap, soulful, raw, warm, poetic, dynamic, hip-hop, deep, lyrical, emotional",
     "tags": [
-      "conscious rap with a west coast bounce",
+      "west coast bounce",
       "swung drums",
-      "warm basslines",
-      "jazz piano stabs",
-      "dusty soul samples",
-      "and dynamic flow switches",
-      "verse 1 stays intimate and low lit pre chorus opens with stacked harmonies and spoken word tension chorus snaps to a chant over wide drums and brass accents",
-      "final verse speeds up",
-      "then a brief bridge strips to sample and voice before the last lift",
-      "close mic lead",
-      "doubled hook lines",
-      "ad lib echoes",
-      "vinyl crackle",
-      "tape stop turns",
-      "and a bright yet earthy mix",
-      "jazz"
+      "warm bass",
+      "jazz piano",
+      "soul samples",
+      "dynamic flow",
+      "spoken word",
+      "hook",
+      "echoes",
+      "tape stop",
+      "earthy",
+      "jazz",
+      "soulful",
+      "warm",
+      "poetic",
+      "dynamic"
     ]
   },
   {
@@ -14741,22 +14722,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/County Shirt",
     "metadataText": "Conscious rap with a west-coast swing, swung drums, warm bass, chopped soul samples, and dusty jazz touches; verse one rides intimate storytelling, verse two tightens with faster flow switches, pre-chorus strips to bass and rim clicks, chorus opens with stacked doubles and a chantable gang hook, bridge drops to spoken-word over brushed drums, final chorus returns with extra harmony throws, Close-mic lead, raw ad-libs, cinematic and punchy mix, raw, lyrical, deep, emotional, soulful, hip-hop, poetic, rap, dynamic, jazz, warm",
     "tags": [
-      "conscious rap with a west coast swing",
+      "west coast swing",
       "swung drums",
       "warm bass",
-      "chopped soul samples",
-      "and dusty jazz touches verse one rides intimate storytelling",
-      "verse two tightens with faster flow switches",
-      "pre chorus strips to bass and rim clicks",
-      "chorus opens with stacked doubles and a chantable gang hook",
-      "bridge drops to spoken word over brushed drums",
-      "final chorus returns with extra harmony throws",
-      "close mic lead",
-      "raw ad libs",
-      "cinematic and punchy mix",
-      "raw",
+      "soul samples",
+      "dusty jazz",
+      "spoken word",
+      "cinematic",
       "lyrical",
-      "deep"
+      "deep",
+      "emotional",
+      "soulful",
+      "hip hop",
+      "poetic",
+      "dynamic",
+      "jazz",
+      "warm"
     ]
   },
   {
@@ -14777,22 +14758,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Cracked Bus Window",
     "metadataText": "Conscious rap with a laid-back West Coast swing and swung drum pockets; verses ride dusty jazz chords, upright-bass warmth, and cinematic snares, then pre-choruses thin to handclaps and filtered horns, Chorus opens with layered gang doubles, spoken-word pockets, and a short chant, Bridge drops to intimate close-mic voice, reversed swells, and tape hiss, then final chorus blooms wide and soulful, bright yet gritty, lyrical, dynamic, soulful, deep, raw, hip-hop, jazz, emotional, rap, poetic, warm",
     "tags": [
-      "conscious rap with a laid back west coast swing and swung drum pockets verses ride dusty jazz chords",
+      "west coast swing",
       "upright bass warmth",
-      "and cinematic snares",
-      "then pre choruses thin to handclaps and filtered horns",
-      "chorus opens with layered gang doubles",
-      "spoken word pockets",
-      "and a short chant",
-      "bridge drops to intimate close mic voice",
-      "reversed swells",
-      "and tape hiss",
-      "then final chorus blooms wide and soulful",
-      "bright yet gritty",
+      "punchy drums",
+      "spoken word",
+      "short chant",
+      "tape hiss",
+      "gritty",
       "lyrical",
       "dynamic",
       "soulful",
-      "deep"
+      "deep",
+      "hip hop",
+      "jazz",
+      "emotional",
+      "poetic",
+      "warm"
     ]
   },
   {
@@ -14813,22 +14794,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Crown",
     "metadataText": "Pop rock anthem with driving four-on-the-floor drums, crunchy guitar riff verses, and big half-time choruses; verse stays lean with palm-muted guitars and tight bass, pre-chorus lifts with stacked \"oh-oh\" harmonies, chorus opens wide with gang vocals and soaring lead doubles, Bridge strips to toms and a lone vocal, then final chorus lands with extra guitars, claps, and delay throws on the hook, Bright, polished, stadium-sized mix with emotional close-mic verses and radio-ready punch, pop rock, heartfelt, uplifting, dynamic, rhythmic, rock, emotional, inspiring, pop",
     "tags": [
-      "pop rock anthem with driving four on the floor drums",
-      "crunchy guitar riff verses",
-      "and big half time choruses verse stays lean with palm muted guitars and tight bass",
-      "pre chorus lifts with stacked oh oh harmonies",
-      "chorus opens wide with gang vocals and soaring lead doubles",
-      "bridge strips to toms and a lone vocal",
-      "then final chorus lands with extra guitars",
-      "claps",
-      "and delay throws on the hook",
+      "pop rock",
+      "guitar riff",
       "bright",
       "polished",
-      "stadium sized mix with emotional close mic verses and radio ready punch",
-      "pop rock",
+      "stadium sized",
       "heartfelt",
       "uplifting",
-      "dynamic"
+      "dynamic",
+      "rhythmic",
+      "rock",
+      "emotional",
+      "inspiring",
+      "commercial",
+      "hip",
+      "hop",
+      "rap"
     ]
   },
   {
@@ -14849,22 +14830,20 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Cut The Lock",
     "metadataText": "Hard-hitting modern hip-hop with rapid-fire 96 BPM swing, razor-edged kick-snare patterns, booming sub-bass and tense minor-key stabs; verse rides dense and breathless, pre-chorus strips to drums and low drone, chorus slams with stacked doubles and gang shouts on the anchor line, Ad-libs pan wide, delay throws hit the last word, a reversed swell and snare climb bridge the drop, Bright, punchy, cinematic mix with a gritty center, lyrical, rap, raw, emotional, beats, hip-hop, rapid, dramatic, vocal",
     "tags": [
-      "razor edged kick snare patterns",
-      "booming sub bass and tense minor key stabs verse rides dense and breathless",
-      "pre chorus strips to drums and low drone",
-      "chorus slams with stacked doubles and gang shouts on the anchor line",
-      "ad libs pan wide",
-      "delay throws hit the last word",
-      "a reversed swell and snare climb bridge the drop",
+      "razor edged kick",
+      "booming sub bass",
       "bright",
       "punchy",
-      "cinematic mix with a gritty center",
+      "cinematic",
       "lyrical",
-      "rap",
-      "raw",
       "emotional",
       "beats",
-      "hip hop"
+      "hip hop",
+      "dramatic",
+      "commercial",
+      "hip",
+      "hop",
+      "rap"
     ]
   },
   {
@@ -14885,22 +14864,21 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Glass Road",
     "metadataText": "Melodic hip-hop and rap with soulful piano loops, warm 808 bounce, crisp drum grooves, and atmospheric textures; verse rides intimate and syncopated, pre-chorus opens with filtered chords and stacked ad-libs, chorus lands on a chantable melodic hook with doubled vocals, Bridge strips to piano and sub pulse, then final chorus returns wider with reverse swells and shimmering top-line details, Polished, cinematic, close-mic, and emotional with a modern glossy mix, hip-hop, vocal, soulful, smooth, rap, warm, emotional",
     "tags": [
-      "melodic hip hop and rap with soulful piano loops",
+      "hip hop rap",
       "warm 808 bounce",
       "crisp drum grooves",
-      "and atmospheric textures verse rides intimate and syncopated",
-      "pre chorus opens with filtered chords and stacked ad libs",
-      "chorus lands on a chantable melodic hook with doubled vocals",
-      "bridge strips to piano and sub pulse",
-      "then final chorus returns wider with reverse swells and shimmering top line details",
+      "atmospheric textures",
       "polished",
       "cinematic",
-      "close mic",
-      "and emotional with a modern glossy mix",
+      "emotional",
       "hip hop",
-      "vocal",
       "soulful",
-      "smooth"
+      "smooth",
+      "warm",
+      "commercial",
+      "hip",
+      "hop",
+      "rap"
     ]
   },
   {
@@ -14921,22 +14899,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Glass Teeth",
     "metadataText": "Hard-hitting rap anthem with rapid-fire boom-bap trap bounce, syncopated punch drums, nasty bass slides, and dark cinematic stabs; verse one runs dense and relentless, pre-chorus tightens with half-time tension, chorus snaps into a chantable call with gang doubles, and bridge drops to voice and sub before the final barrage, Close-mic lead, gritty ad-libs, delay throws on key bars, reverse swells and impact hits, bright punchy mix with heavy low-end, vocal, beats, emotional, dramatic, raw, lyrical, rap, hip-hop, rapid",
     "tags": [
-      "hard hitting rap anthem with rapid fire boom bap trap bounce",
+      "rap anthem",
       "syncopated punch drums",
       "nasty bass slides",
-      "and dark cinematic stabs verse one runs dense and relentless",
-      "pre chorus tightens with half time tension",
-      "chorus snaps into a chantable call with gang doubles",
-      "and bridge drops to voice and sub before the final barrage",
-      "close mic lead",
-      "gritty ad libs",
-      "delay throws on key bars",
-      "reverse swells and impact hits",
-      "bright punchy mix with heavy low end",
-      "vocal",
+      "dark cinematic stabs",
+      "gritty",
+      "reverse",
+      "bright punchy",
       "beats",
       "emotional",
-      "dramatic"
+      "dramatic",
+      "lyrical",
+      "hip hop",
+      "commercial",
+      "hip",
+      "hop",
+      "rap"
     ]
   },
   {
@@ -14980,22 +14958,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Grind in Gold",
     "metadataText": "Hip-hop and rap anthem with hard-hitting trap drums, deep 808 pulses, and atmospheric synth beds; verse rides tense and spacious with rhythmic pockets, pre-chorus tightens with doubled phrases and rising tension, chorus hits with gang chants and short hook repeats, Confident lead vocal, ad-lib stacks, delay throws on punch words, reversed swells into drops, metallic impacts and low-end sidechain pumps, Polished, dark, cinematic, and bass-heavy with a luxury street gloss, hip-hop, rap, motivational, rhythmic, emotional, dynamic, deep, vocal",
     "tags": [
-      "hip hop and rap anthem with hard hitting trap drums",
+      "rap anthem",
       "deep 808 pulses",
-      "and atmospheric synth beds verse rides tense and spacious with rhythmic pockets",
-      "pre chorus tightens with doubled phrases and rising tension",
-      "chorus hits with gang chants and short hook repeats",
-      "confident lead vocal",
-      "ad lib stacks",
-      "delay throws on punch words",
-      "reversed swells into drops",
-      "metallic impacts and low end sidechain pumps",
+      "atmospheric synth beds",
+      "confident",
+      "stacks",
       "polished",
       "dark",
       "cinematic",
-      "and bass heavy with a luxury street gloss",
+      "bass heavy",
       "hip hop",
-      "rap"
+      "motivational",
+      "rhythmic",
+      "emotional",
+      "dynamic",
+      "deep",
+      "commercial"
     ]
   },
   {
@@ -15016,22 +14994,21 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Knife to the Sky",
     "metadataText": "Hip-hop rap anthem with rapid-fire swing, tense half-time drops, and hard snare snaps; verse runs dense and breathless, pre-chorus strips to bass and handclaps, chorus hits with gang shouts and clipped doubles, Add reverse hit risers into each drop, sub-bass swells under the hook, and short delay throws on the last word of each bar, Bright, punchy mix with dark cinematic depth and close-mic snarling lead, rap, rapid, dramatic, vocal, lyrical, raw, emotional, hip-hop, beats",
     "tags": [
-      "hip hop rap anthem with rapid fire swing",
-      "tense half time drops",
-      "and hard snare snaps verse runs dense and breathless",
-      "pre chorus strips to bass and handclaps",
-      "chorus hits with gang shouts and clipped doubles",
-      "add reverse hit risers into each drop",
-      "sub bass swells under the hook",
-      "and short delay throws on the last word of each bar",
+      "rap anthem",
+      "tense time drops",
+      "hard snare snaps",
+      "sub bass under",
       "bright",
-      "punchy mix with dark cinematic depth and close mic snarling lead",
-      "rap",
-      "rapid",
+      "punchy",
       "dramatic",
-      "vocal",
       "lyrical",
-      "raw"
+      "emotional",
+      "hip hop",
+      "beats",
+      "commercial",
+      "hip",
+      "hop",
+      "rap"
     ]
   },
   {
@@ -15052,22 +15029,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Late Night",
     "metadataText": "R&B with a slow swaying groove, deep sub pulse, silky chord movement and crisp snap on the backbeat; verse stays intimate and close-mic with sparse keys and bass, pre-chorus lifts with stacked harmonies and a filtered swell, chorus opens into wide vocal layers and a chantable hook, Add delay throws on the last word of each hook line, soft ad-libs in the gaps, and a few reversed textures into the transitions, Polished, warm, cinematic, and sensual, rhythmic, deep, soulful, r&b, warm, sensual, lyrical, romantic, moody, heartfelt, vocal, contemporary, rich, emotional, smooth",
     "tags": [
-      "r and b with a slow swaying groove",
       "deep sub pulse",
-      "silky chord movement and crisp snap on the backbeat verse stays intimate and close mic with sparse keys and bass",
-      "pre chorus lifts with stacked harmonies and a filtered swell",
-      "chorus opens into wide vocal layers and a chantable hook",
-      "add delay throws on the last word of each hook line",
-      "soft ad libs in the gaps",
-      "and a few reversed textures into the transitions",
+      "silky chord movement",
       "polished",
       "warm",
       "cinematic",
-      "and sensual",
+      "sensual",
       "rhythmic",
       "deep",
       "soulful",
-      "r and b"
+      "lyrical",
+      "romantic",
+      "moody",
+      "heartfelt",
+      "contemporary",
+      "rich",
+      "emotional"
     ]
   },
   {
@@ -15087,22 +15064,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Midnight",
     "metadataText": "Electro hard rock with crushing riff attacks, punchy hybrid drums, and pulse-synced bass driving a fast, stomping groove; verse stays tight and tense with low guitar chugs and half-spoken lines, pre-chorus rises on stacked shouts and filtered synth swells, chorus blows open with gang vocals and huge melodic hooks, bridge drops to a stark vocal-and-tom groove before a final solo lift, Lead vocal is gritty and close, with doubled choruses, chopped ad-libs, and delay throws on key words, Metallic risers, reversed impacts, and glitch sparks bridge each section, Polished, cinematic, high-impact mix with bright guitars and massive low end, electric, hard rock, electronic, electro, soaring\n \n\n Midnight Reckless Revival Add a Caption Remix/Edit Electro hard rock with crushing riff attacks, punchy hybrid drums, and pulse-synced bass driving a fast, stomping groove; verse stays tight and tense with low guitar chugs and half-spoken lines, pre-chorus rises on stacked shouts and filtered synth swells, chorus blows open with gang vocals and huge melodic hooks, bridge drops to a stark vocal-and-tom groove before a final solo lift, Lead vocal is gritty and close, with doubled choruses, chopped ad-libs, and delay throws on key words, Metallic risers, reversed impacts, and glitch sparks bridge each section, Polished, cinematic, high-impact mix with bright guitars and massive low end, electric, hard rock, electronic, electro, soaring",
     "tags": [
-      "electro hard rock with crushing riff attacks",
+      "electro hard rock",
       "punchy hybrid drums",
-      "and pulse synced bass driving a fast",
-      "stomping groove verse stays tight and tense with low guitar chugs and half spoken lines",
-      "pre chorus rises on stacked shouts and filtered synth swells",
-      "chorus blows open with gang vocals and huge melodic hooks",
-      "bridge drops to a stark vocal and tom groove before a final solo lift",
-      "lead vocal is gritty and close",
-      "with doubled choruses",
-      "chopped ad libs",
-      "and delay throws on key words",
-      "metallic risers",
-      "reversed impacts",
-      "and glitch sparks bridge each section",
+      "pulse synced bass",
+      "groove",
+      "is gritty",
+      "chopped",
+      "glitch sparks",
       "polished",
-      "cinematic"
+      "cinematic",
+      "high impact",
+      "electric",
+      "hard rock",
+      "electronic",
+      "electro",
+      "soaring",
+      "commercial"
     ]
   },
   {
@@ -15122,22 +15099,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Midnight on the Glass",
     "metadataText": "R&B with a slow swaying groove, deep sub pulse, silky chord movement and crisp snap on the backbeat; verse stays intimate and close-mic with sparse keys and bass, pre-chorus lifts with stacked harmonies and a filtered swell, chorus opens into wide vocal layers and a chantable hook, Add delay throws on the last word of each hook line, soft ad-libs in the gaps, and a few reversed textures into the transitions, Polished, warm, cinematic, and sensual, rhythmic, deep, soulful, r&b, warm, sensual, lyrical, romantic, moody, heartfelt, vocal, contemporary, rich, emotional, smooth",
     "tags": [
-      "r and b with a slow swaying groove",
       "deep sub pulse",
-      "silky chord movement and crisp snap on the backbeat verse stays intimate and close mic with sparse keys and bass",
-      "pre chorus lifts with stacked harmonies and a filtered swell",
-      "chorus opens into wide vocal layers and a chantable hook",
-      "add delay throws on the last word of each hook line",
-      "soft ad libs in the gaps",
-      "and a few reversed textures into the transitions",
+      "silky chord movement",
       "polished",
       "warm",
       "cinematic",
-      "and sensual",
+      "sensual",
       "rhythmic",
       "deep",
       "soulful",
-      "r and b"
+      "lyrical",
+      "romantic",
+      "moody",
+      "heartfelt",
+      "contemporary",
+      "rich",
+      "emotional"
     ]
   },
   {
@@ -15181,7 +15158,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Night Crown",
     "metadataText": "Modern hip-hop and rap anthem with hard-hitting trap drums\n\n deep sub pulses, and ominous synth atmospheres; verse rides tense half-time pocket with crisp triplet flow, pre-chorus strips to snapped percussion and filtered pads, chorus hits with stacked gang ad-libs and a chantable hook, Vocal is confident and close-mic in verses, doubled on key bars, with delay throws on the hook words, Ear candy: reverse swells into the drop, vinyl grit under the intro, and risers punching into each chorus, Mix is polished, bass-heavy, bright on top, and cinematic in the low end, motivational, rhythmic, dynamic, vocal, emotional, hip-hop, rap, deep",
     "tags": [
-      "modern hip hop and rap anthem with hard hitting trap drums",
+      "rap anthem",
       "commercial",
       "hip",
       "hop",
@@ -15206,22 +15183,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Night Drive Halo",
     "metadataText": "Melodic hip-hop and rap with swung crisp drums, warm sub-bass, soulful piano loops, and atmospheric pads; verse rides intimate and confessional, pre-chorus opens with stacked harmonies and filtered keys, chorus lands on a chantable melodic hook with doubles and ad-lib echoes, Add risers into each drop, reverse piano swells, and tiny vinyl crackle between phrases, Polished, wide, cinematic urban mix with glossy low-end and close-mic vocals, rap, soulful, emotional, hip-hop, vocal, warm, smooth",
     "tags": [
-      "melodic hip hop and rap with swung crisp drums",
+      "hip hop rap",
       "warm sub bass",
       "soulful piano loops",
-      "and atmospheric pads verse rides intimate and confessional",
-      "pre chorus opens with stacked harmonies and filtered keys",
-      "chorus lands on a chantable melodic hook with doubles and ad lib echoes",
-      "add risers into each drop",
-      "reverse piano swells",
-      "and tiny vinyl crackle between phrases",
+      "atmospheric pads",
+      "reverse piano",
       "polished",
-      "wide",
-      "cinematic urban mix with glossy low end and close mic vocals",
-      "rap",
+      "cinematic urban",
       "soulful",
       "emotional",
-      "hip hop"
+      "hip hop",
+      "warm",
+      "smooth",
+      "commercial",
+      "hip",
+      "hop",
+      "rap"
     ]
   },
   {
@@ -15242,22 +15219,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/No Free Lane",
     "metadataText": "Modern hip-hop and rap anthem at a hard-hitting mid-tempo with deep sub pulses, punchy trap drums, swung hi-hat rolls, and dark cinematic synths; verse rides sparse and cold with close-mic lead and subtle doubles, pre-chorus opens with rising pads and filtered ad-libs, chorus hits with stacked hooks and gang shouts, bridge strips to kick and bass before the final drop, Ear candy: reverse swells into the hook, distant siren-like synth hits, and glitch fills on the turnarounds, Polished, bass-heavy, bright-impact mix with a wide low end and glossy top, hip-hop, rap, emotional, dynamic, vocal, deep, rhythmic, motivational",
     "tags": [
-      "modern hip hop and rap anthem at a hard hitting mid tempo with deep sub pulses",
+      "rap anthem",
       "punchy trap drums",
-      "swung hi hat rolls",
-      "and dark cinematic synths verse rides sparse and cold with close mic lead and subtle doubles",
-      "pre chorus opens with rising pads and filtered ad libs",
-      "chorus hits with stacked hooks and gang shouts",
-      "bridge strips to kick and bass before the final drop",
-      "ear candy reverse swells into the hook",
-      "distant siren like synth hits",
-      "and glitch fills on the turnarounds",
+      "swung hi hats",
+      "dark cinematic synths",
+      "distant siren like",
       "polished",
       "bass heavy",
-      "bright impact mix with a wide low end and glossy top",
+      "bright impact",
       "hip hop",
-      "rap",
-      "emotional"
+      "emotional",
+      "dynamic",
+      "deep",
+      "rhythmic",
+      "motivational",
+      "commercial",
+      "hip"
     ]
   },
   {
@@ -15278,22 +15255,20 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/No Mercy Cipher",
     "metadataText": "Hard-hitting lyrical rap anthem with rapid-fire boom-bap trap bounce at a hard sprint, syncopated kick-snare pressure and dark cinematic synth stabs, Verse 1 rides sparse bass and tense plucks; pre-chorus strips to clipped drums and vocal chants; chorus hits with stacked gang hooks and octave bass, Bridge drops to half-time, then final chorus explodes with ad-lib doubles, reverse risers, and bright, punchy mix, hip-hop, rapid, beats, vocal, raw, rap, lyrical, emotional, dramatic",
     "tags": [
-      "hard hitting lyrical rap anthem with rapid fire boom bap trap bounce at a hard sprint",
-      "syncopated kick snare pressure and dark cinematic synth stabs",
-      "verse 1 rides sparse bass and tense plucks pre chorus strips to clipped drums and vocal chants chorus hits with stacked gang hooks and octave bass",
-      "bridge drops to half time",
-      "then final chorus explodes with ad lib doubles",
+      "rap anthem",
+      "syncopated kick snare",
       "reverse risers",
-      "and bright",
-      "punchy mix",
+      "bright",
+      "punchy",
       "hip hop",
-      "rapid",
       "beats",
-      "vocal",
-      "raw",
-      "rap",
       "lyrical",
-      "emotional"
+      "emotional",
+      "dramatic",
+      "commercial",
+      "hip",
+      "hop",
+      "rap"
     ]
   },
   {
@@ -15314,7 +15289,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/On Top",
     "metadataText": "Hip-hop and rap anthem with slow-bouncing trap drums\n\n deep sub-bass pulses, minor-key synth stabs, and tense cinematic builds; verse rides sparse drums and tight bass, pre-chorus opens with rising pads and clipped responses, chorus lands with stacked doubles and a chantable hook, Confident lead vocal, gritty ad-libs, delay throws on key words, reverse swells into each drop, glossy low-end heavy mix with bright top-end punch, rap, deep, motivational, vocal, dynamic, emotional, rhythmic, hip-hop",
     "tags": [
-      "hip hop and rap anthem with slow bouncing trap drums",
+      "rap anthem",
       "commercial",
       "hip",
       "hop",
@@ -15339,7 +15314,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Paper Moon Drive",
     "metadataText": "Synth-pop with mid-tempo four-on-the-floor pulse\n\n soft syncopated kick patterns, and cinematic drum builds; verse stays intimate with filtered pads, muted arp plucks, and close-mic vocal leads, pre-chorus opens wide with rising toms and stacked harmonies, chorus blooms into glossy synth layers and a soaring hook, bridge drops to half-time with airy keys then returns bigger, Emotional male vocal with doubles, breathy ad-libs, delay throws on the hook, reversed swells and shimmering bells between lines; bright, wide, polished mix with nostalgic glow, heartfelt, emotional, nostalgic, pop",
     "tags": [
-      "synth pop with mid tempo four on the floor pulse",
+      "synth pop",
       "commercial",
       "hip",
       "hop",
@@ -15364,7 +15339,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Parking Garage Psalms",
     "metadataText": "Melodic hip-hop and rap with soulful piano loops\n\n warm 808 bass, crisp drum grooves, and glossy atmospheric textures; verse rides a half-sung, half-rapped pocket with intimate low-end bounce; pre-chorus opens into stacked harmonies and a rising pad; chorus lands with a short melodic hook and gang doubles, Add reverse piano swells, subtle vinyl crackle, and delayed ad-libs on key words, Polished, wide, cinematic, and intimate close-mic in the verses, warm, soulful, hip-hop, rap, smooth, vocal, emotional",
     "tags": [
-      "melodic hip hop and rap with soulful piano loops",
+      "hip hop rap",
       "commercial",
       "hip",
       "hop",
@@ -15389,7 +15364,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Razor Crown",
     "metadataText": "Lyrical rap anthem with rapid-fire flow, aggressive delivery\n\n dark cinematic trap beats, punchy drums, and powerful basslines; verse one runs dense and tense, pre-chorus tightens with stop-start cadences, chorus lands on a short chantable hook, verse two sharpens the wordplay, bridge drops to half-time with bare drums and a bruised vocal edge before the final chorus explodes with doubles and ad-libs, Close-mic lead, layered tripled hooks, delay throws on key punchlines, risers into every drop, wide and hard-hitting mix, rapid, dramatic, lyrical, beats, raw, hip-hop, rap, vocal, emotional",
     "tags": [
-      "lyrical rap anthem with rapid fire flow",
+      "rap anthem",
       "aggressive delivery",
       "commercial",
       "hip",
@@ -15415,7 +15390,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Razor Tongue",
     "metadataText": "Hard-hitting modern hip-hop with rapid-fire trap pulse\n\n switch-up tempo flips, tense minor-key piano stabs, punchy drums, and booming sub-bass, Verse 1 stays stripped with clipped snares and cold atmospherics; pre-chorus tightens with snare rolls and rising brass; chorus opens with shouted doubles and gang hooks, Ad-libs, delay throws, tape-stop turns, bright-but-brutal mix, beats, emotional, dramatic, rap, hip-hop, vocal, lyrical, raw, rapid",
     "tags": [
-      "hard hitting modern hip hop with rapid fire trap pulse",
+      "modern hip hop",
       "commercial",
       "hip",
       "hop",
@@ -15440,7 +15415,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Razor Tongue Riot",
     "metadataText": "Hard-hitting modern hip-hop with rapid-fire trap pulse\n\n switch-up tempo flips, tense minor-key piano stabs, punchy drums, and booming sub-bass, Verse 1 stays stripped with clipped snares and cold atmospherics; pre-chorus tightens with snare rolls and rising brass; chorus opens with shouted doubles and gang hooks, Ad-libs, delay throws, tape-stop turns, bright-but-brutal mix, beats, emotional, dramatic, rap, hip-hop, vocal, lyrical, raw, rapid",
     "tags": [
-      "hard hitting modern hip hop with rapid fire trap pulse",
+      "modern hip hop",
       "commercial",
       "hip",
       "hop",
@@ -15465,7 +15440,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Red Gloves Reckoning",
     "metadataText": "Hard-hitting rap anthem with rapid-fire double-time pockets\n\n swung trap drums, grim minor-key piano stabs, and heavy sub pressure; verse rides tense and sparse, pre-chorus opens with clipped chants and risers, chorus hits with gang shouts and a doubled anchor, bridge drops to filtered drums and a lone voice before the final barrage, Aggressive lead vocal with tight doubles, ad-lib pings, delay throws on punchlines, and a bright, punchy mix with cinematic low-end slam, emotional, rapid, dramatic, vocal, hip-hop, lyrical, beats, raw, rap",
     "tags": [
-      "hard hitting rap anthem with rapid fire double time pockets",
+      "rap anthem",
       "commercial",
       "hip",
       "hop",
@@ -15490,7 +15465,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Redline Cipher",
     "metadataText": "Hard-hitting hip-hop at a breakneck trap pace with syncopated kicks\n\n rattling hats, and dark minor-key piano stabs; verses ride dense with rapid-fire cadences, pre-chorus opens into half-time tension, chorus snaps back with stacked gang vocals and a two-word chant hook, Vocal delivery is gritty and close-mic in verses, doubled and shouted on hooks, with reverse sweeps, sub drops, and risers into every drop, Mix is loud, punchy, and cinematic, dramatic, rap, lyrical, vocal, beats, emotional, raw, hip-hop, rapid",
     "tags": [
-      "hard hitting hip hop at a breakneck trap pace with syncopated kicks",
+      "hip hop rap",
       "commercial",
       "hip",
       "hop",
@@ -15515,8 +15490,8 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Take Control",
     "metadataText": "Rap anthem at a fast, propulsive pulse with rapid-fire snares\n\n rolling sub drops, and hard switch-ups; verse rides sparse piano stabs and grim bass, pre-chorus tightens with rising tension, chorus hits in gang chants and clipped doubles, Ad-libs punch the edges, delay throws land on key words, and the mix stays dark, wide, and brutal, lyrical, beats, hip-hop, rap, emotional, rapid, dramatic, vocal, raw",
     "tags": [
-      "rap anthem at a fast",
-      "propulsive pulse with rapid fire snares",
+      "rap anthem",
+      "propulsive pulse",
       "commercial",
       "hip",
       "hop",
@@ -15541,7 +15516,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Velvet After Midnight",
     "metadataText": "Contemporary R&B with a laid-back swung groove\n\n deep sub-bass, warm piano chords, and silky synth beds; verse stays intimate and close-mic, pre-chorus lifts with stacked harmonies and filtered risers, chorus opens with lush vocal layers and a short hook chant, Add delay throws on key words, breathy ad-libs in the gaps, and a muted percussion pocket that blooms into wider drums on the hook, Polished, glossy mix with cinematic depth and a warm low-end glow, smooth, vocal, deep, warm, emotional, moody, contemporary, soulful, heartfelt, rich, romantic, sensual, lyrical, rhythmic, r&b",
     "tags": [
-      "contemporary r and b with a laid back swung groove",
+      "contemporary r and b",
       "commercial",
       "hip",
       "hop",
@@ -15566,7 +15541,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Window Seat",
     "metadataText": "Melodic hip-hop and rap with swung drums\n\n\nwarm sub-bass pulse, soulful piano motifs, and atmospheric pads; verse rides intimate and confessional with tight double-tracked ad-libs, pre-chorus lifts with filtered harmonies and reverse swells, chorus opens on a chantable melodic hook with stacked vocals and short delay throws, Ear candy includes tape hiss lifts, bell accents between lines, and a small drop before the final hook, Polished, wide, cinematic mix with close-mic intimacy and glossy low-end, smooth, hip-hop, rap, soulful, emotional, warm, vocal",
     "tags": [
-      "melodic hip hop and rap with swung drums",
+      "hip hop rap",
       "commercial",
       "hip",
       "hop",
@@ -17395,7 +17370,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "modern jazz",
-      "laid back swung jazz",
+      "swung jazz",
       "indie",
       "jazz"
     ]
@@ -17514,7 +17489,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "sophisticated jazz",
-      "laid back smooth jazz",
+      "smooth jazz",
       "indie",
       "jazz"
     ]
@@ -17562,7 +17537,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "sophisticated jazz",
-      "laid back smooth jazz",
+      "smooth jazz",
       "indie",
       "jazz"
     ]
@@ -17658,7 +17633,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "jazz",
-      "laid back swung jazz",
+      "swung jazz",
       "indie"
     ]
   },
@@ -17704,7 +17679,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "modern jazz",
-      "laid back swung jazz",
+      "swung jazz",
       "indie",
       "jazz"
     ]
@@ -17799,7 +17774,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "modern jazz",
-      "laid back swung jazz",
+      "swung jazz",
       "indie",
       "jazz"
     ]
@@ -17847,7 +17822,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "modern jazz",
-      "laid back swung jazz",
+      "swung jazz",
       "indie",
       "jazz"
     ]
@@ -17966,7 +17941,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "jazz",
-      "laid back swung jazz",
+      "swung jazz",
       "indie"
     ]
   },
@@ -18332,7 +18307,7 @@ export const productionSongRecords = [
     "tags": [
       "classical",
       "chamber",
-      "viennese waltz 3 4"
+      "viennese waltz 3"
     ]
   },
   {
@@ -18555,7 +18530,7 @@ export const productionSongRecords = [
     "tags": [
       "classical",
       "chamber",
-      "viennese waltz 3 4"
+      "viennese waltz 3"
     ]
   },
   {
@@ -20464,7 +20439,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI ELECTRONIC/The Bass Yatra",
     "metadataText": "drum & bass, Hindi/Bollywood, cinematic EDM\n\nHindi drum & bass anthem with rapid breakbeats, deep rolling basslines, emotional Bollywood melody lines, atmospheric Indian textures, and futuristic cinematic energy; verse rides tense syncopated drum patterns and restless low-end pulses, pre-chorus strips to airy pads and rising hand drums, chorus hits with soaring singalong hooks and stacked harmonies; lead vocal is intimate in verses, doubled and wide in choruses with chant responses and delay throws; sitar flickers, tabla fills, reversed swells, and metallic risers bridge the sections; bright, punchy, widescreen mix with glossy low-end impact, rapid, emotional, deep",
     "tags": [
-      "drum and bass",
+      "drum",
       "hindi bollywood",
       "cinematic edm",
       "bollywood",
@@ -20489,7 +20464,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI ELECTRONIC/The Bollywood Circuit",
     "metadataText": "drum & bass, Hindi/Bollywood, cinematic EDM\n\nHindi drum & bass anthem with rapid breakbeats, deep rolling basslines, emotional Bollywood melody lines, atmospheric Indian textures, and futuristic cinematic energy; verse rides tense syncopated drum patterns and restless low-end pulses, pre-chorus strips to airy pads and rising hand drums, chorus hits with soaring singalong hooks and stacked harmonies; lead vocal is intimate in verses, doubled and wide in choruses with chant responses and delay throws; sitar flickers, tabla fills, reversed swells, and metallic risers bridge the sections; bright, punchy, widescreen mix with glossy low-end impact, rapid, emotional, deep",
     "tags": [
-      "drum and bass",
+      "drum",
       "hindi bollywood",
       "cinematic edm",
       "bollywood",
@@ -20514,7 +20489,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI ELECTRONIC/The Bollywood Mirage",
     "metadataText": "drum & bass, Hindi/Bollywood, cinematic EDM\n\nHindi drum & bass anthem with rapid breakbeats, deep rolling basslines, emotional Bollywood melody lines, atmospheric Indian textures, and futuristic cinematic energy; verse rides tense syncopated drum patterns and restless low-end pulses, pre-chorus strips to airy pads and rising hand drums, chorus hits with soaring singalong hooks and stacked harmonies; lead vocal is intimate in verses, doubled and wide in choruses with chant responses and delay throws; sitar flickers, tabla fills, reversed swells, and metallic risers bridge the sections; bright, punchy, widescreen mix with glossy low-end impact, rapid, emotional, deep",
     "tags": [
-      "drum and bass",
+      "drum",
       "hindi bollywood",
       "cinematic edm",
       "bollywood",
@@ -20539,7 +20514,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI ELECTRONIC/The Dhol Revolution",
     "metadataText": "drum & bass, Hindi/Bollywood, cinematic EDM\n\nHindi drum & bass anthem with rapid breakbeats, deep rolling basslines, emotional Bollywood melody lines, atmospheric Indian textures, and futuristic cinematic energy; verse rides tense syncopated drum patterns and restless low-end pulses, pre-chorus strips to airy pads and rising hand drums, chorus hits with soaring singalong hooks and stacked harmonies; lead vocal is intimate in verses, doubled and wide in choruses with chant responses and delay throws; sitar flickers, tabla fills, reversed swells, and metallic risers bridge the sections; bright, punchy, widescreen mix with glossy low-end impact, rapid, emotional, deep",
     "tags": [
-      "drum and bass",
+      "drum",
       "hindi bollywood",
       "cinematic edm",
       "bollywood",
@@ -20564,7 +20539,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI ELECTRONIC/The Digital Raga Journey",
     "metadataText": "drum & bass, Hindi/Bollywood, cinematic EDM\n\nHindi drum & bass anthem with rapid breakbeats, deep rolling basslines, emotional Bollywood melody lines, atmospheric Indian textures, and futuristic cinematic energy; verse rides tense syncopated drum patterns and restless low-end pulses, pre-chorus strips to airy pads and rising hand drums, chorus hits with soaring singalong hooks and stacked harmonies; lead vocal is intimate in verses, doubled and wide in choruses with chant responses and delay throws; sitar flickers, tabla fills, reversed swells, and metallic risers bridge the sections; bright, punchy, widescreen mix with glossy low-end impact, rapid, emotional, deep",
     "tags": [
-      "drum and bass",
+      "drum",
       "hindi bollywood",
       "cinematic edm",
       "bollywood",
@@ -20589,7 +20564,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI ELECTRONIC/The Digital Tabla",
     "metadataText": "drum & bass, Hindi/Bollywood, cinematic EDM\n\nHindi drum & bass anthem with rapid breakbeats, deep rolling basslines, emotional Bollywood melody lines, atmospheric Indian textures, and futuristic cinematic energy; verse rides tense syncopated drum patterns and restless low-end pulses, pre-chorus strips to airy pads and rising hand drums, chorus hits with soaring singalong hooks and stacked harmonies; lead vocal is intimate in verses, doubled and wide in choruses with chant responses and delay throws; sitar flickers, tabla fills, reversed swells, and metallic risers bridge the sections; bright, punchy, widescreen mix with glossy low-end impact, rapid, emotional, deep",
     "tags": [
-      "drum and bass",
+      "drum",
       "hindi bollywood",
       "cinematic edm",
       "bollywood",
@@ -20614,7 +20589,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI ELECTRONIC/The Electric Peacock",
     "metadataText": "drum & bass, Hindi/Bollywood, cinematic EDM\n\nHindi drum & bass anthem with rapid breakbeats, deep rolling basslines, emotional Bollywood melody lines, atmospheric Indian textures, and futuristic cinematic energy; verse rides tense syncopated drum patterns and restless low-end pulses, pre-chorus strips to airy pads and rising hand drums, chorus hits with soaring singalong hooks and stacked harmonies; lead vocal is intimate in verses, doubled and wide in choruses with chant responses and delay throws; sitar flickers, tabla fills, reversed swells, and metallic risers bridge the sections; bright, punchy, widescreen mix with glossy low-end impact, rapid, emotional, deep",
     "tags": [
-      "drum and bass",
+      "drum",
       "hindi bollywood",
       "cinematic edm",
       "bollywood",
@@ -20639,7 +20614,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI ELECTRONIC/The Electronic Maharani",
     "metadataText": "drum & bass, Hindi/Bollywood, cinematic EDM\n\nHindi drum & bass anthem with rapid breakbeats, deep rolling basslines, emotional Bollywood melody lines, atmospheric Indian textures, and futuristic cinematic energy; verse rides tense syncopated drum patterns and restless low-end pulses, pre-chorus strips to airy pads and rising hand drums, chorus hits with soaring singalong hooks and stacked harmonies; lead vocal is intimate in verses, doubled and wide in choruses with chant responses and delay throws; sitar flickers, tabla fills, reversed swells, and metallic risers bridge the sections; bright, punchy, widescreen mix with glossy low-end impact, rapid, emotional, deep",
     "tags": [
-      "drum and bass",
+      "drum",
       "hindi bollywood",
       "cinematic edm",
       "bollywood",
@@ -20664,7 +20639,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI ELECTRONIC/The Electronic Sadhu",
     "metadataText": "drum & bass, Hindi/Bollywood, cinematic EDM\n\nHindi drum & bass anthem with rapid breakbeats, deep rolling basslines, emotional Bollywood melody lines, atmospheric Indian textures, and futuristic cinematic energy; verse rides tense syncopated drum patterns and restless low-end pulses, pre-chorus strips to airy pads and rising hand drums, chorus hits with soaring singalong hooks and stacked harmonies; lead vocal is intimate in verses, doubled and wide in choruses with chant responses and delay throws; sitar flickers, tabla fills, reversed swells, and metallic risers bridge the sections; bright, punchy, widescreen mix with glossy low-end impact, rapid, emotional, deep",
     "tags": [
-      "drum and bass",
+      "drum",
       "hindi bollywood",
       "cinematic edm",
       "bollywood",
@@ -20689,7 +20664,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI ELECTRONIC/The Electronic Yogi",
     "metadataText": "drum & bass, Hindi/Bollywood, cinematic EDM\n\nHindi drum & bass anthem with rapid breakbeats, deep rolling basslines, emotional Bollywood melody lines, atmospheric Indian textures, and futuristic cinematic energy; verse rides tense syncopated drum patterns and restless low-end pulses, pre-chorus strips to airy pads and rising hand drums, chorus hits with soaring singalong hooks and stacked harmonies; lead vocal is intimate in verses, doubled and wide in choruses with chant responses and delay throws; sitar flickers, tabla fills, reversed swells, and metallic risers bridge the sections; bright, punchy, widescreen mix with glossy low-end impact, rapid, emotional, deep",
     "tags": [
-      "drum and bass",
+      "drum",
       "hindi bollywood",
       "cinematic edm",
       "bollywood",
@@ -20932,7 +20907,7 @@ export const productionSongRecords = [
     "tags": [
       "hindi house",
       "house",
-      "electronic dance music edm",
+      "electronic dance",
       "bollywood",
       "hindi",
       "electronic"
@@ -20956,7 +20931,7 @@ export const productionSongRecords = [
     "metadataText": "Hindi house, electronic dance music (EDM), club banger\n\nHindi house with groovy four-on-the-floor pulse, syncopated tabla patterns, and a dancefloor bassline that stays deep and round; verse rides restrained percussion and airy pad washes, pre-chorus lifts with rising vocal stacks and handclap snaps, chorus opens wide with bold melodic toplines and gang chants, Lead vocal is close-mic in verses with playful doubles, bigger harmonies on the hook, and short delay throws on key phrases, Ear candy: tabla fills into each chorus, reversed synth swells before drops, sparkling bell accents between lines, Mix is bright, punchy, and spacious with a glossy club finish, rhythmic, groovy, deep, uplifting",
     "tags": [
       "hindi house",
-      "electronic dance music edm",
+      "electronic dance",
       "club banger",
       "bollywood",
       "hindi",
@@ -21878,7 +21853,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI ROMANCE/Saans",
     "metadataText": "modern Bollywood (Hindi film music), romantic pop, cinematic synth-pop\n\nMelodic modern Indian romantic track with smooth male and female vocals, catchy emotional hooks, atmospheric synth textures, acoustic guitar, soft dholak grooves, cinematic production and dreamy late-night romance vibe perfect for contemporary Bollywood-style love songs",
     "tags": [
-      "modern bollywood hindi film music",
+      "modern bollywood hindi",
       "romantic pop",
       "cinematic synth pop",
       "bollywood",
@@ -21903,7 +21878,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI ROMANCE/Saat Samundar",
     "metadataText": "modern Bollywood (Hindi film music), romantic pop, cinematic synth-pop\n\nMelodic modern Indian romantic track with smooth male and female vocals, catchy emotional hooks, atmospheric synth textures, acoustic guitar, soft dholak grooves, cinematic production and dreamy late-night romance vibe perfect for contemporary Bollywood-style love songs",
     "tags": [
-      "modern bollywood hindi film music",
+      "modern bollywood hindi",
       "romantic pop",
       "cinematic synth pop",
       "bollywood",
@@ -21929,7 +21904,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI ROMANCE/Shifa",
     "metadataText": "modern Bollywood (Hindi film music), romantic pop, cinematic synth-pop\n\nMelodic modern Indian romantic track with smooth male and female vocals, catchy emotional hooks, atmospheric synth textures, acoustic guitar, soft dholak grooves, cinematic production and dreamy late-night romance vibe perfect for contemporary Bollywood-style love songs",
     "tags": [
-      "modern bollywood hindi film music",
+      "modern bollywood hindi",
       "romantic pop",
       "cinematic synth pop",
       "bollywood",
@@ -21954,7 +21929,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI ROMANCE/Surat Pyaar",
     "metadataText": "modern Bollywood (Hindi film music), romantic pop, cinematic synth-pop\n\nMelodic modern Indian romantic track with smooth male and female vocals, catchy emotional hooks, atmospheric synth textures, acoustic guitar, soft dholak grooves, cinematic production and dreamy late-night romance vibe perfect for contemporary Bollywood-style love songs",
     "tags": [
-      "modern bollywood hindi film music",
+      "modern bollywood hindi",
       "romantic pop",
       "cinematic synth pop",
       "bollywood",
@@ -21980,7 +21955,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI ROMANCE/Tera Naam",
     "metadataText": "modern Bollywood (Hindi film music), romantic pop, cinematic synth-pop\n\nMelodic modern Indian romantic track with smooth male and female vocals, catchy emotional hooks, atmospheric synth textures, acoustic guitar, soft dholak grooves, cinematic production and dreamy late-night romance vibe perfect for contemporary Bollywood-style love songs",
     "tags": [
-      "modern bollywood hindi film music",
+      "modern bollywood hindi",
       "romantic pop",
       "cinematic synth pop",
       "bollywood",
@@ -22005,7 +21980,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI ROMANCE/teri awaaz in the rain",
     "metadataText": "modern Bollywood (Hindi film music), romantic pop, cinematic synth-pop\n\nMelodic modern Indian romantic track with smooth male and female vocals, catchy emotional hooks, atmospheric synth textures, acoustic guitar, soft dholak grooves, cinematic production and dreamy late-night romance vibe perfect for contemporary Bollywood-style love songs",
     "tags": [
-      "modern bollywood hindi film music",
+      "modern bollywood hindi",
       "romantic pop",
       "cinematic synth pop",
       "bollywood",
@@ -22030,7 +22005,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI ROMANCE/Tujhse Mulaqat",
     "metadataText": "modern Bollywood (Hindi film music), romantic pop, cinematic synth-pop\n\nMelodic modern Indian romantic track with smooth male and female vocals, catchy emotional hooks, atmospheric synth textures, acoustic guitar, soft dholak grooves, cinematic production and dreamy late-night romance vibe perfect for contemporary Bollywood-style love songs",
     "tags": [
-      "modern bollywood hindi film music",
+      "modern bollywood hindi",
       "romantic pop",
       "cinematic synth pop",
       "bollywood",
@@ -22055,7 +22030,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI ROMANCE/tum paas ho",
     "metadataText": "modern Bollywood (Hindi film music), romantic pop, cinematic synth-pop\n\nMelodic modern Indian romantic track with smooth male and female vocals, catchy emotional hooks, atmospheric synth textures, acoustic guitar, soft dholak grooves, cinematic production and dreamy late-night romance vibe perfect for contemporary Bollywood-style love songs",
     "tags": [
-      "modern bollywood hindi film music",
+      "modern bollywood hindi",
       "romantic pop",
       "cinematic synth pop",
       "bollywood",
@@ -22132,7 +22107,7 @@ export const productionSongRecords = [
     "tags": [
       "desi alternative rock",
       "bollywood rock",
-      "indie alt rock fusion",
+      "indie alt rock",
       "bollywood",
       "hindi",
       "rock"
@@ -22158,7 +22133,7 @@ export const productionSongRecords = [
     "tags": [
       "desi alternative rock",
       "bollywood rock",
-      "indie alt rock fusion",
+      "indie alt rock",
       "bollywood",
       "hindi",
       "rock"
@@ -22184,7 +22159,7 @@ export const productionSongRecords = [
     "tags": [
       "desi alternative rock",
       "bollywood rock",
-      "indie alt rock fusion",
+      "indie alt rock",
       "bollywood",
       "hindi",
       "rock"
@@ -22209,7 +22184,7 @@ export const productionSongRecords = [
     "tags": [
       "desi alternative rock",
       "bollywood rock",
-      "indie alt rock fusion",
+      "indie alt rock",
       "bollywood",
       "hindi",
       "rock"
@@ -22234,7 +22209,7 @@ export const productionSongRecords = [
     "tags": [
       "desi alternative rock",
       "bollywood rock",
-      "indie alt rock fusion",
+      "indie alt rock",
       "bollywood",
       "hindi",
       "rock"
@@ -22259,7 +22234,7 @@ export const productionSongRecords = [
     "tags": [
       "desi alternative rock",
       "bollywood rock",
-      "indie alt rock fusion",
+      "indie alt rock",
       "bollywood",
       "hindi",
       "rock"
@@ -22284,7 +22259,7 @@ export const productionSongRecords = [
     "tags": [
       "desi alternative rock",
       "bollywood rock",
-      "indie alt rock fusion",
+      "indie alt rock",
       "bollywood",
       "hindi",
       "rock"
@@ -22309,7 +22284,7 @@ export const productionSongRecords = [
     "tags": [
       "desi alternative rock",
       "bollywood rock",
-      "indie alt rock fusion",
+      "indie alt rock",
       "bollywood",
       "hindi",
       "rock"
@@ -22356,7 +22331,7 @@ export const productionSongRecords = [
     "tags": [
       "desi alternative rock",
       "bollywood rock",
-      "indie alt rock fusion",
+      "indie alt rock",
       "bollywood",
       "hindi",
       "rock"
@@ -22729,7 +22704,6 @@ export const productionSongRecords = [
     "metadataText": "alternative rock, raw, moody\n\nAlternative rock with a moody slow-burn groove, half-time drums, deep bass pulses, and jagged electric guitar textures; verse section stays sparse with sarangi lead and distant synth haze, pre-build adds tom rolls and rising feedback, final lift hits with stacked guitars and cinematic low-end, Breathy room tone, wide stereo depth, raw and intimate mix, raw, desi, alternative rock, moody, slow, deep, emotional, electric",
     "tags": [
       "alternative rock",
-      "raw",
       "moody",
       "bollywood",
       "hindi",
@@ -22754,7 +22728,6 @@ export const productionSongRecords = [
     "metadataText": "alternative rock, raw, moody\n\nAlternative rock with a moody slow-burn groove, half-time drums, deep bass pulses, and jagged electric guitar textures; verse section stays sparse with sarangi lead and distant synth haze, pre-build adds tom rolls and rising feedback, final lift hits with stacked guitars and cinematic low-end, Breathy room tone, wide stereo depth, raw and intimate mix, raw, desi, alternative rock, moody, slow, deep, emotional, electric",
     "tags": [
       "alternative rock",
-      "raw",
       "moody",
       "bollywood",
       "hindi",
@@ -22779,7 +22752,6 @@ export const productionSongRecords = [
     "metadataText": "alternative rock, raw, moody\n\nAlternative rock with a moody slow-burn groove, half-time drums, deep bass pulses, and jagged electric guitar textures; verse section stays sparse with sarangi lead and distant synth haze, pre-build adds tom rolls and rising feedback, final lift hits with stacked guitars and cinematic low-end, Breathy room tone, wide stereo depth, raw and intimate mix, raw, desi, alternative rock, moody, slow, deep, emotional, electric",
     "tags": [
       "alternative rock",
-      "raw",
       "moody",
       "bollywood",
       "hindi",
@@ -23009,7 +22981,6 @@ export const productionSongRecords = [
     "metadataText": "alternative rock, raw, moody\n\nAlternative rock with a moody slow-burn groove, half-time drums, deep bass pulses, and jagged electric guitar textures; verse section stays sparse with sarangi lead and distant synth haze, pre-build adds tom rolls and rising feedback, final lift hits with stacked guitars and cinematic low-end, Breathy room tone, wide stereo depth, raw and intimate mix, raw, desi, alternative rock, moody, slow, deep, emotional, electric",
     "tags": [
       "alternative rock",
-      "raw",
       "moody",
       "bollywood",
       "hindi",
@@ -23034,7 +23005,6 @@ export const productionSongRecords = [
     "metadataText": "alternative rock, raw, moody\n\nAlternative rock with a moody slow-burn groove, half-time drums, deep bass pulses, and jagged electric guitar textures; verse section stays sparse with sarangi lead and distant synth haze, pre-build adds tom rolls and rising feedback, final lift hits with stacked guitars and cinematic low-end, Breathy room tone, wide stereo depth, raw and intimate mix, raw, desi, alternative rock, moody, slow, deep, emotional, electric",
     "tags": [
       "alternative rock",
-      "raw",
       "moody",
       "bollywood",
       "hindi",
@@ -23236,7 +23206,6 @@ export const productionSongRecords = [
     "metadataText": "alternative rock, raw, moody\n\nAlternative rock with a moody slow-burn groove, half-time drums, deep bass pulses, and jagged electric guitar textures; verse section stays sparse with sarangi lead and distant synth haze, pre-build adds tom rolls and rising feedback, final lift hits with stacked guitars and cinematic low-end, Breathy room tone, wide stereo depth, raw and intimate mix, raw, desi, alternative rock, moody, slow, deep, emotional, electric",
     "tags": [
       "alternative rock",
-      "raw",
       "moody",
       "bollywood",
       "hindi",
@@ -23262,7 +23231,6 @@ export const productionSongRecords = [
     "metadataText": "alternative rock, raw, moody\n\nAlternative rock with a moody slow-burn groove, half-time drums, deep bass pulses, and jagged electric guitar textures; verse section stays sparse with sarangi lead and distant synth haze, pre-build adds tom rolls and rising feedback, final lift hits with stacked guitars and cinematic low-end, Breathy room tone, wide stereo depth, raw and intimate mix, raw, desi, alternative rock, moody, slow, deep, emotional, electric",
     "tags": [
       "alternative rock",
-      "raw",
       "moody",
       "bollywood",
       "hindi",
@@ -23287,7 +23255,6 @@ export const productionSongRecords = [
     "metadataText": "alternative rock, raw, moody\n\nAlternative rock with a moody slow-burn groove, half-time drums, deep bass pulses, and jagged electric guitar textures; verse section stays sparse with sarangi lead and distant synth haze, pre-build adds tom rolls and rising feedback, final lift hits with stacked guitars and cinematic low-end, Breathy room tone, wide stereo depth, raw and intimate mix, raw, desi, alternative rock, moody, slow, deep, emotional, electric",
     "tags": [
       "alternative rock",
-      "raw",
       "moody",
       "bollywood",
       "hindi",
@@ -23312,7 +23279,6 @@ export const productionSongRecords = [
     "metadataText": "alternative rock, raw, moody\n\nAlternative rock with a moody slow-burn groove, half-time drums, deep bass pulses, and jagged electric guitar textures; verse section stays sparse with sarangi lead and distant synth haze, pre-build adds tom rolls and rising feedback, final lift hits with stacked guitars and cinematic low-end, Breathy room tone, wide stereo depth, raw and intimate mix, raw, desi, alternative rock, moody, slow, deep, emotional, electric",
     "tags": [
       "alternative rock",
-      "raw",
       "moody",
       "bollywood",
       "hindi",
@@ -23337,7 +23303,6 @@ export const productionSongRecords = [
     "metadataText": "alternative rock, raw, moody\n\nAlternative rock with a moody slow-burn groove, half-time drums, deep bass pulses, and jagged electric guitar textures; verse section stays sparse with sarangi lead and distant synth haze, pre-build adds tom rolls and rising feedback, final lift hits with stacked guitars and cinematic low-end, Breathy room tone, wide stereo depth, raw and intimate mix, raw, desi, alternative rock, moody, slow, deep, emotional, electric",
     "tags": [
       "alternative rock",
-      "raw",
       "moody",
       "bollywood",
       "hindi",
@@ -23362,7 +23327,6 @@ export const productionSongRecords = [
     "metadataText": "alternative rock, raw, moody\n\nAlternative rock with a moody slow-burn groove, half-time drums, deep bass pulses, and jagged electric guitar textures; verse section stays sparse with sarangi lead and distant synth haze, pre-build adds tom rolls and rising feedback, final lift hits with stacked guitars and cinematic low-end, Breathy room tone, wide stereo depth, raw and intimate mix, raw, desi, alternative rock, moody, slow, deep, emotional, electric",
     "tags": [
       "alternative rock",
-      "raw",
       "moody",
       "bollywood",
       "hindi",
@@ -23387,7 +23351,6 @@ export const productionSongRecords = [
     "metadataText": "alternative rock, raw, moody\n\nAlternative rock with a moody slow-burn groove, half-time drums, deep bass pulses, and jagged electric guitar textures; verse section stays sparse with sarangi lead and distant synth haze, pre-build adds tom rolls and rising feedback, final lift hits with stacked guitars and cinematic low-end, Breathy room tone, wide stereo depth, raw and intimate mix, raw, desi, alternative rock, moody, slow, deep, emotional, electric",
     "tags": [
       "alternative rock",
-      "raw",
       "moody",
       "bollywood",
       "hindi",
@@ -23642,7 +23605,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "cinematic film score widescreen",
+      "cinematic film score",
       "bollywood",
       "hindi",
       "hip",
@@ -23669,7 +23632,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "cinematic film score widescreen",
+      "cinematic film score",
       "bollywood",
       "hindi",
       "hip",
@@ -23696,7 +23659,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "cinematic film score widescreen",
+      "cinematic film score",
       "bollywood",
       "hindi",
       "hip",
@@ -23723,7 +23686,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "cinematic film score widescreen",
+      "cinematic film score",
       "bollywood",
       "hindi",
       "hip",
@@ -23750,7 +23713,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "cinematic film score widescreen",
+      "cinematic film score",
       "bollywood",
       "hindi",
       "hip",
@@ -23777,7 +23740,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "cinematic film score widescreen",
+      "cinematic film score",
       "bollywood",
       "hindi",
       "hip",
@@ -23804,7 +23767,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "cinematic film score widescreen",
+      "cinematic film score",
       "bollywood",
       "hindi",
       "hip",
@@ -23831,7 +23794,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "cinematic film score widescreen",
+      "cinematic film score",
       "bollywood",
       "hindi",
       "hip",
@@ -23858,7 +23821,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "cinematic film score widescreen",
+      "cinematic film score",
       "bollywood",
       "hindi",
       "hip",
@@ -23885,7 +23848,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "cinematic film score widescreen",
+      "cinematic film score",
       "bollywood",
       "hindi",
       "hip",
@@ -23912,7 +23875,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "cinematic indian hindi punjabi rap",
+      "cinematic indian hindi",
       "bollywood",
       "hindi",
       "hip",
@@ -24342,7 +24305,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI HIP HOP/khauf in the lanes",
     "metadataText": "Indian club hip-hop, Punjabi/Hindi rap, Bollywood party, trap, dhol percussion\n\nHigh-energy Indian club hip-hop track with booming basslines, Punjabi and Hindi vocal chants, dhol percussion, catchy rap hooks, aggressive trap drums, nightlife atmosphere and modern Bollywood party energy",
     "tags": [
-      "indian club hip hop",
+      "indian club hip",
       "punjabi hindi rap",
       "bollywood party",
       "trap",
@@ -24535,7 +24498,6 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "rap",
       "bollywood",
       "hindi",
       "hip",
@@ -24562,7 +24524,6 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "rap",
       "bollywood",
       "hindi",
       "hip",
@@ -24589,7 +24550,6 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "rap",
       "bollywood",
       "hindi",
       "hip",
@@ -24616,7 +24576,6 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "rap",
       "bollywood",
       "hindi",
       "hip",
@@ -24640,9 +24599,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI HIP HOP/Party Shuru",
     "metadataText": "Indian club hip-hop, Punjabi/Hindi hip-hop, trap/Bollywood party energy\n\nHigh-energy Indian club hip-hop track with booming basslines, Punjabi and Hindi vocal chants, dhol percussion, catchy rap hooks, aggressive trap drums, nightlife atmosphere and modern Bollywood party energy",
     "tags": [
-      "indian club hip hop",
-      "punjabi hindi hip hop",
-      "trap bollywood party energy",
+      "indian club hip",
+      "punjabi hindi hip",
+      "trap bollywood party",
       "bollywood",
       "hindi",
       "hip",
@@ -24667,9 +24626,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI HIP HOP/Piya Dhoondhne",
     "metadataText": "Indian club hip-hop, Punjabi/Hindi hip-hop, trap/Bollywood party energy\n\nHigh-energy Indian club hip-hop track with booming basslines, Punjabi and Hindi vocal chants, dhol percussion, catchy rap hooks, aggressive trap drums, nightlife atmosphere and modern Bollywood party energy",
     "tags": [
-      "indian club hip hop",
-      "punjabi hindi hip hop",
-      "trap bollywood party energy",
+      "indian club hip",
+      "punjabi hindi hip",
+      "trap bollywood party",
       "bollywood",
       "hindi",
       "hip",
@@ -24694,9 +24653,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI HIP HOP/raat bhar grind",
     "metadataText": "Indian club hip-hop, Punjabi/Hindi hip-hop, trap/Bollywood party energy\n\nHigh-energy Indian club hip-hop track with booming basslines, Punjabi and Hindi vocal chants, dhol percussion, catchy rap hooks, aggressive trap drums, nightlife atmosphere and modern Bollywood party energy",
     "tags": [
-      "indian club hip hop",
-      "punjabi hindi hip hop",
-      "trap bollywood party energy",
+      "indian club hip",
+      "punjabi hindi hip",
+      "trap bollywood party",
       "bollywood",
       "hindi",
       "hip",
@@ -24721,9 +24680,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI HIP HOP/Roshni",
     "metadataText": "Indian club hip-hop, Punjabi/Hindi hip-hop, trap/Bollywood party energy\n\nHigh-energy Indian club hip-hop track with booming basslines, Punjabi and Hindi vocal chants, dhol percussion, catchy rap hooks, aggressive trap drums, nightlife atmosphere and modern Bollywood party energy",
     "tags": [
-      "indian club hip hop",
-      "punjabi hindi hip hop",
-      "trap bollywood party energy",
+      "indian club hip",
+      "punjabi hindi hip",
+      "trap bollywood party",
       "bollywood",
       "hindi",
       "hip",
@@ -24748,9 +24707,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI HIP HOP/Sab Ka Hero",
     "metadataText": "Indian club hip-hop, Punjabi/Hindi hip-hop, trap/Bollywood party energy\n\nHigh-energy Indian club hip-hop track with booming basslines, Punjabi and Hindi vocal chants, dhol percussion, catchy rap hooks, aggressive trap drums, nightlife atmosphere and modern Bollywood party energy",
     "tags": [
-      "indian club hip hop",
-      "punjabi hindi hip hop",
-      "trap bollywood party energy",
+      "indian club hip",
+      "punjabi hindi hip",
+      "trap bollywood party",
       "bollywood",
       "hindi",
       "hip",
@@ -24775,7 +24734,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI HIP HOP/sadkon ka shehzada",
     "metadataText": "boom bap hip-hop, desi hip-hop, soulful\n\nBoom bap hip-hop with swung, dusty drums and a head-nodding mid-tempo groove; verse feel carries chopped soulful Hindi-inspired phrases over smooth bass and tabla accents, then a pre-drop break opens space for sarangi harmonies and emotional piano layers before the beat returns fuller, Vinyl crackle, reversed swells, and subtle rim taps bridge sections, Warm, intimate, nostalgic mix with rough dust and velvet mids, smooth, classic, emotional, nostalgic, desi, soulful, warm, hip-hop",
     "tags": [
-      "boom bap hip hop",
+      "boom bap hip",
       "desi hip hop",
       "soulful",
       "bollywood",
@@ -24802,7 +24761,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI HIP HOP/Sapne",
     "metadataText": "boom bap hip-hop, desi hip-hop, soulful\n\nBoom bap hip-hop with swung, dusty drums and a head-nodding mid-tempo groove; verse feel carries chopped soulful Hindi-inspired phrases over smooth bass and tabla accents, then a pre-drop break opens space for sarangi harmonies and emotional piano layers before the beat returns fuller, Vinyl crackle, reversed swells, and subtle rim taps bridge sections, Warm, intimate, nostalgic mix with rough dust and velvet mids, smooth, classic, emotional, nostalgic, desi, soulful, warm, hip-hop",
     "tags": [
-      "boom bap hip hop",
+      "boom bap hip",
       "desi hip hop",
       "soulful",
       "bollywood",
@@ -24829,7 +24788,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI HIP HOP/Sapne aur Zehen",
     "metadataText": "boom bap hip-hop, desi hip-hop, soulful\n\nBoom bap hip-hop with swung, dusty drums and a head-nodding mid-tempo groove; verse feel carries chopped soulful Hindi-inspired phrases over smooth bass and tabla accents, then a pre-drop break opens space for sarangi harmonies and emotional piano layers before the beat returns fuller, Vinyl crackle, reversed swells, and subtle rim taps bridge sections, Warm, intimate, nostalgic mix with rough dust and velvet mids, smooth, classic, emotional, nostalgic, desi, soulful, warm, hip-hop",
     "tags": [
-      "boom bap hip hop",
+      "boom bap hip",
       "desi hip hop",
       "soulful",
       "bollywood",
@@ -24856,7 +24815,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI HIP HOP/sheher ka player",
     "metadataText": "boom bap hip-hop, desi hip-hop, soulful\n\nBoom bap hip-hop with swung, dusty drums and a head-nodding mid-tempo groove; verse feel carries chopped soulful Hindi-inspired phrases over smooth bass and tabla accents, then a pre-drop break opens space for sarangi harmonies and emotional piano layers before the beat returns fuller, Vinyl crackle, reversed swells, and subtle rim taps bridge sections, Warm, intimate, nostalgic mix with rough dust and velvet mids, smooth, classic, emotional, nostalgic, desi, soulful, warm, hip-hop",
     "tags": [
-      "boom bap hip hop",
+      "boom bap hip",
       "desi hip hop",
       "soulful",
       "bollywood",
@@ -24883,7 +24842,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI HIP HOP/sher in the city",
     "metadataText": "boom bap hip-hop, desi hip-hop, soulful\n\nBoom bap hip-hop with swung, dusty drums and a head-nodding mid-tempo groove; verse feel carries chopped soulful Hindi-inspired phrases over smooth bass and tabla accents, then a pre-drop break opens space for sarangi harmonies and emotional piano layers before the beat returns fuller, Vinyl crackle, reversed swells, and subtle rim taps bridge sections, Warm, intimate, nostalgic mix with rough dust and velvet mids, smooth, classic, emotional, nostalgic, desi, soulful, warm, hip-hop",
     "tags": [
-      "boom bap hip hop",
+      "boom bap hip",
       "desi hip hop",
       "soulful",
       "bollywood",
@@ -24909,7 +24868,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI HIP HOP/streetlights aur smoke",
     "metadataText": "boom bap hip-hop, desi hip-hop, soulful\n\nBoom bap hip-hop with swung, dusty drums and a head-nodding mid-tempo groove; verse feel carries chopped soulful Hindi-inspired phrases over smooth bass and tabla accents, then a pre-drop break opens space for sarangi harmonies and emotional piano layers before the beat returns fuller, Vinyl crackle, reversed swells, and subtle rim taps bridge sections, Warm, intimate, nostalgic mix with rough dust and velvet mids, smooth, classic, emotional, nostalgic, desi, soulful, warm, hip-hop",
     "tags": [
-      "boom bap hip hop",
+      "boom bap hip",
       "desi hip hop",
       "soulful",
       "bollywood",
@@ -25045,7 +25004,7 @@ export const productionSongRecords = [
     "metadataText": "desi hip-hop, hip hop (boom bap), Bollywood/soulful cinematic\n\nNostalgic desi hip-hop track sampling vintage Bollywood melodies, featuring soulful Hindi vocals, boom bap drums, warm bass grooves, tabla rhythms, vinyl textures, poetic rap verses and emotional storytelling inspired by classic Indian cinema",
     "tags": [
       "desi hip hop",
-      "hip hop boom bap",
+      "hip hop boom",
       "bollywood soulful cinematic",
       "bollywood",
       "hindi",
@@ -25099,7 +25058,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "bollywood indian classical fusion",
+      "bollywood indian classical",
       "bollywood",
       "hindi",
       "hip",
@@ -25124,9 +25083,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI HIP HOP/Ye Raat",
     "metadataText": "Indian club hip-hop, Punjabi/Hindi bhangra-rap, trap / Bollywood party energy\n\nHigh-energy Indian club hip-hop track with booming basslines, Punjabi and Hindi vocal chants, dhol percussion, catchy rap hooks, aggressive trap drums, nightlife atmosphere and modern Bollywood party energy",
     "tags": [
-      "indian club hip hop",
-      "punjabi hindi bhangra rap",
-      "trap bollywood party energy",
+      "indian club hip",
+      "punjabi hindi bhangra",
+      "trap bollywood party",
       "bollywood",
       "hindi",
       "hip",
@@ -25152,7 +25111,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "boom bap",
-      "bollywood inspired vintage soulful",
+      "bollywood inspired vintage",
       "bollywood",
       "hindi",
       "hip",
@@ -25258,7 +25217,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI HIP HOP/दिल पे रख के हाथ",
     "metadataText": "Indian club hip-hop, Punjabi/Hindi rap, trap beats (aggressive)\n\nHigh-energy Indian club hip-hop track with booming basslines, Punjabi and Hindi vocal chants, dhol percussion, catchy rap hooks, aggressive trap drums, nightlife atmosphere and modern Bollywood party energy",
     "tags": [
-      "indian club hip hop",
+      "indian club hip",
       "punjabi hindi rap",
       "trap beats aggressive",
       "bollywood",
@@ -25284,11 +25243,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/R&B/After Midnight",
     "metadataText": "R&B, contemporary R&B, neo-soul\n\nR&B slow-burn with swung pocket and deep bass under silky piano chords; verse rides intimate close-mic confessions, pre-chorus opens with stacked harmonies and a lifted bass line, chorus lands on a chanty hook with doubles and soft gang responses, Add reverse swells, filtered synth bloom, and delay throws on key words, Polished, warm, cinematic, and glossy, smooth, warm, emotional, contemporary, romantic, r&b, rhythmic, deep, heartfelt, sensual, vocal, soulful, moody, rich, lyrical",
     "tags": [
-      "r and b",
       "contemporary r and b",
       "neo soul",
-      "commercial",
-      "and"
+      "commercial"
     ]
   },
   {
@@ -25308,11 +25265,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/R&B/After Midnight on Melrose",
     "metadataText": "R&B, contemporary R&B, neo-soul\n\nR&B slow-burn with swung pocket and deep bass under silky piano chords; verse rides intimate close-mic confessions, pre-chorus opens with stacked harmonies and a lifted bass line, chorus lands on a chanty hook with doubles and soft gang responses, Add reverse swells, filtered synth bloom, and delay throws on key words, Polished, warm, cinematic, and glossy, smooth, warm, emotional, contemporary, romantic, r&b, rhythmic, deep, heartfelt, sensual, vocal, soulful, moody, rich, lyrical",
     "tags": [
-      "r and b",
       "contemporary r and b",
       "neo soul",
-      "commercial",
-      "and"
+      "commercial"
     ]
   },
   {
@@ -25332,11 +25287,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/R&B/After the Door Locks",
     "metadataText": "R&B, contemporary R&B, neo-soul\n\nR&B slow-burn with swung pocket and deep bass under silky piano chords; verse rides intimate close-mic confessions, pre-chorus opens with stacked harmonies and a lifted bass line, chorus lands on a chanty hook with doubles and soft gang responses, Add reverse swells, filtered synth bloom, and delay throws on key words, Polished, warm, cinematic, and glossy, smooth, warm, emotional, contemporary, romantic, r&b, rhythmic, deep, heartfelt, sensual, vocal, soulful, moody, rich, lyrical",
     "tags": [
-      "r and b",
       "contemporary r and b",
       "neo soul",
-      "commercial",
-      "and"
+      "commercial"
     ]
   },
   {
@@ -25356,11 +25309,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/R&B/Backseat Moon",
     "metadataText": "R&B, contemporary R&B, neo-soul\n\nR&B slow-burn with swung pocket and deep bass under silky piano chords; verse rides intimate close-mic confessions, pre-chorus opens with stacked harmonies and a lifted bass line, chorus lands on a chanty hook with doubles and soft gang responses, Add reverse swells, filtered synth bloom, and delay throws on key words, Polished, warm, cinematic, and glossy, smooth, warm, emotional, contemporary, romantic, r&b, rhythmic, deep, heartfelt, sensual, vocal, soulful, moody, rich, lyrical",
     "tags": [
-      "r and b",
       "contemporary r and b",
       "neo soul",
-      "commercial",
-      "and"
+      "commercial"
     ]
   },
   {
@@ -25380,11 +25331,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/R&B/Call",
     "metadataText": "R&B, contemporary R&B, neo-soul\n\nR&B slow-burn with swung pocket and deep bass under silky piano chords; verse rides intimate close-mic confessions, pre-chorus opens with stacked harmonies and a lifted bass line, chorus lands on a chanty hook with doubles and soft gang responses, Add reverse swells, filtered synth bloom, and delay throws on key words, Polished, warm, cinematic, and glossy, smooth, warm, emotional, contemporary, romantic, r&b, rhythmic, deep, heartfelt, sensual, vocal, soulful, moody, rich, lyrical",
     "tags": [
-      "r and b",
       "contemporary r and b",
       "neo soul",
-      "commercial",
-      "and"
+      "commercial"
     ]
   },
   {
@@ -25404,11 +25353,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/R&B/Champagne Conversations at Dawn",
     "metadataText": "R&B, contemporary R&B, neo-soul\n\nR&B slow-burn with swung pocket and deep bass under silky piano chords; verse rides intimate close-mic confessions, pre-chorus opens with stacked harmonies and a lifted bass line, chorus lands on a chanty hook with doubles and soft gang responses, Add reverse swells, filtered synth bloom, and delay throws on key words, Polished, warm, cinematic, and glossy, smooth, warm, emotional, contemporary, romantic, r&b, rhythmic, deep, heartfelt, sensual, vocal, soulful, moody, rich, lyrical",
     "tags": [
-      "r and b",
       "contemporary r and b",
       "neo soul",
-      "commercial",
-      "and"
+      "commercial"
     ]
   },
   {
@@ -25428,11 +25375,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/R&B/Keycard",
     "metadataText": "R&B, contemporary R&B, neo-soul\n\nR&B slow-burn with swung pocket and deep bass under silky piano chords; verse rides intimate close-mic confessions, pre-chorus opens with stacked harmonies and a lifted bass line, chorus lands on a chanty hook with doubles and soft gang responses, Add reverse swells, filtered synth bloom, and delay throws on key words, Polished, warm, cinematic, and glossy, smooth, warm, emotional, contemporary, romantic, r&b, rhythmic, deep, heartfelt, sensual, vocal, soulful, moody, rich, lyrical",
     "tags": [
-      "r and b",
       "contemporary r and b",
       "neo soul",
-      "commercial",
-      "and"
+      "commercial"
     ]
   },
   {
@@ -25452,13 +25397,11 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/R&B/Last Train Home",
     "metadataText": "R&B, contemporary R&B, soulful, smooth, sensual\n\nR&B with a slow swung pocket and sensual half-time groove; verse stays intimate with warm piano, sub-bass, and sparse hat ticks; pre-chorus opens with stacked harmonies and rising synth haze; chorus blooms with silky doubles, ad-lib panning, and a repeated anchor hook, Bridge drops to voice and keys, then final chorus returns with lush vocal layers, reverse swells, and polished, wide, cinematic mix, lyrical, warm, soulful, emotional, moody, contemporary, r&b, vocal, deep, heartfelt, romantic, smooth, sensual, rich, rhythmic",
     "tags": [
-      "r and b",
       "contemporary r and b",
       "soulful",
       "smooth",
       "sensual",
-      "commercial",
-      "and"
+      "commercial"
     ]
   },
   {
@@ -25478,13 +25421,11 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/R&B/Late Night Confession",
     "metadataText": "R&B, contemporary R&B, soulful, smooth, sensual\n\nR&B with a slow swung pocket and sensual half-time groove; verse stays intimate with warm piano, sub-bass, and sparse hat ticks; pre-chorus opens with stacked harmonies and rising synth haze; chorus blooms with silky doubles, ad-lib panning, and a repeated anchor hook, Bridge drops to voice and keys, then final chorus returns with lush vocal layers, reverse swells, and polished, wide, cinematic mix, lyrical, warm, soulful, emotional, moody, contemporary, r&b, vocal, deep, heartfelt, romantic, smooth, sensual, rich, rhythmic",
     "tags": [
-      "r and b",
       "contemporary r and b",
       "soulful",
       "smooth",
       "sensual",
-      "commercial",
-      "and"
+      "commercial"
     ]
   },
   {
@@ -25504,13 +25445,11 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/R&B/Midnight Velvet Frequency",
     "metadataText": "R&B, contemporary R&B, soulful, smooth, sensual\n\nR&B with a slow swung pocket and sensual half-time groove; verse stays intimate with warm piano, sub-bass, and sparse hat ticks; pre-chorus opens with stacked harmonies and rising synth haze; chorus blooms with silky doubles, ad-lib panning, and a repeated anchor hook, Bridge drops to voice and keys, then final chorus returns with lush vocal layers, reverse swells, and polished, wide, cinematic mix, lyrical, warm, soulful, emotional, moody, contemporary, r&b, vocal, deep, heartfelt, romantic, smooth, sensual, rich, rhythmic",
     "tags": [
-      "r and b",
       "contemporary r and b",
       "soulful",
       "smooth",
       "sensual",
-      "commercial",
-      "and"
+      "commercial"
     ]
   },
   {
@@ -25530,13 +25469,11 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/R&B/Moonlight Through Tinted Windows",
     "metadataText": "R&B, contemporary R&B, soulful, smooth, sensual\n\nR&B with a slow swung pocket and sensual half-time groove; verse stays intimate with warm piano, sub-bass, and sparse hat ticks; pre-chorus opens with stacked harmonies and rising synth haze; chorus blooms with silky doubles, ad-lib panning, and a repeated anchor hook, Bridge drops to voice and keys, then final chorus returns with lush vocal layers, reverse swells, and polished, wide, cinematic mix, lyrical, warm, soulful, emotional, moody, contemporary, r&b, vocal, deep, heartfelt, romantic, smooth, sensual, rich, rhythmic",
     "tags": [
-      "r and b",
       "contemporary r and b",
       "soulful",
       "smooth",
       "sensual",
-      "commercial",
-      "and"
+      "commercial"
     ]
   },
   {
@@ -25556,13 +25493,11 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/R&B/Neon Reflections on Your Skin",
     "metadataText": "R&B, contemporary R&B, soulful, smooth, sensual\n\nR&B with a slow swung pocket and sensual half-time groove; verse stays intimate with warm piano, sub-bass, and sparse hat ticks; pre-chorus opens with stacked harmonies and rising synth haze; chorus blooms with silky doubles, ad-lib panning, and a repeated anchor hook, Bridge drops to voice and keys, then final chorus returns with lush vocal layers, reverse swells, and polished, wide, cinematic mix, lyrical, warm, soulful, emotional, moody, contemporary, r&b, vocal, deep, heartfelt, romantic, smooth, sensual, rich, rhythmic",
     "tags": [
-      "r and b",
       "contemporary r and b",
       "soulful",
       "smooth",
       "sensual",
-      "commercial",
-      "and"
+      "commercial"
     ]
   },
   {
@@ -25582,13 +25517,11 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/R&B/Ocean Views From the Highrise",
     "metadataText": "R&B, contemporary R&B, soulful, smooth, sensual\n\nR&B with a slow swung pocket and sensual half-time groove; verse stays intimate with warm piano, sub-bass, and sparse hat ticks; pre-chorus opens with stacked harmonies and rising synth haze; chorus blooms with silky doubles, ad-lib panning, and a repeated anchor hook, Bridge drops to voice and keys, then final chorus returns with lush vocal layers, reverse swells, and polished, wide, cinematic mix, lyrical, warm, soulful, emotional, moody, contemporary, r&b, vocal, deep, heartfelt, romantic, smooth, sensual, rich, rhythmic",
     "tags": [
-      "r and b",
       "contemporary r and b",
       "soulful",
       "smooth",
       "sensual",
-      "commercial",
-      "and"
+      "commercial"
     ]
   },
   {
@@ -25609,13 +25542,11 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/R&B/On My Tongue",
     "metadataText": "R&B, contemporary R&B, soulful, smooth, sensual\n\nR&B with a slow swung pocket and sensual half-time groove; verse stays intimate with warm piano, sub-bass, and sparse hat ticks; pre-chorus opens with stacked harmonies and rising synth haze; chorus blooms with silky doubles, ad-lib panning, and a repeated anchor hook, Bridge drops to voice and keys, then final chorus returns with lush vocal layers, reverse swells, and polished, wide, cinematic mix, lyrical, warm, soulful, emotional, moody, contemporary, r&b, vocal, deep, heartfelt, romantic, smooth, sensual, rich, rhythmic",
     "tags": [
-      "r and b",
       "contemporary r and b",
       "soulful",
       "smooth",
       "sensual",
-      "commercial",
-      "and"
+      "commercial"
     ]
   },
   {
@@ -25636,13 +25567,11 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/R&B/On My Window",
     "metadataText": "R&B, contemporary R&B, soulful, smooth, sensual\n\nR&B with a slow swung pocket and sensual half-time groove; verse stays intimate with warm piano, sub-bass, and sparse hat ticks; pre-chorus opens with stacked harmonies and rising synth haze; chorus blooms with silky doubles, ad-lib panning, and a repeated anchor hook, Bridge drops to voice and keys, then final chorus returns with lush vocal layers, reverse swells, and polished, wide, cinematic mix, lyrical, warm, soulful, emotional, moody, contemporary, r&b, vocal, deep, heartfelt, romantic, smooth, sensual, rich, rhythmic",
     "tags": [
-      "r and b",
       "contemporary r and b",
       "soulful",
       "smooth",
       "sensual",
-      "commercial",
-      "and"
+      "commercial"
     ]
   },
   {
@@ -25663,13 +25592,11 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/R&B/Silk On My Sleeve",
     "metadataText": "R&B, contemporary R&B, soulful, smooth, sensual\n\nR&B with a slow swung pocket and sensual half-time groove; verse stays intimate with warm piano, sub-bass, and sparse hat ticks; pre-chorus opens with stacked harmonies and rising synth haze; chorus blooms with silky doubles, ad-lib panning, and a repeated anchor hook, Bridge drops to voice and keys, then final chorus returns with lush vocal layers, reverse swells, and polished, wide, cinematic mix, lyrical, warm, soulful, emotional, moody, contemporary, r&b, vocal, deep, heartfelt, romantic, smooth, sensual, rich, rhythmic",
     "tags": [
-      "r and b",
       "contemporary r and b",
       "soulful",
       "smooth",
       "sensual",
-      "commercial",
-      "and"
+      "commercial"
     ]
   },
   {
@@ -25690,13 +25617,11 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/R&B/Silk Sheets & City Rain",
     "metadataText": "R&B, contemporary R&B, soulful, smooth, sensual\n\nR&B with a slow swung pocket and sensual half-time groove; verse stays intimate with warm piano, sub-bass, and sparse hat ticks; pre-chorus opens with stacked harmonies and rising synth haze; chorus blooms with silky doubles, ad-lib panning, and a repeated anchor hook, Bridge drops to voice and keys, then final chorus returns with lush vocal layers, reverse swells, and polished, wide, cinematic mix, lyrical, warm, soulful, emotional, moody, contemporary, r&b, vocal, deep, heartfelt, romantic, smooth, sensual, rich, rhythmic",
     "tags": [
-      "r and b",
       "contemporary r and b",
       "soulful",
       "smooth",
       "sensual",
-      "commercial",
-      "and"
+      "commercial"
     ]
   },
   {
@@ -25717,13 +25642,11 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/R&B/Slow Dancing in the Penthouse",
     "metadataText": "R&B, contemporary R&B, soulful, smooth, sensual\n\nR&B with a slow swung pocket and sensual half-time groove; verse stays intimate with warm piano, sub-bass, and sparse hat ticks; pre-chorus opens with stacked harmonies and rising synth haze; chorus blooms with silky doubles, ad-lib panning, and a repeated anchor hook, Bridge drops to voice and keys, then final chorus returns with lush vocal layers, reverse swells, and polished, wide, cinematic mix, lyrical, warm, soulful, emotional, moody, contemporary, r&b, vocal, deep, heartfelt, romantic, smooth, sensual, rich, rhythmic",
     "tags": [
-      "r and b",
       "contemporary r and b",
       "soulful",
       "smooth",
       "sensual",
-      "commercial",
-      "and"
+      "commercial"
     ]
   },
   {
@@ -25744,11 +25667,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/R&B/Taxi",
     "metadataText": "R&B, contemporary soul, slow jam\n\nR&B slow-jam with swung pocket and deep sub-bass, smooth four-bar loop feel, and sensual rhythmic bounce; verse rides warm piano, muted kick, and airy synth haze, pre-chorus strips to bass, handclaps, and vocal lift, chorus opens with stacked harmonies and a silky lead hook, Ad-lib doubles, delay throws, breathy asides, Vinyl crackle, reversed swells, soft cymbal lifts, Polished, intimate, glossy, rhythmic, heartfelt, moody, warm, vocal, sensual, rich, emotional, r&b, lyrical, deep, smooth, soulful, romantic, contemporary",
     "tags": [
-      "r and b",
       "contemporary soul",
       "slow jam",
-      "commercial",
-      "and"
+      "commercial"
     ]
   },
   {
@@ -25770,10 +25691,8 @@ export const productionSongRecords = [
     "metadataText": "contemporary R&B, r&b, soulful\n\nContemporary R&B with a slow-sway half-time groove, deep bass pulse, warm piano chords, and silky synth haze; verse stays intimate and sparse, pre-chorus opens with stacked harmonies and rising tension, chorus blooms with a chantable hook and lush vocal layers, bridge drops to piano and breathy lead before the final lift, Close-mic lead, doubled hooks, soft ad-libs, delay throws, reversed swells, polished and cinematic, lyrical, emotional, r&b, heartfelt, rich, smooth, rhythmic, sensual, vocal, moody, contemporary, warm, deep, soulful, romantic",
     "tags": [
       "contemporary r and b",
-      "r and b",
       "soulful",
-      "commercial",
-      "and"
+      "commercial"
     ]
   },
   {
@@ -25795,10 +25714,8 @@ export const productionSongRecords = [
     "metadataText": "contemporary R&B, r&b, soulful\n\nContemporary R&B with a slow-sway half-time groove, deep bass pulse, warm piano chords, and silky synth haze; verse stays intimate and sparse, pre-chorus opens with stacked harmonies and rising tension, chorus blooms with a chantable hook and lush vocal layers, bridge drops to piano and breathy lead before the final lift, Close-mic lead, doubled hooks, soft ad-libs, delay throws, reversed swells, polished and cinematic, lyrical, emotional, r&b, heartfelt, rich, smooth, rhythmic, sensual, vocal, moody, contemporary, warm, deep, soulful, romantic",
     "tags": [
       "contemporary r and b",
-      "r and b",
       "soulful",
-      "commercial",
-      "and"
+      "commercial"
     ]
   },
   {
@@ -25820,10 +25737,8 @@ export const productionSongRecords = [
     "metadataText": "contemporary R&B, r&b, soulful\n\nContemporary R&B with a slow-sway half-time groove, deep bass pulse, warm piano chords, and silky synth haze; verse stays intimate and sparse, pre-chorus opens with stacked harmonies and rising tension, chorus blooms with a chantable hook and lush vocal layers, bridge drops to piano and breathy lead before the final lift, Close-mic lead, doubled hooks, soft ad-libs, delay throws, reversed swells, polished and cinematic, lyrical, emotional, r&b, heartfelt, rich, smooth, rhythmic, sensual, vocal, moody, contemporary, warm, deep, soulful, romantic",
     "tags": [
       "contemporary r and b",
-      "r and b",
       "soulful",
-      "commercial",
-      "and"
+      "commercial"
     ]
   },
   {
@@ -25845,10 +25760,8 @@ export const productionSongRecords = [
     "metadataText": "contemporary R&B, r&b, soulful\n\nContemporary R&B with a slow-sway half-time groove, deep bass pulse, warm piano chords, and silky synth haze; verse stays intimate and sparse, pre-chorus opens with stacked harmonies and rising tension, chorus blooms with a chantable hook and lush vocal layers, bridge drops to piano and breathy lead before the final lift, Close-mic lead, doubled hooks, soft ad-libs, delay throws, reversed swells, polished and cinematic, lyrical, emotional, r&b, heartfelt, rich, smooth, rhythmic, sensual, vocal, moody, contemporary, warm, deep, soulful, romantic",
     "tags": [
       "contemporary r and b",
-      "r and b",
       "soulful",
-      "commercial",
-      "and"
+      "commercial"
     ]
   },
   {
@@ -25870,10 +25783,8 @@ export const productionSongRecords = [
     "metadataText": "contemporary R&B, r&b, soulful\n\nContemporary R&B with a slow-sway half-time groove, deep bass pulse, warm piano chords, and silky synth haze; verse stays intimate and sparse, pre-chorus opens with stacked harmonies and rising tension, chorus blooms with a chantable hook and lush vocal layers, bridge drops to piano and breathy lead before the final lift, Close-mic lead, doubled hooks, soft ad-libs, delay throws, reversed swells, polished and cinematic, lyrical, emotional, r&b, heartfelt, rich, smooth, rhythmic, sensual, vocal, moody, contemporary, warm, deep, soulful, romantic",
     "tags": [
       "contemporary r and b",
-      "r and b",
       "soulful",
-      "commercial",
-      "and"
+      "commercial"
     ]
   },
   {
@@ -25898,8 +25809,7 @@ export const productionSongRecords = [
       "soulful",
       "smooth",
       "moody",
-      "commercial",
-      "and"
+      "commercial"
     ]
   },
   {
@@ -26401,7 +26311,7 @@ export const productionSongRecords = [
     "metadataText": "Hindi trap, cinematic Bollywood-inspired electronic, cinematic urban\n\nModern Hindi trap instrumental with booming 808 basslines, punchy trap drums, emotional Bollywood-inspired string-and-synth melodies, tabla percussion accents, atmospheric Indian vocal textures, and cinematic urban energy; verse-like sections stay sparse with sub and claps, a pre-drop builds using filtered plucks and rising taals, the main drop hits with stacked melody leads and heavy low-end, then a breakdown strips to hand percussion and airy drones before the final lift, Bright, wide, and hard-hitting mix with glossy low-end and dramatic stereo space, vocal, emotional",
     "tags": [
       "hindi trap",
-      "cinematic bollywood inspired electronic",
+      "cinematic bollywood inspired",
       "cinematic urban",
       "bollywood",
       "hindi",
@@ -26426,7 +26336,7 @@ export const productionSongRecords = [
     "metadataText": "Hindi trap, cinematic Bollywood-inspired electronic, cinematic urban\n\nModern Hindi trap instrumental with booming 808 basslines, punchy trap drums, emotional Bollywood-inspired string-and-synth melodies, tabla percussion accents, atmospheric Indian vocal textures, and cinematic urban energy; verse-like sections stay sparse with sub and claps, a pre-drop builds using filtered plucks and rising taals, the main drop hits with stacked melody leads and heavy low-end, then a breakdown strips to hand percussion and airy drones before the final lift, Bright, wide, and hard-hitting mix with glossy low-end and dramatic stereo space, vocal, emotional",
     "tags": [
       "hindi trap",
-      "cinematic bollywood inspired electronic",
+      "cinematic bollywood inspired",
       "cinematic urban",
       "bollywood",
       "hindi",
@@ -26451,7 +26361,7 @@ export const productionSongRecords = [
     "metadataText": "Hindi trap, cinematic Bollywood-inspired electronic, cinematic urban\n\nModern Hindi trap instrumental with booming 808 basslines, punchy trap drums, emotional Bollywood-inspired string-and-synth melodies, tabla percussion accents, atmospheric Indian vocal textures, and cinematic urban energy; verse-like sections stay sparse with sub and claps, a pre-drop builds using filtered plucks and rising taals, the main drop hits with stacked melody leads and heavy low-end, then a breakdown strips to hand percussion and airy drones before the final lift, Bright, wide, and hard-hitting mix with glossy low-end and dramatic stereo space, vocal, emotional",
     "tags": [
       "hindi trap",
-      "cinematic bollywood inspired electronic",
+      "cinematic bollywood inspired",
       "cinematic urban",
       "bollywood",
       "hindi",
@@ -26476,7 +26386,7 @@ export const productionSongRecords = [
     "metadataText": "Hindi trap, cinematic Bollywood-inspired electronic, cinematic urban\n\nModern Hindi trap instrumental with booming 808 basslines, punchy trap drums, emotional Bollywood-inspired string-and-synth melodies, tabla percussion accents, atmospheric Indian vocal textures, and cinematic urban energy; verse-like sections stay sparse with sub and claps, a pre-drop builds using filtered plucks and rising taals, the main drop hits with stacked melody leads and heavy low-end, then a breakdown strips to hand percussion and airy drones before the final lift, Bright, wide, and hard-hitting mix with glossy low-end and dramatic stereo space, vocal, emotional",
     "tags": [
       "hindi trap",
-      "cinematic bollywood inspired electronic",
+      "cinematic bollywood inspired",
       "cinematic urban",
       "bollywood",
       "hindi",
@@ -26501,7 +26411,7 @@ export const productionSongRecords = [
     "metadataText": "Hindi trap, cinematic Bollywood-inspired electronic, cinematic urban\n\nModern Hindi trap instrumental with booming 808 basslines, punchy trap drums, emotional Bollywood-inspired string-and-synth melodies, tabla percussion accents, atmospheric Indian vocal textures, and cinematic urban energy; verse-like sections stay sparse with sub and claps, a pre-drop builds using filtered plucks and rising taals, the main drop hits with stacked melody leads and heavy low-end, then a breakdown strips to hand percussion and airy drones before the final lift, Bright, wide, and hard-hitting mix with glossy low-end and dramatic stereo space, vocal, emotional",
     "tags": [
       "hindi trap",
-      "cinematic bollywood inspired electronic",
+      "cinematic bollywood inspired",
       "cinematic urban",
       "bollywood",
       "hindi",
@@ -26526,7 +26436,7 @@ export const productionSongRecords = [
     "metadataText": "Hindi trap, cinematic Bollywood-inspired electronic, cinematic urban\n\nModern Hindi trap instrumental with booming 808 basslines, punchy trap drums, emotional Bollywood-inspired string-and-synth melodies, tabla percussion accents, atmospheric Indian vocal textures, and cinematic urban energy; verse-like sections stay sparse with sub and claps, a pre-drop builds using filtered plucks and rising taals, the main drop hits with stacked melody leads and heavy low-end, then a breakdown strips to hand percussion and airy drones before the final lift, Bright, wide, and hard-hitting mix with glossy low-end and dramatic stereo space, vocal, emotional",
     "tags": [
       "hindi trap",
-      "cinematic bollywood inspired electronic",
+      "cinematic bollywood inspired",
       "cinematic urban",
       "bollywood",
       "hindi",
@@ -26551,7 +26461,7 @@ export const productionSongRecords = [
     "metadataText": "Hindi trap, cinematic Bollywood-inspired electronic, cinematic urban\n\nModern Hindi trap instrumental with booming 808 basslines, punchy trap drums, emotional Bollywood-inspired string-and-synth melodies, tabla percussion accents, atmospheric Indian vocal textures, and cinematic urban energy; verse-like sections stay sparse with sub and claps, a pre-drop builds using filtered plucks and rising taals, the main drop hits with stacked melody leads and heavy low-end, then a breakdown strips to hand percussion and airy drones before the final lift, Bright, wide, and hard-hitting mix with glossy low-end and dramatic stereo space, vocal, emotional",
     "tags": [
       "hindi trap",
-      "cinematic bollywood inspired electronic",
+      "cinematic bollywood inspired",
       "cinematic urban",
       "bollywood",
       "hindi",
@@ -26672,7 +26582,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI FUSION/raat bhar safar",
     "metadataText": "lo-fi hip-hop, lo-fi, nostalgic\n\nLo-fi hip-hop instrumental with mellow sitar phrases over laid-back swung drums and soft tabla taps; verse groove stays sparse with dusty vinyl crackle and a round sub pulse, then the main section opens with airy synth pads and a warmer sitar counterline, Filtered risers, tape-stop flickers, and rain-streak ambience bridge the sections, Intimate, dusty, and nostalgic mix, relaxing, hip-hop, nostalgic, warm, soft, mellow, lo-fi",
     "tags": [
-      "lo fi hip hop",
       "lo fi",
       "nostalgic",
       "bollywood",
@@ -26697,7 +26606,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI FUSION/Raat Ki Sitar",
     "metadataText": "lo-fi hip-hop, lo-fi, nostalgic\n\nLo-fi hip-hop instrumental with mellow sitar phrases over laid-back swung drums and soft tabla taps; verse groove stays sparse with dusty vinyl crackle and a round sub pulse, then the main section opens with airy synth pads and a warmer sitar counterline, Filtered risers, tape-stop flickers, and rain-streak ambience bridge the sections, Intimate, dusty, and nostalgic mix, relaxing, hip-hop, nostalgic, warm, soft, mellow, lo-fi",
     "tags": [
-      "lo fi hip hop",
       "lo fi",
       "nostalgic",
       "bollywood",
@@ -26722,7 +26630,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI FUSION/radio songs from another summer",
     "metadataText": "lo-fi hip-hop, lo-fi, nostalgic\n\nLo-fi hip-hop instrumental with mellow sitar phrases over laid-back swung drums and soft tabla taps; verse groove stays sparse with dusty vinyl crackle and a round sub pulse, then the main section opens with airy synth pads and a warmer sitar counterline, Filtered risers, tape-stop flickers, and rain-streak ambience bridge the sections, Intimate, dusty, and nostalgic mix, relaxing, hip-hop, nostalgic, warm, soft, mellow, lo-fi",
     "tags": [
-      "lo fi hip hop",
       "lo fi",
       "nostalgic",
       "bollywood",
@@ -26747,7 +26654,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI FUSION/rain on marine drive",
     "metadataText": "lo-fi hip-hop, lo-fi, nostalgic\n\nLo-fi hip-hop instrumental with mellow sitar phrases over laid-back swung drums and soft tabla taps; verse groove stays sparse with dusty vinyl crackle and a round sub pulse, then the main section opens with airy synth pads and a warmer sitar counterline, Filtered risers, tape-stop flickers, and rain-streak ambience bridge the sections, Intimate, dusty, and nostalgic mix, relaxing, hip-hop, nostalgic, warm, soft, mellow, lo-fi",
     "tags": [
-      "lo fi hip hop",
       "lo fi",
       "nostalgic",
       "bollywood",
@@ -26772,7 +26678,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI FUSION/rain over mumbai",
     "metadataText": "lo-fi hip-hop, lo-fi, nostalgic\n\nLo-fi hip-hop instrumental with mellow sitar phrases over laid-back swung drums and soft tabla taps; verse groove stays sparse with dusty vinyl crackle and a round sub pulse, then the main section opens with airy synth pads and a warmer sitar counterline, Filtered risers, tape-stop flickers, and rain-streak ambience bridge the sections, Intimate, dusty, and nostalgic mix, relaxing, hip-hop, nostalgic, warm, soft, mellow, lo-fi",
     "tags": [
-      "lo fi hip hop",
       "lo fi",
       "nostalgic",
       "bollywood",
@@ -26999,7 +26904,7 @@ export const productionSongRecords = [
     "tags": [
       "hindi trap",
       "trap beat",
-      "cinematic bollywood pop elements",
+      "cinematic bollywood pop",
       "bollywood",
       "hindi",
       "fusion"
@@ -27024,7 +26929,7 @@ export const productionSongRecords = [
     "tags": [
       "hindi trap",
       "trap beat",
-      "cinematic bollywood pop elements",
+      "cinematic bollywood pop",
       "bollywood",
       "hindi",
       "fusion"
@@ -27049,7 +26954,7 @@ export const productionSongRecords = [
     "tags": [
       "hindi trap",
       "trap beat",
-      "cinematic bollywood pop elements",
+      "cinematic bollywood pop",
       "bollywood",
       "hindi",
       "fusion"
@@ -27074,7 +26979,7 @@ export const productionSongRecords = [
     "tags": [
       "hindi trap",
       "trap beat",
-      "cinematic bollywood pop elements",
+      "cinematic bollywood pop",
       "bollywood",
       "hindi",
       "fusion"
@@ -27511,7 +27416,7 @@ export const productionSongRecords = [
       "cinematic soundtrack",
       "orchestral",
       "inspirational folk",
-      "dramatic vocal anthem",
+      "dramatic anthem",
       "bollywood",
       "hindi",
       "epic"
@@ -27537,7 +27442,7 @@ export const productionSongRecords = [
       "cinematic soundtrack",
       "orchestral",
       "inspirational folk",
-      "dramatic vocal anthem",
+      "dramatic anthem",
       "bollywood",
       "hindi",
       "epic"
@@ -27585,7 +27490,7 @@ export const productionSongRecords = [
       "cinematic soundtrack",
       "orchestral",
       "inspirational folk",
-      "dramatic vocal anthem",
+      "dramatic anthem",
       "bollywood",
       "hindi",
       "epic"
@@ -27633,7 +27538,7 @@ export const productionSongRecords = [
       "cinematic soundtrack",
       "orchestral",
       "inspirational folk",
-      "dramatic vocal anthem",
+      "dramatic anthem",
       "bollywood",
       "hindi",
       "epic"
@@ -27659,7 +27564,7 @@ export const productionSongRecords = [
       "cinematic soundtrack",
       "orchestral",
       "inspirational folk",
-      "dramatic vocal anthem",
+      "dramatic anthem",
       "bollywood",
       "hindi",
       "epic"
@@ -28495,7 +28400,7 @@ export const productionSongRecords = [
     "tags": [
       "indian cinematic orchestral",
       "epic orchestral",
-      "devotional tribal dhol tabla driven",
+      "devotional tribal dhol",
       "bollywood",
       "hindi",
       "epic"
@@ -28520,7 +28425,7 @@ export const productionSongRecords = [
     "tags": [
       "indian cinematic orchestral",
       "epic orchestral",
-      "devotional tribal dhol tabla driven",
+      "devotional tribal dhol",
       "bollywood",
       "hindi",
       "epic"
@@ -28545,7 +28450,7 @@ export const productionSongRecords = [
     "tags": [
       "indian cinematic orchestral",
       "epic orchestral",
-      "devotional tribal dhol tabla driven",
+      "devotional tribal dhol",
       "bollywood",
       "hindi",
       "epic"
@@ -28570,7 +28475,7 @@ export const productionSongRecords = [
     "tags": [
       "indian cinematic orchestral",
       "epic orchestral",
-      "devotional tribal dhol tabla driven",
+      "devotional tribal dhol",
       "bollywood",
       "hindi",
       "epic"
@@ -28595,7 +28500,7 @@ export const productionSongRecords = [
     "tags": [
       "indian cinematic orchestral",
       "epic orchestral",
-      "devotional tribal dhol tabla driven",
+      "devotional tribal dhol",
       "bollywood",
       "hindi",
       "epic"
@@ -28620,7 +28525,7 @@ export const productionSongRecords = [
     "tags": [
       "indian cinematic orchestral",
       "epic orchestral",
-      "devotional tribal dhol tabla driven",
+      "devotional tribal dhol",
       "bollywood",
       "hindi",
       "epic"
@@ -28718,8 +28623,8 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI EPIC/Warriors of Bharat",
     "metadataText": "modern Bollywood thriller (cinematic), suspenseful orchestral film score, dark hybrid percussion\n\nIndian cinematic thriller score with slow-burn tension, 92 BPM pulse, haunting orchestral strings, deep sub hits, suspense piano ostinatos, aggressive hybrid percussion, tanpura drones, distorted sitar accents, sarangi lament lines, and tribal tabla drive; verse sections stay sparse and ominous, pre-chorus tightens with rising cluster strings, chorus detonates into full brass, stacked chants, and pounding toms; distant Hindi chant doubles, whispered replies, reverse swells, impact booms, and metallic rises color the transitions; dark, glossy, and wide with a modern Bollywood thriller punch, soundtrack, drama, vocal, orchestral, deep, emotional",
     "tags": [
-      "modern bollywood thriller cinematic",
-      "suspenseful orchestral film score",
+      "modern bollywood thriller",
+      "suspenseful orchestral film",
       "dark hybrid percussion",
       "bollywood",
       "hindi",
@@ -28797,7 +28702,7 @@ export const productionSongRecords = [
     "tags": [
       "city pop",
       "synthwave",
-      "80s inspired funk pop",
+      "80s inspired funk",
       "culture",
       "japanese",
       "pop"
@@ -30817,8 +30722,8 @@ export const productionSongRecords = [
     "metadataText": "Chinese EDM, electronic dance music (EDM), festival/anthemic electro-pop\n\nHigh-energy Chinese EDM anthem with uplifting synth melodies, cinematic buildups, explosive festival drops, emotional vocal hooks, futuristic production and massive dancefloor energy inspired by modern Asian electronic music",
     "tags": [
       "chinese edm",
-      "electronic dance music edm",
-      "festival anthemic electro pop",
+      "electronic dance",
+      "festival anthemic electro",
       "culture",
       "chinese",
       "pop"
@@ -30995,9 +30900,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/CHINESE/不忘初心",
     "metadataText": "modern Chinese hip-hop, trap, atmospheric synthwave/alt-rap\n\nModern Chinese hip-hop track with deep 808 basslines, punchy trap drums, confident rap flows, atmospheric synth textures, urban nightlife atmosphere and stylish contemporary Chinese street culture energy",
     "tags": [
-      "modern chinese hip hop",
+      "modern chinese hip",
       "trap",
-      "atmospheric synthwave alt rap",
+      "atmospheric synthwave alt",
       "culture",
       "chinese",
       "pop"
@@ -31021,9 +30926,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/CHINESE/中间人",
     "metadataText": "modern Chinese hip-hop, trap, atmospheric synthwave/alt-rap\n\nModern Chinese hip-hop track with deep 808 basslines, punchy trap drums, confident rap flows, atmospheric synth textures, urban nightlife atmosphere and stylish contemporary Chinese street culture energy",
     "tags": [
-      "modern chinese hip hop",
+      "modern chinese hip",
       "trap",
-      "atmospheric synthwave alt rap",
+      "atmospheric synthwave alt",
       "culture",
       "chinese",
       "pop"
@@ -31047,9 +30952,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/CHINESE/千秋",
     "metadataText": "modern Chinese hip-hop, trap, atmospheric synthwave/alt-rap\n\nModern Chinese hip-hop track with deep 808 basslines, punchy trap drums, confident rap flows, atmospheric synth textures, urban nightlife atmosphere and stylish contemporary Chinese street culture energy",
     "tags": [
-      "modern chinese hip hop",
+      "modern chinese hip",
       "trap",
-      "atmospheric synthwave alt rap",
+      "atmospheric synthwave alt",
       "culture",
       "chinese",
       "pop"
@@ -31073,9 +30978,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/CHINESE/只问山水不问仙",
     "metadataText": "modern Chinese hip-hop, trap, atmospheric synthwave/alt-rap\n\nModern Chinese hip-hop track with deep 808 basslines, punchy trap drums, confident rap flows, atmospheric synth textures, urban nightlife atmosphere and stylish contemporary Chinese street culture energy",
     "tags": [
-      "modern chinese hip hop",
+      "modern chinese hip",
       "trap",
-      "atmospheric synthwave alt rap",
+      "atmospheric synthwave alt",
       "culture",
       "chinese",
       "pop"
@@ -31099,9 +31004,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/CHINESE/愚人",
     "metadataText": "modern Chinese hip-hop, trap, atmospheric synthwave/alt-rap\n\nModern Chinese hip-hop track with deep 808 basslines, punchy trap drums, confident rap flows, atmospheric synth textures, urban nightlife atmosphere and stylish contemporary Chinese street culture energy",
     "tags": [
-      "modern chinese hip hop",
+      "modern chinese hip",
       "trap",
-      "atmospheric synthwave alt rap",
+      "atmospheric synthwave alt",
       "culture",
       "chinese",
       "pop"
@@ -31254,22 +31159,19 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/A Lantern Beneath the Rainfall",
     "metadataText": "Dream-pop acoustic ballad with gentle swung fingerpicked guitar, soft piano echoes, airy synth pads, and slow cinematic swells; verse stays intimate and close-mic, pre-chorus opens with layered breathy doubles, chorus lifts with warm harmony stacks and a repeated chantable hook, Add reverse-pad transitions, bell-like glints between phrases, and a final swell into a wide, shimmering mix, ambient, acoustic, warm, soft, emotional, calming\n\n1 0 0 A Lantern Beneath the Rainfall Add a Caption Remix/Edit Dream-pop acoustic ballad with gentle swung fingerpicked guitar, soft piano echoes, airy synth pads, and slow cinematic swells; verse stays intimate and close-mic, pre-chorus opens with layered breathy doubles, chorus lifts with warm harmony stacks and a repeated chantable hook, Add reverse-pad transitions, bell-like glints between phrases, and a final swell into a wide, shimmering mix, ambient, acoustic, warm, soft, emotional, calming Show Less 2d, 20h ago",
     "tags": [
-      "dream pop acoustic ballad with gentle swung fingerpicked guitar",
+      "dream pop acoustic",
       "soft piano echoes",
       "airy synth pads",
-      "and slow cinematic swells verse stays intimate and close mic",
-      "pre chorus opens with layered breathy doubles",
-      "chorus lifts with warm harmony stacks and a repeated chantable hook",
-      "add reverse pad transitions",
-      "bell like glints between phrases",
-      "and a final swell into a wide",
-      "shimmering mix",
+      "slow cinematic",
+      "bell like glints",
+      "shimmering",
       "ambient",
       "acoustic",
       "warm",
       "soft",
       "emotional",
-      "calming"
+      "calming",
+      "commercial"
     ]
   },
   {
@@ -31290,22 +31192,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Back Porch Miles",
     "metadataText": "Acoustic folk-pop with gentle fingerpicked guitar and soft organic percussion in a laid-back 6/8 sway; verse stays close and sparse with piano fills and intimate lead vocal, pre-chorus lifts with stacked harmonies and a rising string line, chorus opens wide with rich three-part harmonies and hand-tapped pulse, bridge pulls back to voice and piano before final chorus blooms, Warm live-session mix, close-mic and airy, with delicate cello swells, brushed textures, and tender ear candy like fret squeaks, reversed string breaths, and soft room-tone tails, beautiful, lyrical, emotional, warm, heartfelt, acoustic, uplifting, nostalgic, soulful, rich, natural, soft\n\n[Verse 1]\nI found your note in the coat by the door\nFolded small like a map to the shore\nCoffee gone cold on the table again\nBut your name still warms up the pen\nThe screen door swings with the evening air\nDust on the porch and your scarf on the chair\nI hear your laugh in the apple tree\nLike it still knows how you were with me\n[Pre-Chorus]\nAnd I was lost in the miles\nNow I can see\nEvery road you drew\nWas leading me\n[Chorus]\nTake me back, take me home\nThrough the fields and the open road\nWith your hand in mine\nSlow and kind\nTake me back, take me home\nWhere the wildflowers bend and grow\nIf the world feels wide\nStay tonight\n[Verse 2]\nI packed the car at the edge of dawn\nWith a paper cup and a half-sung song\nWe passed the barn with the peeling red paint\nYou said, \"Some hearts still learn to wait\"\nI kept your ring in the little tin box\nBeside the map and the roadside rocks\nAnd every hill that rolled out ahead\nFelt like the things we never said\n[Pre-Chorus]\nBut I was gone for a while\nNow I believe\nEvery broken lane\nCan still lead to peace\n[Chorus]\nTake me back, take me home\nThrough the fields and the open road\nWith your hand in mine\nSlow and kind\nTake me back, take me home\nWhere the wildflowers bend and grow\nIf the world feels wide\nStay tonight\n[Bridge]\nWhen the rain came soft on the cedar roof\nI learned your love was the truest proof\nNot the grand goodbye\nNot the perfect line\nJust a steady light\nIn a borrowed life\n[Final Chorus]\nTake me back, take me home\nThrough the fields and the open road\nWith your hand in mine\nSlow and kind\nTake me back, take me home\nWhere the wildflowers bend and grow\nIf the world feels wide\nStay tonight\nTake me back, take me home\nI can feel it in my bones\nEvery scar we hide\nTurns to light\nTake me back, take me home\nWhere the wildflowers bend and grow\nIf the world feels wide\nStay tonight",
     "tags": [
-      "acoustic folk pop with gentle fingerpicked guitar and soft organic percussion in a laid back 6 8 sway verse stays close and sparse with piano fills and intimate lead vocal",
-      "pre chorus lifts with stacked harmonies and a rising string line",
-      "chorus opens wide with rich three part harmonies and hand tapped pulse",
-      "bridge pulls back to voice and piano before final chorus blooms",
-      "warm live session mix",
-      "close mic and airy",
-      "with delicate cello swells",
+      "acoustic folk pop",
+      "warm live session",
       "brushed textures",
-      "and tender ear candy like fret squeaks",
-      "reversed string breaths",
-      "and soft room tone tails",
+      "soft room tone",
       "beautiful",
       "lyrical",
       "emotional",
       "warm",
-      "heartfelt"
+      "heartfelt",
+      "acoustic",
+      "uplifting",
+      "nostalgic",
+      "soulful",
+      "rich",
+      "natural",
+      "soft"
     ]
   },
   {
@@ -31325,22 +31227,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Barefoot Through the Wildflowers",
     "metadataText": "Acoustic instrumental with steady fingerpicked guitar and heartfelt melodic lift; verse-like opening stays sparse with intimate guitar, felt piano, and room tone, then a gentle string bed and brushed percussion widen the frame, before a fuller middle bloom with counter-melody and warm pulse, then the ending returns to solo guitar and soft piano decay, Close live-session feel, rich natural reverb, organic and cinematic mix, rich, nostalgic, acoustic, calming, uplifting, emotional, natural, heartfelt, warm, soft\n\n\n Barefoot Through the Wildflowers Add a Caption Remix/Edit Acoustic instrumental with steady fingerpicked guitar and heartfelt melodic lift; verse-like opening stays sparse with intimate guitar, felt piano, and room tone, then a gentle string bed and brushed percussion widen the frame, before a fuller middle bloom with counter-melody and warm pulse, then the ending returns to solo guitar and soft piano decay, Close live-session feel, rich natural reverb, organic and cinematic mix, rich, nostalgic, acoustic, calming, uplifting, emotional, natural, heartfelt, warm, soft",
     "tags": [
-      "acoustic instrumental with steady fingerpicked guitar and heartfelt melodic lift verse like opening stays sparse with intimate guitar",
+      "acoustic instrumental",
       "felt piano",
-      "and room tone",
-      "then a gentle string bed and brushed percussion widen the frame",
-      "before a fuller middle bloom with counter melody and warm pulse",
-      "then the ending returns to solo guitar and soft piano decay",
-      "close live session feel",
+      "room tone",
+      "gentle string bed",
+      "before a fuller",
+      "close live session",
       "rich natural reverb",
-      "organic and cinematic mix",
+      "organic",
       "rich",
       "nostalgic",
       "acoustic",
       "calming",
       "uplifting",
       "emotional",
-      "natural"
+      "natural",
+      "heartfelt"
     ]
   },
   {
@@ -31360,17 +31262,17 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Beneath the Amber Morning Sky",
     "metadataText": "Acoustic cinematic folk with warm fingerpicked guitar, soft piano clusters, subtle string swells, brushed frame percussion, and gentle half-time pulse; verse opens sparse with guitar and room tone, pre-build adds piano arpeggios and low cello, final lift brings full strings and hand percussion, Close, live-session intimacy, rich natural reverb, lush but organic mix, warm, uplifting, calming, soft, acoustic, emotional, heartfelt, natural, nostalgic, rich\n\nBeneath the Amber Morning Sky Add a Caption Remix/Edit Acoustic cinematic folk with warm fingerpicked guitar, soft piano clusters, subtle string swells, brushed frame percussion, and gentle half-time pulse; verse opens sparse with guitar and room tone, pre-build adds piano arpeggios and low cello, final lift brings full strings and hand percussion, Close, live-session intimacy, rich natural reverb, lush but organic mix, warm, uplifting, calming, soft, acoustic, emotional, heartfelt, natural, nostalgic, rich Show Less 2d, 20h ago",
     "tags": [
-      "acoustic cinematic folk with warm fingerpicked guitar",
+      "acoustic cinematic folk",
       "soft piano clusters",
-      "subtle string swells",
+      "subtle string",
       "brushed frame percussion",
-      "and gentle half time pulse verse opens sparse with guitar and room tone",
-      "pre build adds piano arpeggios and low cello",
-      "final lift brings full strings and hand percussion",
+      "gentle time pulse",
+      "pre build adds",
+      "lift brings full",
       "close",
       "live session intimacy",
       "rich natural reverb",
-      "lush but organic mix",
+      "lush",
       "warm",
       "uplifting",
       "calming",
@@ -31395,22 +31297,21 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Between the Pines & the Prairie",
     "metadataText": "Acoustic jazz instrumental with swung brushed drums, warm hollow-body guitar chords, upright bass walking softly underneath, and mellow piano phrases drifting through the changes, Intro starts with solo guitar and room tone; verse-like section adds bass and brushes; middle lifts with piano melody answers; final section opens into fuller comping, Intimate close-mic mix, warm and velvety, with vinyl crackle, soft ride shimmer, and subtle tape glow, soulful, smooth, sophisticated, jazz, mellow, acoustic, warm\n\n0 0 0 Between the Pines & the Prairie Add a Caption Remix/Edit Acoustic jazz instrumental with swung brushed drums, warm hollow-body guitar chords, upright bass walking softly underneath, and mellow piano phrases drifting through the changes, Intro starts with solo guitar and room tone; verse-like section adds bass and brushes; middle lifts with piano melody answers; final section opens into fuller comping, Intimate close-mic mix, warm and velvety, with vinyl crackle, soft ride shimmer, and subtle tape glow, soulful, smooth, sophisticated, jazz, mellow, acoustic, warm Show Less 2d, 20h ago",
     "tags": [
-      "acoustic jazz instrumental with swung brushed drums",
-      "warm hollow body guitar chords",
-      "upright bass walking softly underneath",
-      "and mellow piano phrases drifting through the changes",
-      "intro starts with solo guitar and room tone verse like section adds bass and brushes middle lifts with piano melody answers final section opens into fuller comping",
-      "intimate close mic mix",
-      "warm and velvety",
-      "with vinyl crackle",
+      "acoustic jazz instrumental",
+      "warm hollow body",
+      "upright bass walking",
+      "mellow piano phrases",
+      "intro starts",
+      "warm",
       "soft ride shimmer",
-      "and subtle tape glow",
+      "subtle tape glow",
       "soulful",
       "smooth",
       "sophisticated",
       "jazz",
       "mellow",
-      "acoustic"
+      "acoustic",
+      "commercial"
     ]
   },
   {
@@ -31431,22 +31332,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Boat Promise",
     "metadataText": "Acoustic indie-folk with warm fingerpicked guitar, soft piano countermelodies, organic percussion on shakers and brushed kit, and intimate close-mic male vocals; verse stays sparse and breathy, pre-chorus opens with gentle harmony lift, chorus blooms with stacked vocals and a short singback phrase, bridge drops to piano and a hand-tapped pulse before the final chorus, Add vinyl crackle, a small room-echo tail on the hook, and a reversed swell into each lift; mix is warm, human, and cinematic, with a cozy fireside glow, heartfelt, soulful, minimal, raw, rich, soft, warm, nostalgic, acoustic, gentle, emotional\n\n[Verse 1]\nYou found me by the dock\nWith salt on my hands\nI had a busted watch\nAnd a change of plans\nYour laugh moved through the wind\nLike a note held long\nYou said, \"stay a little while\"\nAnd I said, \"I'm gone\"\n[Pre-Chorus]\nBut your eyes said otherwise\nLike they knew my name\nYou held my old map\nAnd traced out the same\n[Chorus]\nTake my hand, don't let go\n(Paper boat promise)\nCarry me where the creek runs slow\n(Paper boat promise)\nIf the road breaks under us\nWe'll still have this\nWe'll still have this\n[Verse 2]\nWe crossed the county line\nIn a borrowed van\nOrange on the windshield\nDust on every plan\nYou slept with your shoes on\nI drove till dawn\nPast the peach trees bending\nAnd the radio gone\n[Pre-Chorus]\nThen you sang so low\nTo the engine's hum\nLike all our little hurts\nCould come undone\n[Chorus]\nTake my hand, don't let go\n(Paper boat promise)\nCarry me where the creek runs slow\n(Paper boat promise)\nIf the road breaks under us\nWe'll still have this\nWe'll still have this\n[Bridge]\nNow the kettle's warm\nAnd your coat's by the door\nI still see that highway\nWhen the rain hits the floor\nIf the world turns hard\nAnd the miles get mean\nI'll be your quiet shelter\nYou'll be my in-between\n[Final Chorus]\nTake my hand, don't let go\n(Paper boat promise)\nCarry me where the creek runs slow\n(Paper boat promise)\nIf the road breaks under us\nWe'll still have this\nWe'll still have this\n(Paper boat promise)\n(Paper boat promise)",
     "tags": [
-      "acoustic indie folk with warm fingerpicked guitar",
+      "acoustic indie folk",
       "soft piano countermelodies",
-      "organic percussion on shakers and brushed kit",
-      "and intimate close mic male vocals verse stays sparse and breathy",
-      "pre chorus opens with gentle harmony lift",
-      "chorus blooms with stacked vocals and a short singback phrase",
-      "bridge drops to piano and a hand tapped pulse before the final chorus",
-      "add vinyl crackle",
-      "a small room echo tail on the hook",
-      "and a reversed swell into each lift mix is warm",
+      "male vocals",
+      "small room echo",
       "human",
-      "and cinematic",
-      "with a cozy fireside glow",
+      "cinematic",
       "heartfelt",
       "soulful",
-      "minimal"
+      "minimal",
+      "rich",
+      "soft",
+      "warm",
+      "nostalgic",
+      "acoustic",
+      "gentle",
+      "emotional"
     ]
   },
   {
@@ -31466,17 +31367,15 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Clouds Above Redwood Trails",
     "metadataText": "Acoustic fusion with cinematic downtempo pulse, warm fingerpicked guitar, tabla grooves, sitar textures, and layered bansuri harmonies; verse-like sections open on solo guitar and soft tanpura drone, pre-chorus adds tabla fills and rising strings, final lift brings full organic ensemble and spacious chord swells, Close, natural room mics, glowing midrange, wide and earthy mix, warm, emotional, acoustic\n\n0 0 0 Clouds Above Redwood Trails Add a Caption Remix/Edit Acoustic fusion with cinematic downtempo pulse, warm fingerpicked guitar, tabla grooves, sitar textures, and layered bansuri harmonies; verse-like sections open on solo guitar and soft tanpura drone, pre-chorus adds tabla fills and rising strings, final lift brings full organic ensemble and spacious chord swells, Close, natural room mics, glowing midrange, wide and earthy mix, warm, emotional, acoustic Show Less 2d, 20h ago",
     "tags": [
-      "acoustic fusion with cinematic downtempo pulse",
+      "acoustic fusion",
       "warm fingerpicked guitar",
       "tabla grooves",
       "sitar textures",
-      "and layered bansuri harmonies verse like sections open on solo guitar and soft tanpura drone",
-      "pre chorus adds tabla fills and rising strings",
-      "final lift brings full organic ensemble and spacious chord swells",
+      "layered bansuri harmonies",
+      "lift brings full",
       "close",
       "natural room mics",
       "glowing midrange",
-      "wide and earthy mix",
       "warm",
       "emotional",
       "acoustic",
@@ -31500,22 +31399,21 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Clouds Drifting Over Evergreen Lakes",
     "metadataText": "Dreamy acoustic ambient pop with slow-swung fingerpicked guitar, soft pulse percussion, and airy synth beds; verse stays intimate and close, pre-chorus opens with stacked harmonies and reversed swells, chorus blooms with gentle gang vocals and wide sustained chords, Vocal is breathy and close-mic in verses, double-tracked on hooks with soft delay throws; glassy chimes, piano echoes, and filtered risers color the transitions, Warm, cinematic, and spacious with a glowing polished mix, ambient, calming, emotional, acoustic, warm, soft\n\n0 0 0 Clouds Drifting Over Evergreen Lakes Add a Caption Remix/Edit Dreamy acoustic ambient pop with slow-swung fingerpicked guitar, soft pulse percussion, and airy synth beds; verse stays intimate and close, pre-chorus opens with stacked harmonies and reversed swells, chorus blooms with gentle gang vocals and wide sustained chords, Vocal is breathy and close-mic in verses, double-tracked on hooks with soft delay throws; glassy chimes, piano echoes, and filtered risers color the transitions, Warm, cinematic, and spacious with a glowing polished mix, ambient, calming, emotional, acoustic, warm, soft Show Less 2d, 20h ago",
     "tags": [
-      "dreamy acoustic ambient pop with slow swung fingerpicked guitar",
+      "dreamy acoustic ambient",
       "soft pulse percussion",
-      "and airy synth beds verse stays intimate and close",
-      "pre chorus opens with stacked harmonies and reversed swells",
-      "chorus blooms with gentle gang vocals and wide sustained chords",
-      "vocal is breathy and close mic in verses",
-      "double tracked on hooks with soft delay throws glassy chimes",
+      "airy synth beds",
+      "is breathy",
       "piano echoes",
-      "and filtered risers color the transitions",
+      "filtered risers color",
       "warm",
       "cinematic",
-      "and spacious with a glowing polished mix",
+      "spacious",
       "ambient",
       "calming",
       "emotional",
-      "acoustic"
+      "acoustic",
+      "soft",
+      "commercial"
     ]
   },
   {
@@ -31536,22 +31434,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/County Line Sun",
     "metadataText": "Acoustic folk with gentle 6/8 strumming, warm harmony lifts, soft string swells, and brushed hand percussion; verse stays intimate with close-mic lead and room-tone details, pre-chorus opens into stacked harmonies and a rising cello line, chorus lands on a singable refrain with group vocals and subtle delay throws, Ear candy includes wind chimes between lines, reversed acoustic swells into the hook, and a final string lift, Organic live-session mix - warm, wide, and human, soulful, folk, vocal, ambient, soft, warm, acoustic, heartfelt, nostalgic, uplifting, emotional, beautiful\n\n[Verse 1]\nDust on the dash\nMap folded twice\nWe left before dawn\nWith sleep in our eyes\nMile after mile\nThe fields leaned gold\nYour hand on the wheel\nLike a story told\n[Pre-Chorus]\nAnd the sky kept opening\nOne quiet shade at a time\nWe were learning how to breathe\nIn the space between the signs\n[Chorus]\nHold me on this road\nHold me on this road\nWe were made for going slow\nHold me on this road\nHold me on this road\nTill the county line sun says go\n[Verse 2]\nOld barns drift by\nIn a honeyed blur\nYour laugh hits the glass\nLike a song I remember\nWe pass the creek\nAnd the boarded-up store\nBut the way you look at me\nFeels like home once more\n[Pre-Chorus]\nAnd the day keeps folding in\nLike a letter full of light\nEvery turn we take together\nFeels like something getting right\n[Chorus]\nHold me on this road\nHold me on this road\nWe were made for going slow\nHold me on this road\nHold me on this road\nTill the county line sun says go\n[Bridge]\nIf the world goes loud\nLet it fade behind\nI've got your heartbeat\nRight in time with mine\n[Final Chorus]\nHold me on this road\nHold me on this road\nWe were made for going slow\nHold me on this road\nHold me on this road\nTill the county line sun says go\nHold me on this road\n(hold me on this road)\nWe were made for going slow\nHold me on this road\n(hold me on this road)\nTill the county line sun says go",
     "tags": [
-      "acoustic folk with gentle 6 8 strumming",
+      "acoustic folk",
       "warm harmony lifts",
-      "soft string swells",
-      "and brushed hand percussion verse stays intimate with close mic lead and room tone details",
-      "pre chorus opens into stacked harmonies and a rising cello line",
-      "chorus lands on a singable refrain with group vocals and subtle delay throws",
-      "ear candy includes wind chimes between lines",
-      "reversed acoustic swells into the hook",
-      "and a final string lift",
-      "organic live session mix warm",
-      "wide",
-      "and human",
+      "soft string",
+      "brushed hand percussion",
+      "organic live session",
+      "human",
       "soulful",
       "folk",
-      "vocal",
-      "ambient"
+      "ambient",
+      "soft",
+      "warm",
+      "acoustic",
+      "heartfelt",
+      "nostalgic",
+      "uplifting",
+      "emotional"
     ]
   },
   {
@@ -31572,22 +31470,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Dusty County Line",
     "metadataText": "Acoustic folk with gentle fingerpicked guitar, soft brushed percussion, warm stacked harmonies, and subtle string swells; verse stays intimate and close-mic, pre-chorus opens with rising vocal lift, chorus blooms with layered harmonies and a rounded singalong hook, bridge drops to guitar and breathy lead before the final chorus returns with fuller strings and an open road feel, Organic live-session mix, warm, wide, and cinematic with tender room tone and light ambient shimmer, warm, acoustic, soulful, folk, vocal, soft, ambient, uplifting, emotional, beautiful, heartfelt, nostalgic\n\n[Verse 1]\nWe packed the car by dawn\nWith a thermos and a map\nYour hand on the window glass\nAnd the whole world felt like that\nThe fields rolled past like sleep\nAnd the sky kept changing blue\nYou said, \"We've got this road\"\nAnd I believed it too\n[Pre-Chorus]\nEvery mile, I let it go\nEvery sign, I learned your name\nThe farther we went\nThe lighter I became\n[Chorus]\nTake me down that dusty county line\nWhere the wheat leans gold in the evening light\nTake me where the old pines know our names\nAnd the heart learns how to stay\nOh, take me down that dusty county line\n(I'm still yours, I'm still mine)\n[Verse 2]\nWe found a diner off the bend\nWith a screen door and a bell\nYou laughed at the handwritten menu\nLike you'd been here once as well\nAnd the waitress called us \"dear\"\nLike she knew the way we move\nYou traced a circle in my palm\nLike there was nothing left to prove\n[Pre-Chorus]\nEvery mile, I let it go\nEvery sign, I learned your name\nThe farther we went\nThe lighter I became\n[Chorus]\nTake me down that dusty county line\nWhere the wheat leans gold in the evening light\nTake me where the old pines know our names\nAnd the heart learns how to stay\nOh, take me down that dusty county line\n(I'm still yours, I'm still mine)\n[Bridge]\nNow the windshield holds the rain\nAnd the season turns to fall\nBut I can hear your quiet laugh\nThrough the timber, through it all\nIf the world grows hard and cold\nI'll remember what is true\nThat home can be a moving thing\nAnd it can look like you\n[Chorus]\nTake me down that dusty county line\nWhere the wheat leans gold in the evening light\nTake me where the old pines know our names\nAnd the heart learns how to stay\nOh, take me down that dusty county line\n(I'm still yours, I'm still mine)",
     "tags": [
-      "acoustic folk with gentle fingerpicked guitar",
+      "acoustic folk",
       "soft brushed percussion",
       "warm stacked harmonies",
-      "and subtle string swells verse stays intimate and close mic",
-      "pre chorus opens with rising vocal lift",
-      "chorus blooms with layered harmonies and a rounded singalong hook",
-      "bridge drops to guitar and breathy lead before the final chorus returns with fuller strings and an open road feel",
-      "organic live session mix",
+      "subtle string",
+      "organic live session",
       "warm",
-      "wide",
-      "and cinematic with tender room tone and light ambient shimmer",
+      "cinematic",
       "acoustic",
       "soulful",
       "folk",
-      "vocal",
-      "soft"
+      "soft",
+      "ambient",
+      "uplifting",
+      "emotional",
+      "beautiful",
+      "heartfelt"
     ]
   },
   {
@@ -31607,22 +31505,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Echoes Beneath the Northern Sky",
     "metadataText": "Dreamy ambient folk-pop with swaying fingerpicked guitar, soft piano figures, and wide synthetic pads under a slow, half-time pulse; verse stays intimate and bare, pre-chorus opens with stacked harmonies and rising filters, chorus blooms with warm doubles and a simple chantable hook, Use reverse swells, glassy chimes between lines, and a long tail of room reverb, Mix is warm, cinematic, and close-mic with a glowing low end, acoustic, emotional, soft, warm, ambient, calming\n\n1 0 0 Echoes Beneath the Northern Sky Add a Caption Remix/Edit Dreamy ambient folk-pop with swaying fingerpicked guitar, soft piano figures, and wide synthetic pads under a slow, half-time pulse; verse stays intimate and bare, pre-chorus opens with stacked harmonies and rising filters, chorus blooms with warm doubles and a simple chantable hook, Use reverse swells, glassy chimes between lines, and a long tail of room reverb, Mix is warm, cinematic, and close-mic with a glowing low end, acoustic, emotional, soft, warm, ambient, calming Show Less 2d, 20h ago",
     "tags": [
-      "dreamy ambient folk pop with swaying fingerpicked guitar",
+      "dreamy ambient folk",
       "soft piano figures",
-      "and wide synthetic pads under a slow",
-      "half time pulse verse stays intimate and bare",
-      "pre chorus opens with stacked harmonies and rising filters",
-      "chorus blooms with warm doubles and a simple chantable hook",
-      "use reverse swells",
-      "glassy chimes between lines",
-      "and a long tail of room reverb",
-      "mix is warm",
+      "synthetic pads under",
+      "time pulse",
+      "use reverse",
+      "glassy chimes between",
+      "long tail of",
+      "is warm",
       "cinematic",
-      "and close mic with a glowing low end",
       "acoustic",
       "emotional",
       "soft",
-      "warm"
+      "warm",
+      "ambient",
+      "calming",
+      "commercial"
     ]
   },
   {
@@ -31642,22 +31540,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Evening Hymns for the Open Road",
     "metadataText": "Acoustic jazz with laid-back swung groove, warm guitar chord comping, brushed drums, upright bass walking gently, and mellow piano phrases; verse-like sections can start sparse with guitar and bass, pre-drop adds soft piano filigree, and a bridge moment opens to a short piano-bass break before returning to the main pocket, Whispery room-tone vocal-like phrasing from the keys, subtle ride-cymbal swells, and brushed snare swishes between changes, Cozy close-mic mix, intimate and polished with a smoky café glow, smooth, warm, jazz, acoustic, soulful, mellow, sophisticated\n\n0 0 0 Evening Hymns for the Open Road Add a Caption Remix/Edit Acoustic jazz with laid-back swung groove, warm guitar chord comping, brushed drums, upright bass walking gently, and mellow piano phrases; verse-like sections can start sparse with guitar and bass, pre-drop adds soft piano filigree, and a bridge moment opens to a short piano-bass break before returning to the main pocket, Whispery room-tone vocal-like phrasing from the keys, subtle ride-cymbal swells, and brushed snare swishes between changes, Cozy close-mic mix, intimate and polished with a smoky café glow, smooth, warm, jazz, acoustic, soulful, mellow, sophisticated Show Less 2d, 20h ago",
     "tags": [
-      "acoustic jazz with laid back swung groove",
-      "warm guitar chord comping",
+      "acoustic jazz",
+      "warm guitar chord",
       "brushed drums",
-      "upright bass walking gently",
-      "and mellow piano phrases verse like sections can start sparse with guitar and bass",
-      "pre drop adds soft piano filigree",
-      "and a bridge moment opens to a short piano bass break before returning to the main pocket",
-      "whispery room tone vocal like phrasing from the keys",
-      "subtle ride cymbal swells",
-      "and brushed snare swishes between changes",
-      "cozy close mic mix",
-      "intimate and polished with a smoky cafe glow",
+      "upright bass walking",
+      "mellow piano phrases",
+      "pre adds soft",
+      "whispery room tone",
+      "subtle ride cymbal",
+      "brushed snare swishes",
+      "cozy",
       "smooth",
       "warm",
       "jazz",
-      "acoustic"
+      "acoustic",
+      "soulful",
+      "mellow"
     ]
   },
   {
@@ -31677,22 +31575,20 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Faded Maps & Open Fields",
     "metadataText": "Ambient acoustic instrumental with slow fingerpicked guitar in a gentle pulse, warm synth pads blooming underneath, soft piano echoes answering the phrases, and long cinematic textures that widen each phrase, Verse-like sections stay sparse; the middle opens into fuller haze; the ending thins to guitar and distant keys, Breathy swells, reversed tails, and subtle room bloom, Intimate, wide, and glassy-smooth, warm, ambient, soft, calming, emotional, acoustic\n\n0 0 0 Faded Maps & Open Fields Add a Caption Remix/Edit Ambient acoustic instrumental with slow fingerpicked guitar in a gentle pulse, warm synth pads blooming underneath, soft piano echoes answering the phrases, and long cinematic textures that widen each phrase, Verse-like sections stay sparse; the middle opens into fuller haze; the ending thins to guitar and distant keys, Breathy swells, reversed tails, and subtle room bloom, Intimate, wide, and glassy-smooth, warm, ambient, soft, calming, emotional, acoustic Show Less 2d, 20h ago",
     "tags": [
-      "ambient acoustic instrumental with slow fingerpicked guitar in a gentle pulse",
-      "warm synth pads blooming underneath",
-      "soft piano echoes answering the phrases",
-      "and long cinematic textures that widen each phrase",
-      "verse like sections stay sparse the middle opens into fuller haze the ending thins to guitar and distant keys",
-      "breathy swells",
-      "reversed tails",
-      "and subtle room bloom",
-      "intimate",
-      "wide",
-      "and glassy smooth",
+      "ambient acoustic instrumental",
+      "warm synth pads",
+      "soft piano echoes",
+      "long cinematic textures",
+      "breathy",
+      "subtle room bloom",
+      "glassy smooth",
       "warm",
       "ambient",
       "soft",
       "calming",
-      "emotional"
+      "emotional",
+      "acoustic",
+      "commercial"
     ]
   },
   {
@@ -31712,22 +31608,21 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Fading Into the Mountain Air",
     "metadataText": "Dreamy ambient acoustic with warm fingerpicked guitar, slow pulse, soft piano echoes, and cinematic pad swells; verse stays intimate and spacious, pre-chorus opens with rising harmonies, chorus blooms into stacked vocals and a gentle chant, Whispered doubles, airy delay throws, and soft gang oohs on the hook, Wide, glowing, and immersive with a polished cinematic mix, emotional, acoustic, soft, calming, ambient, warm\n\n0 0 0 Fading Into the Mountain Air Add a Caption Remix/Edit Dreamy ambient acoustic with warm fingerpicked guitar, slow pulse, soft piano echoes, and cinematic pad swells; verse stays intimate and spacious, pre-chorus opens with rising harmonies, chorus blooms into stacked vocals and a gentle chant, Whispered doubles, airy delay throws, and soft gang oohs on the hook, Wide, glowing, and immersive with a polished cinematic mix, emotional, acoustic, soft, calming, ambient, warm Show Less 2d, 20h ago",
     "tags": [
-      "dreamy ambient acoustic with warm fingerpicked guitar",
+      "dreamy ambient acoustic",
       "slow pulse",
       "soft piano echoes",
-      "and cinematic pad swells verse stays intimate and spacious",
-      "pre chorus opens with rising harmonies",
-      "chorus blooms into stacked vocals and a gentle chant",
+      "cinematic pad",
       "whispered doubles",
-      "airy delay throws",
-      "and soft gang oohs on the hook",
-      "wide",
+      "soft gang oohs",
       "glowing",
-      "and immersive with a polished cinematic mix",
+      "immersive",
       "emotional",
       "acoustic",
       "soft",
-      "calming"
+      "calming",
+      "ambient",
+      "warm",
+      "commercial"
     ]
   },
   {
@@ -31793,15 +31688,11 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Fireside Stories at Bluebird Lake",
     "metadataText": "Ambient acoustic instrumental with fingerpicked guitar, soft piano echoes, and warm synth pads in a slow floating pulse; verse texture stays intimate with room-tone guitar and distant harmonics, then layers in brushed cymbal haze and swelling cinematic strings, with a midtrack break that thins to piano and pad, and a final lift of chime tails, Close-mic, wide, and velvety, ambient, acoustic, soft, warm, calming, emotional\n\n0 0 0 Fireside Stories at Bluebird Lake Add a Caption Remix/Edit Ambient acoustic instrumental with fingerpicked guitar, soft piano echoes, and warm synth pads in a slow floating pulse; verse texture stays intimate with room-tone guitar and distant harmonics, then layers in brushed cymbal haze and swelling cinematic strings, with a midtrack break that thins to piano and pad, and a final lift of chime tails, Close-mic, wide, and velvety, ambient, acoustic, soft, warm, calming, emotional Show Less 2d, 20h ago",
     "tags": [
-      "ambient acoustic instrumental with fingerpicked guitar",
+      "ambient acoustic instrumental",
       "soft piano echoes",
-      "and warm synth pads in a slow floating pulse verse texture stays intimate with room tone guitar and distant harmonics",
-      "then layers in brushed cymbal haze and swelling cinematic strings",
-      "with a midtrack break that thins to piano and pad",
-      "and a final lift of chime tails",
-      "close mic",
-      "wide",
-      "and velvety",
+      "warm synth pads",
+      "layers in brushed",
+      "velvety",
       "ambient",
       "acoustic",
       "soft",
@@ -31828,22 +31719,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Floating Through Quiet Valleys",
     "metadataText": "Dreamy ambient folk-pop with swaying fingerpicked guitar, soft piano figures, and wide synthetic pads under a slow, half-time pulse; verse stays intimate and bare, pre-chorus opens with stacked harmonies and rising filters, chorus blooms with warm doubles and a simple chantable hook, Use reverse swells, glassy chimes between lines, and a long tail of room reverb, Mix is warm, cinematic, and close-mic with a glowing low end, acoustic, emotional, soft, warm, ambient, calming\n\n1 0 0 Floating Through Quiet Valleys Add a Caption Remix/Edit Dreamy ambient folk-pop with swaying fingerpicked guitar, soft piano figures, and wide synthetic pads under a slow, half-time pulse; verse stays intimate and bare, pre-chorus opens with stacked harmonies and rising filters, chorus blooms with warm doubles and a simple chantable hook, Use reverse swells, glassy chimes between lines, and a long tail of room reverb, Mix is warm, cinematic, and close-mic with a glowing low end, acoustic, emotional, soft, warm, ambient, calming Show Less 2d, 20h ago",
     "tags": [
-      "dreamy ambient folk pop with swaying fingerpicked guitar",
+      "dreamy ambient folk",
       "soft piano figures",
-      "and wide synthetic pads under a slow",
-      "half time pulse verse stays intimate and bare",
-      "pre chorus opens with stacked harmonies and rising filters",
-      "chorus blooms with warm doubles and a simple chantable hook",
-      "use reverse swells",
-      "glassy chimes between lines",
-      "and a long tail of room reverb",
-      "mix is warm",
+      "synthetic pads under",
+      "time pulse",
+      "use reverse",
+      "glassy chimes between",
+      "long tail of",
+      "is warm",
       "cinematic",
-      "and close mic with a glowing low end",
       "acoustic",
       "emotional",
       "soft",
-      "warm"
+      "warm",
+      "ambient",
+      "calming",
+      "commercial"
     ]
   },
   {
@@ -31863,22 +31754,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Golden Dust on Old Boots",
     "metadataText": "Acoustic jazz with laid-back swung groove, warm guitar chord comping, brushed drums, upright bass walking gently, and mellow piano phrases; verse-like sections can start sparse with guitar and bass, pre-drop adds soft piano filigree, and a bridge moment opens to a short piano-bass break before returning to the main pocket, Whispery room-tone vocal-like phrasing from the keys, subtle ride-cymbal swells, and brushed snare swishes between changes, Cozy close-mic mix, intimate and polished with a smoky café glow, smooth, warm, jazz, acoustic, soulful, mellow, sophisticated\n\n0 0 0 Golden Dust on Old Boots Add a Caption Remix/Edit Acoustic jazz with laid-back swung groove, warm guitar chord comping, brushed drums, upright bass walking gently, and mellow piano phrases; verse-like sections can start sparse with guitar and bass, pre-drop adds soft piano filigree, and a bridge moment opens to a short piano-bass break before returning to the main pocket, Whispery room-tone vocal-like phrasing from the keys, subtle ride-cymbal swells, and brushed snare swishes between changes, Cozy close-mic mix, intimate and polished with a smoky café glow, smooth, warm, jazz, acoustic, soulful, mellow, sophisticated Show Less 2d, 20h ago",
     "tags": [
-      "acoustic jazz with laid back swung groove",
-      "warm guitar chord comping",
+      "acoustic jazz",
+      "warm guitar chord",
       "brushed drums",
-      "upright bass walking gently",
-      "and mellow piano phrases verse like sections can start sparse with guitar and bass",
-      "pre drop adds soft piano filigree",
-      "and a bridge moment opens to a short piano bass break before returning to the main pocket",
-      "whispery room tone vocal like phrasing from the keys",
-      "subtle ride cymbal swells",
-      "and brushed snare swishes between changes",
-      "cozy close mic mix",
-      "intimate and polished with a smoky cafe glow",
+      "upright bass walking",
+      "mellow piano phrases",
+      "pre adds soft",
+      "whispery room tone",
+      "subtle ride cymbal",
+      "brushed snare swishes",
+      "cozy",
       "smooth",
       "warm",
       "jazz",
-      "acoustic"
+      "acoustic",
+      "soulful",
+      "mellow"
     ]
   },
   {
@@ -31898,22 +31789,21 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Heart",
     "metadataText": "Hard rock anthem with cinematic orchestral drive, driving 128 BPM pulse and stomping four-on-the-floor drums under crushing palm-muted riffs; verse rides low strings and tight rhythm guitars, pre-chorus opens with rising brass and taiko rolls, chorus hits with full choir stack, octave lead guitars, and massive timpani accents, Add reverse cymbal swells, low sub hits into drops, and sword-sharp string runs before solos, Huge, bright, battle-ready mix with wide arena depth and punchy low end, dramatic, emotional, orchestral, soaring, hard rock\n\n0 0 0 Heavy Hearts & Open Highways Add a Caption Remix/Edit Hard rock anthem with cinematic orchestral drive, driving 128 BPM pulse and stomping four-on-the-floor drums under crushing palm-muted riffs; verse rides low strings and tight rhythm guitars, pre-chorus opens with rising brass and taiko rolls, chorus hits with full choir stack, octave lead guitars, and massive timpani accents, Add reverse cymbal swells, low sub hits into drops, and sword-sharp string runs before solos, Huge, bright, battle-ready mix with wide arena depth and punchy low end, dramatic, emotional, orchestral, soaring, hard rock Show Less 1d, 13h ago",
     "tags": [
-      "hard rock anthem with cinematic orchestral drive",
-      "pre chorus opens with rising brass and taiko rolls",
-      "chorus hits with full choir stack",
-      "octave lead guitars",
-      "and massive timpani accents",
-      "add reverse cymbal swells",
-      "low sub hits into drops",
-      "and sword sharp string runs before solos",
+      "hard rock anthem",
+      "octave guitars",
+      "massive timpani accents",
+      "low sub hits",
+      "sword sharp string",
       "huge",
       "bright",
-      "battle ready mix with wide arena depth and punchy low end",
+      "battle ready",
       "dramatic",
       "emotional",
       "orchestral",
       "soaring",
-      "hard rock"
+      "hard rock",
+      "commercial",
+      "acoustic"
     ]
   },
   {
@@ -31933,22 +31823,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Lanterns in the Cedar Wind",
     "metadataText": "Acoustic cinematic folk instrumental with gentle fingerpicked guitar, soft piano beds, subtle string swells, brushed hand percussion, and a slow 4/4 pulse; verse passages stay sparse and intimate, then lift with layered harmonies and fuller strings, while a final section opens wide with carried melodies, Warm live-session vocal-free vibe, natural reverb, rich and tender mix, handmade and spacious, emotional, rich, calming, warm, natural, soft, uplifting, acoustic, nostalgic, heartfelt\n\n0 0 0 Lanterns in the Cedar Wind Add a Caption Remix/Edit Acoustic cinematic folk instrumental with gentle fingerpicked guitar, soft piano beds, subtle string swells, brushed hand percussion, and a slow 4/4 pulse; verse passages stay sparse and intimate, then lift with layered harmonies and fuller strings, while a final section opens wide with carried melodies, Warm live-session vocal-free vibe, natural reverb, rich and tender mix, handmade and spacious, emotional, rich, calming, warm, natural, soft, uplifting, acoustic, nostalgic, heartfelt Show Less 2d, 20h ago",
     "tags": [
-      "acoustic cinematic folk instrumental with gentle fingerpicked guitar",
+      "acoustic cinematic folk",
       "soft piano beds",
-      "subtle string swells",
+      "subtle string",
       "brushed hand percussion",
-      "and a slow 4 4 pulse verse passages stay sparse and intimate",
-      "then lift with layered harmonies and fuller strings",
-      "while a final section opens wide with carried melodies",
-      "warm live session vocal free vibe",
+      "slow 4 4",
+      "lift",
+      "warm live session",
       "natural reverb",
-      "rich and tender mix",
-      "handmade and spacious",
-      "emotional",
       "rich",
+      "handmade",
+      "emotional",
       "calming",
       "warm",
-      "natural"
+      "natural",
+      "soft",
+      "uplifting"
     ]
   },
   {
@@ -31969,22 +31859,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Map Through Wheat",
     "metadataText": "Acoustic folk ballad with gentle swung strumming, light brushed percussion, and a flowing 92 BPM feel; verse stays close-mic with fingerpicked guitar and soft bass drone, pre-chorus opens into rising harmonies and suspended strings, chorus blooms with stacked voices and a simple singback line, Bridge drops to guitar and breathy vocal, then final chorus adds sweet fiddle-like swells, room clap accents, and a warm cinematic lift, Organic, intimate, wide, and sunlit in the mix, beautiful, ambient, nostalgic, vocal, uplifting, soft, heartfelt, acoustic, emotional, soulful, warm, folk\n\n[Verse 1]\nDust on the window\nMiles in my teeth\nYour hand on the map\nAnd your head on my sleeve\nWe left with the dawn\nAnd a paper cup dream\nPast rows of corn\nWhere the creek ran green\n[Pre-Chorus]\nAnd the road kept singing\nThrough the open land\nI could feel your heartbeat\nIn my shaking hand\n[Chorus]\nKeep me rolling on\nKeep me rolling on\nThrough the fields and the rain\nThrough the bend and the bend\nKeep me rolling on\nKeep me rolling on\nWe were born for the road\nAnd the road is a friend\n[Verse 2]\nOld gas station roses\nA faded blue sign\nWe laughed at the trailer\nWith the dog out front by nine\nYour voice in the backseat\nLike a Sunday prayer\nAnd every small town\nLooked like we'd been there\n[Pre-Chorus]\nAnd the sky got softer\nAs the day grew gold\nI was holding your story\nLike a coat against the cold\n[Chorus]\nKeep me rolling on\nKeep me rolling on\nThrough the fields and the rain\nThrough the bend and the bend\nKeep me rolling on\nKeep me rolling on\nWe were born for the road\nAnd the road is a friend\n[Bridge]\nIf the years go quiet\nIf the names fade slow\nMeet me where the blacktop\nTurns to pebbled snow\nI'll bring the ache\nAnd I'll bring the song\nYou bring that smile\nAnd we'll carry on\n[Final Chorus]\nKeep me rolling on\nKeep me rolling on\nThrough the fields and the rain\nThrough the bend and the bend\nKeep me rolling on\nKeep me rolling on\nWe were born for the road\nAnd the road is a friend\n[Outro]\nDust on the window\nLight on the seat\nStill moving forward\nWith your hand on me",
     "tags": [
-      "acoustic folk ballad with gentle swung strumming",
+      "acoustic folk ballad",
       "light brushed percussion",
-      "pre chorus opens into rising harmonies and suspended strings",
-      "chorus blooms with stacked voices and a simple singback line",
-      "bridge drops to guitar and breathy vocal",
-      "then final chorus adds sweet fiddle like swells",
       "room clap accents",
-      "and a warm cinematic lift",
+      "warm cinematic lift",
       "organic",
-      "intimate",
-      "wide",
-      "and sunlit in the mix",
       "beautiful",
       "ambient",
       "nostalgic",
-      "vocal"
+      "uplifting",
+      "soft",
+      "heartfelt",
+      "acoustic",
+      "emotional",
+      "soulful",
+      "warm",
+      "folk"
     ]
   },
   {
@@ -32005,22 +31895,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Mile of Clover",
     "metadataText": "Acoustic folk with swung fingerpicked guitar and a gentle 6/8 sway; verse stays intimate on guitar and upright bass, pre-chorus opens with soft strings and breathy harmony lifts, chorus blooms with stacked voices and steady hand percussion, A brushed intro and a short instrumental turn carry reversed swells, room-noise tails, and a final lift, Warm close-mic vocal, organic live-session mix, wide and cinematic but tender, vocal, uplifting, beautiful, acoustic, ambient, emotional, folk, soulful, nostalgic, heartfelt, soft, warm\n\n[Verse 1]\nWe left at dawn\nWith a paper map\nYour thumb on the folds\nAnd a thermos in the lap\nMile after mile\nPast the fields of corn\nYou laughed at the sign\nFor the town we'd born\n[Pre-Chorus]\nAnd the road kept singing\nThrough the open van\nDust on the windows\nSun in your hand\n[Chorus]\nTake me home again\nTake me home again\nThrough the clover fields\nTake me home again\nHold me in the frame\nHold me in the frame\nWhere the heart stays warm\nHold me in the frame\n[Verse 2]\nWe stopped by a creek\nWhere the red bank bends\nYou kicked off your shoes\nLike time had no end\nA dog by the fence\nAnd a church bell soft\nWe shared one peach\nOn the tailgate loft\n[Pre-Chorus]\nAnd the road kept singing\nThrough the open van\nDust on the windows\nSun in your hand\n[Chorus]\nTake me home again\nTake me home again\nThrough the clover fields\nTake me home again\nHold me in the frame\nHold me in the frame\nWhere the heart stays warm\nHold me in the frame\n[Bridge]\nIf the years get loud\nAnd the miles move fast\nI'll find this bend\nWhere the good things last\nYour voice in the trees\nYour laugh in the grain\nA little old love\nRiding back again\n[Final Chorus]\nTake me home again\nTake me home again\nThrough the clover fields\nTake me home again\nHold me in the frame\nHold me in the frame\nWhere the heart stays warm\nHold me in the frame",
     "tags": [
-      "acoustic folk with swung fingerpicked guitar and a gentle 6 8 sway verse stays intimate on guitar and upright bass",
-      "pre chorus opens with soft strings and breathy harmony lifts",
-      "chorus blooms with stacked voices and steady hand percussion",
-      "a brushed intro and a short instrumental turn carry reversed swells",
+      "acoustic folk",
+      "brushed intro",
       "room noise tails",
-      "and a final lift",
-      "warm close mic vocal",
-      "organic live session mix",
-      "wide and cinematic but tender",
-      "vocal",
+      "warm",
+      "organic live session",
       "uplifting",
       "beautiful",
       "acoustic",
       "ambient",
       "emotional",
-      "folk"
+      "folk",
+      "soulful",
+      "nostalgic",
+      "heartfelt",
+      "soft",
+      "commercial"
     ]
   },
   {
@@ -32041,22 +31931,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Miles",
     "metadataText": "Acoustic folk-pop with gentle fingerpicked guitar and soft organic percussion in a laid-back 6/8 sway; verse stays close and sparse with piano fills and intimate lead vocal, pre-chorus lifts with stacked harmonies and a rising string line, chorus opens wide with rich three-part harmonies and hand-tapped pulse, bridge pulls back to voice and piano before final chorus blooms, Warm live-session mix, close-mic and airy, with delicate cello swells, brushed textures, and tender ear candy like fret squeaks, reversed string breaths, and soft room-tone tails, beautiful, lyrical, emotional, warm, heartfelt, acoustic, uplifting, nostalgic, soulful, rich, natural, soft\n\n[Verse 1]\nI found your note in the coat by the door\nFolded small like a map to the shore\nCoffee gone cold on the table again\nBut your name still warms up the pen\nThe screen door swings with the evening air\nDust on the porch and your scarf on the chair\nI hear your laugh in the apple tree\nLike it still knows how you were with me\n[Pre-Chorus]\nAnd I was lost in the miles\nNow I can see\nEvery road you drew\nWas leading me\n[Chorus]\nTake me back, take me home\nThrough the fields and the open road\nWith your hand in mine\nSlow and kind\nTake me back, take me home\nWhere the wildflowers bend and grow\nIf the world feels wide\nStay tonight\n[Verse 2]\nI packed the car at the edge of dawn\nWith a paper cup and a half-sung song\nWe passed the barn with the peeling red paint\nYou said, \"Some hearts still learn to wait\"\nI kept your ring in the little tin box\nBeside the map and the roadside rocks\nAnd every hill that rolled out ahead\nFelt like the things we never said\n[Pre-Chorus]\nBut I was gone for a while\nNow I believe\nEvery broken lane\nCan still lead to peace\n[Chorus]\nTake me back, take me home\nThrough the fields and the open road\nWith your hand in mine\nSlow and kind\nTake me back, take me home\nWhere the wildflowers bend and grow\nIf the world feels wide\nStay tonight\n[Bridge]\nWhen the rain came soft on the cedar roof\nI learned your love was the truest proof\nNot the grand goodbye\nNot the perfect line\nJust a steady light\nIn a borrowed life\n[Final Chorus]\nTake me back, take me home\nThrough the fields and the open road\nWith your hand in mine\nSlow and kind\nTake me back, take me home\nWhere the wildflowers bend and grow\nIf the world feels wide\nStay tonight\nTake me back, take me home\nI can feel it in my bones\nEvery scar we hide\nTurns to light\nTake me back, take me home\nWhere the wildflowers bend and grow\nIf the world feels wide\nStay tonight",
     "tags": [
-      "acoustic folk pop with gentle fingerpicked guitar and soft organic percussion in a laid back 6 8 sway verse stays close and sparse with piano fills and intimate lead vocal",
-      "pre chorus lifts with stacked harmonies and a rising string line",
-      "chorus opens wide with rich three part harmonies and hand tapped pulse",
-      "bridge pulls back to voice and piano before final chorus blooms",
-      "warm live session mix",
-      "close mic and airy",
-      "with delicate cello swells",
+      "acoustic folk pop",
+      "warm live session",
       "brushed textures",
-      "and tender ear candy like fret squeaks",
-      "reversed string breaths",
-      "and soft room tone tails",
+      "soft room tone",
       "beautiful",
       "lyrical",
       "emotional",
       "warm",
-      "heartfelt"
+      "heartfelt",
+      "acoustic",
+      "uplifting",
+      "nostalgic",
+      "soulful",
+      "rich",
+      "natural",
+      "soft"
     ]
   },
   {
@@ -32076,22 +31966,21 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Moonlight Resting on the Forest Floor",
     "metadataText": "Dreamy ambient acoustic with warm fingerpicked guitar, slow pulse, soft piano echoes, and cinematic pad swells; verse stays intimate and spacious, pre-chorus opens with rising harmonies, chorus blooms into stacked vocals and a gentle chant, Whispered doubles, airy delay throws, and soft gang oohs on the hook, Wide, glowing, and immersive with a polished cinematic mix, emotional, acoustic, soft, calming, ambient, warm\n\n0 0 0 Moonlight Resting on the Forest Floor Add a Caption Remix/Edit Dreamy ambient acoustic with warm fingerpicked guitar, slow pulse, soft piano echoes, and cinematic pad swells; verse stays intimate and spacious, pre-chorus opens with rising harmonies, chorus blooms into stacked vocals and a gentle chant, Whispered doubles, airy delay throws, and soft gang oohs on the hook, Wide, glowing, and immersive with a polished cinematic mix, emotional, acoustic, soft, calming, ambient, warm Show Less 2d, 20h ago",
     "tags": [
-      "dreamy ambient acoustic with warm fingerpicked guitar",
+      "dreamy ambient acoustic",
       "slow pulse",
       "soft piano echoes",
-      "and cinematic pad swells verse stays intimate and spacious",
-      "pre chorus opens with rising harmonies",
-      "chorus blooms into stacked vocals and a gentle chant",
+      "cinematic pad",
       "whispered doubles",
-      "airy delay throws",
-      "and soft gang oohs on the hook",
-      "wide",
+      "soft gang oohs",
       "glowing",
-      "and immersive with a polished cinematic mix",
+      "immersive",
       "emotional",
       "acoustic",
       "soft",
-      "calming"
+      "calming",
+      "ambient",
+      "warm",
+      "commercial"
     ]
   },
   {
@@ -32111,22 +32000,19 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Morning Fog Over Silent Hills",
     "metadataText": "Dream-pop acoustic ballad with gentle swung fingerpicked guitar, soft piano echoes, airy synth pads, and slow cinematic swells; verse stays intimate and close-mic, pre-chorus opens with layered breathy doubles, chorus lifts with warm harmony stacks and a repeated chantable hook, Add reverse-pad transitions, bell-like glints between phrases, and a final swell into a wide, shimmering mix, ambient, acoustic, warm, soft, emotional, calming\n\n0 0 0 Morning Fog Over Silent Hills Add a Caption Remix/Edit Dream-pop acoustic ballad with gentle swung fingerpicked guitar, soft piano echoes, airy synth pads, and slow cinematic swells; verse stays intimate and close-mic, pre-chorus opens with layered breathy doubles, chorus lifts with warm harmony stacks and a repeated chantable hook, Add reverse-pad transitions, bell-like glints between phrases, and a final swell into a wide, shimmering mix, ambient, acoustic, warm, soft, emotional, calming Show Less 2d, 20h ago",
     "tags": [
-      "dream pop acoustic ballad with gentle swung fingerpicked guitar",
+      "dream pop acoustic",
       "soft piano echoes",
       "airy synth pads",
-      "and slow cinematic swells verse stays intimate and close mic",
-      "pre chorus opens with layered breathy doubles",
-      "chorus lifts with warm harmony stacks and a repeated chantable hook",
-      "add reverse pad transitions",
-      "bell like glints between phrases",
-      "and a final swell into a wide",
-      "shimmering mix",
+      "slow cinematic",
+      "bell like glints",
+      "shimmering",
       "ambient",
       "acoustic",
       "warm",
       "soft",
       "emotional",
-      "calming"
+      "calming",
+      "commercial"
     ]
   },
   {
@@ -32146,22 +32032,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Northern Winds & Southern Hearts",
     "metadataText": "Cinematic Celtic instrumental with swayed fingerpicked acoustic guitar, rising violin lines, airy tin whistle accents, hand-drum organic percussion, and a fantasy-folk arc that moves from intimate verses to a broader, soaring refrain, Breathier textures bloom in the transition with harp-like chimes, reversed swells, and a final lift, Warm wide mix - earthy, open, and storybook-cinematic, folk, emotional, acoustic, violin, celtic\n\n0 0 0 Northern Winds & Southern Hearts Add a Caption Remix/Edit Cinematic Celtic instrumental with swayed fingerpicked acoustic guitar, rising violin lines, airy tin whistle accents, hand-drum organic percussion, and a fantasy-folk arc that moves from intimate verses to a broader, soaring refrain, Breathier textures bloom in the transition with harp-like chimes, reversed swells, and a final lift, Warm wide mix - earthy, open, and storybook-cinematic, folk, emotional, acoustic, violin, celtic Show Less 2d, 20h ago",
     "tags": [
-      "cinematic celtic instrumental with swayed fingerpicked acoustic guitar",
-      "rising violin lines",
-      "airy tin whistle accents",
-      "hand drum organic percussion",
-      "and a fantasy folk arc that moves from intimate verses to a broader",
+      "cinematic celtic instrumental",
+      "rising violin",
+      "airy tin whistle",
+      "hand drum organic",
+      "fantasy folk arc",
       "soaring refrain",
-      "breathier textures bloom in the transition with harp like chimes",
-      "reversed swells",
-      "and a final lift",
-      "warm wide mix earthy",
+      "breathier textures bloom",
+      "warm earthy",
       "open",
-      "and storybook cinematic",
+      "storybook cinematic",
       "folk",
       "emotional",
       "acoustic",
-      "violin"
+      "violin",
+      "celtic",
+      "commercial"
     ]
   },
   {
@@ -32181,22 +32067,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Old Roads Through Carolina Pines",
     "metadataText": "Acoustic cinematic folk instrumental with gentle fingerpicked guitar, soft piano beds, subtle string swells, brushed hand percussion, and a slow 4/4 pulse; verse passages stay sparse and intimate, then lift with layered harmonies and fuller strings, while a final section opens wide with carried melodies, Warm live-session vocal-free vibe, natural reverb, rich and tender mix, handmade and spacious, emotional, rich, calming, warm, natural, soft, uplifting, acoustic, nostalgic, heartfelt\n\n0 0 0 Old Roads Through Carolina Pines Add a Caption Remix/Edit Acoustic cinematic folk instrumental with gentle fingerpicked guitar, soft piano beds, subtle string swells, brushed hand percussion, and a slow 4/4 pulse; verse passages stay sparse and intimate, then lift with layered harmonies and fuller strings, while a final section opens wide with carried melodies, Warm live-session vocal-free vibe, natural reverb, rich and tender mix, handmade and spacious, emotional, rich, calming, warm, natural, soft, uplifting, acoustic, nostalgic, heartfelt Show Less 2d, 20h ago",
     "tags": [
-      "acoustic cinematic folk instrumental with gentle fingerpicked guitar",
+      "acoustic cinematic folk",
       "soft piano beds",
-      "subtle string swells",
+      "subtle string",
       "brushed hand percussion",
-      "and a slow 4 4 pulse verse passages stay sparse and intimate",
-      "then lift with layered harmonies and fuller strings",
-      "while a final section opens wide with carried melodies",
-      "warm live session vocal free vibe",
+      "slow 4 4",
+      "lift",
+      "warm live session",
       "natural reverb",
-      "rich and tender mix",
-      "handmade and spacious",
-      "emotional",
       "rich",
+      "handmade",
+      "emotional",
       "calming",
       "warm",
-      "natural"
+      "natural",
+      "soft",
+      "uplifting"
     ]
   },
   {
@@ -32216,17 +32102,17 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Paper Boats on Silent Rivers",
     "metadataText": "Acoustic cinematic folk with warm fingerpicked guitar, soft piano clusters, subtle string swells, brushed frame percussion, and gentle half-time pulse; verse opens sparse with guitar and room tone, pre-build adds piano arpeggios and low cello, final lift brings full strings and hand percussion, Close, live-session intimacy, rich natural reverb, lush but organic mix, warm, uplifting, calming, soft, acoustic, emotional, heartfelt, natural, nostalgic, rich\n\n1 0 0 Paper Boats on Silent Rivers Add a Caption Remix/Edit Acoustic cinematic folk with warm fingerpicked guitar, soft piano clusters, subtle string swells, brushed frame percussion, and gentle half-time pulse; verse opens sparse with guitar and room tone, pre-build adds piano arpeggios and low cello, final lift brings full strings and hand percussion, Close, live-session intimacy, rich natural reverb, lush but organic mix, warm, uplifting, calming, soft, acoustic, emotional, heartfelt, natural, nostalgic, rich Show Less 2d, 20h ago",
     "tags": [
-      "acoustic cinematic folk with warm fingerpicked guitar",
+      "acoustic cinematic folk",
       "soft piano clusters",
-      "subtle string swells",
+      "subtle string",
       "brushed frame percussion",
-      "and gentle half time pulse verse opens sparse with guitar and room tone",
-      "pre build adds piano arpeggios and low cello",
-      "final lift brings full strings and hand percussion",
+      "gentle time pulse",
+      "pre build adds",
+      "lift brings full",
       "close",
       "live session intimacy",
       "rich natural reverb",
-      "lush but organic mix",
+      "lush",
       "warm",
       "uplifting",
       "calming",
@@ -32277,22 +32163,21 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Paper Map Heart",
     "metadataText": "Acoustic folk ballad with warm fingerpicked guitar and a brushed kick pulse at a gentle 78 BPM; verse stays intimate with piano accents and close-mic lead, pre-chorus opens into soft harmony stacks, chorus lifts with fuller strums and hand percussion, Gentle backing vocals answer key lines, with tape-echo throws on the hook and a final rise of room-clap texture, Cozy, cinematic, organic mix, warm and human, emotional, raw, gentle, warm, heartfelt, acoustic, minimal, soulful, nostalgic, rich, soft\n\n[Verse 1]\nYour name in my coat pocket\nFolded next to the train ticket\nRain on the window, slow and silver\nI was already gone, then I saw it\nYou drew that map on a napkin\nThree towns, one bridge, and your red pen\nSaid, \"If you miss me, follow the river\"\nI kept it safe like a promise\n[Pre-Chorus]\nAnd every road looks different\nWhen I'm missing your hand\nEvery mile gets louder\nTill I can hear you again\n[Chorus]\nTake me back, take me back\nTo the paper map heart\nTake me back, take me back\nWhere we never fell apart\nI still know the way\nI still know the way\n(Take me back)\nTake me back, take me back\nTo your paper map heart\n[Verse 2]\nThat little diner on the corner\nTwo chipped mugs and a sleepy fan\nYou laughed when I spilled my coffee\nSaid I wear my heart in my hands\nNow I'm under different ceilings\nDifferent doors and different skies\nBut I keep your voice in the quiet\nLike a song I can't leave behind\n[Pre-Chorus]\nAnd every road looks different\nWhen I'm missing your hand\nEvery mile gets louder\nTill I can hear you again\n[Chorus]\nTake me back, take me back\nTo the paper map heart\nTake me back, take me back\nWhere we never fell apart\nI still know the way\nI still know the way\n(Take me back)\nTake me back, take me back\nTo your paper map heart\n[Bridge]\nIf I stand at the station\nWith your letter in my coat\nWill the night let me borrow\nOne last home I used to know?\nSo I follow the folding\nOf the edges in my mind\nTill your love turns into daylight\nAnd I find you every time\n[Final Chorus]\nTake me back, take me back\nTo the paper map heart\nTake me back, take me back\nWhere we never fell apart\nI still know the way\nI still know the way\n(Take me back)\nTake me back, take me back\nTo your paper map heart",
     "tags": [
-      "pre chorus opens into soft harmony stacks",
-      "chorus lifts with fuller strums and hand percussion",
-      "gentle backing vocals answer key lines",
-      "with tape echo throws on the hook and a final rise of room clap texture",
+      "gentle backing vocals",
       "cozy",
       "cinematic",
-      "organic mix",
-      "warm and human",
-      "emotional",
-      "raw",
-      "gentle",
+      "organic",
       "warm",
+      "emotional",
+      "gentle",
       "heartfelt",
       "acoustic",
       "minimal",
-      "soulful"
+      "soulful",
+      "nostalgic",
+      "rich",
+      "soft",
+      "commercial"
     ]
   },
   {
@@ -32313,7 +32198,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Paper Maps",
     "metadataText": "R&B, contemporary R&B, neo-soul\n\n[Verse 1]\nDust on the dashboard glass\nMy bag by your old boots\nWe rolled past the bean fields\nWith the windows open loose\nYour hand on the paper map\nMine on the steering wheel\nWe laughed at the wrong turn\nThen loved the way it felt\n[Pre-Chorus]\nAnd the sky went gold\nOver the fence line slow\nYou said, \"keep going\"\nSo I let the river show\n[Chorus]\nTake me home, take me home\nBy the grain and the creek road\nTake me home, take me home\nWhere the wild blackberries grow\nWe were young and we knew\nHow to sing the miles away\nTake me home, take me home\nTo the place you used to stay\n[Verse 2]\nAt the roadside produce stand\nYou bought peaches in a bag\nSticky juice on our fingers\nAnd a song we both could hum\nPast the church with the peeling paint\nPast the field of sleeping hay\nWe were carrying yesterday\nLike a warm light on the way\n[Pre-Chorus]\nAnd the moon came up\nOn the blue barn roof\nYou said, \"hold this moment\"\nSo I held on to you\n[Chorus]\nTake me home, take me home\nBy the grain and the creek road\nTake me home, take me home\nWhere the wild blackberries grow\nWe were young and we knew\nHow to sing the miles away\nTake me home, take me home\nTo the place you used to stay\n[Bridge]\nIf the road gets long\nAnd the nights run thin\nI can hear that laughter\nIn the wind again\nEvery field we passed\nStill lives in my bones\nAnd I carry your name\nLike a house I know\n[Chorus]\nTake me home, take me home\nBy the grain and the creek road\nTake me home, take me home\nWhere the wild blackberries grow\nWe were young and we knew\nHow to sing the miles away\nTake me home, take me home\nTo the place you used to stay\n[Outro]\nDust on the dashboard glass\nMy bag by your old boots\nAnd the road keeps opening\nLike it knows us too",
     "tags": [
-      "r and b",
       "contemporary r and b",
       "neo soul",
       "commercial",
@@ -32337,14 +32221,11 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Porch Swings in September",
     "metadataText": "Cinematic Celtic instrumental with fingerpicked acoustic guitar, lyrical violin leads, airy tin whistle phrases, and organic percussion in a steady folk pulse, Intro stays intimate with guitar and drone; main section opens with bowed strings and whistle countermelody; middle break lifts with hand drums and rising fiddle; final pass swells with layered harmonies, Wide, glowing, and story-rich mix, celtic, folk, acoustic, emotional, violin\n\n0 0 0 Porch Swings in September Add a Caption Remix/Edit Cinematic Celtic instrumental with fingerpicked acoustic guitar, lyrical violin leads, airy tin whistle phrases, and organic percussion in a steady folk pulse, Intro stays intimate with guitar and drone; main section opens with bowed strings and whistle countermelody; middle break lifts with hand drums and rising fiddle; final pass swells with layered harmonies, Wide, glowing, and story-rich mix, celtic, folk, acoustic, emotional, violin Show Less 2d, 20h ago",
     "tags": [
-      "cinematic celtic instrumental with fingerpicked acoustic guitar",
+      "cinematic celtic instrumental",
       "lyrical violin leads",
-      "airy tin whistle phrases",
-      "and organic percussion in a steady folk pulse",
-      "intro stays intimate with guitar and drone main section opens with bowed strings and whistle countermelody middle break lifts with hand drums and rising fiddle final pass swells with layered harmonies",
-      "wide",
+      "airy tin whistle",
       "glowing",
-      "and story rich mix",
+      "story rich",
       "celtic",
       "folk",
       "acoustic",
@@ -32371,22 +32252,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Postcard in Ash",
     "metadataText": "Acoustic singer-songwriter ballad with fingerpicked guitar and soft piano; verse stays intimate and sparse with close-mic vocals and light organic percussion, pre-chorus opens with gentle harmony lifts, chorus blooms with doubled lead and warm stacked harmonies, Add brushed shaker, soft kick pulse, and a reversed swell into each chorus; final chorus adds a cello line and wide room reverb, Mix is warm, natural, and cinematic with a cozy campfire glow, heartfelt, rich, raw, minimal, nostalgic, gentle, acoustic, warm, soft, soulful, emotional\n\nR&B with a slow swung pocket and sensual half-time groove; verse stays intimate with warm piano, sub-bass, and sparse hat ticks; pre-chorus opens with stacked harmonies and rising synth haze; chorus blooms with silky doubles, ad-lib panning, and a repeated anchor hook, Bridge drops to voice and keys, then final chorus returns with lush vocal layers, reverse swells, and polished, wide, cinematic mix, lyrical, warm, soulful, emotional, moody, contemporary, r&b, vocal, deep, heartfelt, romantic, smooth, sensual, rich, rhythmic",
     "tags": [
-      "acoustic singer songwriter ballad with fingerpicked guitar and soft piano verse stays intimate and sparse with close mic vocals and light organic percussion",
-      "pre chorus opens with gentle harmony lifts",
-      "chorus blooms with doubled lead and warm stacked harmonies",
-      "add brushed shaker",
+      "acoustic singer songwriter",
       "soft kick pulse",
-      "and a reversed swell into each chorus final chorus adds a cello line and wide room reverb",
-      "mix is warm",
+      "is warm",
       "natural",
-      "and cinematic with a cozy campfire glow",
+      "cinematic",
       "heartfelt",
       "rich",
-      "raw",
       "minimal",
       "nostalgic",
       "gentle",
-      "acoustic"
+      "acoustic",
+      "warm",
+      "soft",
+      "soulful",
+      "emotional",
+      "commercial"
     ]
   },
   {
@@ -32407,22 +32288,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Riverbend Road",
     "metadataText": "Acoustic pop ballad with fingerpicked guitar and gentle piano, mid-tempo sway; verse stays intimate with sparse percussion and close harmony, pre-chorus opens into rising strings and brushed snare, chorus blooms with stacked vocals and warm chord lifts, bridge drops to solo piano then returns with fuller strings, Soft lead vocal with doubled chorus lines, airy harmony tails, small delay throws on the final word of each hook, Vinyl room tone, cello swell into the chorus, and a final guitar arpeggio tag, Intimate, handcrafted, wide but tender mix, acoustic, lyrical, warm, beautiful, uplifting, soulful, nostalgic, emotional, rich, heartfelt, natural, soft\n\n[Verse 1]\nWe drove past the wheat fields\nWith the windows down\nYour hand on my knee\nLike a promise I found\nThe old red barn\nLeaned into the wind\nAnd I felt my heart\nWake up again\n[Pre-Chorus]\nAnd I swear I heard\nThe quiet say our name\nIn the golden air\nNothing felt the same\n[Chorus]\nTake me down Riverbend Road\nWhere the wild grass grows\nI still know your face\nBy the way it glows\nHold me there, hold me close\nLet the whole world slow\nTake me down Riverbend Road\nTake me home\n[Verse 2]\nYour laugh in the dusk\nWas a warm front porch light\nYour eyes held the day\nWhen the blue turned night\nWe left our tracks\nIn the muddy side lane\nThen the sky poured gold\nOn the sugarcane\n[Pre-Chorus]\nAnd I swear I heard\nThe quiet say our name\nIn the open sky\nNothing felt the same\n[Chorus]\nTake me down Riverbend Road\nWhere the wild grass grows\nI still know your face\nBy the way it glows\nHold me there, hold me close\nLet the whole world slow\nTake me down Riverbend Road\nTake me home\n[Bridge]\nIf the years roll by\nAnd the miles unfold\nI'll keep that first light\nIn the folds of my soul\nWhen my hands feel cold\nAnd the nights run long\nI'll hear your small voice\nAnd I'll carry on\n[Chorus]\nTake me down Riverbend Road\nWhere the wild grass grows\nI still know your face\nBy the way it glows\nHold me there, hold me close\nLet the whole world slow\nTake me down Riverbend Road\nTake me home\n[Outro]\nTake me home\nTake me home\nRiverbend Road",
     "tags": [
-      "acoustic pop ballad with fingerpicked guitar and gentle piano",
-      "mid tempo sway verse stays intimate with sparse percussion and close harmony",
-      "pre chorus opens into rising strings and brushed snare",
-      "chorus blooms with stacked vocals and warm chord lifts",
-      "bridge drops to solo piano then returns with fuller strings",
-      "soft lead vocal with doubled chorus lines",
+      "acoustic pop ballad",
+      "soft",
       "airy harmony tails",
-      "small delay throws on the final word of each hook",
-      "vinyl room tone",
-      "cello swell into the chorus",
-      "and a final guitar arpeggio tag",
-      "intimate",
       "handcrafted",
-      "wide but tender mix",
       "acoustic",
-      "lyrical"
+      "lyrical",
+      "warm",
+      "beautiful",
+      "uplifting",
+      "soulful",
+      "nostalgic",
+      "emotional",
+      "rich",
+      "heartfelt",
+      "natural",
+      "commercial"
     ]
   },
   {
@@ -32442,22 +32323,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Rustic Skies & Wooden Porches",
     "metadataText": "Lo-fi acoustic hip-hop with swung soft drums, fingerpicked guitar motifs, warm bass pulses, and a relaxed late-night bounce; verse keeps it bare with dusty vinyl crackle and close-mic room tone, then a gentle lift adds muted keys and tape wobble, before the final pass opens with fuller drums and a blurred guitar counterline, Intimate handcrafted mix, mellow, grainy, and cozy, soft, warm, acoustic, nostalgic, lo-fi, hip-hop, mellow\n\n0 0 0 Rustic Skies & Wooden Porches Add a Caption Remix/Edit Lo-fi acoustic hip-hop with swung soft drums, fingerpicked guitar motifs, warm bass pulses, and a relaxed late-night bounce; verse keeps it bare with dusty vinyl crackle and close-mic room tone, then a gentle lift adds muted keys and tape wobble, before the final pass opens with fuller drums and a blurred guitar counterline, Intimate handcrafted mix, mellow, grainy, and cozy, soft, warm, acoustic, nostalgic, lo-fi, hip-hop, mellow Show Less 2d, 20h ago",
     "tags": [
-      "lo fi acoustic hip hop with swung soft drums",
+      "lo fi acoustic",
       "fingerpicked guitar motifs",
-      "warm bass pulses",
-      "and a relaxed late night bounce verse keeps it bare with dusty vinyl crackle and close mic room tone",
-      "then a gentle lift adds muted keys and tape wobble",
-      "before the final pass opens with fuller drums and a blurred guitar counterline",
-      "intimate handcrafted mix",
+      "warm bass",
+      "relaxed late night",
+      "gentle lift adds",
+      "handcrafted",
       "mellow",
       "grainy",
-      "and cozy",
+      "cozy",
       "soft",
       "warm",
       "acoustic",
       "nostalgic",
       "lo fi",
-      "hip hop"
+      "hip hop",
+      "commercial"
     ]
   },
   {
@@ -32477,13 +32358,11 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Shadows Across the Wheat Fields",
     "metadataText": "Lo-fi acoustic hip-hop with swung dusty drums, mellow fingerpicked guitar, warm bass pulses, and a laid-back head-nod groove, Verse texture stays spare with room tone and vinyl crackle; the middle lifts with a soft electric counter-melody and filtered drum fills; final stretch opens into layered guitar harmonics and tape flutter, Intimate close-mic mix, soft-focus and handmade, acoustic, hip-hop, nostalgic, lo-fi, warm, soft, mellow\n\n0 0 0 Shadows Across the Wheat Fields Add a Caption Remix/Edit Lo-fi acoustic hip-hop with swung dusty drums, mellow fingerpicked guitar, warm bass pulses, and a laid-back head-nod groove, Verse texture stays spare with room tone and vinyl crackle; the middle lifts with a soft electric counter-melody and filtered drum fills; final stretch opens into layered guitar harmonics and tape flutter, Intimate close-mic mix, soft-focus and handmade, acoustic, hip-hop, nostalgic, lo-fi, warm, soft, mellow Show Less 2d, 20h ago",
     "tags": [
-      "lo fi acoustic hip hop with swung dusty drums",
+      "lo fi acoustic",
       "mellow fingerpicked guitar",
-      "warm bass pulses",
-      "and a laid back head nod groove",
-      "verse texture stays spare with room tone and vinyl crackle the middle lifts with a soft electric counter melody and filtered drum fills final stretch opens into layered guitar harmonics and tape flutter",
-      "intimate close mic mix",
-      "soft focus and handmade",
+      "warm bass",
+      "laid back head",
+      "soft focus",
       "acoustic",
       "hip hop",
       "nostalgic",
@@ -32511,15 +32390,11 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Slow Rivers & Small Town Dreams",
     "metadataText": "Acoustic fusion with mid-tempo swung grooves and organic hand percussion; verse rides warm fingerpicked guitar and tabla, pre-chorus opens with breathy bansuri swells and sitar filigree, chorus blooms into layered string pads and deeper dhol pulses, Add reversed cymbal swells, airy reverb tails, and a soft drone lift, Wide, cinematic, earthy mix, acoustic, warm, emotional\n\n0 0 0 Slow Rivers & Small Town Dreams Add a Caption Remix/Edit Acoustic fusion with mid-tempo swung grooves and organic hand percussion; verse rides warm fingerpicked guitar and tabla, pre-chorus opens with breathy bansuri swells and sitar filigree, chorus blooms into layered string pads and deeper dhol pulses, Add reversed cymbal swells, airy reverb tails, and a soft drone lift, Wide, cinematic, earthy mix, acoustic, warm, emotional Show Less 2d, 20h ago",
     "tags": [
-      "acoustic fusion with mid tempo swung grooves and organic hand percussion verse rides warm fingerpicked guitar and tabla",
-      "pre chorus opens with breathy bansuri swells and sitar filigree",
-      "chorus blooms into layered string pads and deeper dhol pulses",
-      "add reversed cymbal swells",
+      "acoustic fusion",
       "airy reverb tails",
-      "and a soft drone lift",
-      "wide",
+      "soft drone lift",
       "cinematic",
-      "earthy mix",
+      "earthy",
       "acoustic",
       "warm",
       "emotional",
@@ -32543,22 +32418,21 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Soft Winds Across Empty Shores",
     "metadataText": "Dreamy acoustic indie-pop ballad with a slow swaying pulse, warm fingerpicked guitar, airy synth pads, soft piano echoes, and cinematic swells; verse stays intimate and sparse, pre-chorus lifts with stacked harmonies and rising textures, chorus opens into a calm singback refrain, bridge drops to voice and guitar before the final chorus blooms, Close-mic lead vocal, double-tracked choruses, light breathy ad-libs, reversed swells into transitions, delicate bell chimes between phrases, wide glossy mix with a peaceful shimmer, ambient, warm, soft, calming, emotional, acoustic\n\nSoft Winds Across Empty Shores Add a Caption Remix/Edit Dreamy acoustic indie-pop ballad with a slow swaying pulse, warm fingerpicked guitar, airy synth pads, soft piano echoes, and cinematic swells; verse stays intimate and sparse, pre-chorus lifts with stacked harmonies and rising textures, chorus opens into a calm singback refrain, bridge drops to voice and guitar before the final chorus blooms, Close-mic lead vocal, double-tracked choruses, light breathy ad-libs, reversed swells into transitions, delicate bell chimes between phrases, wide glossy mix with a peaceful shimmer, ambient, warm, soft, calming, emotional, acoustic Show Less 2d, 20h ago",
     "tags": [
-      "dreamy acoustic indie pop ballad with a slow swaying pulse",
+      "dreamy acoustic indie",
       "warm fingerpicked guitar",
       "airy synth pads",
       "soft piano echoes",
-      "and cinematic swells verse stays intimate and sparse",
-      "pre chorus lifts with stacked harmonies and rising textures",
-      "chorus opens into a calm singback refrain",
-      "bridge drops to voice and guitar before the final chorus blooms",
-      "close mic lead vocal",
-      "double tracked choruses",
-      "light breathy ad libs",
-      "reversed swells into transitions",
-      "delicate bell chimes between phrases",
-      "wide glossy mix with a peaceful shimmer",
+      "cinematic",
+      "light breathy",
+      "delicate bell chimes",
+      "glossy",
       "ambient",
-      "warm"
+      "warm",
+      "soft",
+      "calming",
+      "emotional",
+      "acoustic",
+      "commercial"
     ]
   },
   {
@@ -32578,22 +32452,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Songs From the Front Porch",
     "metadataText": "Acoustic cinematic folk instrumental with warm fingerpicked guitar, soft piano cushions, subtle string blooms, and organic percussion in a gentle mid-tempo pulse, Verse section stays sparse with guitar and room tone; pre-chorus adds brushed shakers and rising cello; chorus opens into fuller strings and piano arpeggios, Live-session intimacy, rich natural reverb, bright-yet-warm mix, with wind chime swells and reversed string lifts between turns, emotional, natural, heartfelt, acoustic, rich, soft, warm, uplifting, calming, nostalgic\n\n0 0 0 Songs From the Front Porch Add a Caption Remix/Edit Acoustic cinematic folk instrumental with warm fingerpicked guitar, soft piano cushions, subtle string blooms, and organic percussion in a gentle mid-tempo pulse, Verse section stays sparse with guitar and room tone; pre-chorus adds brushed shakers and rising cello; chorus opens into fuller strings and piano arpeggios, Live-session intimacy, rich natural reverb, bright-yet-warm mix, with wind chime swells and reversed string lifts between turns, emotional, natural, heartfelt, acoustic, rich, soft, warm, uplifting, calming, nostalgic Show Less 2d, 20h ago",
     "tags": [
-      "acoustic cinematic folk instrumental with warm fingerpicked guitar",
+      "acoustic cinematic folk",
       "soft piano cushions",
       "subtle string blooms",
-      "and organic percussion in a gentle mid tempo pulse",
-      "verse section stays sparse with guitar and room tone pre chorus adds brushed shakers and rising cello chorus opens into fuller strings and piano arpeggios",
       "live session intimacy",
       "rich natural reverb",
-      "bright yet warm mix",
-      "with wind chime swells and reversed string lifts between turns",
+      "warm",
       "emotional",
       "natural",
       "heartfelt",
       "acoustic",
       "rich",
       "soft",
-      "warm"
+      "uplifting",
+      "calming",
+      "nostalgic",
+      "commercial"
     ]
   },
   {
@@ -32634,22 +32508,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/The Cabin Where Time Slows Down",
     "metadataText": "Lo-fi acoustic hip-hop with swung soft drums, fingerpicked guitar motifs, warm bass pulses, and a relaxed late-night bounce; verse keeps it bare with dusty vinyl crackle and close-mic room tone, then a gentle lift adds muted keys and tape wobble, before the final pass opens with fuller drums and a blurred guitar counterline, Intimate handcrafted mix, mellow, grainy, and cozy, soft, warm, acoustic, nostalgic, lo-fi, hip-hop, mellow\n\n0 0 0 The Cabin Where Time Slows Down Add a Caption Remix/Edit Lo-fi acoustic hip-hop with swung soft drums, fingerpicked guitar motifs, warm bass pulses, and a relaxed late-night bounce; verse keeps it bare with dusty vinyl crackle and close-mic room tone, then a gentle lift adds muted keys and tape wobble, before the final pass opens with fuller drums and a blurred guitar counterline, Intimate handcrafted mix, mellow, grainy, and cozy, soft, warm, acoustic, nostalgic, lo-fi, hip-hop, mellow Show Less 2d, 20h ago",
     "tags": [
-      "lo fi acoustic hip hop with swung soft drums",
+      "lo fi acoustic",
       "fingerpicked guitar motifs",
-      "warm bass pulses",
-      "and a relaxed late night bounce verse keeps it bare with dusty vinyl crackle and close mic room tone",
-      "then a gentle lift adds muted keys and tape wobble",
-      "before the final pass opens with fuller drums and a blurred guitar counterline",
-      "intimate handcrafted mix",
+      "warm bass",
+      "relaxed late night",
+      "gentle lift adds",
+      "handcrafted",
       "mellow",
       "grainy",
-      "and cozy",
+      "cozy",
       "soft",
       "warm",
       "acoustic",
       "nostalgic",
       "lo fi",
-      "hip hop"
+      "hip hop",
+      "commercial"
     ]
   },
   {
@@ -32669,22 +32543,21 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/The Calm Beyond the Horizon",
     "metadataText": "Dreamy acoustic ambient pop with slow-swung fingerpicked guitar, soft pulse percussion, and airy synth beds; verse stays intimate and close, pre-chorus opens with stacked harmonies and reversed swells, chorus blooms with gentle gang vocals and wide sustained chords, Vocal is breathy and close-mic in verses, double-tracked on hooks with soft delay throws; glassy chimes, piano echoes, and filtered risers color the transitions, Warm, cinematic, and spacious with a glowing polished mix, ambient, calming, emotional, acoustic, warm, soft\n\n0 0 0 The Calm Beyond the Horizon Add a Caption Remix/Edit Dreamy acoustic ambient pop with slow-swung fingerpicked guitar, soft pulse percussion, and airy synth beds; verse stays intimate and close, pre-chorus opens with stacked harmonies and reversed swells, chorus blooms with gentle gang vocals and wide sustained chords, Vocal is breathy and close-mic in verses, double-tracked on hooks with soft delay throws; glassy chimes, piano echoes, and filtered risers color the transitions, Warm, cinematic, and spacious with a glowing polished mix, ambient, calming, emotional, acoustic, warm, soft Show Less 2d, 20h ago",
     "tags": [
-      "dreamy acoustic ambient pop with slow swung fingerpicked guitar",
+      "dreamy acoustic ambient",
       "soft pulse percussion",
-      "and airy synth beds verse stays intimate and close",
-      "pre chorus opens with stacked harmonies and reversed swells",
-      "chorus blooms with gentle gang vocals and wide sustained chords",
-      "vocal is breathy and close mic in verses",
-      "double tracked on hooks with soft delay throws glassy chimes",
+      "airy synth beds",
+      "is breathy",
       "piano echoes",
-      "and filtered risers color the transitions",
+      "filtered risers color",
       "warm",
       "cinematic",
-      "and spacious with a glowing polished mix",
+      "spacious",
       "ambient",
       "calming",
       "emotional",
-      "acoustic"
+      "acoustic",
+      "soft",
+      "commercial"
     ]
   },
   {
@@ -32704,15 +32577,11 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/The Color of Quiet Evenings",
     "metadataText": "Ambient acoustic instrumental with fingerpicked guitar, soft piano echoes, and warm synth pads in a slow floating pulse; verse texture stays intimate with room-tone guitar and distant harmonics, then layers in brushed cymbal haze and swelling cinematic strings, with a midtrack break that thins to piano and pad, and a final lift of chime tails, Close-mic, wide, and velvety, ambient, acoustic, soft, warm, calming, emotional\n\n0 0 0 The Color of Quiet Evenings Add a Caption Remix/Edit Ambient acoustic instrumental with fingerpicked guitar, soft piano echoes, and warm synth pads in a slow floating pulse; verse texture stays intimate with room-tone guitar and distant harmonics, then layers in brushed cymbal haze and swelling cinematic strings, with a midtrack break that thins to piano and pad, and a final lift of chime tails, Close-mic, wide, and velvety, ambient, acoustic, soft, warm, calming, emotional Show Less 2d, 21h ago",
     "tags": [
-      "ambient acoustic instrumental with fingerpicked guitar",
+      "ambient acoustic instrumental",
       "soft piano echoes",
-      "and warm synth pads in a slow floating pulse verse texture stays intimate with room tone guitar and distant harmonics",
-      "then layers in brushed cymbal haze and swelling cinematic strings",
-      "with a midtrack break that thins to piano and pad",
-      "and a final lift of chime tails",
-      "close mic",
-      "wide",
-      "and velvety",
+      "warm synth pads",
+      "layers in brushed",
+      "velvety",
       "ambient",
       "acoustic",
       "soft",
@@ -32739,14 +32608,11 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/The Hollow Sound of Rain Boots",
     "metadataText": "Cinematic Celtic instrumental with fingerpicked acoustic guitar, lyrical violin leads, airy tin whistle phrases, and organic percussion in a steady folk pulse, Intro stays intimate with guitar and drone; main section opens with bowed strings and whistle countermelody; middle break lifts with hand drums and rising fiddle; final pass swells with layered harmonies, Wide, glowing, and story-rich mix, celtic, folk, acoustic, emotional, violin\n\n1 0 0 The Hollow Sound of Rain Boots Add a Caption Remix/Edit Cinematic Celtic instrumental with fingerpicked acoustic guitar, lyrical violin leads, airy tin whistle phrases, and organic percussion in a steady folk pulse, Intro stays intimate with guitar and drone; main section opens with bowed strings and whistle countermelody; middle break lifts with hand drums and rising fiddle; final pass swells with layered harmonies, Wide, glowing, and story-rich mix, celtic, folk, acoustic, emotional, violin Show Less 2d, 21h ago",
     "tags": [
-      "cinematic celtic instrumental with fingerpicked acoustic guitar",
+      "cinematic celtic instrumental",
       "lyrical violin leads",
-      "airy tin whistle phrases",
-      "and organic percussion in a steady folk pulse",
-      "intro stays intimate with guitar and drone main section opens with bowed strings and whistle countermelody middle break lifts with hand drums and rising fiddle final pass swells with layered harmonies",
-      "wide",
+      "airy tin whistle",
       "glowing",
-      "and story rich mix",
+      "story rich",
       "celtic",
       "folk",
       "acoustic",
@@ -32772,17 +32638,15 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/The Last Sunset Over Briarwood",
     "metadataText": "Acoustic fusion with cinematic downtempo pulse, warm fingerpicked guitar, tabla grooves, sitar textures, and layered bansuri harmonies; verse-like sections open on solo guitar and soft tanpura drone, pre-chorus adds tabla fills and rising strings, final lift brings full organic ensemble and spacious chord swells, Close, natural room mics, glowing midrange, wide and earthy mix, warm, emotional, acoustic\n\n0 0 0 The Last Sunset Over Briarwood Add a Caption Remix/Edit Acoustic fusion with cinematic downtempo pulse, warm fingerpicked guitar, tabla grooves, sitar textures, and layered bansuri harmonies; verse-like sections open on solo guitar and soft tanpura drone, pre-chorus adds tabla fills and rising strings, final lift brings full organic ensemble and spacious chord swells, Close, natural room mics, glowing midrange, wide and earthy mix, warm, emotional, acoustic Show Less 2d, 21h ago",
     "tags": [
-      "acoustic fusion with cinematic downtempo pulse",
+      "acoustic fusion",
       "warm fingerpicked guitar",
       "tabla grooves",
       "sitar textures",
-      "and layered bansuri harmonies verse like sections open on solo guitar and soft tanpura drone",
-      "pre chorus adds tabla fills and rising strings",
-      "final lift brings full organic ensemble and spacious chord swells",
+      "layered bansuri harmonies",
+      "lift brings full",
       "close",
       "natural room mics",
       "glowing midrange",
-      "wide and earthy mix",
       "warm",
       "emotional",
       "acoustic",
@@ -32806,22 +32670,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/The Meadow Beyond Winterhill",
     "metadataText": "Acoustic cinematic folk instrumental with warm fingerpicked guitar, soft piano cushions, subtle string blooms, and organic percussion in a gentle mid-tempo pulse, Verse section stays sparse with guitar and room tone; pre-chorus adds brushed shakers and rising cello; chorus opens into fuller strings and piano arpeggios, Live-session intimacy, rich natural reverb, bright-yet-warm mix, with wind chime swells and reversed string lifts between turns, emotional, natural, heartfelt, acoustic, rich, soft, warm, uplifting, calming, nostalgic\n\n0 0 0 The Meadow Beyond Winterhill Add a Caption Remix/Edit Acoustic cinematic folk instrumental with warm fingerpicked guitar, soft piano cushions, subtle string blooms, and organic percussion in a gentle mid-tempo pulse, Verse section stays sparse with guitar and room tone; pre-chorus adds brushed shakers and rising cello; chorus opens into fuller strings and piano arpeggios, Live-session intimacy, rich natural reverb, bright-yet-warm mix, with wind chime swells and reversed string lifts between turns, emotional, natural, heartfelt, acoustic, rich, soft, warm, uplifting, calming, nostalgic Show Less 2d, 21h ago",
     "tags": [
-      "acoustic cinematic folk instrumental with warm fingerpicked guitar",
+      "acoustic cinematic folk",
       "soft piano cushions",
       "subtle string blooms",
-      "and organic percussion in a gentle mid tempo pulse",
-      "verse section stays sparse with guitar and room tone pre chorus adds brushed shakers and rising cello chorus opens into fuller strings and piano arpeggios",
       "live session intimacy",
       "rich natural reverb",
-      "bright yet warm mix",
-      "with wind chime swells and reversed string lifts between turns",
+      "warm",
       "emotional",
       "natural",
       "heartfelt",
       "acoustic",
       "rich",
       "soft",
-      "warm"
+      "uplifting",
+      "calming",
+      "nostalgic",
+      "commercial"
     ]
   },
   {
@@ -32841,22 +32705,21 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/The Ocean Sleeps Tonight",
     "metadataText": "Dreamy acoustic indie-pop ballad with a slow swaying pulse, warm fingerpicked guitar, airy synth pads, soft piano echoes, and cinematic swells; verse stays intimate and sparse, pre-chorus lifts with stacked harmonies and rising textures, chorus opens into a calm singback refrain, bridge drops to voice and guitar before the final chorus blooms, Close-mic lead vocal, double-tracked choruses, light breathy ad-libs, reversed swells into transitions, delicate bell chimes between phrases, wide glossy mix with a peaceful shimmer, ambient, warm, soft, calming, emotional, acoustic\n\n0 0 0 The Ocean Sleeps Tonight Add a Caption Remix/Edit Dreamy acoustic indie-pop ballad with a slow swaying pulse, warm fingerpicked guitar, airy synth pads, soft piano echoes, and cinematic swells; verse stays intimate and sparse, pre-chorus lifts with stacked harmonies and rising textures, chorus opens into a calm singback refrain, bridge drops to voice and guitar before the final chorus blooms, Close-mic lead vocal, double-tracked choruses, light breathy ad-libs, reversed swells into transitions, delicate bell chimes between phrases, wide glossy mix with a peaceful shimmer, ambient, warm, soft, calming, emotional, acoustic Show Less 2d, 21h ago",
     "tags": [
-      "dreamy acoustic indie pop ballad with a slow swaying pulse",
+      "dreamy acoustic indie",
       "warm fingerpicked guitar",
       "airy synth pads",
       "soft piano echoes",
-      "and cinematic swells verse stays intimate and sparse",
-      "pre chorus lifts with stacked harmonies and rising textures",
-      "chorus opens into a calm singback refrain",
-      "bridge drops to voice and guitar before the final chorus blooms",
-      "close mic lead vocal",
-      "double tracked choruses",
-      "light breathy ad libs",
-      "reversed swells into transitions",
-      "delicate bell chimes between phrases",
-      "wide glossy mix with a peaceful shimmer",
+      "cinematic",
+      "light breathy",
+      "delicate bell chimes",
+      "glossy",
       "ambient",
-      "warm"
+      "warm",
+      "soft",
+      "calming",
+      "emotional",
+      "acoustic",
+      "commercial"
     ]
   },
   {
@@ -32876,22 +32739,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/The Orchard Behind the Hills",
     "metadataText": "Acoustic instrumental with steady fingerpicked guitar and heartfelt melodic lift; verse-like opening stays sparse with intimate guitar, felt piano, and room tone, then a gentle string bed and brushed percussion widen the frame, before a fuller middle bloom with counter-melody and warm pulse, then the ending returns to solo guitar and soft piano decay, Close live-session feel, rich natural reverb, organic and cinematic mix, rich, nostalgic, acoustic, calming, uplifting, emotional, natural, heartfelt, warm, soft\n\n0 0 0 The Orchard Behind the Hills Add a Caption Remix/Edit Acoustic instrumental with steady fingerpicked guitar and heartfelt melodic lift; verse-like opening stays sparse with intimate guitar, felt piano, and room tone, then a gentle string bed and brushed percussion widen the frame, before a fuller middle bloom with counter-melody and warm pulse, then the ending returns to solo guitar and soft piano decay, Close live-session feel, rich natural reverb, organic and cinematic mix, rich, nostalgic, acoustic, calming, uplifting, emotional, natural, heartfelt, warm, soft Show Less 2d, 21h ago",
     "tags": [
-      "acoustic instrumental with steady fingerpicked guitar and heartfelt melodic lift verse like opening stays sparse with intimate guitar",
+      "acoustic instrumental",
       "felt piano",
-      "and room tone",
-      "then a gentle string bed and brushed percussion widen the frame",
-      "before a fuller middle bloom with counter melody and warm pulse",
-      "then the ending returns to solo guitar and soft piano decay",
-      "close live session feel",
+      "room tone",
+      "gentle string bed",
+      "before a fuller",
+      "close live session",
       "rich natural reverb",
-      "organic and cinematic mix",
+      "organic",
       "rich",
       "nostalgic",
       "acoustic",
       "calming",
       "uplifting",
       "emotional",
-      "natural"
+      "natural",
+      "heartfelt"
     ]
   },
   {
@@ -32911,22 +32774,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/The Road Beyond Pine Hollow",
     "metadataText": "Cinematic Celtic instrumental with swayed fingerpicked acoustic guitar, rising violin lines, airy tin whistle accents, hand-drum organic percussion, and a fantasy-folk arc that moves from intimate verses to a broader, soaring refrain, Breathier textures bloom in the transition with harp-like chimes, reversed swells, and a final lift, Warm wide mix - earthy, open, and storybook-cinematic, folk, emotional, acoustic, violin, celtic\n\n0 0 0 The Road Beyond Pine Hollow Add a Caption Remix/Edit Cinematic Celtic instrumental with swayed fingerpicked acoustic guitar, rising violin lines, airy tin whistle accents, hand-drum organic percussion, and a fantasy-folk arc that moves from intimate verses to a broader, soaring refrain, Breathier textures bloom in the transition with harp-like chimes, reversed swells, and a final lift, Warm wide mix - earthy, open, and storybook-cinematic, folk, emotional, acoustic, violin, celtic Show Less 2d, 21h ago",
     "tags": [
-      "cinematic celtic instrumental with swayed fingerpicked acoustic guitar",
-      "rising violin lines",
-      "airy tin whistle accents",
-      "hand drum organic percussion",
-      "and a fantasy folk arc that moves from intimate verses to a broader",
+      "cinematic celtic instrumental",
+      "rising violin",
+      "airy tin whistle",
+      "hand drum organic",
+      "fantasy folk arc",
       "soaring refrain",
-      "breathier textures bloom in the transition with harp like chimes",
-      "reversed swells",
-      "and a final lift",
-      "warm wide mix earthy",
+      "breathier textures bloom",
+      "warm earthy",
       "open",
-      "and storybook cinematic",
+      "storybook cinematic",
       "folk",
       "emotional",
       "acoustic",
-      "violin"
+      "violin",
+      "celtic",
+      "commercial"
     ]
   },
   {
@@ -32946,22 +32809,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/The Sound of Distant Thunderstorms",
     "metadataText": "Acoustic instrumental with warm fingerpicked guitar, soft piano textures, subtle strings, and organic percussion; verse-like sections keep it intimate and sparse, then a gentle lift adds layered piano and string swells, with a bridge-like break dropping to guitar harmonics before the final rise, Live-session vocal feel, rich natural reverb, cinematic and handcrafted mix, bright but earthy, soft, uplifting, warm, rich, acoustic, heartfelt, calming, emotional, natural, nostalgic\n\n1 0 0 The Sound of Distant Thunderstorms Add a Caption Remix/Edit Acoustic instrumental with warm fingerpicked guitar, soft piano textures, subtle strings, and organic percussion; verse-like sections keep it intimate and sparse, then a gentle lift adds layered piano and string swells, with a bridge-like break dropping to guitar harmonics before the final rise, Live-session vocal feel, rich natural reverb, cinematic and handcrafted mix, bright but earthy, soft, uplifting, warm, rich, acoustic, heartfelt, calming, emotional, natural, nostalgic Show Less 2d, 21h ago",
     "tags": [
-      "acoustic instrumental with warm fingerpicked guitar",
+      "acoustic instrumental",
       "soft piano textures",
       "subtle strings",
-      "and organic percussion verse like sections keep it intimate and sparse",
-      "then a gentle lift adds layered piano and string swells",
-      "with a bridge like break dropping to guitar harmonics before the final rise",
-      "live session vocal feel",
+      "gentle lift adds",
+      "live session feel",
       "rich natural reverb",
-      "cinematic and handcrafted mix",
-      "bright but earthy",
+      "cinematic",
+      "bright",
       "soft",
       "uplifting",
       "warm",
       "rich",
       "acoustic",
-      "heartfelt"
+      "heartfelt",
+      "calming",
+      "emotional"
     ]
   },
   {
@@ -32981,15 +32844,11 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/The Valley Beneath the Moonrise",
     "metadataText": "Acoustic fusion with mid-tempo swung grooves and organic hand percussion; verse rides warm fingerpicked guitar and tabla, pre-chorus opens with breathy bansuri swells and sitar filigree, chorus blooms into layered string pads and deeper dhol pulses, Add reversed cymbal swells, airy reverb tails, and a soft drone lift, Wide, cinematic, earthy mix, acoustic, warm, emotional\n\n0 0 0 The Valley Beneath the Moonrise Add a Caption Remix/Edit Acoustic fusion with mid-tempo swung grooves and organic hand percussion; verse rides warm fingerpicked guitar and tabla, pre-chorus opens with breathy bansuri swells and sitar filigree, chorus blooms into layered string pads and deeper dhol pulses, Add reversed cymbal swells, airy reverb tails, and a soft drone lift, Wide, cinematic, earthy mix, acoustic, warm, emotional Show Less 2d, 21h ago",
     "tags": [
-      "acoustic fusion with mid tempo swung grooves and organic hand percussion verse rides warm fingerpicked guitar and tabla",
-      "pre chorus opens with breathy bansuri swells and sitar filigree",
-      "chorus blooms into layered string pads and deeper dhol pulses",
-      "add reversed cymbal swells",
+      "acoustic fusion",
       "airy reverb tails",
-      "and a soft drone lift",
-      "wide",
+      "soft drone lift",
       "cinematic",
-      "earthy mix",
+      "earthy",
       "acoustic",
       "warm",
       "emotional",
@@ -33013,22 +32872,21 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/The Wilderness Inside My Heart",
     "metadataText": "Acoustic jazz instrumental with swung brushed drums, warm hollow-body guitar chords, upright bass walking softly underneath, and mellow piano phrases drifting through the changes, Intro starts with solo guitar and room tone; verse-like section adds bass and brushes; middle lifts with piano melody answers; final section opens into fuller comping, Intimate close-mic mix, warm and velvety, with vinyl crackle, soft ride shimmer, and subtle tape glow, soulful, smooth, sophisticated, jazz, mellow, acoustic, warm\n\n0 0 0 The Wilderness Inside My Heart Add a Caption Remix/Edit Acoustic jazz instrumental with swung brushed drums, warm hollow-body guitar chords, upright bass walking softly underneath, and mellow piano phrases drifting through the changes, Intro starts with solo guitar and room tone; verse-like section adds bass and brushes; middle lifts with piano melody answers; final section opens into fuller comping, Intimate close-mic mix, warm and velvety, with vinyl crackle, soft ride shimmer, and subtle tape glow, soulful, smooth, sophisticated, jazz, mellow, acoustic, warm Show Less 2d, 21h ago",
     "tags": [
-      "acoustic jazz instrumental with swung brushed drums",
-      "warm hollow body guitar chords",
-      "upright bass walking softly underneath",
-      "and mellow piano phrases drifting through the changes",
-      "intro starts with solo guitar and room tone verse like section adds bass and brushes middle lifts with piano melody answers final section opens into fuller comping",
-      "intimate close mic mix",
-      "warm and velvety",
-      "with vinyl crackle",
+      "acoustic jazz instrumental",
+      "warm hollow body",
+      "upright bass walking",
+      "mellow piano phrases",
+      "intro starts",
+      "warm",
       "soft ride shimmer",
-      "and subtle tape glow",
+      "subtle tape glow",
       "soulful",
       "smooth",
       "sophisticated",
       "jazz",
       "mellow",
-      "acoustic"
+      "acoustic",
+      "commercial"
     ]
   },
   {
@@ -33048,13 +32906,11 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/When the Fireflies Return",
     "metadataText": "Lo-fi acoustic hip-hop with swung dusty drums, mellow fingerpicked guitar, warm bass pulses, and a laid-back head-nod groove, Verse texture stays spare with room tone and vinyl crackle; the middle lifts with a soft electric counter-melody and filtered drum fills; final stretch opens into layered guitar harmonics and tape flutter, Intimate close-mic mix, soft-focus and handmade, acoustic, hip-hop, nostalgic, lo-fi, warm, soft, mellow\n\n0 0 0 When the Fireflies Return Add a Caption Remix/Edit Lo-fi acoustic hip-hop with swung dusty drums, mellow fingerpicked guitar, warm bass pulses, and a laid-back head-nod groove, Verse texture stays spare with room tone and vinyl crackle; the middle lifts with a soft electric counter-melody and filtered drum fills; final stretch opens into layered guitar harmonics and tape flutter, Intimate close-mic mix, soft-focus and handmade, acoustic, hip-hop, nostalgic, lo-fi, warm, soft, mellow Show Less 2d, 21h ago",
     "tags": [
-      "lo fi acoustic hip hop with swung dusty drums",
+      "lo fi acoustic",
       "mellow fingerpicked guitar",
-      "warm bass pulses",
-      "and a laid back head nod groove",
-      "verse texture stays spare with room tone and vinyl crackle the middle lifts with a soft electric counter melody and filtered drum fills final stretch opens into layered guitar harmonics and tape flutter",
-      "intimate close mic mix",
-      "soft focus and handmade",
+      "warm bass",
+      "laid back head",
+      "soft focus",
       "acoustic",
       "hip hop",
       "nostalgic",
@@ -33082,22 +32938,20 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Window Lights in the Countryside",
     "metadataText": "Ambient acoustic instrumental with slow fingerpicked guitar in a gentle pulse, warm synth pads blooming underneath, soft piano echoes answering the phrases, and long cinematic textures that widen each phrase, Verse-like sections stay sparse; the middle opens into fuller haze; the ending thins to guitar and distant keys, Breathy swells, reversed tails, and subtle room bloom, Intimate, wide, and glassy-smooth, warm, ambient, soft, calming, emotional, acoustic\n\n0 0 0 Window Lights in the Countryside Add a Caption Remix/Edit Ambient acoustic instrumental with slow fingerpicked guitar in a gentle pulse, warm synth pads blooming underneath, soft piano echoes answering the phrases, and long cinematic textures that widen each phrase, Verse-like sections stay sparse; the middle opens into fuller haze; the ending thins to guitar and distant keys, Breathy swells, reversed tails, and subtle room bloom, Intimate, wide, and glassy-smooth, warm, ambient, soft, calming, emotional, acoustic Show Less 2d, 21h ago",
     "tags": [
-      "ambient acoustic instrumental with slow fingerpicked guitar in a gentle pulse",
-      "warm synth pads blooming underneath",
-      "soft piano echoes answering the phrases",
-      "and long cinematic textures that widen each phrase",
-      "verse like sections stay sparse the middle opens into fuller haze the ending thins to guitar and distant keys",
-      "breathy swells",
-      "reversed tails",
-      "and subtle room bloom",
-      "intimate",
-      "wide",
-      "and glassy smooth",
+      "ambient acoustic instrumental",
+      "warm synth pads",
+      "soft piano echoes",
+      "long cinematic textures",
+      "breathy",
+      "subtle room bloom",
+      "glassy smooth",
       "warm",
       "ambient",
       "soft",
       "calming",
-      "emotional"
+      "emotional",
+      "acoustic",
+      "commercial"
     ]
   },
   {
@@ -33118,7 +32972,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/POLISH/Blask",
     "metadataText": "pop, synth-pop, cinematic pop\n\nModern Polish pop song with emotional vocals, catchy melodic hooks, polished synth production, cinematic chorus builds, youthful energy and contemporary European radio-ready atmosphere",
     "tags": [
-      "pop",
       "synth pop",
       "cinematic pop",
       "culture",
@@ -33168,7 +33021,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/POLISH/Chasing Dreams",
     "metadataText": "pop, synth-pop, cinematic pop\n\nModern Polish pop song with emotional vocals, catchy melodic hooks, polished synth production, cinematic chorus builds, youthful energy and contemporary European radio-ready atmosphere",
     "tags": [
-      "pop",
       "synth pop",
       "cinematic pop",
       "culture",
@@ -33193,7 +33045,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/POLISH/Dojrzałość",
     "metadataText": "pop, synth-pop, cinematic pop\n\nModern Polish pop song with emotional vocals, catchy melodic hooks, polished synth production, cinematic chorus builds, youthful energy and contemporary European radio-ready atmosphere",
     "tags": [
-      "pop",
       "synth pop",
       "cinematic pop",
       "culture",
@@ -33218,7 +33069,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/POLISH/Duch Polaków",
     "metadataText": "pop, synth-pop, cinematic pop\n\nModern Polish pop song with emotional vocals, catchy melodic hooks, polished synth production, cinematic chorus builds, youthful energy and contemporary European radio-ready atmosphere",
     "tags": [
-      "pop",
       "synth pop",
       "cinematic pop",
       "culture",
@@ -33243,7 +33093,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/POLISH/Gonić sny",
     "metadataText": "pop, synth-pop, cinematic pop\n\nModern Polish pop song with emotional vocals, catchy melodic hooks, polished synth production, cinematic chorus builds, youthful energy and contemporary European radio-ready atmosphere",
     "tags": [
-      "pop",
       "synth pop",
       "cinematic pop",
       "culture",
@@ -33268,7 +33117,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/POLISH/Ja nie chcę uciekać",
     "metadataText": "pop, synth-pop, cinematic pop\n\nModern Polish pop song with emotional vocals, catchy melodic hooks, polished synth production, cinematic chorus builds, youthful energy and contemporary European radio-ready atmosphere",
     "tags": [
-      "pop",
       "synth pop",
       "cinematic pop",
       "culture",
@@ -33293,7 +33141,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/POLISH/Jestem Stąd",
     "metadataText": "pop, synth-pop, cinematic pop\n\nModern Polish pop song with emotional vocals, catchy melodic hooks, polished synth production, cinematic chorus builds, youthful energy and contemporary European radio-ready atmosphere",
     "tags": [
-      "pop",
       "synth pop",
       "cinematic pop",
       "culture",
@@ -33318,7 +33165,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/POLISH/Kamień",
     "metadataText": "pop, synth-pop, cinematic pop\n\nModern Polish pop song with emotional vocals, catchy melodic hooks, polished synth production, cinematic chorus builds, youthful energy and contemporary European radio-ready atmosphere",
     "tags": [
-      "pop",
       "synth pop",
       "cinematic pop",
       "culture",
@@ -34059,7 +33905,7 @@ export const productionSongRecords = [
     "tags": [
       "samba",
       "carnival",
-      "brass driven festive latin music",
+      "brass festive latin",
       "culture",
       "brazilian",
       "funk"
@@ -34085,7 +33931,7 @@ export const productionSongRecords = [
     "tags": [
       "samba",
       "carnival",
-      "brass driven festive latin music",
+      "brass festive latin",
       "culture",
       "brazilian",
       "funk"
@@ -34111,7 +33957,7 @@ export const productionSongRecords = [
     "tags": [
       "samba",
       "carnival",
-      "brass driven festive latin music",
+      "brass festive latin",
       "culture",
       "brazilian",
       "funk"
@@ -34137,7 +33983,7 @@ export const productionSongRecords = [
     "tags": [
       "samba",
       "carnival",
-      "brass driven festive latin music",
+      "brass festive latin",
       "culture",
       "brazilian",
       "funk"
@@ -34163,7 +34009,7 @@ export const productionSongRecords = [
     "tags": [
       "samba",
       "carnival",
-      "brass driven festive latin music",
+      "brass festive latin",
       "culture",
       "brazilian",
       "funk"
@@ -34472,7 +34318,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "baile funk",
-      "brazilian underground street racing drift",
+      "brazilian underground street",
       "culture",
       "brazilian",
       "funk"
@@ -34498,7 +34344,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "baile funk",
-      "brazilian underground street racing drift",
+      "brazilian underground street",
       "culture",
       "brazilian",
       "funk"
@@ -34524,7 +34370,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "baile funk",
-      "street racing dark electro atmosphere",
+      "street racing dark",
       "culture",
       "brazilian",
       "funk"
@@ -35367,7 +35213,7 @@ export const productionSongRecords = [
     "tags": [
       "epic cinematic rock",
       "orchestral rock",
-      "film score trailer metal",
+      "film score trailer",
       "commercial",
       "rock"
     ]
@@ -35391,7 +35237,7 @@ export const productionSongRecords = [
     "tags": [
       "epic cinematic rock",
       "orchestral rock",
-      "film score trailer metal",
+      "film score trailer",
       "commercial",
       "rock"
     ]
@@ -35415,7 +35261,7 @@ export const productionSongRecords = [
     "tags": [
       "epic cinematic rock",
       "orchestral rock",
-      "film score trailer metal",
+      "film score trailer",
       "commercial",
       "rock"
     ]
@@ -35439,7 +35285,7 @@ export const productionSongRecords = [
     "tags": [
       "epic cinematic rock",
       "orchestral rock",
-      "film score trailer metal",
+      "film score trailer",
       "commercial",
       "rock"
     ]
@@ -35463,7 +35309,7 @@ export const productionSongRecords = [
     "tags": [
       "epic cinematic rock",
       "orchestral rock",
-      "film score trailer metal",
+      "film score trailer",
       "commercial",
       "rock"
     ]
@@ -35487,7 +35333,7 @@ export const productionSongRecords = [
     "tags": [
       "epic cinematic rock",
       "orchestral rock",
-      "film score trailer metal",
+      "film score trailer",
       "commercial",
       "rock"
     ]
@@ -35511,7 +35357,7 @@ export const productionSongRecords = [
     "tags": [
       "epic cinematic rock",
       "orchestral rock",
-      "film score trailer metal",
+      "film score trailer",
       "commercial",
       "rock"
     ]
@@ -35535,7 +35381,7 @@ export const productionSongRecords = [
     "tags": [
       "epic cinematic rock",
       "orchestral rock",
-      "film score trailer metal",
+      "film score trailer",
       "commercial",
       "rock"
     ]
@@ -35559,7 +35405,7 @@ export const productionSongRecords = [
     "tags": [
       "epic cinematic rock",
       "orchestral rock",
-      "film score trailer metal",
+      "film score trailer",
       "commercial",
       "rock"
     ]
@@ -35954,7 +35800,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/A Breeze Through the Bamboo Garden",
     "metadataText": "lo-fi hip-hop, chillhop, cinematic lo-fi\n\nLo-fi hip-hop with laid-back swung drums, koto-inspired plucks, and soft shakuhachi textures; verse-like sections stay sparse with brushed kicks, dusty piano dust, and room-tone breath, the midsection opens with filtered vinyl crackle and a distant taiko pulse, then returns to a gentle hook of harp-like repeats, Warm saturated mix, intimate and cinematic, like a quiet Kyoto night glowing in amber light, soft, warm, mellow, lo-fi, calming, hip-hop",
     "tags": [
-      "lo fi hip hop",
       "chillhop",
       "cinematic lo fi",
       "electronic"
@@ -35977,7 +35822,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/A Slow Dance With Time",
     "metadataText": "lo-fi hip-hop, chillhop, cinematic lo-fi\n\nLo-fi hip-hop with laid-back swung drums, koto-inspired plucks, and soft shakuhachi textures; verse-like sections stay sparse with brushed kicks, dusty piano dust, and room-tone breath, the midsection opens with filtered vinyl crackle and a distant taiko pulse, then returns to a gentle hook of harp-like repeats, Warm saturated mix, intimate and cinematic, like a quiet Kyoto night glowing in amber light, soft, warm, mellow, lo-fi, calming, hip-hop",
     "tags": [
-      "lo fi hip hop",
       "chillhop",
       "cinematic lo fi",
       "electronic"
@@ -36000,7 +35844,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Cherry Blossoms After Rain",
     "metadataText": "lo-fi hip-hop, chillhop, cinematic lo-fi\n\nLo-fi hip-hop with laid-back swung drums, koto-inspired plucks, and soft shakuhachi textures; verse-like sections stay sparse with brushed kicks, dusty piano dust, and room-tone breath, the midsection opens with filtered vinyl crackle and a distant taiko pulse, then returns to a gentle hook of harp-like repeats, Warm saturated mix, intimate and cinematic, like a quiet Kyoto night glowing in amber light, soft, warm, mellow, lo-fi, calming, hip-hop",
     "tags": [
-      "lo fi hip hop",
       "chillhop",
       "cinematic lo fi",
       "electronic"
@@ -36023,7 +35866,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Cloudy Mornings in Kyoto",
     "metadataText": "lo-fi hip-hop, chillhop, cinematic lo-fi\n\nLo-fi hip-hop with laid-back swung drums, koto-inspired plucks, and soft shakuhachi textures; verse-like sections stay sparse with brushed kicks, dusty piano dust, and room-tone breath, the midsection opens with filtered vinyl crackle and a distant taiko pulse, then returns to a gentle hook of harp-like repeats, Warm saturated mix, intimate and cinematic, like a quiet Kyoto night glowing in amber light, soft, warm, mellow, lo-fi, calming, hip-hop",
     "tags": [
-      "lo fi hip hop",
       "chillhop",
       "cinematic lo fi",
       "electronic"
@@ -36046,7 +35888,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Coffee Steam & Daydreams",
     "metadataText": "lo-fi hip-hop, chillhop, cinematic lo-fi\n\nLo-fi hip-hop with laid-back swung drums, koto-inspired plucks, and soft shakuhachi textures; verse-like sections stay sparse with brushed kicks, dusty piano dust, and room-tone breath, the midsection opens with filtered vinyl crackle and a distant taiko pulse, then returns to a gentle hook of harp-like repeats, Warm saturated mix, intimate and cinematic, like a quiet Kyoto night glowing in amber light, soft, warm, mellow, lo-fi, calming, hip-hop",
     "tags": [
-      "lo fi hip hop",
       "chillhop",
       "cinematic lo fi",
       "electronic"
@@ -36069,7 +35910,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Dreaming Through Static",
     "metadataText": "lo-fi hip-hop, chill hop, cinematic lo-fi\n\nLo-fi hip-hop with laid-back swung drums, koto-inspired plucks, and soft shakuhachi textures; verse-like sections stay sparse with brushed kicks, dusty piano dust, and room-tone breath, the midsection opens with filtered vinyl crackle and a distant taiko pulse, then returns to a gentle hook of harp-like repeats, Warm saturated mix, intimate and cinematic, like a quiet Kyoto night glowing in amber light, soft, warm, mellow, lo-fi, calming, hip-hop",
     "tags": [
-      "lo fi hip hop",
       "chill hop",
       "cinematic lo fi",
       "electronic"
@@ -36092,7 +35932,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Drifting Through Neon Alleys",
     "metadataText": "lo-fi hip-hop, chillhop, cinematic lo-fi\n\nLo-fi hip-hop with laid-back swung drums, koto-inspired plucks, and soft shakuhachi textures; verse-like sections stay sparse with brushed kicks, dusty piano dust, and room-tone breath, the midsection opens with filtered vinyl crackle and a distant taiko pulse, then returns to a gentle hook of harp-like repeats, Warm saturated mix, intimate and cinematic, like a quiet Kyoto night glowing in amber light, soft, warm, mellow, lo-fi, calming, hip-hop",
     "tags": [
-      "lo fi hip hop",
       "chillhop",
       "cinematic lo fi",
       "electronic"
@@ -36115,7 +35954,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Evening Tea in Yokohama",
     "metadataText": "lo-fi hip-hop, chillhop, cinematic lo-fi\n\nLo-fi hip-hop with laid-back swung drums, koto-inspired plucks, and soft shakuhachi textures; verse-like sections stay sparse with brushed kicks, dusty piano dust, and room-tone breath, the midsection opens with filtered vinyl crackle and a distant taiko pulse, then returns to a gentle hook of harp-like repeats, Warm saturated mix, intimate and cinematic, like a quiet Kyoto night glowing in amber light, soft, warm, mellow, lo-fi, calming, hip-hop",
     "tags": [
-      "lo fi hip hop",
       "chillhop",
       "cinematic lo fi",
       "electronic"
@@ -36138,7 +35976,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Evening Tea in Yokohama (1)",
     "metadataText": "lo-fi hip-hop, chillhop, cinematic lo-fi\n\nLo-fi hip-hop with laid-back swung drums, koto-inspired plucks, and soft shakuhachi textures; verse-like sections stay sparse with brushed kicks, dusty piano dust, and room-tone breath, the midsection opens with filtered vinyl crackle and a distant taiko pulse, then returns to a gentle hook of harp-like repeats, Warm saturated mix, intimate and cinematic, like a quiet Kyoto night glowing in amber light, soft, warm, mellow, lo-fi, calming, hip-hop",
     "tags": [
-      "lo fi hip hop",
       "chillhop",
       "cinematic lo fi",
       "electronic"
@@ -36161,7 +35998,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Koi Ponds & Vinyl Records",
     "metadataText": "lo-fi hip-hop, chillhop, cinematic lo-fi\n\nLo-fi hip-hop with laid-back swung drums, koto-inspired plucks, and soft shakuhachi textures; verse-like sections stay sparse with brushed kicks, dusty piano dust, and room-tone breath, the midsection opens with filtered vinyl crackle and a distant taiko pulse, then returns to a gentle hook of harp-like repeats, Warm saturated mix, intimate and cinematic, like a quiet Kyoto night glowing in amber light, soft, warm, mellow, lo-fi, calming, hip-hop",
     "tags": [
-      "lo fi hip hop",
       "chillhop",
       "cinematic lo fi",
       "electronic"
@@ -36184,7 +36020,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Kyoto Moonwalk",
     "metadataText": "lo-fi hip-hop, chillhop, cinematic lo-fi\n\nLo-fi hip-hop with laid-back swung drums, koto-inspired plucks, and soft shakuhachi textures; verse-like sections stay sparse with brushed kicks, dusty piano dust, and room-tone breath, the midsection opens with filtered vinyl crackle and a distant taiko pulse, then returns to a gentle hook of harp-like repeats, Warm saturated mix, intimate and cinematic, like a quiet Kyoto night glowing in amber light, soft, warm, mellow, lo-fi, calming, hip-hop",
     "tags": [
-      "lo fi hip hop",
       "chillhop",
       "cinematic lo fi",
       "electronic"
@@ -36207,7 +36042,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Lanterns Beneath the Moonlight",
     "metadataText": "lo-fi hip-hop, chillhop, cinematic lo-fi\n\nLo-fi hip-hop with laid-back swung drums, koto-inspired plucks, and soft shakuhachi textures; verse-like sections stay sparse with brushed kicks, dusty piano dust, and room-tone breath, the midsection opens with filtered vinyl crackle and a distant taiko pulse, then returns to a gentle hook of harp-like repeats, Warm saturated mix, intimate and cinematic, like a quiet Kyoto night glowing in amber light, soft, warm, mellow, lo-fi, calming, hip-hop",
     "tags": [
-      "lo fi hip hop",
       "chillhop",
       "cinematic lo fi",
       "electronic"
@@ -36230,7 +36064,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Late Night Thoughts on Repeat",
     "metadataText": "lo-fi hip-hop, chillhop, cinematic lo-fi\n\nLo-fi hip-hop with laid-back swung drums, koto-inspired plucks, and soft shakuhachi textures; verse-like sections stay sparse with brushed kicks, dusty piano dust, and room-tone breath, the midsection opens with filtered vinyl crackle and a distant taiko pulse, then returns to a gentle hook of harp-like repeats, Warm saturated mix, intimate and cinematic, like a quiet Kyoto night glowing in amber light, soft, warm, mellow, lo-fi, calming, hip-hop",
     "tags": [
-      "lo fi hip hop",
       "chillhop",
       "cinematic lo fi",
       "electronic"
@@ -36253,7 +36086,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Late Nights & Coffee Cups",
     "metadataText": "lo-fi hip-hop, chillhop, cinematic lo-fi\n\nLo-fi hip-hop with laid-back swung drums, koto-inspired plucks, and soft shakuhachi textures; verse-like sections stay sparse with brushed kicks, dusty piano dust, and room-tone breath, the midsection opens with filtered vinyl crackle and a distant taiko pulse, then returns to a gentle hook of harp-like repeats, Warm saturated mix, intimate and cinematic, like a quiet Kyoto night glowing in amber light, soft, warm, mellow, lo-fi, calming, hip-hop",
     "tags": [
-      "lo fi hip hop",
       "chillhop",
       "cinematic lo fi",
       "electronic"
@@ -36276,7 +36108,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Letters Never Sent (1)",
     "metadataText": "lo-fi hip-hop, chillhop, cinematic lo-fi\n\nLo-fi hip-hop with laid-back swung drums, koto-inspired plucks, and soft shakuhachi textures; verse-like sections stay sparse with brushed kicks, dusty piano dust, and room-tone breath, the midsection opens with filtered vinyl crackle and a distant taiko pulse, then returns to a gentle hook of harp-like repeats, Warm saturated mix, intimate and cinematic, like a quiet Kyoto night glowing in amber light, soft, warm, mellow, lo-fi, calming, hip-hop",
     "tags": [
-      "lo fi hip hop",
       "chillhop",
       "cinematic lo fi",
       "electronic"
@@ -36621,7 +36452,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Rainfall in Kyoto",
     "metadataText": "lo-fi hip-hop, lo-fi, chill / mellow, cinematic\n\nLo-fi hip-hop with mellow swung drums and laid-back head-nod groove; verse-like sections lean on koto-inspired plucks and shakuhachi breath phrases, pre-drop passes through filtered vinyl crackle and reversed swells, then a soft chorus-like lift brings warm chord haze and gentle bell accents, Feather-light vocal chop textures, tape wobble, and room-noise detail, Warm, dusty, close-mic mix with serene cinematic glow, soft, calming, lo-fi, warm, hip-hop, mellow",
     "tags": [
-      "lo fi hip hop",
       "lo fi",
       "chill mellow",
       "cinematic",
@@ -36645,7 +36475,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Rainfall on Quiet Streets",
     "metadataText": "lo-fi hip-hop, lo-fi, chill / mellow, cinematic\n\nLo-fi hip-hop with mellow swung drums and laid-back head-nod groove; verse-like sections lean on koto-inspired plucks and shakuhachi breath phrases, pre-drop passes through filtered vinyl crackle and reversed swells, then a soft chorus-like lift brings warm chord haze and gentle bell accents, Feather-light vocal chop textures, tape wobble, and room-noise detail, Warm, dusty, close-mic mix with serene cinematic glow, soft, calming, lo-fi, warm, hip-hop, mellow",
     "tags": [
-      "lo fi hip hop",
       "lo fi",
       "chill mellow",
       "cinematic",
@@ -36669,7 +36498,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Rainy Windows & Open Books",
     "metadataText": "lo-fi hip-hop, lo-fi, chill / mellow, cinematic\n\nLo-fi hip-hop with mellow swung drums and laid-back head-nod groove; verse-like sections lean on koto-inspired plucks and shakuhachi breath phrases, pre-drop passes through filtered vinyl crackle and reversed swells, then a soft chorus-like lift brings warm chord haze and gentle bell accents, Feather-light vocal chop textures, tape wobble, and room-noise detail, Warm, dusty, close-mic mix with serene cinematic glow, soft, calming, lo-fi, warm, hip-hop, mellow",
     "tags": [
-      "lo fi hip hop",
       "lo fi",
       "chill mellow",
       "cinematic",
@@ -36693,7 +36521,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Sakura Skies & Sleepless Nights",
     "metadataText": "lo-fi hip-hop, lo-fi, chill / mellow, cinematic\n\nLo-fi hip-hop with mellow swung drums and laid-back head-nod groove; verse-like sections lean on koto-inspired plucks and shakuhachi breath phrases, pre-drop passes through filtered vinyl crackle and reversed swells, then a soft chorus-like lift brings warm chord haze and gentle bell accents, Feather-light vocal chop textures, tape wobble, and room-noise detail, Warm, dusty, close-mic mix with serene cinematic glow, soft, calming, lo-fi, warm, hip-hop, mellow",
     "tags": [
-      "lo fi hip hop",
       "lo fi",
       "chill mellow",
       "cinematic",
@@ -36717,7 +36544,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Shadows Beneath Paper Lanterns",
     "metadataText": "lo-fi hip-hop, lo-fi, chill / mellow, cinematic\n\nLo-fi hip-hop with mellow swung drums and laid-back head-nod groove; verse-like sections lean on koto-inspired plucks and shakuhachi breath phrases, pre-drop passes through filtered vinyl crackle and reversed swells, then a soft chorus-like lift brings warm chord haze and gentle bell accents, Feather-light vocal chop textures, tape wobble, and room-noise detail, Warm, dusty, close-mic mix with serene cinematic glow, soft, calming, lo-fi, warm, hip-hop, mellow",
     "tags": [
-      "lo fi hip hop",
       "lo fi",
       "chill mellow",
       "cinematic",
@@ -36741,7 +36567,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Shinjuku Dreams After Midnight",
     "metadataText": "lo-fi hip-hop, lo-fi, chill / mellow, cinematic\n\nLo-fi hip-hop with mellow swung drums and laid-back head-nod groove; verse-like sections lean on koto-inspired plucks and shakuhachi breath phrases, pre-drop passes through filtered vinyl crackle and reversed swells, then a soft chorus-like lift brings warm chord haze and gentle bell accents, Feather-light vocal chop textures, tape wobble, and room-noise detail, Warm, dusty, close-mic mix with serene cinematic glow, soft, calming, lo-fi, warm, hip-hop, mellow",
     "tags": [
-      "lo fi hip hop",
       "lo fi",
       "chill mellow",
       "cinematic",
@@ -36765,7 +36590,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Sleepless Beneath the Skyline",
     "metadataText": "lo-fi hip-hop, lo-fi, chill / mellow, cinematic\n\nLo-fi hip-hop with mellow swung drums and laid-back head-nod groove; verse-like sections lean on koto-inspired plucks and shakuhachi breath phrases, pre-drop passes through filtered vinyl crackle and reversed swells, then a soft chorus-like lift brings warm chord haze and gentle bell accents, Feather-light vocal chop textures, tape wobble, and room-noise detail, Warm, dusty, close-mic mix with serene cinematic glow, soft, calming, lo-fi, warm, hip-hop, mellow",
     "tags": [
-      "lo fi hip hop",
       "lo fi",
       "chill mellow",
       "cinematic",
@@ -36789,7 +36613,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Sleepless Nights in Akihabara",
     "metadataText": "lo-fi hip-hop, lo-fi, chill / mellow, cinematic\n\nLo-fi hip-hop with mellow swung drums and laid-back head-nod groove; verse-like sections lean on koto-inspired plucks and shakuhachi breath phrases, pre-drop passes through filtered vinyl crackle and reversed swells, then a soft chorus-like lift brings warm chord haze and gentle bell accents, Feather-light vocal chop textures, tape wobble, and room-noise detail, Warm, dusty, close-mic mix with serene cinematic glow, soft, calming, lo-fi, warm, hip-hop, mellow",
     "tags": [
-      "lo fi hip hop",
       "lo fi",
       "chill mellow",
       "cinematic",
@@ -36813,7 +36636,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Snowfall Beyond the Temple Gates",
     "metadataText": "lo-fi hip-hop, lo-fi, chill / mellow, cinematic\n\nLo-fi hip-hop with mellow swung drums and laid-back head-nod groove; verse-like sections lean on koto-inspired plucks and shakuhachi breath phrases, pre-drop passes through filtered vinyl crackle and reversed swells, then a soft chorus-like lift brings warm chord haze and gentle bell accents, Feather-light vocal chop textures, tape wobble, and room-noise detail, Warm, dusty, close-mic mix with serene cinematic glow, soft, calming, lo-fi, warm, hip-hop, mellow",
     "tags": [
-      "lo fi hip hop",
       "lo fi",
       "chill mellow",
       "cinematic",
@@ -36837,7 +36659,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Snowfall Over Mount Fuji",
     "metadataText": "lo-fi hip-hop, lo-fi, chill / mellow, cinematic\n\nLo-fi hip-hop with mellow swung drums and laid-back head-nod groove; verse-like sections lean on koto-inspired plucks and shakuhachi breath phrases, pre-drop passes through filtered vinyl crackle and reversed swells, then a soft chorus-like lift brings warm chord haze and gentle bell accents, Feather-light vocal chop textures, tape wobble, and room-noise detail, Warm, dusty, close-mic mix with serene cinematic glow, soft, calming, lo-fi, warm, hip-hop, mellow",
     "tags": [
-      "lo fi hip hop",
       "lo fi",
       "chill mellow",
       "cinematic",
@@ -36861,7 +36682,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Soft Echoes of Yesterday",
     "metadataText": "lo-fi hip-hop, lo-fi, chill / mellow, cinematic\n\nLo-fi hip-hop with mellow swung drums and laid-back head-nod groove; verse-like sections lean on koto-inspired plucks and shakuhachi breath phrases, pre-drop passes through filtered vinyl crackle and reversed swells, then a soft chorus-like lift brings warm chord haze and gentle bell accents, Feather-light vocal chop textures, tape wobble, and room-noise detail, Warm, dusty, close-mic mix with serene cinematic glow, soft, calming, lo-fi, warm, hip-hop, mellow",
     "tags": [
-      "lo fi hip hop",
       "lo fi",
       "chill mellow",
       "cinematic",
@@ -36885,7 +36705,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Soft Jazz Beneath Neon Lights",
     "metadataText": "lo-fi hip-hop, lo-fi, chill / mellow, cinematic\n\nLo-fi hip-hop with mellow swung drums and laid-back head-nod groove; verse-like sections lean on koto-inspired plucks and shakuhachi breath phrases, pre-drop passes through filtered vinyl crackle and reversed swells, then a soft chorus-like lift brings warm chord haze and gentle bell accents, Feather-light vocal chop textures, tape wobble, and room-noise detail, Warm, dusty, close-mic mix with serene cinematic glow, soft, calming, lo-fi, warm, hip-hop, mellow",
     "tags": [
-      "lo fi hip hop",
       "lo fi",
       "chill mellow",
       "cinematic",
@@ -36909,7 +36728,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Soft Lights Through the Window",
     "metadataText": "lo-fi hip-hop, jazz-tinged, warm/nostalgic\n\nLo-fi hip-hop with laid-back swung drums, mellow piano chords, soft jazz textures, dusty vinyl crackle, and smooth basslines; verse-like sections stay minimal with just keys, rain ambience, and tape wobble, then gentle lift adds dreamy synth pads and brushed percussion before settling back into a cozy late-night loop, Close, intimate vocal-less feel in the mix, with saturation warmth, subtle room tone, reversed swells, and faint chime transitions, Warm, dusty, and reflective, like a bedroom studio glowing past midnight, hip-hop, warm, calming, relaxing, emotional, lo-fi, nostalgic, jazz, reading, soft, smooth, mellow",
     "tags": [
-      "lo fi hip hop",
       "jazz tinged",
       "warm nostalgic",
       "electronic"
@@ -36932,7 +36750,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Soft Winds Through Osaka",
     "metadataText": "lo-fi hip-hop, jazz-tinged, warm/nostalgic\n\nLo-fi hip-hop with laid-back swung drums, mellow piano chords, soft jazz textures, dusty vinyl crackle, and smooth basslines; verse-like sections stay minimal with just keys, rain ambience, and tape wobble, then gentle lift adds dreamy synth pads and brushed percussion before settling back into a cozy late-night loop, Close, intimate vocal-less feel in the mix, with saturation warmth, subtle room tone, reversed swells, and faint chime transitions, Warm, dusty, and reflective, like a bedroom studio glowing past midnight, hip-hop, warm, calming, relaxing, emotional, lo-fi, nostalgic, jazz, reading, soft, smooth, mellow",
     "tags": [
-      "lo fi hip hop",
       "jazz tinged",
       "warm nostalgic",
       "electronic"
@@ -36955,7 +36772,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Static Memories & City Rain",
     "metadataText": "lo-fi hip-hop, jazz-tinged, warm/nostalgic\n\nLo-fi hip-hop with laid-back swung drums, mellow piano chords, soft jazz textures, dusty vinyl crackle, and smooth basslines; verse-like sections stay minimal with just keys, rain ambience, and tape wobble, then gentle lift adds dreamy synth pads and brushed percussion before settling back into a cozy late-night loop, Close, intimate vocal-less feel in the mix, with saturation warmth, subtle room tone, reversed swells, and faint chime transitions, Warm, dusty, and reflective, like a bedroom studio glowing past midnight, hip-hop, warm, calming, relaxing, emotional, lo-fi, nostalgic, jazz, reading, soft, smooth, mellow",
     "tags": [
-      "lo fi hip hop",
       "jazz tinged",
       "warm nostalgic",
       "electronic"
@@ -36978,7 +36794,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Sunsets Through Headphones",
     "metadataText": "lo-fi hip-hop, jazz-tinged, warm/nostalgic\n\nLo-fi hip-hop with laid-back swung drums, mellow piano chords, soft jazz textures, dusty vinyl crackle, and smooth basslines; verse-like sections stay minimal with just keys, rain ambience, and tape wobble, then gentle lift adds dreamy synth pads and brushed percussion before settling back into a cozy late-night loop, Close, intimate vocal-less feel in the mix, with saturation warmth, subtle room tone, reversed swells, and faint chime transitions, Warm, dusty, and reflective, like a bedroom studio glowing past midnight, hip-hop, warm, calming, relaxing, emotional, lo-fi, nostalgic, jazz, reading, soft, smooth, mellows",
     "tags": [
-      "lo fi hip hop",
       "jazz tinged",
       "warm nostalgic",
       "electronic"
@@ -37001,7 +36816,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Tea House at Dusk",
     "metadataText": "lo-fi hip-hop, jazz-tinged, warm/nostalgic\n\nLo-fi hip-hop with laid-back swung drums, mellow piano chords, soft jazz textures, dusty vinyl crackle, and smooth basslines; verse-like sections stay minimal with just keys, rain ambience, and tape wobble, then gentle lift adds dreamy synth pads and brushed percussion before settling back into a cozy late-night loop, Close, intimate vocal-less feel in the mix, with saturation warmth, subtle room tone, reversed swells, and faint chime transitions, Warm, dusty, and reflective, like a bedroom studio glowing past midnight, hip-hop, warm, calming, relaxing, emotional, lo-fi, nostalgic, jazz, reading, soft, smooth, mellow",
     "tags": [
-      "lo fi hip hop",
       "jazz tinged",
       "warm nostalgic",
       "electronic"
@@ -37024,7 +36838,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Temple Bells in the Rain",
     "metadataText": "lo-fi hip-hop, jazz-tinged, warm/nostalgic\n\nLo-fi hip-hop with laid-back swung drums, mellow piano chords, soft jazz textures, dusty vinyl crackle, and smooth basslines; verse-like sections stay minimal with just keys, rain ambience, and tape wobble, then gentle lift adds dreamy synth pads and brushed percussion before settling back into a cozy late-night loop, Close, intimate vocal-less feel in the mix, with saturation warmth, subtle room tone, reversed swells, and faint chime transitions, Warm, dusty, and reflective, like a bedroom studio glowing past midnight, hip-hop, warm, calming, relaxing, emotional, lo-fi, nostalgic, jazz, reading, soft, smooth, mellow",
     "tags": [
-      "lo fi hip hop",
       "jazz tinged",
       "warm nostalgic",
       "electronic"
@@ -37047,7 +36860,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/The City Sleeps Slowly",
     "metadataText": "lo-fi hip-hop, jazz-tinged, warm/nostalgic\n\nLo-fi hip-hop with laid-back swung drums, mellow piano chords, soft jazz textures, dusty vinyl crackle, and smooth basslines; verse-like sections stay minimal with just keys, rain ambience, and tape wobble, then gentle lift adds dreamy synth pads and brushed percussion before settling back into a cozy late-night loop, Close, intimate vocal-less feel in the mix, with saturation warmth, subtle room tone, reversed swells, and faint chime transitions, Warm, dusty, and reflective, like a bedroom studio glowing past midnight, hip-hop, warm, calming, relaxing, emotional, lo-fi, nostalgic, jazz, reading, soft, smooth, mellow",
     "tags": [
-      "lo fi hip hop",
       "jazz tinged",
       "warm nostalgic",
       "electronic"
@@ -37070,7 +36882,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/The Last Train to Kyoto",
     "metadataText": "lo-fi hip-hop, jazz-tinged, warm/nostalgic\n\nLo-fi hip-hop with laid-back swung drums, mellow piano chords, soft jazz textures, dusty vinyl crackle, and smooth basslines; verse-like sections stay minimal with just keys, rain ambience, and tape wobble, then gentle lift adds dreamy synth pads and brushed percussion before settling back into a cozy late-night loop, Close, intimate vocal-less feel in the mix, with saturation warmth, subtle room tone, reversed swells, and faint chime transitions, Warm, dusty, and reflective, like a bedroom studio glowing past midnight, hip-hop, warm, calming, relaxing, emotional, lo-fi, nostalgic, jazz, reading, soft, smooth, mellow",
     "tags": [
-      "lo fi hip hop",
       "jazz tinged",
       "warm nostalgic",
       "electronic"
@@ -37093,7 +36904,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/The Quiet Side of Tokyo",
     "metadataText": "lo-fi hip-hop, jazz-tinged, warm/nostalgic\n\nLo-fi hip-hop with laid-back swung drums, mellow piano chords, soft jazz textures, dusty vinyl crackle, and smooth basslines; verse-like sections stay minimal with just keys, rain ambience, and tape wobble, then gentle lift adds dreamy synth pads and brushed percussion before settling back into a cozy late-night loop, Close, intimate vocal-less feel in the mix, with saturation warmth, subtle room tone, reversed swells, and faint chime transitions, Warm, dusty, and reflective, like a bedroom studio glowing past midnight, hip-hop, warm, calming, relaxing, emotional, lo-fi, nostalgic, jazz, reading, soft, smooth, mellow",
     "tags": [
-      "lo fi hip hop",
       "jazz tinged",
       "warm nostalgic",
       "electronic"
@@ -37116,7 +36926,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/The River Beneath Kyoto Bridges",
     "metadataText": "lo-fi hip-hop, calming, warm\n\nLo-fi hip-hop with a laid-back swung drum pocket, koto-inspired plucks, soft shakuhachi textures, and mellow head-nod breaks; verse section stays sparse with dusty drums and fingered melodic fragments, the middle opens with a filtered tape-warm lift and subtle bell counterline, then the outro drifts into brushed drums and reverb haze, Warm vinyl saturation, intimate close-mic feel, serene and cinematic mix, calming, lo-fi, warm, soft, hip-hop, mellow",
     "tags": [
-      "lo fi hip hop",
       "calming",
       "warm",
       "electronic"
@@ -37139,7 +36948,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/The Sound of Quiet Temples",
     "metadataText": "lo-fi hip-hop, calming, warm\n\nLo-fi hip-hop with a laid-back swung drum pocket, koto-inspired plucks, soft shakuhachi textures, and mellow head-nod breaks; verse section stays sparse with dusty drums and fingered melodic fragments, the middle opens with a filtered tape-warm lift and subtle bell counterline, then the outro drifts into brushed drums and reverb haze, Warm vinyl saturation, intimate close-mic feel, serene and cinematic mix, calming, lo-fi, warm, soft, hip-hop, mellow",
     "tags": [
-      "lo fi hip hop",
       "calming",
       "warm",
       "electronic"
@@ -37162,7 +36970,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/The Sound of Slow Evenings (1)",
     "metadataText": "lo-fi hip-hop, calming, warm\n\nLo-fi hip-hop with a laid-back swung drum pocket, koto-inspired plucks, soft shakuhachi textures, and mellow head-nod breaks; verse section stays sparse with dusty drums and fingered melodic fragments, the middle opens with a filtered tape-warm lift and subtle bell counterline, then the outro drifts into brushed drums and reverb haze, Warm vinyl saturation, intimate close-mic feel, serene and cinematic mix, calming, lo-fi, warm, soft, hip-hop, mellow",
     "tags": [
-      "lo fi hip hop",
       "calming",
       "warm",
       "electronic"
@@ -37185,7 +36992,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/The Soundtrack of Solitude",
     "metadataText": "lo-fi hip-hop, calming, warm\n\nLo-fi hip-hop with a laid-back swung drum pocket, koto-inspired plucks, soft shakuhachi textures, and mellow head-nod breaks; verse section stays sparse with dusty drums and fingered melodic fragments, the middle opens with a filtered tape-warm lift and subtle bell counterline, then the outro drifts into brushed drums and reverb haze, Warm vinyl saturation, intimate close-mic feel, serene and cinematic mix, calming, lo-fi, warm, soft, hip-hop, mellow",
     "tags": [
-      "lo fi hip hop",
       "calming",
       "warm",
       "electronic"
@@ -37208,7 +37014,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/The Warmth of Old Records",
     "metadataText": "lo-fi hip-hop, calming, warm\n\nLo-fi hip-hop with a laid-back swung drum pocket, koto-inspired plucks, soft shakuhachi textures, and mellow head-nod breaks; verse section stays sparse with dusty drums and fingered melodic fragments, the middle opens with a filtered tape-warm lift and subtle bell counterline, then the outro drifts into brushed drums and reverb haze, Warm vinyl saturation, intimate close-mic feel, serene and cinematic mix, calming, lo-fi, warm, soft, hip-hop, mellow",
     "tags": [
-      "lo fi hip hop",
       "calming",
       "warm",
       "electronic"
@@ -37231,7 +37036,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Tokyo Nights in Slow Motion",
     "metadataText": "lo-fi hip-hop, calming, warm\n\nLo-fi hip-hop with a laid-back swung drum pocket, koto-inspired plucks, soft shakuhachi textures, and mellow head-nod breaks; verse section stays sparse with dusty drums and fingered melodic fragments, the middle opens with a filtered tape-warm lift and subtle bell counterline, then the outro drifts into brushed drums and reverb haze, Warm vinyl saturation, intimate close-mic feel, serene and cinematic mix, calming, lo-fi, warm, soft, hip-hop, mellow",
     "tags": [
-      "lo fi hip hop",
       "calming",
       "warm",
       "electronic"
@@ -37254,7 +37058,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Vinyl Memories After Midnight",
     "metadataText": "lo-fi hip-hop, calming, warm\n\nLo-fi hip-hop with a laid-back swung drum pocket, koto-inspired plucks, soft shakuhachi textures, and mellow head-nod breaks; verse section stays sparse with dusty drums and fingered melodic fragments, the middle opens with a filtered tape-warm lift and subtle bell counterline, then the outro drifts into brushed drums and reverb haze, Warm vinyl saturation, intimate close-mic feel, serene and cinematic mix, calming, lo-fi, warm, soft, hip-hop, mellow",
     "tags": [
-      "lo fi hip hop",
       "calming",
       "warm",
       "electronic"
@@ -37277,7 +37080,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Vinyl Nights in Harajuku",
     "metadataText": "lo-fi hip-hop, calming, warm\n\nLo-fi hip-hop with a laid-back swung drum pocket, koto-inspired plucks, soft shakuhachi textures, and mellow head-nod breaks; verse section stays sparse with dusty drums and fingered melodic fragments, the middle opens with a filtered tape-warm lift and subtle bell counterline, then the outro drifts into brushed drums and reverb haze, Warm vinyl saturation, intimate close-mic feel, serene and cinematic mix, calming, lo-fi, warm, soft, hip-hop, mellow",
     "tags": [
-      "lo fi hip hop",
       "calming",
       "warm",
       "electronic"
@@ -37300,7 +37102,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Where the Night Feels Endless",
     "metadataText": "lo-fi hip-hop, calming, warm\n\nLo-fi hip-hop with a laid-back swung drum pocket, koto-inspired plucks, soft shakuhachi textures, and mellow head-nod breaks; verse section stays sparse with dusty drums and fingered melodic fragments, the middle opens with a filtered tape-warm lift and subtle bell counterline, then the outro drifts into brushed drums and reverb haze, Warm vinyl saturation, intimate close-mic feel, serene and cinematic mix, calming, lo-fi, warm, soft, hip-hop, mellow",
     "tags": [
-      "lo fi hip hop",
       "calming",
       "warm",
       "electronic"
@@ -37323,7 +37124,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Lo-Fi/Whispers of the Bamboo Forest",
     "metadataText": "lo-fi hip-hop, calming, warm\n\nLo-fi hip-hop with a laid-back swung drum pocket, koto-inspired plucks, soft shakuhachi textures, and mellow head-nod breaks; verse section stays sparse with dusty drums and fingered melodic fragments, the middle opens with a filtered tape-warm lift and subtle bell counterline, then the outro drifts into brushed drums and reverb haze, Warm vinyl saturation, intimate close-mic feel, serene and cinematic mix, calming, lo-fi, warm, soft, hip-hop, mellow",
     "tags": [
-      "lo fi hip hop",
       "calming",
       "warm",
       "electronic"
@@ -37440,7 +37240,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic ambient",
       "orchestral ambient",
-      "sci fi cinematic soundtrack",
+      "sci fi cinematic",
       "electronic",
       "ambient"
     ]
@@ -37562,7 +37362,6 @@ export const productionSongRecords = [
       "sleep",
       "sonic",
       "deep",
-      "vocal",
       "slow",
       "warm",
       "ambient",
@@ -37800,22 +37599,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Ambient/Echoes Beyond the Clouds",
     "metadataText": "Ambient soundscape with slow-evolving pads, soft piano echoes, cinematic drones, and gentle pulsing textures; verse-like sections stay sparse and airy, then layers bloom with reversed swells and filtered shimmer, finally thinning again into a haloed outro. Breath-like vocal clouds, distant delay tails, and subtle stereo movement create an immersive headphone field. Warm analog mix, deep, spacious, and intimate., ambient, vocal, calming, warm, sleep, soft, sonic, gentle, deep, slow, soothing, emotional",
     "tags": [
-      "ambient soundscape with slow evolving pads",
+      "ambient soundscape",
       "soft piano echoes",
       "cinematic drones",
-      "and gentle pulsing textures verse like sections stay sparse and airy",
-      "then layers bloom with reversed swells and filtered shimmer",
-      "finally thinning again into a haloed outro breath like vocal clouds",
-      "distant delay tails",
-      "and subtle stereo movement create an immersive headphone field warm analog mix",
+      "gentle pulsing textures",
+      "layers bloom",
+      "finally thinning again",
+      "subtle stereo movement",
       "deep",
       "spacious",
-      "and intimate",
       "ambient",
-      "vocal",
       "calming",
       "warm",
-      "sleep"
+      "sleep",
+      "soft",
+      "sonic",
+      "gentle"
     ]
   },
   {
@@ -38230,7 +38029,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic ambient",
       "orchestral ambient",
-      "sci fi cinematic soundtrack",
+      "sci fi cinematic",
       "electronic",
       "ambient"
     ]
@@ -38702,7 +38501,6 @@ export const productionSongRecords = [
       "sleep",
       "sonic",
       "deep",
-      "vocal",
       "slow",
       "warm",
       "ambient",
@@ -38999,7 +38797,6 @@ export const productionSongRecords = [
     "tags": [
       "delta blues",
       "blues",
-      "raw",
       "indie"
     ]
   },
@@ -39095,7 +38892,7 @@ export const productionSongRecords = [
     "tags": [
       "electric blues",
       "jazz blues",
-      "soulful vocal",
+      "soulful",
       "indie",
       "blues"
     ]
@@ -39216,7 +39013,7 @@ export const productionSongRecords = [
     "tags": [
       "delta blues",
       "blues",
-      "heartfelt soulful raw blues",
+      "heartfelt soulful raw",
       "indie"
     ]
   },
@@ -39380,14 +39177,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Ashes Dancing in Headlights",
     "metadataText": "Electro hard rock with 164 BPM half-time bounce, crushing palm-muted guitar riffs over aggressive synth bass and punchy hybrid drums; verse drives lean and tense, pre-chorus climbs with filtered pulses and gang shouts, chorus explodes with stacked screams and a huge octave guitar hook, bridge drops to icy pads and toms before a soaring solo finale, Glossy, brutal, wide, and cinematic, electro, soaring, hard rock, electric, electronic\n\n00 Ashes Dancing in Headlights Add a Caption Remix/Edit Electro hard rock with 164 BPM half-time bounce, crushing palm-muted guitar riffs over aggressive synth bass and punchy hybrid drums; verse drives lean and tense, pre-chorus climbs with filtered pulses and gang shouts, chorus explodes with stacked screams and a huge octave guitar hook, bridge drops to icy pads and toms before a soaring solo finale, Glossy, brutal, wide, and cinematic, electro, soaring, hard rock, electric, electronic",
     "tags": [
-      "crushing palm muted guitar riffs over aggressive synth bass and punchy hybrid drums verse drives lean and tense",
-      "pre chorus climbs with filtered pulses and gang shouts",
-      "chorus explodes with stacked screams and a huge octave guitar hook",
-      "bridge drops to icy pads and toms before a soaring solo finale",
+      "crushing palm muted",
       "glossy",
       "brutal",
-      "wide",
-      "and cinematic",
+      "cinematic",
       "electro",
       "soaring",
       "hard rock",
@@ -39415,22 +39208,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Ashes Falling From the Skyline",
     "metadataText": "Hard rock anthem with crushing riff-driven 4/4 groove, thunderous live drums, heavy bass, and gritty male vocals; verse drives with tight palm-muted guitars, pre-chorus opens into shouted lift, chorus hits wide with gang vocals and soaring lead lines, bridge drops to toms and a half-time chant before the final solo, Stadium claps, reverse cymbal swells, and snare flam accents add impact, Polished, massive, and aggressive, emotional, rock, rhythmic, raw, headbanging, hard rock, soaring, electric\n\nAshes Falling From the Skyline Add a Caption Remix/Edit Hard rock anthem with crushing riff-driven 4/4 groove, thunderous live drums, heavy bass, and gritty male vocals; verse drives with tight palm-muted guitars, pre-chorus opens into shouted lift, chorus hits wide with gang vocals and soaring lead lines, bridge drops to toms and a half-time chant before the final solo, Stadium claps, reverse cymbal swells, and snare flam accents add impact, Polished, massive, and aggressive, emotional, rock, rhythmic, raw, headbanging, hard rock, soaring, electric",
     "tags": [
-      "hard rock anthem with crushing riff driven 4 4 groove",
+      "hard rock anthem",
       "thunderous live drums",
       "heavy bass",
-      "and gritty male vocals verse drives with tight palm muted guitars",
-      "pre chorus opens into shouted lift",
-      "chorus hits wide with gang vocals and soaring lead lines",
-      "bridge drops to toms and a half time chant before the final solo",
-      "stadium claps",
-      "reverse cymbal swells",
-      "and snare flam accents add impact",
+      "gritty male vocals",
+      "reverse cymbal",
+      "snare flam accents",
       "polished",
       "massive",
-      "and aggressive",
+      "aggressive",
       "emotional",
       "rock",
-      "rhythmic"
+      "rhythmic",
+      "headbanging",
+      "hard rock",
+      "soaring",
+      "electric"
     ]
   },
   {
@@ -39450,22 +39243,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Ashes Falling on Neon Streets",
     "metadataText": "Hard rock anthem with cinematic orchestral drive, four-on-the-floor kick push under crushing palm-muted riffs and thunderous toms; verse rides low and tense with tight gang shouts, pre-chorus strips to voice, toms, and rising strings, chorus opens wide with stacked harmonies, brass hits, and shouted gang vocals, Add reversed cymbal swells, snap-string runs, and a soaring guitar-solo lift before the final chorus, Massive, bright, and battle-ready mix, emotional, soaring, hard rock, dramatic, orchestral\n\n0 0 0 Ashes Falling on Neon Streets Add a Caption Remix/Edit Hard rock anthem with cinematic orchestral drive, four-on-the-floor kick push under crushing palm-muted riffs and thunderous toms; verse rides low and tense with tight gang shouts, pre-chorus strips to voice, toms, and rising strings, chorus opens wide with stacked harmonies, brass hits, and shouted gang vocals, Add reversed cymbal swells, snap-string runs, and a soaring guitar-solo lift before the final chorus, Massive, bright, and battle-ready mix, emotional, soaring, hard rock, dramatic, orchestral Show Less 1d, 15h ago",
     "tags": [
-      "hard rock anthem with cinematic orchestral drive",
-      "four on the floor kick push under crushing palm muted riffs and thunderous toms verse rides low and tense with tight gang shouts",
-      "pre chorus strips to voice",
+      "hard rock anthem",
       "toms",
-      "and rising strings",
-      "chorus opens wide with stacked harmonies",
+      "rising strings",
       "brass hits",
-      "and shouted gang vocals",
-      "add reversed cymbal swells",
       "snap string runs",
-      "and a soaring guitar solo lift before the final chorus",
       "massive",
       "bright",
-      "and battle ready mix",
+      "battle ready",
       "emotional",
-      "soaring"
+      "soaring",
+      "hard rock",
+      "dramatic",
+      "orchestral",
+      "commercial",
+      "hard",
+      "rock"
     ]
   },
   {
@@ -39485,22 +39278,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Black Flames on the Freeway",
     "metadataText": "Hard rock anthem with driving half-time drums, palm-muted riff stabs, and cinematic orchestral swells; verse rides tight guitars and low strings, pre-chorus climbs with snare rolls and rising brass, chorus hits with gang vocals, wide power chords, and a unison hook, Vocals are gritty and close in verses, stacked with shouted doubles on hooks, with delay throws on the last word, Use reversed cymbal swells, timpani hits before drops, and a soaring string lift into the solo, Mix is huge, bright, and battle-cinematic, dramatic, soaring, hard rock, emotional, orchestral\n\n0 0 0 Black Flames on the Freeway Add a Caption Remix/Edit Hard rock anthem with driving half-time drums, palm-muted riff stabs, and cinematic orchestral swells; verse rides tight guitars and low strings, pre-chorus climbs with snare rolls and rising brass, chorus hits with gang vocals, wide power chords, and a unison hook, Vocals are gritty and close in verses, stacked with shouted doubles on hooks, with delay throws on the last word, Use reversed cymbal swells, timpani hits before drops, and a soaring string lift into the solo, Mix is huge, bright, and battle-cinematic, dramatic, soaring, hard rock, emotional, orchestral Show Less 1d, 15h ago",
     "tags": [
-      "hard rock anthem with driving half time drums",
-      "palm muted riff stabs",
-      "and cinematic orchestral swells verse rides tight guitars and low strings",
-      "pre chorus climbs with snare rolls and rising brass",
-      "chorus hits with gang vocals",
-      "wide power chords",
-      "and a unison hook",
-      "vocals are gritty and close in verses",
-      "stacked with shouted doubles on hooks",
-      "with delay throws on the last word",
-      "use reversed cymbal swells",
-      "timpani hits before drops",
-      "and a soaring string lift into the solo",
-      "mix is huge",
+      "hard rock anthem",
+      "palm muted riff",
+      "cinematic orchestral",
+      "power chords",
+      "unison hook",
+      "vocals are gritty",
+      "stacked",
+      "timpani hits before",
+      "soaring string lift",
+      "is huge",
       "bright",
-      "and battle cinematic"
+      "battle cinematic",
+      "dramatic",
+      "soaring",
+      "hard rock",
+      "emotional"
     ]
   },
   {
@@ -39520,22 +39313,21 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Black Smoke Across the Desert",
     "metadataText": "Hard rock anthem with crushing syncopated guitar riffs and thunderous live drums; verse hits with tight bass and gritty half-time punches, pre-chorus opens into rising toms and gang shouts, chorus explodes in wide power chords and soaring lead lines, bridge drops to a cinematic breakdown then returns with a final solo, Gritty lead vocal with doubled hooks, shouted ad-libs, and delay throws on key words, Ear candy: reverse cymbal lifts, drum fills into each chorus, and a screaming guitar pinch before the last hook, Polished, massive, stadium-bright mix with raw edge, headbanging, electric, rock, rhythmic, hard rock, soaring, raw, emotional\n\n0 0 0 Black Smoke Across the Desert Add a Caption Remix/Edit Hard rock anthem with crushing syncopated guitar riffs and thunderous live drums; verse hits with tight bass and gritty half-time punches, pre-chorus opens into rising toms and gang shouts, chorus explodes in wide power chords and soaring lead lines, bridge drops to a cinematic breakdown then returns with a final solo, Gritty lead vocal with doubled hooks, shouted ad-libs, and delay throws on key words, Ear candy: reverse cymbal lifts, drum fills into each chorus, and a screaming guitar pinch before the last hook, Polished, massive, stadium-bright mix with raw edge, headbanging, electric, rock, rhythmic, hard rock, soaring, raw, emotional Show Less 2d, 17h ago",
     "tags": [
-      "hard rock anthem with crushing syncopated guitar riffs and thunderous live drums verse hits with tight bass and gritty half time punches",
-      "pre chorus opens into rising toms and gang shouts",
-      "chorus explodes in wide power chords and soaring lead lines",
-      "bridge drops to a cinematic breakdown then returns with a final solo",
-      "gritty lead vocal with doubled hooks",
-      "shouted ad libs",
-      "and delay throws on key words",
-      "ear candy reverse cymbal lifts",
-      "drum fills into each chorus",
-      "and a screaming guitar pinch before the last hook",
+      "hard rock anthem",
+      "gritty",
+      "screaming guitar pinch",
       "polished",
       "massive",
-      "stadium bright mix with raw edge",
+      "stadium bright",
       "headbanging",
       "electric",
-      "rock"
+      "rock",
+      "rhythmic",
+      "hard rock",
+      "soaring",
+      "emotional",
+      "commercial",
+      "hard"
     ]
   },
   {
@@ -39555,22 +39347,20 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Blacktop Reckoning",
     "metadataText": "Hard rock with heavy distorted riffs, pounding toms, deep bass grooves, and cinematic tension; verse rides gritty low-end swagger and restrained cymbal drive, pre-chorus narrows to toms and vocal lift, chorus slams with stacked gang doubles and a sing-back hook, Bridge breaks into a dramatic guitar solo over half-time drums, then final chorus returns bigger with ad-lib shouts, reverse swells, and punchy modern low end, Raw live-band aggression, wide and explosive mix, dramatic, emotional, melodic hard rock, vocal, raw, deep\n\n0 0 0 Blacktop Reckoning Add a Caption Remix/Edit Hard rock with heavy distorted riffs, pounding toms, deep bass grooves, and cinematic tension; verse rides gritty low-end swagger and restrained cymbal drive, pre-chorus narrows to toms and vocal lift, chorus slams with stacked gang doubles and a sing-back hook, Bridge breaks into a dramatic guitar solo over half-time drums, then final chorus returns bigger with ad-lib shouts, reverse swells, and punchy modern low end, Raw live-band aggression, wide and explosive mix, dramatic, emotional, melodic hard rock, vocal, raw, deep Show Less 2d, 17h ago",
     "tags": [
-      "hard rock with heavy distorted riffs",
+      "hard rock",
       "pounding toms",
       "deep bass grooves",
-      "and cinematic tension verse rides gritty low end swagger and restrained cymbal drive",
-      "pre chorus narrows to toms and vocal lift",
-      "chorus slams with stacked gang doubles and a sing back hook",
-      "bridge breaks into a dramatic guitar solo over half time drums",
-      "then final chorus returns bigger with ad lib shouts",
-      "reverse swells",
-      "and punchy modern low end",
-      "raw live band aggression",
-      "wide and explosive mix",
+      "cinematic tension",
+      "reverse",
+      "punchy modern low",
+      "raw live band",
       "dramatic",
       "emotional",
       "melodic hard rock",
-      "vocal"
+      "deep",
+      "commercial",
+      "hard",
+      "rock"
     ]
   },
   {
@@ -39590,22 +39380,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Break the Cage",
     "metadataText": "Hard rock with driving midtempo stomp, syncopated palm-muted riffs, thunderous live drums, and an anthem-ready chorus that opens wide after tight verses; verse keeps the guitars chugging low, pre-chorus lifts with gang shouts and rising toms, chorus hits in big stacked doubles with shouted responses, bridge drops to a half-time breakdown and a searing solo lead-in, final chorus returns louder with gang vocals and delay-throw ad-libs, Gritty male vocals, rasped verses, layered hook doubles, shout-along gang accents, stadium-sized and polished but raw at the edges, headbanging, hard rock, electric, emotional, rock, raw, rhythmic, soaring\n\n0 0 0 Break the Cage Add a Caption Remix/Edit Hard rock with driving midtempo stomp, syncopated palm-muted riffs, thunderous live drums, and an anthem-ready chorus that opens wide after tight verses; verse keeps the guitars chugging low, pre-chorus lifts with gang shouts and rising toms, chorus hits in big stacked doubles with shouted responses, bridge drops to a half-time breakdown and a searing solo lead-in, final chorus returns louder with gang vocals and delay-throw ad-libs, Gritty male vocals, rasped verses, layered hook doubles, shout-along gang accents, stadium-sized and polished but raw at the edges, headbanging, hard rock, electric, emotional, rock, raw, rhythmic, soaring Show Less 2d, 17h ago",
     "tags": [
-      "hard rock with driving midtempo stomp",
-      "syncopated palm muted riffs",
-      "thunderous live drums",
-      "and an anthem ready chorus that opens wide after tight verses verse keeps the guitars chugging low",
-      "pre chorus lifts with gang shouts and rising toms",
-      "chorus hits in big stacked doubles with shouted responses",
-      "bridge drops to a half time breakdown and a searing solo lead in",
-      "final chorus returns louder with gang vocals and delay throw ad libs",
-      "gritty male vocals",
-      "rasped verses",
-      "layered hook doubles",
-      "shout along gang accents",
-      "stadium sized and polished but raw at the edges",
-      "headbanging",
       "hard rock",
-      "electric"
+      "syncopated palm muted",
+      "thunderous live drums",
+      "an anthem ready",
+      "gritty male vocals",
+      "rasped",
+      "layered hook doubles",
+      "shout along gang",
+      "stadium sized",
+      "headbanging",
+      "electric",
+      "emotional",
+      "rock",
+      "rhythmic",
+      "soaring",
+      "commercial"
     ]
   },
   {
@@ -39625,22 +39415,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Break The Frame (1)",
     "metadataText": "Hard rock anthem with cinematic orchestral layering, driving mid-tempo four-on-the-floor pulse, syncopated palm-muted riffs, thunderous tom hits, and sweeping string/brass swells; verses stay tense with clipped guitar and low strings, pre-chorus lifts into snare rolls and rising choir pads, chorus hits wide with gang shouts and stacked harmonies, bridge drops to a lone vocal over dark cello before a final full-force rush, Close-mic lead vocal with gritty doubles, soaring high-note ad-libs, delay throws on key words, explosive risers, reverse cymbal swells, and a huge bright-and-punchy mix, hard rock, dramatic, soaring, orchestral, emotional",
     "tags": [
-      "hard rock anthem with cinematic orchestral layering",
-      "driving mid tempo four on the floor pulse",
-      "syncopated palm muted riffs",
+      "hard rock anthem",
+      "syncopated palm muted",
       "thunderous tom hits",
-      "and sweeping string brass swells verses stay tense with clipped guitar and low strings",
-      "pre chorus lifts into snare rolls and rising choir pads",
-      "chorus hits wide with gang shouts and stacked harmonies",
-      "bridge drops to a lone vocal over dark cello before a final full force rush",
-      "close mic lead vocal with gritty doubles",
-      "soaring high note ad libs",
-      "delay throws on key words",
+      "sweeping string brass",
+      "soaring high note",
       "explosive risers",
-      "reverse cymbal swells",
-      "and a huge bright and punchy mix",
+      "reverse cymbal",
+      "huge bright",
       "hard rock",
-      "dramatic"
+      "dramatic",
+      "soaring",
+      "orchestral",
+      "emotional",
+      "commercial",
+      "hard",
+      "rock"
     ]
   },
   {
@@ -39660,22 +39450,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Broken Chains & Loud Guitars",
     "metadataText": "Hard rock anthem with crushing palm-muted guitar riffs, thunderous live drums, and gritty male vocals; verse rides tight low-end chugs and snare cracks, pre-chorus opens with climbing toms and gang shouts, chorus explodes into wide power chords and shouted doubles, Add reverse cymbal swells, a tape-stop hit before the breakdown, then a soaring guitar lead after the bridge, Polished, massive, stadium-bright mix with raw edge, headbanging, raw, emotional, soaring, electric, rhythmic, rock, hard rock\n\n0 0 0 Broken Chains & Loud Guitars Add a Caption Remix/Edit Hard rock anthem with crushing palm-muted guitar riffs, thunderous live drums, and gritty male vocals; verse rides tight low-end chugs and snare cracks, pre-chorus opens with climbing toms and gang shouts, chorus explodes into wide power chords and shouted doubles, Add reverse cymbal swells, a tape-stop hit before the breakdown, then a soaring guitar lead after the bridge, Polished, massive, stadium-bright mix with raw edge, headbanging, raw, emotional, soaring, electric, rhythmic, rock, hard rock Show Less 2d, 17h ago",
     "tags": [
-      "hard rock anthem with crushing palm muted guitar riffs",
+      "hard rock anthem",
       "thunderous live drums",
-      "and gritty male vocals verse rides tight low end chugs and snare cracks",
-      "pre chorus opens with climbing toms and gang shouts",
-      "chorus explodes into wide power chords and shouted doubles",
-      "add reverse cymbal swells",
-      "a tape stop hit before the breakdown",
-      "then a soaring guitar lead after the bridge",
+      "gritty male vocals",
+      "tape stop hit",
+      "soaring guitar after",
       "polished",
       "massive",
-      "stadium bright mix with raw edge",
+      "stadium bright",
       "headbanging",
-      "raw",
       "emotional",
       "soaring",
-      "electric"
+      "electric",
+      "rhythmic",
+      "rock",
+      "hard rock",
+      "commercial"
     ]
   },
   {
@@ -39695,22 +39485,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Broken Engines & Battle Cries",
     "metadataText": "Hard rock anthem with cinematic orchestral layering, driving mid-tempo four-on-the-floor pulse, syncopated palm-muted riffs, thunderous tom hits, and sweeping string/brass swells; verses stay tense with clipped guitar and low strings, pre-chorus lifts into snare rolls and rising choir pads, chorus hits wide with gang shouts and stacked harmonies, bridge drops to a lone vocal over dark cello before a final full-force rush, Close-mic lead vocal with gritty doubles, soaring high-note ad-libs, delay throws on key words, explosive risers, reverse cymbal swells, and a huge bright-and-punchy mix, hard rock, dramatic, soaring, orchestral, emotional\n\n0 0 0 Broken Engines & Battle Cries Add a Caption Remix/Edit Hard rock anthem with cinematic orchestral layering, driving mid-tempo four-on-the-floor pulse, syncopated palm-muted riffs, thunderous tom hits, and sweeping string/brass swells; verses stay tense with clipped guitar and low strings, pre-chorus lifts into snare rolls and rising choir pads, chorus hits wide with gang shouts and stacked harmonies, bridge drops to a lone vocal over dark cello before a final full-force rush, Close-mic lead vocal with gritty doubles, soaring high-note ad-libs, delay throws on key words, explosive risers, reverse cymbal swells, and a huge bright-and-punchy mix, hard rock, dramatic, soaring, orchestral, emotional Show Less 1d, 15h ago",
     "tags": [
-      "hard rock anthem with cinematic orchestral layering",
-      "driving mid tempo four on the floor pulse",
-      "syncopated palm muted riffs",
+      "hard rock anthem",
+      "syncopated palm muted",
       "thunderous tom hits",
-      "and sweeping string brass swells verses stay tense with clipped guitar and low strings",
-      "pre chorus lifts into snare rolls and rising choir pads",
-      "chorus hits wide with gang shouts and stacked harmonies",
-      "bridge drops to a lone vocal over dark cello before a final full force rush",
-      "close mic lead vocal with gritty doubles",
-      "soaring high note ad libs",
-      "delay throws on key words",
+      "sweeping string brass",
+      "soaring high note",
       "explosive risers",
-      "reverse cymbal swells",
-      "and a huge bright and punchy mix",
+      "reverse cymbal",
+      "huge bright",
       "hard rock",
-      "dramatic"
+      "dramatic",
+      "soaring",
+      "orchestral",
+      "emotional",
+      "commercial",
+      "hard",
+      "rock"
     ]
   },
   {
@@ -39730,22 +39520,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Broken Halo Run",
     "metadataText": "Hard rock anthem with driving mid-tempo stomp, syncopated palm-muted riffs, thunderous live drums, and a hook that opens into a huge half-time chorus; verses ride gritty low-end guitar chugs, pre-chorus strips to toms and gang shouts, chorus hits with stacked gang vocals and soaring lead lines, bridge drops into a cinematic breakdown with snare echoes then a final solo lift, Gritty male vocals, doubled on key phrases, shouted ad-libs on the hook, delay throws on the last word of each chorus, Risers into the chorus, reverse cymbal swells before the breakdown, and a screaming guitar fill into the final lift, Polished, wide, and punishingly loud, hard rock, soaring, raw, headbanging, electric, rock, rhythmic, emotional\n\n0 0 0 Broken Halo Run Add a Caption Remix/Edit Hard rock anthem with driving mid-tempo stomp, syncopated palm-muted riffs, thunderous live drums, and a hook that opens into a huge half-time chorus; verses ride gritty low-end guitar chugs, pre-chorus strips to toms and gang shouts, chorus hits with stacked gang vocals and soaring lead lines, bridge drops into a cinematic breakdown with snare echoes then a final solo lift, Gritty male vocals, doubled on key phrases, shouted ad-libs on the hook, delay throws on the last word of each chorus, Risers into the chorus, reverse cymbal swells before the breakdown, and a screaming guitar fill into the final lift, Polished, wide, and punishingly loud, hard rock, soaring, raw, headbanging, electric, rock, rhythmic, emotional Show Less 2d, 17h ago",
     "tags": [
-      "hard rock anthem with driving mid tempo stomp",
-      "syncopated palm muted riffs",
+      "hard rock anthem",
+      "syncopated palm muted",
       "thunderous live drums",
-      "and a hook that opens into a huge half time chorus verses ride gritty low end guitar chugs",
-      "pre chorus strips to toms and gang shouts",
-      "chorus hits with stacked gang vocals and soaring lead lines",
-      "bridge drops into a cinematic breakdown with snare echoes then a final solo lift",
+      "hook that opens",
       "gritty male vocals",
-      "doubled on key phrases",
-      "shouted ad libs on the hook",
-      "delay throws on the last word of each chorus",
-      "risers into the chorus",
-      "reverse cymbal swells before the breakdown",
-      "and a screaming guitar fill into the final lift",
+      "on key phrases",
+      "reverse cymbal before",
       "polished",
-      "wide"
+      "punishingly loud",
+      "hard rock",
+      "soaring",
+      "headbanging",
+      "electric",
+      "rock",
+      "rhythmic",
+      "emotional"
     ]
   },
   {
@@ -39765,22 +39555,21 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Burning Fuel & Broken Dreams",
     "metadataText": "Dark melodic hard rock with heavy distorted guitar riffs and pounding drums on a driving mid-tempo pulse; verse rides tight bass, tom hits, and gritty guitar chugs; pre-chorus opens with rising cymbals and layered gang shouts; chorus hits with wide power chords, stacked doubles, and a chantable gang-vocal hook, Bridge drops to lone bass and echoing lead, then a dramatic guitar solo surges into the final chorus, Raw live-band aggression, cinematic textures, bright punchy mix, vocal, deep, raw, emotional, dramatic, melodic hard rock\n\n1 0 0 Burning Fuel & Broken Dreams Add a Caption Remix/Edit Dark melodic hard rock with heavy distorted guitar riffs and pounding drums on a driving mid-tempo pulse; verse rides tight bass, tom hits, and gritty guitar chugs; pre-chorus opens with rising cymbals and layered gang shouts; chorus hits with wide power chords, stacked doubles, and a chantable gang-vocal hook, Bridge drops to lone bass and echoing lead, then a dramatic guitar solo surges into the final chorus, Raw live-band aggression, cinematic textures, bright punchy mix, vocal, deep, raw, emotional, dramatic, melodic hard rock Show Less 2d, 17h ago",
     "tags": [
-      "dark melodic hard rock with heavy distorted guitar riffs and pounding drums on a driving mid tempo pulse verse rides tight bass",
+      "dark melodic hard",
       "tom hits",
-      "and gritty guitar chugs pre chorus opens with rising cymbals and layered gang shouts chorus hits with wide power chords",
+      "gritty guitar chugs",
       "stacked doubles",
-      "and a chantable gang vocal hook",
-      "bridge drops to lone bass and echoing lead",
-      "then a dramatic guitar solo surges into the final chorus",
-      "raw live band aggression",
+      "chantable gang hook",
+      "raw live band",
       "cinematic textures",
-      "bright punchy mix",
-      "vocal",
+      "bright punchy",
       "deep",
-      "raw",
       "emotional",
       "dramatic",
-      "melodic hard rock"
+      "melodic hard rock",
+      "commercial",
+      "hard",
+      "rock"
     ]
   },
   {
@@ -39800,22 +39589,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Burning Through the City Limits",
     "metadataText": "Hard rock anthem with cinematic orchestral power, mid-tempo and stomp-heavy, built on crushing palm-muted guitar riffs and thunderous toms; verse rides tight low-end grit, pre-chorus strips to snare pulse and rising strings, chorus hits with gang shouts, brass stabs, and wide power chords, Vocal is rough and fearless with stacked doubles, shouted hook lines, and a soaring lead on the last chorus, Ear candy includes reverse cymbal swells, taiko rolls, and a final solo lift, Mix is huge, bright, and battle-cinematic, emotional, orchestral, dramatic, hard rock, soaring\n\n0 0 0 Burning Through the City Limits Add a Caption Remix/Edit Hard rock anthem with cinematic orchestral power, mid-tempo and stomp-heavy, built on crushing palm-muted guitar riffs and thunderous toms; verse rides tight low-end grit, pre-chorus strips to snare pulse and rising strings, chorus hits with gang shouts, brass stabs, and wide power chords, Vocal is rough and fearless with stacked doubles, shouted hook lines, and a soaring lead on the last chorus, Ear candy includes reverse cymbal swells, taiko rolls, and a final solo lift, Mix is huge, bright, and battle-cinematic, emotional, orchestral, dramatic, hard rock, soaring Show Less 1d, 15h ago",
     "tags": [
-      "hard rock anthem with cinematic orchestral power",
-      "mid tempo and stomp heavy",
-      "built on crushing palm muted guitar riffs and thunderous toms verse rides tight low end grit",
-      "pre chorus strips to snare pulse and rising strings",
-      "chorus hits with gang shouts",
+      "hard rock anthem",
       "brass stabs",
-      "and wide power chords",
-      "vocal is rough and fearless with stacked doubles",
-      "shouted hook lines",
-      "and a soaring lead on the last chorus",
-      "ear candy includes reverse cymbal swells",
+      "power chords",
+      "is rough",
       "taiko rolls",
-      "and a final solo lift",
-      "mix is huge",
+      "is huge",
       "bright",
-      "and battle cinematic"
+      "battle cinematic",
+      "emotional",
+      "orchestral",
+      "dramatic",
+      "hard rock",
+      "soaring",
+      "commercial",
+      "hard",
+      "rock"
     ]
   },
   {
@@ -39835,22 +39624,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Burnout Kings of the Underground",
     "metadataText": "Electro hard rock anthem with crushing guitar riffs, aggressive electronic basslines, punchy hybrid drums, cinematic synth swells, explosive drop sections, and rebellious stadium chants; verse drives on tight riff stabs and tense low-end pulses, pre-chorus strips to toms and filtered synth rise, chorus slams with gang vocals and stacked guitars, bridge opens into a soaring solo over half-time drums, final chorus adds extra octave harmonies and crowd-style shouts, Male vocals, gritty doubles, shouted hook layers, delay throws on key words, reverse impacts and laser risers into each drop, polished and wide with a bright punchy master, hard rock, soaring, electric, electronic, electro\n\n0 0 0 Burnout Kings of the Underground Add a Caption Remix/Edit Electro hard rock anthem with crushing guitar riffs, aggressive electronic basslines, punchy hybrid drums, cinematic synth swells, explosive drop sections, and rebellious stadium chants; verse drives on tight riff stabs and tense low-end pulses, pre-chorus strips to toms and filtered synth rise, chorus slams with gang vocals and stacked guitars, bridge opens into a soaring solo over half-time drums, final chorus adds extra octave harmonies and crowd-style shouts, Male vocals, gritty doubles, shouted hook layers, delay throws on key words, reverse impacts and laser risers into each drop, polished and wide with a bright punchy master, hard rock, soaring, electric, electronic, electro Show Less 1d, 15h ago",
     "tags": [
-      "electro hard rock anthem with crushing guitar riffs",
+      "electro hard rock",
       "aggressive electronic basslines",
       "punchy hybrid drums",
-      "cinematic synth swells",
-      "explosive drop sections",
-      "and rebellious stadium chants verse drives on tight riff stabs and tense low end pulses",
-      "pre chorus strips to toms and filtered synth rise",
-      "chorus slams with gang vocals and stacked guitars",
-      "bridge opens into a soaring solo over half time drums",
-      "final chorus adds extra octave harmonies and crowd style shouts",
+      "cinematic synth",
+      "explosive sections",
+      "rebellious stadium chants",
       "male vocals",
       "gritty doubles",
-      "shouted hook layers",
-      "delay throws on key words",
-      "reverse impacts and laser risers into each drop",
-      "polished and wide with a bright punchy master"
+      "reverse impacts",
+      "polished",
+      "hard rock",
+      "soaring",
+      "electric",
+      "electronic",
+      "electro",
+      "commercial"
     ]
   },
   {
@@ -39870,22 +39659,20 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Concrete Saints & Thunderstorms",
     "metadataText": "Hard rock anthem with electro grit and a driving halftime stomp; verse rides tight riff stabs and mechanical toms, pre-chorus opens with rising synth pulses and gang shouts, chorus hits with huge doubled guitars, punchy hybrid drums, and shouted hook layers, Bridge drops to eerie pads and a laser-like lead, then final chorus erupts, Polished, wide, aggressive, futuristic, and stadium-bright, hard rock, electro, electric, soaring, electronic\n\n0 0 0 Concrete Saints & Thunderstorms Add a Caption Remix/Edit Hard rock anthem with electro grit and a driving halftime stomp; verse rides tight riff stabs and mechanical toms, pre-chorus opens with rising synth pulses and gang shouts, chorus hits with huge doubled guitars, punchy hybrid drums, and shouted hook layers, Bridge drops to eerie pads and a laser-like lead, then final chorus erupts, Polished, wide, aggressive, futuristic, and stadium-bright, hard rock, electro, electric, soaring, electronic Show Less 1d, 15h ago",
     "tags": [
-      "hard rock anthem with electro grit and a driving halftime stomp verse rides tight riff stabs and mechanical toms",
-      "pre chorus opens with rising synth pulses and gang shouts",
-      "chorus hits with huge doubled guitars",
+      "hard rock anthem",
       "punchy hybrid drums",
-      "and shouted hook layers",
-      "bridge drops to eerie pads and a laser like lead",
-      "then final chorus erupts",
       "polished",
-      "wide",
       "aggressive",
       "futuristic",
-      "and stadium bright",
+      "stadium bright",
       "hard rock",
       "electro",
       "electric",
-      "soaring"
+      "soaring",
+      "electronic",
+      "commercial",
+      "hard",
+      "rock"
     ]
   },
   {
@@ -39905,22 +39692,19 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Dust, Fire & Amplifiers",
     "metadataText": "Dark melodic hard rock with halftime stomp and syncopated riff breaks; verse rides tense low-tuned guitars and tom-heavy drums, pre-chorus opens into rising gang shouts, chorus slams with stacked gang vocals and a wide lead line, Bridge drops to eerie clean guitar and a lone vocal before a last solo erupts, Distorted, punchy, and cinematic with gritty close-mic verses, shouted doubles on hooks, tape-worn impacts, and a bright modern stadium mix, dramatic, emotional, raw, vocal, deep, melodic hard rock\n\n0 0 0 Dust, Fire & Amplifiers Add a Caption Remix/Edit Dark melodic hard rock with halftime stomp and syncopated riff breaks; verse rides tense low-tuned guitars and tom-heavy drums, pre-chorus opens into rising gang shouts, chorus slams with stacked gang vocals and a wide lead line, Bridge drops to eerie clean guitar and a lone vocal before a last solo erupts, Distorted, punchy, and cinematic with gritty close-mic verses, shouted doubles on hooks, tape-worn impacts, and a bright modern stadium mix, dramatic, emotional, raw, vocal, deep, melodic hard rock Show Less 2d, 17h ago",
     "tags": [
-      "dark melodic hard rock with halftime stomp and syncopated riff breaks verse rides tense low tuned guitars and tom heavy drums",
-      "pre chorus opens into rising gang shouts",
-      "chorus slams with stacked gang vocals and a wide lead line",
-      "bridge drops to eerie clean guitar and a lone vocal before a last solo erupts",
+      "dark melodic hard",
       "distorted",
       "punchy",
-      "and cinematic with gritty close mic verses",
-      "shouted doubles on hooks",
+      "cinematic",
       "tape worn impacts",
-      "and a bright modern stadium mix",
+      "bright modern stadium",
       "dramatic",
       "emotional",
-      "raw",
-      "vocal",
       "deep",
-      "melodic hard rock"
+      "melodic hard rock",
+      "commercial",
+      "hard",
+      "rock"
     ]
   },
   {
@@ -39940,22 +39724,21 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Electric Fire Across the Wasteland",
     "metadataText": "Hard rock anthem with cinematic orchestral fusion, galloping mid-tempo groove, crushing palm-muted riffs and thunderous toms; verse rides tight guitars and low strings, pre-chorus widens with risers and brass swells, chorus opens into huge gang vocals and soaring lead harmonies, bridge strips to tense piano and strings before a final solo surge, Lead vocal is gritty and urgent with stacked doubles on the hook, shouted ad-libs, and long delay throws, Ear candy includes reverse cymbal lifts, taiko hits, and horn blasts into each chorus, Massive, bright, punchy mix with wide cinematic depth, hard rock, orchestral, soaring, dramatic, emotional\n\n0 0 0 Electric Fire Across the Wasteland Add a Caption Remix/Edit Hard rock anthem with cinematic orchestral fusion, galloping mid-tempo groove, crushing palm-muted riffs and thunderous toms; verse rides tight guitars and low strings, pre-chorus widens with risers and brass swells, chorus opens into huge gang vocals and soaring lead harmonies, bridge strips to tense piano and strings before a final solo surge, Lead vocal is gritty and urgent with stacked doubles on the hook, shouted ad-libs, and long delay throws, Ear candy includes reverse cymbal lifts, taiko hits, and horn blasts into each chorus, Massive, bright, punchy mix with wide cinematic depth, hard rock, orchestral, soaring, dramatic, emotional Show Less 1d, 15h ago",
     "tags": [
-      "hard rock anthem with cinematic orchestral fusion",
-      "galloping mid tempo groove",
-      "crushing palm muted riffs and thunderous toms verse rides tight guitars and low strings",
-      "pre chorus widens with risers and brass swells",
-      "chorus opens into huge gang vocals and soaring lead harmonies",
-      "bridge strips to tense piano and strings before a final solo surge",
-      "lead vocal is gritty and urgent with stacked doubles on the hook",
-      "shouted ad libs",
-      "and long delay throws",
-      "ear candy includes reverse cymbal lifts",
+      "hard rock anthem",
+      "crushing palm muted",
+      "is gritty",
       "taiko hits",
-      "and horn blasts into each chorus",
       "massive",
       "bright",
-      "punchy mix with wide cinematic depth",
-      "hard rock"
+      "punchy",
+      "hard rock",
+      "orchestral",
+      "soaring",
+      "dramatic",
+      "emotional",
+      "commercial",
+      "hard",
+      "rock"
     ]
   },
   {
@@ -39997,22 +39780,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Engines of the Broken Empire",
     "metadataText": "Electro hard rock with crushing riff attacks, punchy hybrid drums, and pulse-synced bass driving a fast, stomping groove; verse stays tight and tense with low guitar chugs and half-spoken lines, pre-chorus rises on stacked shouts and filtered synth swells, chorus blows open with gang vocals and huge melodic hooks, bridge drops to a stark vocal-and-tom groove before a final solo lift, Lead vocal is gritty and close, with doubled choruses, chopped ad-libs, and delay throws on key words, Metallic risers, reversed impacts, and glitch sparks bridge each section, Polished, cinematic, high-impact mix with bright guitars and massive low end, electric, hard rock, electronic, electro, soaring\n\n0 0 0 Engines of the Broken Empire Add a Caption Remix/Edit Electro hard rock with crushing riff attacks, punchy hybrid drums, and pulse-synced bass driving a fast, stomping groove; verse stays tight and tense with low guitar chugs and half-spoken lines, pre-chorus rises on stacked shouts and filtered synth swells, chorus blows open with gang vocals and huge melodic hooks, bridge drops to a stark vocal-and-tom groove before a final solo lift, Lead vocal is gritty and close, with doubled choruses, chopped ad-libs, and delay throws on key words, Metallic risers, reversed impacts, and glitch sparks bridge each section, Polished, cinematic, high-impact mix with bright guitars and massive low end, electric, hard rock, electronic, electro, soaring Show Less 1d, 15h ago",
     "tags": [
-      "electro hard rock with crushing riff attacks",
+      "electro hard rock",
       "punchy hybrid drums",
-      "and pulse synced bass driving a fast",
-      "stomping groove verse stays tight and tense with low guitar chugs and half spoken lines",
-      "pre chorus rises on stacked shouts and filtered synth swells",
-      "chorus blows open with gang vocals and huge melodic hooks",
-      "bridge drops to a stark vocal and tom groove before a final solo lift",
-      "lead vocal is gritty and close",
-      "with doubled choruses",
-      "chopped ad libs",
-      "and delay throws on key words",
-      "metallic risers",
-      "reversed impacts",
-      "and glitch sparks bridge each section",
+      "pulse synced bass",
+      "groove",
+      "is gritty",
+      "chopped",
+      "glitch sparks",
       "polished",
-      "cinematic"
+      "cinematic",
+      "high impact",
+      "electric",
+      "hard rock",
+      "electronic",
+      "electro",
+      "soaring",
+      "commercial"
     ]
   },
   {
@@ -40032,22 +39815,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Fire Beneath the Steel Horizon",
     "metadataText": "Hard rock anthem with driving mid-tempo shuffle, punchy palm-muted guitars, thunderous live drums, snarling bass and gritty male vocals; verse rides tense and lean, pre-chorus opens with rising toms and stacked gang shouts, chorus hits wide with soaring lead melody and shouted doubles, bridge drops to a half-time breakdown then launches into a final solo lift, Reverse swells, cymbal lifts, and a feedback scrape mark transitions, Bright, huge, and arena-ready, electric, rhythmic, hard rock, emotional, rock, soaring, raw, headbanging\n\n0 0 0 Fire Beneath the Steel Horizon Add a Caption Remix/Edit Hard rock anthem with driving mid-tempo shuffle, punchy palm-muted guitars, thunderous live drums, snarling bass and gritty male vocals; verse rides tense and lean, pre-chorus opens with rising toms and stacked gang shouts, chorus hits wide with soaring lead melody and shouted doubles, bridge drops to a half-time breakdown then launches into a final solo lift, Reverse swells, cymbal lifts, and a feedback scrape mark transitions, Bright, huge, and arena-ready, electric, rhythmic, hard rock, emotional, rock, soaring, raw, headbanging Show Less 2d, 17h ago",
     "tags": [
-      "hard rock anthem with driving mid tempo shuffle",
-      "punchy palm muted guitars",
+      "hard rock anthem",
+      "punchy palm muted",
       "thunderous live drums",
-      "snarling bass and gritty male vocals verse rides tense and lean",
-      "pre chorus opens with rising toms and stacked gang shouts",
-      "chorus hits wide with soaring lead melody and shouted doubles",
-      "bridge drops to a half time breakdown then launches into a final solo lift",
-      "reverse swells",
+      "snarling bass",
+      "reverse",
       "cymbal lifts",
-      "and a feedback scrape mark transitions",
       "bright",
       "huge",
-      "and arena ready",
+      "arena ready",
       "electric",
       "rhythmic",
-      "hard rock"
+      "hard rock",
+      "emotional",
+      "rock",
+      "soaring",
+      "headbanging"
     ]
   },
   {
@@ -40067,22 +39850,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Heavy Boots & Heavy Hearts",
     "metadataText": "Hard rock with driving mid-tempo swing, pounding kick-snare, thick bass, and razor guitar riffs; verse rides tight and gritty, pre-chorus opens with rising toms and gang shouts, chorus slams full-band with stacked doubles and shouted hook, bridge drops to bass and drums before a soaring solo, Stadium-sized, polished, bright, and aggressive, with risers, reverse swells, and explosive cymbal lifts, rock, electric, rhythmic, hard rock, emotional, soaring, headbanging, raw\n\n0 0 0 Heavy Boots & Heavy Hearts Add a Caption Remix/Edit Hard rock with driving mid-tempo swing, pounding kick-snare, thick bass, and razor guitar riffs; verse rides tight and gritty, pre-chorus opens with rising toms and gang shouts, chorus slams full-band with stacked doubles and shouted hook, bridge drops to bass and drums before a soaring solo, Stadium-sized, polished, bright, and aggressive, with risers, reverse swells, and explosive cymbal lifts, rock, electric, rhythmic, hard rock, emotional, soaring, headbanging, raw Show Less 2d, 17h ago",
     "tags": [
-      "hard rock with driving mid tempo swing",
+      "hard rock",
       "pounding kick snare",
       "thick bass",
-      "and razor guitar riffs verse rides tight and gritty",
-      "pre chorus opens with rising toms and gang shouts",
-      "chorus slams full band with stacked doubles and shouted hook",
-      "bridge drops to bass and drums before a soaring solo",
+      "razor guitar riffs",
       "stadium sized",
       "polished",
       "bright",
-      "and aggressive",
-      "with risers",
-      "reverse swells",
-      "and explosive cymbal lifts",
+      "aggressive",
+      "reverse",
+      "explosive cymbal lifts",
       "rock",
-      "electric"
+      "electric",
+      "rhythmic",
+      "emotional",
+      "soaring",
+      "headbanging"
     ]
   },
   {
@@ -40102,22 +39885,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Heavy Hearts & Open Highways",
     "metadataText": "Hard rock anthem with cinematic orchestral drive, driving 128 BPM pulse and stomping four-on-the-floor drums under crushing palm-muted riffs; verse rides low strings and tight rhythm guitars, pre-chorus opens with rising brass and taiko rolls, chorus hits with full choir stack, octave lead guitars, and massive timpani accents, Add reverse cymbal swells, low sub hits into drops, and sword-sharp string runs before solos, Huge, bright, battle-ready mix with wide arena depth and punchy low end, dramatic, emotional, orchestral, soaring, hard rock\n\n0 0 0 Heavy Hearts & Open Highways Add a Caption Remix/Edit Hard rock anthem with cinematic orchestral drive, driving 128 BPM pulse and stomping four-on-the-floor drums under crushing palm-muted riffs; verse rides low strings and tight rhythm guitars, pre-chorus opens with rising brass and taiko rolls, chorus hits with full choir stack, octave lead guitars, and massive timpani accents, Add reverse cymbal swells, low sub hits into drops, and sword-sharp string runs before solos, Huge, bright, battle-ready mix with wide arena depth and punchy low end, dramatic, emotional, orchestral, soaring, hard rock Show Less 1d, 15h ago",
     "tags": [
-      "hard rock anthem with cinematic orchestral drive",
-      "pre chorus opens with rising brass and taiko rolls",
-      "chorus hits with full choir stack",
-      "octave lead guitars",
-      "and massive timpani accents",
-      "add reverse cymbal swells",
-      "low sub hits into drops",
-      "and sword sharp string runs before solos",
+      "hard rock anthem",
+      "octave guitars",
+      "massive timpani accents",
+      "low sub hits",
+      "sword sharp string",
       "huge",
       "bright",
-      "battle ready mix with wide arena depth and punchy low end",
+      "battle ready",
       "dramatic",
       "emotional",
       "orchestral",
       "soaring",
-      "hard rock"
+      "hard rock",
+      "commercial",
+      "hard",
+      "rock"
     ]
   },
   {
@@ -40137,22 +39920,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Howling Through Electric Skies",
     "metadataText": "Electro hard rock with driving four-on-the-floor pulse, syncopated hybrid drums, crushing palm-muted guitars, and aggressive synth bass; verse rides tight riff loops and tense electronic pulses, pre-drop strips to filtered toms and rising noise, chorus explodes with stacked guitar stabs and wide synth chords, Glitch fills, reverse cymbal swells, impact hits, and metallic risers mark transitions, Polished, bright, and stadium-sized with a dark cyberpunk edge, soaring, electronic, electric, electro, hard rock\n\n0 0 0 Howling Through Electric Skies Add a Caption Remix/Edit Electro hard rock with driving four-on-the-floor pulse, syncopated hybrid drums, crushing palm-muted guitars, and aggressive synth bass; verse rides tight riff loops and tense electronic pulses, pre-drop strips to filtered toms and rising noise, chorus explodes with stacked guitar stabs and wide synth chords, Glitch fills, reverse cymbal swells, impact hits, and metallic risers mark transitions, Polished, bright, and stadium-sized with a dark cyberpunk edge, soaring, electronic, electric, electro, hard rock Show Less 1d, 15h ago",
     "tags": [
-      "electro hard rock with driving four on the floor pulse",
+      "electro hard rock",
       "syncopated hybrid drums",
-      "crushing palm muted guitars",
-      "and aggressive synth bass verse rides tight riff loops and tense electronic pulses",
-      "pre drop strips to filtered toms and rising noise",
-      "chorus explodes with stacked guitar stabs and wide synth chords",
-      "glitch fills",
-      "reverse cymbal swells",
+      "crushing palm muted",
+      "aggressive synth bass",
+      "reverse cymbal",
       "impact hits",
-      "and metallic risers mark transitions",
       "polished",
       "bright",
-      "and stadium sized with a dark cyberpunk edge",
+      "stadium sized",
       "soaring",
       "electronic",
-      "electric"
+      "electric",
+      "electro",
+      "hard rock",
+      "commercial",
+      "hard"
     ]
   },
   {
@@ -40172,22 +39955,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Last Exit Before Oblivion",
     "metadataText": "Electro hard rock with driving four-on-the-floor pulse, syncopated hybrid drums, crushing palm-muted guitars, and aggressive synth bass; verse rides tight riff loops and tense electronic pulses, pre-drop strips to filtered toms and rising noise, chorus explodes with stacked guitar stabs and wide synth chords, Glitch fills, reverse cymbal swells, impact hits, and metallic risers mark transitions, Polished, bright, and stadium-sized with a dark cyberpunk edge, soaring, electronic, electric, electro, hard rock\n\n0 0 0 Last Exit Before Oblivion Add a Caption Remix/Edit Electro hard rock with driving four-on-the-floor pulse, syncopated hybrid drums, crushing palm-muted guitars, and aggressive synth bass; verse rides tight riff loops and tense electronic pulses, pre-drop strips to filtered toms and rising noise, chorus explodes with stacked guitar stabs and wide synth chords, Glitch fills, reverse cymbal swells, impact hits, and metallic risers mark transitions, Polished, bright, and stadium-sized with a dark cyberpunk edge, soaring, electronic, electric, electro, hard rock Show Less 1d, 15h ago",
     "tags": [
-      "electro hard rock with driving four on the floor pulse",
+      "electro hard rock",
       "syncopated hybrid drums",
-      "crushing palm muted guitars",
-      "and aggressive synth bass verse rides tight riff loops and tense electronic pulses",
-      "pre drop strips to filtered toms and rising noise",
-      "chorus explodes with stacked guitar stabs and wide synth chords",
-      "glitch fills",
-      "reverse cymbal swells",
+      "crushing palm muted",
+      "aggressive synth bass",
+      "reverse cymbal",
       "impact hits",
-      "and metallic risers mark transitions",
       "polished",
       "bright",
-      "and stadium sized with a dark cyberpunk edge",
+      "stadium sized",
       "soaring",
       "electronic",
-      "electric"
+      "electric",
+      "electro",
+      "hard rock",
+      "commercial",
+      "hard"
     ]
   },
   {
@@ -40207,22 +39990,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Louder Than the Coming Storm",
     "metadataText": "Hard rock anthem with cinematic orchestral drive, four-on-the-floor kick push under crushing palm-muted riffs and thunderous toms; verse rides low and tense with tight gang shouts, pre-chorus strips to voice, toms, and rising strings, chorus opens wide with stacked harmonies, brass hits, and shouted gang vocals, Add reversed cymbal swells, snap-string runs, and a soaring guitar-solo lift before the final chorus, Massive, bright, and battle-ready mix, emotional, soaring, hard rock, dramatic, orchestral\n\n0 0 0 Louder Than the Coming Storm Add a Caption Remix/Edit Hard rock anthem with cinematic orchestral drive, four-on-the-floor kick push under crushing palm-muted riffs and thunderous toms; verse rides low and tense with tight gang shouts, pre-chorus strips to voice, toms, and rising strings, chorus opens wide with stacked harmonies, brass hits, and shouted gang vocals, Add reversed cymbal swells, snap-string runs, and a soaring guitar-solo lift before the final chorus, Massive, bright, and battle-ready mix, emotional, soaring, hard rock, dramatic, orchestral Show Less 1d, 15h ago",
     "tags": [
-      "hard rock anthem with cinematic orchestral drive",
-      "four on the floor kick push under crushing palm muted riffs and thunderous toms verse rides low and tense with tight gang shouts",
-      "pre chorus strips to voice",
+      "hard rock anthem",
       "toms",
-      "and rising strings",
-      "chorus opens wide with stacked harmonies",
+      "rising strings",
       "brass hits",
-      "and shouted gang vocals",
-      "add reversed cymbal swells",
       "snap string runs",
-      "and a soaring guitar solo lift before the final chorus",
       "massive",
       "bright",
-      "and battle ready mix",
+      "battle ready",
       "emotional",
-      "soaring"
+      "soaring",
+      "hard rock",
+      "dramatic",
+      "orchestral",
+      "commercial",
+      "hard",
+      "rock"
     ]
   },
   {
@@ -40242,22 +40025,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Louder Than the Midnight Sky",
     "metadataText": "Hard rock anthem with driving mid-tempo stomp, syncopated palm-muted riffs, thunderous live drums, and a hook that opens into a huge half-time chorus; verses ride gritty low-end guitar chugs, pre-chorus strips to toms and gang shouts, chorus hits with stacked gang vocals and soaring lead lines, bridge drops into a cinematic breakdown with snare echoes then a final solo lift, Gritty male vocals, doubled on key phrases, shouted ad-libs on the hook, delay throws on the last word of each chorus, Risers into the chorus, reverse cymbal swells before the breakdown, and a screaming guitar fill into the final lift, Polished, wide, and punishingly loud, hard rock, soaring, raw, headbanging, electric, rock, rhythmic, emotional\n\n1 0 0 Louder Than the Midnight Sky Add a Caption Remix/Edit Hard rock anthem with driving mid-tempo stomp, syncopated palm-muted riffs, thunderous live drums, and a hook that opens into a huge half-time chorus; verses ride gritty low-end guitar chugs, pre-chorus strips to toms and gang shouts, chorus hits with stacked gang vocals and soaring lead lines, bridge drops into a cinematic breakdown with snare echoes then a final solo lift, Gritty male vocals, doubled on key phrases, shouted ad-libs on the hook, delay throws on the last word of each chorus, Risers into the chorus, reverse cymbal swells before the breakdown, and a screaming guitar fill into the final lift, Polished, wide, and punishingly loud, hard rock, soaring, raw, headbanging, electric, rock, rhythmic, emotional Show Less 2d, 17h ago",
     "tags": [
-      "hard rock anthem with driving mid tempo stomp",
-      "syncopated palm muted riffs",
+      "hard rock anthem",
+      "syncopated palm muted",
       "thunderous live drums",
-      "and a hook that opens into a huge half time chorus verses ride gritty low end guitar chugs",
-      "pre chorus strips to toms and gang shouts",
-      "chorus hits with stacked gang vocals and soaring lead lines",
-      "bridge drops into a cinematic breakdown with snare echoes then a final solo lift",
+      "hook that opens",
       "gritty male vocals",
-      "doubled on key phrases",
-      "shouted ad libs on the hook",
-      "delay throws on the last word of each chorus",
-      "risers into the chorus",
-      "reverse cymbal swells before the breakdown",
-      "and a screaming guitar fill into the final lift",
+      "on key phrases",
+      "reverse cymbal before",
       "polished",
-      "wide"
+      "punishingly loud",
+      "hard rock",
+      "soaring",
+      "headbanging",
+      "electric",
+      "rock",
+      "rhythmic",
+      "emotional"
     ]
   },
   {
@@ -40277,22 +40060,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Midnight Reckless Revival",
     "metadataText": "Electro hard rock with crushing riff attacks, punchy hybrid drums, and pulse-synced bass driving a fast, stomping groove; verse stays tight and tense with low guitar chugs and half-spoken lines, pre-chorus rises on stacked shouts and filtered synth swells, chorus blows open with gang vocals and huge melodic hooks, bridge drops to a stark vocal-and-tom groove before a final solo lift, Lead vocal is gritty and close, with doubled choruses, chopped ad-libs, and delay throws on key words, Metallic risers, reversed impacts, and glitch sparks bridge each section, Polished, cinematic, high-impact mix with bright guitars and massive low end, electric, hard rock, electronic, electro, soaring\n\n0 0 0 Midnight Reckless Revival Add a Caption Remix/Edit Electro hard rock with crushing riff attacks, punchy hybrid drums, and pulse-synced bass driving a fast, stomping groove; verse stays tight and tense with low guitar chugs and half-spoken lines, pre-chorus rises on stacked shouts and filtered synth swells, chorus blows open with gang vocals and huge melodic hooks, bridge drops to a stark vocal-and-tom groove before a final solo lift, Lead vocal is gritty and close, with doubled choruses, chopped ad-libs, and delay throws on key words, Metallic risers, reversed impacts, and glitch sparks bridge each section, Polished, cinematic, high-impact mix with bright guitars and massive low end, electric, hard rock, electronic, electro, soaring Show Less 1d, 15h ago",
     "tags": [
-      "electro hard rock with crushing riff attacks",
+      "electro hard rock",
       "punchy hybrid drums",
-      "and pulse synced bass driving a fast",
-      "stomping groove verse stays tight and tense with low guitar chugs and half spoken lines",
-      "pre chorus rises on stacked shouts and filtered synth swells",
-      "chorus blows open with gang vocals and huge melodic hooks",
-      "bridge drops to a stark vocal and tom groove before a final solo lift",
-      "lead vocal is gritty and close",
-      "with doubled choruses",
-      "chopped ad libs",
-      "and delay throws on key words",
-      "metallic risers",
-      "reversed impacts",
-      "and glitch sparks bridge each section",
+      "pulse synced bass",
+      "groove",
+      "is gritty",
+      "chopped",
+      "glitch sparks",
       "polished",
-      "cinematic"
+      "cinematic",
+      "high impact",
+      "electric",
+      "hard rock",
+      "electronic",
+      "electro",
+      "soaring",
+      "commercial"
     ]
   },
   {
@@ -40312,22 +40095,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/No Brakes on the Fast Lane",
     "metadataText": "Hard rock anthem with crushing electric guitar riffs, thunderous live drums, gritty male vocals, heavy bass, and aggressive rhythmic drive; verse rides tight palm-muted guitars and snare hits, pre-chorus opens with rising toms and gang shouts, chorus slams with wide stacked vocals and a soaring hook, Bridge drops to a cinematic half-time breakdown, then explodes into a solo and final chorus, Polished modern rock mix, huge low end, bright lead guitars, raw stadium punch, and crowd-ready ad-libs, rhythmic, electric, raw, rock, emotional, hard rock, soaring, headbanging\n\n0 0 0 No Brakes on the Fast Lane Add a Caption Remix/Edit Hard rock anthem with crushing electric guitar riffs, thunderous live drums, gritty male vocals, heavy bass, and aggressive rhythmic drive; verse rides tight palm-muted guitars and snare hits, pre-chorus opens with rising toms and gang shouts, chorus slams with wide stacked vocals and a soaring hook, Bridge drops to a cinematic half-time breakdown, then explodes into a solo and final chorus, Polished modern rock mix, huge low end, bright lead guitars, raw stadium punch, and crowd-ready ad-libs, rhythmic, electric, raw, rock, emotional, hard rock, soaring, headbanging Show Less 2d, 17h ago",
     "tags": [
-      "hard rock anthem with crushing electric guitar riffs",
+      "hard rock anthem",
       "thunderous live drums",
       "gritty male vocals",
       "heavy bass",
-      "and aggressive rhythmic drive verse rides tight palm muted guitars and snare hits",
-      "pre chorus opens with rising toms and gang shouts",
-      "chorus slams with wide stacked vocals and a soaring hook",
-      "bridge drops to a cinematic half time breakdown",
-      "then explodes into a solo and final chorus",
-      "polished modern rock mix",
+      "aggressive rhythmic drive",
+      "explodes into a",
+      "polished modern rock",
       "huge low end",
-      "bright lead guitars",
+      "bright guitars",
       "raw stadium punch",
-      "and crowd ready ad libs",
+      "crowd ready",
       "rhythmic",
-      "electric"
+      "electric",
+      "rock",
+      "emotional",
+      "hard rock"
     ]
   },
   {
@@ -40347,22 +40130,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Rattlesnakes & Radio Static",
     "metadataText": "Hard rock anthem with driving half-time drums, palm-muted riff stabs, and cinematic orchestral swells; verse rides tight guitars and low strings, pre-chorus climbs with snare rolls and rising brass, chorus hits with gang vocals, wide power chords, and a unison hook, Vocals are gritty and close in verses, stacked with shouted doubles on hooks, with delay throws on the last word, Use reversed cymbal swells, timpani hits before drops, and a soaring string lift into the solo, Mix is huge, bright, and battle-cinematic, dramatic, soaring, hard rock, emotional, orchestral\n\n0 0 0 Rattlesnakes & Radio Static Add a Caption Remix/Edit Hard rock anthem with driving half-time drums, palm-muted riff stabs, and cinematic orchestral swells; verse rides tight guitars and low strings, pre-chorus climbs with snare rolls and rising brass, chorus hits with gang vocals, wide power chords, and a unison hook, Vocals are gritty and close in verses, stacked with shouted doubles on hooks, with delay throws on the last word, Use reversed cymbal swells, timpani hits before drops, and a soaring string lift into the solo, Mix is huge, bright, and battle-cinematic, dramatic, soaring, hard rock, emotional, orchestral Show Less 1d, 15h ago",
     "tags": [
-      "hard rock anthem with driving half time drums",
-      "palm muted riff stabs",
-      "and cinematic orchestral swells verse rides tight guitars and low strings",
-      "pre chorus climbs with snare rolls and rising brass",
-      "chorus hits with gang vocals",
-      "wide power chords",
-      "and a unison hook",
-      "vocals are gritty and close in verses",
-      "stacked with shouted doubles on hooks",
-      "with delay throws on the last word",
-      "use reversed cymbal swells",
-      "timpani hits before drops",
-      "and a soaring string lift into the solo",
-      "mix is huge",
+      "hard rock anthem",
+      "palm muted riff",
+      "cinematic orchestral",
+      "power chords",
+      "unison hook",
+      "vocals are gritty",
+      "stacked",
+      "timpani hits before",
+      "soaring string lift",
+      "is huge",
       "bright",
-      "and battle cinematic"
+      "battle cinematic",
+      "dramatic",
+      "soaring",
+      "hard rock",
+      "emotional"
     ]
   },
   {
@@ -40382,22 +40165,21 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Riot Lights on Main Street",
     "metadataText": "Hard rock anthem with driving mid-tempo shuffle, crushing palm-muted riffs and thunderous live drums; verse rides gritty low-end chugs, pre-chorus opens into snare lifts and gang shouts, chorus lands huge with stacked doubles and shouted gang hooks, breakdown drops to tom hits and a screamed stop-time line before the final solo, Vinyl scrape, reverse cymbal swells, and feedback dives, Polished, massive stadium mix with raw edge, rhythmic, soaring, raw, electric, rock, emotional, headbanging, hard rock\n\n0 0 0 Riot Lights on Main Street Add a Caption Remix/Edit Hard rock anthem with driving mid-tempo shuffle, crushing palm-muted riffs and thunderous live drums; verse rides gritty low-end chugs, pre-chorus opens into snare lifts and gang shouts, chorus lands huge with stacked doubles and shouted gang hooks, breakdown drops to tom hits and a screamed stop-time line before the final solo, Vinyl scrape, reverse cymbal swells, and feedback dives, Polished, massive stadium mix with raw edge, rhythmic, soaring, raw, electric, rock, emotional, headbanging, hard rock Show Less 2d, 17h ago",
     "tags": [
-      "hard rock anthem with driving mid tempo shuffle",
-      "crushing palm muted riffs and thunderous live drums verse rides gritty low end chugs",
-      "pre chorus opens into snare lifts and gang shouts",
-      "chorus lands huge with stacked doubles and shouted gang hooks",
-      "breakdown drops to tom hits and a screamed stop time line before the final solo",
-      "vinyl scrape",
-      "reverse cymbal swells",
-      "and feedback dives",
+      "hard rock anthem",
+      "crushing palm muted",
+      "reverse cymbal",
+      "feedback dives",
       "polished",
-      "massive stadium mix with raw edge",
+      "massive stadium",
       "rhythmic",
       "soaring",
-      "raw",
       "electric",
       "rock",
-      "emotional"
+      "emotional",
+      "headbanging",
+      "hard rock",
+      "commercial",
+      "hard"
     ]
   },
   {
@@ -40417,22 +40199,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Riot Lights on Main Street (1)",
     "metadataText": "Hard rock anthem with cinematic orchestral layering, driving mid-tempo four-on-the-floor pulse, syncopated palm-muted riffs, thunderous tom hits, and sweeping string/brass swells; verses stay tense with clipped guitar and low strings, pre-chorus lifts into snare rolls and rising choir pads, chorus hits wide with gang shouts and stacked harmonies, bridge drops to a lone vocal over dark cello before a final full-force rush, Close-mic lead vocal with gritty doubles, soaring high-note ad-libs, delay throws on key words, explosive risers, reverse cymbal swells, and a huge bright-and-punchy mix, hard rock, dramatic, soaring, orchestral, emotional",
     "tags": [
-      "hard rock anthem with cinematic orchestral layering",
-      "driving mid tempo four on the floor pulse",
-      "syncopated palm muted riffs",
+      "hard rock anthem",
+      "syncopated palm muted",
       "thunderous tom hits",
-      "and sweeping string brass swells verses stay tense with clipped guitar and low strings",
-      "pre chorus lifts into snare rolls and rising choir pads",
-      "chorus hits wide with gang shouts and stacked harmonies",
-      "bridge drops to a lone vocal over dark cello before a final full force rush",
-      "close mic lead vocal with gritty doubles",
-      "soaring high note ad libs",
-      "delay throws on key words",
+      "sweeping string brass",
+      "soaring high note",
       "explosive risers",
-      "reverse cymbal swells",
-      "and a huge bright and punchy mix",
+      "reverse cymbal",
+      "huge bright",
       "hard rock",
-      "dramatic"
+      "dramatic",
+      "soaring",
+      "orchestral",
+      "emotional",
+      "commercial",
+      "hard",
+      "rock"
     ]
   },
   {
@@ -40452,22 +40234,19 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Running Wild Through the Storm",
     "metadataText": "Dark melodic hard rock with halftime stomp and syncopated riff breaks; verse rides tense low-tuned guitars and tom-heavy drums, pre-chorus opens into rising gang shouts, chorus slams with stacked gang vocals and a wide lead line, Bridge drops to eerie clean guitar and a lone vocal before a last solo erupts, Distorted, punchy, and cinematic with gritty close-mic verses, shouted doubles on hooks, tape-worn impacts, and a bright modern stadium mix, dramatic, emotional, raw, vocal, deep, melodic hard rock\n\n0 0 0 Running Wild Through the Storm Add a Caption Remix/Edit Dark melodic hard rock with halftime stomp and syncopated riff breaks; verse rides tense low-tuned guitars and tom-heavy drums, pre-chorus opens into rising gang shouts, chorus slams with stacked gang vocals and a wide lead line, Bridge drops to eerie clean guitar and a lone vocal before a last solo erupts, Distorted, punchy, and cinematic with gritty close-mic verses, shouted doubles on hooks, tape-worn impacts, and a bright modern stadium mix, dramatic, emotional, raw, vocal, deep, melodic hard rock Show Less 2d, 17h ago",
     "tags": [
-      "dark melodic hard rock with halftime stomp and syncopated riff breaks verse rides tense low tuned guitars and tom heavy drums",
-      "pre chorus opens into rising gang shouts",
-      "chorus slams with stacked gang vocals and a wide lead line",
-      "bridge drops to eerie clean guitar and a lone vocal before a last solo erupts",
+      "dark melodic hard",
       "distorted",
       "punchy",
-      "and cinematic with gritty close mic verses",
-      "shouted doubles on hooks",
+      "cinematic",
       "tape worn impacts",
-      "and a bright modern stadium mix",
+      "bright modern stadium",
       "dramatic",
       "emotional",
-      "raw",
-      "vocal",
       "deep",
-      "melodic hard rock"
+      "melodic hard rock",
+      "commercial",
+      "hard",
+      "rock"
     ]
   },
   {
@@ -40487,22 +40266,21 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Screaming Engines in the Rain",
     "metadataText": "Dark melodic hard rock with heavy distorted guitar riffs and pounding drums on a driving mid-tempo pulse; verse rides tight bass, tom hits, and gritty guitar chugs; pre-chorus opens with rising cymbals and layered gang shouts; chorus hits with wide power chords, stacked doubles, and a chantable gang-vocal hook, Bridge drops to lone bass and echoing lead, then a dramatic guitar solo surges into the final chorus, Raw live-band aggression, cinematic textures, bright punchy mix, vocal, deep, raw, emotional, dramatic, melodic hard rock\n\n0 0 0 Screaming Engines in the Rain Add a Caption Remix/Edit Dark melodic hard rock with heavy distorted guitar riffs and pounding drums on a driving mid-tempo pulse; verse rides tight bass, tom hits, and gritty guitar chugs; pre-chorus opens with rising cymbals and layered gang shouts; chorus hits with wide power chords, stacked doubles, and a chantable gang-vocal hook, Bridge drops to lone bass and echoing lead, then a dramatic guitar solo surges into the final chorus, Raw live-band aggression, cinematic textures, bright punchy mix, vocal, deep, raw, emotional, dramatic, melodic hard rock Show Less 2d, 17h ago",
     "tags": [
-      "dark melodic hard rock with heavy distorted guitar riffs and pounding drums on a driving mid tempo pulse verse rides tight bass",
+      "dark melodic hard",
       "tom hits",
-      "and gritty guitar chugs pre chorus opens with rising cymbals and layered gang shouts chorus hits with wide power chords",
+      "gritty guitar chugs",
       "stacked doubles",
-      "and a chantable gang vocal hook",
-      "bridge drops to lone bass and echoing lead",
-      "then a dramatic guitar solo surges into the final chorus",
-      "raw live band aggression",
+      "chantable gang hook",
+      "raw live band",
       "cinematic textures",
-      "bright punchy mix",
-      "vocal",
+      "bright punchy",
       "deep",
-      "raw",
       "emotional",
       "dramatic",
-      "melodic hard rock"
+      "melodic hard rock",
+      "commercial",
+      "hard",
+      "rock"
     ]
   },
   {
@@ -40522,22 +40300,21 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Shadow Riders of the Highway",
     "metadataText": "Hard rock anthem at a driving mid-tempo with punchy syncopated drums, chugging palm-muted guitars, and a heavy bass lock; verse rides tight and gritty, pre-chorus opens with rising toms and shouted gang lifts, chorus hits with wide gang vocals and stacked harmonies, bridge drops to a cinematic half-time breakdown before the final solo and last chorus, Gritty close-mic lead vocal with doubled hook lines, short delay throws on punch words, arena-sized gang shouts, bright and polished modern mix with huge low end and sharp guitar edges, hard rock, emotional, electric, raw, rhythmic, headbanging, rock, soaring\n\n0 0 0 Shadow Riders of the Highway Add a Caption Remix/Edit Hard rock anthem at a driving mid-tempo with punchy syncopated drums, chugging palm-muted guitars, and a heavy bass lock; verse rides tight and gritty, pre-chorus opens with rising toms and shouted gang lifts, chorus hits with wide gang vocals and stacked harmonies, bridge drops to a cinematic half-time breakdown before the final solo and last chorus, Gritty close-mic lead vocal with doubled hook lines, short delay throws on punch words, arena-sized gang shouts, bright and polished modern mix with huge low end and sharp guitar edges, hard rock, emotional, electric, raw, rhythmic, headbanging, rock, soaring Show Less 2d, 17h ago",
     "tags": [
-      "hard rock anthem at a driving mid tempo with punchy syncopated drums",
-      "chugging palm muted guitars",
-      "and a heavy bass lock verse rides tight and gritty",
-      "pre chorus opens with rising toms and shouted gang lifts",
-      "chorus hits with wide gang vocals and stacked harmonies",
-      "bridge drops to a cinematic half time breakdown before the final solo and last chorus",
-      "gritty close mic lead vocal with doubled hook lines",
-      "short delay throws on punch words",
-      "arena sized gang shouts",
-      "bright and polished modern mix with huge low end and sharp guitar edges",
+      "hard rock anthem",
+      "chugging palm muted",
+      "heavy bass lock",
+      "gritty",
+      "arena sized gang",
+      "bright",
       "hard rock",
       "emotional",
       "electric",
-      "raw",
       "rhythmic",
-      "headbanging"
+      "headbanging",
+      "rock",
+      "soaring",
+      "commercial",
+      "hard"
     ]
   },
   {
@@ -40557,22 +40334,20 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Shattered Roads & Neon Flames",
     "metadataText": "Hard rock with a mid-tempo stomp and swung drum fills, heavy distorted guitar riffs, deep bass grooves, and gritty male vocals, Verse rides tense low-end chugs; pre-chorus lifts with tom rolls and rising gang echoes; chorus hits wide with stacked shout doubles and a sharp hook, Bridge drops to half-time and guitar harmonics, then a dramatic solo explodes back in, Cinematic, raw, bright-punchy mix, melodic hard rock, raw, vocal, emotional, dramatic, deep\n\n0 0 0 Shattered Roads & Neon Flames Add a Caption Remix/Edit Hard rock with a mid-tempo stomp and swung drum fills, heavy distorted guitar riffs, deep bass grooves, and gritty male vocals, Verse rides tense low-end chugs; pre-chorus lifts with tom rolls and rising gang echoes; chorus hits wide with stacked shout doubles and a sharp hook, Bridge drops to half-time and guitar harmonics, then a dramatic solo explodes back in, Cinematic, raw, bright-punchy mix, melodic hard rock, raw, vocal, emotional, dramatic, deep Show Less 2d, 17h ago",
     "tags": [
-      "hard rock with a mid tempo stomp and swung drum fills",
-      "heavy distorted guitar riffs",
+      "swung drums",
+      "heavy distorted guitar",
       "deep bass grooves",
-      "and gritty male vocals",
-      "verse rides tense low end chugs pre chorus lifts with tom rolls and rising gang echoes chorus hits wide with stacked shout doubles and a sharp hook",
-      "bridge drops to half time and guitar harmonics",
-      "then a dramatic solo explodes back in",
+      "gritty male vocals",
+      "dramatic solo explodes",
       "cinematic",
-      "raw",
-      "bright punchy mix",
+      "bright punchy",
       "melodic hard rock",
-      "vocal",
       "emotional",
       "dramatic",
       "deep",
-      "commercial"
+      "commercial",
+      "hard",
+      "rock"
     ]
   },
   {
@@ -40592,14 +40367,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Sirens Echo Across the Overpass",
     "metadataText": "Electro hard rock with 164 BPM half-time bounce, crushing palm-muted guitar riffs over aggressive synth bass and punchy hybrid drums; verse drives lean and tense, pre-chorus climbs with filtered pulses and gang shouts, chorus explodes with stacked screams and a huge octave guitar hook, bridge drops to icy pads and toms before a soaring solo finale, Glossy, brutal, wide, and cinematic, electro, soaring, hard rock, electric, electronic\n\n0 0 0 Sirens Echo Across the Overpass Add a Caption Remix/Edit Electro hard rock with 164 BPM half-time bounce, crushing palm-muted guitar riffs over aggressive synth bass and punchy hybrid drums; verse drives lean and tense, pre-chorus climbs with filtered pulses and gang shouts, chorus explodes with stacked screams and a huge octave guitar hook, bridge drops to icy pads and toms before a soaring solo finale, Glossy, brutal, wide, and cinematic, electro, soaring, hard rock, electric, electronic Show Less 1d, 15h ago",
     "tags": [
-      "crushing palm muted guitar riffs over aggressive synth bass and punchy hybrid drums verse drives lean and tense",
-      "pre chorus climbs with filtered pulses and gang shouts",
-      "chorus explodes with stacked screams and a huge octave guitar hook",
-      "bridge drops to icy pads and toms before a soaring solo finale",
+      "crushing palm muted",
       "glossy",
       "brutal",
-      "wide",
-      "and cinematic",
+      "cinematic",
       "electro",
       "soaring",
       "hard rock",
@@ -40627,22 +40398,21 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Steel Thunder in the Distance",
     "metadataText": "Hard rock anthem with cinematic orchestral fusion, galloping mid-tempo groove, crushing palm-muted riffs and thunderous toms; verse rides tight guitars and low strings, pre-chorus widens with risers and brass swells, chorus opens into huge gang vocals and soaring lead harmonies, bridge strips to tense piano and strings before a final solo surge, Lead vocal is gritty and urgent with stacked doubles on the hook, shouted ad-libs, and long delay throws, Ear candy includes reverse cymbal lifts, taiko hits, and horn blasts into each chorus, Massive, bright, punchy mix with wide cinematic depth, hard rock, orchestral, soaring, dramatic, emotional\n\n0 0 0 Steel Thunder in the Distance Add a Caption Remix/Edit Hard rock anthem with cinematic orchestral fusion, galloping mid-tempo groove, crushing palm-muted riffs and thunderous toms; verse rides tight guitars and low strings, pre-chorus widens with risers and brass swells, chorus opens into huge gang vocals and soaring lead harmonies, bridge strips to tense piano and strings before a final solo surge, Lead vocal is gritty and urgent with stacked doubles on the hook, shouted ad-libs, and long delay throws, Ear candy includes reverse cymbal lifts, taiko hits, and horn blasts into each chorus, Massive, bright, punchy mix with wide cinematic depth, hard rock, orchestral, soaring, dramatic, emotional Show Less 1d, 15h ago",
     "tags": [
-      "hard rock anthem with cinematic orchestral fusion",
-      "galloping mid tempo groove",
-      "crushing palm muted riffs and thunderous toms verse rides tight guitars and low strings",
-      "pre chorus widens with risers and brass swells",
-      "chorus opens into huge gang vocals and soaring lead harmonies",
-      "bridge strips to tense piano and strings before a final solo surge",
-      "lead vocal is gritty and urgent with stacked doubles on the hook",
-      "shouted ad libs",
-      "and long delay throws",
-      "ear candy includes reverse cymbal lifts",
+      "hard rock anthem",
+      "crushing palm muted",
+      "is gritty",
       "taiko hits",
-      "and horn blasts into each chorus",
       "massive",
       "bright",
-      "punchy mix with wide cinematic depth",
-      "hard rock"
+      "punchy",
+      "hard rock",
+      "orchestral",
+      "soaring",
+      "dramatic",
+      "emotional",
+      "commercial",
+      "hard",
+      "rock"
     ]
   },
   {
@@ -40662,22 +40432,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Steel Veins & Radio Waves",
     "metadataText": "Electro hard rock with crushing down-tuned riffs, aggressive synth bass, punchy hybrid drums, and a four-on-the-floor lift in the hook; verse rides tight stabs and tom hits, pre-chorus strips to vocal tension and rising noise, chorus explodes with gang shouts and stacked guitars, Soaring lead-guitar fills, glitch sparks, reverse swells, huge sidechain pulses, Polished, dark, arena-bright mix, electric, electro, hard rock, soaring, electronic\n\n0 0 0 Steel Veins & Radio Waves Add a Caption Remix/Edit Electro hard rock with crushing down-tuned riffs, aggressive synth bass, punchy hybrid drums, and a four-on-the-floor lift in the hook; verse rides tight stabs and tom hits, pre-chorus strips to vocal tension and rising noise, chorus explodes with gang shouts and stacked guitars, Soaring lead-guitar fills, glitch sparks, reverse swells, huge sidechain pulses, Polished, dark, arena-bright mix, electric, electro, hard rock, soaring, electronic Show Less 1d, 15h ago",
     "tags": [
-      "electro hard rock with crushing down tuned riffs",
+      "electro hard rock",
       "aggressive synth bass",
       "punchy hybrid drums",
-      "and a four on the floor lift in the hook verse rides tight stabs and tom hits",
-      "pre chorus strips to vocal tension and rising noise",
-      "chorus explodes with gang shouts and stacked guitars",
-      "soaring lead guitar fills",
+      "soaring guitar fills",
       "glitch sparks",
-      "reverse swells",
+      "reverse",
       "huge sidechain pulses",
       "polished",
       "dark",
-      "arena bright mix",
+      "arena bright",
       "electric",
       "electro",
-      "hard rock"
+      "hard rock",
+      "soaring",
+      "electronic",
+      "commercial"
     ]
   },
   {
@@ -40697,22 +40467,21 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Steel Wings Over the Wasteland",
     "metadataText": "Hard rock with crushing downstroke riffs, thunderous live drums, gritty male vocals, heavy bass push, and a halftime pre-chorus that slams into a widescreen stadium chorus; verses stay tight and aggressive, pre-chorus opens with gang shouts and rising tom fills, chorus hits with stacked doubles and shouted gang vocals, bridge drops to a tense guitar drone before a soaring solo and final double-time chorus, Vocal delivery is raw and urgent, with delay throws on the last words, reversed swells into each drop, and a bright, punchy modern mix built for headbanging impact, hard rock, electric, headbanging, rock, raw, rhythmic, emotional, soaring\n\n0 0 0 Steel Wings Over the Wasteland Add a Caption Remix/Edit Hard rock with crushing downstroke riffs, thunderous live drums, gritty male vocals, heavy bass push, and a halftime pre-chorus that slams into a widescreen stadium chorus; verses stay tight and aggressive, pre-chorus opens with gang shouts and rising tom fills, chorus hits with stacked doubles and shouted gang vocals, bridge drops to a tense guitar drone before a soaring solo and final double-time chorus, Vocal delivery is raw and urgent, with delay throws on the last words, reversed swells into each drop, and a bright, punchy modern mix built for headbanging impact, hard rock, electric, headbanging, rock, raw, rhythmic, emotional, soaring Show Less 2d, 17h ago",
     "tags": [
-      "hard rock with crushing downstroke riffs",
+      "hard rock",
       "thunderous live drums",
       "gritty male vocals",
       "heavy bass push",
-      "and a halftime pre chorus that slams into a widescreen stadium chorus verses stay tight and aggressive",
-      "pre chorus opens with gang shouts and rising tom fills",
-      "chorus hits with stacked doubles and shouted gang vocals",
-      "bridge drops to a tense guitar drone before a soaring solo and final double time chorus",
-      "vocal delivery is raw and urgent",
-      "with delay throws on the last words",
-      "reversed swells into each drop",
-      "and a bright",
-      "punchy modern mix built for headbanging impact",
-      "hard rock",
+      "halftime",
+      "delivery is raw",
+      "bright",
       "electric",
-      "headbanging"
+      "headbanging",
+      "rock",
+      "rhythmic",
+      "emotional",
+      "soaring",
+      "commercial",
+      "hard"
     ]
   },
   {
@@ -40732,22 +40501,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/The Devil Sleeps on the Backseat",
     "metadataText": "Electro hard rock anthem with crushing guitar riffs, aggressive electronic basslines, punchy hybrid drums, cinematic synth swells, explosive drop sections, and rebellious stadium chants; verse drives on tight riff stabs and tense low-end pulses, pre-chorus strips to toms and filtered synth rise, chorus slams with gang vocals and stacked guitars, bridge opens into a soaring solo over half-time drums, final chorus adds extra octave harmonies and crowd-style shouts, Male vocals, gritty doubles, shouted hook layers, delay throws on key words, reverse impacts and laser risers into each drop, polished and wide with a bright punchy master, hard rock, soaring, electric, electronic, electro\n\n0 0 0 The Devil Sleeps on the Backseat Add a Caption Remix/Edit Electro hard rock anthem with crushing guitar riffs, aggressive electronic basslines, punchy hybrid drums, cinematic synth swells, explosive drop sections, and rebellious stadium chants; verse drives on tight riff stabs and tense low-end pulses, pre-chorus strips to toms and filtered synth rise, chorus slams with gang vocals and stacked guitars, bridge opens into a soaring solo over half-time drums, final chorus adds extra octave harmonies and crowd-style shouts, Male vocals, gritty doubles, shouted hook layers, delay throws on key words, reverse impacts and laser risers into each drop, polished and wide with a bright punchy master, hard rock, soaring, electric, electronic, electro Show Less 1d, 15h ago",
     "tags": [
-      "electro hard rock anthem with crushing guitar riffs",
+      "electro hard rock",
       "aggressive electronic basslines",
       "punchy hybrid drums",
-      "cinematic synth swells",
-      "explosive drop sections",
-      "and rebellious stadium chants verse drives on tight riff stabs and tense low end pulses",
-      "pre chorus strips to toms and filtered synth rise",
-      "chorus slams with gang vocals and stacked guitars",
-      "bridge opens into a soaring solo over half time drums",
-      "final chorus adds extra octave harmonies and crowd style shouts",
+      "cinematic synth",
+      "explosive sections",
+      "rebellious stadium chants",
       "male vocals",
       "gritty doubles",
-      "shouted hook layers",
-      "delay throws on key words",
-      "reverse impacts and laser risers into each drop",
-      "polished and wide with a bright punchy master"
+      "reverse impacts",
+      "polished",
+      "hard rock",
+      "soaring",
+      "electric",
+      "electronic",
+      "electro",
+      "commercial"
     ]
   },
   {
@@ -40767,22 +40536,20 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/The Edge of Another Reckless Night",
     "metadataText": "Hard rock with heavy distorted riffs, pounding toms, deep bass grooves, and cinematic tension; verse rides gritty low-end swagger and restrained cymbal drive, pre-chorus narrows to toms and vocal lift, chorus slams with stacked gang doubles and a sing-back hook, Bridge breaks into a dramatic guitar solo over half-time drums, then final chorus returns bigger with ad-lib shouts, reverse swells, and punchy modern low end, Raw live-band aggression, wide and explosive mix, dramatic, emotional, melodic hard rock, vocal, raw, deep\n\n0 0 0 The Edge of Another Reckless Night Add a Caption Remix/Edit Hard rock with heavy distorted riffs, pounding toms, deep bass grooves, and cinematic tension; verse rides gritty low-end swagger and restrained cymbal drive, pre-chorus narrows to toms and vocal lift, chorus slams with stacked gang doubles and a sing-back hook, Bridge breaks into a dramatic guitar solo over half-time drums, then final chorus returns bigger with ad-lib shouts, reverse swells, and punchy modern low end, Raw live-band aggression, wide and explosive mix, dramatic, emotional, melodic hard rock, vocal, raw, deep Show Less 2d, 17h ago",
     "tags": [
-      "hard rock with heavy distorted riffs",
+      "hard rock",
       "pounding toms",
       "deep bass grooves",
-      "and cinematic tension verse rides gritty low end swagger and restrained cymbal drive",
-      "pre chorus narrows to toms and vocal lift",
-      "chorus slams with stacked gang doubles and a sing back hook",
-      "bridge breaks into a dramatic guitar solo over half time drums",
-      "then final chorus returns bigger with ad lib shouts",
-      "reverse swells",
-      "and punchy modern low end",
-      "raw live band aggression",
-      "wide and explosive mix",
+      "cinematic tension",
+      "reverse",
+      "punchy modern low",
+      "raw live band",
       "dramatic",
       "emotional",
       "melodic hard rock",
-      "vocal"
+      "deep",
+      "commercial",
+      "hard",
+      "rock"
     ]
   },
   {
@@ -40802,22 +40569,20 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/The Fire Still Wants More",
     "metadataText": "Hard rock anthem with electro grit and a driving halftime stomp; verse rides tight riff stabs and mechanical toms, pre-chorus opens with rising synth pulses and gang shouts, chorus hits with huge doubled guitars, punchy hybrid drums, and shouted hook layers, Bridge drops to eerie pads and a laser-like lead, then final chorus erupts, Polished, wide, aggressive, futuristic, and stadium-bright, hard rock, electro, electric, soaring, electronic\n\n0 0 0 The Fire Still Wants More Add a Caption Remix/Edit Hard rock anthem with electro grit and a driving halftime stomp; verse rides tight riff stabs and mechanical toms, pre-chorus opens with rising synth pulses and gang shouts, chorus hits with huge doubled guitars, punchy hybrid drums, and shouted hook layers, Bridge drops to eerie pads and a laser-like lead, then final chorus erupts, Polished, wide, aggressive, futuristic, and stadium-bright, hard rock, electro, electric, soaring, electronic Show Less 1d, 15h ago",
     "tags": [
-      "hard rock anthem with electro grit and a driving halftime stomp verse rides tight riff stabs and mechanical toms",
-      "pre chorus opens with rising synth pulses and gang shouts",
-      "chorus hits with huge doubled guitars",
+      "hard rock anthem",
       "punchy hybrid drums",
-      "and shouted hook layers",
-      "bridge drops to eerie pads and a laser like lead",
-      "then final chorus erupts",
       "polished",
-      "wide",
       "aggressive",
       "futuristic",
-      "and stadium bright",
+      "stadium bright",
       "hard rock",
       "electro",
       "electric",
-      "soaring"
+      "soaring",
+      "electronic",
+      "commercial",
+      "hard",
+      "rock"
     ]
   },
   {
@@ -40837,22 +40602,21 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/The Fire We Left Behind",
     "metadataText": "Hard rock anthem at a driving mid-tempo with punchy syncopated drums, chugging palm-muted guitars, and a heavy bass lock; verse rides tight and gritty, pre-chorus opens with rising toms and shouted gang lifts, chorus hits with wide gang vocals and stacked harmonies, bridge drops to a cinematic half-time breakdown before the final solo and last chorus, Gritty close-mic lead vocal with doubled hook lines, short delay throws on punch words, arena-sized gang shouts, bright and polished modern mix with huge low end and sharp guitar edges, hard rock, emotional, electric, raw, rhythmic, headbanging, rock, soaring\n\n0 0 0 The Fire We Left Behind Add a Caption Remix/Edit Hard rock anthem at a driving mid-tempo with punchy syncopated drums, chugging palm-muted guitars, and a heavy bass lock; verse rides tight and gritty, pre-chorus opens with rising toms and shouted gang lifts, chorus hits with wide gang vocals and stacked harmonies, bridge drops to a cinematic half-time breakdown before the final solo and last chorus, Gritty close-mic lead vocal with doubled hook lines, short delay throws on punch words, arena-sized gang shouts, bright and polished modern mix with huge low end and sharp guitar edges, hard rock, emotional, electric, raw, rhythmic, headbanging, rock, soaring Show Less 2d, 17h ago",
     "tags": [
-      "hard rock anthem at a driving mid tempo with punchy syncopated drums",
-      "chugging palm muted guitars",
-      "and a heavy bass lock verse rides tight and gritty",
-      "pre chorus opens with rising toms and shouted gang lifts",
-      "chorus hits with wide gang vocals and stacked harmonies",
-      "bridge drops to a cinematic half time breakdown before the final solo and last chorus",
-      "gritty close mic lead vocal with doubled hook lines",
-      "short delay throws on punch words",
-      "arena sized gang shouts",
-      "bright and polished modern mix with huge low end and sharp guitar edges",
+      "hard rock anthem",
+      "chugging palm muted",
+      "heavy bass lock",
+      "gritty",
+      "arena sized gang",
+      "bright",
       "hard rock",
       "emotional",
       "electric",
-      "raw",
       "rhythmic",
-      "headbanging"
+      "headbanging",
+      "rock",
+      "soaring",
+      "commercial",
+      "hard"
     ]
   },
   {
@@ -40872,22 +40636,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/The Last Ride Before Sunrise",
     "metadataText": "Hard rock anthem with crushing palm-muted guitar riffs, thunderous live drums, and gritty male vocals; verse rides tight low-end chugs and snare cracks, pre-chorus opens with climbing toms and gang shouts, chorus explodes into wide power chords and shouted doubles, Add reverse cymbal swells, a tape-stop hit before the breakdown, then a soaring guitar lead after the bridge, Polished, massive, stadium-bright mix with raw edge, headbanging, raw, emotional, soaring, electric, rhythmic, rock, hard rock\n\n0 0 0 The Last Ride Before Sunrise Add a Caption Remix/Edit Hard rock anthem with crushing palm-muted guitar riffs, thunderous live drums, and gritty male vocals; verse rides tight low-end chugs and snare cracks, pre-chorus opens with climbing toms and gang shouts, chorus explodes into wide power chords and shouted doubles, Add reverse cymbal swells, a tape-stop hit before the breakdown, then a soaring guitar lead after the bridge, Polished, massive, stadium-bright mix with raw edge, headbanging, raw, emotional, soaring, electric, rhythmic, rock, hard rock Show Less 2d, 17h ago",
     "tags": [
-      "hard rock anthem with crushing palm muted guitar riffs",
+      "hard rock anthem",
       "thunderous live drums",
-      "and gritty male vocals verse rides tight low end chugs and snare cracks",
-      "pre chorus opens with climbing toms and gang shouts",
-      "chorus explodes into wide power chords and shouted doubles",
-      "add reverse cymbal swells",
-      "a tape stop hit before the breakdown",
-      "then a soaring guitar lead after the bridge",
+      "gritty male vocals",
+      "tape stop hit",
+      "soaring guitar after",
       "polished",
       "massive",
-      "stadium bright mix with raw edge",
+      "stadium bright",
       "headbanging",
-      "raw",
       "emotional",
       "soaring",
-      "electric"
+      "electric",
+      "rhythmic",
+      "rock",
+      "hard rock",
+      "commercial"
     ]
   },
   {
@@ -40907,22 +40671,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/The Last Riot Before Dawn",
     "metadataText": "Hard rock anthem with cinematic orchestral layering, driving mid-tempo four-on-the-floor pulse, syncopated palm-muted riffs, thunderous tom hits, and sweeping string/brass swells; verses stay tense with clipped guitar and low strings, pre-chorus lifts into snare rolls and rising choir pads, chorus hits wide with gang shouts and stacked harmonies, bridge drops to a lone vocal over dark cello before a final full-force rush, Close-mic lead vocal with gritty doubles, soaring high-note ad-libs, delay throws on key words, explosive risers, reverse cymbal swells, and a huge bright-and-punchy mix, hard rock, dramatic, soaring, orchestral, emotional\n\n0 0 0 The Last Riot Before Dawn Add a Caption Remix/Edit Hard rock anthem with cinematic orchestral layering, driving mid-tempo four-on-the-floor pulse, syncopated palm-muted riffs, thunderous tom hits, and sweeping string/brass swells; verses stay tense with clipped guitar and low strings, pre-chorus lifts into snare rolls and rising choir pads, chorus hits wide with gang shouts and stacked harmonies, bridge drops to a lone vocal over dark cello before a final full-force rush, Close-mic lead vocal with gritty doubles, soaring high-note ad-libs, delay throws on key words, explosive risers, reverse cymbal swells, and a huge bright-and-punchy mix, hard rock, dramatic, soaring, orchestral, emotional Show Less 1d, 16h ago",
     "tags": [
-      "hard rock anthem with cinematic orchestral layering",
-      "driving mid tempo four on the floor pulse",
-      "syncopated palm muted riffs",
+      "hard rock anthem",
+      "syncopated palm muted",
       "thunderous tom hits",
-      "and sweeping string brass swells verses stay tense with clipped guitar and low strings",
-      "pre chorus lifts into snare rolls and rising choir pads",
-      "chorus hits wide with gang shouts and stacked harmonies",
-      "bridge drops to a lone vocal over dark cello before a final full force rush",
-      "close mic lead vocal with gritty doubles",
-      "soaring high note ad libs",
-      "delay throws on key words",
+      "sweeping string brass",
+      "soaring high note",
       "explosive risers",
-      "reverse cymbal swells",
-      "and a huge bright and punchy mix",
+      "reverse cymbal",
+      "huge bright",
       "hard rock",
-      "dramatic"
+      "dramatic",
+      "soaring",
+      "orchestral",
+      "emotional",
+      "commercial",
+      "hard",
+      "rock"
     ]
   },
   {
@@ -40942,22 +40706,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/The Night Belonged to Renegades",
     "metadataText": "Hard rock anthem with cinematic orchestral power, mid-tempo and stomp-heavy, built on crushing palm-muted guitar riffs and thunderous toms; verse rides tight low-end grit, pre-chorus strips to snare pulse and rising strings, chorus hits with gang shouts, brass stabs, and wide power chords, Vocal is rough and fearless with stacked doubles, shouted hook lines, and a soaring lead on the last chorus, Ear candy includes reverse cymbal swells, taiko rolls, and a final solo lift, Mix is huge, bright, and battle-cinematic, emotional, orchestral, dramatic, hard rock, soaring\n\n0 0 0 The Night Belonged to Renegades Add a Caption Remix/Edit Hard rock anthem with cinematic orchestral power, mid-tempo and stomp-heavy, built on crushing palm-muted guitar riffs and thunderous toms; verse rides tight low-end grit, pre-chorus strips to snare pulse and rising strings, chorus hits with gang shouts, brass stabs, and wide power chords, Vocal is rough and fearless with stacked doubles, shouted hook lines, and a soaring lead on the last chorus, Ear candy includes reverse cymbal swells, taiko rolls, and a final solo lift, Mix is huge, bright, and battle-cinematic, emotional, orchestral, dramatic, hard rock, soaring Show Less 1d, 16h ago",
     "tags": [
-      "hard rock anthem with cinematic orchestral power",
-      "mid tempo and stomp heavy",
-      "built on crushing palm muted guitar riffs and thunderous toms verse rides tight low end grit",
-      "pre chorus strips to snare pulse and rising strings",
-      "chorus hits with gang shouts",
+      "hard rock anthem",
       "brass stabs",
-      "and wide power chords",
-      "vocal is rough and fearless with stacked doubles",
-      "shouted hook lines",
-      "and a soaring lead on the last chorus",
-      "ear candy includes reverse cymbal swells",
+      "power chords",
+      "is rough",
       "taiko rolls",
-      "and a final solo lift",
-      "mix is huge",
+      "is huge",
       "bright",
-      "and battle cinematic"
+      "battle cinematic",
+      "emotional",
+      "orchestral",
+      "dramatic",
+      "hard rock",
+      "soaring",
+      "commercial",
+      "hard",
+      "rock"
     ]
   },
   {
@@ -40977,22 +40741,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/The Outlaws of Broken Cities",
     "metadataText": "Hard rock with driving mid-tempo stomp, syncopated distorted riffs, pounding toms, and deep bass grooves; verse rides gritty low-end guitars and tense drums, pre-chorus strips to toms, bass, and rising feedback, chorus hits with big stacked gang vocals and open chords, bridge breaks into a dramatic guitar solo over half-time drums before the final lift, Rough male vocal with double-tracked verses, shouted hook doubles, delay throws on key lines, reverse swells and cymbal risers into drops, wide cinematic mix with sharp, modern punch, raw, dramatic, emotional, vocal, melodic hard rock, deep\n\n0 0 0 The Outlaws of Broken Cities Add a Caption Remix/Edit Hard rock with driving mid-tempo stomp, syncopated distorted riffs, pounding toms, and deep bass grooves; verse rides gritty low-end guitars and tense drums, pre-chorus strips to toms, bass, and rising feedback, chorus hits with big stacked gang vocals and open chords, bridge breaks into a dramatic guitar solo over half-time drums before the final lift, Rough male vocal with double-tracked verses, shouted hook doubles, delay throws on key lines, reverse swells and cymbal risers into drops, wide cinematic mix with sharp, modern punch, raw, dramatic, emotional, vocal, melodic hard rock, deep Show Less 2d, 17h ago",
     "tags": [
-      "hard rock with driving mid tempo stomp",
+      "hard rock",
       "syncopated distorted riffs",
       "pounding toms",
-      "and deep bass grooves verse rides gritty low end guitars and tense drums",
-      "pre chorus strips to toms",
+      "deep bass grooves",
       "bass",
-      "and rising feedback",
-      "chorus hits with big stacked gang vocals and open chords",
-      "bridge breaks into a dramatic guitar solo over half time drums before the final lift",
-      "rough male vocal with double tracked verses",
-      "shouted hook doubles",
-      "delay throws on key lines",
-      "reverse swells and cymbal risers into drops",
-      "wide cinematic mix with sharp",
+      "rising feedback",
+      "rough male",
+      "reverse",
+      "cinematic",
       "modern punch",
-      "raw"
+      "dramatic",
+      "emotional",
+      "melodic hard rock",
+      "deep",
+      "commercial",
+      "hard"
     ]
   },
   {
@@ -41012,22 +40776,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/The Rebels Never Back Down",
     "metadataText": "Hard rock anthem with driving mid-tempo shuffle, punchy palm-muted guitars, thunderous live drums, snarling bass and gritty male vocals; verse rides tense and lean, pre-chorus opens with rising toms and stacked gang shouts, chorus hits wide with soaring lead melody and shouted doubles, bridge drops to a half-time breakdown then launches into a final solo lift, Reverse swells, cymbal lifts, and a feedback scrape mark transitions, Bright, huge, and arena-ready, electric, rhythmic, hard rock, emotional, rock, soaring, raw, headbanging\n\n0 0 0 The Rebels Never Back Down Add a Caption Remix/Edit Hard rock anthem with driving mid-tempo shuffle, punchy palm-muted guitars, thunderous live drums, snarling bass and gritty male vocals; verse rides tense and lean, pre-chorus opens with rising toms and stacked gang shouts, chorus hits wide with soaring lead melody and shouted doubles, bridge drops to a half-time breakdown then launches into a final solo lift, Reverse swells, cymbal lifts, and a feedback scrape mark transitions, Bright, huge, and arena-ready, electric, rhythmic, hard rock, emotional, rock, soaring, raw, headbanging Show Less 2d, 17h ago",
     "tags": [
-      "hard rock anthem with driving mid tempo shuffle",
-      "punchy palm muted guitars",
+      "hard rock anthem",
+      "punchy palm muted",
       "thunderous live drums",
-      "snarling bass and gritty male vocals verse rides tense and lean",
-      "pre chorus opens with rising toms and stacked gang shouts",
-      "chorus hits wide with soaring lead melody and shouted doubles",
-      "bridge drops to a half time breakdown then launches into a final solo lift",
-      "reverse swells",
+      "snarling bass",
+      "reverse",
       "cymbal lifts",
-      "and a feedback scrape mark transitions",
       "bright",
       "huge",
-      "and arena ready",
+      "arena ready",
       "electric",
       "rhythmic",
-      "hard rock"
+      "hard rock",
+      "emotional",
+      "rock",
+      "soaring",
+      "headbanging"
     ]
   },
   {
@@ -41047,22 +40811,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/The Sound of Defiant Souls",
     "metadataText": "Hard rock anthem with cinematic orchestral drive, driving 128 BPM pulse and stomping four-on-the-floor drums under crushing palm-muted riffs; verse rides low strings and tight rhythm guitars, pre-chorus opens with rising brass and taiko rolls, chorus hits with full choir stack, octave lead guitars, and massive timpani accents, Add reverse cymbal swells, low sub hits into drops, and sword-sharp string runs before solos, Huge, bright, battle-ready mix with wide arena depth and punchy low end, dramatic, emotional, orchestral, soaring, hard rock\n\n0 0 0 The Sound of Defiant Souls Add a Caption Remix/Edit Hard rock anthem with cinematic orchestral drive, driving 128 BPM pulse and stomping four-on-the-floor drums under crushing palm-muted riffs; verse rides low strings and tight rhythm guitars, pre-chorus opens with rising brass and taiko rolls, chorus hits with full choir stack, octave lead guitars, and massive timpani accents, Add reverse cymbal swells, low sub hits into drops, and sword-sharp string runs before solos, Huge, bright, battle-ready mix with wide arena depth and punchy low end, dramatic, emotional, orchestral, soaring, hard rock Show Less 1d, 16h ago",
     "tags": [
-      "hard rock anthem with cinematic orchestral drive",
-      "pre chorus opens with rising brass and taiko rolls",
-      "chorus hits with full choir stack",
-      "octave lead guitars",
-      "and massive timpani accents",
-      "add reverse cymbal swells",
-      "low sub hits into drops",
-      "and sword sharp string runs before solos",
+      "hard rock anthem",
+      "octave guitars",
+      "massive timpani accents",
+      "low sub hits",
+      "sword sharp string",
       "huge",
       "bright",
-      "battle ready mix with wide arena depth and punchy low end",
+      "battle ready",
       "dramatic",
       "emotional",
       "orchestral",
       "soaring",
-      "hard rock"
+      "hard rock",
+      "commercial",
+      "hard",
+      "rock"
     ]
   },
   {
@@ -41082,22 +40846,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/The Sound of Pure Defiance",
     "metadataText": "Hard rock anthem with crushing electric guitar riffs, thunderous live drums, gritty male vocals, heavy bass, and aggressive rhythmic drive; verse rides tight palm-muted guitars and snare hits, pre-chorus opens with rising toms and gang shouts, chorus slams with wide stacked vocals and a soaring hook, Bridge drops to a cinematic half-time breakdown, then explodes into a solo and final chorus, Polished modern rock mix, huge low end, bright lead guitars, raw stadium punch, and crowd-ready ad-libs, rhythmic, electric, raw, rock, emotional, hard rock, soaring, headbanging\n\n0 0 0 The Sound of Pure Defiance Add a Caption Remix/Edit Hard rock anthem with crushing electric guitar riffs, thunderous live drums, gritty male vocals, heavy bass, and aggressive rhythmic drive; verse rides tight palm-muted guitars and snare hits, pre-chorus opens with rising toms and gang shouts, chorus slams with wide stacked vocals and a soaring hook, Bridge drops to a cinematic half-time breakdown, then explodes into a solo and final chorus, Polished modern rock mix, huge low end, bright lead guitars, raw stadium punch, and crowd-ready ad-libs, rhythmic, electric, raw, rock, emotional, hard rock, soaring, headbanging Show Less 2d, 17h ago",
     "tags": [
-      "hard rock anthem with crushing electric guitar riffs",
+      "hard rock anthem",
       "thunderous live drums",
       "gritty male vocals",
       "heavy bass",
-      "and aggressive rhythmic drive verse rides tight palm muted guitars and snare hits",
-      "pre chorus opens with rising toms and gang shouts",
-      "chorus slams with wide stacked vocals and a soaring hook",
-      "bridge drops to a cinematic half time breakdown",
-      "then explodes into a solo and final chorus",
-      "polished modern rock mix",
+      "aggressive rhythmic drive",
+      "explodes into a",
+      "polished modern rock",
       "huge low end",
-      "bright lead guitars",
+      "bright guitars",
       "raw stadium punch",
-      "and crowd ready ad libs",
+      "crowd ready",
       "rhythmic",
-      "electric"
+      "electric",
+      "rock",
+      "emotional",
+      "hard rock"
     ]
   },
   {
@@ -41117,22 +40881,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/The Streets Were Built for Chaos",
     "metadataText": "Electro hard rock with crushing down-tuned riffs, aggressive synth bass, punchy hybrid drums, and a four-on-the-floor lift in the hook; verse rides tight stabs and tom hits, pre-chorus strips to vocal tension and rising noise, chorus explodes with gang shouts and stacked guitars, Soaring lead-guitar fills, glitch sparks, reverse swells, huge sidechain pulses, Polished, dark, arena-bright mix, electric, electro, hard rock, soaring, electronic\n\n0 0 0 The Streets Were Built for Chaos Add a Caption Remix/Edit Electro hard rock with crushing down-tuned riffs, aggressive synth bass, punchy hybrid drums, and a four-on-the-floor lift in the hook; verse rides tight stabs and tom hits, pre-chorus strips to vocal tension and rising noise, chorus explodes with gang shouts and stacked guitars, Soaring lead-guitar fills, glitch sparks, reverse swells, huge sidechain pulses, Polished, dark, arena-bright mix, electric, electro, hard rock, soaring, electronic Show Less 1d, 16h ago",
     "tags": [
-      "electro hard rock with crushing down tuned riffs",
+      "electro hard rock",
       "aggressive synth bass",
       "punchy hybrid drums",
-      "and a four on the floor lift in the hook verse rides tight stabs and tom hits",
-      "pre chorus strips to vocal tension and rising noise",
-      "chorus explodes with gang shouts and stacked guitars",
-      "soaring lead guitar fills",
+      "soaring guitar fills",
       "glitch sparks",
-      "reverse swells",
+      "reverse",
       "huge sidechain pulses",
       "polished",
       "dark",
-      "arena bright mix",
+      "arena bright",
       "electric",
       "electro",
-      "hard rock"
+      "hard rock",
+      "soaring",
+      "electronic",
+      "commercial"
     ]
   },
   {
@@ -41152,22 +40916,21 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/The Wolves Run at Midnight",
     "metadataText": "Hard rock anthem with driving mid-tempo shuffle, crushing palm-muted riffs and thunderous live drums; verse rides gritty low-end chugs, pre-chorus opens into snare lifts and gang shouts, chorus lands huge with stacked doubles and shouted gang hooks, breakdown drops to tom hits and a screamed stop-time line before the final solo, Vinyl scrape, reverse cymbal swells, and feedback dives, Polished, massive stadium mix with raw edge, rhythmic, soaring, raw, electric, rock, emotional, headbanging, hard rock\n\n0 0 0 The Wolves Run at Midnight Add a Caption Remix/Edit Hard rock anthem with driving mid-tempo shuffle, crushing palm-muted riffs and thunderous live drums; verse rides gritty low-end chugs, pre-chorus opens into snare lifts and gang shouts, chorus lands huge with stacked doubles and shouted gang hooks, breakdown drops to tom hits and a screamed stop-time line before the final solo, Vinyl scrape, reverse cymbal swells, and feedback dives, Polished, massive stadium mix with raw edge, rhythmic, soaring, raw, electric, rock, emotional, headbanging, hard rock Show Less 2d, 18h ago",
     "tags": [
-      "hard rock anthem with driving mid tempo shuffle",
-      "crushing palm muted riffs and thunderous live drums verse rides gritty low end chugs",
-      "pre chorus opens into snare lifts and gang shouts",
-      "chorus lands huge with stacked doubles and shouted gang hooks",
-      "breakdown drops to tom hits and a screamed stop time line before the final solo",
-      "vinyl scrape",
-      "reverse cymbal swells",
-      "and feedback dives",
+      "hard rock anthem",
+      "crushing palm muted",
+      "reverse cymbal",
+      "feedback dives",
       "polished",
-      "massive stadium mix with raw edge",
+      "massive stadium",
       "rhythmic",
       "soaring",
-      "raw",
       "electric",
       "rock",
-      "emotional"
+      "emotional",
+      "headbanging",
+      "hard rock",
+      "commercial",
+      "hard"
     ]
   },
   {
@@ -41192,7 +40955,6 @@ export const productionSongRecords = [
       "deep",
       "electronic",
       "drum",
-      "and",
       "bass"
     ]
   },
@@ -41213,12 +40975,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/Afterhours Velocity",
     "metadataText": "drum and bass, cinematic orchestral, bass-heavy electronic\n\nDrum and bass anthem with rapid breakbeats, rolling sub-bass, and cinematic orchestral lift; verse passages stay lean with chopped drums and low strings, pre-drop builds stack taiko rolls, risers, and tense brass swells, then the drop opens into widescreen strings, punchy brass hits, and festival-sized bass, Breathless female choir chops and echo tails, bright punchy mix with huge low-end pressure, rapid, dramatic, orchestral, emotional, deep",
     "tags": [
-      "drum and bass",
+      "drum",
       "cinematic orchestral",
       "bass heavy electronic",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -41239,12 +40999,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/Bassline Warfare",
     "metadataText": "drum and bass, cinematic orchestral, rave/anthemic electronic\n\nDrum and bass anthem with rapid breakbeats and cinematic orchestral lift; verse sections ride tight chopped drums and rolling sub, pre-chorus swells with rising strings and snare ramps, chorus opens into massive brass hits, choir layers, and a wider bassline, Add reverse cymbal swells, tom fills, and reverb tails into each drop, Bright, punchy, festival-sized mix with epic low-end weight, emotional, rapid, dramatic, deep, orchestral",
     "tags": [
-      "drum and bass",
+      "drum",
       "cinematic orchestral",
       "rave anthemic electronic",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -41266,11 +41024,9 @@ export const productionSongRecords = [
     "metadataText": "lo-fi, drum and bass, chillstep\n\nLo-fi drum and bass with rapid relaxed breakbeats, mellow piano chord loops, dusty vinyl crackle, soft atmospheric synth pads, delicate sub pulses, and a cozy late-night urban feel; verse-like sections strip to piano and brushed breaks, then fuller drops bring reese bass and filtered noise swells, with tiny tape-stop transitions and reverse cymbal lifts; intimate close room mix, warm and slightly worn, bright transient top end with soft low-end glue, soft, lo-fi, rapid, mellow",
     "tags": [
       "lo fi",
-      "drum and bass",
+      "drum",
       "chillstep",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -41291,12 +41047,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/Basslines Through the Apocalypse",
     "metadataText": "drum & bass, Indian fusion, cinematic electronic\n\nDrum & bass with Indian fusion energy, rapid breakbeats and deep rolling basslines driving the groove; verses shift to stripped drums, tabla, and low sub pulses, pre-drop builds with bansuri filigree and rising sitar runs, then the drop hits with layered percussion and festival-scale bass weight, Crisp close-mic detail, wide cinematic depth, glowing and punchy mix with mystical atmosphere, rapid, musical, deep",
     "tags": [
-      "drum and bass",
+      "drum",
       "indian fusion",
       "cinematic electronic",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -41317,12 +41071,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/Breakbeats After Midnight",
     "metadataText": "drum & bass, Indian classical fusion, cinematic electronic\n\nDrum & bass fused with Indian classical textures, fast breakbeats driving deep rolling bass and sharp tabla interplay; verse sections stay lean with sitar motifs and bansuri phrases, pre-drop filters the drums and lifts into a tension spiral, drop hits with stacked bass, chopped percussion, and festival-scale melodic leads, Bright, cinematic, immersive mix with glowing low end and detailed high-end sparkle, deep, musical, rapid",
     "tags": [
-      "drum and bass",
+      "drum",
       "indian classical fusion",
       "cinematic electronic",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -41343,13 +41095,11 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/Cyber Drift Frequencies",
     "metadataText": "drum & bass, metal, breakbeat, aggressive\n\nDrum & bass metal hybrid with relentless breakbeats, distorted down-tuned guitar riffs, double-kick pulse, and aggressive bass surges; intro creeps in with filtered noise and low tom impacts, verse drives on clipped guitars and snapped drums, breakdown slams into half-time chugs, final section detonates with stacked riff layers and sub drops, Gritty, wide, cinematic mix with razor edges, metal",
     "tags": [
-      "drum and bass",
+      "drum",
       "metal",
       "breakbeat",
       "aggressive",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -41370,12 +41120,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/Dark Frequencies & Fast Breaks",
     "metadataText": "drum and bass, neurofunk, cyberpunk electronic\n\nDrum and bass with rapid breakbeats, deep rolling basslines, neon synth arpeggios, and tense cyberpunk pulse; intro opens on rain-slick atmosphere and distant engine hum, verse sections strip to clipped drums and low sub pressure, pre-drop builds with rising pads and filtered arps, chorus slams into full-speed breakage and cinematic bass surges, Layered risers, metallic ticks, reversed swells, wide stereo echoes, bright punchy master with nocturnal glow, deep, rapid",
     "tags": [
-      "drum and bass",
+      "drum",
       "neurofunk",
       "cyberpunk electronic",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -41396,12 +41144,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/Deep Into the Rave System",
     "metadataText": "drum & bass rock hybrid, drum and bass, electric rock\n\nDrum & bass rock hybrid with distorted electric guitar riffs, aggressive live drums fused to razor breakbeats, deep basslines driving relentless forward motion, and rebellious festival-scale energy, Verse sections strip to bass, kick, and jagged guitar stabs; pre-chorus tightens with snare rolls and rising filters; chorus slams in with full drums, screaming riffs, and stacked impact hits, Short vocal shouts can punctuate the hook moments; metallic reverses, glitch fills, and crowd-sized risers bridge the drops, Bright, brutal, and wide-open in the mix, electric, rock, deep",
     "tags": [
-      "drum and bass rock hybrid",
-      "drum and bass",
+      "drum",
       "electric rock",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -41422,12 +41167,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/Digital Streets & Fast Drums",
     "metadataText": "drum and bass, cinematic orchestral, bass-heavy electronic\n\nDrum and bass anthem with rapid breakbeats, rolling sub-bass, and cinematic orchestral lift; verse passages stay lean with chopped drums and low strings, pre-drop builds stack taiko rolls, risers, and tense brass swells, then the drop opens into widescreen strings, punchy brass hits, and festival-sized bass, Breathless female choir chops and echo tails, bright punchy mix with huge low-end pressure, rapid, dramatic, orchestral, emotional, deep",
     "tags": [
-      "drum and bass",
+      "drum",
       "cinematic orchestral",
       "bass heavy electronic",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -41448,12 +41191,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/Echoes Beneath the Subwoofers",
     "metadataText": "drum and bass, liquid drum and bass, dark electronic\n\nDrum and bass anthem with rapid breakbeats, deep rolling basslines, aggressive sub pulses, and atmospheric synth haze; verse-like sections stay tense with stripped drums and filtered pads, pre-drop ramps with snare builds and rising tonal sweeps, then the drop hits with explosive reese bass, crisp impacts, and emotional lead fragments, Wide, polished, dark, futuristic mix built for high-speed adrenaline, deep, emotional, rapid, electronic, rhythmic",
     "tags": [
-      "drum and bass",
-      "liquid drum and bass",
+      "drum",
+      "liquid drum",
       "dark electronic",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -41474,12 +41215,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/Electric Pulse Reaction",
     "metadataText": "drum & bass, cinematic electronic, Middle Eastern/Arabic-inspired electronic\n\nDark Arabic-inspired drum & bass with fast breakbeats, half-time sub drops, haunted oud phrases, eastern vocal textures, and rolling percussion; verse sections stay sparse with deep bass and filtered hand drums, pre-drop builds with reversed desert wind swells and rising toms, then the chorus hits with clipped rave stabs and denser drum edits, Whispered chant chops, octave echoes, and distant call-response shimmers, Cinematic, gritty, and wide with a cold underground club sheen, deep, vocal",
     "tags": [
-      "drum and bass",
-      "cinematic electronic",
-      "middle eastern arabic inspired electronic",
-      "electronic",
       "drum",
-      "and",
+      "cinematic electronic",
+      "middle eastern arabic",
+      "electronic",
       "bass"
     ]
   },
@@ -41500,11 +41239,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/Fast Shadows & Neon Roads",
     "metadataText": "drum & bass, electronic, cinematic dark rave\n\nDrum & bass with rapid breakbeats and deep rolling basslines, aggressive sub hits, atmospheric synth veils, and cinematic build-release tension; verse sections ride sparse drums and low pulse, the lift adds rising arps and filtered noise, and the drop slams with fractured fills, rave stabs, and emotional lead layers, Wide, polished, dark, and hyper-detailed, rhythmic, electronic, emotional, deep, rapid",
     "tags": [
-      "drum and bass",
+      "drum",
       "electronic",
       "cinematic dark rave",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -41525,11 +41262,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/Frequencies Beyond the Skyline",
     "metadataText": "drum & bass, electronic, futuristic/club (dark)\n\nDrum & bass with rapid breakbeats, deep rolling basslines, aggressive sub hits, and atmospheric synth haze; verse-like sections stay tense with clipped percussion and filtered pads, pre-drop builds stack cinematic risers and glitch pulses, then the drop slams in with bright reese hooks and sub pressure, Add whispered crowd-like shouts, reverse swells, metallic impacts, and short delay throws, Polished, wide, high-gloss mix with dark club energy and futuristic punch, rapid, rhythmic, electronic, emotional, deep",
     "tags": [
-      "drum and bass",
+      "drum",
       "electronic",
       "futuristic club dark",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -41550,12 +41285,11 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/Future Shock Transmission",
     "metadataText": "dark drum and bass, phonk, underground electronic\n\nDark drum and bass phonk hybrid with distorted 808 basslines, hypnotic cowbell motifs, rapid breakbeats, and chopped Memphis vocal textures; verse energy rides tense sub pulses and sparse kick snare, the drop opens into doubled breakbeats and pitched bass snarls, then a midsection strips to filtered rumble before the final hit returns with stacked chops and tire-screech fills, Grainy chopped-vocal hooks, reverse swells, impact hits, and short tape-stop glitches, Wide, gritty, high-contrast mix with underground street-race menace, rapid, vocal, hypnotic",
     "tags": [
-      "dark drum and bass",
+      "dark drum",
       "phonk",
       "underground electronic",
       "electronic",
       "drum",
-      "and",
       "bass"
     ]
   },
@@ -41576,12 +41310,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/Ghosts in the Bass Tunnel",
     "metadataText": "drum and bass, liquid drum and bass, cyberpunk electronic\n\nDrum and bass with rapid breakbeats, neon synth arpeggios, atmospheric pads, deep basslines, and driving cyberpunk energy; verse sections thin to pulsing bass and glassy stabs, pre-builds swell with filtered risers and reverse textures, chorus hits with full-speed drums and wide cinematic chords, bridge drops to half-time pads before the final acceleration, Close, punchy mix with glossy high end, huge sub weight, and vivid nighttime motion, deep, rapid",
     "tags": [
-      "drum and bass",
-      "liquid drum and bass",
+      "drum",
+      "liquid drum",
       "cyberpunk electronic",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -41602,12 +41334,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/Heavy Rain & Faster Rhythms",
     "metadataText": "drum and bass, cinematic electronic, dark ambient\n\nDrum and bass with 174 BPM breakbeats, halftimed sub drops, and soaring oud phrases over tense synth drones; verse rides clipped percussion and sandstorm atmospheres, pre-drop strips to filtered bass pulses and reversed frame hits, drop brings rushing snares, deep sub, and eastern vocal textures as chopped echoes, Whispered crowd swells, metallic risers, and distant darbuka fills bridge sections, Wide cinematic mix, dark and subterranean with glossy low-end impact, vocal, deep",
     "tags": [
-      "drum and bass",
+      "drum",
       "cinematic electronic",
       "dark ambient",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -41628,12 +41358,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/Laser Lights & Heavy Motion",
     "metadataText": "drum & bass, phonk, hardstyle/UK hardstyle\n\nDrum & bass phonk hybrid at a racing 170 feel with distorted 808 basslines, rapid chopped breaks, and hypnotic cowbell riffs; verse-like sections stay skeletal with sub pressure and Memphis vocal chops, pre-drop builds with reversed sweeps and brake-squeal textures, drop slams in with extra snare roll velocity, Gritty, wide, and aggressive mix, rapid, hypnotic, vocal",
     "tags": [
-      "drum and bass",
+      "drum",
       "phonk",
       "hardstyle uk hardstyle",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -41654,12 +41382,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/Lightspeed Bass Protocol",
     "metadataText": "drum and bass, liquid drum and bass, neurofunk\n\nDrum and bass with rapid breakbeats, deep rolling basslines, aggressive sub hits, and cinematic synth lifts; verse section keeps tight percussion and tense pulses, pre-drop strips to filtered pads and rising noise, chorus bursts with full-speed drums, reese bass, and sharp hook stabs, Breathless build breaks, glitch sparks, reverse swells, club-ready sidechain pumps, Polished, wide, dark, and adrenaline-heavy, emotional, deep, rhythmic, electronic, rapid",
     "tags": [
-      "drum and bass",
-      "liquid drum and bass",
+      "drum",
+      "liquid drum",
       "neurofunk",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -41680,12 +41406,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/Midnight Through the Fast Lane",
     "metadataText": "drum & bass, metal, breakbeat\n\nDrum & bass metal hybrid with 174 BPM breakbeats, distorted down-tuned guitar riffs, double-kick syncopation, snarling basslines, and dark cinematic tension; verse drives on clipped guitars and fractured drums, pre-drop strips to sub rumble and tom hits, drop explodes with full riff stack and rapid snare rolls, Gritty close mix, विशाल punch, razor-wide stereo, metal",
     "tags": [
-      "drum and bass",
+      "drum",
       "metal",
       "breakbeat",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -41706,12 +41430,11 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/Neon Rush Syndrome",
     "metadataText": "lo-fi drum and bass, lo-fi, ambient/chill\n\nLo-fi drum and bass with rapid-but-relaxed breakbeats, mellow piano chords, dusty vinyl texture, and soft atmospheric synth pads; verse feels stripped and intimate, pre-chorus adds filtered hat shimmer and sub pulses, chorus opens into warmer chords and gliding bass, Faint tape wobble, reversed piano swells, and vinyl crackle between phrases, Intimate close-mic, softly wide and cozy, with a nocturnal city glow, rapid, soft, lo-fi, mellow",
     "tags": [
-      "lo fi drum and bass",
+      "lo fi drum",
       "lo fi",
       "ambient chill",
       "electronic",
       "drum",
-      "and",
       "bass"
     ]
   },
@@ -41732,12 +41455,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/Nightfall on the Highway",
     "metadataText": "drum & bass, cinematic electronic, Middle Eastern/Arabic-inspired electronic\n\nDark Arabic-inspired drum & bass with fast breakbeats, half-time sub drops, haunted oud phrases, eastern vocal textures, and rolling percussion; verse sections stay sparse with deep bass and filtered hand drums, pre-drop builds with reversed desert wind swells and rising toms, then the chorus hits with clipped rave stabs and denser drum edits, Whispered chant chops, octave echoes, and distant call-response shimmers, Cinematic, gritty, and wide with a cold underground club sheen, deep, vocal",
     "tags": [
-      "drum and bass",
-      "cinematic electronic",
-      "middle eastern arabic inspired electronic",
-      "electronic",
       "drum",
-      "and",
+      "cinematic electronic",
+      "middle eastern arabic",
+      "electronic",
       "bass"
     ]
   },
@@ -41758,12 +41479,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/No Sleep in the Bass District",
     "metadataText": "drum and bass, orchestral, cinematic\n\nDrum and bass with rapid breakbeats and orchestral anthem energy; verse rides clipped drums and rolling sub, pre-drop strips to timpani, low strings, and a rising synth pulse, chorus hits with sweeping strings, brass fanfares, and choir stabs, Add reversed cymbal swells, risers, impact booms, and echo tails on the brass, Wide, cinematic, festival-loud mix with deep sub weight and glossy high-end sparkle, dramatic, orchestral, deep, emotional, rapid",
     "tags": [
-      "drum and bass",
+      "drum",
       "orchestral",
       "cinematic",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -41784,12 +41503,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/Pulse Through the Darkroom",
     "metadataText": "drum and bass, rock, electric\n\nDrum and bass rock hybrid with frantic breakbeats, distorted electric guitar riffs, punchy live drums, and deep rolling basslines; verse rides tense guitar chugs and clipped drums, pre-chorus opens into rising snare rolls and gang shouts, chorus slams with huge festival hooks and doubled vocal stacks, Vocal is gritty and urgent with shouted ad-libs, delay throws on key words, risers, reverse swells, and a bright, punchy arena mix, electric, rock, deep",
     "tags": [
-      "drum and bass",
+      "drum",
       "rock",
       "electric",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -41810,12 +41527,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/Racing Through the Bassstorm",
     "metadataText": "drum and bass, cinematic electronic, dark ambient\n\nDrum and bass with 174 BPM breakbeats, halftimed sub drops, and soaring oud phrases over tense synth drones; verse rides clipped percussion and sandstorm atmospheres, pre-drop strips to filtered bass pulses and reversed frame hits, drop brings rushing snares, deep sub, and eastern vocal textures as chopped echoes, Whispered crowd swells, metallic risers, and distant darbuka fills bridge sections, Wide cinematic mix, dark and subterranean with glossy low-end impact, vocal, deep",
     "tags": [
-      "drum and bass",
+      "drum",
       "cinematic electronic",
       "dark ambient",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -41836,13 +41551,11 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/Rapid Motion Protocol",
     "metadataText": "drum & bass, metal, breakbeat, aggressive\n\nDrum & bass metal hybrid with relentless breakbeats, distorted down-tuned guitar riffs, double-kick pulse, and aggressive bass surges; intro creeps in with filtered noise and low tom impacts, verse drives on clipped guitars and snapped drums, breakdown slams into half-time chugs, final section detonates with stacked riff layers and sub drops, Gritty, wide, cinematic mix with razor edges, metal",
     "tags": [
-      "drum and bass",
+      "drum",
       "metal",
       "breakbeat",
       "aggressive",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -41863,12 +41576,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/Running Through Electric Rain",
     "metadataText": "drum and bass, neurofunk, cyberpunk electronic\n\nDrum and bass with rapid breakbeats, deep rolling basslines, neon synth arpeggios, and tense cyberpunk pulse; intro opens on rain-slick atmosphere and distant engine hum, verse sections strip to clipped drums and low sub pressure, pre-drop builds with rising pads and filtered arps, chorus slams into full-speed breakage and cinematic bass surges, Layered risers, metallic ticks, reversed swells, wide stereo echoes, bright punchy master with nocturnal glow, deep, rapid",
     "tags": [
-      "drum and bass",
+      "drum",
       "neurofunk",
       "cyberpunk electronic",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -41889,12 +41600,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/Saffron Breakdrums",
     "metadataText": "drum & bass, Indian fusion, cinematic electronic\n\nDrum & bass with Indian fusion energy, rapid breakbeats and deep rolling basslines driving the groove; verses shift to stripped drums, tabla, and low sub pulses, pre-drop builds with bansuri filigree and rising sitar runs, then the drop hits with layered percussion and festival-scale bass weight, Crisp close-mic detail, wide cinematic depth, glowing and punchy mix with mystical atmosphere, rapid, musical, deep",
     "tags": [
-      "drum and bass",
+      "drum",
       "indian fusion",
       "cinematic electronic",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -41916,11 +41625,9 @@ export const productionSongRecords = [
     "metadataText": "metal, drum and bass, dubstep-metal (hybrid)\n\nMetal drum and bass hybrid with shattered guitar riffs, double-kick driven breakbeats, snarling bass drops, and a dark cinematic pulse; verse rides tense and staccato, pre-chorus strips to tom hits and filtered noise, chorus slams with gang shouts and a wider riff stack, Harsh lead vocal with layered doubles, shouted gang hooks, reverse hits into drops, metallic risers, punchy wide mix, metal",
     "tags": [
       "metal",
-      "drum and bass",
+      "drum",
       "dubstep metal hybrid",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -41941,12 +41648,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/Skylines & Sonic Chaos",
     "metadataText": "drum & bass, dubstep, Arabic/Oriental electronic (dark cinematic)\n\nDrum & bass with Arabic-inspired phrasing at 172 BPM, skittering breakbeats and deep sub pulses; verse section rides just oud motif, frame drum hits, and airy desert drones, pre-drop narrows to filtered percussion and reverse swells, then the drop hits with racing amen breaks, saw bass accents, and haunting eastern vocal textures, Wide, cinematic, gritty underground mix with echoing hand percussion, sandstorm risers, and dark club pressure, vocal, deep",
     "tags": [
-      "drum and bass",
-      "dubstep",
-      "arabic oriental electronic dark cinematic",
-      "electronic",
       "drum",
-      "and",
+      "dubstep",
+      "arabic oriental electronic",
+      "electronic",
       "bass"
     ]
   },
@@ -41967,12 +41672,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/Storms Across the Dancefloor",
     "metadataText": "drum & bass, electronic, cyberpunk/drumstep (rapid breakbeats, reese sub bass)\n\nDrum & bass anthem at a blistering 174 BPM with rapid breakbeats, deep rolling sub lines, cinematic risers, and sharp futuristic synth textures; verse sections strip to kick, snare, and a tense bass pulse, pre-drop layers in filtered arps and choir haze, then the drop hits with massive reese bass and explosive drum edits, Bright, polished, high-contrast mix with cyberpunk menace and festival-scale impact, rhythmic, deep, electronic, rapid, emotional",
     "tags": [
-      "drum and bass",
-      "electronic",
-      "cyberpunk drumstep rapid breakbeats",
-      "reese sub bass",
       "drum",
-      "and",
+      "electronic",
+      "reese sub bass",
       "bass"
     ]
   },
@@ -41993,12 +41695,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/Submerged in Breakbeats",
     "metadataText": "drum and bass, dark ambient / ritual, Arabic-influenced electronic\n\nDrum and bass with Arabic-inspired rhythmic drive, fast breakbeats, and deep sub-bass; verse section rides sparse kicks, rattling shakers, and a haunted oud motif, pre-drop strips to filtered hand percussion and desert drones, chorus hits with doubled break edits, low-end pressure, and cinematic synth swells, Ghostly vocal textures drift as chopped fragments, with reversed risers, metal clangs, and sandstorm whooshes, Dark, wide, underground, and ritualistic, deep, vocal",
     "tags": [
-      "drum and bass",
+      "drum",
       "dark ambient ritual",
       "arabic influenced electronic",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -42019,12 +41719,11 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/Subwoofer Velocity",
     "metadataText": "lo-fi drum and bass, lo-fi, ambient/chill\n\nLo-fi drum and bass with rapid-but-relaxed breakbeats, mellow piano chords, dusty vinyl texture, and soft atmospheric synth pads; verse feels stripped and intimate, pre-chorus adds filtered hat shimmer and sub pulses, chorus opens into warmer chords and gliding bass, Faint tape wobble, reversed piano swells, and vinyl crackle between phrases, Intimate close-mic, softly wide and cozy, with a nocturnal city glow, rapid, soft, lo-fi, mellow",
     "tags": [
-      "lo fi drum and bass",
+      "lo fi drum",
       "lo fi",
       "ambient chill",
       "electronic",
       "drum",
-      "and",
       "bass"
     ]
   },
@@ -42046,11 +41745,9 @@ export const productionSongRecords = [
     "metadataText": "metal, drum and bass, dubstep-metal (hybrid)\n\nMetal drum and bass hybrid with shattered guitar riffs, double-kick driven breakbeats, snarling bass drops, and a dark cinematic pulse; verse rides tense and staccato, pre-chorus strips to tom hits and filtered noise, chorus slams with gang shouts and a wider riff stack, Harsh lead vocal with layered doubles, shouted gang hooks, reverse hits into drops, metallic risers, punchy wide mix, metal",
     "tags": [
       "metal",
-      "drum and bass",
+      "drum",
       "dubstep metal hybrid",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -42071,11 +41768,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/The Bassline Outrun",
     "metadataText": "drum & bass, electronic, futuristic/club (dark)\n\nDrum & bass with rapid breakbeats, deep rolling basslines, aggressive sub hits, and atmospheric synth haze; verse-like sections stay tense with clipped percussion and filtered pads, pre-drop builds stack cinematic risers and glitch pulses, then the drop slams in with bright reese hooks and sub pressure, Add whispered crowd-like shouts, reverse swells, metallic impacts, and short delay throws, Polished, wide, high-gloss mix with dark club energy and futuristic punch, rapid, rhythmic, electronic, emotional, deep",
     "tags": [
-      "drum and bass",
+      "drum",
       "electronic",
       "futuristic club dark",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -42096,12 +41791,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/The Breakbeat Syndicate",
     "metadataText": "drum & bass, phonk, hardstyle/UK hardstyle\n\nDrum & bass phonk hybrid at a racing 170 feel with distorted 808 basslines, rapid chopped breaks, and hypnotic cowbell riffs; verse-like sections stay skeletal with sub pressure and Memphis vocal chops, pre-drop builds with reversed sweeps and brake-squeal textures, drop slams in with extra snare roll velocity, Gritty, wide, and aggressive mix, rapid, hypnotic, vocal",
     "tags": [
-      "drum and bass",
+      "drum",
       "phonk",
       "hardstyle uk hardstyle",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -42122,12 +41815,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/The City Moves at 174 BPM",
     "metadataText": "drum and bass, liquid drum and bass, cyberpunk electronic\n\nDrum and bass with rapid breakbeats, neon synth arpeggios, atmospheric pads, deep basslines, and driving cyberpunk energy; verse sections thin to pulsing bass and glassy stabs, pre-builds swell with filtered risers and reverse textures, chorus hits with full-speed drums and wide cinematic chords, bridge drops to half-time pads before the final acceleration, Close, punchy mix with glossy high end, huge sub weight, and vivid nighttime motion, deep, rapid",
     "tags": [
-      "drum and bass",
-      "liquid drum and bass",
+      "drum",
+      "liquid drum",
       "cyberpunk electronic",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -42148,12 +41839,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/The Drum Machine Awakens",
     "metadataText": "drum & bass, dubstep, Arabic/Oriental electronic (dark cinematic)\n\nDrum & bass with Arabic-inspired phrasing at 172 BPM, skittering breakbeats and deep sub pulses; verse section rides just oud motif, frame drum hits, and airy desert drones, pre-drop narrows to filtered percussion and reverse swells, then the drop hits with racing amen breaks, saw bass accents, and haunting eastern vocal textures, Wide, cinematic, gritty underground mix with echoing hand percussion, sandstorm risers, and dark club pressure, vocal, deep",
     "tags": [
-      "drum and bass",
-      "dubstep",
-      "arabic oriental electronic dark cinematic",
-      "electronic",
       "drum",
-      "and",
+      "dubstep",
+      "arabic oriental electronic",
+      "electronic",
       "bass"
     ]
   },
@@ -42174,11 +41863,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/The Endless Chase Sequence",
     "metadataText": "drum & bass, electronic, cinematic dark rave\n\nDrum & bass with rapid breakbeats and deep rolling basslines, aggressive sub hits, atmospheric synth veils, and cinematic build-release tension; verse sections ride sparse drums and low pulse, the lift adds rising arps and filtered noise, and the drop slams with fractured fills, rave stabs, and emotional lead layers, Wide, polished, dark, and hyper-detailed, rhythmic, electronic, emotional, deep, rapid",
     "tags": [
-      "drum and bass",
+      "drum",
       "electronic",
       "cinematic dark rave",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -42199,12 +41886,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/The Fastest Sound in the City",
     "metadataText": "drum and bass, dark ambient / ritual, Arabic-influenced electronic\n\nDrum and bass with Arabic-inspired rhythmic drive, fast breakbeats, and deep sub-bass; verse section rides sparse kicks, rattling shakers, and a haunted oud motif, pre-drop strips to filtered hand percussion and desert drones, chorus hits with doubled break edits, low-end pressure, and cinematic synth swells, Ghostly vocal textures drift as chopped fragments, with reversed risers, metal clangs, and sandstorm whooshes, Dark, wide, underground, and ritualistic, deep, vocal",
     "tags": [
-      "drum and bass",
+      "drum",
       "dark ambient ritual",
       "arabic influenced electronic",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -42225,12 +41910,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/The Future Runs on Basslines",
     "metadataText": "drum & bass rock hybrid, drum and bass, electric rock\n\nDrum & bass rock hybrid with distorted electric guitar riffs, aggressive live drums fused to razor breakbeats, deep basslines driving relentless forward motion, and rebellious festival-scale energy, Verse sections strip to bass, kick, and jagged guitar stabs; pre-chorus tightens with snare rolls and rising filters; chorus slams in with full drums, screaming riffs, and stacked impact hits, Short vocal shouts can punctuate the hook moments; metallic reverses, glitch fills, and crowd-sized risers bridge the drops, Bright, brutal, and wide-open in the mix, electric, rock, deep",
     "tags": [
-      "drum and bass rock hybrid",
-      "drum and bass",
+      "drum",
       "electric rock",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -42252,11 +41934,9 @@ export const productionSongRecords = [
     "metadataText": "lo-fi, drum and bass, chillstep\n\nLo-fi drum and bass with rapid relaxed breakbeats, mellow piano chord loops, dusty vinyl crackle, soft atmospheric synth pads, delicate sub pulses, and a cozy late-night urban feel; verse-like sections strip to piano and brushed breaks, then fuller drops bring reese bass and filtered noise swells, with tiny tape-stop transitions and reverse cymbal lifts; intimate close room mix, warm and slightly worn, bright transient top end with soft low-end glue, soft, lo-fi, rapid, mellow",
     "tags": [
       "lo fi",
-      "drum and bass",
+      "drum",
       "chillstep",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -42277,12 +41957,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/The Midnight Breakbeat Ritual",
     "metadataText": "drum & bass, electronic, cyberpunk/drumstep (rapid breakbeats, reese sub bass)\n\nDrum & bass anthem at a blistering 174 BPM with rapid breakbeats, deep rolling sub lines, cinematic risers, and sharp futuristic synth textures; verse sections strip to kick, snare, and a tense bass pulse, pre-drop layers in filtered arps and choir haze, then the drop hits with massive reese bass and explosive drum edits, Bright, polished, high-contrast mix with cyberpunk menace and festival-scale impact, rhythmic, deep, electronic, rapid, emotional",
     "tags": [
-      "drum and bass",
-      "electronic",
-      "cyberpunk drumstep rapid breakbeats",
-      "reese sub bass",
       "drum",
-      "and",
+      "electronic",
+      "reese sub bass",
       "bass"
     ]
   },
@@ -42303,12 +41980,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/The Neon Horizon Chase",
     "metadataText": "drum and bass, orchestral, cinematic\n\nDrum and bass with rapid breakbeats and orchestral anthem energy; verse rides clipped drums and rolling sub, pre-drop strips to timpani, low strings, and a rising synth pulse, chorus hits with sweeping strings, brass fanfares, and choir stabs, Add reversed cymbal swells, risers, impact booms, and echo tails on the brass, Wide, cinematic, festival-loud mix with deep sub weight and glossy high-end sparkle, dramatic, orchestral, deep, emotional, rapid",
     "tags": [
-      "drum and bass",
+      "drum",
       "orchestral",
       "cinematic",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -42329,12 +42004,11 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/The Pulse of Concrete Nights",
     "metadataText": "dark drum and bass, phonk, underground electronic\n\nDark drum and bass phonk hybrid with distorted 808 basslines, hypnotic cowbell motifs, rapid breakbeats, and chopped Memphis vocal textures; verse energy rides tense sub pulses and sparse kick snare, the drop opens into doubled breakbeats and pitched bass snarls, then a midsection strips to filtered rumble before the final hit returns with stacked chops and tire-screech fills, Grainy chopped-vocal hooks, reverse swells, impact hits, and short tape-stop glitches, Wide, gritty, high-contrast mix with underground street-race menace, rapid, vocal, hypnotic",
     "tags": [
-      "dark drum and bass",
+      "dark drum",
       "phonk",
       "underground electronic",
       "electronic",
       "drum",
-      "and",
       "bass"
     ]
   },
@@ -42355,12 +42029,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/The Sound of Adrenaline",
     "metadataText": "drum & bass, metal, breakbeat\n\nDrum & bass metal hybrid with 174 BPM breakbeats, distorted down-tuned guitar riffs, double-kick syncopation, snarling basslines, and dark cinematic tension; verse drives on clipped guitars and fractured drums, pre-drop strips to sub rumble and tom hits, drop explodes with full riff stack and rapid snare rolls, Gritty close mix, विशाल punch, razor-wide stereo, metal",
     "tags": [
-      "drum and bass",
+      "drum",
       "metal",
       "breakbeat",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -42381,12 +42053,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/The Soundtrack of Velocity",
     "metadataText": "drum and bass, liquid drum and bass, neurofunk\n\nDrum and bass with rapid breakbeats, deep rolling basslines, aggressive sub hits, and cinematic synth lifts; verse section keeps tight percussion and tense pulses, pre-drop strips to filtered pads and rising noise, chorus bursts with full-speed drums, reese bass, and sharp hook stabs, Breathless build breaks, glitch sparks, reverse swells, club-ready sidechain pumps, Polished, wide, dark, and adrenaline-heavy, emotional, deep, rhythmic, electronic, rapid",
     "tags": [
-      "drum and bass",
-      "liquid drum and bass",
+      "drum",
+      "liquid drum",
       "neurofunk",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -42412,7 +42082,6 @@ export const productionSongRecords = [
       "deep",
       "electronic",
       "drum",
-      "and",
       "bass"
     ]
   },
@@ -42433,12 +42102,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/Through the Cyberstorm",
     "metadataText": "drum and bass, cinematic orchestral, rave/anthemic electronic\n\nDrum and bass anthem with rapid breakbeats and cinematic orchestral lift; verse sections ride tight chopped drums and rolling sub, pre-chorus swells with rising strings and snare ramps, chorus opens into massive brass hits, choir layers, and a wider bassline, Add reverse cymbal swells, tom fills, and reverb tails into each drop, Bright, punchy, festival-sized mix with epic low-end weight, emotional, rapid, dramatic, deep, orchestral",
     "tags": [
-      "drum and bass",
+      "drum",
       "cinematic orchestral",
       "rave anthemic electronic",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -42459,12 +42126,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/Urban Chaos at Full Speed",
     "metadataText": "drum and bass, liquid drum and bass, dark electronic\n\nDrum and bass anthem with rapid breakbeats, deep rolling basslines, aggressive sub pulses, and atmospheric synth haze; verse-like sections stay tense with stripped drums and filtered pads, pre-drop ramps with snare builds and rising tonal sweeps, then the drop hits with explosive reese bass, crisp impacts, and emotional lead fragments, Wide, polished, dark, futuristic mix built for high-speed adrenaline, deep, emotional, rapid, electronic, rhythmic",
     "tags": [
-      "drum and bass",
-      "liquid drum and bass",
+      "drum",
+      "liquid drum",
       "dark electronic",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -42485,12 +42150,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Drum & Bass/Velocity Through Neon Skies",
     "metadataText": "drum & bass, Indian classical fusion, cinematic electronic\n\nDrum & bass fused with Indian classical textures, fast breakbeats driving deep rolling bass and sharp tabla interplay; verse sections stay lean with sitar motifs and bansuri phrases, pre-drop filters the drums and lifts into a tension spiral, drop hits with stacked bass, chopped percussion, and festival-scale melodic leads, Bright, cinematic, immersive mix with glowing low end and detailed high-end sparkle, deep, musical, rapid",
     "tags": [
-      "drum and bass",
+      "drum",
       "indian classical fusion",
       "cinematic electronic",
       "electronic",
-      "drum",
-      "and",
       "bass"
     ]
   },
@@ -42561,7 +42224,6 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "bass music",
-      "edm",
       "glitch",
       "electronic",
       "cinematic dubstep"
@@ -42611,7 +42273,6 @@ export const productionSongRecords = [
       "electronic",
       "bass music",
       "glitch",
-      "edm",
       "cinematic dubstep",
       "dubstep"
     ]
@@ -42637,7 +42298,6 @@ export const productionSongRecords = [
       "cinematic dubstep",
       "bass music",
       "glitch",
-      "edm",
       "dubstep"
     ]
   },
@@ -42731,7 +42391,6 @@ export const productionSongRecords = [
       "glitch",
       "cinematic dubstep",
       "bass music",
-      "edm",
       "electronic",
       "dubstep"
     ]
@@ -42798,7 +42457,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Dubstep/Digital Boss Encounter",
     "metadataText": "edm, dubstep, glitch, bass music, electronic\n\nDubstep with halftime groove, punishing sub drops, snarling mid-bass, and syncopated glitch drums; verses stay stripped to sub pulses, metallic ticks, and tense synth drones, pre-drop builds stack risers and chopped impacts, then choruses explode with distorted growls, festival lead stabs, and huge wobbling bass, Aggressive, widescreen, and bone-rattling mix, edm, glitch, cinematic dubstep, bass music, electronic",
     "tags": [
-      "edm",
       "dubstep",
       "glitch",
       "bass music",
@@ -42825,7 +42483,6 @@ export const productionSongRecords = [
       "rock",
       "bass music",
       "alternative rock",
-      "edm",
       "electronic",
       "glitch",
       "electric",
@@ -42852,7 +42509,6 @@ export const productionSongRecords = [
     "tags": [
       "glitch",
       "electronic",
-      "edm",
       "cinematic dubstep",
       "bass music",
       "dubstep"
@@ -42878,7 +42534,6 @@ export const productionSongRecords = [
       "dubstep",
       "rock",
       "electric",
-      "edm",
       "electronic"
     ]
   },
@@ -42924,7 +42579,6 @@ export const productionSongRecords = [
     "metadataText": "glitch, EDM, cinematic dubstep\n\nDubstep with heavy halftime crunch and aggressive wobble bass drops; verses stay sparse with sub pulses, metallic hits, and robotic stabs, pre-drop buildups tighten into filtered synth sirens and glitch ticks, then choruses slam with distorted growls, punchy drums, and festival-scale bass impact, Vivid cinematic transitions, wide dark mix, brutal and immersive, glitch, edm, cinematic dubstep, bass music, electronic",
     "tags": [
       "glitch",
-      "edm",
       "cinematic dubstep",
       "electronic",
       "dubstep"
@@ -43065,7 +42719,6 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "cinematic dubstep",
-      "edm",
       "glitch",
       "electronic"
     ]
@@ -43091,7 +42744,6 @@ export const productionSongRecords = [
       "electronic",
       "cinematic dubstep",
       "bass music",
-      "edm",
       "dubstep"
     ]
   },
@@ -43160,7 +42812,6 @@ export const productionSongRecords = [
       "rock",
       "bass music",
       "alternative rock",
-      "edm",
       "electronic",
       "glitch",
       "electric",
@@ -43233,7 +42884,6 @@ export const productionSongRecords = [
       "glitch",
       "cinematic dubstep",
       "bass music",
-      "edm",
       "electronic",
       "dubstep"
     ]
@@ -43257,7 +42907,6 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "rock",
-      "edm",
       "electronic"
     ]
   },
@@ -43306,7 +42955,6 @@ export const productionSongRecords = [
       "cinematic dubstep",
       "bass music",
       "glitch",
-      "edm",
       "dubstep"
     ]
   },
@@ -43328,7 +42976,6 @@ export const productionSongRecords = [
     "metadataText": "glitch, EDM, cinematic dubstep\n\nDubstep with heavy halftime crunch and aggressive wobble bass drops; verses stay sparse with sub pulses, metallic hits, and robotic stabs, pre-drop buildups tighten into filtered synth sirens and glitch ticks, then choruses slam with distorted growls, punchy drums, and festival-scale bass impact, Vivid cinematic transitions, wide dark mix, brutal and immersive, glitch, edm, cinematic dubstep, bass music, electronic",
     "tags": [
       "glitch",
-      "edm",
       "cinematic dubstep",
       "electronic",
       "dubstep"
@@ -43353,7 +43000,6 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "bass music",
-      "edm",
       "glitch",
       "electronic",
       "cinematic dubstep"
@@ -43379,7 +43025,6 @@ export const productionSongRecords = [
       "electronic",
       "bass music",
       "glitch",
-      "edm",
       "cinematic dubstep",
       "dubstep"
     ]
@@ -43404,7 +43049,6 @@ export const productionSongRecords = [
       "electronic",
       "bass music",
       "glitch",
-      "edm",
       "cinematic dubstep",
       "dubstep"
     ]
@@ -43429,7 +43073,6 @@ export const productionSongRecords = [
       "dubstep",
       "rock",
       "electric",
-      "edm",
       "electronic"
     ]
   },
@@ -43473,7 +43116,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Dubstep/Rogue System Activated",
     "metadataText": "edm, dubstep, glitch, bass music, electronic\n\nDubstep with halftime groove, punishing sub drops, snarling mid-bass, and syncopated glitch drums; verses stay stripped to sub pulses, metallic ticks, and tense synth drones, pre-drop builds stack risers and chopped impacts, then choruses explode with distorted growls, festival lead stabs, and huge wobbling bass, Aggressive, widescreen, and bone-rattling mix, edm, glitch, cinematic dubstep, bass music, electronic",
     "tags": [
-      "edm",
       "dubstep",
       "glitch",
       "bass music",
@@ -43546,7 +43188,6 @@ export const productionSongRecords = [
       "electronic",
       "cinematic dubstep",
       "bass music",
-      "edm",
       "dubstep"
     ]
   },
@@ -43569,7 +43210,6 @@ export const productionSongRecords = [
     "tags": [
       "cinematic dubstep",
       "glitch",
-      "edm",
       "electronic",
       "dubstep"
     ]
@@ -43638,7 +43278,6 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "cinematic dubstep",
-      "edm",
       "glitch",
       "electronic"
     ]
@@ -43757,7 +43396,6 @@ export const productionSongRecords = [
       "electronic",
       "bass music",
       "glitch",
-      "edm",
       "cinematic dubstep",
       "dubstep"
     ]
@@ -43828,7 +43466,6 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "rock",
-      "edm",
       "electronic"
     ]
   },
@@ -43875,7 +43512,6 @@ export const productionSongRecords = [
     "tags": [
       "glitch",
       "electronic",
-      "edm",
       "cinematic dubstep",
       "bass music",
       "dubstep"
@@ -43900,7 +43536,6 @@ export const productionSongRecords = [
     "tags": [
       "cinematic dubstep",
       "glitch",
-      "edm",
       "electronic",
       "dubstep"
     ]
@@ -45066,8 +44701,8 @@ export const productionSongRecords = [
     "metadataText": "Afro house, electronic dance music (EDM), hypnotic club/euphoric house\n\nAfro house with fast tribal percussion, driving basslines, hypnotic call-and-response chants, rolling low-end, and vibrant melodic synth lifts; verse rides tight hand drums and clipped vocal phrases, pre-chorus strips to toms and rising chants, chorus hits with a huge four-on-the-floor stomp, stacked gang vocals, and euphoric synth hooks, Filter sweeps, reversed shakers, and crowd-call echoes mark transitions; bright, punchy, widescreen club mix with deep sub weight, uplifting, low, rhythmic, electronic, vocal, deep, hypnotic",
     "tags": [
       "afro house",
-      "electronic dance music edm",
-      "hypnotic club euphoric house",
+      "electronic dance",
+      "hypnotic club euphoric",
       "electronic",
       "afro",
       "house"
@@ -45093,7 +44728,7 @@ export const productionSongRecords = [
       "afro house",
       "electronic",
       "deep",
-      "hypnotic vocal",
+      "hypnotic",
       "rhythmic",
       "afro",
       "house"
@@ -45144,7 +44779,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "tribal house",
-      "electronic dance music edm",
+      "electronic dance",
       "electronic",
       "afro",
       "house"
@@ -45193,7 +44828,7 @@ export const productionSongRecords = [
     "metadataText": "afro house, electronic dance music (EDM), tribal house\n\nAfro house with fast tribal percussion, driving bassline, syncopated hand drums, and rhythmic chant hooks; verse rides sparse kick, shakers, and a deep rolling low-end; pre-chorus strips to claps, risers, and call-and-response; chorus hits with stacked vocal chants, vibrant synth stabs, and euphoric lift, Group shouts, delay throws on hook words, feathered ad-libs, and a wide, glossy festival mix with glowing low-end punch, hypnotic, vocal, electronic, low, uplifting, deep, rhythmic",
     "tags": [
       "afro house",
-      "electronic dance music edm",
+      "electronic dance",
       "tribal house",
       "electronic",
       "afro",
@@ -45218,7 +44853,7 @@ export const productionSongRecords = [
     "metadataText": "Afro house, electronic dance music (EDM), tribal house\n\nAfro house with fast tribal percussion, rolling sub-bass, syncopated kick patterns, and rhythmic chant hooks; verse rides stripped drums and hand percussion, pre-chorus lifts with filtered synth swells and call-and-response vocals, chorus opens wide with euphoric gang chants and bright melodic leads, Breathy doubles, group shouts, delay throws, conga fills, reversed risers, Wide, glossy, club-bright mix, uplifting, low, rhythmic, electronic, vocal, deep, hypnotic",
     "tags": [
       "afro house",
-      "electronic dance music edm",
+      "electronic dance",
       "tribal house",
       "electronic",
       "afro",
@@ -45267,8 +44902,8 @@ export const productionSongRecords = [
     "metadataText": "afro house, electronic dance music (EDM), tribal afrobeat/dancehall dembow\n\nAfro house with fast tribal percussion, dembow-leaning syncopation, rolling bass, chant-led verses, and a wide euphoric lift; verse rides tense hand drums and muted synth stabs, pre-chorus strips to claps and voice, chorus opens with stacked rhythmic chants and a bright melodic lead, Close-mic lead vocal with gang responses, delay throws on chant words, reversed swells and conga fills between lines, glossy and powerful with deep low-end punch, rhythmic, low, hypnotic, electronic, vocal, deep, uplifting",
     "tags": [
       "afro house",
-      "electronic dance music edm",
-      "tribal afrobeat dancehall dembow",
+      "electronic dance",
+      "tribal afrobeat dancehall",
       "electronic",
       "afro",
       "house"
@@ -45393,7 +45028,7 @@ export const productionSongRecords = [
       "afro house",
       "electronic",
       "tribal rhythmic",
-      "mystical vocal",
+      "mystical",
       "afro",
       "house"
     ]
@@ -45444,7 +45079,7 @@ export const productionSongRecords = [
       "afro house",
       "electronic",
       "tribal rhythmic",
-      "mystical vocal",
+      "mystical",
       "afro",
       "house"
     ]
@@ -45542,7 +45177,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "tribal house",
-      "electronic dance music edm",
+      "electronic dance",
       "electronic",
       "afro",
       "house"
@@ -45592,8 +45227,8 @@ export const productionSongRecords = [
     "metadataText": "afro house, electronic dance music (EDM), tribal afrobeat/dancehall dembow\n\nAfro house with fast tribal percussion, dembow-leaning syncopation, rolling bass, chant-led verses, and a wide euphoric lift; verse rides tense hand drums and muted synth stabs, pre-chorus strips to claps and voice, chorus opens with stacked rhythmic chants and a bright melodic lead, Close-mic lead vocal with gang responses, delay throws on chant words, reversed swells and conga fills between lines, glossy and powerful with deep low-end punch, rhythmic, low, hypnotic, electronic, vocal, deep, uplifting",
     "tags": [
       "afro house",
-      "electronic dance music edm",
-      "tribal afrobeat dancehall dembow",
+      "electronic dance",
+      "tribal afrobeat dancehall",
       "electronic",
       "afro",
       "house"
@@ -45668,7 +45303,7 @@ export const productionSongRecords = [
       "afro house",
       "electronic",
       "deep",
-      "hypnotic vocal",
+      "hypnotic",
       "rhythmic",
       "afro",
       "house"
@@ -45716,8 +45351,8 @@ export const productionSongRecords = [
     "metadataText": "Afro house, electronic dance music (EDM), hypnotic club/euphoric house\n\nAfro house with fast tribal percussion, driving basslines, hypnotic call-and-response chants, rolling low-end, and vibrant melodic synth lifts; verse rides tight hand drums and clipped vocal phrases, pre-chorus strips to toms and rising chants, chorus hits with a huge four-on-the-floor stomp, stacked gang vocals, and euphoric synth hooks, Filter sweeps, reversed shakers, and crowd-call echoes mark transitions; bright, punchy, widescreen club mix with deep sub weight, uplifting, low, rhythmic, electronic, vocal, deep, hypnotic",
     "tags": [
       "afro house",
-      "electronic dance music edm",
-      "hypnotic club euphoric house",
+      "electronic dance",
+      "hypnotic club euphoric",
       "electronic",
       "afro",
       "house"
@@ -45741,8 +45376,8 @@ export const productionSongRecords = [
     "metadataText": "Afro house, electronic dance music (EDM), rhythmic vocal tribal house\n\nAfro house with fast tribal percussion, driving bass pulses, syncopated hand drums, and bright melodic synth lifts; verse rides a deep rolling groove with close-mic chants, pre-chorus strips to toms and bass murmurs, chorus hits with stacked call-and-response and euphoric vowel hooks, Filter sweeps, reversed shakers, and rimshot risers drive transitions, Wide, glossy, festival-ready mix, deep, electronic, rhythmic, vocal, low, uplifting, hypnotic",
     "tags": [
       "afro house",
-      "electronic dance music edm",
-      "rhythmic vocal tribal house",
+      "electronic dance",
+      "rhythmic tribal house",
       "electronic",
       "afro",
       "house"
@@ -45942,7 +45577,7 @@ export const productionSongRecords = [
     "metadataText": "afro house, electronic dance music (EDM), tribal house\n\nAfro house with fast tribal percussion, driving bassline, syncopated hand drums, and rhythmic chant hooks; verse rides sparse kick, shakers, and a deep rolling low-end; pre-chorus strips to claps, risers, and call-and-response; chorus hits with stacked vocal chants, vibrant synth stabs, and euphoric lift, Group shouts, delay throws on hook words, feathered ad-libs, and a wide, glossy festival mix with glowing low-end punch, hypnotic, vocal, electronic, low, uplifting, deep, rhythmic",
     "tags": [
       "afro house",
-      "electronic dance music edm",
+      "electronic dance",
       "tribal house",
       "electronic",
       "afro",
@@ -45968,7 +45603,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic",
-      "club house with tribal tribal percussion influence",
+      "club house",
       "afro",
       "house"
     ]
@@ -46043,7 +45678,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "tribal house",
-      "electronic dance music edm",
+      "electronic dance",
       "electronic",
       "afro",
       "house"
@@ -46093,8 +45728,8 @@ export const productionSongRecords = [
     "metadataText": "Afro house, electronic dance music (EDM), rhythmic vocal tribal house\n\nAfro house with fast tribal percussion, driving bass pulses, syncopated hand drums, and bright melodic synth lifts; verse rides a deep rolling groove with close-mic chants, pre-chorus strips to toms and bass murmurs, chorus hits with stacked call-and-response and euphoric vowel hooks, Filter sweeps, reversed shakers, and rimshot risers drive transitions, Wide, glossy, festival-ready mix, deep, electronic, rhythmic, vocal, low, uplifting, hypnotic",
     "tags": [
       "afro house",
-      "electronic dance music edm",
-      "rhythmic vocal tribal house",
+      "electronic dance",
+      "rhythmic tribal house",
       "electronic",
       "afro",
       "house"
@@ -46118,7 +45753,7 @@ export const productionSongRecords = [
     "metadataText": "Afro house, electronic dance music (EDM), tribal house\n\nAfro house with fast tribal percussion, rolling sub-bass, syncopated kick patterns, and rhythmic chant hooks; verse rides stripped drums and hand percussion, pre-chorus lifts with filtered synth swells and call-and-response vocals, chorus opens wide with euphoric gang chants and bright melodic leads, Breathy doubles, group shouts, delay throws, conga fills, reversed risers, Wide, glossy, club-bright mix, uplifting, low, rhythmic, electronic, vocal, deep, hypnotic",
     "tags": [
       "afro house",
-      "electronic dance music edm",
+      "electronic dance",
       "tribal house",
       "electronic",
       "afro",
@@ -46221,7 +45856,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "tribal house",
-      "electronic dance music edm",
+      "electronic dance",
       "electronic",
       "afro",
       "house"
@@ -46246,7 +45881,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic",
-      "club house with tribal tribal percussion influence",
+      "club house",
       "afro",
       "house"
     ]
@@ -46484,19 +46119,15 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Phonk/Cassette Drift",
     "metadataText": "Phonk with a hard trap pulse and swung head-nod cadence; verses ride stripped drums, distorted 808 slides, and hypnotic cowbell loops, pre-drop builds with eerie synth smear and cassette hiss, then the drop hits with Memphis vocal chops, deep sub rumble, and skidding snare accents, Lo-fi, gritty, wide, and bass-heavy with cinematic tension, lo-fi, vocal, raw, deep, hypnotic",
     "tags": [
-      "phonk with a hard trap pulse and swung head nod cadence verses ride stripped drums",
+      "phonk",
       "distorted 808 slides",
-      "and hypnotic cowbell loops",
-      "pre drop builds with eerie synth smear and cassette hiss",
-      "then the drop hits with memphis vocal chops",
+      "hypnotic cowbell loops",
+      "pre builds",
       "deep sub rumble",
-      "and skidding snare accents",
+      "skidding snare accents",
       "lo fi",
       "gritty",
-      "wide",
-      "and bass heavy with cinematic tension",
-      "vocal",
-      "raw",
+      "bass heavy",
       "deep",
       "hypnotic",
       "electronic"
@@ -46543,7 +46174,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Phonk/Chaos Beneath the Temple Lights",
     "metadataText": "the Temple Lights Add a Caption Remix/Edit Phonk with dark cinematic Indian fusion\n\nat a driving midtempo pulse, syncopated trap drums and crushing sub-bass; verse rides sparse cowbell, tabla, and detuned sitar, pre-chorus opens with bansuri lifts and temple drone, chorus slams with dhol hits, orchestral stabs, and gang chants, Lead vocal is gritty and close-mic with doubled hook lines, ad-libs panned wide, delay throws on the last words, Tape grit, reversed swells, and rising crowd textures bridge sections; mix is heavy, wide, and festival-loud, rhythmic, raw, orchestral, hypnotic, deep",
     "tags": [
-      "the temple lights add a caption remix edit phonk with dark cinematic indian fusion",
       "electronic",
       "phonk"
     ]
@@ -46658,7 +46288,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Phonk/Desi Street Phantom",
     "metadataText": "Desi Street Phantom Add a Caption Remix/Edit phonk, trap, cinematic orchestral\n\nDesi Street Phantom Add a Caption Remix/Edit Phonk anthem with distorted 808 basslines and hypnotic cowbell leads, aggressive trap drums and deep sub pulses; verse keeps it skeletal with cassette grit and tabla ticks, pre-drop swells in bansuri and tanpura haze, drop hits with sitar stabs, dhol rolls, and orchestral hits, Mock-vocal alaap phrases, temple ambience, gritty wide cinematic mix, deep, hypnotic, rhythmic, raw, orchestral",
     "tags": [
-      "desi street phantom add a caption remix edit phonk",
+      "desi street phantom",
       "trap",
       "cinematic orchestral",
       "electronic",
@@ -47397,7 +47027,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic grime indian cinematic fusion",
+      "cinematic grime indian",
       "electronic"
     ]
   },
@@ -47420,7 +47050,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic grime indian cinematic fusion",
+      "cinematic grime indian",
       "electronic"
     ]
   },
@@ -47443,7 +47073,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic grime indian cinematic fusion",
+      "cinematic grime indian",
       "electronic"
     ]
   },
@@ -47466,7 +47096,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic grime indian cinematic fusion",
+      "cinematic grime indian",
       "electronic"
     ]
   },
@@ -47489,7 +47119,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic grime indian cinematic fusion",
+      "cinematic grime indian",
       "electronic"
     ]
   },
@@ -47512,7 +47142,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic grime indian cinematic fusion",
+      "cinematic grime indian",
       "electronic"
     ]
   },
@@ -47535,7 +47165,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic grime indian cinematic fusion",
+      "cinematic grime indian",
       "electronic"
     ]
   },
@@ -47558,7 +47188,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic grime indian cinematic fusion",
+      "cinematic grime indian",
       "electronic"
     ]
   },
@@ -47581,7 +47211,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic grime indian cinematic fusion",
+      "cinematic grime indian",
       "electronic"
     ]
   },
@@ -47604,7 +47234,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic grime indian cinematic fusion",
+      "cinematic grime indian",
       "electronic"
     ]
   },
@@ -47627,7 +47257,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic grime indian cinematic fusion",
+      "cinematic grime indian",
       "electronic"
     ]
   },
@@ -47650,7 +47280,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic grime indian cinematic fusion",
+      "cinematic grime indian",
       "electronic"
     ]
   },
@@ -47673,8 +47303,7 @@ export const productionSongRecords = [
     "metadataText": "hyperpop, electronic, pop\n\nHyperpop anthem with glitchy synths, distorted basslines, high-energy electronic drums, pitch-shifted vocals, sugary catchy melodies, explosive transitions, sparkling arpeggios, and maximalist cyberpunk production; verse rides twitchy staccato pulses, pre-chorus strips to a vocal filter and rising shards, chorus hits with stacked hooks and detuned bass drops, bridge breaks into dreamy half-time haze before the final burst, Heavily processed lead vocal with octave doubles, chopped ad-libs, delay throws, and bright punchy mix with glossy digital sheen, emotional, vocal, experimental, hyperpop, pop, electronic",
     "tags": [
       "hyperpop",
-      "electronic",
-      "pop"
+      "electronic"
     ]
   },
   {
@@ -47835,8 +47464,7 @@ export const productionSongRecords = [
     "tags": [
       "hyperpop",
       "electronic",
-      "experimental",
-      "pop"
+      "experimental"
     ]
   },
   {
@@ -47858,7 +47486,6 @@ export const productionSongRecords = [
     "metadataText": "experimental, pop, hyperpop\n\nHyperpop with frantic 170 BPM bounce, jagged off-kilter drums and rubbery bass; verse rides sparse digital pops and chopped stutters, pre-chorus tightens with rising sparkles and vocal filters, chorus slams in with stacked harmonies and hook doubling, Pitch-shifted lead, gang ad-libs, delay throws on punch words, reverse sweeps into drops, glittering arpeggios and hard clip saturation, Bright, glossy, overload-heavy mix, experimental, emotional, vocal, pop, hyperpop, electronic",
     "tags": [
       "experimental",
-      "pop",
       "hyperpop",
       "electronic"
     ]
@@ -47882,7 +47509,6 @@ export const productionSongRecords = [
     "metadataText": "hyperpop, pop, electronic\n\nHyperpop anthem with frantic four-on-the-floor drums, warped bass swells, and candy-bright synth stabs; verse rides chopped rhythms and pitch-bent vocal turns, pre-chorus strips to filtered arps and rising static, chorus explodes with stacked hooks and vocal glitches, Bridge drops into dreamy half-time, then final chorus returns with bigger drops, sparkles, and hard digital crunch, Maximalist, glossy, electric mix, emotional, experimental, hyperpop, pop, vocal, electronic",
     "tags": [
       "hyperpop",
-      "pop",
       "electronic"
     ]
   },
@@ -47905,8 +47531,7 @@ export const productionSongRecords = [
     "metadataText": "electronic, hyperpop, pop\n\nHyperpop anthem with frantic half-time-to-double-time pulse, chopped kick patterns, squeaky sub drops, and jittery arps; verses ride sparse snaps and warped vocal chops, pre-chorus squeezes into filtered tension, chorus bursts with stacked doubles and gang chants, Bridge falls into dreamy haze, then final chorus detonates, Pitch-shifted lead, glossy harmonies, wide neon-bright mix with hard-edged bite, electronic, hyperpop, pop, vocal, emotional, experimental",
     "tags": [
       "electronic",
-      "hyperpop",
-      "pop"
+      "hyperpop"
     ]
   },
   {
@@ -48143,7 +47768,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Hyperpop/Pixel Heartbreak",
     "metadataText": "pop, hyperpop, experimental electronic, glitchy, overcompressed neon synthpop\n\nHyperpop with frantic 150 BPM energy, skittering syncopated drums and warped bass surges; verse rides clipped stabs and playful stop-start phrasing, pre-chorus opens into stacked harmonies and rising digital tension, chorus explodes with sugar-sweet gang vocals and pitched ad-libs, Glitch fills, reverse sweeps, and sparkling arp bursts bridge sections, Bright, glossy, overcompressed mix with a neon-hard edge, pop, hyperpop, vocal, emotional, experimental, electronic",
     "tags": [
-      "pop",
       "hyperpop",
       "experimental electronic",
       "glitchy",
@@ -48360,7 +47984,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Hyperpop/Virus Candy",
     "metadataText": "pop, experimental, hyperpop\n\nHyperpop anthem with frantic half-time bounce and glitch-pop drums; verse rides chopped synth stabs and rubbery bass, pre-chorus narrows to a filtered pulse and pitch-bent lead, chorus detonates with stacked sugar hooks and octave doubles, Vocal chain is heavily processed with pitched ad-libs, stutter edits, and crowd-gang repeats, Sparkling arps, bitcrushed fills, reversed swells, and hard transition impacts, Maximalist, bright, and razor-clean, pop, experimental, vocal, electronic, emotional, hyperpop",
     "tags": [
-      "pop",
       "experimental",
       "hyperpop",
       "electronic"
@@ -49034,7 +48657,7 @@ export const productionSongRecords = [
       "latin",
       "tropical",
       "cinematic instrumental",
-      "acoustic guitar driven",
+      "acoustic guitar",
       "culture"
     ]
   },
@@ -49059,7 +48682,7 @@ export const productionSongRecords = [
       "latin",
       "tropical",
       "cinematic instrumental",
-      "acoustic guitar driven",
+      "acoustic guitar",
       "culture"
     ]
   },
@@ -49501,9 +49124,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Tech House/Grooves Through the Smoke",
     "metadataText": "vocal, smooth, low, bassline, hypnotic, deep, minimal, tech house, electronic",
     "tags": [
-      "vocal",
       "smooth",
-      "low",
       "bassline",
       "hypnotic",
       "deep",
@@ -49531,9 +49152,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Tech House/Hypnotic Transmission",
     "metadataText": "vocal, smooth, low, bassline, hypnotic, deep, minimal, tech house, electronic",
     "tags": [
-      "vocal",
       "smooth",
-      "low",
       "bassline",
       "hypnotic",
       "deep",
@@ -49561,9 +49180,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Tech House/Infinite Groove Machine",
     "metadataText": "vocal, smooth, low, bassline, hypnotic, deep, minimal, tech house, electronic",
     "tags": [
-      "vocal",
       "smooth",
-      "low",
       "bassline",
       "hypnotic",
       "deep",
@@ -49591,9 +49208,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Tech House/Late Night in Barcelona",
     "metadataText": "vocal, smooth, low, bassline, hypnotic, deep, minimal, tech house, electronic",
     "tags": [
-      "vocal",
       "smooth",
-      "low",
       "bassline",
       "hypnotic",
       "deep",
@@ -49621,9 +49236,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Tech House/Lost in the Strobe Lights",
     "metadataText": "vocal, smooth, low, bassline, hypnotic, deep, minimal, tech house, electronic",
     "tags": [
-      "vocal",
       "smooth",
-      "low",
       "bassline",
       "hypnotic",
       "deep",
@@ -49651,9 +49264,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Tech House/Low End Obsession",
     "metadataText": "vocal, smooth, low, bassline, hypnotic, deep, minimal, tech house, electronic",
     "tags": [
-      "vocal",
       "smooth",
-      "low",
       "bassline",
       "hypnotic",
       "deep",
@@ -50238,7 +49849,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "club warehouse minimal deep",
+      "club warehouse minimal",
       "hypnotic",
       "tech",
       "house"
@@ -50263,7 +49874,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "club warehouse minimal deep",
+      "club warehouse minimal",
       "hypnotic",
       "tech",
       "house"
@@ -50288,7 +49899,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "club warehouse minimal deep",
+      "club warehouse minimal",
       "hypnotic",
       "tech",
       "house"
@@ -50313,7 +49924,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "club warehouse minimal deep",
+      "club warehouse minimal",
       "hypnotic",
       "tech",
       "house"
@@ -50338,7 +49949,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "club warehouse minimal deep",
+      "club warehouse minimal",
       "hypnotic",
       "tech",
       "house"
@@ -50367,7 +49978,6 @@ export const productionSongRecords = [
       "cyberpunk",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -50393,7 +50003,6 @@ export const productionSongRecords = [
       "cinematic dramatic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -50419,7 +50028,6 @@ export const productionSongRecords = [
       "orchestral fantasy",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -50445,7 +50053,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -50473,7 +50080,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -50499,7 +50105,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -50525,7 +50130,6 @@ export const productionSongRecords = [
       "cyberpunk edm",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -50551,7 +50155,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -50578,7 +50181,6 @@ export const productionSongRecords = [
       "heroic epic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -50604,7 +50206,6 @@ export const productionSongRecords = [
       "dramatic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -50630,7 +50231,6 @@ export const productionSongRecords = [
       "electronic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -50656,7 +50256,6 @@ export const productionSongRecords = [
       "dramatic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -50683,7 +50282,6 @@ export const productionSongRecords = [
       "dramatic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -50709,7 +50307,6 @@ export const productionSongRecords = [
       "cyberpunk edm",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -50736,7 +50333,6 @@ export const productionSongRecords = [
       "fantasy",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -50762,7 +50358,6 @@ export const productionSongRecords = [
       "trailer like orchestral",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -50788,7 +50383,6 @@ export const productionSongRecords = [
       "electronic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -50814,7 +50408,6 @@ export const productionSongRecords = [
       "dramatic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -50840,7 +50433,6 @@ export const productionSongRecords = [
       "cyberpunk edm",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -50866,7 +50458,6 @@ export const productionSongRecords = [
       "cinematic soundtrack",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -50892,7 +50483,6 @@ export const productionSongRecords = [
       "glitch",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -50918,7 +50508,6 @@ export const productionSongRecords = [
       "cyberpunk edm",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -50944,7 +50533,6 @@ export const productionSongRecords = [
       "electronic soundtrack",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -50970,7 +50558,6 @@ export const productionSongRecords = [
       "glitch",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -50997,7 +50584,6 @@ export const productionSongRecords = [
       "dramatic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51024,7 +50610,6 @@ export const productionSongRecords = [
       "fantasy",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51050,7 +50635,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51076,7 +50660,6 @@ export const productionSongRecords = [
       "dramatic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51102,7 +50685,6 @@ export const productionSongRecords = [
       "electronic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51128,7 +50710,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51154,7 +50735,6 @@ export const productionSongRecords = [
       "dramatic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51180,7 +50760,6 @@ export const productionSongRecords = [
       "dramatic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51208,7 +50787,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51234,7 +50812,6 @@ export const productionSongRecords = [
       "electronic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51260,7 +50837,6 @@ export const productionSongRecords = [
       "electronic soundtrack",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51286,7 +50862,6 @@ export const productionSongRecords = [
       "orchestral fantasy",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51312,7 +50887,6 @@ export const productionSongRecords = [
       "electronic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51339,7 +50913,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51365,7 +50938,6 @@ export const productionSongRecords = [
       "electronic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51391,7 +50963,6 @@ export const productionSongRecords = [
       "glitch",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51417,7 +50988,6 @@ export const productionSongRecords = [
       "cinematic soundtrack",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51444,7 +51014,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51471,7 +51040,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51497,7 +51065,6 @@ export const productionSongRecords = [
       "electronic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51523,7 +51090,6 @@ export const productionSongRecords = [
       "electronic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51549,7 +51115,6 @@ export const productionSongRecords = [
       "epic fantasy",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51575,7 +51140,6 @@ export const productionSongRecords = [
       "electronic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51601,7 +51165,6 @@ export const productionSongRecords = [
       "electronic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51628,7 +51191,6 @@ export const productionSongRecords = [
       "fantasy",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51654,7 +51216,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51680,7 +51241,6 @@ export const productionSongRecords = [
       "dramatic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51707,7 +51267,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51734,7 +51293,6 @@ export const productionSongRecords = [
       "glitch",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51760,7 +51318,6 @@ export const productionSongRecords = [
       "glitch",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51786,7 +51343,6 @@ export const productionSongRecords = [
       "orchestral",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51812,7 +51368,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51839,7 +51394,6 @@ export const productionSongRecords = [
       "glitch",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51865,7 +51419,6 @@ export const productionSongRecords = [
       "dramatic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51892,7 +51445,6 @@ export const productionSongRecords = [
       "cinematic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51918,7 +51470,6 @@ export const productionSongRecords = [
       "epic orchestral",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51945,7 +51496,6 @@ export const productionSongRecords = [
       "glitch",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51971,7 +51521,6 @@ export const productionSongRecords = [
       "dramatic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -51997,7 +51546,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52024,7 +51572,6 @@ export const productionSongRecords = [
       "heroic epic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52050,7 +51597,6 @@ export const productionSongRecords = [
       "dramatic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52076,7 +51622,6 @@ export const productionSongRecords = [
       "orchestral",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52102,7 +51647,6 @@ export const productionSongRecords = [
       "epic fantasy",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52129,7 +51673,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52155,7 +51698,6 @@ export const productionSongRecords = [
       "epic dramatic orchestral",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52181,7 +51723,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52207,7 +51748,6 @@ export const productionSongRecords = [
       "dramatic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52233,7 +51773,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52259,7 +51798,6 @@ export const productionSongRecords = [
       "orchestral fantasy",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52286,7 +51824,6 @@ export const productionSongRecords = [
       "dramatic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52313,7 +51850,6 @@ export const productionSongRecords = [
       "fantasy",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52339,7 +51875,6 @@ export const productionSongRecords = [
       "dramatic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52365,7 +51900,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52391,7 +51925,6 @@ export const productionSongRecords = [
       "dramatic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52418,7 +51951,6 @@ export const productionSongRecords = [
       "dramatic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52444,7 +51976,6 @@ export const productionSongRecords = [
       "dramatic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52470,7 +52001,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52496,7 +52026,6 @@ export const productionSongRecords = [
       "cinematic dramatic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52522,7 +52051,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52548,7 +52076,6 @@ export const productionSongRecords = [
       "trailer like orchestral",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52575,7 +52102,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52601,7 +52127,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52627,7 +52152,6 @@ export const productionSongRecords = [
       "orchestral",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52650,11 +52174,9 @@ export const productionSongRecords = [
     "tags": [
       "glitch",
       "electronic",
-      "edm",
       "cinematic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52680,7 +52202,6 @@ export const productionSongRecords = [
       "electronic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52706,7 +52227,6 @@ export const productionSongRecords = [
       "orchestral",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52729,11 +52249,9 @@ export const productionSongRecords = [
     "tags": [
       "glitch",
       "electronic",
-      "edm",
       "cinematic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52759,7 +52277,6 @@ export const productionSongRecords = [
       "electronic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52784,10 +52301,8 @@ export const productionSongRecords = [
       "electronic",
       "soundtrack",
       "cyberpunk",
-      "edm",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52814,7 +52329,6 @@ export const productionSongRecords = [
       "glitch",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52841,7 +52355,6 @@ export const productionSongRecords = [
       "cinematic",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52867,7 +52380,6 @@ export const productionSongRecords = [
       "epic orchestral",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52894,7 +52406,6 @@ export const productionSongRecords = [
       "cinematic hollywood",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52920,7 +52431,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52946,7 +52456,6 @@ export const productionSongRecords = [
       "epic dramatic orchestral",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52972,7 +52481,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ]
   },
@@ -52998,7 +52506,6 @@ export const productionSongRecords = [
       "meditative",
       "occasion",
       "meditation",
-      "and",
       "yoga"
     ]
   },
@@ -53023,7 +52530,6 @@ export const productionSongRecords = [
       "meditation",
       "world",
       "occasion",
-      "and",
       "yoga"
     ]
   },
@@ -53048,7 +52554,6 @@ export const productionSongRecords = [
       "meditation",
       "world tibetan inspired",
       "occasion",
-      "and",
       "yoga"
     ]
   },
@@ -53073,7 +52578,6 @@ export const productionSongRecords = [
       "new age",
       "meditation",
       "occasion",
-      "and",
       "yoga"
     ]
   },
@@ -53099,7 +52603,6 @@ export const productionSongRecords = [
       "meditation yoga instrumental",
       "occasion",
       "meditation",
-      "and",
       "yoga"
     ]
   },
@@ -53124,7 +52627,6 @@ export const productionSongRecords = [
       "world",
       "meditation",
       "occasion",
-      "and",
       "yoga"
     ]
   },
@@ -53147,9 +52649,8 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "meditation",
-      "world music tibetan inspired",
+      "world music tibetan",
       "occasion",
-      "and",
       "yoga"
     ]
   },
@@ -53174,7 +52675,6 @@ export const productionSongRecords = [
       "meditation",
       "world",
       "occasion",
-      "and",
       "yoga"
     ]
   },
@@ -53203,7 +52703,6 @@ export const productionSongRecords = [
       "tibetan inspired",
       "occasion",
       "meditation",
-      "and",
       "yoga"
     ]
   },
@@ -53229,7 +52728,6 @@ export const productionSongRecords = [
       "meditative",
       "occasion",
       "meditation",
-      "and",
       "yoga"
     ]
   },
@@ -53255,7 +52753,6 @@ export const productionSongRecords = [
       "world meditative instrumental",
       "occasion",
       "meditation",
-      "and",
       "yoga"
     ]
   },
@@ -53280,7 +52777,6 @@ export const productionSongRecords = [
       "meditation",
       "world",
       "occasion",
-      "and",
       "yoga"
     ]
   },
@@ -53305,7 +52801,6 @@ export const productionSongRecords = [
       "meditation",
       "world",
       "occasion",
-      "and",
       "yoga"
     ]
   },
@@ -53331,7 +52826,6 @@ export const productionSongRecords = [
       "world",
       "occasion",
       "meditation",
-      "and",
       "yoga"
     ]
   },
@@ -53354,9 +52848,8 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "meditation",
-      "world music tibetan inspired",
+      "world music tibetan",
       "occasion",
-      "and",
       "yoga"
     ]
   },
@@ -53382,7 +52875,6 @@ export const productionSongRecords = [
       "meditation healing",
       "occasion",
       "meditation",
-      "and",
       "yoga"
     ]
   },
@@ -53411,7 +52903,6 @@ export const productionSongRecords = [
       "tibetan inspired",
       "occasion",
       "meditation",
-      "and",
       "yoga"
     ]
   },
@@ -53437,7 +52928,6 @@ export const productionSongRecords = [
       "world",
       "occasion",
       "meditation",
-      "and",
       "yoga"
     ]
   },
@@ -53463,7 +52953,6 @@ export const productionSongRecords = [
       "healing meditation",
       "occasion",
       "meditation",
-      "and",
       "yoga"
     ]
   },
@@ -53489,7 +52978,6 @@ export const productionSongRecords = [
       "meditation healing",
       "occasion",
       "meditation",
-      "and",
       "yoga"
     ]
   },
@@ -53514,7 +53002,6 @@ export const productionSongRecords = [
       "new age",
       "meditation",
       "occasion",
-      "and",
       "yoga"
     ]
   },
@@ -53539,7 +53026,6 @@ export const productionSongRecords = [
       "meditation",
       "world",
       "occasion",
-      "and",
       "yoga"
     ]
   },
@@ -53566,7 +53052,6 @@ export const productionSongRecords = [
       "cinematic",
       "occasion",
       "meditation",
-      "and",
       "yoga"
     ]
   },
@@ -53592,7 +53077,6 @@ export const productionSongRecords = [
       "meditation yoga instrumental",
       "occasion",
       "meditation",
-      "and",
       "yoga"
     ]
   },
@@ -53618,7 +53102,6 @@ export const productionSongRecords = [
       "healing meditation",
       "occasion",
       "meditation",
-      "and",
       "yoga"
     ]
   },
@@ -53644,7 +53127,6 @@ export const productionSongRecords = [
       "world meditative instrumental",
       "occasion",
       "meditation",
-      "and",
       "yoga"
     ]
   },
@@ -53671,7 +53153,6 @@ export const productionSongRecords = [
       "cinematic",
       "occasion",
       "meditation",
-      "and",
       "yoga"
     ]
   },
@@ -53696,7 +53177,6 @@ export const productionSongRecords = [
       "meditation",
       "world",
       "occasion",
-      "and",
       "yoga"
     ]
   },
@@ -53721,7 +53201,6 @@ export const productionSongRecords = [
       "meditation",
       "world tibetan inspired",
       "occasion",
-      "and",
       "yoga"
     ]
   },
@@ -53746,7 +53225,6 @@ export const productionSongRecords = [
       "world",
       "meditation",
       "occasion",
-      "and",
       "yoga"
     ]
   },
@@ -53817,7 +53295,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Content Creator/Audio for the Feed",
     "metadataText": "pop, acoustic, feel-good, bright\n\nPop acoustic with breezy midtempo strumming, hand percussion, snap accents, and a buoyant melody that feels like a daily vlog opener; verse rides solo guitar and shaker, pre-chorus adds claps and a rising uke counterline, chorus opens with stacked hummed hooks and bright chord lifts, Light breathy vocal chops, tiny pluck fills, crisp airy mix, modern and polished, soundtrack, bright, acoustic, clean, light, feel-good",
     "tags": [
-      "pop",
       "acoustic",
       "feel good",
       "bright",
@@ -53843,7 +53320,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Content Creator/Backgrounds for Visionaries",
     "metadataText": "pop, acoustic, feel-good\n\nPop acoustic with bouncy mid-tempo groove, crisp fingerpicked guitar, tight hand percussion, and a bright verse-to-chorus lift; verse stays light and minimal, chorus opens with layered claps and humming synth sheen, bridge strips to guitar and shaker before a final uplift, Soft group ohs, playful vocal chops, quick risers, and sparkling bell accents, Clean, glossy, wide mix with an intimate modern influencer feel, light, soundtrack, acoustic, feel-good, clean, bright",
     "tags": [
-      "pop",
       "acoustic",
       "feel good",
       "occasion",
@@ -53918,7 +53394,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Content Creator/Coffee & Creativity",
     "metadataText": "lo-fi hip hop, jazz-influenced, mellow\n\nLo-fi hip-hop instrumental with a relaxed swung pocket, warm vinyl crackle, soft brushy drums, mellow Rhodes chords, and lazy piano motifs; verse section feels sparse with dusty keys and subbed kick, then a small lift adds finger snaps and soft bass movement before settling back into a cozy loop, Occasional tape stop tails, reversed chord swells, and tiny room-noise details, Intimate, hazy, focused mix, soft, jazzy, mellow, warm, lo-fi",
     "tags": [
-      "lo fi hip hop",
       "jazz influenced",
       "mellow",
       "occasion",
@@ -53943,7 +53418,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Content Creator/Content Without Limit",
     "metadataText": "pop, acoustic, feel-good, bright\n\nPop acoustic with breezy midtempo strumming, hand percussion, snap accents, and a buoyant melody that feels like a daily vlog opener; verse rides solo guitar and shaker, pre-chorus adds claps and a rising uke counterline, chorus opens with stacked hummed hooks and bright chord lifts, Light breathy vocal chops, tiny pluck fills, crisp airy mix, modern and polished, soundtrack, bright, acoustic, clean, light, feel-good",
     "tags": [
-      "pop",
       "acoustic",
       "feel good",
       "bright",
@@ -54169,7 +53643,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Content Creator/Digital Daydreams",
     "metadataText": "lo-fi hip-hop, jazzy, mellow\n\nLo-fi hip-hop instrumental with laid-back swung drums, warm Rhodes chords, mellow upright piano motifs, and a dust-soft vinyl texture; verse section opens with just keys and brushed kick, midsection adds a muted bass pulse and lazy drum fills, then a calm looped breakdown returns to piano alone, Subtle tape hiss, reverse piano swells, and tiny room-chime transitions, Cozy, intimate, softly compressed mix, jazzy, mellow, lo-fi, soft, warm",
     "tags": [
-      "lo fi hip hop",
       "jazzy",
       "mellow",
       "occasion",
@@ -54219,7 +53692,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Content Creator/Infinite Creativity",
     "metadataText": "lo-fi hip hop, jazz-influenced, mellow\n\nLo-fi hip-hop instrumental with a relaxed swung pocket, warm vinyl crackle, soft brushy drums, mellow Rhodes chords, and lazy piano motifs; verse section feels sparse with dusty keys and subbed kick, then a small lift adds finger snaps and soft bass movement before settling back into a cozy loop, Occasional tape stop tails, reversed chord swells, and tiny room-noise details, Intimate, hazy, focused mix, soft, jazzy, mellow, warm, lo-fi",
     "tags": [
-      "lo fi hip hop",
       "jazz influenced",
       "mellow",
       "occasion",
@@ -54246,7 +53718,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "indie folk",
-      "feel good acoustic pop",
+      "feel good acoustic",
       "occasion",
       "content",
       "creator"
@@ -54269,7 +53741,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Content Creator/Lights, Camera, Create",
     "metadataText": "lo-fi hip-hop, jazzy, mellow\n\nLo-fi hip-hop instrumental with laid-back swung drums, warm Rhodes chords, mellow upright piano motifs, and a dust-soft vinyl texture; verse section opens with just keys and brushed kick, midsection adds a muted bass pulse and lazy drum fills, then a calm looped breakdown returns to piano alone, Subtle tape hiss, reverse piano swells, and tiny room-chime transitions, Cozy, intimate, softly compressed mix, jazzy, mellow, lo-fi, soft, warm",
     "tags": [
-      "lo fi hip hop",
       "jazzy",
       "mellow",
       "occasion",
@@ -54547,7 +54018,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "indie folk",
-      "feel good acoustic pop",
+      "feel good acoustic",
       "occasion",
       "content",
       "creator"
@@ -54622,7 +54093,6 @@ export const productionSongRecords = [
     "tags": [
       "electronic pop",
       "dance pop",
-      "four on the floor",
       "occasion",
       "content",
       "creator"
@@ -54770,7 +54240,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Content Creator/The Storyboard Sessions",
     "metadataText": "pop, acoustic, feel-good\n\nPop acoustic with bouncy mid-tempo groove, crisp fingerpicked guitar, tight hand percussion, and a bright verse-to-chorus lift; verse stays light and minimal, chorus opens with layered claps and humming synth sheen, bridge strips to guitar and shaker before a final uplift, Soft group ohs, playful vocal chops, quick risers, and sparkling bell accents, Clean, glossy, wide mix with an intimate modern influencer feel, light, soundtrack, acoustic, feel-good, clean, bright",
     "tags": [
-      "pop",
       "acoustic",
       "feel good",
       "occasion",
@@ -54872,7 +54341,6 @@ export const productionSongRecords = [
     "tags": [
       "electronic pop",
       "dance pop",
-      "four on the floor",
       "occasion",
       "content",
       "creator"
@@ -55027,7 +54495,6 @@ export const productionSongRecords = [
       "cinematic rap",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -55053,7 +54520,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -55080,7 +54546,6 @@ export const productionSongRecords = [
       "cinematic rap",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -55107,7 +54572,6 @@ export const productionSongRecords = [
       "dramatic",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -55134,7 +54598,6 @@ export const productionSongRecords = [
       "workout motivational",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -55158,10 +54621,9 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "aggressive trap metal energy",
+      "aggressive trap metal",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -55187,7 +54649,6 @@ export const productionSongRecords = [
       "cinematic hip hop",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -55212,8 +54673,7 @@ export const productionSongRecords = [
       "workout",
       "soundtrack",
       "occasion",
-      "fitness",
-      "and"
+      "fitness"
     ]
   },
   {
@@ -55239,8 +54699,7 @@ export const productionSongRecords = [
       "dramatic",
       "workout",
       "occasion",
-      "fitness",
-      "and"
+      "fitness"
     ]
   },
   {
@@ -55266,7 +54725,6 @@ export const productionSongRecords = [
       "motivational",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -55287,13 +54745,11 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Fitness & Workout/Dance Through the Burn",
     "metadataText": "pop, dance-pop, motivational bright upbeat, feel-good\n\nPop fitness anthem at 128 BPM with four-on-the-floor kick, snappy claps, bouncing bass, and bright synth hooks; verse energy stays lean with tight percussion and pulsing arps, pre-drop strips to handclaps and filtered pads, chorus opens into wide chord stacks and a neon lead motif, Vocal-style crowd chants and reverse swells add lift, Polished, glossy, radio-ready mix, motivational, beats, pop, feel-good, bright, soundtrack",
     "tags": [
-      "pop",
       "dance pop",
       "motivational bright upbeat",
       "feel good",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -55319,7 +54775,6 @@ export const productionSongRecords = [
       "dramatic",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -55340,12 +54795,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Fitness & Workout/Electric Energy Rush",
     "metadataText": "pop, dance-pop, upbeat electronic\n\nPop fitness anthem with a driving four-on-the-floor groove, crisp claps, bright synth stabs, and a rubbery bassline that stays danceable and relentless, Verse sections keep the pattern lean with pulsing hats and minimal chords; pre-drop lifts with snare rolls, rising filters, and vocal-chop-style synth flourishes; main drop hits with layered hooks, octave bass, and stacked synth brass, Airy top-line doubles, punchy transients, sparkling transitions, polished radio-bright mix, wide and energetic, motivational, soundtrack, bright, beats, pop, feel-good",
     "tags": [
-      "pop",
       "dance pop",
       "upbeat electronic",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -55372,7 +54825,6 @@ export const productionSongRecords = [
       "workout motivational",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -55398,7 +54850,6 @@ export const productionSongRecords = [
       "electric rock",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -55422,10 +54873,9 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "cinematic edm club anthem",
+      "cinematic edm club",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -55451,7 +54901,6 @@ export const productionSongRecords = [
       "stadium rock",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -55474,10 +54923,9 @@ export const productionSongRecords = [
     "tags": [
       "cinematic soundtrack",
       "dark orchestral",
-      "industrial epic workout music",
+      "industrial epic workout",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -55504,7 +54952,6 @@ export const productionSongRecords = [
       "aggressive workout banger",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -55525,7 +54972,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Fitness & Workout/High on Momentum",
     "metadataText": "pop, dance-pop, electronic dance, upbeat, motivational, bright, punchy\n\nPop fitness anthem at a brisk 128 BPM with four-on-the-floor kick, syncopated claps, bouncy bass, and bright synth stabs; verse section keeps the groove lean with palm-muted plucks, pre-drop lifts with filtered risers and vocal-chop accents, chorus hits with stacked synth hooks and wider drum layers, then a breakdown strips to bass pulse and handclap snaps before the final lift, Polished, radio-ready, bright and punchy, beats, feel-good, motivational, bright, soundtrack, pop",
     "tags": [
-      "pop",
       "dance pop",
       "electronic dance",
       "upbeat",
@@ -55534,7 +54980,6 @@ export const productionSongRecords = [
       "punchy",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -55561,7 +55006,6 @@ export const productionSongRecords = [
       "aggressive rap",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -55588,7 +55032,6 @@ export const productionSongRecords = [
       "dark aggressive",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -55609,13 +55052,11 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Fitness & Workout/Limitless in Motion",
     "metadataText": "pop, dance-pop, motivational bright upbeat, feel-good\n\nPop fitness anthem at 128 BPM with four-on-the-floor kick, snappy claps, bouncing bass, and bright synth hooks; verse energy stays lean with tight percussion and pulsing arps, pre-drop strips to handclaps and filtered pads, chorus opens into wide chord stacks and a neon lead motif, Vocal-style crowd chants and reverse swells add lift, Polished, glossy, radio-ready mix, motivational, beats, pop, feel-good, bright, soundtrack",
     "tags": [
-      "pop",
       "dance pop",
       "motivational bright upbeat",
       "feel good",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -55639,10 +55080,9 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "cinematic edm club anthem",
+      "cinematic edm club",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -55663,12 +55103,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Fitness & Workout/Move Like Fire",
     "metadataText": "pop, dance-pop, upbeat electronic\n\nPop fitness anthem with a driving four-on-the-floor groove, crisp claps, bright synth stabs, and a rubbery bassline that stays danceable and relentless, Verse sections keep the pattern lean with pulsing hats and minimal chords; pre-drop lifts with snare rolls, rising filters, and vocal-chop-style synth flourishes; main drop hits with layered hooks, octave bass, and stacked synth brass, Airy top-line doubles, punchy transients, sparkling transitions, polished radio-bright mix, wide and energetic, motivational, soundtrack, bright, beats, pop, feel-good",
     "tags": [
-      "pop",
       "dance pop",
       "upbeat electronic",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -55689,12 +55127,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Fitness & Workout/Neon Heartbeat",
     "metadataText": "pop, motivational, dance-pop\n\nPop fitness anthem with brisk four-on-the-floor kick, tight clap stack, syncopated bass pops, and bright synth arpeggios driving a danceable 128 BPM groove, Verse rides slim drums and clipped plucks; pre-drop strips to handclaps and rising noise; chorus hits with wide saws, octave bass, and extra percussion lift, Clean lead synth licks, risers, snap fills, polished radio-ready mix, glossy and punchy, pop, soundtrack, motivational, beats, feel-good, bright",
     "tags": [
-      "pop",
       "motivational",
       "dance pop",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -55721,7 +55157,6 @@ export const productionSongRecords = [
       "aggressive workout banger",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -55748,7 +55183,6 @@ export const productionSongRecords = [
       "motivational",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -55775,8 +55209,7 @@ export const productionSongRecords = [
       "orchestral",
       "dramatic",
       "occasion",
-      "fitness",
-      "and"
+      "fitness"
     ]
   },
   {
@@ -55802,7 +55235,6 @@ export const productionSongRecords = [
       "aggressive rap",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -55823,13 +55255,11 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Fitness & Workout/Pulse in Motion",
     "metadataText": "pop, dance-pop, upbeat electronic, motivational\n\nUpbeat pop with danceable four-on-the-floor drive, tight clap snaps, bright synth stabs, and bouncing bass pulses; verse feels lean and kinetic, pre-chorus lifts with rising filters and tom fills, chorus opens wide with a glossy lead riff and bigger kick, then a breakdown drops to handclaps and a vocal-chop style synth before the final push, Bright, polished, radio-ready mix with crisp top-end sheen and punchy low end, feel-good, bright, pop, soundtrack, motivational, beats",
     "tags": [
-      "pop",
       "dance pop",
       "upbeat electronic",
       "motivational",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -55855,7 +55285,6 @@ export const productionSongRecords = [
       "dramatic",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -55876,7 +55305,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Fitness & Workout/Rhythm on Repeat",
     "metadataText": "pop, dance-pop, electronic dance, upbeat, motivational, bright, punchy\n\nPop fitness anthem at a brisk 128 BPM with four-on-the-floor kick, syncopated claps, bouncy bass, and bright synth stabs; verse section keeps the groove lean with palm-muted plucks, pre-drop lifts with filtered risers and vocal-chop accents, chorus hits with stacked synth hooks and wider drum layers, then a breakdown strips to bass pulse and handclap snaps before the final lift, Polished, radio-ready, bright and punchy, beats, feel-good, motivational, bright, soundtrack, pop",
     "tags": [
-      "pop",
       "dance pop",
       "electronic dance",
       "upbeat",
@@ -55885,7 +55313,6 @@ export const productionSongRecords = [
       "punchy",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -55910,8 +55337,7 @@ export const productionSongRecords = [
       "workout",
       "motivational",
       "occasion",
-      "fitness",
-      "and"
+      "fitness"
     ]
   },
   {
@@ -55937,8 +55363,7 @@ export const productionSongRecords = [
       "orchestral",
       "dramatic",
       "occasion",
-      "fitness",
-      "and"
+      "fitness"
     ]
   },
   {
@@ -55962,8 +55387,7 @@ export const productionSongRecords = [
       "workout",
       "soundtrack",
       "occasion",
-      "fitness",
-      "and"
+      "fitness"
     ]
   },
   {
@@ -55983,13 +55407,11 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Fitness & Workout/Run Until Sunrise",
     "metadataText": "pop, dance-pop, upbeat electronic, motivational\n\nUpbeat pop with danceable four-on-the-floor drive, tight clap snaps, bright synth stabs, and bouncing bass pulses; verse feels lean and kinetic, pre-chorus lifts with rising filters and tom fills, chorus opens wide with a glossy lead riff and bigger kick, then a breakdown drops to handclaps and a vocal-chop style synth before the final push, Bright, polished, radio-ready mix with crisp top-end sheen and punchy low end, feel-good, bright, pop, soundtrack, motivational, beats",
     "tags": [
-      "pop",
       "dance pop",
       "upbeat electronic",
       "motivational",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -56012,10 +55434,9 @@ export const productionSongRecords = [
     "tags": [
       "cinematic soundtrack",
       "dark orchestral",
-      "industrial epic workout music",
+      "industrial epic workout",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -56041,7 +55462,6 @@ export const productionSongRecords = [
       "electric rock",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -56062,12 +55482,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Fitness & Workout/Sweat & Starlights",
     "metadataText": "pop, motivational, dance-pop\n\nPop fitness anthem with brisk four-on-the-floor kick, tight clap stack, syncopated bass pops, and bright synth arpeggios driving a danceable 128 BPM groove, Verse rides slim drums and clipped plucks; pre-drop strips to handclaps and rising noise; chorus hits with wide saws, octave bass, and extra percussion lift, Clean lead synth licks, risers, snap fills, polished radio-ready mix, glossy and punchy, pop, soundtrack, motivational, beats, feel-good, bright",
     "tags": [
-      "pop",
       "motivational",
       "dance pop",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -56093,7 +55511,6 @@ export const productionSongRecords = [
       "cinematic hip hop",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -56119,7 +55536,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -56146,7 +55562,6 @@ export const productionSongRecords = [
       "dramatic",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -56173,7 +55588,6 @@ export const productionSongRecords = [
       "motivational",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -56197,10 +55611,9 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "aggressive trap metal energy",
+      "aggressive trap metal",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -56227,7 +55640,6 @@ export const productionSongRecords = [
       "motivational",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -56252,8 +55664,7 @@ export const productionSongRecords = [
       "workout",
       "motivational",
       "occasion",
-      "fitness",
-      "and"
+      "fitness"
     ]
   },
   {
@@ -56279,8 +55690,7 @@ export const productionSongRecords = [
       "dramatic",
       "workout",
       "occasion",
-      "fitness",
-      "and"
+      "fitness"
     ]
   },
   {
@@ -56305,7 +55715,6 @@ export const productionSongRecords = [
       "stadium rock",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -56332,7 +55741,6 @@ export const productionSongRecords = [
       "dark aggressive",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ]
   },
@@ -56355,10 +55763,8 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "electronic",
-      "pop",
       "occasion",
       "podcast",
-      "and",
       "interview"
     ]
   },
@@ -56384,7 +55790,6 @@ export const productionSongRecords = [
       "downtempo",
       "occasion",
       "podcast",
-      "and",
       "interview"
     ]
   },
@@ -56411,7 +55816,6 @@ export const productionSongRecords = [
       "contemporary",
       "occasion",
       "podcast",
-      "and",
       "interview"
     ]
   },
@@ -56434,10 +55838,8 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "electronic",
-      "pop",
       "occasion",
       "podcast",
-      "and",
       "interview"
     ]
   },
@@ -56463,7 +55865,6 @@ export const productionSongRecords = [
       "minimal",
       "occasion",
       "podcast",
-      "and",
       "interview"
     ]
   },
@@ -56490,7 +55891,6 @@ export const productionSongRecords = [
       "rhythmic",
       "occasion",
       "podcast",
-      "and",
       "interview"
     ]
   },
@@ -56516,7 +55916,6 @@ export const productionSongRecords = [
       "downtempo",
       "occasion",
       "podcast",
-      "and",
       "interview"
     ]
   },
@@ -56542,7 +55941,6 @@ export const productionSongRecords = [
       "minimal",
       "occasion",
       "podcast",
-      "and",
       "interview"
     ]
   },
@@ -56569,7 +55967,6 @@ export const productionSongRecords = [
       "uplifting",
       "occasion",
       "podcast",
-      "and",
       "interview"
     ]
   },
@@ -56596,7 +55993,6 @@ export const productionSongRecords = [
       "uplifting",
       "occasion",
       "podcast",
-      "and",
       "interview"
     ]
   },
@@ -56622,7 +56018,6 @@ export const productionSongRecords = [
       "minimalist rhythmic",
       "occasion",
       "podcast",
-      "and",
       "interview"
     ]
   },
@@ -56648,7 +56043,6 @@ export const productionSongRecords = [
       "minimalist",
       "occasion",
       "podcast",
-      "and",
       "interview"
     ]
   },
@@ -56674,7 +56068,6 @@ export const productionSongRecords = [
       "downtempo",
       "occasion",
       "podcast",
-      "and",
       "interview"
     ]
   },
@@ -56700,7 +56093,6 @@ export const productionSongRecords = [
       "electronic",
       "occasion",
       "podcast",
-      "and",
       "interview"
     ]
   },
@@ -56726,7 +56118,6 @@ export const productionSongRecords = [
       "minimal",
       "occasion",
       "podcast",
-      "and",
       "interview"
     ]
   },
@@ -56752,7 +56143,6 @@ export const productionSongRecords = [
       "minimalist rhythmic",
       "occasion",
       "podcast",
-      "and",
       "interview"
     ]
   },
@@ -56778,7 +56168,6 @@ export const productionSongRecords = [
       "electronic",
       "occasion",
       "podcast",
-      "and",
       "interview"
     ]
   },
@@ -56801,10 +56190,8 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "electronic",
-      "pop",
       "occasion",
       "podcast",
-      "and",
       "interview"
     ]
   },
@@ -56830,7 +56217,6 @@ export const productionSongRecords = [
       "minimal",
       "occasion",
       "podcast",
-      "and",
       "interview"
     ]
   },
@@ -56856,7 +56242,6 @@ export const productionSongRecords = [
       "minimalist",
       "occasion",
       "podcast",
-      "and",
       "interview"
     ]
   },
@@ -56883,7 +56268,6 @@ export const productionSongRecords = [
       "rhythmic",
       "occasion",
       "podcast",
-      "and",
       "interview"
     ]
   },
@@ -56909,7 +56293,6 @@ export const productionSongRecords = [
       "electronic",
       "occasion",
       "podcast",
-      "and",
       "interview"
     ]
   },
@@ -56936,7 +56319,6 @@ export const productionSongRecords = [
       "contemporary",
       "occasion",
       "podcast",
-      "and",
       "interview"
     ]
   },
@@ -56959,10 +56341,8 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "electronic",
-      "pop",
       "occasion",
       "podcast",
-      "and",
       "interview"
     ]
   },
@@ -56988,7 +56368,6 @@ export const productionSongRecords = [
       "downtempo",
       "occasion",
       "podcast",
-      "and",
       "interview"
     ]
   },
@@ -57014,7 +56393,6 @@ export const productionSongRecords = [
       "minimal",
       "occasion",
       "podcast",
-      "and",
       "interview"
     ]
   },
@@ -57040,7 +56418,6 @@ export const productionSongRecords = [
       "minimal",
       "occasion",
       "podcast",
-      "and",
       "interview"
     ]
   },
@@ -57066,7 +56443,6 @@ export const productionSongRecords = [
       "electronic",
       "occasion",
       "podcast",
-      "and",
       "interview"
     ]
   },
@@ -57092,7 +56468,6 @@ export const productionSongRecords = [
       "downtempo",
       "occasion",
       "podcast",
-      "and",
       "interview"
     ]
   },
@@ -57118,7 +56493,6 @@ export const productionSongRecords = [
       "downtempo",
       "occasion",
       "podcast",
-      "and",
       "interview"
     ]
   },
@@ -57144,7 +56518,6 @@ export const productionSongRecords = [
       "world",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -57170,7 +56543,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -57196,7 +56568,6 @@ export const productionSongRecords = [
       "light percussion",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -57222,7 +56593,6 @@ export const productionSongRecords = [
       "cinematic soundtrack",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -57249,7 +56619,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -57272,10 +56641,9 @@ export const productionSongRecords = [
     "tags": [
       "tropical",
       "acoustic",
-      "chill laid back island groove",
+      "chill laid back",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -57301,7 +56669,6 @@ export const productionSongRecords = [
       "minimal piano",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -57327,7 +56694,6 @@ export const productionSongRecords = [
       "light percussion",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -57353,7 +56719,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -57379,7 +56744,6 @@ export const productionSongRecords = [
       "emotional",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -57405,7 +56769,6 @@ export const productionSongRecords = [
       "breezy tropical instrumental",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -57431,7 +56794,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -57457,7 +56819,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -57483,7 +56844,6 @@ export const productionSongRecords = [
       "cinematic soundtrack",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -57509,7 +56869,6 @@ export const productionSongRecords = [
       "calming",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -57536,7 +56895,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -57562,7 +56920,6 @@ export const productionSongRecords = [
       "nostalgic acoustic",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -57588,7 +56945,6 @@ export const productionSongRecords = [
       "calming",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -57614,7 +56970,6 @@ export const productionSongRecords = [
       "breezy tropical instrumental",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -57640,7 +56995,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -57666,7 +57020,6 @@ export const productionSongRecords = [
       "cinematic soundtrack",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -57692,7 +57045,6 @@ export const productionSongRecords = [
       "cinematic soundtrack",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -57718,7 +57070,6 @@ export const productionSongRecords = [
       "film score",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -57744,7 +57095,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -57767,10 +57117,9 @@ export const productionSongRecords = [
     "tags": [
       "tropical",
       "acoustic",
-      "chill laid back island groove",
+      "chill laid back",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -57796,7 +57145,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -57822,7 +57170,6 @@ export const productionSongRecords = [
       "instrumental",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -57848,7 +57195,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -57874,7 +57220,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -57901,7 +57246,6 @@ export const productionSongRecords = [
       "marimba",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -57927,7 +57271,6 @@ export const productionSongRecords = [
       "orchestral",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -57953,7 +57296,6 @@ export const productionSongRecords = [
       "world",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -57979,7 +57321,6 @@ export const productionSongRecords = [
       "minimal piano",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -58001,11 +57342,10 @@ export const productionSongRecords = [
     "metadataText": "tropical pop, marimba-driven, laid-back island groove\n\nTropical pop instrumental with relaxed midtempo sway and light syncopated percussion, acoustic guitar arpeggios, marimba melodies, and soft hand drums carrying a carefree island groove, Intro opens with ocean breeze textures and distant surf; verse layers in bass and shaker; chorus brightens with doubled marimba hooks and gentle claps; bridge strips back to guitar and air, then final lift adds warmer percussion fills, Warm, sunny, close and glossy mix, marimba, warm, acoustic, light, tropical",
     "tags": [
       "tropical pop",
-      "marimba driven",
-      "laid back island groove",
+      "marimba",
+      "laid back island",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -58031,7 +57371,6 @@ export const productionSongRecords = [
       "emotional",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -58057,7 +57396,6 @@ export const productionSongRecords = [
       "nostalgic acoustic",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -58079,11 +57417,10 @@ export const productionSongRecords = [
     "metadataText": "tropical pop, marimba-driven, laid-back island groove\n\nTropical pop instrumental with relaxed midtempo sway and light syncopated percussion, acoustic guitar arpeggios, marimba melodies, and soft hand drums carrying a carefree island groove, Intro opens with ocean breeze textures and distant surf; verse layers in bass and shaker; chorus brightens with doubled marimba hooks and gentle claps; bridge strips back to guitar and air, then final lift adds warmer percussion fills, Warm, sunny, close and glossy mix, marimba, warm, acoustic, light, tropical",
     "tags": [
       "tropical pop",
-      "marimba driven",
-      "laid back island groove",
+      "marimba",
+      "laid back island",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -58109,7 +57446,6 @@ export const productionSongRecords = [
       "cinematic soundtrack",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -58135,7 +57471,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -58161,7 +57496,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -58187,7 +57521,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -58213,7 +57546,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -58239,7 +57571,6 @@ export const productionSongRecords = [
       "film score",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -58265,7 +57596,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -58291,7 +57621,6 @@ export const productionSongRecords = [
       "cinematic soundtrack",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -58318,7 +57647,6 @@ export const productionSongRecords = [
       "marimba",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -58345,7 +57673,6 @@ export const productionSongRecords = [
       "ambient soundtrack",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -58372,7 +57699,6 @@ export const productionSongRecords = [
       "ambient soundtrack",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -58398,7 +57724,6 @@ export const productionSongRecords = [
       "orchestral",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -58424,7 +57749,6 @@ export const productionSongRecords = [
       "instrumental",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ]
   },
@@ -58450,7 +57774,6 @@ export const productionSongRecords = [
       "orchestral",
       "occasion",
       "corporate",
-      "and",
       "presentation"
     ]
   },
@@ -58476,7 +57799,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "corporate",
-      "and",
       "presentation"
     ]
   },
@@ -58502,7 +57824,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "corporate",
-      "and",
       "presentation"
     ]
   },
@@ -58528,7 +57849,6 @@ export const productionSongRecords = [
       "orchestral",
       "occasion",
       "corporate",
-      "and",
       "presentation"
     ]
   },
@@ -58554,7 +57874,6 @@ export const productionSongRecords = [
       "orchestral",
       "occasion",
       "corporate",
-      "and",
       "presentation"
     ]
   },
@@ -58580,7 +57899,6 @@ export const productionSongRecords = [
       "cinematic",
       "occasion",
       "corporate",
-      "and",
       "presentation"
     ]
   },
@@ -58606,7 +57924,6 @@ export const productionSongRecords = [
       "orchestral",
       "occasion",
       "corporate",
-      "and",
       "presentation"
     ]
   },
@@ -58632,7 +57949,6 @@ export const productionSongRecords = [
       "orchestra",
       "occasion",
       "corporate",
-      "and",
       "presentation"
     ]
   },
@@ -58658,7 +57974,6 @@ export const productionSongRecords = [
       "cinematic",
       "occasion",
       "corporate",
-      "and",
       "presentation"
     ]
   },
@@ -58684,7 +57999,6 @@ export const productionSongRecords = [
       "cinematic",
       "occasion",
       "corporate",
-      "and",
       "presentation"
     ]
   },
@@ -58710,7 +58024,6 @@ export const productionSongRecords = [
       "cinematic",
       "occasion",
       "corporate",
-      "and",
       "presentation"
     ]
   },
@@ -58736,7 +58049,6 @@ export const productionSongRecords = [
       "orchestral",
       "occasion",
       "corporate",
-      "and",
       "presentation"
     ]
   },
@@ -58762,7 +58074,6 @@ export const productionSongRecords = [
       "uplifting",
       "occasion",
       "corporate",
-      "and",
       "presentation"
     ]
   },
@@ -58788,7 +58099,6 @@ export const productionSongRecords = [
       "uplifting",
       "occasion",
       "corporate",
-      "and",
       "presentation"
     ]
   },
@@ -58814,7 +58124,6 @@ export const productionSongRecords = [
       "orchestral",
       "occasion",
       "corporate",
-      "and",
       "presentation"
     ]
   },
@@ -58840,7 +58149,6 @@ export const productionSongRecords = [
       "cinematic",
       "occasion",
       "corporate",
-      "and",
       "presentation"
     ]
   },
@@ -58866,7 +58174,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "corporate",
-      "and",
       "presentation"
     ]
   },
@@ -58892,7 +58199,6 @@ export const productionSongRecords = [
       "orchestral",
       "occasion",
       "corporate",
-      "and",
       "presentation"
     ]
   },
@@ -58918,7 +58224,6 @@ export const productionSongRecords = [
       "cinematic uplifting",
       "occasion",
       "corporate",
-      "and",
       "presentation"
     ]
   },
@@ -58944,7 +58249,6 @@ export const productionSongRecords = [
       "orchestral",
       "occasion",
       "corporate",
-      "and",
       "presentation"
     ]
   },
@@ -58970,7 +58274,6 @@ export const productionSongRecords = [
       "orchestral",
       "occasion",
       "corporate",
-      "and",
       "presentation"
     ]
   },
@@ -58996,7 +58299,6 @@ export const productionSongRecords = [
       "cinematic uplifting",
       "occasion",
       "corporate",
-      "and",
       "presentation"
     ]
   },
@@ -59022,7 +58324,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "corporate",
-      "and",
       "presentation"
     ]
   },
@@ -59048,7 +58349,6 @@ export const productionSongRecords = [
       "cinematic",
       "occasion",
       "corporate",
-      "and",
       "presentation"
     ]
   },
@@ -59074,7 +58374,6 @@ export const productionSongRecords = [
       "feel good soundtrack",
       "occasion",
       "lifestyle",
-      "and",
       "food"
     ]
   },
@@ -59100,7 +58399,6 @@ export const productionSongRecords = [
       "upbeat swung instrumental",
       "occasion",
       "lifestyle",
-      "and",
       "food"
     ]
   },
@@ -59126,7 +58424,6 @@ export const productionSongRecords = [
       "upbeat swing",
       "occasion",
       "lifestyle",
-      "and",
       "food"
     ]
   },
@@ -59152,7 +58449,6 @@ export const productionSongRecords = [
       "upbeat swing",
       "occasion",
       "lifestyle",
-      "and",
       "food"
     ]
   },
@@ -59173,12 +58469,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Lifestyle & Food/Brunch in the City",
     "metadataText": "pop, jazz-influenced, feel-good groove\n\nInstrumental pop-fusion groove with upbeat acoustic guitar, smooth basslines, light percussion, playful piano motifs, and elegant jazzy color; verse beds stay airy and minimal, pre-drop adds brushed fills and rising chimes, then the main section opens with bouncy rhythm guitar and glossy keys, Bright close-mic mix, polished, warm, and commercial, light, warm, playful, feel-good, sonic, acoustic, fresh, bright, jazzy, clean, soundtrack, uplifting, stylish, smooth",
     "tags": [
-      "pop",
       "jazz influenced",
       "feel good groove",
       "occasion",
       "lifestyle",
-      "and",
       "food"
     ]
   },
@@ -59199,12 +58493,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Lifestyle & Food/Café Conversations",
     "metadataText": "pop, jazz-influenced, feel-good groove\n\nInstrumental pop-fusion groove with upbeat acoustic guitar, smooth basslines, light percussion, playful piano motifs, and elegant jazzy color; verse beds stay airy and minimal, pre-drop adds brushed fills and rising chimes, then the main section opens with bouncy rhythm guitar and glossy keys, Bright close-mic mix, polished, warm, and commercial, light, warm, playful, feel-good, sonic, acoustic, fresh, bright, jazzy, clean, soundtrack, uplifting, stylish, smooth",
     "tags": [
-      "pop",
       "jazz influenced",
       "feel good groove",
       "occasion",
       "lifestyle",
-      "and",
       "food"
     ]
   },
@@ -59231,7 +58523,6 @@ export const productionSongRecords = [
       "upbeat swung groove",
       "occasion",
       "lifestyle",
-      "and",
       "food"
     ]
   },
@@ -59257,7 +58548,6 @@ export const productionSongRecords = [
       "jazz pop",
       "occasion",
       "lifestyle",
-      "and",
       "food"
     ]
   },
@@ -59284,7 +58574,6 @@ export const productionSongRecords = [
       "upbeat swung groove",
       "occasion",
       "lifestyle",
-      "and",
       "food"
     ]
   },
@@ -59310,7 +58599,6 @@ export const productionSongRecords = [
       "feel good soundtrack",
       "occasion",
       "lifestyle",
-      "and",
       "food"
     ]
   },
@@ -59333,10 +58621,9 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop",
       "jazz influenced",
-      "feel good soundtrack indie pop",
+      "feel good soundtrack",
       "occasion",
       "lifestyle",
-      "and",
       "food"
     ]
   },
@@ -59359,7 +58646,6 @@ export const productionSongRecords = [
     "tags": [
       "occasion",
       "lifestyle",
-      "and",
       "food"
     ]
   },
@@ -59385,7 +58671,6 @@ export const productionSongRecords = [
       "soundtrack lounge",
       "occasion",
       "lifestyle",
-      "and",
       "food"
     ]
   },
@@ -59406,12 +58691,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Lifestyle & Food/Golden Hour Café",
     "metadataText": "pop, jazz (lounge), upbeat acoustic groove\n\nAcoustic pop groove with jazzy lounge touches, bright mid-tempo swing, light percussion, smooth bassline, and playful piano hooks; verse bed stays sparse with guitar, brushed clicks, and soft keys, pre-drop adds filtered hand percussion and a tiny riser, then the main section opens with cheerful chord lifts and a catchy piano motif, Airy close-mic mix, polished and glossy, with café-room warmth, subtle tape shimmer, and clean commercial sparkle, playful, jazzy, fresh, light, uplifting, acoustic, smooth, sonic, clean, stylish, bright, soundtrack, warm, feel-good",
     "tags": [
-      "pop",
       "jazz lounge",
       "upbeat acoustic groove",
       "occasion",
       "lifestyle",
-      "and",
       "food"
     ]
   },
@@ -59437,7 +58720,6 @@ export const productionSongRecords = [
       "acoustic pop",
       "occasion",
       "lifestyle",
-      "and",
       "food"
     ]
   },
@@ -59458,12 +58740,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Lifestyle & Food/Kitchen Stories",
     "metadataText": "pop, jazz (lounge), upbeat acoustic groove\n\nAcoustic pop groove with jazzy lounge touches, bright mid-tempo swing, light percussion, smooth bassline, and playful piano hooks; verse bed stays sparse with guitar, brushed clicks, and soft keys, pre-drop adds filtered hand percussion and a tiny riser, then the main section opens with cheerful chord lifts and a catchy piano motif, Airy close-mic mix, polished and glossy, with café-room warmth, subtle tape shimmer, and clean commercial sparkle, playful, jazzy, fresh, light, uplifting, acoustic, smooth, sonic, clean, stylish, bright, soundtrack, warm, feel-good",
     "tags": [
-      "pop",
       "jazz lounge",
       "upbeat acoustic groove",
       "occasion",
       "lifestyle",
-      "and",
       "food"
     ]
   },
@@ -59489,7 +58769,6 @@ export const productionSongRecords = [
       "upbeat swung instrumental",
       "occasion",
       "lifestyle",
-      "and",
       "food"
     ]
   },
@@ -59512,10 +58791,9 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop",
       "jazz influenced swing",
-      "feel good upbeat cafe swing",
+      "feel good upbeat",
       "occasion",
       "lifestyle",
-      "and",
       "food"
     ]
   },
@@ -59541,7 +58819,6 @@ export const productionSongRecords = [
       "jazz pop",
       "occasion",
       "lifestyle",
-      "and",
       "food"
     ]
   },
@@ -59567,7 +58844,6 @@ export const productionSongRecords = [
       "jazz pop",
       "occasion",
       "lifestyle",
-      "and",
       "food"
     ]
   },
@@ -59593,7 +58869,6 @@ export const productionSongRecords = [
       "feel good soundtrack",
       "occasion",
       "lifestyle",
-      "and",
       "food"
     ]
   },
@@ -59619,7 +58894,6 @@ export const productionSongRecords = [
       "feel good soundtrack",
       "occasion",
       "lifestyle",
-      "and",
       "food"
     ]
   },
@@ -59645,7 +58919,6 @@ export const productionSongRecords = [
       "soundtrack lounge",
       "occasion",
       "lifestyle",
-      "and",
       "food"
     ]
   },
@@ -59671,7 +58944,6 @@ export const productionSongRecords = [
       "acoustic pop",
       "occasion",
       "lifestyle",
-      "and",
       "food"
     ]
   },
@@ -59697,7 +58969,6 @@ export const productionSongRecords = [
       "jazz pop",
       "occasion",
       "lifestyle",
-      "and",
       "food"
     ]
   },
@@ -59720,10 +58991,9 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop",
       "jazz influenced swing",
-      "feel good upbeat cafe swing",
+      "feel good upbeat",
       "occasion",
       "lifestyle",
-      "and",
       "food"
     ]
   },
@@ -59749,7 +59019,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "weddings",
-      "and",
       "events"
     ]
   },
@@ -59775,7 +59044,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "weddings",
-      "and",
       "events"
     ]
   },
@@ -59801,7 +59069,6 @@ export const productionSongRecords = [
       "ambient pop",
       "occasion",
       "weddings",
-      "and",
       "events"
     ]
   },
@@ -59829,7 +59096,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "weddings",
-      "and",
       "events"
     ]
   },
@@ -59855,7 +59121,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "weddings",
-      "and",
       "events"
     ]
   },
@@ -59881,7 +59146,6 @@ export const productionSongRecords = [
       "romantic",
       "occasion",
       "weddings",
-      "and",
       "events"
     ]
   },
@@ -59909,7 +59173,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "weddings",
-      "and",
       "events"
     ]
   },
@@ -59935,7 +59198,6 @@ export const productionSongRecords = [
       "romantic ambient",
       "occasion",
       "weddings",
-      "and",
       "events"
     ]
   },
@@ -59961,7 +59223,6 @@ export const productionSongRecords = [
       "cinematic",
       "occasion",
       "weddings",
-      "and",
       "events"
     ]
   },
@@ -59987,7 +59248,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "weddings",
-      "and",
       "events"
     ]
   },
@@ -60013,7 +59273,6 @@ export const productionSongRecords = [
       "romantic",
       "occasion",
       "weddings",
-      "and",
       "events"
     ]
   },
@@ -60039,7 +59298,6 @@ export const productionSongRecords = [
       "romantic",
       "occasion",
       "weddings",
-      "and",
       "events"
     ]
   },
@@ -60065,7 +59323,6 @@ export const productionSongRecords = [
       "wedding instrumental",
       "occasion",
       "weddings",
-      "and",
       "events"
     ]
   },
@@ -60091,7 +59348,6 @@ export const productionSongRecords = [
       "romantic",
       "occasion",
       "weddings",
-      "and",
       "events"
     ]
   },
@@ -60117,7 +59373,6 @@ export const productionSongRecords = [
       "ambient pop",
       "occasion",
       "weddings",
-      "and",
       "events"
     ]
   },
@@ -60143,7 +59398,6 @@ export const productionSongRecords = [
       "cinematic",
       "occasion",
       "weddings",
-      "and",
       "events"
     ]
   },
@@ -60169,7 +59423,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "weddings",
-      "and",
       "events"
     ]
   },
@@ -60195,7 +59448,6 @@ export const productionSongRecords = [
       "wedding instrumental",
       "occasion",
       "weddings",
-      "and",
       "events"
     ]
   },
@@ -60221,7 +59473,6 @@ export const productionSongRecords = [
       "romantic ambient",
       "occasion",
       "weddings",
-      "and",
       "events"
     ]
   },
@@ -60247,7 +59498,6 @@ export const productionSongRecords = [
       "romantic",
       "occasion",
       "weddings",
-      "and",
       "events"
     ]
   },
@@ -60273,7 +59523,6 @@ export const productionSongRecords = [
       "romantic",
       "occasion",
       "weddings",
-      "and",
       "events"
     ]
   },
@@ -60299,7 +59548,6 @@ export const productionSongRecords = [
       "romantic",
       "occasion",
       "weddings",
-      "and",
       "events"
     ]
   },
@@ -60325,7 +59573,6 @@ export const productionSongRecords = [
       "romantic",
       "occasion",
       "weddings",
-      "and",
       "events"
     ]
   },
@@ -60351,7 +59598,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "weddings",
-      "and",
       "events"
     ]
   },
@@ -60520,7 +59766,6 @@ export const productionSongRecords = [
     "tags": [
       "outlaw country",
       "country rock",
-      "raw",
       "electric",
       "culture",
       "country"
@@ -60546,7 +59791,6 @@ export const productionSongRecords = [
     "tags": [
       "outlaw country",
       "country rock",
-      "raw",
       "electric",
       "culture",
       "country"
@@ -60571,7 +59815,6 @@ export const productionSongRecords = [
     "tags": [
       "outlaw country",
       "country rock",
-      "raw",
       "electric",
       "culture",
       "country"
@@ -60596,7 +59839,6 @@ export const productionSongRecords = [
     "tags": [
       "outlaw country",
       "country rock",
-      "raw",
       "electric",
       "culture",
       "country"
@@ -60621,7 +59863,6 @@ export const productionSongRecords = [
     "tags": [
       "outlaw country",
       "country rock",
-      "raw",
       "electric",
       "culture",
       "country"
@@ -60647,7 +59888,6 @@ export const productionSongRecords = [
     "tags": [
       "outlaw country",
       "country rock",
-      "raw",
       "electric",
       "culture",
       "country"
@@ -60672,7 +59912,6 @@ export const productionSongRecords = [
     "tags": [
       "outlaw country",
       "country rock",
-      "raw",
       "electric",
       "culture",
       "country"
@@ -60698,7 +59937,6 @@ export const productionSongRecords = [
     "tags": [
       "outlaw country",
       "country rock",
-      "raw",
       "electric",
       "culture",
       "country"
@@ -61104,7 +60342,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "study",
-      "and",
       "productivity"
     ]
   },
@@ -61128,10 +60365,9 @@ export const productionSongRecords = [
       "lo fi",
       "chillhop",
       "ambient",
-      "jazz inflected lo fi jazz",
+      "jazz inflected lo",
       "occasion",
       "study",
-      "and",
       "productivity"
     ]
   },
@@ -61157,7 +60393,6 @@ export const productionSongRecords = [
       "ambient jazz",
       "occasion",
       "study",
-      "and",
       "productivity"
     ]
   },
@@ -61183,7 +60418,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "study",
-      "and",
       "productivity"
     ]
   },
@@ -61209,7 +60443,6 @@ export const productionSongRecords = [
       "jazz influenced",
       "occasion",
       "study",
-      "and",
       "productivity"
     ]
   },
@@ -61235,7 +60468,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "study",
-      "and",
       "productivity"
     ]
   },
@@ -61259,10 +60491,9 @@ export const productionSongRecords = [
       "lo fi",
       "chillhop",
       "ambient",
-      "jazz inflected lo fi jazz",
+      "jazz inflected lo",
       "occasion",
       "study",
-      "and",
       "productivity"
     ]
   },
@@ -61288,7 +60519,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "study",
-      "and",
       "productivity"
     ]
   },
@@ -61314,7 +60544,6 @@ export const productionSongRecords = [
       "jazz",
       "occasion",
       "study",
-      "and",
       "productivity"
     ]
   },
@@ -61341,7 +60570,6 @@ export const productionSongRecords = [
       "jazz",
       "occasion",
       "study",
-      "and",
       "productivity"
     ]
   },
@@ -61367,7 +60595,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "study",
-      "and",
       "productivity"
     ]
   },
@@ -61394,7 +60621,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "study",
-      "and",
       "productivity"
     ]
   },
@@ -61420,7 +60646,6 @@ export const productionSongRecords = [
       "jazz",
       "occasion",
       "study",
-      "and",
       "productivity"
     ]
   },
@@ -61447,7 +60672,6 @@ export const productionSongRecords = [
       "jazz",
       "occasion",
       "study",
-      "and",
       "productivity"
     ]
   },
@@ -61474,7 +60698,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "study",
-      "and",
       "productivity"
     ]
   },
@@ -61500,7 +60723,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "study",
-      "and",
       "productivity"
     ]
   },
@@ -61526,7 +60748,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "study",
-      "and",
       "productivity"
     ]
   },
@@ -61552,7 +60773,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "study",
-      "and",
       "productivity"
     ]
   },
@@ -61573,22 +60793,22 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Study & Productivity/Quiet Hours",
     "metadataText": "Lo-fi chillhop with a steady laid-back groove and soft swung drums, warm ambient pads, mellow piano chord loops, subtle jazz brush textures, and a rounded bassline; verse-like sections keep it sparse, then a light lift adds airy synths and chord color, while the middle opens with extra vinyl crackle and reversed swells before settling back. Close, cozy mix - polished, intimate, and softly detailed., smooth, calming, gentle, steady, lo-fi, warm, inspiring, jazz, ambient, beats, emotional, reading, soft, clean, deep, relaxing, mellow, minimal\n\nLo-fi chillhop with a steady laid-back groove and soft swung drums, warm ambient pads, mellow piano chord loops, subtle jazz brush textures, and a rounded bassline; verse-like sections keep it sparse, then a light lift adds airy synths and chord color, while the middle opens with extra vinyl crackle and reversed swells before settling back, Close, cozy mix - polished, intimate, and softly detailed, smooth, calming, gentle, steady, lo-fi, warm, inspiring, jazz, ambient, beats, emotional, reading, soft, clean, deep, relaxing, mellow, minimal",
     "tags": [
-      "lo fi chillhop with a steady laid back groove and soft swung drums",
+      "swung drums",
       "warm ambient pads",
-      "mellow piano chord loops",
-      "subtle jazz brush textures",
-      "and a rounded bassline verse like sections keep it sparse",
-      "then a light lift adds airy synths and chord color",
-      "while the middle opens with extra vinyl crackle and reversed swells before settling back close",
-      "cozy mix polished",
-      "intimate",
-      "and softly detailed",
+      "mellow piano chord",
+      "subtle jazz brush",
+      "rounded bassline",
+      "light lift adds",
+      "cozy polished",
+      "softly detailed",
       "smooth",
       "calming",
       "gentle",
       "steady",
       "lo fi",
-      "warm"
+      "warm",
+      "inspiring",
+      "jazz"
     ]
   },
   {
@@ -61614,7 +60834,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "study",
-      "and",
       "productivity"
     ]
   },
@@ -61640,7 +60859,6 @@ export const productionSongRecords = [
       "jazz influenced",
       "occasion",
       "study",
-      "and",
       "productivity"
     ]
   },
@@ -61666,7 +60884,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "study",
-      "and",
       "productivity"
     ]
   },
@@ -61693,7 +60910,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "study",
-      "and",
       "productivity"
     ]
   },
@@ -61719,7 +60935,6 @@ export const productionSongRecords = [
       "ambient jazz",
       "occasion",
       "study",
-      "and",
       "productivity"
     ]
   },
@@ -61767,7 +60982,6 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "downtempo",
-      "lo fi hip hop",
       "occasion",
       "420",
       "sesh"
@@ -61818,7 +61032,7 @@ export const productionSongRecords = [
     "tags": [
       "chillhop downtempo fusion",
       "lo fi",
-      "jazz inflected hip hop downtempo",
+      "jazz inflected hip",
       "ambient",
       "occasion",
       "420",
@@ -61844,7 +61058,6 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "downtempo",
-      "lo fi hip hop",
       "jazzy",
       "ambient",
       "occasion",
@@ -61896,7 +61109,6 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "downtempo",
-      "lo fi hip hop",
       "jazzy",
       "ambient",
       "occasion",
@@ -61923,7 +61135,6 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "downtempo",
-      "lo fi hip hop",
       "occasion",
       "420",
       "sesh"
@@ -61948,7 +61159,6 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "downtempo",
-      "lo fi hip hop",
       "occasion",
       "420",
       "sesh"
@@ -62154,7 +61364,6 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "downtempo",
-      "lo fi hip hop",
       "occasion",
       "420",
       "sesh"
@@ -62179,7 +61388,7 @@ export const productionSongRecords = [
     "tags": [
       "chillhop downtempo fusion",
       "lo fi",
-      "jazz inflected hip hop downtempo",
+      "jazz inflected hip",
       "ambient",
       "occasion",
       "420",
@@ -62230,7 +61439,6 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "downtempo fusion",
-      "lo fi hip hop",
       "occasion",
       "420",
       "sesh"
@@ -62280,7 +61488,6 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "downtempo fusion",
-      "lo fi hip hop",
       "occasion",
       "420",
       "sesh"
@@ -62359,7 +61566,6 @@ export const productionSongRecords = [
       "ambient drama",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -62385,7 +61591,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -62411,7 +61616,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -62437,7 +61641,6 @@ export const productionSongRecords = [
       "orchestral",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -62463,7 +61666,6 @@ export const productionSongRecords = [
       "cinematic",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -62489,7 +61691,6 @@ export const productionSongRecords = [
       "trailer music",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -62515,7 +61716,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -62541,7 +61741,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -62567,7 +61766,6 @@ export const productionSongRecords = [
       "noir thriller",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -62593,7 +61791,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -62619,7 +61816,6 @@ export const productionSongRecords = [
       "ambient industrial",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -62645,7 +61841,6 @@ export const productionSongRecords = [
       "heartfelt emotional drama",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -62671,7 +61866,6 @@ export const productionSongRecords = [
       "orchestral",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -62697,7 +61891,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -62723,7 +61916,6 @@ export const productionSongRecords = [
       "orchestral",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -62749,7 +61941,6 @@ export const productionSongRecords = [
       "fantasy",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -62775,7 +61966,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -62801,7 +61991,6 @@ export const productionSongRecords = [
       "film soundtrack",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -62827,7 +62016,6 @@ export const productionSongRecords = [
       "trailer music",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -62853,7 +62041,6 @@ export const productionSongRecords = [
       "dramatic",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -62879,7 +62066,6 @@ export const productionSongRecords = [
       "noir orchestral",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -62905,7 +62091,6 @@ export const productionSongRecords = [
       "trailer style cinematic",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -62931,7 +62116,6 @@ export const productionSongRecords = [
       "orchestral action score",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -62957,7 +62141,6 @@ export const productionSongRecords = [
       "orchestral",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -62983,7 +62166,6 @@ export const productionSongRecords = [
       "cinematic",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -63009,7 +62191,6 @@ export const productionSongRecords = [
       "orchestral action score",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -63035,7 +62216,6 @@ export const productionSongRecords = [
       "ambient industrial",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -63061,7 +62241,6 @@ export const productionSongRecords = [
       "orchestral",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -63087,7 +62266,6 @@ export const productionSongRecords = [
       "film soundtrack",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -63113,7 +62291,6 @@ export const productionSongRecords = [
       "cinematic",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -63139,7 +62316,6 @@ export const productionSongRecords = [
       "fantasy orchestral",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -63165,7 +62341,6 @@ export const productionSongRecords = [
       "film soundtrack",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -63191,7 +62366,6 @@ export const productionSongRecords = [
       "fantasy",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -63217,7 +62391,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -63243,7 +62416,6 @@ export const productionSongRecords = [
       "dramatic",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -63269,7 +62441,6 @@ export const productionSongRecords = [
       "fantasy orchestral",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -63295,7 +62466,6 @@ export const productionSongRecords = [
       "noir electronic suspense",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -63321,7 +62491,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -63347,7 +62516,6 @@ export const productionSongRecords = [
       "cinematic",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -63373,7 +62541,6 @@ export const productionSongRecords = [
       "orchestral",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -63399,7 +62566,6 @@ export const productionSongRecords = [
       "soundtrack",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -63425,7 +62591,6 @@ export const productionSongRecords = [
       "cinematic",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -63451,7 +62616,6 @@ export const productionSongRecords = [
       "noir thriller",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -63477,7 +62641,6 @@ export const productionSongRecords = [
       "ambient drama",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -63503,7 +62666,6 @@ export const productionSongRecords = [
       "film soundtrack",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -63529,7 +62691,6 @@ export const productionSongRecords = [
       "heartfelt emotional drama",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -63555,7 +62716,6 @@ export const productionSongRecords = [
       "ambient",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -63581,7 +62741,6 @@ export const productionSongRecords = [
       "noir orchestral",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -63607,7 +62766,6 @@ export const productionSongRecords = [
       "noir electronic suspense",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -63633,7 +62791,6 @@ export const productionSongRecords = [
       "trailer style cinematic",
       "occasion",
       "movies",
-      "and",
       "osts"
     ]
   },
@@ -63705,9 +62862,8 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Love/Blanket Moon",
     "metadataText": "lo-fi R&B, lo-fi, R&B (warm, nostalgic, romantic)\n\nLo-fi R&B with swung cozy drums, mellow guitar chords, soft sub bass, and dreamy synth haze; verse stays intimate and close-mic with fingerpicked guitar and brushed kicks, pre-chorus lifts with airy harmony stacks, chorus opens with wider doubles and gentle gang ad-libs, bridge strips to guitar and tape hiss before the final lift, Warm, dusty, and very close, lo-fi, romantic, warm, nostalgic, mellow, emotional, soft",
     "tags": [
-      "lo fi r and b",
+      "lo fi r",
       "lo fi",
-      "r and b warm",
       "nostalgic",
       "romantic",
       "occasion",
@@ -63732,7 +62888,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Love/Blue Mug Sunday",
     "metadataText": "lo-fi indie pop, lo-fi, indie pop\n\nLo-fi indie pop with laid-back swung drums, mellow guitar chords, and soft dreamy synth pads; verse stays intimate with close-mic vocals and sparse bass, pre-chorus opens with filtered harmonies and a rising vinyl hiss, chorus blooms with stacked doubles and a warm counter-melody, bridge drops to guitar and breathy ad-libs before the final lift, Cozy, dusty, and wide with gentle tape wobble, lo-fi, nostalgic, romantic, emotional, warm, soft, mellow",
     "tags": [
-      "lo fi indie pop",
+      "lo fi indie",
       "lo fi",
       "indie pop",
       "occasion",
@@ -63807,7 +62963,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Love/Ferris Wheel Kiss",
     "metadataText": "pop, upbeat dance-pop, feel-good\n\nModern pop with male vocals, upbeat 124 BPM four-on-the-floor groove, bright guitar jabs, punchy drums, clapped backbeats, and buoyant bass, Verse stays lean with palm-muted guitar and tight vocal phrasing; pre-chorus lifts with stacked harmonies and snare builds; chorus opens wide with layered doubles, gang oohs, and a hooky synth pluck, Add sparkly risers, reversed guitar swells, and handclap lifts into each drop, Bright, glossy, feel-good mix with crisp top end and warm low-end bounce, bright, male vocals, joyful, feel-good, pop, happy",
     "tags": [
-      "pop",
       "upbeat dance pop",
       "feel good",
       "occasion",
@@ -63834,7 +62989,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi pop",
       "lo fi",
-      "soft romantic indie pop",
+      "soft romantic indie",
       "occasion",
       "love"
     ]
@@ -63857,7 +63012,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Love/Keep Me Near",
     "metadataText": "pop, ballad, soundtrack\n\nPop ballad with slow 68 BPM pulse, soft piano arpeggios and ambient guitar haze; verse stays intimate and close-mic, pre-chorus opens with rising strings and breathy doubles, chorus lifts into wide stacked harmonies and emotional belts, Add cello swells, reverse piano tails, and a final half-step lift, Bright, glossy, cinematic mix with intimate front-and-center vocals, soundtrack, soft, emotional, romantic, pop, ballad, heartfelt, slow, vocal, ambient",
     "tags": [
-      "pop",
       "ballad",
       "soundtrack",
       "occasion",
@@ -63957,7 +63111,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Love/Pack the Sun",
     "metadataText": "pop, bright, feel-good\n\nPop with upbeat four-on-the-floor drums, bright chiming guitars, and elastic bass lines; verse rides light handclaps and sparse rhythm guitar, pre-chorus lifts with stacked harmonies and snare builds, chorus opens wide with gang vocals and hooky lead doubles, Add palm-muted stop hits, claps, and a tiny synth sparkle between phrases, Bright, glossy, and sunlit in the mix, with close-mic vocals and playful ad-libs, pop, bright, joyful, happy, feel-good",
     "tags": [
-      "pop",
       "bright",
       "feel good",
       "occasion",
@@ -64007,10 +63160,8 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Love/Paper Cup Road",
     "metadataText": "pop, upbeat feel-good, bright indie-pop (sunlit, chorus-driven)\n\nModern pop with male vocals, bright guitar riffs, brisk four-on-the-floor drums, clapping percussion, and a buoyant bassline; verse rides light strums and playful syncopation, pre-chorus opens with rising toms and stacked harmonies, chorus hits with wide gang vocals and a soaring hook, bridge drops to intimate guitar and handclaps before the final chorus blooms, Close-mic lead with double-tracked choruses, little ad-lib pops, delay throws on the hook, fizzy risers and bell chimes between lines, glossy and sunlit mix, feel-good, pop, male vocals, happy, joyful, bright",
     "tags": [
-      "pop",
       "upbeat feel good",
-      "bright indie pop sunlit",
-      "chorus driven",
+      "bright indie pop",
       "occasion",
       "love"
     ]
@@ -64033,7 +63184,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Love/Paper Cup Skies",
     "metadataText": "pop, dance-pop, upbeat, joyful\n\nPop with bright guitar riffs, punchy four-on-the-floor drums, bouncing bass, and sparkling synth tops; verse stays tight and playful, pre-chorus lifts with claps and rising harmony stacks, chorus opens wide with singalong doubles and handclaps, Vocal is close-mic and smiling in verses, then layered with airy ad-libs and gang oohs on the hook, Add reverse-guitar swells into each chorus, a palm-muted fill before the bridge, and glossy mix with crisp drums and sunlit top end, happy, feel-good, pop, bright, joyful",
     "tags": [
-      "pop",
       "dance pop",
       "upbeat",
       "joyful",
@@ -64136,7 +63286,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Love/Paper Moon Room",
     "metadataText": "lo-fi indie pop, indie pop, lo-fi\n\nLo-fi indie pop with a laid-back swung groove, soft kick and brushed snare, mellow guitar chords, warm sub, and dreamy synth haze; verse stays intimate with sparse drums and close guitar, pre-chorus opens with stacked harmonies and a filtered lift, chorus lands with wider chords and gentle gang vocal echoes, Close-mic male vocals, breathy doubles, delayed hook tails, vinyl crackle, soft tape flutter, cozy and nostalgic mix with bright top end and warm low mids, nostalgic, soft, emotional, romantic, male vocals, lo-fi, warm, mellow",
     "tags": [
-      "lo fi indie pop",
+      "lo fi indie",
       "indie pop",
       "lo fi",
       "occasion",
@@ -64161,7 +63311,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Love/Paper Plane Smile",
     "metadataText": "pop, dance-pop, feel-good, joyful\n\nModern pop with bright strummed guitar, punchy four-on-the-floor drums, handclap lifts, and a sunny bassline; verse feels light and conversational, pre-chorus opens with rising harmony stacks, chorus hits bigger with wide doubles and group gang vocals on the anchor, bridge drops to guitar and finger snaps before a final lift, Male vocals, close-mic verses, glossy delay throws on key lines, sparkly ear-candy fills, crisp and radio-bright mix, joyful, pop, happy, bright, feel-good, male vocals",
     "tags": [
-      "pop",
       "dance pop",
       "feel good",
       "joyful",
@@ -64212,7 +63361,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Love/When You Come Home",
     "metadataText": "pop, ballad, soundtrack\n\nPop ballad with a slow emotional build, gentle piano arpeggios, ambient guitar swells, and emotional strings; verse stays intimate and sparse, pre-chorus lifts with soft percussion and rising harmony stacks, chorus opens wide with fuller drums and sustained strings, bridge drops to piano and breathy vocal before the final lift, Lead vocal is close-mic and vulnerable with layered doubles, harmony stacks, and a few delay throws on key lines, Ear candy includes reversed swells, a heartbeat-like kick entering at the pre-chorus, and shimmering string risers into each chorus, Bright, cinematic, and polished like a romantic film score, vocal, heartfelt, ambient, ballad, romantic, soft, slow, pop, emotional, soundtrack",
     "tags": [
-      "pop",
       "ballad",
       "soundtrack",
       "occasion",
@@ -64237,7 +63385,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Love/Window Steam",
     "metadataText": "lo-fi indie pop, lo-fi, indie pop\n\nLo-fi indie pop with swung cozy drums and mellow guitar chords; verse stays intimate with close-mic male vocals and fingerpicked space, pre-chorus opens into soft stacked harmonies, chorus blooms with dreamy synth pads and gentle doubles, bridge strips to guitar and room tone before a final lifted chorus, Vinyl crackle, tape wow, and a faint reverse swell into each hook, Warm, dusty, close and cinematic, emotional, warm, lo-fi, nostalgic, male vocals, mellow, soft, romantic",
     "tags": [
-      "lo fi indie pop",
+      "lo fi indie",
       "lo fi",
       "indie pop",
       "occasion",
@@ -65466,7 +64614,6 @@ export const productionSongRecords = [
     "tags": [
       "afrobeat",
       "tropical house",
-      "pop",
       "electronic",
       "edm",
       "dance"
@@ -65490,10 +64637,10 @@ export const productionSongRecords = [
     "metadataText": "electronic, EDM, trap, cinematic, orchestral\n\nEpic EDM fusion with Arabic melodies and trap-leaning drums, midtempo to festival-surge pulse with half-time verse bounce and four-on-the-floor chorus lift; verse rides sparse drums, oud motif, and sub pulses, pre-chorus tightens with snare rolls and string risers, chorus slams with stacked chants and brass-like synth hits, Close-mic lead with doubled hooks, ad-lib echoes, delay throws, and crowd shouts, Sand gusts, reverse swells, and string stabs, Bright, massive, cinematic mix, electronic, orchestral, edm",
     "tags": [
       "electronic",
-      "edm",
       "trap",
       "cinematic",
       "orchestral",
+      "edm",
       "dance"
     ]
   },
@@ -65515,8 +64662,8 @@ export const productionSongRecords = [
     "metadataText": "electronic, edm, orchestral\n\nEpic EDM fusion with Arabic melody lines, trap drums, and cinematic orchestral builds; verse rides sparse hand percussion, oud plucks, and low vocal chants, pre-chorus lifts with string swells and rising toms, chorus slams into massive bass drops and stacked gang vocals, Haunting male vocal leads with doubled whispers, delay throws on key words, desert wind risers, brass stabs, and a wide punchy festival mix, electronic, edm, orchestral",
     "tags": [
       "electronic",
-      "edm",
       "orchestral",
+      "edm",
       "dance"
     ]
   },
@@ -65584,12 +64731,12 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/EDM  Dance/Broken Speakers & Wild Hearts",
     "metadataText": "EDM, cinematic rock, orchestral, electric rock, arena anthem\n\nEDM dance anthem fused with cinematic rock and orchestral power, 132 BPM four-on-the-floor with syncopated kick drives; verse rides tense synth pulses and muted guitar chugs, pre-chorus opens with rising strings and brass swells, chorus slams with explosive bass, gang shouts, and arena-size hook doubles, Aggressive lead vocal with stacked harmonies, delay throws on the hook, whispered pickups, and crowd-style ad-libs, Riser sweeps, reversed cymbal blooms, sub drops, and metallic hits, Bright, massive, and futuristic with a dark neon edge, emotional, orchestral, electric, rock, edm",
     "tags": [
-      "edm",
       "cinematic rock",
       "orchestral",
       "electric rock",
       "arena anthem",
       "electronic",
+      "edm",
       "dance"
     ]
   },
@@ -65612,8 +64759,8 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "glitch",
-      "edm",
       "electronic",
+      "edm",
       "dance"
     ]
   },
@@ -65634,11 +64781,11 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/EDM  Dance/Dance Beneath the Palms",
     "metadataText": "EDM, tropical house, Afrobeat, dance-pop\n\nEDM dance-pop with Afrobeat groove and tropical house swing; driving four-on-the-floor kick under syncopated percussion, verse rides sparse congas and warm sub, pre-chorus opens with rising plucks and vocal chop lifts, chorus hits wide with bright synth lead, island guitar riffs, and pop hook stacks, Add handclap lifts, reversed swell transitions, polished bright punchy mix, bright, rhythmic, smooth, afrobeat, feel-good, edm, tropical house, uplifting, pop",
     "tags": [
-      "edm",
       "tropical house",
       "afrobeat",
       "dance pop",
       "electronic",
+      "edm",
       "dance"
     ]
   },
@@ -65659,10 +64806,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/EDM  Dance/Dancing Through Tomorrow",
     "metadataText": "EDM, electronic, uplifting, dance anthem\n\nEDM dance anthem with four-on-the-floor punch, rolling sub-bass, euphoric lead synths, and hard sidechain lift; verse rides clipped drums and tense vocal chop motifs, pre-chorus strips to filtered pads and risers, chorus explodes with huge festival leads and crowd chants, Glossy close-mic lead with stacked doubles, pitched ad-libs, delay throws, reverse swells, and bright cinematic mix, edm, rhythmic, uplifting, electronic, vocal, emotional, dynamic",
     "tags": [
-      "edm",
       "electronic",
       "uplifting",
       "dance anthem",
+      "edm",
       "dance"
     ]
   },
@@ -65684,8 +64831,8 @@ export const productionSongRecords = [
     "metadataText": "orchestral, EDM, electronic\n\nEpic EDM fusion with Arabic melodic modes, trap drums and cinematic orchestral swells; verse rides tense hand percussion and plucked motifs, pre-chorus lifts with choir pads and rising strings, chorus slams into a huge bass drop with festival claps and brass hits, Haunting female lead with doubled hook lines, ad-lib echoes, reverse swells, desert wind textures, bright punchy wide mix, orchestral, edm, electronic",
     "tags": [
       "orchestral",
-      "edm",
       "electronic",
+      "edm",
       "dance"
     ]
   },
@@ -65732,9 +64879,9 @@ export const productionSongRecords = [
       "phonk",
       "trap",
       "dubstep",
-      "edm",
       "glitch",
       "electronic",
+      "edm",
       "dance"
     ]
   },
@@ -65780,10 +64927,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/EDM  Dance/Drop Into Chaos",
     "metadataText": "edm, dubstep, phonk\n\nAggressive EDM fusion with phonk, trap, and dubstep influences; hard swing on the drums, dembow-like momentum in the percussion accents, and a head-nodding club pulse, Verse sections stay stripped to sub rumble, distorted 808 hits, and hypnotic cowbell ticks; pre-drop builds with filtered synth sweeps, glitch stutters, and rising tension, Drops explode with cinematic leads, brutal bass swaps, and chaotic festival impact, Tight low-end, wide gritty mids, loud and crushing master, hypnotic, electronic, dubstep, glitch, edm",
     "tags": [
-      "edm",
       "dubstep",
       "phonk",
       "electronic",
+      "edm",
       "dance"
     ]
   },
@@ -65804,9 +64951,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/EDM  Dance/Dunes of Eternity",
     "metadataText": "edm, electronic, orchestral\n\nEDM fusion with Arabic melodic turns, trap drums, and cinematic orchestral swells; driving half-time verses ride tense oud motifs and hand percussion, pre-chorus lifts with rising strings and ghostly vocal chops, chorus slams into massive bass drops and festival chants, Haunting lead vocal with doubled hook lines, ad-lib echoes, reversed risers, sand-texture impacts, wide punchy mix, edm, electronic, orchestral",
     "tags": [
-      "edm",
       "electronic",
       "orchestral",
+      "edm",
       "dance"
     ]
   },
@@ -65873,12 +65020,11 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/EDM  Dance/Electric Island Fever",
     "metadataText": "edm, afrobeat, tropical house, pop, feel-good\n\nAfrobeat-infused tropical house EDM with syncopated percussion, four-on-the-floor lift, and buoyant pop hook energy; verse rides djembe-style rhythms, palm-muted guitar licks, and a smooth bass pulse; pre-chorus strips to handclaps, filtered pads, and vocal lifts; chorus hits with bright synth plucks, island guitar melody, and stacked gang ad-libs, Use breathy lead doubles, call-and-response backing vocals, delay throws on hook words, risers into drops, and sparkling percussion fills, Polished, wide, punchy summer-festival mix, uplifting, rhythmic, smooth, edm, afrobeat, feel-good, tropical house, bright, pop",
     "tags": [
-      "edm",
       "afrobeat",
       "tropical house",
-      "pop",
       "feel good",
       "electronic",
+      "edm",
       "dance"
     ]
   },
@@ -65899,10 +65045,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/EDM  Dance/Electric Paradise",
     "metadataText": "EDM, electronic, uplifting, vocal\n\nEDM dance anthem with driving four-on-the-floor kicks, syncopated bass stabs, and euphoric lead synths; verse-like sections ride tight low-end pulses, pre-drop builds stack rising arps and filtered claps, and the main drop hits with huge festival chords, chopped vocal textures, and sidechained brass swells, Airy transitions, reverse crashes, and a polished wide mix, electronic, emotional, uplifting, vocal, dynamic, rhythmic, edm",
     "tags": [
-      "edm",
       "electronic",
       "uplifting",
-      "vocal",
+      "edm",
       "dance"
     ]
   },
@@ -65925,10 +65070,10 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "electric",
-      "edm",
       "emotional",
       "rock",
       "electronic",
+      "edm",
       "dance"
     ]
   },
@@ -65950,10 +65095,10 @@ export const productionSongRecords = [
     "metadataText": "electronic, EDM, trap, cinematic, orchestral\n\nEpic EDM fusion with Arabic melodies and trap-leaning drums, midtempo to festival-surge pulse with half-time verse bounce and four-on-the-floor chorus lift; verse rides sparse drums, oud motif, and sub pulses, pre-chorus tightens with snare rolls and string risers, chorus slams with stacked chants and brass-like synth hits, Close-mic lead with doubled hooks, ad-lib echoes, delay throws, and crowd shouts, Sand gusts, reverse swells, and string stabs, Bright, massive, cinematic mix, electronic, orchestral, edm",
     "tags": [
       "electronic",
-      "edm",
       "trap",
       "cinematic",
       "orchestral",
+      "edm",
       "dance"
     ]
   },
@@ -65974,10 +65119,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/EDM  Dance/Euphoria on Repeat",
     "metadataText": "EDM, electronic, uplifting, dance anthem\n\nEDM dance anthem with propulsive four-on-the-floor kicks, punchy bass pulses, euphoric synth leads, and festival-sized drop dynamics; verse sections ride stripped drums and sub swells, pre-drop builds with filtered risers and snare rolls, chorus hits with stacked chord stabs and chopped vocal hooks, Wide cinematic transitions, glossy commercial master, club-bright and explosive, uplifting, vocal, emotional, electronic, edm, rhythmic, dynamic",
     "tags": [
-      "edm",
       "electronic",
       "uplifting",
       "dance anthem",
+      "edm",
       "dance"
     ]
   },
@@ -65998,9 +65143,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/EDM  Dance/Festival Hearts",
     "metadataText": "EDM, electronic, uplifting\n\nEDM dance anthem with punchy four-on-the-floor kicks and powerful sidechained bass; verse sections ride minimal drums and sub pulses, pre-drop builds stack snappy claps and filtered synth lifts, and the drop explodes with euphoric leads and vocal chops, Add cinematic risers, reverse swells, and crowd-hit transitions, Bright, polished, festival-ready mix with massive low-end and glossy top, dynamic, electronic, emotional, vocal, uplifting, rhythmic, edm",
     "tags": [
-      "edm",
       "electronic",
       "uplifting",
+      "edm",
       "dance"
     ]
   },
@@ -66023,8 +65168,8 @@ export const productionSongRecords = [
     "tags": [
       "afrobeat",
       "tropical house",
-      "edm",
       "electronic",
+      "edm",
       "dance"
     ]
   },
@@ -66046,9 +65191,9 @@ export const productionSongRecords = [
     "metadataText": "orchestral, EDM, electric rock\n\nEDM cinematic rock anthem at a driving festival tempo with four-on-the-floor kick, syncopated bass hits, brutal electric guitar riffs, and orchestral brass stacked over cyberpunk synth leads; verse-like intro rides tense pulses, pre-drop builds with rising strings and tom fills, drops slam with huge snare impacts and stadium chants, break returns to haunting pads before final lift, Wide, glossy, explosive mix, orchestral, electric, edm, emotional, rock",
     "tags": [
       "orchestral",
-      "edm",
       "electric rock",
       "electronic",
+      "edm",
       "dance"
     ]
   },
@@ -66071,8 +65216,8 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "glitch",
-      "edm",
       "electronic",
+      "edm",
       "dance"
     ]
   },
@@ -66095,8 +65240,8 @@ export const productionSongRecords = [
     "tags": [
       "afrobeat",
       "tropical house",
-      "edm",
       "electronic",
+      "edm",
       "dance"
     ]
   },
@@ -66117,10 +65262,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/EDM  Dance/Lights Beyond Midnight",
     "metadataText": "EDM, electronic, uplifting, dance anthem\n\nEDM dance anthem with propulsive four-on-the-floor kicks, punchy bass pulses, euphoric synth leads, and festival-sized drop dynamics; verse sections ride stripped drums and sub swells, pre-drop builds with filtered risers and snare rolls, chorus hits with stacked chord stabs and chopped vocal hooks, Wide cinematic transitions, glossy commercial master, club-bright and explosive, uplifting, vocal, emotional, electronic, edm, rhythmic, dynamic",
     "tags": [
-      "edm",
       "electronic",
       "uplifting",
       "dance anthem",
+      "edm",
       "dance"
     ]
   },
@@ -66141,9 +65286,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/EDM  Dance/Lost in the Drop",
     "metadataText": "EDM, electronic, uplifting\n\nEDM dance anthem, around 128 BPM, four-on-the-floor with punchy kick drums, rolling basslines, euphoric lead synths, and festival-sized drop impact, Verse sections stay lean with muted plucks and sub pulse; pre-choruses stack risers, tom fills, and filtered vocal chops; choruses explode with wide supersaws, crowd-call stabs, and octave bass lifts, Polished, bright, and massive; reverse swells, impact booms, and laser-like transition FX, emotional, edm, electronic, dynamic, uplifting, rhythmic, vocal",
     "tags": [
-      "edm",
       "electronic",
       "uplifting",
+      "edm",
       "dance"
     ]
   },
@@ -66164,13 +65309,13 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/EDM  Dance/Midnight Afro Heat",
     "metadataText": "edm, tropical house, afrobeat, feel-good, uplifting, bright\n\nEDM dance-pop with Afrobeat grooves and tropical house bounce, upbeat four-on-the-floor drive layered with syncopated percussion and shuffling shaker patterns; verse rides sparse bass, guitar pops, and clipped chants; pre-chorus opens with rising synth pads and handclap lifts; chorus hits with bright lead synth, wide group vocals, and a bigger kick pattern, Vocal is smooth and close-mic in verses, doubled and crowd-lifted on hooks, with ad-lib pings and delay throws, Ear candy: ocean-spray risers, reversed chime swells, and a final drop into palm-muted guitar, Polished, glossy, festival-bright mix, edm, tropical house, afrobeat, feel-good, smooth, uplifting, bright, rhythmic, pop",
     "tags": [
-      "edm",
       "tropical house",
       "afrobeat",
       "feel good",
       "uplifting",
       "bright",
       "electronic",
+      "edm",
       "dance"
     ]
   },
@@ -66193,8 +65338,8 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "rock",
-      "edm",
       "electronic",
+      "edm",
       "dance"
     ]
   },
@@ -66261,10 +65406,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/EDM  Dance/Neon Bass Overload",
     "metadataText": "edm, dubstep, phonk\n\nAggressive EDM fusion with phonk, trap, and dubstep influences; hard swing on the drums, dembow-like momentum in the percussion accents, and a head-nodding club pulse, Verse sections stay stripped to sub rumble, distorted 808 hits, and hypnotic cowbell ticks; pre-drop builds with filtered synth sweeps, glitch stutters, and rising tension, Drops explode with cinematic leads, brutal bass swaps, and chaotic festival impact, Tight low-end, wide gritty mids, loud and crushing master, hypnotic, electronic, dubstep, glitch, edm",
     "tags": [
-      "edm",
       "dubstep",
       "phonk",
       "electronic",
+      "edm",
       "dance"
     ]
   },
@@ -66351,12 +65496,12 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/EDM  Dance/Rage Beneath the Lights",
     "metadataText": "EDM, cinematic rock, orchestral, electric rock, arena anthem\n\nEDM dance anthem fused with cinematic rock and orchestral power, 132 BPM four-on-the-floor with syncopated kick drives; verse rides tense synth pulses and muted guitar chugs, pre-chorus opens with rising strings and brass swells, chorus slams with explosive bass, gang shouts, and arena-size hook doubles, Aggressive lead vocal with stacked harmonies, delay throws on the hook, whispered pickups, and crowd-style ad-libs, Riser sweeps, reversed cymbal blooms, sub drops, and metallic hits, Bright, massive, and futuristic with a dark neon edge, emotional, orchestral, electric, rock, edm",
     "tags": [
-      "edm",
       "cinematic rock",
       "orchestral",
       "electric rock",
       "arena anthem",
       "electronic",
+      "edm",
       "dance"
     ]
   },
@@ -66377,12 +65522,11 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/EDM  Dance/Rhythm of the Summer Coast",
     "metadataText": "edm, afrobeat, tropical house, pop, feel-good\n\nAfrobeat-infused tropical house EDM with syncopated percussion, four-on-the-floor lift, and buoyant pop hook energy; verse rides djembe-style rhythms, palm-muted guitar licks, and a smooth bass pulse; pre-chorus strips to handclaps, filtered pads, and vocal lifts; chorus hits with bright synth plucks, island guitar melody, and stacked gang ad-libs, Use breathy lead doubles, call-and-response backing vocals, delay throws on hook words, risers into drops, and sparkling percussion fills, Polished, wide, punchy summer-festival mix, uplifting, rhythmic, smooth, edm, afrobeat, feel-good, tropical house, bright, pop",
     "tags": [
-      "edm",
       "afrobeat",
       "tropical house",
-      "pop",
       "feel good",
       "electronic",
+      "edm",
       "dance"
     ]
   },
@@ -66496,10 +65640,10 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/EDM  Dance/Skyline Frequency",
     "metadataText": "EDM, electronic, uplifting, dance anthem\n\nEDM dance anthem with four-on-the-floor punch, rolling sub-bass, euphoric lead synths, and hard sidechain lift; verse rides clipped drums and tense vocal chop motifs, pre-chorus strips to filtered pads and risers, chorus explodes with huge festival leads and crowd chants, Glossy close-mic lead with stacked doubles, pitched ad-libs, delay throws, reverse swells, and bright cinematic mix, edm, rhythmic, uplifting, electronic, vocal, emotional, dynamic",
     "tags": [
-      "edm",
       "electronic",
       "uplifting",
       "dance anthem",
+      "edm",
       "dance"
     ]
   },
@@ -66521,9 +65665,9 @@ export const productionSongRecords = [
     "metadataText": "rock, EDM, cinematic orchestral\n\nEDM dance anthem fused with cinematic rock and orchestral power, driving four-on-the-floor kick, aggressive electric guitar riffs, massive brass hits, emotional strings, futuristic cyberpunk synths, explosive festival drops, stacked gang vocals, delay throws on hook words, and a bright-punchy stadium mix with dark neon sheen, rock, edm, electric, emotional, orchestral",
     "tags": [
       "rock",
-      "edm",
       "cinematic orchestral",
       "electronic",
+      "edm",
       "dance"
     ]
   },
@@ -66546,7 +65690,6 @@ export const productionSongRecords = [
     "tags": [
       "afrobeat",
       "tropical house",
-      "pop",
       "electronic",
       "edm",
       "dance"
@@ -66569,9 +65712,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/EDM  Dance/Temple of the Neon Moon",
     "metadataText": "edm, orchestral, electronic\n\nEpic EDM fusion with Arabic melodic turns, trap drums, and cinematic orchestral weight; verse rides sparse frame drums, oud plucks, and dark hand percussion, pre-chorus narrows to haunting vocal lines and rising strings, chorus slams into massive sidechained bass, brass hits, and stacked chant doubles, Close-mic lead with wide ad-libs, reverse swells before drops, desert-wind risers, bright punchy festival mix, edm, orchestral, electronic",
     "tags": [
-      "edm",
       "orchestral",
       "electronic",
+      "edm",
       "dance"
     ]
   },
@@ -66592,13 +65735,13 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/EDM  Dance/The Afrobeat Escape",
     "metadataText": "edm, tropical house, afrobeat, feel-good, uplifting, bright\n\nEDM dance-pop with Afrobeat grooves and tropical house bounce, upbeat four-on-the-floor drive layered with syncopated percussion and shuffling shaker patterns; verse rides sparse bass, guitar pops, and clipped chants; pre-chorus opens with rising synth pads and handclap lifts; chorus hits with bright lead synth, wide group vocals, and a bigger kick pattern, Vocal is smooth and close-mic in verses, doubled and crowd-lifted on hooks, with ad-lib pings and delay throws, Ear candy: ocean-spray risers, reversed chime swells, and a final drop into palm-muted guitar, Polished, glossy, festival-bright mix, edm, tropical house, afrobeat, feel-good, smooth, uplifting, bright, rhythmic, pop",
     "tags": [
-      "edm",
       "tropical house",
       "afrobeat",
       "feel good",
       "uplifting",
       "bright",
       "electronic",
+      "edm",
       "dance"
     ]
   },
@@ -66644,9 +65787,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/EDM  Dance/The Cairo Frequency",
     "metadataText": "edm, electronic, orchestral\n\nEDM fusion with Arabic melodic turns, trap drums, and cinematic orchestral swells; driving half-time verses ride tense oud motifs and hand percussion, pre-chorus lifts with rising strings and ghostly vocal chops, chorus slams into massive bass drops and festival chants, Haunting lead vocal with doubled hook lines, ad-lib echoes, reversed risers, sand-texture impacts, wide punchy mix, edm, electronic, orchestral",
     "tags": [
-      "edm",
       "electronic",
       "orchestral",
+      "edm",
       "dance"
     ]
   },
@@ -66668,9 +65811,9 @@ export const productionSongRecords = [
     "metadataText": "orchestral, EDM, electric rock\n\nEDM cinematic rock anthem at a driving festival tempo with four-on-the-floor kick, syncopated bass hits, brutal electric guitar riffs, and orchestral brass stacked over cyberpunk synth leads; verse-like intro rides tense pulses, pre-drop builds with rising strings and tom fills, drops slam with huge snare impacts and stadium chants, break returns to haunting pads before final lift, Wide, glossy, explosive mix, orchestral, electric, edm, emotional, rock",
     "tags": [
       "orchestral",
-      "edm",
       "electric rock",
       "electronic",
+      "edm",
       "dance"
     ]
   },
@@ -66738,9 +65881,9 @@ export const productionSongRecords = [
     "metadataText": "rock, EDM, cinematic orchestral\n\nEDM dance anthem fused with cinematic rock and orchestral power, driving four-on-the-floor kick, aggressive electric guitar riffs, massive brass hits, emotional strings, futuristic cyberpunk synths, explosive festival drops, stacked gang vocals, delay throws on hook words, and a bright-punchy stadium mix with dark neon sheen, rock, edm, electric, emotional, orchestral",
     "tags": [
       "rock",
-      "edm",
       "cinematic orchestral",
       "electronic",
+      "edm",
       "dance"
     ]
   },
@@ -66761,9 +65904,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/EDM  Dance/The Last Sultan of the Night",
     "metadataText": "edm, orchestral, electronic\n\nEpic EDM fusion with Arabic melodic turns, trap drums, and cinematic orchestral weight; verse rides sparse frame drums, oud plucks, and dark hand percussion, pre-chorus narrows to haunting vocal lines and rising strings, chorus slams into massive sidechained bass, brass hits, and stacked chant doubles, Close-mic lead with wide ad-libs, reverse swells before drops, desert-wind risers, bright punchy festival mix, edm, orchestral, electronic",
     "tags": [
-      "edm",
       "orchestral",
       "electronic",
+      "edm",
       "dance"
     ]
   },
@@ -66784,10 +65927,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/EDM  Dance/The Sound of Summer",
     "metadataText": "EDM, electronic, uplifting, vocal\n\nEDM dance anthem with driving four-on-the-floor kicks, syncopated bass stabs, and euphoric lead synths; verse-like sections ride tight low-end pulses, pre-drop builds stack rising arps and filtered claps, and the main drop hits with huge festival chords, chopped vocal textures, and sidechained brass swells, Airy transitions, reverse crashes, and a polished wide mix, electronic, emotional, uplifting, vocal, dynamic, rhythmic, edm",
     "tags": [
-      "edm",
       "electronic",
       "uplifting",
-      "vocal",
+      "edm",
       "dance"
     ]
   },
@@ -66811,9 +65953,9 @@ export const productionSongRecords = [
       "phonk",
       "trap",
       "dubstep",
-      "edm",
       "glitch",
       "electronic",
+      "edm",
       "dance"
     ]
   },
@@ -66835,8 +65977,8 @@ export const productionSongRecords = [
     "metadataText": "electronic, edm, orchestral\n\nEpic EDM fusion with Arabic melody lines, trap drums, and cinematic orchestral builds; verse rides sparse hand percussion, oud plucks, and low vocal chants, pre-chorus lifts with string swells and rising toms, chorus slams into massive bass drops and stacked gang vocals, Haunting male vocal leads with doubled whispers, delay throws on key words, desert wind risers, brass stabs, and a wide punchy festival mix, electronic, edm, orchestral",
     "tags": [
       "electronic",
-      "edm",
       "orchestral",
+      "edm",
       "dance"
     ]
   },
@@ -66857,11 +65999,11 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/EDM  Dance/Tropical Pulse Energy",
     "metadataText": "EDM, tropical house, Afrobeat, dance-pop\n\nEDM dance-pop with Afrobeat groove and tropical house swing; driving four-on-the-floor kick under syncopated percussion, verse rides sparse congas and warm sub, pre-chorus opens with rising plucks and vocal chop lifts, chorus hits wide with bright synth lead, island guitar riffs, and pop hook stacks, Add handclap lifts, reversed swell transitions, polished bright punchy mix, bright, rhythmic, smooth, afrobeat, feel-good, edm, tropical house, uplifting, pop",
     "tags": [
-      "edm",
       "tropical house",
       "afrobeat",
       "dance pop",
       "electronic",
+      "edm",
       "dance"
     ]
   },
@@ -66884,8 +66026,8 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "rock",
-      "edm",
       "electronic",
+      "edm",
       "dance"
     ]
   },
@@ -66907,8 +66049,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/KOREAN/Alone",
     "metadataText": "Korean R&B, R&B, cinematic urban pop\n\nSmooth Korean R&B song with emotional vocals, atmospheric synth textures, deep basslines, late-night Seoul atmosphere, cinematic production, soulful melodies, intimate storytelling energy and polished modern Korean urban sound",
     "tags": [
-      "korean r and b",
-      "r and b",
+      "korean r",
       "cinematic urban pop",
       "culture",
       "pop"
@@ -66932,8 +66073,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/KOREAN/Back in Seoul",
     "metadataText": "Korean R&B, R&B, cinematic urban pop\n\nSmooth Korean R&B song with emotional vocals, atmospheric synth textures, deep basslines, late-night Seoul atmosphere, cinematic production, soulful melodies, intimate storytelling energy and polished modern Korean urban sound",
     "tags": [
-      "korean r and b",
-      "r and b",
+      "korean r",
       "cinematic urban pop",
       "culture",
       "pop"
@@ -66957,8 +66097,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/KOREAN/Beneath Neon Lights",
     "metadataText": "Korean R&B, R&B, cinematic urban pop\n\nSmooth Korean R&B song with emotional vocals, atmospheric synth textures, deep basslines, late-night Seoul atmosphere, cinematic production, soulful melodies, intimate storytelling energy and polished modern Korean urban sound",
     "tags": [
-      "korean r and b",
-      "r and b",
+      "korean r",
       "cinematic urban pop",
       "culture",
       "pop"
@@ -66982,8 +66121,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/KOREAN/Billion Dollar Seoul",
     "metadataText": "Korean R&B, R&B, cinematic urban pop\n\nSmooth Korean R&B song with emotional vocals, atmospheric synth textures, deep basslines, late-night Seoul atmosphere, cinematic production, soulful melodies, intimate storytelling energy and polished modern Korean urban sound",
     "tags": [
-      "korean r and b",
-      "r and b",
+      "korean r",
       "cinematic urban pop",
       "culture",
       "pop"
@@ -67007,8 +66145,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/KOREAN/Cashmere Club",
     "metadataText": "Korean R&B, R&B, cinematic urban pop\n\nSmooth Korean R&B song with emotional vocals, atmospheric synth textures, deep basslines, late-night Seoul atmosphere, cinematic production, soulful melodies, intimate storytelling energy and polished modern Korean urban sound",
     "tags": [
-      "korean r and b",
-      "r and b",
+      "korean r",
       "cinematic urban pop",
       "culture",
       "pop"
@@ -67032,8 +66169,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/KOREAN/Chasing the Moon",
     "metadataText": "Korean R&B, R&B, cinematic urban pop\n\nSmooth Korean R&B song with emotional vocals, atmospheric synth textures, deep basslines, late-night Seoul atmosphere, cinematic production, soulful melodies, intimate storytelling energy and polished modern Korean urban sound",
     "tags": [
-      "korean r and b",
-      "r and b",
+      "korean r",
       "cinematic urban pop",
       "culture",
       "pop"
@@ -67057,8 +66193,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/KOREAN/Dance All Night",
     "metadataText": "Korean R&B, R&B, cinematic urban pop\n\nSmooth Korean R&B song with emotional vocals, atmospheric synth textures, deep basslines, late-night Seoul atmosphere, cinematic production, soulful melodies, intimate storytelling energy and polished modern Korean urban sound",
     "tags": [
-      "korean r and b",
-      "r and b",
+      "korean r",
       "cinematic urban pop",
       "culture",
       "pop"
@@ -67082,7 +66217,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/KOREAN/Embrace",
     "metadataText": "Korean R&B, soul, cinematic urban pop\n\nSmooth Korean R&B song with emotional vocals, atmospheric synth textures, deep basslines, late-night Seoul atmosphere, cinematic production, soulful melodies, intimate storytelling energy and polished modern Korean urban sound",
     "tags": [
-      "korean r and b",
+      "korean r",
       "soul",
       "cinematic urban pop",
       "culture",
@@ -67107,7 +66242,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/KOREAN/Ethereal Waves",
     "metadataText": "Korean R&B, soul, cinematic urban pop\n\nSmooth Korean R&B song with emotional vocals, atmospheric synth textures, deep basslines, late-night Seoul atmosphere, cinematic production, soulful melodies, intimate storytelling energy and polished modern Korean urban sound",
     "tags": [
-      "korean r and b",
+      "korean r",
       "soul",
       "cinematic urban pop",
       "culture",
@@ -67132,7 +66267,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/KOREAN/Falling Into My Heart",
     "metadataText": "Korean R&B, soul, cinematic urban pop\n\nSmooth Korean R&B song with emotional vocals, atmospheric synth textures, deep basslines, late-night Seoul atmosphere, cinematic production, soulful melodies, intimate storytelling energy and polished modern Korean urban sound",
     "tags": [
-      "korean r and b",
+      "korean r",
       "soul",
       "cinematic urban pop",
       "culture",
@@ -67157,7 +66292,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/KOREAN/Forever NCT",
     "metadataText": "Korean R&B, soul, cinematic urban pop\n\nSmooth Korean R&B song with emotional vocals, atmospheric synth textures, deep basslines, late-night Seoul atmosphere, cinematic production, soulful melodies, intimate storytelling energy and polished modern Korean urban sound",
     "tags": [
-      "korean r and b",
+      "korean r",
       "soul",
       "cinematic urban pop",
       "culture",
@@ -67182,7 +66317,7 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/KOREAN/Freedom",
     "metadataText": "Korean R&B, soul, cinematic urban pop\n\nSmooth Korean R&B song with emotional vocals, atmospheric synth textures, deep basslines, late-night Seoul atmosphere, cinematic production, soulful melodies, intimate storytelling energy and polished modern Korean urban sound",
     "tags": [
-      "korean r and b",
+      "korean r",
       "soul",
       "cinematic urban pop",
       "culture",
@@ -67558,9 +66693,9 @@ export const productionSongRecords = [
     "metadataText": "K-pop, pop, electronic dance music (EDM)\n\n\"High-energy K-pop anthem with polished vocals, catchy melodic hooks, vibrant synth production, punchy electronic drums, dynamic rap sections, emotional pre-chorus builds, explosive dance-ready choruses, cinematic transitions, youthful stylish energy, glossy modern production, futuristic pop textures, confident performance vibe and addictive commercial sound perfect for choreography videos, fashion visuals, concerts and global pop culture aesthetics, \"",
     "tags": [
       "k pop",
-      "pop",
-      "electronic dance music edm",
-      "culture"
+      "electronic dance",
+      "culture",
+      "pop"
     ]
   },
   {
@@ -67582,9 +66717,9 @@ export const productionSongRecords = [
     "metadataText": "K-pop, pop, electronic dance music (EDM)\n\n\"High-energy K-pop anthem with polished vocals, catchy melodic hooks, vibrant synth production, punchy electronic drums, dynamic rap sections, emotional pre-chorus builds, explosive dance-ready choruses, cinematic transitions, youthful stylish energy, glossy modern production, futuristic pop textures, confident performance vibe and addictive commercial sound perfect for choreography videos, fashion visuals, concerts and global pop culture aesthetics, \"",
     "tags": [
       "k pop",
-      "pop",
-      "electronic dance music edm",
-      "culture"
+      "electronic dance",
+      "culture",
+      "pop"
     ]
   },
   {
@@ -67606,9 +66741,9 @@ export const productionSongRecords = [
     "metadataText": "K-pop, pop, electronic dance music (EDM)\n\n\"High-energy K-pop anthem with polished vocals, catchy melodic hooks, vibrant synth production, punchy electronic drums, dynamic rap sections, emotional pre-chorus builds, explosive dance-ready choruses, cinematic transitions, youthful stylish energy, glossy modern production, futuristic pop textures, confident performance vibe and addictive commercial sound perfect for choreography videos, fashion visuals, concerts and global pop culture aesthetics, \"",
     "tags": [
       "k pop",
-      "pop",
-      "electronic dance music edm",
-      "culture"
+      "electronic dance",
+      "culture",
+      "pop"
     ]
   },
   {
@@ -67629,7 +66764,6 @@ export const productionSongRecords = [
     "metadataText": "dub reggae, dub, reggae\n\nDub reggae instrumental, mid-tempo and deeply swung, with echo-soaked guitar skanks riding a rolling bassline and hypnotic one-drop drum pocket, Intro opens on vinyl crackle and spring reverb; first section stays sparse with bass, skank, and rimshot, Middle swells with tape-delay throws, tom rolls, and organ haze, Final pass blooms with wider stereo washes and dub dropouts, Warm, smoky, vintage Caribbean mix, hypnotic, dub, deep, reggae",
     "tags": [
       "dub reggae",
-      "dub",
       "reggae",
       "culture"
     ]
@@ -67652,7 +66786,6 @@ export const productionSongRecords = [
     "metadataText": "dub reggae, dub, reggae\n\nDub reggae instrumental, mid-tempo and deeply swung, with echo-soaked guitar skanks riding a rolling bassline and hypnotic one-drop drum pocket, Intro opens on vinyl crackle and spring reverb; first section stays sparse with bass, skank, and rimshot, Middle swells with tape-delay throws, tom rolls, and organ haze, Final pass blooms with wider stereo washes and dub dropouts, Warm, smoky, vintage Caribbean mix, hypnotic, dub, deep, reggae",
     "tags": [
       "dub reggae",
-      "dub",
       "reggae",
       "culture"
     ]
@@ -67675,7 +66808,6 @@ export const productionSongRecords = [
     "metadataText": "dub reggae, dub, reggae\n\nDub reggae instrumental, mid-tempo and deeply swung, with echo-soaked guitar skanks riding a rolling bassline and hypnotic one-drop drum pocket, Intro opens on vinyl crackle and spring reverb; first section stays sparse with bass, skank, and rimshot, Middle swells with tape-delay throws, tom rolls, and organ haze, Final pass blooms with wider stereo washes and dub dropouts, Warm, smoky, vintage Caribbean mix, hypnotic, dub, deep, reggae",
     "tags": [
       "dub reggae",
-      "dub",
       "reggae",
       "culture"
     ]
@@ -67698,7 +66830,6 @@ export const productionSongRecords = [
     "metadataText": "dub reggae, dub, reggae\n\nDub reggae instrumental, mid-tempo and deeply swung, with echo-soaked guitar skanks riding a rolling bassline and hypnotic one-drop drum pocket, Intro opens on vinyl crackle and spring reverb; first section stays sparse with bass, skank, and rimshot, Middle swells with tape-delay throws, tom rolls, and organ haze, Final pass blooms with wider stereo washes and dub dropouts, Warm, smoky, vintage Caribbean mix, hypnotic, dub, deep, reggae",
     "tags": [
       "dub reggae",
-      "dub",
       "reggae",
       "culture"
     ]
@@ -67721,7 +66852,6 @@ export const productionSongRecords = [
     "metadataText": "dub reggae, dub, reggae\n\nDub reggae instrumental, mid-tempo and deeply swung, with echo-soaked guitar skanks riding a rolling bassline and hypnotic one-drop drum pocket, Intro opens on vinyl crackle and spring reverb; first section stays sparse with bass, skank, and rimshot, Middle swells with tape-delay throws, tom rolls, and organ haze, Final pass blooms with wider stereo washes and dub dropouts, Warm, smoky, vintage Caribbean mix, hypnotic, dub, deep, reggae",
     "tags": [
       "dub reggae",
-      "dub",
       "reggae",
       "culture"
     ]
@@ -67744,7 +66874,6 @@ export const productionSongRecords = [
     "metadataText": "dub reggae, dub, reggae\n\nDub reggae instrumental, mid-tempo and deeply swung, with echo-soaked guitar skanks riding a rolling bassline and hypnotic one-drop drum pocket, Intro opens on vinyl crackle and spring reverb; first section stays sparse with bass, skank, and rimshot, Middle swells with tape-delay throws, tom rolls, and organ haze, Final pass blooms with wider stereo washes and dub dropouts, Warm, smoky, vintage Caribbean mix, hypnotic, dub, deep, reggae",
     "tags": [
       "dub reggae",
-      "dub",
       "reggae",
       "culture"
     ]
@@ -67767,7 +66896,6 @@ export const productionSongRecords = [
     "metadataText": "dub reggae, dub, reggae\n\nDub reggae instrumental, mid-tempo and deeply swung, with echo-soaked guitar skanks riding a rolling bassline and hypnotic one-drop drum pocket, Intro opens on vinyl crackle and spring reverb; first section stays sparse with bass, skank, and rimshot, Middle swells with tape-delay throws, tom rolls, and organ haze, Final pass blooms with wider stereo washes and dub dropouts, Warm, smoky, vintage Caribbean mix, hypnotic, dub, deep, reggae",
     "tags": [
       "dub reggae",
-      "dub",
       "reggae",
       "culture"
     ]
@@ -67790,7 +66918,6 @@ export const productionSongRecords = [
     "metadataText": "dub reggae, dub, reggae\n\nDub reggae instrumental, mid-tempo and deeply swung, with echo-soaked guitar skanks riding a rolling bassline and hypnotic one-drop drum pocket, Intro opens on vinyl crackle and spring reverb; first section stays sparse with bass, skank, and rimshot, Middle swells with tape-delay throws, tom rolls, and organ haze, Final pass blooms with wider stereo washes and dub dropouts, Warm, smoky, vintage Caribbean mix, hypnotic, dub, deep, reggae",
     "tags": [
       "dub reggae",
-      "dub",
       "reggae",
       "culture"
     ]
@@ -67813,7 +66940,6 @@ export const productionSongRecords = [
     "metadataText": "dub reggae, dub, reggae\n\nDub reggae instrumental, mid-tempo and deeply swung, with echo-soaked guitar skanks riding a rolling bassline and hypnotic one-drop drum pocket, Intro opens on vinyl crackle and spring reverb; first section stays sparse with bass, skank, and rimshot, Middle swells with tape-delay throws, tom rolls, and organ haze, Final pass blooms with wider stereo washes and dub dropouts, Warm, smoky, vintage Caribbean mix, hypnotic, dub, deep, reggae",
     "tags": [
       "dub reggae",
-      "dub",
       "reggae",
       "culture"
     ]
@@ -68487,7 +67613,6 @@ export const productionSongRecords = [
     "metadataText": "dub reggae, dub, reggae\n\nDub reggae instrumental, mid-tempo and deeply swung, with echo-soaked guitar skanks riding a rolling bassline and hypnotic one-drop drum pocket, Intro opens on vinyl crackle and spring reverb; first section stays sparse with bass, skank, and rimshot, Middle swells with tape-delay throws, tom rolls, and organ haze, Final pass blooms with wider stereo washes and dub dropouts, Warm, smoky, vintage Caribbean mix, hypnotic, dub, deep, reggae",
     "tags": [
       "dub reggae",
-      "dub",
       "reggae",
       "culture"
     ]
@@ -68510,7 +67635,6 @@ export const productionSongRecords = [
     "metadataText": "dub reggae, dub, reggae\n\nDub reggae instrumental, mid-tempo and deeply swung, with echo-soaked guitar skanks riding a rolling bassline and hypnotic one-drop drum pocket, Intro opens on vinyl crackle and spring reverb; first section stays sparse with bass, skank, and rimshot, Middle swells with tape-delay throws, tom rolls, and organ haze, Final pass blooms with wider stereo washes and dub dropouts, Warm, smoky, vintage Caribbean mix, hypnotic, dub, deep, reggae",
     "tags": [
       "dub reggae",
-      "dub",
       "reggae",
       "culture"
     ]

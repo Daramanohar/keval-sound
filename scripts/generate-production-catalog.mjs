@@ -7,6 +7,7 @@ const OUTPUT_FILE = path.join(PROJECT_ROOT, "src", "lib", "production-catalog.ge
 const HOME_OUTPUT_FILE = path.join(PROJECT_ROOT, "src", "lib", "production-home.generated.ts");
 const PUBLIC_CDN_BASE = "https://cdn.kevalsound.com";
 const KEY_ROTATION = ["Am", "C", "Em", "G", "Dm", "F", "Bbm", "D"];
+const TAG_STOP_WORDS = new Set(["and", "but", "then", "final", "the"]);
 
 const PACKS = [
   [1, "Pop", "Commercial"],
@@ -188,18 +189,96 @@ function findFile(files, predicate) {
   return files.find((file) => predicate(file.name));
 }
 
+function compactMetadataTag(value) {
+  let tag = normalizeKey(value);
+  if (!tag || tag.includes("bpm")) return "";
+
+  const preferred = [
+    [/contemporary r and b/, "contemporary r and b"],
+    [/neo soul/, "neo soul"],
+    [/lo fi hip hop/, "lo fi hip hop"],
+    [/trap anthem/, "trap anthem"],
+    [/trap swing/, "trap swing"],
+    [/rap anthem/, "rap anthem"],
+    [/lyrical rap/, "lyrical rap"],
+    [/west coast bounce/, "west coast bounce"],
+    [/west coast swing/, "west coast swing"],
+    [/conscious rap/, "conscious rap"],
+    [/modern hip hop/, "modern hip hop"],
+    [/(hip hop.*rap|rap.*hip hop)/, "hip hop rap"],
+    [/syncopated hi hats?/, "syncopated hi hats"],
+    [/swung hi hats?/, "swung hi hats"],
+    [/jazzy chord stabs?/, "jazzy chord stabs"],
+    [/swung drums?/, "swung drums"],
+    [/upright bass warmth/, "upright bass warmth"],
+    [/warm bass(?:line|lines)?(?: glide)?/, "warm bass"],
+    [/(?:chopped|dusty|soulful) soul samples?/, "soul samples"],
+    [/soulful chopped samples?/, "soul samples"],
+    [/jazz piano stabs?/, "jazz piano"],
+    [/sliding sub hits?|sub drops?/, "sub bass"],
+    [/(?:punchy|cinematic|swung) snares?|crisp clap snaps?|dry snare crack/, "punchy drums"],
+    [/pop rock anthem/, "pop rock"],
+    [/crunchy guitar riff/, "guitar riff"],
+    [/electronic dance/, "electronic dance"],
+    [/smooth jazz/, "smooth jazz"],
+    [/swung jazz/, "swung jazz"],
+    [/(?:retro|stomping|nocturnal) groove/, "groove"],
+    [/spoken word/, "spoken word"],
+    [/dusty jazz touches?/, "dusty jazz"],
+    [/dynamic flow switches?/, "dynamic flow"],
+    [/tense .*bounce/, "tense bounce"],
+  ];
+
+  for (const [pattern, replacement] of preferred) {
+    if (pattern.test(tag)) return replacement;
+  }
+
+  tag = tag
+    .replace(/^(?:and|then|final|but)\s+/, "")
+    .replace(/^a\s+/, "")
+    .replace(/\b(?:driven|pockets|throws|responses|transitions|turns|lines|flourishes|crackle|swells|ticks)\b/g, "")
+    .replace(/\b(?:close mic|selective|occasional|doubled|bright yet|wide|intimate|radio ready)\b/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  const phrase = tag
+    .split(/\b(?:with|over|featuring|built around|built on|driven by|verse|verses|pre chorus|chorus|bridge|add|then|but|and)\b/)[0]
+    .replace(/\b(?:mix|lead|vocal|ad libs?|drop|half|thin)\b/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  const words = phrase.split(" ").filter(Boolean);
+  if (!words.length) return "";
+  if (words.some((word) => ["and", "but", "then", "final", "rapid"].includes(word))) return "";
+  if (words.length === 1 && words[0].length < 4) return "";
+
+  return words.slice(0, 3).join(" ");
+}
+
+function isUsableGeneratedTag(tag) {
+  if (!tag || TAG_STOP_WORDS.has(tag)) return false;
+  if (tag === "contemporary r and b") return true;
+
+  const words = tag.split(" ").filter(Boolean);
+  if (words.length > 3) return false;
+  if (words.some((word) => TAG_STOP_WORDS.has(word) || word === "rapid")) return false;
+
+  return !/\b(?:with|featuring|built|driven|fire|tempo|verses?|choruses?|pockets|throws|responses|transitions|switches|punchlines|stays|replies|on the|pre choruses|lead vocal|ear candy|delay|turntable|vinyl|metallic|brief|claps|shouted|reversed|glitch fills|double tracked|pre strips|breakdown drops|organic percussion|tiny vinyl)\b/.test(tag)
+    && !/\b(?:on|to|into|includes?|mark|marks)$/.test(tag);
+}
+
 function extractTags(metadata, category, packTitle) {
   const firstLine = metadata.split("\n").find((line) => line.trim()) ?? "";
   const commaTags = firstLine
     .split(",")
-    .map((tag) => normalizeKey(tag))
-    .filter((tag) => Boolean(tag) && !tag.includes("bpm"));
+    .map(compactMetadataTag)
+    .filter(isUsableGeneratedTag);
 
   const extra = [category, packTitle]
     .flatMap((value) => normalizeKey(value).split(" "))
-    .filter((value) => value.length > 2);
+    .filter((value) => value.length > 2 && !TAG_STOP_WORDS.has(value));
 
-  const tags = Array.from(new Set([...commaTags, ...extra]));
+  const tags = Array.from(new Set([...commaTags, ...extra])).filter(isUsableGeneratedTag);
   const fallbackTags = [packTitle, category, "instrumental", "exclusive"]
     .map((value) => normalizeKey(value))
     .filter(Boolean);

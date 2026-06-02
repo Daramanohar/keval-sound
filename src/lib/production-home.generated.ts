@@ -2,7 +2,7 @@
 
 import type { Pack, Track } from "./mock-data";
 
-export const productionHomeGeneratedAt = "2026-06-02T10:24:54.628Z";
+export const productionHomeGeneratedAt = "2026-06-02T11:29:59.236Z";
 
 export const productionHomeTracks = [
   {
@@ -227,11 +227,9 @@ export const productionHomeTracks = [
       0.231
     ],
     "tags": [
-      "r and b",
       "contemporary r and b",
       "neo soul",
-      "commercial",
-      "and"
+      "commercial"
     ],
     "isExclusive": true,
     "isTrending": true,
@@ -546,7 +544,6 @@ export const productionHomeTracks = [
     "tags": [
       "afrobeat",
       "tropical house",
-      "pop",
       "electronic",
       "edm",
       "dance"
@@ -625,8 +622,7 @@ export const productionHomeTracks = [
       0.285
     ],
     "tags": [
-      "korean r and b",
-      "r and b",
+      "korean r",
       "cinematic urban pop",
       "culture",
       "pop"
@@ -705,7 +701,6 @@ export const productionHomeTracks = [
     ],
     "tags": [
       "dub reggae",
-      "dub",
       "reggae",
       "culture"
     ],
@@ -1972,7 +1967,7 @@ export const productionHomeTracks = [
     "tags": [
       "desi alternative rock",
       "bollywood rock",
-      "indie alt rock fusion",
+      "indie alt rock",
       "bollywood",
       "hindi",
       "rock"
@@ -2053,7 +2048,7 @@ export const productionHomeTracks = [
     "tags": [
       "desi hip hop",
       "trap",
-      "cinematic film score widescreen",
+      "cinematic film score",
       "bollywood",
       "hindi",
       "hip",
@@ -2532,22 +2527,19 @@ export const productionHomeTracks = [
       0.716
     ],
     "tags": [
-      "dream pop acoustic ballad with gentle swung fingerpicked guitar",
+      "dream pop acoustic",
       "soft piano echoes",
       "airy synth pads",
-      "and slow cinematic swells verse stays intimate and close mic",
-      "pre chorus opens with layered breathy doubles",
-      "chorus lifts with warm harmony stacks and a repeated chantable hook",
-      "add reverse pad transitions",
-      "bell like glints between phrases",
-      "and a final swell into a wide",
-      "shimmering mix",
+      "slow cinematic",
+      "bell like glints",
+      "shimmering",
       "ambient",
       "acoustic",
       "warm",
       "soft",
       "emotional",
-      "calming"
+      "calming",
+      "commercial"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -2623,7 +2615,6 @@ export const productionHomeTracks = [
       0.488
     ],
     "tags": [
-      "pop",
       "synth pop",
       "cinematic pop",
       "culture",
@@ -2783,7 +2774,6 @@ export const productionHomeTracks = [
       0.723
     ],
     "tags": [
-      "lo fi hip hop",
       "chillhop",
       "cinematic lo fi",
       "electronic"
@@ -3021,14 +3011,10 @@ export const productionHomeTracks = [
       0.607
     ],
     "tags": [
-      "crushing palm muted guitar riffs over aggressive synth bass and punchy hybrid drums verse drives lean and tense",
-      "pre chorus climbs with filtered pulses and gang shouts",
-      "chorus explodes with stacked screams and a huge octave guitar hook",
-      "bridge drops to icy pads and toms before a soaring solo finale",
+      "crushing palm muted",
       "glossy",
       "brutal",
-      "wide",
-      "and cinematic",
+      "cinematic",
       "electro",
       "soaring",
       "hard rock",
@@ -3116,7 +3102,6 @@ export const productionHomeTracks = [
       "deep",
       "electronic",
       "drum",
-      "and",
       "bass"
     ],
     "isExclusive": true,
@@ -3512,8 +3497,7 @@ export const productionHomeTracks = [
     ],
     "tags": [
       "hyperpop",
-      "electronic",
-      "pop"
+      "electronic"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -3674,7 +3658,6 @@ export const productionHomeTracks = [
       "cyberpunk",
       "occasion",
       "gaming",
-      "and",
       "streaming"
     ],
     "isExclusive": true,
@@ -3755,7 +3738,6 @@ export const productionHomeTracks = [
       "meditative",
       "occasion",
       "meditation",
-      "and",
       "yoga"
     ],
     "isExclusive": true,
@@ -3917,7 +3899,6 @@ export const productionHomeTracks = [
       "cinematic rap",
       "occasion",
       "fitness",
-      "and",
       "workout"
     ],
     "isExclusive": true,
@@ -3995,10 +3976,8 @@ export const productionHomeTracks = [
     "tags": [
       "ambient",
       "electronic",
-      "pop",
       "occasion",
       "podcast",
-      "and",
       "interview"
     ],
     "isExclusive": true,
@@ -4079,7 +4058,6 @@ export const productionHomeTracks = [
       "world",
       "occasion",
       "travel",
-      "and",
       "adventure"
     ],
     "isExclusive": true,
@@ -4160,7 +4138,6 @@ export const productionHomeTracks = [
       "orchestral",
       "occasion",
       "corporate",
-      "and",
       "presentation"
     ],
     "isExclusive": true,
@@ -4241,7 +4218,6 @@ export const productionHomeTracks = [
       "feel good soundtrack",
       "occasion",
       "lifestyle",
-      "and",
       "food"
     ],
     "isExclusive": true,
@@ -4322,7 +4298,6 @@ export const productionHomeTracks = [
       "ambient",
       "occasion",
       "weddings",
-      "and",
       "events"
     ],
     "isExclusive": true,
@@ -4403,7 +4378,6 @@ export const productionHomeTracks = [
       "ambient",
       "occasion",
       "study",
-      "and",
       "productivity"
     ],
     "isExclusive": true,
@@ -4564,7 +4538,6 @@ export const productionHomeTracks = [
       "ambient drama",
       "occasion",
       "movies",
-      "and",
       "osts"
     ],
     "isExclusive": true,
@@ -4801,7 +4774,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic house",
       "arabic house",
-      "club dance four on the floor",
+      "club dance four",
       "culture",
       "middle",
       "east"
@@ -4882,7 +4855,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic",
       "house",
-      "arabic tribal arabic house",
+      "arabic tribal arabic",
       "culture",
       "middle",
       "east"
@@ -4961,7 +4934,7 @@ export const productionHomeTracks = [
     ],
     "tags": [
       "arabic house",
-      "electronic dance music edm",
+      "electronic dance",
       "hypnotic dance club",
       "culture",
       "middle",
@@ -5200,7 +5173,7 @@ export const productionHomeTracks = [
       0.567
     ],
     "tags": [
-      "middle eastern chill fusion lounge downtempo half time groove",
+      "middle eastern chill",
       "culture",
       "middle",
       "east"
@@ -5279,7 +5252,7 @@ export const productionHomeTracks = [
     ],
     "tags": [
       "dark trap",
-      "middle eastern desert fusion",
+      "middle eastern desert",
       "cinematic gritty electronic",
       "culture",
       "middle",
@@ -5360,7 +5333,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic",
       "house",
-      "arabic middle eastern electronic",
+      "arabic middle eastern",
       "hypnotic",
       "festival ready",
       "culture",
@@ -5440,7 +5413,7 @@ export const productionHomeTracks = [
       0.345
     ],
     "tags": [
-      "middle eastern chill fusion",
+      "middle eastern chill",
       "lounge",
       "downtempo",
       "culture",
@@ -5600,7 +5573,7 @@ export const productionHomeTracks = [
       0.534
     ],
     "tags": [
-      "middle eastern chill fusion lounge downtempo half time groove",
+      "middle eastern chill",
       "culture",
       "middle",
       "east"
@@ -5678,7 +5651,7 @@ export const productionHomeTracks = [
       0.682
     ],
     "tags": [
-      "middle eastern chill fusion",
+      "middle eastern chill",
       "lounge",
       "downtempo",
       "culture",
@@ -5920,7 +5893,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic",
       "house",
-      "arabic middle eastern electronic",
+      "arabic middle eastern",
       "hypnotic",
       "festival ready",
       "culture",
@@ -6002,7 +5975,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic house",
       "arabic house",
-      "vocal chant",
+      "chant",
       "hypnotic",
       "festival ready",
       "culture",
@@ -6241,7 +6214,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic house",
       "arabic house",
-      "vocal chant",
+      "chant",
       "hypnotic",
       "festival ready",
       "culture",
@@ -6323,7 +6296,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic house",
       "arabic house",
-      "vocal chant",
+      "chant",
       "hypnotic",
       "festival ready",
       "culture",
@@ -6405,7 +6378,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic house",
       "arabic house",
-      "vocal chant",
+      "chant",
       "hypnotic",
       "festival ready",
       "culture",
@@ -6487,7 +6460,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic house",
       "arabic house",
-      "vocal chant",
+      "chant",
       "hypnotic",
       "festival ready",
       "culture",
@@ -6569,7 +6542,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic house",
       "arabic house",
-      "vocal chant",
+      "chant",
       "hypnotic",
       "festival ready",
       "culture",
@@ -6651,7 +6624,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic house",
       "arabic house",
-      "vocal chant",
+      "chant",
       "hypnotic",
       "festival ready",
       "culture",
@@ -6733,7 +6706,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic house",
       "arabic house",
-      "vocal chant",
+      "chant",
       "hypnotic",
       "festival ready",
       "culture",
@@ -7914,10 +7887,10 @@ export const productionHomePacks = [
       "hip",
       "hop",
       "rap",
-      "melodic hip hop and rap with swung drum grooves",
-      "smooth melodic hip hop and rap with swung drums",
+      "hip hop rap",
       "warm sub pulses",
-      "and soulful piano driven progressions verse rides laid back and intimate"
+      "soulful piano progressions",
+      "reverse"
     ],
     "featured": false
   },
@@ -7999,11 +7972,9 @@ export const productionHomePacks = [
           0.231
         ],
         "tags": [
-          "r and b",
           "contemporary r and b",
           "neo soul",
-          "commercial",
-          "and"
+          "commercial"
         ],
         "isExclusive": true,
         "isTrending": true,
@@ -8015,14 +7986,14 @@ export const productionHomePacks = [
       }
     ],
     "tags": [
-      "r and b",
       "contemporary r and b",
       "neo soul",
       "commercial",
-      "and",
       "soulful",
       "smooth",
-      "sensual"
+      "sensual",
+      "contemporary soul",
+      "slow jam"
     ],
     "featured": false
   },
@@ -8338,7 +8309,7 @@ export const productionHomePacks = [
       "country",
       "outlaw country",
       "country rock",
-      "raw"
+      "electric"
     ],
     "featured": false
   },
@@ -8422,7 +8393,6 @@ export const productionHomePacks = [
         "tags": [
           "afrobeat",
           "tropical house",
-          "pop",
           "electronic",
           "edm",
           "dance"
@@ -8439,12 +8409,12 @@ export const productionHomePacks = [
     "tags": [
       "afrobeat",
       "tropical house",
-      "pop",
       "electronic",
       "edm",
       "dance",
       "trap",
-      "cinematic"
+      "cinematic",
+      "orchestral"
     ],
     "featured": true
   },
@@ -8527,8 +8497,7 @@ export const productionHomePacks = [
           0.285
         ],
         "tags": [
-          "korean r and b",
-          "r and b",
+          "korean r",
           "cinematic urban pop",
           "culture",
           "pop"
@@ -8543,14 +8512,14 @@ export const productionHomePacks = [
       }
     ],
     "tags": [
-      "korean r and b",
-      "r and b",
+      "korean r",
       "cinematic urban pop",
       "culture",
       "pop",
       "soul",
       "korean hip hop",
-      "trap"
+      "trap",
+      "aggressive hip hop"
     ],
     "featured": false
   },
@@ -8633,7 +8602,6 @@ export const productionHomePacks = [
         ],
         "tags": [
           "dub reggae",
-          "dub",
           "reggae",
           "culture"
         ],
@@ -8648,13 +8616,13 @@ export const productionHomePacks = [
     ],
     "tags": [
       "dub reggae",
-      "dub",
       "reggae",
       "culture",
       "acoustic",
       "tropical",
       "jazz",
-      "lounge"
+      "lounge",
+      "mellow tropical"
     ],
     "featured": false
   },
@@ -9387,7 +9355,6 @@ export const productionHomePacks = [
     "tags": [
       "electronic",
       "techno",
-      "dub",
       "dub techno",
       "hypnotic",
       "glitch",
@@ -10314,7 +10281,7 @@ export const productionHomePacks = [
         "tags": [
           "desi alternative rock",
           "bollywood rock",
-          "indie alt rock fusion",
+          "indie alt rock",
           "bollywood",
           "hindi",
           "rock"
@@ -10331,7 +10298,7 @@ export const productionHomePacks = [
     "tags": [
       "desi alternative rock",
       "bollywood rock",
-      "indie alt rock fusion",
+      "indie alt rock",
       "bollywood",
       "hindi",
       "rock",
@@ -10421,7 +10388,7 @@ export const productionHomePacks = [
         "tags": [
           "desi hip hop",
           "trap",
-          "cinematic film score widescreen",
+          "cinematic film score",
           "bollywood",
           "hindi",
           "hip",
@@ -10439,12 +10406,12 @@ export const productionHomePacks = [
     "tags": [
       "desi hip hop",
       "trap",
-      "cinematic film score widescreen",
+      "cinematic film score",
       "bollywood",
       "hindi",
       "hip",
       "hop",
-      "cinematic indian hindi punjabi rap"
+      "cinematic indian hindi"
     ],
     "featured": false
   },
@@ -11056,22 +11023,19 @@ export const productionHomePacks = [
           0.716
         ],
         "tags": [
-          "dream pop acoustic ballad with gentle swung fingerpicked guitar",
+          "dream pop acoustic",
           "soft piano echoes",
           "airy synth pads",
-          "and slow cinematic swells verse stays intimate and close mic",
-          "pre chorus opens with layered breathy doubles",
-          "chorus lifts with warm harmony stacks and a repeated chantable hook",
-          "add reverse pad transitions",
-          "bell like glints between phrases",
-          "and a final swell into a wide",
-          "shimmering mix",
+          "slow cinematic",
+          "bell like glints",
+          "shimmering",
           "ambient",
           "acoustic",
           "warm",
           "soft",
           "emotional",
-          "calming"
+          "calming",
+          "commercial"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -11083,14 +11047,14 @@ export const productionHomePacks = [
       }
     ],
     "tags": [
-      "dream pop acoustic ballad with gentle swung fingerpicked guitar",
+      "dream pop acoustic",
       "soft piano echoes",
       "airy synth pads",
-      "and slow cinematic swells verse stays intimate and close mic",
-      "pre chorus opens with layered breathy doubles",
-      "chorus lifts with warm harmony stacks and a repeated chantable hook",
-      "add reverse pad transitions",
-      "bell like glints between phrases"
+      "slow cinematic",
+      "bell like glints",
+      "shimmering",
+      "ambient",
+      "acoustic"
     ],
     "featured": false
   },
@@ -11173,7 +11137,6 @@ export const productionHomePacks = [
           0.488
         ],
         "tags": [
-          "pop",
           "synth pop",
           "cinematic pop",
           "culture",
@@ -11189,14 +11152,14 @@ export const productionHomePacks = [
       }
     ],
     "tags": [
-      "pop",
       "synth pop",
       "cinematic pop",
       "culture",
       "polish",
       "polish hip hop",
       "trap",
-      "dark urban rap"
+      "dark urban rap",
+      "dark atmospheric rap"
     ],
     "featured": false
   },
@@ -11385,7 +11348,6 @@ export const productionHomePacks = [
           0.723
         ],
         "tags": [
-          "lo fi hip hop",
           "chillhop",
           "cinematic lo fi",
           "electronic"
@@ -11400,14 +11362,14 @@ export const productionHomePacks = [
       }
     ],
     "tags": [
-      "lo fi hip hop",
       "chillhop",
       "cinematic lo fi",
       "electronic",
       "chill hop",
       "hip hop",
       "lo fi",
-      "mellow"
+      "mellow",
+      "chill mellow"
     ],
     "featured": false
   },
@@ -11701,14 +11663,10 @@ export const productionHomePacks = [
           0.607
         ],
         "tags": [
-          "crushing palm muted guitar riffs over aggressive synth bass and punchy hybrid drums verse drives lean and tense",
-          "pre chorus climbs with filtered pulses and gang shouts",
-          "chorus explodes with stacked screams and a huge octave guitar hook",
-          "bridge drops to icy pads and toms before a soaring solo finale",
+          "crushing palm muted",
           "glossy",
           "brutal",
-          "wide",
-          "and cinematic",
+          "cinematic",
           "electro",
           "soaring",
           "hard rock",
@@ -11728,14 +11686,14 @@ export const productionHomePacks = [
       }
     ],
     "tags": [
-      "crushing palm muted guitar riffs over aggressive synth bass and punchy hybrid drums verse drives lean and tense",
-      "pre chorus climbs with filtered pulses and gang shouts",
-      "chorus explodes with stacked screams and a huge octave guitar hook",
-      "bridge drops to icy pads and toms before a soaring solo finale",
+      "crushing palm muted",
       "glossy",
       "brutal",
-      "wide",
-      "and cinematic"
+      "cinematic",
+      "electro",
+      "soaring",
+      "hard rock",
+      "electric"
     ],
     "featured": false
   },
@@ -11822,7 +11780,6 @@ export const productionHomePacks = [
           "deep",
           "electronic",
           "drum",
-          "and",
           "bass"
         ],
         "isExclusive": true,
@@ -11840,9 +11797,9 @@ export const productionHomePacks = [
       "deep",
       "electronic",
       "drum",
-      "and",
       "bass",
-      "drum and bass"
+      "cinematic orchestral",
+      "bass heavy electronic"
     ],
     "featured": false
   },
@@ -12159,7 +12116,7 @@ export const productionHomePacks = [
       "afro",
       "house",
       "euphoric club dance",
-      "electronic dance music edm"
+      "electronic dance"
     ],
     "featured": false
   },
@@ -12262,9 +12219,9 @@ export const productionHomePacks = [
       "cinematic dark orchestral",
       "electronic",
       "phonk",
-      "phonk with a hard trap pulse and swung head nod cadence verses ride stripped drums",
       "distorted 808 slides",
-      "and hypnotic cowbell loops"
+      "hypnotic cowbell loops",
+      "pre builds"
     ],
     "featured": false
   },
@@ -12348,8 +12305,7 @@ export const productionHomePacks = [
         ],
         "tags": [
           "hyperpop",
-          "electronic",
-          "pop"
+          "electronic"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -12363,12 +12319,12 @@ export const productionHomePacks = [
     "tags": [
       "hyperpop",
       "electronic",
-      "pop",
       "experimental",
       "glitch pop",
       "anime",
       "glitchy electronic",
-      "glitch electronic"
+      "glitch electronic",
+      "japanese pop"
     ],
     "featured": false
   },
@@ -12473,8 +12429,8 @@ export const productionHomePacks = [
       "minimal",
       "tech",
       "house",
-      "vocal",
-      "smooth"
+      "smooth",
+      "bassline"
     ],
     "featured": false
   },
@@ -12562,7 +12518,6 @@ export const productionHomePacks = [
           "cyberpunk",
           "occasion",
           "gaming",
-          "and",
           "streaming"
         ],
         "isExclusive": true,
@@ -12581,8 +12536,8 @@ export const productionHomePacks = [
       "cyberpunk",
       "occasion",
       "gaming",
-      "and",
-      "streaming"
+      "streaming",
+      "orchestral"
     ],
     "featured": false
   },
@@ -12669,7 +12624,6 @@ export const productionHomePacks = [
           "meditative",
           "occasion",
           "meditation",
-          "and",
           "yoga"
         ],
         "isExclusive": true,
@@ -12687,9 +12641,9 @@ export const productionHomePacks = [
       "meditative",
       "occasion",
       "meditation",
-      "and",
       "yoga",
-      "world tibetan inspired"
+      "world tibetan inspired",
+      "new age"
     ],
     "featured": false
   },
@@ -12883,7 +12837,6 @@ export const productionHomePacks = [
           "cinematic rap",
           "occasion",
           "fitness",
-          "and",
           "workout"
         ],
         "isExclusive": true,
@@ -12901,9 +12854,9 @@ export const productionHomePacks = [
       "cinematic rap",
       "occasion",
       "fitness",
-      "and",
       "workout",
-      "orchestral"
+      "orchestral",
+      "electronic"
     ],
     "featured": false
   },
@@ -12987,10 +12940,8 @@ export const productionHomePacks = [
         "tags": [
           "ambient",
           "electronic",
-          "pop",
           "occasion",
           "podcast",
-          "and",
           "interview"
         ],
         "isExclusive": true,
@@ -13005,12 +12956,12 @@ export const productionHomePacks = [
     "tags": [
       "ambient",
       "electronic",
-      "pop",
       "occasion",
       "podcast",
-      "and",
       "interview",
-      "downtempo"
+      "downtempo",
+      "minimal",
+      "contemporary"
     ],
     "featured": false
   },
@@ -13097,7 +13048,6 @@ export const productionHomePacks = [
           "world",
           "occasion",
           "travel",
-          "and",
           "adventure"
         ],
         "isExclusive": true,
@@ -13115,9 +13065,9 @@ export const productionHomePacks = [
       "world",
       "occasion",
       "travel",
-      "and",
       "adventure",
-      "orchestral"
+      "orchestral",
+      "acoustic"
     ],
     "featured": false
   },
@@ -13204,7 +13154,6 @@ export const productionHomePacks = [
           "orchestral",
           "occasion",
           "corporate",
-          "and",
           "presentation"
         ],
         "isExclusive": true,
@@ -13222,9 +13171,9 @@ export const productionHomePacks = [
       "orchestral",
       "occasion",
       "corporate",
-      "and",
       "presentation",
-      "ambient"
+      "ambient",
+      "minimal"
     ],
     "featured": false
   },
@@ -13311,7 +13260,6 @@ export const productionHomePacks = [
           "feel good soundtrack",
           "occasion",
           "lifestyle",
-          "and",
           "food"
         ],
         "isExclusive": true,
@@ -13329,9 +13277,9 @@ export const productionHomePacks = [
       "feel good soundtrack",
       "occasion",
       "lifestyle",
-      "and",
       "food",
-      "acoustic pop jazz"
+      "acoustic pop jazz",
+      "jazz pop"
     ],
     "featured": false
   },
@@ -13418,7 +13366,6 @@ export const productionHomePacks = [
           "ambient",
           "occasion",
           "weddings",
-          "and",
           "events"
         ],
         "isExclusive": true,
@@ -13436,9 +13383,9 @@ export const productionHomePacks = [
       "ambient",
       "occasion",
       "weddings",
-      "and",
       "events",
-      "cinematic orchestral pop"
+      "cinematic orchestral pop",
+      "romantic orchestral"
     ],
     "featured": false
   },
@@ -13525,7 +13472,6 @@ export const productionHomePacks = [
           "ambient",
           "occasion",
           "study",
-          "and",
           "productivity"
         ],
         "isExclusive": true,
@@ -13543,9 +13489,9 @@ export const productionHomePacks = [
       "ambient",
       "occasion",
       "study",
-      "and",
       "productivity",
-      "lo fi"
+      "lo fi",
+      "chillhop"
     ],
     "featured": false
   },
@@ -13738,7 +13684,6 @@ export const productionHomePacks = [
           "ambient drama",
           "occasion",
           "movies",
-          "and",
           "osts"
         ],
         "isExclusive": true,
@@ -13756,9 +13701,9 @@ export const productionHomePacks = [
       "ambient drama",
       "occasion",
       "movies",
-      "and",
       "osts",
-      "orchestral soundtrack"
+      "orchestral soundtrack",
+      "cinematic"
     ],
     "featured": false
   },
@@ -13862,9 +13807,9 @@ export const productionHomePacks = [
       "folk pop",
       "occasion",
       "love",
-      "lo fi r and b",
+      "lo fi r",
       "lo fi",
-      "r and b warm"
+      "nostalgic"
     ],
     "featured": false
   },
@@ -14053,7 +13998,7 @@ export const productionHomePacks = [
         "tags": [
           "electronic house",
           "arabic house",
-          "club dance four on the floor",
+          "club dance four",
           "culture",
           "middle",
           "east"
@@ -14070,7 +14015,7 @@ export const productionHomePacks = [
     "tags": [
       "electronic house",
       "arabic house",
-      "club dance four on the floor",
+      "club dance four",
       "culture",
       "middle",
       "east",

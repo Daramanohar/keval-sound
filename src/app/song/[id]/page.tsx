@@ -21,6 +21,7 @@ import { useAuth } from "@/lib/auth-context";
 import { usePlayerControls } from "@/lib/player-context";
 import { useStore } from "@/lib/store-context";
 import { useToast } from "@/lib/toast-context";
+import { getTrackDisplayTags } from "@/components/TrackTagLine";
 
 const SONG_PRICE = 99;
 const COMMENTS_KEY_PREFIX = "keval:comments:";
@@ -66,6 +67,7 @@ export default function SongPage() {
   const isCurrent = currentItem?.id === track.id;
   const coverUrl = pack?.coverUrl ?? track.coverUrl;
   const isImageCover = coverUrl.startsWith("/");
+  const displayTags = getTrackDisplayTags(track, 8);
 
   // Lyrics
   const [lyrics, setLyrics] = useState<string | null>(null);
@@ -283,9 +285,9 @@ export default function SongPage() {
       </motion.div>
 
       {/* Tags strip */}
-      {track.tags.length > 0 ? (
+      {displayTags.length > 0 ? (
         <div className="mb-8 flex flex-wrap gap-1.5">
-          {track.tags.map((tag) => (
+          {displayTags.map((tag) => (
             <span
               key={tag}
               className="rounded-md border border-white/[0.06] bg-white/[0.03] px-2 py-1 text-[11px] text-muted/80"

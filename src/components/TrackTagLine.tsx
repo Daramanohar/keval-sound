@@ -24,6 +24,69 @@ function normalizeDisplayTag(tag: string) {
     .replace(/\bedm\b/g, "EDM");
 }
 
+function compactDisplayTag(tag: string) {
+  const preferred: Array<[RegExp, string]> = [
+    [/contemporary r&b/, "contemporary r&b"],
+    [/neo soul/, "neo soul"],
+    [/lo-fi hip-hop/, "lo-fi hip-hop"],
+    [/trap anthem/, "trap anthem"],
+    [/trap swing/, "trap swing"],
+    [/rap anthem/, "rap anthem"],
+    [/lyrical rap/, "lyrical rap"],
+    [/west coast bounce/, "west coast bounce"],
+    [/west coast swing/, "west coast swing"],
+    [/conscious rap/, "conscious rap"],
+    [/modern hip-hop/, "modern hip-hop"],
+    [/(hip-hop.*rap|rap.*hip-hop)/, "hip-hop / rap"],
+    [/syncopated hi hats?/, "syncopated hi hats"],
+    [/swung hi hats?/, "swung hi hats"],
+    [/jazzy chord stabs?/, "jazzy chord stabs"],
+    [/swung drums?/, "swung drums"],
+    [/upright bass warmth/, "upright bass warmth"],
+    [/warm bass(?:line|lines)?(?: glide)?/, "warm bass"],
+    [/(?:chopped|dusty|soulful) soul samples?/, "soul samples"],
+    [/soulful chopped samples?/, "soul samples"],
+    [/jazz piano stabs?/, "jazz piano"],
+    [/sliding sub hits?|sub drops?/, "sub bass"],
+    [/(?:punchy|cinematic|swung) snares?|crisp clap snaps?|dry snare crack/, "punchy drums"],
+    [/pop rock anthem/, "pop rock"],
+    [/crunchy guitar riff/, "guitar riff"],
+    [/electronic dance/, "electronic dance"],
+    [/smooth jazz/, "smooth jazz"],
+    [/swung jazz/, "swung jazz"],
+    [/(?:retro|stomping|nocturnal) groove/, "groove"],
+    [/spoken word/, "spoken word"],
+    [/dusty jazz touches?/, "dusty jazz"],
+    [/dynamic flow switches?/, "dynamic flow"],
+    [/tense .*bounce/, "tense bounce"],
+  ];
+
+  for (const [pattern, replacement] of preferred) {
+    if (pattern.test(tag)) return replacement;
+  }
+
+  const cleanedTag = tag
+    .replace(/^(?:and|then|final|but)\s+/, "")
+    .replace(/^a\s+/, "")
+    .replace(/\b(?:driven|pockets|throws|responses|transitions|turns|lines|flourishes|crackle|swells|ticks)\b/g, "")
+    .replace(/\b(?:close mic|selective|occasional|doubled|bright yet|wide|intimate|radio ready)\b/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  const phrase = cleanedTag
+    .split(/\b(?:with|over|featuring|built around|built on|driven by|verse|verses|pre chorus|chorus|bridge|add|then|but|and)\b/)[0]
+    .replace(/\b(?:mix|lead|vocal|ad libs?|drop|half|thin)\b/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  const words = phrase.split(/\s+/).filter(Boolean);
+  if (!words.length) return "";
+  if (words.some((word) => ["and", "but", "then", "final", "rapid"].includes(word))) return "";
+  if (words.length === 1 && words[0].length < 4) return "";
+
+  return words.slice(0, 3).join(" ");
+}
+
 function isTempoTag(tag: string) {
   return /\bbpm\b/.test(tag);
 }
@@ -61,6 +124,9 @@ function canonicalTag(tag: string) {
 
 function isLowSignalTag(tag: string) {
   if (LOW_SIGNAL_TAGS.has(tag)) return true;
+  if (/^(?:and|then|final|but)\b/.test(tag)) return true;
+  if (/\b(?:with|featuring|built|driven|rapid|fire|tempo|verses?|choruses?|pockets|throws|responses|transitions|switches|punchlines|stays|replies|on the|pre choruses|lead vocal|ear candy|delay|turntable|vinyl|metallic|brief|claps|shouted|reversed|glitch fills|double tracked|pre strips|breakdown drops|organic percussion|tiny vinyl)\b/.test(tag)) return true;
+  if (/\b(?:on|to|into|includes?|mark|marks)$/.test(tag)) return true;
   return tag.length < 4 && !ALLOWED_SHORT_TAGS.has(tag);
 }
 
@@ -84,6 +150,7 @@ export function getTrackDisplayTags(track: TrackTagSource, limit = 2) {
     track.mood,
   ]
     .map(normalizeDisplayTag)
+    .map(compactDisplayTag)
     .filter((tag) => Boolean(tag) && !isTempoTag(tag) && !isLowSignalTag(tag));
 
   return removeWeakerDuplicates(Array.from(new Set(candidates))).slice(0, Math.max(limit, 0));

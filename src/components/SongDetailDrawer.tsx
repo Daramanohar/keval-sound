@@ -19,6 +19,7 @@ import { useStore } from "@/lib/store-context";
 import { useToast } from "@/lib/toast-context";
 import { cn, formatDuration } from "@/lib/utils";
 import type { Pack, Track } from "@/lib/mock-data";
+import { getTrackDisplayTags } from "./TrackTagLine";
 
 const SONG_PRICE = 99;
 
@@ -69,6 +70,7 @@ function DrawerContent({
   const trackOwned = isOwned(track.id, "track");
   const trackInCart = isInCart(track.id, "track");
   const isCurrent = currentItem?.id === track.id;
+  const displayTags = getTrackDisplayTags(track, 8);
 
   // Lyrics fetched lazily. Initial state covers the "no URL" case so we
   // never need a synchronous setState in the effect — only the async
@@ -258,11 +260,11 @@ function DrawerContent({
           </div>
 
           {/* Tags */}
-          {track.tags.length > 0 ? (
+          {displayTags.length > 0 ? (
             <div className="mt-6">
               <p className="text-[10px] font-medium uppercase tracking-wider text-muted/40">Tags</p>
               <div className="mt-2 flex flex-wrap gap-1.5">
-                {track.tags.map((tag) => (
+                {displayTags.map((tag) => (
                   <span
                     key={tag}
                     className="rounded-md border border-white/[0.06] bg-white/[0.03] px-2 py-1 text-[11px] text-muted/80"
