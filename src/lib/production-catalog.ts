@@ -23,7 +23,7 @@ export interface ProductionTrack extends Track {
   isInstrumental: boolean;
   hasMp3: boolean;
   hasWav: boolean;
-  mp3Url: string;
+  mp3Path: string;
   wavPath: string;
   sourcePath: string;
   streamReady: boolean;
@@ -120,7 +120,7 @@ function toProductionTrack(record: ProductionSongRecord, index: number): Product
     id: record.id,
     title: record.title,
     artist: "Keval Sound",
-    audioUrl: streamReady ? record.mp3Url : undefined,
+    audioUrl: streamReady ? createMp3StreamUrl(record.id) : undefined,
     lyricsUrl: STREAMS_READY && record.hasLyrics ? record.lyricsUrl : undefined,
     genre: record.packTitle,
     mood,
@@ -146,11 +146,15 @@ function toProductionTrack(record: ProductionSongRecord, index: number): Product
     isInstrumental: record.isInstrumental,
     hasMp3: record.hasMp3,
     hasWav: record.hasWav,
-    mp3Url: record.mp3Url,
+    mp3Path: record.mp3Path,
     wavPath: record.wavPath,
     sourcePath: record.sourcePath,
     streamReady,
   };
+}
+
+function createMp3StreamUrl(trackId: string): string {
+  return `/api/media/stream/mp3/${encodeURIComponent(trackId)}`;
 }
 
 const recordsByPackId = productionSongRecords.reduce<Record<string, ProductionSongRecord[]>>(

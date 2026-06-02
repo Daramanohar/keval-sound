@@ -10,7 +10,6 @@ const WORKER_MANIFEST = path.join(
   "src",
   "catalog.manifest.js"
 );
-const PUBLIC_MP3_MARKER = "/public/mp3/";
 
 async function readCatalogRecords() {
   const source = await fs.readFile(GENERATED_CATALOG, "utf8");
@@ -28,18 +27,9 @@ function toMediaRecord(record) {
     packId: record.packId,
     packTitle: record.packTitle,
     category: record.category,
-    mp3Path: getMp3ObjectPath(record.mp3Url),
+    mp3Path: record.mp3Path,
     wavPath: record.wavPath,
   };
-}
-
-function getMp3ObjectPath(mp3Url) {
-  const markerIndex = mp3Url.indexOf(PUBLIC_MP3_MARKER);
-  if (markerIndex === -1) {
-    throw new Error(`Cannot derive public MP3 object path from URL: ${mp3Url}`);
-  }
-
-  return `public/mp3/${mp3Url.slice(markerIndex + PUBLIC_MP3_MARKER.length)}`;
 }
 
 async function main() {
@@ -50,8 +40,13 @@ async function main() {
   let wavCount = 0;
 
   for (const record of records) {
-    if (!record.hasMp3 || !record.mp3Url) {
+    if (!record.hasMp3 || !record.mp3Path) {
       skipped.push({ id: record.id, title: record.title, reason: "missing_mp3" });
+      continue;
+    }
+
+    if (!record.mp3Path.startsWith("public/mp3/")) {
+      skipped.push({ id: record.id, title: record.title, reason: "unexpected_mp3_path", mp3Path: record.mp3Path });
       continue;
     }
 

@@ -98,7 +98,8 @@ Next.js app on Vercel: app.kevalsound.com
 
 Private WAV delivery:
 
-Client -> media.kevalsound.com Worker -> verify signed token -> R2 binding -> stream/download MP3/WAV
+Client -> app API route -> short-lived MP3 stream token -> media.kevalsound.com Worker -> R2 binding
+Client -> future purchase/subscription API -> entitlement token -> media.kevalsound.com Worker -> R2 binding
 ```
 
 ---
@@ -214,7 +215,7 @@ SOUND PACKS(Main Version)/
 
 Important rules:
 
-- MP3 files are used for public preview streaming.
+- MP3 files are used for preview streaming, but direct CDN MP3 URLs are not embedded in the app catalog.
 - WAV files are staged under private R2 paths for paid download/paid Player streaming.
 - Lyrics files are optional. If a song folder has no lyrics file, the catalog treats it as instrumental.
 - `MDATA.txt` is not shipped to users directly. Its contents are converted into searchable metadata.
@@ -270,9 +271,9 @@ keval-sound-prod/
     └── wav/
 ```
 
-Public assets:
+R2 assets:
 
-- `public/mp3`: full MP3 preview streams.
+- `public/mp3`: MP3 source objects. These are served through the media Worker, not exposed as stable CDN links.
 - `public/lyrics`: public lyrics text files.
 - `public/art`: album/pack artwork.
 
@@ -297,6 +298,7 @@ Private media Worker:
 - Token secret: `MEDIA_GATE_SIGNING_SECRET`
 - Manifest source: `src/lib/production-catalog.generated.ts`
 - Generated manifest: `workers/keval-media-gate/src/catalog.manifest.js`
+- App preview route: `GET /api/media/stream/mp3/:trackId`
 
 Generate the Worker manifest:
 
@@ -378,8 +380,8 @@ Planned API/Worker surface:
 
 | Endpoint | Responsibility |
 |---|---|
-| `GET /stream?trackId=...&format=mp3` | Public MP3 preview or free Player stream |
-| `POST /api/media-token` | Planned backend token issuer after DB entitlement check |
+| `GET /api/media/stream/mp3/:trackId` | App-side MP3 preview token issuer and redirect |
+| `POST /api/media-token` | Planned paid token issuer after DB entitlement check |
 | `GET /v1/mp3/stream/:trackId` | Worker MP3 stream endpoint requiring a signed token |
 | `GET /v1/mp3/download/:trackId` | Worker MP3 download endpoint requiring a signed token |
 | `GET /v1/wav/stream/:trackId` | Worker WAV stream endpoint requiring a signed token |
@@ -387,11 +389,14 @@ Planned API/Worker surface:
 | `POST /webhooks/payment` | Payment gateway webhook to create purchase/subscription records |
 | `GET /catalog/search?q=...` | Server-side catalog search when the catalog moves to a database |
 
-Recommended delivery pattern for WAV:
+Recommended delivery pattern:
 
 ```text
-Client -> backend API -> verify JWT/session -> check purchases/subscriptions -> issue short-lived signed media token
-Client -> media Worker -> verify media token -> read MP3/WAV from R2 binding -> stream/download
+MP3 preview:
+Client audio src -> /api/media/stream/mp3/:trackId -> 307 redirect with short-lived token -> media Worker -> R2
+
+Paid MP3/WAV download and paid WAV Player stream:
+Client -> backend API -> verify JWT/session -> check purchases/subscriptions -> issue short-lived signed media token -> media Worker -> R2
 ```
 
 The public CDN paid media paths stay blocked. The Worker reads from the R2 bucket binding directly and forwards byte range responses so audio seeking continues to work.

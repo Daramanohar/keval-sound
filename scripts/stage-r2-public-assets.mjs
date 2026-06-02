@@ -5,6 +5,7 @@ const PROJECT_ROOT = process.cwd();
 const GENERATED_CATALOG = path.join(PROJECT_ROOT, "src", "lib", "production-catalog.generated.ts");
 const STAGING_ROOT = path.join(PROJECT_ROOT, "output", "r2-public");
 const PUBLIC_MARKER = "/public/";
+const PUBLIC_OBJECT_PREFIX = "public/";
 
 function assertInside(parent, child) {
   const relative = path.relative(parent, child);
@@ -21,6 +22,15 @@ function normalizeObjectPath(url, section) {
   }
 
   return url.slice(markerIndex + PUBLIC_MARKER.length).replace(/\//g, path.sep);
+}
+
+function normalizePublicObjectPath(objectPath, section) {
+  const expectedPrefix = `${PUBLIC_OBJECT_PREFIX}${section}/`;
+  if (!objectPath.startsWith(expectedPrefix)) {
+    throw new Error(`Cannot derive public/${section} object path from path: ${objectPath}`);
+  }
+
+  return objectPath.slice(PUBLIC_OBJECT_PREFIX.length).replace(/\//g, path.sep);
 }
 
 async function readCatalogRecords() {
@@ -68,7 +78,7 @@ async function main() {
     const mp3 = await firstMatchingFile(sourceDir, (name) => name.toLowerCase().endsWith(".mp3"));
 
     if (record.hasMp3 && mp3) {
-      const target = path.join(stagingRoot, normalizeObjectPath(record.mp3Url, "mp3"));
+      const target = path.join(stagingRoot, normalizePublicObjectPath(record.mp3Path, "mp3"));
       assertInside(stagingRoot, target);
       await linkOrCopy(mp3, target);
       mp3Count += 1;

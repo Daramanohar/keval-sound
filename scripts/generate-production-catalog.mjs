@@ -5,7 +5,7 @@ const PROJECT_ROOT = process.cwd();
 const SOURCE_ROOT = path.join(PROJECT_ROOT, "keval-packs", "SOUND PACKS(Main Version)");
 const OUTPUT_FILE = path.join(PROJECT_ROOT, "src", "lib", "production-catalog.generated.ts");
 const HOME_OUTPUT_FILE = path.join(PROJECT_ROOT, "src", "lib", "production-home.generated.ts");
-const CDN_BASE = "https://cdn.kevalsound.com";
+const PUBLIC_CDN_BASE = "https://cdn.kevalsound.com";
 const KEY_ROTATION = ["Am", "C", "Em", "G", "Dm", "F", "Bbm", "D"];
 
 const PACKS = [
@@ -246,7 +246,7 @@ function toHomeTrack(record, index, flags = {}) {
     id: record.id,
     title: record.title,
     artist: "Keval Sound",
-    audioUrl: record.hasMp3 ? record.mp3Url : undefined,
+    audioUrl: record.hasMp3 ? createMp3StreamUrl(record.id) : undefined,
     lyricsUrl: record.hasLyrics ? record.lyricsUrl : undefined,
     genre: record.packTitle,
     mood: inferHomeMood(record),
@@ -265,6 +265,10 @@ function toHomeTrack(record, index, flags = {}) {
     stems: record.hasWav,
     plays: 1200 + index * 31,
   };
+}
+
+function createMp3StreamUrl(trackId) {
+  return `/api/media/stream/mp3/${encodeURIComponent(trackId)}`;
 }
 
 function buildHomeCatalog(records) {
@@ -374,9 +378,10 @@ async function main() {
     const categorySlug = slugify(category);
     const packSlug = slugify(packMeta.title);
     const cloudBasePath = `${categorySlug}/${packSlug}/${songSlug}`;
+    const recordId = `${packMeta.id}-${songSlug}`;
 
     records.push({
-      id: `${packMeta.id}-${songSlug}`,
+      id: recordId,
       title: songTitle,
       packId: packMeta.id,
       packTitle: packMeta.title,
@@ -387,8 +392,8 @@ async function main() {
       hasWav: Boolean(wav),
       hasLyrics: Boolean(lyrics),
       isInstrumental: !lyrics,
-      mp3Url: `${CDN_BASE}/public/mp3/${cloudBasePath}.mp3`,
-      lyricsUrl: lyrics ? `${CDN_BASE}/public/lyrics/${cloudBasePath}.txt` : undefined,
+      mp3Path: `public/mp3/${cloudBasePath}.mp3`,
+      lyricsUrl: lyrics ? `${PUBLIC_CDN_BASE}/public/lyrics/${cloudBasePath}.txt` : undefined,
       wavPath: `private/wav/${cloudBasePath}.wav`,
       sourcePath: path.relative(PROJECT_ROOT, dir).replaceAll(path.sep, "/"),
       metadataText,
@@ -411,7 +416,7 @@ async function main() {
     `  hasWav: boolean;\n` +
     `  hasLyrics: boolean;\n` +
     `  isInstrumental: boolean;\n` +
-    `  mp3Url: string;\n` +
+    `  mp3Path: string;\n` +
     `  lyricsUrl?: string;\n` +
     `  wavPath: string;\n` +
     `  sourcePath: string;\n` +
