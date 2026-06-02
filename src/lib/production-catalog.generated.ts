@@ -20,7 +20,7 @@ export interface ProductionSongRecord {
   tags: string[];
 }
 
-export const productionCatalogGeneratedAt = "2026-06-02T11:29:59.212Z";
+export const productionCatalogGeneratedAt = "2026-06-02T13:14:04.832Z";
 
 export const productionSongRecords = [
   {
@@ -14344,8 +14344,8 @@ export const productionSongRecords = [
     ]
   },
   {
-    "id": "pack-2-backseat-atlas-2",
-    "title": "Backseat Atlas (2)",
+    "id": "pack-2-backseat-atlas",
+    "title": "Backseat Atlas",
     "packId": "pack-2",
     "packTitle": "Hip-Hop / Rap",
     "category": "Commercial",
@@ -14355,9 +14355,9 @@ export const productionSongRecords = [
     "hasWav": true,
     "hasLyrics": false,
     "isInstrumental": true,
-    "mp3Path": "public/mp3/commercial/hip-hop-rap/backseat-atlas-2.mp3",
-    "wavPath": "private/wav/commercial/hip-hop-rap/backseat-atlas-2.wav",
-    "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Backseat Atlas (2)",
+    "mp3Path": "public/mp3/commercial/hip-hop-rap/backseat-atlas.mp3",
+    "wavPath": "private/wav/commercial/hip-hop-rap/backseat-atlas.wav",
+    "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Backseat Atlas",
     "metadataText": "",
     "tags": [
       "commercial",
@@ -14495,29 +14495,6 @@ export const productionSongRecords = [
     "metadataText": "Hip-hop and rap anthem with hard-hitting mid-tempo trap bounce\n\n deep sub pulses, punchy drums, and tense atmospheric synth lines; verse rides sparse and controlled, pre-chorus opens with stacked chants and rising tension, chorus hits with gang doubles and a short chantable hook, Vocal delivery stays close-mic and confident in verses, wider doubled on the hook, with ad-lib throws at line ends, Ear candy includes reversed swells into the drop, metallic risers, and tape-stop flickers before the final chorus, Bright, heavy, cinematic mix with glossy low-end weight, rhythmic, vocal, hip-hop, dynamic, rap, emotional, motivational, deep",
     "tags": [
       "rap anthem",
-      "commercial",
-      "hip",
-      "hop",
-      "rap"
-    ]
-  },
-  {
-    "id": "pack-2-blacktop-crown-1",
-    "title": "Blacktop Crown (1)",
-    "packId": "pack-2",
-    "packTitle": "Hip-Hop / Rap",
-    "category": "Commercial",
-    "sourceCategory": "Commercial",
-    "coverUrl": "/packs/pack-2.png",
-    "hasMp3": true,
-    "hasWav": true,
-    "hasLyrics": false,
-    "isInstrumental": true,
-    "mp3Path": "public/mp3/commercial/hip-hop-rap/blacktop-crown-1.mp3",
-    "wavPath": "private/wav/commercial/hip-hop-rap/blacktop-crown-1.wav",
-    "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Blacktop Crown (1)",
-    "metadataText": "",
-    "tags": [
       "commercial",
       "hip",
       "hop",
@@ -14911,29 +14888,6 @@ export const productionSongRecords = [
       "dramatic",
       "lyrical",
       "hip hop",
-      "commercial",
-      "hip",
-      "hop",
-      "rap"
-    ]
-  },
-  {
-    "id": "pack-2-glass-teeth-1",
-    "title": "Glass Teeth (1)",
-    "packId": "pack-2",
-    "packTitle": "Hip-Hop / Rap",
-    "category": "Commercial",
-    "sourceCategory": "Commercial",
-    "coverUrl": "/packs/pack-2.png",
-    "hasMp3": true,
-    "hasWav": true,
-    "hasLyrics": false,
-    "isInstrumental": true,
-    "mp3Path": "public/mp3/commercial/hip-hop-rap/glass-teeth-1.mp3",
-    "wavPath": "private/wav/commercial/hip-hop-rap/glass-teeth-1.wav",
-    "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Glass Teeth (1)",
-    "metadataText": "",
-    "tags": [
       "commercial",
       "hip",
       "hop",
