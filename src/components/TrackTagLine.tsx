@@ -106,8 +106,16 @@ export default function TrackTagLine({
         className
       )}
     >
-      {tags.map((tag) => (
-        <span key={tag} className={cn("max-w-full truncate", itemClassName)}>
+      {tags.map((tag, index) => (
+        <span
+          key={tag}
+          className={cn(
+            "max-w-full truncate",
+            index === 0 && "text-zesty-red/85",
+            index === 1 && "text-vivid-blue/85",
+            itemClassName
+          )}
+        >
           {tag}
         </span>
       ))}
