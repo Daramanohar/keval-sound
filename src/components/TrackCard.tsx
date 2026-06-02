@@ -58,7 +58,7 @@ const TrackCard = memo(function TrackCard({ track, index = 0, rank }: TrackCardP
       added
         ? {
             title: `${track.title} added to cart`,
-            description: `${track.genre} · ${track.bpm} BPM · ${formatPrice(track.price)}`,
+            description: `${track.genre} · ${formatPrice(track.price)}`,
           }
         : {
             tone: "info",
@@ -165,8 +165,6 @@ const TrackCard = memo(function TrackCard({ track, index = 0, rank }: TrackCardP
             <Clock className="h-2.5 w-2.5" />
             {formatDuration(track.duration)}
           </span>
-          <span>·</span>
-          <span>{track.bpm} BPM</span>
           <span>·</span>
           <span>{track.key}</span>
           <span className="ml-auto truncate">{track.genre}</span>

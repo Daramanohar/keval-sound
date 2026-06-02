@@ -17,7 +17,7 @@ import { cn, formatDuration, formatPrice } from "@/lib/utils";
 import { usePlayer } from "@/lib/player-context";
 import { useStore } from "@/lib/store-context";
 
-type SortKey = "name" | "bpm" | "duration" | "price" | "instrument";
+type SortKey = "name" | "duration" | "price" | "instrument";
 type SortDir = "asc" | "desc";
 type SampleType = "all" | "loop" | "one-shot" | "stem" | "sfx";
 
@@ -121,11 +121,10 @@ export default function SamplesPage() {
 
       <div className="pb-16">
         <div className="glass rounded-2xl overflow-hidden">
-          <div className="hidden md:grid grid-cols-[40px_1fr_100px_80px_80px_100px_100px_80px_100px] gap-4 items-center px-6 py-3 border-b border-border">
+          <div className="hidden md:grid grid-cols-[40px_1fr_100px_80px_100px_100px_80px_100px] gap-4 items-center px-6 py-3 border-b border-border">
             <div />
             <SortHeader label="Name" sortKeyName="name" active={sortKey === "name"} onSort={handleSort} />
             <span className="text-xs font-medium uppercase tracking-wider text-muted">Type</span>
-            <SortHeader label="BPM" sortKeyName="bpm" active={sortKey === "bpm"} onSort={handleSort} />
             <span className="text-xs font-medium uppercase tracking-wider text-muted">Key</span>
             <SortHeader label="Duration" sortKeyName="duration" active={sortKey === "duration"} onSort={handleSort} />
             <SortHeader label="Instrument" sortKeyName="instrument" active={sortKey === "instrument"} onSort={handleSort} />
@@ -203,7 +202,7 @@ function SampleRow({ sample, index }: { sample: Sample; index: number }) {
       transition={{ delay: index * 0.02 }}
       className="group hover:bg-white/[0.03] transition-colors"
     >
-      <div className="hidden md:grid grid-cols-[40px_1fr_100px_80px_80px_100px_100px_80px_100px] gap-4 items-center px-6 py-3">
+      <div className="hidden md:grid grid-cols-[40px_1fr_100px_80px_100px_100px_80px_100px] gap-4 items-center px-6 py-3">
         <button
           type="button"
           onClick={() => toggleSample(sample)}
@@ -240,7 +239,6 @@ function SampleRow({ sample, index }: { sample: Sample; index: number }) {
           {sample.type}
         </span>
 
-        <span className="text-sm text-muted tabular-nums">{sample.bpm || "-"}</span>
         <span className="text-sm text-muted">{sample.key}</span>
         <span className="text-sm text-muted tabular-nums">{formatDuration(sample.duration)}</span>
         <span className="text-sm text-muted truncate">{sample.instrument}</span>
@@ -290,7 +288,7 @@ function SampleRow({ sample, index }: { sample: Sample; index: number }) {
               {sample.type}
             </span>
             <span className="text-xs text-muted">
-              {sample.bpm ? `${sample.bpm} BPM` : ""} {sample.key}
+              {sample.key}
             </span>
             <span className="text-xs text-muted">{sample.instrument}</span>
           </div>

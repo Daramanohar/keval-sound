@@ -440,7 +440,6 @@ export default function AccountPage() {
                                   "",
                                   "[ Technical Metadata ]",
                                   trackMeta ? `Genre      : ${trackMeta.genre}` : null,
-                                  trackMeta ? `BPM        : ${trackMeta.bpm}` : null,
                                   trackMeta ? `Key        : ${trackMeta.key}` : null,
                                   trackMeta ? `Mood       : ${trackMeta.mood}` : null,
                                   trackMeta ? `Region     : ${trackMeta.region}` : null,

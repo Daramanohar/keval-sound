@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 const suggestions = [
   "Upbeat Bollywood wedding track with dhol",
   "Lo-fi study beats with sitar melody",
-  "Dark drill beat 140 BPM in minor key",
+  "Dark drill beat in a minor key",
   "Chill Tamil ambient with rain sounds",
   "Punjabi bhangra pop for dance video",
   "Emotional Bengali acoustic ballad",
@@ -16,15 +16,15 @@ const suggestions = [
 
 const optimizations: Record<string, string> = {
   "sad song":
-    "Melancholic Hindi ballad, slow tempo 70-85 BPM, minor key, acoustic guitar plus piano, emotional female vocals",
+    "Melancholic Hindi ballad, minor key, acoustic guitar plus piano, emotional female vocals",
   "party music":
-    "High-energy Bollywood dance track, 125-135 BPM, major key, dhol plus synth bass, festival vibes",
+    "High-energy Bollywood dance track, major key, dhol plus synth bass, festival vibes",
   "chill beats":
-    "Lo-fi Indian fusion, 80-90 BPM, Am or Em key, sitar loops plus vinyl crackle and soft tabla, study or relaxation mood",
+    "Lo-fi Indian fusion, Am or Em key, sitar loops plus vinyl crackle and soft tabla, study or relaxation mood",
   workout:
-    "Aggressive Desi hip-hop, 140 plus BPM, heavy 808 bass, trap hi-hats, motivational energy",
+    "Aggressive Desi hip-hop, heavy 808 bass, trap hi-hats, motivational energy",
   wedding:
-    "Festive Punjabi Bhangra, 110-120 BPM, dhol plus tumbi plus chimta, celebratory and joyful mood, Punjabi vocals",
+    "Festive Punjabi Bhangra, dhol plus tumbi plus chimta, celebratory and joyful mood, Punjabi vocals",
 };
 
 interface SearchBarProps {
@@ -67,7 +67,7 @@ export default function SearchBar({
       setQuery(optimizations[match]);
     } else {
       setQuery(
-        `${query} - enhanced: include BPM range, key signature, instrumentation, mood descriptor, and regional style`
+        `${query} - enhanced: include key signature, instrumentation, mood descriptor, and regional style`
       );
     }
 

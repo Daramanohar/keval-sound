@@ -194,7 +194,7 @@ const MusicCard = memo(function MusicCard({
           <p className="mt-0.5 truncate text-[10px] text-muted/70">{track.artist}</p>
           <TrackTagLine track={track} className="mt-1 text-[10px] text-muted/55" />
           <p className="mt-0.5 truncate text-[10px] text-muted/50">
-            {track.genre} · {track.bpm} BPM
+            {track.genre}
           </p>
         </div>
       </div>
@@ -308,8 +308,6 @@ const MusicCard = memo(function MusicCard({
 
         <div className="mt-3 flex flex-wrap items-center gap-2 text-[11px] text-muted/80">
           <span>{track.genre}</span>
-          <span className="text-muted/35">•</span>
-          <span>{track.bpm} BPM</span>
           <span className="text-muted/35">•</span>
           <span>{track.key}</span>
         </div>

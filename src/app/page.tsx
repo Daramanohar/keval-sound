@@ -137,7 +137,7 @@ function LandingPage() {
             },
             {
               title: "AI-powered discovery",
-              description: "Search by mood, BPM, instrumentation, language, or brief, then preview the closest matches instantly.",
+              description: "Search by mood, instrumentation, language, or brief, then preview the closest matches instantly.",
             },
           ].map((card, index) => (
             <motion.div
@@ -259,8 +259,8 @@ function AuthenticatedHome() {
   const freshFinds = useMemo(() => allTracks.slice(4, 12), [allTracks]);
   const regionalRoots = useMemo(() => allTracks.slice(0, 8), [allTracks]);
   const sonicSelections = useMemo(() => allTracks.slice(0, 10).reverse(), [allTracks]);
-  const moodDrops = useMemo(() => [...allTracks].sort((a, b) => a.bpm - b.bpm), [allTracks]);
-  const stageBuilders = useMemo(() => [...allTracks].sort((a, b) => b.bpm - a.bpm), [allTracks]);
+  const moodDrops = useMemo(() => allTracks.slice(8, 18), [allTracks]);
+  const stageBuilders = useMemo(() => allTracks.slice(12, 22), [allTracks]);
   const sampleLabTracks = useMemo(() => allTracks.slice(2, 10), [allTracks]);
 
   return (

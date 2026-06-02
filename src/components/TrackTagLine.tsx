@@ -14,6 +14,10 @@ function normalizeDisplayTag(tag: string) {
   return tag.trim().replace(/^#/, "").toLowerCase();
 }
 
+function isTempoTag(tag: string) {
+  return /\bbpm\b/.test(tag);
+}
+
 export function getTrackDisplayTags(track: TrackTagSource, limit = 2) {
   const candidates = [
     ...(track.tags ?? []),
@@ -21,7 +25,7 @@ export function getTrackDisplayTags(track: TrackTagSource, limit = 2) {
     track.mood,
   ]
     .map(normalizeDisplayTag)
-    .filter(Boolean);
+    .filter((tag) => Boolean(tag) && !isTempoTag(tag));
 
   return Array.from(new Set(candidates)).slice(0, Math.max(limit, 0));
 }

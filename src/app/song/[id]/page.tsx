@@ -220,8 +220,6 @@ export default function SongPage() {
             <span className="h-1 w-1 rounded-full bg-muted/30" />
             <span>{formatDuration(track.duration)}</span>
             <span className="h-1 w-1 rounded-full bg-muted/30" />
-            <span>{track.bpm} BPM</span>
-            <span className="h-1 w-1 rounded-full bg-muted/30" />
             <span>Key {track.key}</span>
           </div>
 

@@ -408,7 +408,7 @@ function TrackTile({
       <div className="space-y-2 p-3">
         <div className="min-h-[44px]">
           <p className="line-clamp-2 text-sm font-semibold leading-tight text-white">{track.title}</p>
-          <p className="mt-1 truncate text-[11px] text-muted">{track.mood} · {track.bpm} BPM</p>
+          <p className="mt-1 truncate text-[11px] text-muted">{track.mood}</p>
           <TrackTagLine track={track} className="mt-1 gap-x-1.5 text-[10px] text-muted/50" />
         </div>
         <div className="flex items-center justify-between gap-2">

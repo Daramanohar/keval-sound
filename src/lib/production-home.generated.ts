@@ -2,7 +2,7 @@
 
 import type { Pack, Track } from "./mock-data";
 
-export const productionHomeGeneratedAt = "2026-06-02T10:01:53.166Z";
+export const productionHomeGeneratedAt = "2026-06-02T10:24:54.628Z";
 
 export const productionHomeTracks = [
   {
@@ -3021,7 +3021,6 @@ export const productionHomeTracks = [
       0.607
     ],
     "tags": [
-      "electro hard rock with 164 bpm half time bounce",
       "crushing palm muted guitar riffs over aggressive synth bass and punchy hybrid drums verse drives lean and tense",
       "pre chorus climbs with filtered pulses and gang shouts",
       "chorus explodes with stacked screams and a huge octave guitar hook",
@@ -3036,7 +3035,8 @@ export const productionHomeTracks = [
       "electric",
       "electronic",
       "commercial",
-      "hard"
+      "hard",
+      "rock"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -11701,7 +11701,6 @@ export const productionHomePacks = [
           0.607
         ],
         "tags": [
-          "electro hard rock with 164 bpm half time bounce",
           "crushing palm muted guitar riffs over aggressive synth bass and punchy hybrid drums verse drives lean and tense",
           "pre chorus climbs with filtered pulses and gang shouts",
           "chorus explodes with stacked screams and a huge octave guitar hook",
@@ -11716,7 +11715,8 @@ export const productionHomePacks = [
           "electric",
           "electronic",
           "commercial",
-          "hard"
+          "hard",
+          "rock"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -11728,14 +11728,14 @@ export const productionHomePacks = [
       }
     ],
     "tags": [
-      "electro hard rock with 164 bpm half time bounce",
       "crushing palm muted guitar riffs over aggressive synth bass and punchy hybrid drums verse drives lean and tense",
       "pre chorus climbs with filtered pulses and gang shouts",
       "chorus explodes with stacked screams and a huge octave guitar hook",
       "bridge drops to icy pads and toms before a soaring solo finale",
       "glossy",
       "brutal",
-      "wide"
+      "wide",
+      "and cinematic"
     ],
     "featured": false
   },

@@ -45,7 +45,7 @@ const legalLinks = [
 ];
 
 function getContextLine(pathname: string): string {
-  if (pathname === "/explore") return "Search exclusive songs by mood, BPM, genre, language, and regional character.";
+  if (pathname === "/explore") return "Search exclusive songs by mood, genre, language, and regional character.";
   if (pathname === "/packs") return "Bundle pricing for full packs, or license the exact songs you need one by one.";
   if (pathname === "/samples") return "Production-ready Indian loops, one-shots, and stems for faster sessions.";
   if (pathname === "/cart") return "Review your mixed cart of single tracks, packs, and samples before checkout.";

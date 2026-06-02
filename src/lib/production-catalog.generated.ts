@@ -20,7 +20,7 @@ export interface ProductionSongRecord {
   tags: string[];
 }
 
-export const productionCatalogGeneratedAt = "2026-06-02T10:01:53.141Z";
+export const productionCatalogGeneratedAt = "2026-06-02T10:24:54.592Z";
 
 export const productionSongRecords = [
   {
@@ -14849,7 +14849,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Cut The Lock",
     "metadataText": "Hard-hitting modern hip-hop with rapid-fire 96 BPM swing, razor-edged kick-snare patterns, booming sub-bass and tense minor-key stabs; verse rides dense and breathless, pre-chorus strips to drums and low drone, chorus slams with stacked doubles and gang shouts on the anchor line, Ad-libs pan wide, delay throws hit the last word, a reversed swell and snare climb bridge the drop, Bright, punchy, cinematic mix with a gritty center, lyrical, rap, raw, emotional, beats, hip-hop, rapid, dramatic, vocal",
     "tags": [
-      "hard hitting modern hip hop with rapid fire 96 bpm swing",
       "razor edged kick snare patterns",
       "booming sub bass and tense minor key stabs verse rides dense and breathless",
       "pre chorus strips to drums and low drone",
@@ -14864,7 +14863,8 @@ export const productionSongRecords = [
       "rap",
       "raw",
       "emotional",
-      "beats"
+      "beats",
+      "hip hop"
     ]
   },
   {
@@ -31899,7 +31899,6 @@ export const productionSongRecords = [
     "metadataText": "Hard rock anthem with cinematic orchestral drive, driving 128 BPM pulse and stomping four-on-the-floor drums under crushing palm-muted riffs; verse rides low strings and tight rhythm guitars, pre-chorus opens with rising brass and taiko rolls, chorus hits with full choir stack, octave lead guitars, and massive timpani accents, Add reverse cymbal swells, low sub hits into drops, and sword-sharp string runs before solos, Huge, bright, battle-ready mix with wide arena depth and punchy low end, dramatic, emotional, orchestral, soaring, hard rock\n\n0 0 0 Heavy Hearts & Open Highways Add a Caption Remix/Edit Hard rock anthem with cinematic orchestral drive, driving 128 BPM pulse and stomping four-on-the-floor drums under crushing palm-muted riffs; verse rides low strings and tight rhythm guitars, pre-chorus opens with rising brass and taiko rolls, chorus hits with full choir stack, octave lead guitars, and massive timpani accents, Add reverse cymbal swells, low sub hits into drops, and sword-sharp string runs before solos, Huge, bright, battle-ready mix with wide arena depth and punchy low end, dramatic, emotional, orchestral, soaring, hard rock Show Less 1d, 13h ago",
     "tags": [
       "hard rock anthem with cinematic orchestral drive",
-      "driving 128 bpm pulse and stomping four on the floor drums under crushing palm muted riffs verse rides low strings and tight rhythm guitars",
       "pre chorus opens with rising brass and taiko rolls",
       "chorus hits with full choir stack",
       "octave lead guitars",
@@ -31913,7 +31912,8 @@ export const productionSongRecords = [
       "dramatic",
       "emotional",
       "orchestral",
-      "soaring"
+      "soaring",
+      "hard rock"
     ]
   },
   {
@@ -31971,7 +31971,6 @@ export const productionSongRecords = [
     "tags": [
       "acoustic folk ballad with gentle swung strumming",
       "light brushed percussion",
-      "and a flowing 92 bpm feel verse stays close mic with fingerpicked guitar and soft bass drone",
       "pre chorus opens into rising harmonies and suspended strings",
       "chorus blooms with stacked voices and a simple singback line",
       "bridge drops to guitar and breathy vocal",
@@ -31984,7 +31983,8 @@ export const productionSongRecords = [
       "and sunlit in the mix",
       "beautiful",
       "ambient",
-      "nostalgic"
+      "nostalgic",
+      "vocal"
     ]
   },
   {
@@ -32277,7 +32277,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Paper Map Heart",
     "metadataText": "Acoustic folk ballad with warm fingerpicked guitar and a brushed kick pulse at a gentle 78 BPM; verse stays intimate with piano accents and close-mic lead, pre-chorus opens into soft harmony stacks, chorus lifts with fuller strums and hand percussion, Gentle backing vocals answer key lines, with tape-echo throws on the hook and a final rise of room-clap texture, Cozy, cinematic, organic mix, warm and human, emotional, raw, gentle, warm, heartfelt, acoustic, minimal, soulful, nostalgic, rich, soft\n\n[Verse 1]\nYour name in my coat pocket\nFolded next to the train ticket\nRain on the window, slow and silver\nI was already gone, then I saw it\nYou drew that map on a napkin\nThree towns, one bridge, and your red pen\nSaid, \"If you miss me, follow the river\"\nI kept it safe like a promise\n[Pre-Chorus]\nAnd every road looks different\nWhen I'm missing your hand\nEvery mile gets louder\nTill I can hear you again\n[Chorus]\nTake me back, take me back\nTo the paper map heart\nTake me back, take me back\nWhere we never fell apart\nI still know the way\nI still know the way\n(Take me back)\nTake me back, take me back\nTo your paper map heart\n[Verse 2]\nThat little diner on the corner\nTwo chipped mugs and a sleepy fan\nYou laughed when I spilled my coffee\nSaid I wear my heart in my hands\nNow I'm under different ceilings\nDifferent doors and different skies\nBut I keep your voice in the quiet\nLike a song I can't leave behind\n[Pre-Chorus]\nAnd every road looks different\nWhen I'm missing your hand\nEvery mile gets louder\nTill I can hear you again\n[Chorus]\nTake me back, take me back\nTo the paper map heart\nTake me back, take me back\nWhere we never fell apart\nI still know the way\nI still know the way\n(Take me back)\nTake me back, take me back\nTo your paper map heart\n[Bridge]\nIf I stand at the station\nWith your letter in my coat\nWill the night let me borrow\nOne last home I used to know?\nSo I follow the folding\nOf the edges in my mind\nTill your love turns into daylight\nAnd I find you every time\n[Final Chorus]\nTake me back, take me back\nTo the paper map heart\nTake me back, take me back\nWhere we never fell apart\nI still know the way\nI still know the way\n(Take me back)\nTake me back, take me back\nTo your paper map heart",
     "tags": [
-      "acoustic folk ballad with warm fingerpicked guitar and a brushed kick pulse at a gentle 78 bpm verse stays intimate with piano accents and close mic lead",
       "pre chorus opens into soft harmony stacks",
       "chorus lifts with fuller strums and hand percussion",
       "gentle backing vocals answer key lines",
@@ -32292,7 +32291,8 @@ export const productionSongRecords = [
       "warm",
       "heartfelt",
       "acoustic",
-      "minimal"
+      "minimal",
+      "soulful"
     ]
   },
   {
@@ -39380,7 +39380,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Ashes Dancing in Headlights",
     "metadataText": "Electro hard rock with 164 BPM half-time bounce, crushing palm-muted guitar riffs over aggressive synth bass and punchy hybrid drums; verse drives lean and tense, pre-chorus climbs with filtered pulses and gang shouts, chorus explodes with stacked screams and a huge octave guitar hook, bridge drops to icy pads and toms before a soaring solo finale, Glossy, brutal, wide, and cinematic, electro, soaring, hard rock, electric, electronic\n\n00 Ashes Dancing in Headlights Add a Caption Remix/Edit Electro hard rock with 164 BPM half-time bounce, crushing palm-muted guitar riffs over aggressive synth bass and punchy hybrid drums; verse drives lean and tense, pre-chorus climbs with filtered pulses and gang shouts, chorus explodes with stacked screams and a huge octave guitar hook, bridge drops to icy pads and toms before a soaring solo finale, Glossy, brutal, wide, and cinematic, electro, soaring, hard rock, electric, electronic",
     "tags": [
-      "electro hard rock with 164 bpm half time bounce",
       "crushing palm muted guitar riffs over aggressive synth bass and punchy hybrid drums verse drives lean and tense",
       "pre chorus climbs with filtered pulses and gang shouts",
       "chorus explodes with stacked screams and a huge octave guitar hook",
@@ -39395,7 +39394,8 @@ export const productionSongRecords = [
       "electric",
       "electronic",
       "commercial",
-      "hard"
+      "hard",
+      "rock"
     ]
   },
   {
@@ -40103,7 +40103,6 @@ export const productionSongRecords = [
     "metadataText": "Hard rock anthem with cinematic orchestral drive, driving 128 BPM pulse and stomping four-on-the-floor drums under crushing palm-muted riffs; verse rides low strings and tight rhythm guitars, pre-chorus opens with rising brass and taiko rolls, chorus hits with full choir stack, octave lead guitars, and massive timpani accents, Add reverse cymbal swells, low sub hits into drops, and sword-sharp string runs before solos, Huge, bright, battle-ready mix with wide arena depth and punchy low end, dramatic, emotional, orchestral, soaring, hard rock\n\n0 0 0 Heavy Hearts & Open Highways Add a Caption Remix/Edit Hard rock anthem with cinematic orchestral drive, driving 128 BPM pulse and stomping four-on-the-floor drums under crushing palm-muted riffs; verse rides low strings and tight rhythm guitars, pre-chorus opens with rising brass and taiko rolls, chorus hits with full choir stack, octave lead guitars, and massive timpani accents, Add reverse cymbal swells, low sub hits into drops, and sword-sharp string runs before solos, Huge, bright, battle-ready mix with wide arena depth and punchy low end, dramatic, emotional, orchestral, soaring, hard rock Show Less 1d, 15h ago",
     "tags": [
       "hard rock anthem with cinematic orchestral drive",
-      "driving 128 bpm pulse and stomping four on the floor drums under crushing palm muted riffs verse rides low strings and tight rhythm guitars",
       "pre chorus opens with rising brass and taiko rolls",
       "chorus hits with full choir stack",
       "octave lead guitars",
@@ -40117,7 +40116,8 @@ export const productionSongRecords = [
       "dramatic",
       "emotional",
       "orchestral",
-      "soaring"
+      "soaring",
+      "hard rock"
     ]
   },
   {
@@ -40592,7 +40592,6 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Sirens Echo Across the Overpass",
     "metadataText": "Electro hard rock with 164 BPM half-time bounce, crushing palm-muted guitar riffs over aggressive synth bass and punchy hybrid drums; verse drives lean and tense, pre-chorus climbs with filtered pulses and gang shouts, chorus explodes with stacked screams and a huge octave guitar hook, bridge drops to icy pads and toms before a soaring solo finale, Glossy, brutal, wide, and cinematic, electro, soaring, hard rock, electric, electronic\n\n0 0 0 Sirens Echo Across the Overpass Add a Caption Remix/Edit Electro hard rock with 164 BPM half-time bounce, crushing palm-muted guitar riffs over aggressive synth bass and punchy hybrid drums; verse drives lean and tense, pre-chorus climbs with filtered pulses and gang shouts, chorus explodes with stacked screams and a huge octave guitar hook, bridge drops to icy pads and toms before a soaring solo finale, Glossy, brutal, wide, and cinematic, electro, soaring, hard rock, electric, electronic Show Less 1d, 15h ago",
     "tags": [
-      "electro hard rock with 164 bpm half time bounce",
       "crushing palm muted guitar riffs over aggressive synth bass and punchy hybrid drums verse drives lean and tense",
       "pre chorus climbs with filtered pulses and gang shouts",
       "chorus explodes with stacked screams and a huge octave guitar hook",
@@ -40607,7 +40606,8 @@ export const productionSongRecords = [
       "electric",
       "electronic",
       "commercial",
-      "hard"
+      "hard",
+      "rock"
     ]
   },
   {
@@ -41048,7 +41048,6 @@ export const productionSongRecords = [
     "metadataText": "Hard rock anthem with cinematic orchestral drive, driving 128 BPM pulse and stomping four-on-the-floor drums under crushing palm-muted riffs; verse rides low strings and tight rhythm guitars, pre-chorus opens with rising brass and taiko rolls, chorus hits with full choir stack, octave lead guitars, and massive timpani accents, Add reverse cymbal swells, low sub hits into drops, and sword-sharp string runs before solos, Huge, bright, battle-ready mix with wide arena depth and punchy low end, dramatic, emotional, orchestral, soaring, hard rock\n\n0 0 0 The Sound of Defiant Souls Add a Caption Remix/Edit Hard rock anthem with cinematic orchestral drive, driving 128 BPM pulse and stomping four-on-the-floor drums under crushing palm-muted riffs; verse rides low strings and tight rhythm guitars, pre-chorus opens with rising brass and taiko rolls, chorus hits with full choir stack, octave lead guitars, and massive timpani accents, Add reverse cymbal swells, low sub hits into drops, and sword-sharp string runs before solos, Huge, bright, battle-ready mix with wide arena depth and punchy low end, dramatic, emotional, orchestral, soaring, hard rock Show Less 1d, 16h ago",
     "tags": [
       "hard rock anthem with cinematic orchestral drive",
-      "driving 128 bpm pulse and stomping four on the floor drums under crushing palm muted riffs verse rides low strings and tight rhythm guitars",
       "pre chorus opens with rising brass and taiko rolls",
       "chorus hits with full choir stack",
       "octave lead guitars",
@@ -41062,7 +41061,8 @@ export const productionSongRecords = [
       "dramatic",
       "emotional",
       "orchestral",
-      "soaring"
+      "soaring",
+      "hard rock"
     ]
   },
   {

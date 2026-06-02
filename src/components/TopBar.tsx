@@ -33,7 +33,7 @@ import { useStore } from "@/lib/store-context";
 const searchSuggestions = [
   "Upbeat Bollywood wedding track with dhol",
   "Lo-fi study beats with sitar melody",
-  "Dark drill beat 140 BPM in minor key",
+  "Dark drill beat in a minor key",
   "Chill Tamil ambient with rain sounds",
   "Punjabi bhangra pop for dance video",
 ];
@@ -197,7 +197,7 @@ export default function TopBar({ onMenuToggle, mobileOpen }: TopBarProps) {
     setOptimizing(true);
     window.setTimeout(() => {
       setQuery(
-        `${query} - enhanced: include BPM range, key, instrumentation, mood, and regional style`
+        `${query} - enhanced: include key, instrumentation, mood, and regional style`
       );
       setOptimizing(false);
     }, 700);

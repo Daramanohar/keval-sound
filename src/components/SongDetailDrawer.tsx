@@ -218,8 +218,6 @@ function DrawerContent({
           <div className="mt-4 flex items-center justify-center gap-4 text-[11px] text-muted/70">
             <span>{formatDuration(track.duration)}</span>
             <span className="h-1 w-1 rounded-full bg-muted/30" />
-            <span>{track.bpm} BPM</span>
-            <span className="h-1 w-1 rounded-full bg-muted/30" />
             <span>Key {track.key}</span>
           </div>
 

@@ -10,7 +10,7 @@ const steps = [
     icon: Search,
     title: "Search or Discover",
     description:
-      "Use AI-assisted search to find the right sound by mood, genre, BPM, language, or instrumentation, then move straight into preview mode.",
+      "Use AI-assisted search to find the right sound by mood, genre, language, or instrumentation, then move straight into preview mode.",
     accent: "from-vivid-blue to-mid-purple",
     glow: "bg-vivid-blue/10",
   },

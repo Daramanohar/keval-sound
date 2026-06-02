@@ -193,7 +193,7 @@ function extractTags(metadata, category, packTitle) {
   const commaTags = firstLine
     .split(",")
     .map((tag) => normalizeKey(tag))
-    .filter(Boolean);
+    .filter((tag) => Boolean(tag) && !tag.includes("bpm"));
 
   const extra = [category, packTitle]
     .flatMap((value) => normalizeKey(value).split(" "))
