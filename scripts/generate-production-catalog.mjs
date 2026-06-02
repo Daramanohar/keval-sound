@@ -199,7 +199,17 @@ function extractTags(metadata, category, packTitle) {
     .flatMap((value) => normalizeKey(value).split(" "))
     .filter((value) => value.length > 2);
 
-  return Array.from(new Set([...commaTags, ...extra])).slice(0, 16);
+  const tags = Array.from(new Set([...commaTags, ...extra]));
+  const fallbackTags = [packTitle, category, "instrumental", "exclusive"]
+    .map((value) => normalizeKey(value))
+    .filter(Boolean);
+
+  for (const tag of fallbackTags) {
+    if (tags.length >= 2) break;
+    if (!tags.includes(tag)) tags.push(tag);
+  }
+
+  return tags.slice(0, 16);
 }
 
 function createWaveformSeed(label) {

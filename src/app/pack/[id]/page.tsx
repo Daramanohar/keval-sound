@@ -19,6 +19,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import WaveformVisualizer from "@/components/WaveformVisualizer";
+import TrackTagLine from "@/components/TrackTagLine";
 import { readyProductionPacks, type ProductionTrack } from "@/lib/production-catalog";
 import { cn, formatDuration, resampleWaveform } from "@/lib/utils";
 import { usePlayerControls } from "@/lib/player-context";
@@ -346,6 +347,7 @@ export default function PackDetailPage() {
                     >
                       <p className="truncate text-sm font-semibold text-white hover:underline">{track.title}</p>
                       <p className="truncate text-xs text-muted">{track.artist}</p>
+                      <TrackTagLine track={track} className="mt-0.5 text-[10px] text-muted/45" />
                     </button>
                   </div>
 
@@ -359,6 +361,7 @@ export default function PackDetailPage() {
                     <p className="truncate text-xs text-muted">
                       {track.artist} · {track.genre}
                     </p>
+                    <TrackTagLine track={track} className="mt-0.5 text-[10px] text-muted/45" />
                   </button>
 
                   {/* Waveform */}

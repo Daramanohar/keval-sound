@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Play, Pause, Heart } from "lucide-react";
 import { cn, formatPrice, formatDuration } from "@/lib/utils";
 import type { Track } from "@/lib/mock-data";
+import TrackTagLine from "./TrackTagLine";
 
 interface TopSongsListProps {
   tracks: Track[];
@@ -91,6 +92,7 @@ export default function TopSongsList({
               <p className="text-[10px] text-muted/50 truncate">
                 {track.artist}
               </p>
+              <TrackTagLine track={track} className="mt-0.5 text-[9px] text-muted/40" />
             </div>
 
             {/* Duration */}

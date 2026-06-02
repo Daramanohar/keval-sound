@@ -20,7 +20,7 @@ export interface ProductionSongRecord {
   tags: string[];
 }
 
-export const productionCatalogGeneratedAt = "2026-06-02T04:14:42.232Z";
+export const productionCatalogGeneratedAt = "2026-06-02T10:01:53.141Z";
 
 export const productionSongRecords = [
   {

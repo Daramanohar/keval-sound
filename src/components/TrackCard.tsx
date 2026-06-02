@@ -9,6 +9,7 @@ import WaveformVisualizer from "./WaveformVisualizer";
 import { usePlayerControls } from "@/lib/player-context";
 import { useStore } from "@/lib/store-context";
 import { useToast } from "@/lib/toast-context";
+import TrackTagLine from "./TrackTagLine";
 
 interface TrackCardProps {
   track: Track;
@@ -152,6 +153,7 @@ const TrackCard = memo(function TrackCard({ track, index = 0, rank }: TrackCardP
           <div className="min-w-0 flex-1">
             <h3 className="truncate text-sm font-semibold text-white">{track.title}</h3>
             <p className="truncate text-[11px] text-muted">{track.artist}</p>
+            <TrackTagLine track={track} className="mt-1" />
           </div>
           <span className="whitespace-nowrap text-sm font-bold text-vivid-blue">
             {owned ? "Owned" : formatPrice(track.price)}

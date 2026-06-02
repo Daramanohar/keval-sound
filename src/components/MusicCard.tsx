@@ -3,13 +3,14 @@
 import { memo, useCallback, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Heart, Pause, Play, ShoppingCart, Tag } from "lucide-react";
+import { Heart, Pause, Play, ShoppingCart } from "lucide-react";
 import { cn, formatPrice } from "@/lib/utils";
 import type { Track } from "@/lib/mock-data";
 import { usePlayerControls, usePlayerProgress } from "@/lib/player-context";
 import { useStore } from "@/lib/store-context";
 import { useToast } from "@/lib/toast-context";
 import WaveformVisualizer from "./WaveformVisualizer";
+import TrackTagLine from "./TrackTagLine";
 
 interface MusicCardProps {
   track: Track;
@@ -191,6 +192,7 @@ const MusicCard = memo(function MusicCard({
             </span>
           </div>
           <p className="mt-0.5 truncate text-[10px] text-muted/70">{track.artist}</p>
+          <TrackTagLine track={track} className="mt-1 text-[10px] text-muted/55" />
           <p className="mt-0.5 truncate text-[10px] text-muted/50">
             {track.genre} · {track.bpm} BPM
           </p>
@@ -312,17 +314,7 @@ const MusicCard = memo(function MusicCard({
           <span>{track.key}</span>
         </div>
 
-        <div className="mt-3 flex flex-wrap gap-1.5">
-          {track.tags.slice(0, 2).map((tag) => (
-            <span
-              key={tag}
-              className="inline-flex items-center gap-1 rounded-full bg-white/[0.04] px-2 py-1 text-[10px] text-muted"
-            >
-              <Tag className="h-2.5 w-2.5" />
-              {tag}
-            </span>
-          ))}
-        </div>
+        <TrackTagLine track={track} className="mt-3 text-[11px] text-muted/65" />
 
         <div className="mt-4 grid grid-cols-2 gap-2">
           <motion.button

@@ -16,6 +16,7 @@ import type { Pack, Track } from "@/lib/mock-data";
 import { usePlayerControls } from "@/lib/player-context";
 import { useStore } from "@/lib/store-context";
 import { useToast } from "@/lib/toast-context";
+import TrackTagLine from "./TrackTagLine";
 
 interface PackCardProps {
   pack: Pack;
@@ -271,9 +272,13 @@ const PackCard = memo(function PackCard({ pack, index = 0 }: PackCardProps) {
                     <span className="w-4 shrink-0 text-center text-[9px] text-muted/50">
                       {trackIndex + 1}
                     </span>
-                    <p className="min-w-0 flex-1 truncate text-[11px] font-medium text-white">
-                      {track.title}
-                    </p>
+                    <div className="min-w-0 flex-1">
+                      <p className="truncate text-[11px] font-medium text-white">{track.title}</p>
+                      <TrackTagLine
+                        track={track}
+                        className="mt-0.5 gap-x-1.5 text-[9px] text-muted/45"
+                      />
+                    </div>
                     <button
                       type="button"
                       onClick={(e) => handleTrackAdd(e, track)}

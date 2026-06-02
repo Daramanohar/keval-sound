@@ -24,6 +24,7 @@ import type {
 import { preloadProductionCatalog } from "@/lib/production-catalog-preload";
 import { cn, formatDuration } from "@/lib/utils";
 import KevalPlayerLoading from "./KevalPlayerLoading";
+import TrackTagLine from "./TrackTagLine";
 
 const INITIAL_PACK_ROWS = 4;
 const PACK_ROW_BATCH_SIZE = 4;
@@ -408,6 +409,7 @@ function TrackTile({
         <div className="min-h-[44px]">
           <p className="line-clamp-2 text-sm font-semibold leading-tight text-white">{track.title}</p>
           <p className="mt-1 truncate text-[11px] text-muted">{track.mood} · {track.bpm} BPM</p>
+          <TrackTagLine track={track} className="mt-1 gap-x-1.5 text-[10px] text-muted/50" />
         </div>
         <div className="flex items-center justify-between gap-2">
           <button
@@ -459,17 +461,10 @@ function SearchResultRow({
       </div>
       <div className="min-w-0 flex-1">
         <p className="truncate text-sm font-semibold text-white">{track.title}</p>
-        <p className="truncate text-xs text-muted">{track.packTitle} · {track.mood}</p>
-        <div className="mt-2 flex flex-wrap gap-1">
-          {track.tags.slice(0, 3).map((tag) => (
-            <span key={tag} className="rounded-full bg-white/[0.06] px-2 py-0.5 text-[10px] text-white/55">
-              {tag}
-            </span>
-          ))}
-          <span className="rounded-full bg-white/[0.06] px-2 py-0.5 text-[10px] text-white/55">
-            {formatDuration(track.duration)}
-          </span>
-        </div>
+        <p className="truncate text-xs text-muted">
+          {track.packTitle} · {track.mood} · {formatDuration(track.duration)}
+        </p>
+        <TrackTagLine track={track} className="mt-2 text-[10px] text-white/55" />
       </div>
       <div className="flex shrink-0 items-center gap-1">
         <button
