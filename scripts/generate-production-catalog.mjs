@@ -5,6 +5,7 @@ const PROJECT_ROOT = process.cwd();
 const SOURCE_ROOT = path.join(PROJECT_ROOT, "keval-packs", "SOUND PACKS(Main Version)");
 const OUTPUT_FILE = path.join(PROJECT_ROOT, "src", "lib", "production-catalog.generated.ts");
 const HOME_OUTPUT_FILE = path.join(PROJECT_ROOT, "src", "lib", "production-home.generated.ts");
+const PACK_COPY_FILE = path.join(PROJECT_ROOT, "src", "lib", "pack-copy.json");
 const PUBLIC_CDN_BASE = "https://cdn.kevalsound.com";
 const KEY_ROTATION = ["Am", "C", "Em", "G", "Dm", "F", "Bbm", "D"];
 const TAG_STOP_WORDS = new Set(["and", "but", "then", "final", "the"]);
@@ -170,6 +171,65 @@ async function readMaybeText(target) {
     return normalizeQuotes(raw).replace(/\r\n/g, "\n").trim();
   } catch {
     return "";
+  }
+}
+
+async function readPackCopy() {
+  try {
+    return JSON.parse(await fs.readFile(PACK_COPY_FILE, "utf8"));
+  } catch {
+    return {};
+  }
+}
+
+async function readWavDurationSeconds(target) {
+  if (!target) return null;
+
+  const handle = await fs.open(target, "r");
+  try {
+    const stat = await handle.stat();
+    const riffHeader = Buffer.alloc(12);
+    await handle.read(riffHeader, 0, riffHeader.length, 0);
+
+    if (
+      riffHeader.toString("ascii", 0, 4) !== "RIFF" ||
+      riffHeader.toString("ascii", 8, 12) !== "WAVE"
+    ) {
+      return null;
+    }
+
+    let offset = 12;
+    let byteRate = 0;
+    let dataSize = 0;
+
+    while (offset + 8 <= stat.size) {
+      const chunkHeader = Buffer.alloc(8);
+      await handle.read(chunkHeader, 0, chunkHeader.length, offset);
+      const chunkId = chunkHeader.toString("ascii", 0, 4);
+      const chunkSize = chunkHeader.readUInt32LE(4);
+      const dataOffset = offset + 8;
+
+      if (chunkId === "fmt ") {
+        const fmtLength = Math.min(chunkSize, 32);
+        const fmt = Buffer.alloc(fmtLength);
+        await handle.read(fmt, 0, fmt.length, dataOffset);
+        if (fmt.length >= 12) {
+          byteRate = fmt.readUInt32LE(8);
+        }
+      } else if (chunkId === "data") {
+        dataSize = chunkSize;
+      }
+
+      if (byteRate > 0 && dataSize > 0) {
+        return Math.max(1, Math.round(dataSize / byteRate));
+      }
+
+      offset = dataOffset + chunkSize + (chunkSize % 2);
+    }
+
+    return null;
+  } finally {
+    await handle.close();
   }
 }
 
@@ -341,7 +401,7 @@ function toHomeTrack(record, index, flags = {}) {
     mood: inferHomeMood(record),
     bpm: inferHomeBpm(record, index),
     key: KEY_ROTATION[index % KEY_ROTATION.length],
-    duration: 210,
+    duration: record.durationSeconds,
     price: 99,
     coverUrl: record.coverUrl,
     waveform: generateWaveform(record.id),
@@ -360,7 +420,7 @@ function createMp3StreamUrl(trackId) {
   return `/api/media/stream/mp3/${encodeURIComponent(trackId)}`;
 }
 
-function buildHomeCatalog(records) {
+function buildHomeCatalog(records, packCopyById) {
   const availableRecords = records.filter((record) => record.hasMp3);
   const packOrder = new Map(PACKS.map(([n], index) => [`pack-${n}`, index]));
   const groupedRecords = new Map();
@@ -405,14 +465,16 @@ function buildHomeCatalog(records) {
     });
     const tags = Array.from(new Set(packRecords.flatMap((record) => record.tags))).slice(0, 8);
     const premiumPack = packRecords.length > 30;
+    const copy = packCopyById[first.packId];
 
     return {
       id: first.packId,
       title: first.packTitle,
-      description: `${packRecords.length} ${first.packTitle} tracks from the production catalog.`,
+      tagline: copy?.tagline,
+      description: copy?.description ?? `${packRecords.length} ${first.packTitle} tracks from the production catalog.`,
       coverUrl: first.coverUrl,
       trackCount: packRecords.length,
-      totalDuration: packRecords.length * 210,
+      totalDuration: packRecords.reduce((total, record) => total + record.durationSeconds, 0),
       price: premiumPack ? 14999 : 7499,
       originalPrice: premiumPack ? 24999 : 12999,
       genre: first.category,
@@ -433,6 +495,7 @@ async function main() {
   }
 
   const dirs = await walkDirs(SOURCE_ROOT);
+  const packCopyById = await readPackCopy();
   const records = [];
 
   for (const dir of dirs) {
@@ -463,6 +526,7 @@ async function main() {
     const songTitle = displayName(songParts.at(-1) || titleFromAudio || "Untitled");
     const category = displayCategory(categoryFolder);
     const metadataText = await readMaybeText(mdata?.fullPath);
+    const durationSeconds = (await readWavDurationSeconds(wav?.fullPath).catch(() => null)) ?? 210;
     const songSlug = slugify(songTitle) || `track-${shortHash(path.relative(SOURCE_ROOT, dir))}`;
     const categorySlug = slugify(category);
     const packSlug = slugify(packMeta.title);
@@ -481,6 +545,7 @@ async function main() {
       hasWav: Boolean(wav),
       hasLyrics: Boolean(lyrics),
       isInstrumental: !lyrics,
+      durationSeconds,
       mp3Path: `public/mp3/${cloudBasePath}.mp3`,
       lyricsUrl: lyrics ? `${PUBLIC_CDN_BASE}/public/lyrics/${cloudBasePath}.txt` : undefined,
       wavPath: `private/wav/${cloudBasePath}.wav`,
@@ -505,6 +570,7 @@ async function main() {
     `  hasWav: boolean;\n` +
     `  hasLyrics: boolean;\n` +
     `  isInstrumental: boolean;\n` +
+    `  durationSeconds: number;\n` +
     `  mp3Path: string;\n` +
     `  lyricsUrl?: string;\n` +
     `  wavPath: string;\n` +
@@ -515,7 +581,7 @@ async function main() {
     `export const productionCatalogGeneratedAt = ${JSON.stringify(new Date().toISOString())};\n\n` +
     `export const productionSongRecords = ${JSON.stringify(records, null, 2)} satisfies ProductionSongRecord[];\n`;
 
-  const { homeTracks, homePacks } = buildHomeCatalog(records);
+  const { homeTracks, homePacks } = buildHomeCatalog(records, packCopyById);
   const homeOutput = `// Generated by scripts/generate-production-catalog.mjs. Do not edit by hand.\n\n` +
     `import type { Pack, Track } from "./mock-data";\n\n` +
     `export const productionHomeGeneratedAt = ${JSON.stringify(new Date().toISOString())};\n\n` +

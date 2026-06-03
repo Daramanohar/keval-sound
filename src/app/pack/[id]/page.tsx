@@ -170,7 +170,7 @@ export default function PackDetailPage() {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
-        className="mb-8 flex flex-col gap-6 md:flex-row md:items-end"
+        className="mb-8 flex flex-col gap-6 md:flex-row md:items-start"
       >
         {/* Square cover */}
         <div className="relative aspect-square w-full max-w-[260px] shrink-0 overflow-hidden rounded-2xl shadow-2xl shadow-black/40 md:w-64">
@@ -189,7 +189,7 @@ export default function PackDetailPage() {
         </div>
 
         {/* Title + meta + actions */}
-        <div className="min-w-0 flex-1">
+        <div className="min-w-0 flex-1 md:pt-1">
           <div className="mb-2 flex flex-wrap gap-2">
             {pack.featured && (
               <span className="rounded-full bg-dandelion/90 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-vampire-black">
@@ -207,6 +207,15 @@ export default function PackDetailPage() {
           </div>
 
           <h1 className="text-3xl font-bold text-white md:text-4xl">{pack.title}</h1>
+
+          {pack.tagline ? (
+            <p className="mt-4 max-w-3xl text-lg font-bold leading-snug text-white md:text-xl">
+              {pack.tagline}
+            </p>
+          ) : null}
+          <p className="mt-2 max-w-3xl text-sm leading-6 text-muted/70 md:text-[15px]">
+            {pack.description}
+          </p>
 
           {/* Action row — Preview, Save, Share (no Get Pack) */}
           <div className="mt-5 flex flex-wrap items-center gap-3">

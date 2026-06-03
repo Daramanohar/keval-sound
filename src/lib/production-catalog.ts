@@ -4,6 +4,7 @@ import {
   type ProductionSongRecord,
 } from "./production-catalog.generated";
 import { packs as basePacks, type Pack, type Track } from "./mock-data";
+import { getPackCopy } from "./pack-copy";
 
 export type CatalogCategory =
   | "Occasion"
@@ -126,7 +127,7 @@ function toProductionTrack(record: ProductionSongRecord, index: number): Product
     mood,
     bpm,
     key: KEY_ROTATION[index % KEY_ROTATION.length],
-    duration: 210,
+    duration: record.durationSeconds,
     price: 99,
     coverUrl: record.coverUrl,
     waveform: generateWaveform(record.id),
@@ -169,14 +170,17 @@ const basePackIds = new Set(basePacks.map((pack) => pack.id));
 
 function toProductionPack(pack: Pack, records: ProductionSongRecord[]): ProductionPack {
   const productionTracks = records.map((record, index) => toProductionTrack(record, index));
+  const copy = getPackCopy(pack.id);
 
   return {
     ...pack,
+    tagline: copy?.tagline ?? pack.tagline,
+    description: copy?.description ?? pack.description,
     tracks: productionTracks,
     trackCount: productionTracks.length,
     availableTrackCount: productionTracks.length,
     expectedTrackCount: pack.trackCount,
-    totalDuration: productionTracks.length * 210,
+    totalDuration: productionTracks.reduce((total, track) => total + track.duration, 0),
     sourceStatus: productionTracks.length > 0 ? "ready" : "pending",
   };
 }
@@ -186,14 +190,16 @@ function createGeneratedPack(records: ProductionSongRecord[]): ProductionPack {
   const tracks = records.map((record, index) => toProductionTrack(record, index));
   const price = tracks.length > 30 ? 14999 : 7499;
   const originalPrice = tracks.length > 30 ? 24999 : 12999;
+  const copy = getPackCopy(first.packId);
 
   return {
     id: first.packId,
     title: first.packTitle,
-    description: `${tracks.length} ${first.packTitle} tracks from the production catalog.`,
+    tagline: copy?.tagline,
+    description: copy?.description ?? `${tracks.length} ${first.packTitle} tracks from the production catalog.`,
     coverUrl: first.coverUrl,
     trackCount: tracks.length,
-    totalDuration: tracks.length * 210,
+    totalDuration: tracks.reduce((total, track) => total + track.duration, 0),
     price,
     originalPrice,
     genre: first.category,

@@ -26,6 +26,7 @@
 export interface Pack {
   id: string;
   title: string;
+  tagline?: string;
   description: string;
   coverUrl: string;
   trackCount: number;
