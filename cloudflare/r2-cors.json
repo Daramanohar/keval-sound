@@ -1,0 +1,29 @@
+{
+  "rules": [
+    {
+      "id": "keval-app-public-asset-read",
+      "allowed": {
+        "origins": [
+          "https://app.kevalsound.com",
+          "http://localhost:3000",
+          "http://localhost:3001"
+        ],
+        "methods": [
+          "GET",
+          "HEAD"
+        ],
+        "headers": [
+          "*"
+        ]
+      },
+      "exposeHeaders": [
+        "Accept-Ranges",
+        "Content-Length",
+        "Content-Range",
+        "Content-Type",
+        "ETag"
+      ],
+      "maxAgeSeconds": 86400
+    }
+  ]
+}
