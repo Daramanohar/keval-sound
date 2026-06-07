@@ -26,9 +26,11 @@ export default clerkMiddleware(async (auth, req) => {
 
 export const config = {
   matcher: [
-    // Skip Next.js internals, static assets, and the media stream API so
-    // MP3 preview flow keeps working without Clerk gating.
-    "/((?!_next/|_next/static|_next/image|favicon.ico|logo/|packs/|api/media/|.*\\.(?:png|jpg|jpeg|gif|webp|svg|ico|mp3|wav|txt|woff2?)$).*)",
-    "/(api(?!/media)/.*)",
+    // Skip Next.js internals + static assets. /api/media IS included so the
+    // route handler can call auth() and read the session, but it's NOT in
+    // `isProtectedRoute` above — we gate inside the handler instead, which
+    // lets us return clean 401 JSON without redirecting the <audio> element.
+    "/((?!_next/|_next/static|_next/image|favicon.ico|logo/|packs/|.*\\.(?:png|jpg|jpeg|gif|webp|svg|ico|mp3|wav|txt|woff2?)$).*)",
+    "/(api/.*)",
   ],
 };

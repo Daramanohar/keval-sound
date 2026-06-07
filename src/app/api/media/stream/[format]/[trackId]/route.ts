@@ -1,4 +1,5 @@
 import crypto from "node:crypto";
+import { auth } from "@clerk/nextjs/server";
 import { productionSongRecords } from "@/lib/production-catalog.generated";
 
 export const runtime = "nodejs";
@@ -35,6 +36,16 @@ function noStoreJson(body: Record<string, unknown>, status: number) {
 }
 
 export async function GET(_request: Request, context: StreamRouteContext) {
+  // Gate at the handler level instead of in proxy.ts. Proxy intentionally
+  // excludes /api/media so the Worker redirect (Range, 206, etc.) stays
+  // clean, but the token issuer here must only fire for signed-in users.
+  // TODO(paid-wav): once subscriptions ship, branch here on entitlement
+  // before allowing `wav-stream` access.
+  const { userId } = await auth();
+  if (!userId) {
+    return noStoreJson({ error: "unauthorized" }, 401);
+  }
+
   const { format, trackId } = await context.params;
   const normalizedFormat = format.toLowerCase();
 
@@ -56,7 +67,7 @@ export async function GET(_request: Request, context: StreamRouteContext) {
   const access = `${normalizedFormat}-stream`;
   const token = signPayload(
     {
-      sub: "preview",
+      sub: userId,
       trackId,
       access,
       iat: now,
