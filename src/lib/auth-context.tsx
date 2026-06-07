@@ -1,16 +1,30 @@
-  "use client";
+"use client";
+
+/**
+ * Auth bridge: maps Clerk's `useUser()` + `useClerk()` onto the legacy
+ * `useAuth()` API that the rest of the app already consumes.
+ *
+ * Why a bridge instead of replacing every call site?
+ *   - TopBar, Sidebar, AppShell, page.tsx, store-context, player-context and
+ *     several pages all import `useAuth`. Touching them all in one commit
+ *     would balloon the diff and risk regressions in unrelated UI.
+ *   - The bridge keeps the same shape (`user`, `isAuthenticated`, `isReady`,
+ *     `logout`, ...) so consumers do not need to change.
+ *
+ * The legacy mutators (`login`, `register`, `loginWithGoogle`) are now
+ * no-ops that route the visitor to the Clerk-hosted sign-in flow. The
+ * old `/auth` page redirects to `/sign-in` for the same reason.
+ */
 
 import {
   createContext,
   useCallback,
   useContext,
-  useEffect,
   useMemo,
-  useState,
   type ReactNode,
 } from "react";
-
-const AUTH_STORAGE_KEY = "keval-user";
+import { useRouter } from "next/navigation";
+import { useUser, useClerk } from "@clerk/nextjs";
 
 export interface User {
   name: string;
@@ -22,113 +36,62 @@ interface AuthContextType {
   user: User | null;
   isAuthenticated: boolean;
   isReady: boolean;
-  login: (email: string, password: string) => User;
-  register: (name: string, email: string, password: string) => User;
-  loginWithGoogle: () => User;
+  login: (email: string, password: string) => User | null;
+  register: (name: string, email: string, password: string) => User | null;
+  loginWithGoogle: () => User | null;
   logout: () => void;
 }
 
 const AuthContext = createContext<AuthContextType | null>(null);
 
-function readStoredUser(): User | null {
-  if (typeof window === "undefined") return null;
-
-  try {
-    const savedUser = window.localStorage.getItem(AUTH_STORAGE_KEY);
-    return savedUser ? (JSON.parse(savedUser) as User) : null;
-  } catch {
-    return null;
-  }
-}
-
-function writeStoredUser(user: User | null) {
-  if (typeof window === "undefined") return;
-
-  if (!user) {
-    window.localStorage.removeItem(AUTH_STORAGE_KEY);
-    return;
-  }
-
-  window.localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(user));
-}
-
 export function AuthProvider({ children }: { children: ReactNode }) {
-  const [user, setUser] = useState<User | null>(null);
-  const [isReady, setIsReady] = useState(false);
+  const { isLoaded, isSignedIn, user: clerkUser } = useUser();
+  const { signOut } = useClerk();
+  const router = useRouter();
 
-  useEffect(() => {
-    const frame = window.requestAnimationFrame(() => {
-      setUser(readStoredUser());
-      setIsReady(true);
-    });
+  const user = useMemo<User | null>(() => {
+    if (!clerkUser) return null;
 
-    return () => window.cancelAnimationFrame(frame);
-  }, []);
+    const fallbackEmailHandle =
+      clerkUser.primaryEmailAddress?.emailAddress?.split("@")[0] ?? "";
+    const joinedName = [clerkUser.firstName, clerkUser.lastName]
+      .filter(Boolean)
+      .join(" ");
+    const name =
+      clerkUser.fullName ||
+      joinedName ||
+      clerkUser.username ||
+      fallbackEmailHandle ||
+      "Keval Listener";
 
-  useEffect(() => {
-    function handleStorage(event: StorageEvent) {
-      if (event.key && event.key !== AUTH_STORAGE_KEY) return;
-      setUser(readStoredUser());
-    }
+    const email = clerkUser.primaryEmailAddress?.emailAddress ?? "";
+    const avatar = clerkUser.imageUrl ?? undefined;
 
-    window.addEventListener("storage", handleStorage);
-    return () => window.removeEventListener("storage", handleStorage);
-  }, []);
+    return { name, email, avatar };
+  }, [clerkUser]);
 
-  const commitUser = useCallback((nextUser: User) => {
-    writeStoredUser(nextUser);
-    setUser(nextUser);
-    return nextUser;
-  }, []);
-
-  const login = useCallback(
-    (email: string, password: string) => {
-      void password;
-
-      return commitUser({
-        name: email.split("@")[0].replace(/[._-]+/g, " ") || "Keval Listener",
-        email,
-      });
-    },
-    [commitUser]
-  );
-
-  const register = useCallback(
-    (name: string, email: string, password: string) => {
-      void password;
-
-      return commitUser({
-        name: name.trim() || email.split("@")[0] || "Keval Listener",
-        email,
-      });
-    },
-    [commitUser]
-  );
-
-  const loginWithGoogle = useCallback(() => {
-    return commitUser({
-      name: "Music Creator",
-      email: "creator@gmail.com",
-      avatar: "/logo/keval-logo.png",
-    });
-  }, [commitUser]);
+  const redirectToSignIn = useCallback(() => {
+    router.push("/sign-in");
+    return null;
+  }, [router]);
 
   const logout = useCallback(() => {
-    writeStoredUser(null);
-    setUser(null);
-  }, []);
+    void signOut(() => {
+      router.replace("/");
+    });
+  }, [router, signOut]);
 
   const value = useMemo<AuthContextType>(
     () => ({
       user,
-      isAuthenticated: Boolean(user),
-      isReady,
-      login,
-      register,
-      loginWithGoogle,
+      isAuthenticated: Boolean(isSignedIn),
+      isReady: isLoaded,
+      login: redirectToSignIn,
+      register: redirectToSignIn,
+      loginWithGoogle: redirectToSignIn,
       logout,
     }),
-    [isReady, login, loginWithGoogle, logout, register, user]
+    [isLoaded, isSignedIn, logout, redirectToSignIn, user]
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

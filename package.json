@@ -14,6 +14,7 @@
     "media:token": "node scripts/create-media-gate-token.mjs"
   },
   "dependencies": {
+    "@clerk/nextjs": "^7.4.3",
     "@gsap/react": "^2.1.2",
     "clsx": "^2.1.1",
     "framer-motion": "^12.38.0",

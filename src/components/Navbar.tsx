@@ -61,10 +61,11 @@ export default function Navbar() {
   }, [isAuthenticated, router]);
 
   const handleLogout = useCallback(() => {
-    logout();
     setUserMenuOpen(false);
+    // Clerk handles the redirect via auth-context bridge (signOut → "/").
+    logout();
     startTransition(() => {
-      router.replace("/auth");
+      router.replace("/");
     });
   }, [logout, router]);
 
@@ -125,11 +126,11 @@ export default function Navbar() {
                   Home
                 </Link>
                 <Link
-                  href="/auth"
+                  href="/sign-in"
                   prefetch
                   className="px-4 py-2 text-sm font-medium text-muted hover:text-white transition-colors rounded-lg"
                 >
-                  Features
+                  Log In
                 </Link>
               </>
             )}
@@ -213,7 +214,7 @@ export default function Navbar() {
             ) : (
               <>
                 <Link
-                  href="/auth"
+                  href="/sign-up"
                   prefetch
                   className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-vivid-blue to-mid-purple text-white text-sm font-semibold hover:shadow-lg hover:shadow-vivid-blue/20 transition-all hover:-translate-y-0.5"
                 >
@@ -271,13 +272,22 @@ export default function Navbar() {
                 }
               )}
               {!isAuthenticated && (
-                <Link
-                  href="/auth"
-                  prefetch
-                  className="px-4 py-3 rounded-xl text-sm font-semibold text-vivid-blue hover:bg-vivid-blue/10 transition-colors"
-                >
-                  Sign In / Sign Up
-                </Link>
+                <div className="flex flex-col gap-1">
+                  <Link
+                    href="/sign-in"
+                    prefetch
+                    className="px-4 py-3 rounded-xl text-sm font-semibold text-muted hover:text-white hover:bg-white/[0.05] transition-colors"
+                  >
+                    Log In
+                  </Link>
+                  <Link
+                    href="/sign-up"
+                    prefetch
+                    className="px-4 py-3 rounded-xl text-sm font-semibold text-vivid-blue hover:bg-vivid-blue/10 transition-colors"
+                  >
+                    Sign Up
+                  </Link>
+                </div>
               )}
             </div>
           </motion.div>

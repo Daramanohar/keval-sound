@@ -55,7 +55,7 @@ export default function GenreShowcase() {
             </p>
           </div>
           <Link
-            href="/auth"
+            href="/sign-up"
             className="inline-flex items-center gap-2 text-sm font-semibold text-vivid-blue transition-colors hover:text-accent-hover"
           >
             Start discovering

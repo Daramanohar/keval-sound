@@ -205,11 +205,9 @@ export default function TopBar({ onMenuToggle, mobileOpen }: TopBarProps) {
 
   const handleSignOut = useCallback(() => {
     setUserOpen(false);
+    // Bridge calls Clerk.signOut() and routes to "/".
     logout();
-    startTransition(() => {
-      router.replace("/auth");
-    });
-  }, [logout, router]);
+  }, [logout]);
 
   if (!isAuthenticated) return null;
 
@@ -433,9 +431,18 @@ export default function TopBar({ onMenuToggle, mobileOpen }: TopBarProps) {
             aria-label="Open account menu"
             aria-expanded={userOpen}
           >
-            <div className="w-7 h-7 rounded-full bg-gradient-to-br from-vivid-blue to-mid-purple flex items-center justify-center text-[11px] font-bold text-white ring-2 ring-vivid-blue/30">
-              {user?.name?.[0]?.toUpperCase() || "U"}
-            </div>
+            {user?.avatar ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={user.avatar}
+                alt={user.name}
+                className="w-7 h-7 rounded-full object-cover ring-2 ring-vivid-blue/30"
+              />
+            ) : (
+              <div className="w-7 h-7 rounded-full bg-gradient-to-br from-vivid-blue to-mid-purple flex items-center justify-center text-[11px] font-bold text-white ring-2 ring-vivid-blue/30">
+                {user?.name?.[0]?.toUpperCase() || "U"}
+              </div>
+            )}
             <span className="hidden md:inline text-xs text-muted font-medium max-w-[84px] truncate">
               {user?.name}
             </span>
@@ -456,9 +463,18 @@ export default function TopBar({ onMenuToggle, mobileOpen }: TopBarProps) {
                 className="absolute right-0 top-full mt-1.5 w-72 search-dropdown rounded-2xl overflow-hidden z-50 shadow-2xl shadow-black/40"
               >
                 <div className="px-4 py-4 border-b border-white/[0.06] flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-vivid-blue to-mid-purple flex items-center justify-center text-base font-bold text-white shrink-0 ring-2 ring-vivid-blue/30">
-                    {user?.name?.[0]?.toUpperCase() || "U"}
-                  </div>
+                  {user?.avatar ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={user.avatar}
+                      alt={user.name}
+                      className="w-10 h-10 rounded-full object-cover shrink-0 ring-2 ring-vivid-blue/30"
+                    />
+                  ) : (
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-vivid-blue to-mid-purple flex items-center justify-center text-base font-bold text-white shrink-0 ring-2 ring-vivid-blue/30">
+                      {user?.name?.[0]?.toUpperCase() || "U"}
+                    </div>
+                  )}
                   <div className="min-w-0">
                     <p className="text-sm font-semibold text-white truncate">{user?.name}</p>
                     <p className="text-[11px] text-muted truncate">{user?.email}</p>

@@ -90,7 +90,7 @@ function LandingPage() {
               className="mt-10 flex justify-center"
             >
               <Link
-                href="/auth"
+                href="/sign-up"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-vivid-blue to-mid-purple px-8 py-4 text-base font-semibold text-white transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-vivid-blue/20"
               >
                 Get Started
@@ -232,7 +232,7 @@ function LandingPage() {
               Create your account to search, preview, purchase, and permanently own exclusive Indian music.
             </p>
             <Link
-              href="/auth"
+              href="/sign-up"
               className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-vivid-blue to-mid-purple px-10 py-4 text-lg font-semibold text-white transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-vivid-blue/25"
             >
               Get Started

@@ -3,6 +3,10 @@
 import { Suspense, useCallback, useEffect, useState, type ReactNode } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { useAuth } from "@/lib/auth-context";
+
+// Routes that render their own full-bleed layout and must NOT be wrapped
+// in the authenticated sidebar/topbar shell.
+const BARE_ROUTE_PREFIXES = ["/sign-in", "/sign-up", "/auth"];
 import { cn } from "@/lib/utils";
 import Sidebar from "./Sidebar";
 import TopBar from "./TopBar";
@@ -62,7 +66,9 @@ export default function AppShell({ children }: AppShellProps) {
   const pathname = usePathname();
   const router = useRouter();
 
-  const isAuthPage = pathname === "/auth";
+  const isBareRoute = BARE_ROUTE_PREFIXES.some((prefix) =>
+    pathname === prefix || pathname.startsWith(`${prefix}/`)
+  );
 
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
   // Lazy initializer reads localStorage once at mount — avoids the
@@ -96,18 +102,8 @@ export default function AppShell({ children }: AppShellProps) {
     });
   }, []);
 
-  useEffect(() => {
-    if (!isReady) return;
-
-    if (!isAuthenticated && !isAuthPage) {
-      router.replace("/auth");
-      return;
-    }
-
-    if (isAuthenticated && isAuthPage) {
-      router.replace("/");
-    }
-  }, [isAuthPage, isAuthenticated, isReady, router]);
+  // Auth redirects are now handled by Clerk's proxy.ts. AppShell only
+  // decides which chrome to render based on the current path + auth state.
 
   useEffect(() => {
     if (!isReady || !isAuthenticated) return;
@@ -118,32 +114,25 @@ export default function AppShell({ children }: AppShellProps) {
     });
   }, [isAuthenticated, isReady, router]);
 
-  if (!isReady) {
-    return isAuthPage ? (
-      <>
-        <Navbar />
-        <main className="flex-1 pt-[72px]">{children}</main>
-      </>
-    ) : (
-      <ShellLoading />
-    );
+  // Sign-in / sign-up pages render bare (no sidebar, no topbar). They have
+  // their own branded layout.
+  if (isBareRoute) {
+    return <main className="flex-1">{children}</main>;
   }
 
-  if (!isAuthenticated) {
-    if (!isAuthPage) {
-      return <ShellLoading />;
-    }
+  if (!isReady) {
+    return <ShellLoading />;
+  }
 
+  // Unauthenticated visitor on a public route (e.g. `/` landing). Show the
+  // marketing Navbar instead of the authenticated sidebar shell.
+  if (!isAuthenticated) {
     return (
       <>
         <Navbar />
         <main className="flex-1 pt-[72px]">{children}</main>
       </>
     );
-  }
-
-  if (isAuthPage) {
-    return <ShellLoading />;
   }
 
   return (

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Sora } from "next/font/google";
+import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import { AuthProvider } from "@/lib/auth-context";
 import { PlayerProvider } from "@/lib/player-context";
@@ -38,23 +39,32 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${sora.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-vampire-black text-light-grey font-body">
-        <AuthProvider>
-          <StoreProvider>
-            <ToastProvider>
-              <PlayerProvider>
-                <SongDetailProvider>
-                  <div className="aurora-bg" aria-hidden="true" />
-                  <AppShell>{children}</AppShell>
-                  <PersistentPlayer />
-                  <SongDetailDrawer />
-                </SongDetailProvider>
-              </PlayerProvider>
-            </ToastProvider>
-          </StoreProvider>
-        </AuthProvider>
-      </body>
-    </html>
+    <ClerkProvider
+      appearance={{
+        variables: {
+          colorPrimary: "#4f89ff",
+          colorBackground: "#ffffff",
+        },
+      }}
+    >
+      <html lang="en" className={`${sora.variable} h-full antialiased`}>
+        <body className="min-h-full flex flex-col bg-vampire-black text-light-grey font-body">
+          <AuthProvider>
+            <StoreProvider>
+              <ToastProvider>
+                <PlayerProvider>
+                  <SongDetailProvider>
+                    <div className="aurora-bg" aria-hidden="true" />
+                    <AppShell>{children}</AppShell>
+                    <PersistentPlayer />
+                    <SongDetailDrawer />
+                  </SongDetailProvider>
+                </PlayerProvider>
+              </ToastProvider>
+            </StoreProvider>
+          </AuthProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
