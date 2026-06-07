@@ -1,0 +1,175 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id                    String          @id @default(cuid())
+  clerkUserId           String          @unique @map("clerk_user_id")
+  email                 String?         @unique
+  firstName             String?         @map("first_name")
+  lastName              String?         @map("last_name")
+  imageUrl              String?         @map("image_url")
+  onboardingUseCase     String?         @map("onboarding_use_case")
+  onboardingSounds      Json?           @map("onboarding_sounds")
+  onboardingCompletedAt DateTime?       @map("onboarding_completed_at")
+  clerkCreatedAt        DateTime?       @map("clerk_created_at")
+  clerkUpdatedAt        DateTime?       @map("clerk_updated_at")
+  deletedAt             DateTime?       @map("deleted_at")
+  createdAt             DateTime        @default(now()) @map("created_at")
+  updatedAt             DateTime        @updatedAt @map("updated_at")
+  purchases             Purchase[]
+  subscriptions         Subscription[]
+  licenses              License[]
+  downloadEvents        DownloadEvent[]
+  streamEvents          StreamEvent[]
+
+  @@map("users")
+}
+
+model MusicPack {
+  id            String     @id
+  title         String
+  category      String
+  coverUrl      String?    @map("cover_url")
+  tagline       String?
+  description   String?    @db.Text
+  trackCount    Int        @default(0) @map("track_count")
+  totalDuration Int        @default(0) @map("total_duration")
+  sourceStatus  String     @default("ready") @map("source_status")
+  createdAt     DateTime   @default(now()) @map("created_at")
+  updatedAt     DateTime   @updatedAt @map("updated_at")
+  tracks        Track[]
+  purchases     Purchase[]
+
+  @@index([category])
+  @@map("music_packs")
+}
+
+model Track {
+  id              String          @id
+  title           String
+  packId          String          @map("pack_id")
+  pack            MusicPack       @relation(fields: [packId], references: [id], onDelete: Cascade)
+  category        String
+  sourceCategory  String?         @map("source_category")
+  durationSeconds Int             @map("duration_seconds")
+  hasMp3          Boolean         @default(false) @map("has_mp3")
+  hasWav          Boolean         @default(false) @map("has_wav")
+  hasLyrics       Boolean         @default(false) @map("has_lyrics")
+  isInstrumental  Boolean         @default(false) @map("is_instrumental")
+  mp3Path         String?         @map("mp3_path")
+  wavPath         String?         @map("wav_path")
+  lyricsUrl       String?         @map("lyrics_url")
+  sourcePath      String?         @map("source_path")
+  metadataText    String?         @map("metadata_text") @db.Text
+  searchText      String?         @map("search_text") @db.Text
+  tags            Json?
+  createdAt       DateTime        @default(now()) @map("created_at")
+  updatedAt       DateTime        @updatedAt @map("updated_at")
+  purchases       Purchase[]
+  licenses        License[]
+  downloadEvents  DownloadEvent[]
+  streamEvents    StreamEvent[]
+
+  @@index([packId])
+  @@index([category])
+  @@map("tracks")
+}
+
+model Purchase {
+  id                String     @id @default(cuid())
+  userId            String     @map("user_id")
+  user              User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  trackId           String?    @map("track_id")
+  track             Track?     @relation(fields: [trackId], references: [id], onDelete: SetNull)
+  packId            String?    @map("pack_id")
+  pack              MusicPack? @relation(fields: [packId], references: [id], onDelete: SetNull)
+  provider          String
+  providerPaymentId String?    @unique @map("provider_payment_id")
+  amountPaise       Int        @map("amount_paise")
+  currency          String     @default("INR")
+  status            String
+  createdAt         DateTime   @default(now()) @map("created_at")
+  updatedAt         DateTime   @updatedAt @map("updated_at")
+  licenses          License[]
+
+  @@index([userId])
+  @@index([trackId])
+  @@index([packId])
+  @@index([status])
+  @@map("purchases")
+}
+
+model Subscription {
+  id                     String    @id @default(cuid())
+  userId                 String    @map("user_id")
+  user                   User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  plan                   String
+  provider               String
+  providerSubscriptionId String?   @unique @map("provider_subscription_id")
+  status                 String
+  currentPeriodStart     DateTime? @map("current_period_start")
+  currentPeriodEnd       DateTime? @map("current_period_end")
+  createdAt              DateTime  @default(now()) @map("created_at")
+  updatedAt              DateTime  @updatedAt @map("updated_at")
+
+  @@index([userId])
+  @@index([status])
+  @@map("subscriptions")
+}
+
+model License {
+  id            String    @id @default(cuid())
+  userId        String    @map("user_id")
+  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  purchaseId    String?   @unique @map("purchase_id")
+  purchase      Purchase? @relation(fields: [purchaseId], references: [id], onDelete: SetNull)
+  trackId       String?   @map("track_id")
+  track         Track?    @relation(fields: [trackId], references: [id], onDelete: SetNull)
+  licenseNumber String    @unique @map("license_number")
+  filePath      String?   @map("file_path")
+  issuedAt      DateTime  @default(now()) @map("issued_at")
+  createdAt     DateTime  @default(now()) @map("created_at")
+  updatedAt     DateTime  @updatedAt @map("updated_at")
+
+  @@index([userId])
+  @@index([trackId])
+  @@map("licenses")
+}
+
+model DownloadEvent {
+  id        String   @id @default(cuid())
+  userId    String   @map("user_id")
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  trackId   String?  @map("track_id")
+  track     Track?   @relation(fields: [trackId], references: [id], onDelete: SetNull)
+  format    String
+  ipHash    String?  @map("ip_hash")
+  userAgent String?  @map("user_agent")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@index([userId])
+  @@index([trackId])
+  @@map("download_events")
+}
+
+model StreamEvent {
+  id        String   @id @default(cuid())
+  userId    String   @map("user_id")
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  trackId   String?  @map("track_id")
+  track     Track?   @relation(fields: [trackId], references: [id], onDelete: SetNull)
+  format    String
+  mode      String
+  ipHash    String?  @map("ip_hash")
+  userAgent String?  @map("user_agent")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@index([userId])
+  @@index([trackId])
+  @@map("stream_events")
+}

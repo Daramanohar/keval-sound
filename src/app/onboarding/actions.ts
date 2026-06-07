@@ -1,6 +1,7 @@
 "use server";
 
-import { auth, clerkClient } from "@clerk/nextjs/server";
+import { auth, clerkClient, currentUser } from "@clerk/nextjs/server";
+import { upsertUserFromClerk } from "@/lib/clerk-user-sync";
 
 const USE_CASE_IDS = new Set([
   "films-videos",
@@ -63,16 +64,37 @@ export async function saveOnboarding(
   }
 
   try {
+    const onboarding = {
+      useCase: payload.useCase,
+      sounds,
+      completedAt: new Date().toISOString(),
+    };
     const client = await clerkClient();
     await client.users.updateUserMetadata(userId, {
       publicMetadata: {
-        onboarding: {
-          useCase: payload.useCase,
-          sounds,
-          completedAt: new Date().toISOString(),
-        },
+        onboarding,
       },
     });
+
+    const user = await currentUser();
+    if (user) {
+      const result = await upsertUserFromClerk({
+        id: user.id,
+        emailAddresses: user.emailAddresses,
+        primaryEmailAddressId: user.primaryEmailAddressId,
+        firstName: user.firstName,
+        lastName: user.lastName,
+        imageUrl: user.imageUrl,
+        publicMetadata: { onboarding },
+        createdAt: user.createdAt,
+        updatedAt: user.updatedAt,
+      });
+
+      if (!result.ok && !result.skipped) {
+        console.error("[onboarding] database mirror failed", result.reason);
+      }
+    }
+
     return { ok: true };
   } catch (error) {
     console.error("[onboarding] saveOnboarding failed", error);
