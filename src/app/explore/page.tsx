@@ -1,9 +1,9 @@
 "use client";
 
-import { startTransition, useDeferredValue, useMemo, useState } from "react";
+import { startTransition, useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
-import { Grid3X3, LayoutList, SlidersHorizontal, X } from "lucide-react";
+import { BrainCircuit, Grid3X3, LayoutList, Loader2, SlidersHorizontal, X } from "lucide-react";
 import PageTransition from "@/components/PageTransition";
 import SearchBar from "@/components/SearchBar";
 import FilterPanel, {
@@ -12,8 +12,27 @@ import FilterPanel, {
 } from "@/components/FilterPanel";
 import TrackCard from "@/components/TrackCard";
 import SectionHeader from "@/components/SectionHeader";
-import { allTracks } from "@/lib/mock-data";
+import type { Track } from "@/lib/mock-data";
+import type { ExploreGenreOption } from "@/lib/explore-search";
 import { cn } from "@/lib/utils";
+
+type ExploreSearchPayload = {
+  query: string;
+  genre: string;
+  total: number;
+  limit: number;
+  tracks: Track[];
+  genres: ExploreGenreOption[];
+};
+
+type SearchPayloadState = ExploreSearchPayload & {
+  requestKey: string;
+};
+
+type SearchErrorState = {
+  requestKey: string;
+  message: string;
+};
 
 export default function ExplorePage() {
   const router = useRouter();
@@ -23,31 +42,53 @@ export default function ExplorePage() {
   const [filters, setFilters] = useState<FilterState>(defaultFilters);
   const [view, setView] = useState<"grid" | "list">("grid");
   const [showMobileFilters, setShowMobileFilters] = useState(false);
-  const deferredQuery = useDeferredValue(query);
+  const requestKey = useMemo(
+    () => JSON.stringify({ query: query.trim(), genre: filters.genre }),
+    [filters.genre, query]
+  );
+  const [payload, setPayload] = useState<SearchPayloadState | null>(null);
+  const [errorState, setErrorState] = useState<SearchErrorState | null>(null);
+  const isLoading = payload?.requestKey !== requestKey && errorState?.requestKey !== requestKey;
+  const error = errorState?.requestKey === requestKey ? errorState.message : null;
 
-  const filteredTracks = useMemo(() => {
-    const search = deferredQuery.trim().toLowerCase();
+  useEffect(() => {
+    const controller = new AbortController();
+    const params = new URLSearchParams();
+    const cleanQuery = query.trim();
 
-    return allTracks.filter((track) => {
-      if (filters.genre !== "All Genres" && track.genre !== filters.genre) return false;
+    if (cleanQuery) params.set("q", cleanQuery);
+    if (filters.genre !== "All Genres") params.set("genre", filters.genre);
+    params.set("limit", "160");
 
-      if (!search) return true;
+    fetch(`/api/explore/search?${params.toString()}`, {
+      signal: controller.signal,
+      headers: {
+        Accept: "application/json",
+      },
+    })
+      .then(async (response) => {
+        const data = await response.json().catch(() => null);
 
-      const haystack = [
-        track.title,
-        track.artist,
-        track.genre,
-        track.mood,
-        track.region,
-        track.language,
-        ...track.tags,
-      ]
-        .join(" ")
-        .toLowerCase();
+        if (!response.ok) {
+          throw new Error(data?.error ?? "search_failed");
+        }
 
-      return haystack.includes(search);
-    });
-  }, [deferredQuery, filters]);
+        setPayload({ ...(data as ExploreSearchPayload), requestKey });
+      })
+      .catch((searchError) => {
+        if (searchError.name === "AbortError") return;
+        setErrorState({
+          requestKey,
+          message: searchError.message,
+        });
+      });
+
+    return () => controller.abort();
+  }, [filters.genre, query, requestKey]);
+
+  const filteredTracks = payload?.tracks ?? [];
+  const totalMatches = payload?.total ?? 0;
+  const visibleLimit = payload?.limit ?? 160;
 
   const handleSearch = (nextQuery: string) => {
     const params = new URLSearchParams(searchParams.toString());
@@ -63,18 +104,37 @@ export default function ExplorePage() {
     });
   };
 
+  const searchSummary = useMemo(() => {
+    if (isLoading && !payload) return "Searching the Keval metadata library";
+    if (query && filters.genre !== "All Genres") {
+      return `${totalMatches} metadata matches for "${query}" inside ${filters.genre}`;
+    }
+    if (query) return `${totalMatches} metadata matches for "${query}"`;
+    if (filters.genre !== "All Genres") return `${totalMatches} ${filters.genre} tracks available`;
+    return `${totalMatches} searchable tracks across the production catalog`;
+  }, [filters.genre, isLoading, payload, query, totalMatches]);
+
   return (
     <PageTransition>
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-mid-purple/10 via-transparent to-transparent pointer-events-none" />
         <div className="relative z-10 pt-12 pb-8">
           <SectionHeader
-            title="Explore Catalog"
-            subtitle={`${filteredTracks.length} exclusive tracks available${query ? ` for "${query}"` : ""}`}
+            title="Explore"
+            subtitle={searchSummary}
             gradient
           />
-          <div className="max-w-2xl">
+          <div className="max-w-3xl">
             <SearchBar size="compact" initialQuery={query} onSearch={handleSearch} />
+            <div className="mt-3 flex flex-wrap items-center gap-2 text-xs text-muted">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-vivid-blue/10 px-2.5 py-1 text-vivid-blue">
+                <BrainCircuit className="h-3.5 w-3.5" />
+                Metadata-ranked search
+              </span>
+              <span>Try: cinematic trailer for a mountain scene</span>
+              <span className="hidden sm:inline">or</span>
+              <span>lo-fi study beat with soft piano</span>
+            </div>
           </div>
         </div>
       </div>
@@ -83,14 +143,23 @@ export default function ExplorePage() {
         <div className="flex gap-8">
           <aside className="hidden lg:block w-64 shrink-0">
             <div className="sticky top-24">
-              <FilterPanel value={filters} onFilterChange={setFilters} />
+              <FilterPanel
+                value={filters}
+                onFilterChange={setFilters}
+                genreOptions={payload?.genres ?? []}
+              />
             </div>
           </aside>
 
           <div className="flex-1 min-w-0">
             <div className="flex items-center justify-between mb-6 gap-4">
               <div className="text-sm text-muted">
-                Showing <span className="text-white font-medium">{filteredTracks.length}</span> tracks
+                Showing <span className="text-white font-medium">{filteredTracks.length}</span>
+                {totalMatches > visibleLimit ? (
+                  <>
+                    {" "}of <span className="text-white font-medium">{totalMatches}</span>
+                  </>
+                ) : null} tracks
               </div>
               <div className="flex items-center gap-2">
                 <button
@@ -150,11 +219,24 @@ export default function ExplorePage() {
                     <X className="w-4 h-4" />
                   </button>
                 </div>
-                <FilterPanel value={filters} onFilterChange={setFilters} />
+                <FilterPanel
+                  value={filters}
+                  onFilterChange={setFilters}
+                  genreOptions={payload?.genres ?? []}
+                />
               </motion.div>
             )}
 
-            {filteredTracks.length > 0 ? (
+            {isLoading && !payload ? (
+              <div className="flex items-center justify-center py-24 text-muted">
+                <Loader2 className="mr-2 h-5 w-5 animate-spin text-vivid-blue" />
+                Searching catalog metadata...
+              </div>
+            ) : error ? (
+              <div className="rounded-2xl border border-zesty-red/20 bg-zesty-red/10 p-6 text-sm text-zesty-red">
+                Search failed: {error}
+              </div>
+            ) : filteredTracks.length > 0 ? (
               <div
                 className={cn(
                   "grid gap-4 md:gap-6",
@@ -164,7 +246,12 @@ export default function ExplorePage() {
                 )}
               >
                 {filteredTracks.map((track, index) => (
-                  <TrackCard key={track.id} track={track} index={index} />
+                  <TrackCard
+                    key={track.id}
+                    track={track}
+                    index={index}
+                    rank={query ? index + 1 : undefined}
+                  />
                 ))}
               </div>
             ) : (

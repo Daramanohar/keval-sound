@@ -1,0 +1,32 @@
+import { auth } from "@clerk/nextjs/server";
+import { searchExploreTracks } from "@/lib/explore-search";
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
+function json(body: Record<string, unknown>, status = 200) {
+  return Response.json(body, {
+    status,
+    headers: {
+      "Cache-Control": "no-store",
+    },
+  });
+}
+
+export async function GET(request: Request) {
+  const { userId } = await auth();
+
+  if (!userId) {
+    return json({ error: "unauthorized" }, 401);
+  }
+
+  const url = new URL(request.url);
+  const query = url.searchParams.get("q") ?? "";
+  const genre = url.searchParams.get("genre") ?? "All Genres";
+  const limitParam = Number(url.searchParams.get("limit") ?? "160");
+  const limit = Number.isFinite(limitParam)
+    ? Math.min(Math.max(Math.trunc(limitParam), 1), 240)
+    : 160;
+
+  return json(searchExploreTracks(query, genre, limit));
+}

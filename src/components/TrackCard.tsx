@@ -34,6 +34,7 @@ const TrackCard = memo(function TrackCard({ track, index = 0, rank }: TrackCardP
   const isFavorited = isInWishlist(track.id, "track");
   const inCart = isInCart(track.id, "track");
   const owned = isOwned(track.id, "track");
+  const hasImageCover = track.coverUrl.startsWith("/") || track.coverUrl.startsWith("http");
 
   const handlePreview = useCallback(() => {
     toggleTrack(track);
@@ -78,7 +79,24 @@ const TrackCard = memo(function TrackCard({ track, index = 0, rank }: TrackCardP
       className="glass-card group overflow-hidden rounded-2xl"
     >
       <div className="relative aspect-[4/3] overflow-hidden">
-        <div className={cn("absolute inset-0 bg-gradient-to-br transition-transform duration-700", track.coverUrl, isHovered && "scale-105")} />
+        {hasImageCover ? (
+          <div
+            aria-hidden="true"
+            style={{ backgroundImage: `url("${track.coverUrl}")` }}
+            className={cn(
+              "absolute inset-0 bg-cover bg-center transition-transform duration-700",
+              isHovered && "scale-105"
+            )}
+          />
+        ) : (
+          <div
+            className={cn(
+              "absolute inset-0 bg-gradient-to-br transition-transform duration-700",
+              track.coverUrl,
+              isHovered && "scale-105"
+            )}
+          />
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-vampire-black/80 via-black/25 to-transparent" />
 
         <div className="absolute left-2.5 top-2.5 flex flex-wrap gap-1.5">

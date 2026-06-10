@@ -2,7 +2,6 @@
 
 import { RotateCcw } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { genres } from "@/lib/mock-data";
 
 export interface FilterState {
   genre: string;
@@ -15,16 +14,30 @@ export const defaultFilters: FilterState = {
 interface FilterPanelProps {
   value: FilterState;
   onFilterChange: (filters: FilterState) => void;
+  genreOptions?: {
+    name: string;
+    count?: number;
+    category?: string;
+  }[];
   className?: string;
 }
 
 export default function FilterPanel({
   value,
   onFilterChange,
+  genreOptions = [],
   className,
 }: FilterPanelProps) {
   const resetFilters = () => onFilterChange(defaultFilters);
   const hasActiveFilters = value.genre !== defaultFilters.genre;
+  const options = [
+    {
+      name: "All Genres",
+      count: genreOptions.reduce((total, option) => total + (option.count ?? 0), 0),
+      category: "All",
+    },
+    ...genreOptions,
+  ];
 
   return (
     <div className={cn("space-y-4", className)}>
@@ -42,20 +55,39 @@ export default function FilterPanel({
         )}
       </div>
 
-      <div className="flex flex-wrap gap-1.5">
-        {genres.map((option) => (
+      <div className="max-h-[calc(100vh-12rem)] space-y-1.5 overflow-y-auto pr-1">
+        {options.map((option) => (
           <button
-            key={option}
+            key={option.name}
             type="button"
-            onClick={() => onFilterChange({ genre: option })}
+            onClick={() => onFilterChange({ genre: option.name })}
             className={cn(
-              "px-3 py-1.5 rounded-lg text-xs font-medium transition-all",
-              value.genre === option
+              "flex w-full items-center justify-between gap-3 rounded-lg px-3 py-2 text-left text-xs transition-all",
+              value.genre === option.name
                 ? "bg-vivid-blue text-white"
                 : "bg-white/[0.04] text-muted hover:bg-white/[0.08] hover:text-white"
             )}
           >
-            {option === "All Genres" ? "All" : option}
+            <span className="min-w-0">
+              <span className="block truncate font-semibold">
+                {option.name === "All Genres" ? "All" : option.name}
+              </span>
+              {option.category && option.name !== "All Genres" && (
+                <span className="mt-0.5 block truncate text-[10px] opacity-55">
+                  {option.category}
+                </span>
+              )}
+            </span>
+            {typeof option.count === "number" && (
+              <span
+                className={cn(
+                  "shrink-0 rounded-full px-1.5 py-0.5 text-[10px] font-semibold",
+                  value.genre === option.name ? "bg-white/20 text-white" : "bg-white/[0.06] text-muted"
+                )}
+              >
+                {option.count}
+              </span>
+            )}
           </button>
         ))}
       </div>
