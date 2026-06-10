@@ -50,30 +50,34 @@ model MusicPack {
 }
 
 model Track {
-  id              String          @id
-  title           String
-  packId          String          @map("pack_id")
-  pack            MusicPack       @relation(fields: [packId], references: [id], onDelete: Cascade)
-  category        String
-  sourceCategory  String?         @map("source_category")
-  durationSeconds Int             @map("duration_seconds")
-  hasMp3          Boolean         @default(false) @map("has_mp3")
-  hasWav          Boolean         @default(false) @map("has_wav")
-  hasLyrics       Boolean         @default(false) @map("has_lyrics")
-  isInstrumental  Boolean         @default(false) @map("is_instrumental")
-  mp3Path         String?         @map("mp3_path")
-  wavPath         String?         @map("wav_path")
-  lyricsUrl       String?         @map("lyrics_url")
-  sourcePath      String?         @map("source_path")
-  metadataText    String?         @map("metadata_text") @db.Text
-  searchText      String?         @map("search_text") @db.Text
-  tags            Json?
-  createdAt       DateTime        @default(now()) @map("created_at")
-  updatedAt       DateTime        @updatedAt @map("updated_at")
-  purchases       Purchase[]
-  licenses        License[]
-  downloadEvents  DownloadEvent[]
-  streamEvents    StreamEvent[]
+  id                  String                       @id
+  title               String
+  packId              String                       @map("pack_id")
+  pack                MusicPack                    @relation(fields: [packId], references: [id], onDelete: Cascade)
+  category            String
+  sourceCategory      String?                      @map("source_category")
+  durationSeconds     Int                          @map("duration_seconds")
+  hasMp3              Boolean                      @default(false) @map("has_mp3")
+  hasWav              Boolean                      @default(false) @map("has_wav")
+  hasLyrics           Boolean                      @default(false) @map("has_lyrics")
+  isInstrumental      Boolean                      @default(false) @map("is_instrumental")
+  mp3Path             String?                      @map("mp3_path")
+  wavPath             String?                      @map("wav_path")
+  lyricsUrl           String?                      @map("lyrics_url")
+  sourcePath          String?                      @map("source_path")
+  metadataText        String?                      @map("metadata_text") @db.Text
+  searchText          String?                      @map("search_text") @db.Text
+  metadataHash        String?                      @map("metadata_hash")
+  embeddingModel      String?                      @map("embedding_model")
+  embeddingDimensions Int?                         @map("embedding_dimensions")
+  embedding           Unsupported("vector(1024)")?
+  tags                Json?
+  createdAt           DateTime                     @default(now()) @map("created_at")
+  updatedAt           DateTime                     @updatedAt @map("updated_at")
+  purchases           Purchase[]
+  licenses            License[]
+  downloadEvents      DownloadEvent[]
+  streamEvents        StreamEvent[]
 
   @@index([packId])
   @@index([category])

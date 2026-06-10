@@ -16,7 +16,11 @@
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev",
     "db:push": "prisma db push",
-    "db:studio": "prisma studio"
+    "db:studio": "prisma studio",
+    "db:setup-vector": "node scripts/setup-neon-vector-search.mjs",
+    "catalog:sync-db": "node scripts/sync-production-catalog-to-neon.mjs",
+    "ai:embed-tracks": "node scripts/embed-tracks.mjs",
+    "ai:test-search": "node scripts/query-track-similarity.mjs"
   },
   "dependencies": {
     "@clerk/backend": "^3.5.0",

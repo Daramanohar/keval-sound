@@ -146,7 +146,7 @@ function generateWaveform(label: string) {
   });
 }
 
-function toTrack(record: ProductionSongRecord, index: number): Track {
+export function recordToExploreTrack(record: ProductionSongRecord, index: number): Track {
   return {
     id: record.id,
     title: record.title,
@@ -279,7 +279,7 @@ export function searchExploreTracks(query: string, genre = "All Genres", limit =
     genre: normalizedGenre,
     total: candidates.length,
     limit,
-    tracks: candidates.slice(0, limit).map((result, index) => toTrack(result.record, index)),
+    tracks: candidates.slice(0, limit).map((result, index) => recordToExploreTrack(result.record, index)),
     genres: getExploreGenres(),
     categories: getExploreCategories(),
   } satisfies ExploreSearchResponse;

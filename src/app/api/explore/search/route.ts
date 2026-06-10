@@ -1,10 +1,10 @@
 import { auth } from "@clerk/nextjs/server";
-import { searchExploreTracks } from "@/lib/explore-search";
+import { searchExploreTracksSmart } from "@/lib/vector-explore-search";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-function json(body: Record<string, unknown>, status = 200) {
+function json(body: unknown, status = 200) {
   return Response.json(body, {
     status,
     headers: {
@@ -28,5 +28,5 @@ export async function GET(request: Request) {
     ? Math.min(Math.max(Math.trunc(limitParam), 1), 240)
     : 160;
 
-  return json(searchExploreTracks(query, genre, limit));
+  return json(await searchExploreTracksSmart(query, genre, limit));
 }
