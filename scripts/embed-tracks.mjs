@@ -31,61 +31,76 @@ async function fetchPendingTracks(client, model, dimensions, limit) {
   return result.rows;
 }
 
+async function updateEmbeddingBatch(client, rows) {
+  if (!rows.length) return;
+
+  await client.query(
+    `
+      with incoming as (
+        select *
+        from jsonb_to_recordset($1::jsonb) as embedding_rows(
+          id text,
+          embedding text,
+          embedding_model text,
+          embedding_dimensions integer,
+          metadata_hash text
+        )
+      )
+      update tracks
+      set
+        embedding = incoming.embedding::vector,
+        embedding_model = incoming.embedding_model,
+        embedding_dimensions = incoming.embedding_dimensions,
+        metadata_hash = coalesce(tracks.metadata_hash, incoming.metadata_hash),
+        updated_at = now()
+      from incoming
+      where tracks.id = incoming.id
+    `,
+    [JSON.stringify(rows)]
+  );
+}
+
 async function main() {
   const config = getEmbeddingConfig();
   const model = config.model || DEFAULT_EMBEDDING_MODEL;
   const dimensions = config.dimensions || DEFAULT_EMBEDDING_DIMENSIONS;
 
-  await withClient(async (client) => {
-    const tracks = await fetchPendingTracks(client, model, dimensions, LIMIT);
-    console.log(`Pending embeddings: ${tracks.length}`);
-    if (!tracks.length) return;
+  const tracks = await withClient((client) => fetchPendingTracks(client, model, dimensions, LIMIT));
+  console.log(`Pending embeddings: ${tracks.length}`);
+  if (!tracks.length) return;
 
-    let embedded = 0;
+  let embedded = 0;
 
-    for (let index = 0; index < tracks.length; index += BATCH_SIZE) {
-      const batch = tracks.slice(index, index + BATCH_SIZE);
-      const texts = batch.map((track) => track.search_text);
-      const vectors = await embedTexts(texts, config);
+  for (let index = 0; index < tracks.length; index += BATCH_SIZE) {
+    const batch = tracks.slice(index, index + BATCH_SIZE);
+    const texts = batch.map((track) => track.search_text);
+    const vectors = await embedTexts(texts, config);
 
-      if (vectors.length !== batch.length) {
-        throw new Error(`Embedding provider returned ${vectors.length} vectors for ${batch.length} inputs`);
-      }
-
-      for (let itemIndex = 0; itemIndex < batch.length; itemIndex += 1) {
-        const track = batch[itemIndex];
-        const vector = vectors[itemIndex];
-        if (!vector || vector.length !== dimensions) {
-          throw new Error(
-            `Invalid embedding dimension for ${track.id}: expected ${dimensions}, got ${vector?.length ?? 0}`
-          );
-        }
-
-        await client.query(
-          `
-            update tracks
-            set
-              embedding = $1::vector,
-              embedding_model = $2,
-              embedding_dimensions = $3,
-              metadata_hash = coalesce(metadata_hash, $4),
-              updated_at = now()
-            where id = $5
-          `,
-          [
-            vectorToSql(vector),
-            model,
-            dimensions,
-            track.metadata_hash ?? createMetadataHash(track.search_text),
-            track.id,
-          ]
-        );
-        embedded += 1;
-      }
-
-      console.log(`Embedded ${embedded}/${tracks.length}`);
+    if (vectors.length !== batch.length) {
+      throw new Error(`Embedding provider returned ${vectors.length} vectors for ${batch.length} inputs`);
     }
-  });
+
+    const rows = batch.map((track, itemIndex) => {
+      const vector = vectors[itemIndex];
+      if (!vector || vector.length !== dimensions) {
+        throw new Error(
+          `Invalid embedding dimension for ${track.id}: expected ${dimensions}, got ${vector?.length ?? 0}`
+        );
+      }
+
+      return {
+        id: track.id,
+        embedding: vectorToSql(vector),
+        embedding_model: model,
+        embedding_dimensions: dimensions,
+        metadata_hash: track.metadata_hash ?? createMetadataHash(track.search_text),
+      };
+    });
+
+    await withClient((client) => updateEmbeddingBatch(client, rows));
+    embedded += batch.length;
+    console.log(`Embedded ${embedded}/${tracks.length}`);
+  }
 }
 
 main().catch((error) => {
