@@ -3,7 +3,7 @@
 import { startTransition, useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
-import { BrainCircuit, Grid3X3, LayoutList, Loader2, SlidersHorizontal, X } from "lucide-react";
+import { BrainCircuit, Grid3X3, LayoutList, Loader2, RotateCcw, SlidersHorizontal, X } from "lucide-react";
 import PageTransition from "@/components/PageTransition";
 import SearchBar from "@/components/SearchBar";
 import FilterPanel, {
@@ -109,6 +109,14 @@ export default function ExplorePage() {
     });
   };
 
+  const handleResetSearch = () => {
+    setFilters(defaultFilters);
+    setShowMobileFilters(false);
+    startTransition(() => {
+      router.push("/explore");
+    });
+  };
+
   const searchSummary = useMemo(() => {
     if (isLoading && !payload) return "Searching the Keval metadata library";
     const searchLabel = payload?.searchMode === "vector" ? "AI matches" : "metadata matches";
@@ -131,7 +139,12 @@ export default function ExplorePage() {
             gradient
           />
           <div className="max-w-3xl">
-            <SearchBar size="compact" initialQuery={query} onSearch={handleSearch} />
+            <SearchBar
+              size="compact"
+              initialQuery={query}
+              onSearch={handleSearch}
+              onClear={handleResetSearch}
+            />
             <div className="mt-3 flex flex-wrap items-center gap-2 text-xs text-muted">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-vivid-blue/10 px-2.5 py-1 text-vivid-blue">
                 <BrainCircuit className="h-3.5 w-3.5" />
@@ -140,6 +153,16 @@ export default function ExplorePage() {
               <span>Try: cinematic trailer for a mountain scene</span>
               <span className="hidden sm:inline">or</span>
               <span>lo-fi study beat with soft piano</span>
+              {(query || filters.genre !== "All Genres") ? (
+                <button
+                  type="button"
+                  onClick={handleResetSearch}
+                  className="inline-flex items-center gap-1.5 rounded-full border border-white/[0.08] bg-white/[0.04] px-2.5 py-1 text-white/75 transition-colors hover:border-vivid-blue/30 hover:text-white"
+                >
+                  <RotateCcw className="h-3.5 w-3.5" />
+                  Reset discovery
+                </button>
+              ) : null}
             </div>
           </div>
         </div>
@@ -166,6 +189,16 @@ export default function ExplorePage() {
                     {" "}of <span className="text-white font-medium">{totalMatches}</span>
                   </>
                 ) : null} tracks
+                {(query || filters.genre !== "All Genres") ? (
+                  <button
+                    type="button"
+                    onClick={handleResetSearch}
+                    className="ml-3 inline-flex items-center gap-1 text-vivid-blue transition-colors hover:text-white"
+                  >
+                    <RotateCcw className="h-3.5 w-3.5" />
+                    Clear search
+                  </button>
+                ) : null}
               </div>
               <div className="flex items-center gap-2">
                 <button

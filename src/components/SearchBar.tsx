@@ -20,6 +20,7 @@ interface SearchBarProps {
   className?: string;
   initialQuery?: string;
   onSearch?: (query: string) => void;
+  onClear?: () => void;
 }
 
 export default function SearchBar({
@@ -27,6 +28,7 @@ export default function SearchBar({
   className,
   initialQuery = "",
   onSearch,
+  onClear,
 }: SearchBarProps) {
   const [query, setQuery] = useState(initialQuery);
   const [focused, setFocused] = useState(false);
@@ -112,6 +114,7 @@ export default function SearchBar({
             onClick={() => {
               setQuery("");
               setOptimized(false);
+              onClear?.();
               inputRef.current?.focus();
             }}
             className="p-2 text-muted hover:text-white transition-colors"
