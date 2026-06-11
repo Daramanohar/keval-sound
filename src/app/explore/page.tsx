@@ -18,6 +18,11 @@ import { cn } from "@/lib/utils";
 
 type ExploreSearchPayload = {
   query: string;
+  originalQuery?: string;
+  optimizedQuery?: string;
+  acknowledgement?: string;
+  searchMode?: "metadata" | "vector";
+  vectorReady?: boolean;
   genre: string;
   total: number;
   limit: number;
@@ -106,12 +111,13 @@ export default function ExplorePage() {
 
   const searchSummary = useMemo(() => {
     if (isLoading && !payload) return "Searching the Keval metadata library";
+    const searchLabel = payload?.searchMode === "vector" ? "AI matches" : "metadata matches";
     if (query && filters.genre !== "All Genres") {
-      return `${totalMatches} metadata matches for "${query}" inside ${filters.genre}`;
+      return `${totalMatches} ${searchLabel} for "${query}" inside ${filters.genre}`;
     }
-    if (query) return `${totalMatches} metadata matches for "${query}"`;
+    if (query) return `${totalMatches} ${searchLabel} for "${query}"`;
     if (filters.genre !== "All Genres") return `${totalMatches} ${filters.genre} tracks available`;
-    return `${totalMatches} searchable tracks across the production catalog`;
+    return `${totalMatches} mixed tracks across the production catalog`;
   }, [filters.genre, isLoading, payload, query, totalMatches]);
 
   return (
@@ -129,7 +135,7 @@ export default function ExplorePage() {
             <div className="mt-3 flex flex-wrap items-center gap-2 text-xs text-muted">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-vivid-blue/10 px-2.5 py-1 text-vivid-blue">
                 <BrainCircuit className="h-3.5 w-3.5" />
-                Metadata-ranked search
+                {payload?.searchMode === "vector" ? "Vector AI search" : "Metadata-ranked search"}
               </span>
               <span>Try: cinematic trailer for a mountain scene</span>
               <span className="hidden sm:inline">or</span>
@@ -230,29 +236,46 @@ export default function ExplorePage() {
             {isLoading && !payload ? (
               <div className="flex items-center justify-center py-24 text-muted">
                 <Loader2 className="mr-2 h-5 w-5 animate-spin text-vivid-blue" />
-                Searching catalog metadata...
+                Searching the Keval AI music index...
               </div>
             ) : error ? (
               <div className="rounded-2xl border border-zesty-red/20 bg-zesty-red/10 p-6 text-sm text-zesty-red">
                 Search failed: {error}
               </div>
             ) : filteredTracks.length > 0 ? (
-              <div
-                className={cn(
-                  "grid gap-4 md:gap-6",
-                  view === "grid"
-                    ? "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4"
-                    : "grid-cols-1 sm:grid-cols-2"
-                )}
-              >
-                {filteredTracks.map((track, index) => (
-                  <TrackCard
-                    key={track.id}
-                    track={track}
-                    index={index}
-                    rank={query ? index + 1 : undefined}
-                  />
-                ))}
+              <div className="space-y-5">
+                {payload?.acknowledgement ? (
+                  <motion.div
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="rounded-2xl border border-vivid-blue/15 bg-vivid-blue/[0.07] px-4 py-3 text-sm text-white/82"
+                  >
+                    <p>{payload.acknowledgement}</p>
+                    {payload.optimizedQuery ? (
+                      <p className="mt-1 text-xs text-muted">
+                        Optimized search: <span className="text-vivid-blue">{payload.optimizedQuery}</span>
+                      </p>
+                    ) : null}
+                  </motion.div>
+                ) : null}
+
+                <div
+                  className={cn(
+                    "grid gap-4 md:gap-6",
+                    view === "grid"
+                      ? "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4"
+                      : "grid-cols-1 sm:grid-cols-2"
+                  )}
+                >
+                  {filteredTracks.map((track, index) => (
+                    <TrackCard
+                      key={track.id}
+                      track={track}
+                      index={index}
+                      rank={query ? index + 1 : undefined}
+                    />
+                  ))}
+                </div>
               </div>
             ) : (
               <div className="text-center py-24">

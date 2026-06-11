@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, Search, Sparkles, Wand2, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { optimizeSearchPrompt } from "@/lib/search-intent";
 
 const suggestions = [
   "Upbeat Bollywood wedding track with dhol",
@@ -13,19 +14,6 @@ const suggestions = [
   "Punjabi bhangra pop for dance video",
   "Emotional Bengali acoustic ballad",
 ];
-
-const optimizations: Record<string, string> = {
-  "sad song":
-    "Melancholic Hindi ballad, minor key, acoustic guitar plus piano, emotional female vocals",
-  "party music":
-    "High-energy Bollywood dance track, major key, dhol plus synth bass, festival vibes",
-  "chill beats":
-    "Lo-fi Indian fusion, Am or Em key, sitar loops plus vinyl crackle and soft tabla, study or relaxation mood",
-  workout:
-    "Aggressive Desi hip-hop, heavy 808 bass, trap hi-hats, motivational energy",
-  wedding:
-    "Festive Punjabi Bhangra, dhol plus tumbi plus chimta, celebratory and joyful mood, Punjabi vocals",
-};
 
 interface SearchBarProps {
   size?: "hero" | "compact";
@@ -60,18 +48,12 @@ export default function SearchBar({
 
   const handleOptimize = () => {
     if (!query.trim()) return;
-    const lower = query.toLowerCase().trim();
-    const match = Object.keys(optimizations).find((key) => lower.includes(key));
+    const optimizedQuery = optimizeSearchPrompt(query);
 
-    if (match) {
-      setQuery(optimizations[match]);
-    } else {
-      setQuery(
-        `${query} - enhanced: include key signature, instrumentation, mood descriptor, and regional style`
-      );
-    }
-
+    setQuery(optimizedQuery);
     setOptimized(true);
+    onSearch?.(optimizedQuery);
+    setFocused(false);
     window.setTimeout(() => setOptimized(false), 1800);
   };
 

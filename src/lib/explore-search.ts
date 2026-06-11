@@ -63,6 +63,9 @@ export type ExploreCategoryOption = {
 
 export type ExploreSearchResponse = {
   query: string;
+  originalQuery?: string;
+  optimizedQuery?: string;
+  acknowledgement?: string;
   genre: string;
   total: number;
   limit: number;
@@ -217,6 +220,36 @@ function scoreRecord(record: ProductionSongRecord, query: string, tokens: string
   return score;
 }
 
+function mixRecordsAcrossPacks(records: ProductionSongRecord[]) {
+  if (!records.length) return [];
+
+  const buckets = new Map<string, ProductionSongRecord[]>();
+
+  for (const record of records) {
+    const bucket = buckets.get(record.packId) ?? [];
+    bucket.push(record);
+    buckets.set(record.packId, bucket);
+  }
+
+  const sortedBuckets = Array.from(buckets.values()).sort((left, right) => {
+    const leftFirst = left[0];
+    const rightFirst = right[0];
+    return leftFirst.category.localeCompare(rightFirst.category) ||
+      leftFirst.packTitle.localeCompare(rightFirst.packTitle);
+  });
+  const maxBucketLength = Math.max(...sortedBuckets.map((bucket) => bucket.length));
+  const mixed: ProductionSongRecord[] = [];
+
+  for (let index = 0; index < maxBucketLength; index += 1) {
+    for (const bucket of sortedBuckets) {
+      const record = bucket[index];
+      if (record) mixed.push(record);
+    }
+  }
+
+  return mixed;
+}
+
 export function getExploreGenres(): ExploreGenreOption[] {
   const counts = new Map<string, ExploreGenreOption>();
 
@@ -258,16 +291,33 @@ export function searchExploreTracks(query: string, genre = "All Genres", limit =
   const normalizedGenre = genre === "All" ? "All Genres" : genre;
   const cleanQuery = query.trim();
   const tokens = expandQuery(cleanQuery);
-
-  const candidates = productionSongRecords
+  const scopedRecords = productionSongRecords
     .filter((record) => record.hasMp3)
-    .filter((record) => normalizedGenre === "All Genres" || record.packTitle === normalizedGenre)
+    .filter((record) => normalizedGenre === "All Genres" || record.packTitle === normalizedGenre);
+
+  if (!cleanQuery) {
+    const records = normalizedGenre === "All Genres"
+      ? mixRecordsAcrossPacks(scopedRecords)
+      : scopedRecords;
+
+    return {
+      query: cleanQuery,
+      genre: normalizedGenre,
+      total: records.length,
+      limit,
+      tracks: records.slice(0, limit).map((record, index) => recordToExploreTrack(record, index)),
+      genres: getExploreGenres(),
+      categories: getExploreCategories(),
+    } satisfies ExploreSearchResponse;
+  }
+
+  const candidates = scopedRecords
     .map((record, index) => ({
       record,
       index,
       score: scoreRecord(record, cleanQuery, tokens),
     }))
-    .filter((result) => !cleanQuery || result.score > 0)
+    .filter((result) => result.score > 0)
     .sort((left, right) => {
       if (right.score !== left.score) return right.score - left.score;
       return left.record.packTitle.localeCompare(right.record.packTitle) ||

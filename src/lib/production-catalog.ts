@@ -5,6 +5,7 @@ import {
 } from "./production-catalog.generated";
 import { packs as basePacks, type Pack, type Track } from "./mock-data";
 import { getPackCopy } from "./pack-copy";
+import { optimizeSearchPrompt } from "./search-intent";
 
 export type CatalogCategory =
   | "Occasion"
@@ -242,7 +243,8 @@ export function getProductionPacksByCategory(category: CatalogCategory | "All") 
 }
 
 export function searchProductionTracks(query: string, options?: { category?: CatalogCategory | "All"; limit?: number }) {
-  const normalizedQuery = normalizeSearchText(query);
+  const optimizedQuery = optimizeSearchPrompt(query);
+  const normalizedQuery = normalizeSearchText(optimizedQuery);
   const limit = options?.limit ?? 80;
   const category = options?.category ?? "All";
 

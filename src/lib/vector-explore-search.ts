@@ -7,6 +7,7 @@ import {
   isEmbeddingProviderConfigured,
   vectorToSql,
 } from "@/lib/embedding-provider";
+import { createSearchAcknowledgement, optimizeSearchPrompt } from "@/lib/search-intent";
 import {
   getExploreCategories,
   getExploreGenres,
@@ -55,10 +56,16 @@ function withSearchMode(
   response: ExploreSearchResponse,
   searchMode: VectorSearchResponse["searchMode"],
   vectorReady: boolean,
-  vectorReason?: string
+  vectorReason?: string,
+  originalQuery = response.query,
+  optimizedQuery = response.query
 ): VectorSearchResponse {
   return {
     ...response,
+    query: originalQuery,
+    originalQuery,
+    optimizedQuery: optimizedQuery !== originalQuery ? optimizedQuery : undefined,
+    acknowledgement: createSearchAcknowledgement(originalQuery, response.total, vectorReady),
     searchMode,
     vectorReady,
     ...(vectorReason ? { vectorReason } : {}),
@@ -113,10 +120,20 @@ async function querySimilarTrackIds(
 }
 
 export async function searchExploreTracksSmart(query: string, genre = "All Genres", limit = 160) {
-  const cleanQuery = query.trim();
-  const fallback = () => withSearchMode(searchExploreTracks(query, genre, limit), "metadata", false);
+  const originalQuery = query.trim();
+  const optimizedQuery = originalQuery ? optimizeSearchPrompt(originalQuery) : "";
+  const searchQuery = optimizedQuery || originalQuery;
+  const fallback = (vectorReason?: string, vectorReady = false) =>
+    withSearchMode(
+      searchExploreTracks(searchQuery, genre, limit),
+      "metadata",
+      vectorReady,
+      vectorReason,
+      originalQuery,
+      searchQuery
+    );
 
-  if (!cleanQuery) {
+  if (!originalQuery) {
     return fallback();
   }
 
@@ -125,32 +142,17 @@ export async function searchExploreTracksSmart(query: string, genre = "All Genre
   const dimensions = config.dimensions || DEFAULT_EMBEDDING_DIMENSIONS;
 
   if (!isEmbeddingProviderConfigured(config)) {
-    return withSearchMode(
-      searchExploreTracks(query, genre, limit),
-      "metadata",
-      false,
-      "embedding_provider_not_configured"
-    );
+    return fallback("embedding_provider_not_configured");
   }
 
   if (!(await hasUsableEmbeddings(model, dimensions))) {
-    return withSearchMode(
-      searchExploreTracks(query, genre, limit),
-      "metadata",
-      false,
-      "track_embeddings_not_ready"
-    );
+    return fallback("track_embeddings_not_ready");
   }
 
   try {
-    const [queryVector] = await embedTexts([cleanQuery], config);
+    const [queryVector] = await embedTexts([searchQuery], config);
     if (!queryVector || queryVector.length !== dimensions) {
-      return withSearchMode(
-        searchExploreTracks(query, genre, limit),
-        "metadata",
-        false,
-        "invalid_query_embedding"
-      );
+      return fallback("invalid_query_embedding");
     }
 
     const rows = await querySimilarTrackIds(queryVector, model, dimensions, genre, limit);
@@ -178,7 +180,7 @@ export async function searchExploreTracksSmart(query: string, genre = "All Genre
         })
         .filter((document) => document !== null);
 
-      const rerankedDocuments = await rerankDocuments(cleanQuery, documents);
+      const rerankedDocuments = await rerankDocuments(searchQuery, documents);
       orderedIds = rerankedDocuments.map((document) => document.id);
       reranked = true;
     }
@@ -192,15 +194,20 @@ export async function searchExploreTracksSmart(query: string, genre = "All Genre
 
     if (!tracks.length) {
       return withSearchMode(
-        searchExploreTracks(query, genre, limit),
+        searchExploreTracks(searchQuery, genre, limit),
         "metadata",
         true,
-        "vector_search_returned_no_tracks"
+        "vector_search_returned_no_tracks",
+        originalQuery,
+        searchQuery
       );
     }
 
     return {
-      query: cleanQuery,
+      query: originalQuery,
+      originalQuery,
+      optimizedQuery: searchQuery !== originalQuery ? searchQuery : undefined,
+      acknowledgement: createSearchAcknowledgement(originalQuery, tracks.length, true),
       genre: genre === "All" ? "All Genres" : genre,
       total: tracks.length,
       limit,
@@ -213,11 +220,6 @@ export async function searchExploreTracksSmart(query: string, genre = "All Genre
     } satisfies VectorSearchResponse;
   } catch (error) {
     console.error("Vector search failed, falling back to metadata search", error);
-    return withSearchMode(
-      searchExploreTracks(query, genre, limit),
-      "metadata",
-      false,
-      "vector_search_failed"
-    );
+    return fallback("vector_search_failed");
   }
 }
