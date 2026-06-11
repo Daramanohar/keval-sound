@@ -39,6 +39,12 @@ type SearchErrorState = {
   message: string;
 };
 
+function normalizeGenre(genre: string) {
+  return genre === "All" || genre === defaultFilters.genre
+    ? defaultFilters.genre
+    : genre;
+}
+
 export default function ExplorePage() {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -47,9 +53,13 @@ export default function ExplorePage() {
   const [filters, setFilters] = useState<FilterState>(defaultFilters);
   const [view, setView] = useState<"grid" | "list">("grid");
   const [showMobileFilters, setShowMobileFilters] = useState(false);
+  const [resetVersion, setResetVersion] = useState(0);
+  const cleanQuery = query.trim();
+  const activeGenre = normalizeGenre(filters.genre);
+  const isDiscoveryView = !cleanQuery && activeGenre === defaultFilters.genre;
   const requestKey = useMemo(
-    () => JSON.stringify({ query: query.trim(), genre: filters.genre }),
-    [filters.genre, query]
+    () => JSON.stringify({ query: cleanQuery, genre: activeGenre, resetVersion }),
+    [activeGenre, cleanQuery, resetVersion]
   );
   const [payload, setPayload] = useState<SearchPayloadState | null>(null);
   const [errorState, setErrorState] = useState<SearchErrorState | null>(null);
@@ -59,10 +69,9 @@ export default function ExplorePage() {
   useEffect(() => {
     const controller = new AbortController();
     const params = new URLSearchParams();
-    const cleanQuery = query.trim();
 
     if (cleanQuery) params.set("q", cleanQuery);
-    if (filters.genre !== "All Genres") params.set("genre", filters.genre);
+    if (activeGenre !== defaultFilters.genre) params.set("genre", activeGenre);
     params.set("limit", "160");
 
     fetch(`/api/explore/search?${params.toString()}`, {
@@ -86,47 +95,69 @@ export default function ExplorePage() {
           requestKey,
           message: searchError.message,
         });
-      });
+    });
 
     return () => controller.abort();
-  }, [filters.genre, query, requestKey]);
+  }, [activeGenre, cleanQuery, requestKey]);
 
   const filteredTracks = payload?.tracks ?? [];
   const totalMatches = payload?.total ?? 0;
   const visibleLimit = payload?.limit ?? 160;
 
   const handleSearch = (nextQuery: string) => {
+    const trimmedQuery = nextQuery.trim();
+
+    if (!trimmedQuery) {
+      handleResetDiscovery();
+      return;
+    }
+
     const params = new URLSearchParams(searchParams.toString());
 
-    if (nextQuery) {
-      params.set("q", nextQuery);
-    } else {
-      params.delete("q");
-    }
+    params.set("q", trimmedQuery);
 
     startTransition(() => {
       router.push(`/explore${params.toString() ? `?${params.toString()}` : ""}`);
     });
   };
 
-  const handleResetSearch = () => {
+  const handleResetDiscovery = () => {
     setFilters(defaultFilters);
+    setPayload(null);
+    setErrorState(null);
     setShowMobileFilters(false);
+    setResetVersion((current) => current + 1);
+
+    if (window.location.pathname === "/explore") {
+      window.history.replaceState(null, "", "/explore");
+    }
+
     startTransition(() => {
-      router.push("/explore");
+      router.replace("/explore", { scroll: false });
     });
+  };
+
+  const handleFilterChange = (nextFilters: FilterState) => {
+    const nextGenre = normalizeGenre(nextFilters.genre);
+
+    if (nextGenre === defaultFilters.genre) {
+      handleResetDiscovery();
+      return;
+    }
+
+    setFilters({ genre: nextGenre });
   };
 
   const searchSummary = useMemo(() => {
     if (isLoading && !payload) return "Searching the Keval metadata library";
     const searchLabel = payload?.searchMode === "vector" ? "AI matches" : "metadata matches";
-    if (query && filters.genre !== "All Genres") {
-      return `${totalMatches} ${searchLabel} for "${query}" inside ${filters.genre}`;
+    if (cleanQuery && activeGenre !== defaultFilters.genre) {
+      return `${totalMatches} ${searchLabel} for "${cleanQuery}" inside ${activeGenre}`;
     }
-    if (query) return `${totalMatches} ${searchLabel} for "${query}"`;
-    if (filters.genre !== "All Genres") return `${totalMatches} ${filters.genre} tracks available`;
+    if (cleanQuery) return `${totalMatches} ${searchLabel} for "${cleanQuery}"`;
+    if (activeGenre !== defaultFilters.genre) return `${totalMatches} ${activeGenre} tracks available`;
     return `${totalMatches} mixed tracks across the production catalog`;
-  }, [filters.genre, isLoading, payload, query, totalMatches]);
+  }, [activeGenre, cleanQuery, isLoading, payload, totalMatches]);
 
   return (
     <PageTransition>
@@ -143,7 +174,7 @@ export default function ExplorePage() {
               size="compact"
               initialQuery={query}
               onSearch={handleSearch}
-              onClear={handleResetSearch}
+              onClear={handleResetDiscovery}
             />
             <div className="mt-3 flex flex-wrap items-center gap-2 text-xs text-muted">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-vivid-blue/10 px-2.5 py-1 text-vivid-blue">
@@ -153,10 +184,10 @@ export default function ExplorePage() {
               <span>Try: cinematic trailer for a mountain scene</span>
               <span className="hidden sm:inline">or</span>
               <span>lo-fi study beat with soft piano</span>
-              {(query || filters.genre !== "All Genres") ? (
+              {!isDiscoveryView ? (
                 <button
                   type="button"
-                  onClick={handleResetSearch}
+                  onClick={handleResetDiscovery}
                   className="inline-flex items-center gap-1.5 rounded-full border border-white/[0.08] bg-white/[0.04] px-2.5 py-1 text-white/75 transition-colors hover:border-vivid-blue/30 hover:text-white"
                 >
                   <RotateCcw className="h-3.5 w-3.5" />
@@ -174,7 +205,7 @@ export default function ExplorePage() {
             <div className="sticky top-24">
               <FilterPanel
                 value={filters}
-                onFilterChange={setFilters}
+                onFilterChange={handleFilterChange}
                 genreOptions={payload?.genres ?? []}
               />
             </div>
@@ -189,10 +220,10 @@ export default function ExplorePage() {
                     {" "}of <span className="text-white font-medium">{totalMatches}</span>
                   </>
                 ) : null} tracks
-                {(query || filters.genre !== "All Genres") ? (
+                {!isDiscoveryView ? (
                   <button
                     type="button"
-                    onClick={handleResetSearch}
+                    onClick={handleResetDiscovery}
                     className="ml-3 inline-flex items-center gap-1 text-vivid-blue transition-colors hover:text-white"
                   >
                     <RotateCcw className="h-3.5 w-3.5" />
@@ -260,7 +291,7 @@ export default function ExplorePage() {
                 </div>
                 <FilterPanel
                   value={filters}
-                  onFilterChange={setFilters}
+                  onFilterChange={handleFilterChange}
                   genreOptions={payload?.genres ?? []}
                 />
               </motion.div>
