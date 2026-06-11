@@ -25,6 +25,14 @@ function vectorToSql(vector) {
 }
 
 function parseEmbeddingResponse(payload) {
+  if (payload?.result) {
+    return parseEmbeddingResponse(payload.result);
+  }
+
+  if (payload?.data && Array.isArray(payload.data) && Array.isArray(payload.data[0])) {
+    return payload.data.map(normalizeEmbedding);
+  }
+
   if (payload?.data?.[0]?.embedding) {
     return payload.data.map((item) => normalizeEmbedding(item.embedding));
   }
@@ -70,6 +78,9 @@ export function getEmbeddingConfig() {
     dimensions,
     apiUrl: process.env.EMBEDDING_API_URL,
     apiKey: process.env.EMBEDDING_API_KEY,
+    cloudflareAccountId: process.env.CLOUDFLARE_ACCOUNT_ID,
+    cloudflareApiToken: process.env.CLOUDFLARE_AI_API_TOKEN || process.env.CLOUDFLARE_API_TOKEN,
+    cloudflareModel: process.env.CLOUDFLARE_AI_EMBEDDING_MODEL || "@cf/baai/bge-m3",
     huggingFaceToken: process.env.HUGGINGFACE_API_TOKEN,
     azureEndpoint: process.env.AZURE_OPENAI_ENDPOINT,
     azureApiKey: process.env.AZURE_OPENAI_API_KEY,
@@ -79,7 +90,12 @@ export function getEmbeddingConfig() {
 }
 
 export function assertEmbeddingProvider(config = getEmbeddingConfig()) {
-  if (config.apiUrl || config.huggingFaceToken || (config.azureEndpoint && config.azureApiKey && config.azureDeployment)) {
+  if (
+    config.apiUrl ||
+    (config.cloudflareAccountId && config.cloudflareApiToken) ||
+    config.huggingFaceToken ||
+    (config.azureEndpoint && config.azureApiKey && config.azureDeployment)
+  ) {
     return;
   }
 
@@ -87,6 +103,7 @@ export function assertEmbeddingProvider(config = getEmbeddingConfig()) {
     [
       "No cloud embedding provider configured.",
       "Set one of:",
+      "- CLOUDFLARE_ACCOUNT_ID + CLOUDFLARE_AI_API_TOKEN for Cloudflare Workers AI BGE-M3",
       "- EMBEDDING_API_URL + EMBEDDING_API_KEY for OpenAI-compatible/TEI endpoint",
       "- HUGGINGFACE_API_TOKEN for Hugging Face BAAI/bge-m3",
       "- AZURE_OPENAI_ENDPOINT + AZURE_OPENAI_API_KEY + AZURE_OPENAI_EMBEDDING_DEPLOYMENT",
@@ -107,6 +124,19 @@ export async function embedTexts(texts, config = getEmbeddingConfig()) {
         "api-key": config.azureApiKey,
       },
       body: JSON.stringify({ input: texts }),
+    });
+    return parseEmbeddingResponse(payload);
+  }
+
+  if (config.cloudflareAccountId && config.cloudflareApiToken) {
+    const url = `https://api.cloudflare.com/client/v4/accounts/${encodeURIComponent(config.cloudflareAccountId)}/ai/run/${config.cloudflareModel}`;
+    const payload = await requestJson(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${config.cloudflareApiToken}`,
+      },
+      body: JSON.stringify({ text: texts }),
     });
     return parseEmbeddingResponse(payload);
   }

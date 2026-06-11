@@ -6,6 +6,9 @@ export type EmbeddingConfig = {
   dimensions: number;
   apiUrl?: string;
   apiKey?: string;
+  cloudflareAccountId?: string;
+  cloudflareApiToken?: string;
+  cloudflareModel: string;
   huggingFaceToken?: string;
   azureEndpoint?: string;
   azureApiKey?: string;
@@ -34,9 +37,21 @@ function parseEmbeddingResponse(payload: unknown): Array<number[] | null> {
   if (
     payload &&
     typeof payload === "object" &&
+    "result" in payload
+  ) {
+    return parseEmbeddingResponse(payload.result);
+  }
+
+  if (
+    payload &&
+    typeof payload === "object" &&
     "data" in payload &&
     Array.isArray(payload.data)
   ) {
+    if (Array.isArray(payload.data[0])) {
+      return payload.data.map(normalizeEmbedding);
+    }
+
     return payload.data.map((item: unknown) => {
       if (item && typeof item === "object" && "embedding" in item) {
         return normalizeEmbedding(item.embedding);
@@ -87,6 +102,9 @@ export function getEmbeddingConfig(): EmbeddingConfig {
     dimensions: Number(process.env.EMBEDDING_DIMENSIONS || DEFAULT_EMBEDDING_DIMENSIONS),
     apiUrl: process.env.EMBEDDING_API_URL,
     apiKey: process.env.EMBEDDING_API_KEY,
+    cloudflareAccountId: process.env.CLOUDFLARE_ACCOUNT_ID,
+    cloudflareApiToken: process.env.CLOUDFLARE_AI_API_TOKEN || process.env.CLOUDFLARE_API_TOKEN,
+    cloudflareModel: process.env.CLOUDFLARE_AI_EMBEDDING_MODEL || "@cf/baai/bge-m3",
     huggingFaceToken: process.env.HUGGINGFACE_API_TOKEN,
     azureEndpoint: process.env.AZURE_OPENAI_ENDPOINT,
     azureApiKey: process.env.AZURE_OPENAI_API_KEY,
@@ -98,6 +116,7 @@ export function getEmbeddingConfig(): EmbeddingConfig {
 export function isEmbeddingProviderConfigured(config = getEmbeddingConfig()) {
   return Boolean(
     config.apiUrl ||
+      (config.cloudflareAccountId && config.cloudflareApiToken) ||
       config.huggingFaceToken ||
       (config.azureEndpoint && config.azureApiKey && config.azureDeployment)
   );
@@ -125,6 +144,23 @@ export async function embedTexts(texts: string[], config = getEmbeddingConfig())
       },
       body: JSON.stringify({ input: texts }),
     });
+    return parseEmbeddingResponse(payload);
+  }
+
+  if (config.cloudflareAccountId && config.cloudflareApiToken) {
+    const payload = await requestJson(
+      `https://api.cloudflare.com/client/v4/accounts/${encodeURIComponent(
+        config.cloudflareAccountId
+      )}/ai/run/${config.cloudflareModel}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${config.cloudflareApiToken}`,
+        },
+        body: JSON.stringify({ text: texts }),
+      }
+    );
     return parseEmbeddingResponse(payload);
   }
 
