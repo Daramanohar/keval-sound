@@ -13,6 +13,7 @@ interface Slide {
   cta: string;
   ctaHref: string;
   gradient: string;
+  image?: string;
   badge?: string;
   accent: string;
 }
@@ -26,6 +27,7 @@ const slides: Slide[] = [
     cta: "Explore Pack",
     ctaHref: "/pack/pack-1",
     gradient: "from-mid-purple/40 via-grey-magenta/30 to-vampire-black",
+    image: "/banners/realistic-music-city-banner.png",
     badge: "Live Pack",
     accent: "bg-mid-purple",
   },
@@ -118,7 +120,20 @@ export default function HeroCarousel() {
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
             className="absolute inset-0"
           >
-            <div className={cn("absolute inset-0 bg-gradient-to-r", slide.gradient)} />
+            {slide.image && (
+              <div
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: `url(${slide.image})` }}
+              />
+            )}
+            <div
+              className={cn(
+                "absolute inset-0 bg-gradient-to-r",
+                slide.image
+                  ? "from-vampire-black/90 via-vampire-black/45 to-vampire-black/10"
+                  : slide.gradient
+              )}
+            />
 
             <div className="absolute inset-0 opacity-[0.03]">
               <div
