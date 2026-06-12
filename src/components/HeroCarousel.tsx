@@ -27,7 +27,7 @@ const slides: Slide[] = [
     cta: "Explore Pack",
     ctaHref: "/pack/pack-1",
     gradient: "from-mid-purple/40 via-grey-magenta/30 to-vampire-black",
-    image: "/banners/realistic-music-city-banner.png",
+    image: "/banners/commercial.png",
     badge: "Live Pack",
     accent: "bg-mid-purple",
   },
