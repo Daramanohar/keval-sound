@@ -11,6 +11,7 @@ import {
   type ReactNode,
 } from "react";
 import { useAuth } from "./auth-context";
+import { createWavReviewStreamUrl, isWavReviewerEmail } from "./reviewer-access";
 import { clamp } from "./utils";
 import type { Pack, Sample, Track } from "./mock-data";
 
@@ -103,13 +104,13 @@ const emptyProgressContext: PlayerProgressContextType = {
 const PlayerControlsContext = createContext<PlayerControlsContextType | null>(null);
 const PlayerProgressContext = createContext<PlayerProgressContextType | null>(null);
 
-function toPlayableTrack(track: Track, pack?: Pack): PlayableItem {
+function toPlayableTrack(track: Track, pack?: Pack, useWavReview = false): PlayableItem {
   return {
     id: track.id,
     type: "track",
     title: track.title,
     artist: track.artist,
-    audioUrl: track.audioUrl,
+    audioUrl: useWavReview ? createWavReviewStreamUrl(track.id) : track.audioUrl,
     duration: track.duration,
     waveform: track.waveform,
     // When a track is played from a pack, carry the pack's cover art forward
@@ -171,6 +172,8 @@ function PlayerSessionProvider({
   );
   const endHandledRef = useRef(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const { user } = useAuth();
+  const useWavReview = isWavReviewerEmail(user?.email);
 
   const currentItem = queue[currentIndex] ?? null;
   const duration = mediaDuration > 0 ? mediaDuration : currentItem?.duration ?? 0;
@@ -234,12 +237,12 @@ function PlayerSessionProvider({
   const playTrack = useCallback(
     (track: Track, options?: { queue?: Track[]; pack?: Pack }) => {
       const sourceQueue = options?.queue ?? [track];
-      const playables = sourceQueue.map((entry) => toPlayableTrack(entry, options?.pack));
+      const playables = sourceQueue.map((entry) => toPlayableTrack(entry, options?.pack, useWavReview));
       const startIndex = sourceQueue.findIndex((entry) => entry.id === track.id);
 
       openQueue(playables, startIndex >= 0 ? startIndex : 0);
     },
-    [openQueue]
+    [openQueue, useWavReview]
   );
 
   const toggleTrack = useCallback(
@@ -261,9 +264,9 @@ function PlayerSessionProvider({
         ? Math.max(pack.tracks.findIndex((track) => track.id === startTrackId), 0)
         : 0;
 
-      openQueue(pack.tracks.map((track) => toPlayableTrack(track, pack)), startIndex);
+      openQueue(pack.tracks.map((track) => toPlayableTrack(track, pack, useWavReview)), startIndex);
     },
-    [openQueue]
+    [openQueue, useWavReview]
   );
 
   const playSample = useCallback(

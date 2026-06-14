@@ -1,13 +1,14 @@
 import crypto from "node:crypto";
-import { auth } from "@clerk/nextjs/server";
+import { auth, currentUser } from "@clerk/nextjs/server";
 import { productionSongRecords } from "@/lib/production-catalog.generated";
+import { isWavReviewerEmail } from "@/lib/reviewer-access";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 const MEDIA_GATE_BASE_URL = process.env.MEDIA_GATE_BASE_URL ?? "https://media.kevalsound.com";
 const STREAM_TOKEN_TTL_SECONDS = 20 * 60;
-const SUPPORTED_STREAM_FORMATS = new Set(["mp3"]);
+const SUPPORTED_STREAM_FORMATS = new Set(["mp3", "wav"]);
 
 type StreamRouteContext = {
   params: Promise<{
@@ -39,8 +40,6 @@ export async function GET(_request: Request, context: StreamRouteContext) {
   // Gate at the handler level instead of in proxy.ts. Proxy intentionally
   // excludes /api/media so the Worker redirect (Range, 206, etc.) stays
   // clean, but the token issuer here must only fire for signed-in users.
-  // TODO(paid-wav): once subscriptions ship, branch here on entitlement
-  // before allowing `wav-stream` access.
   const { userId } = await auth();
   if (!userId) {
     return noStoreJson({ error: "unauthorized" }, 401);
@@ -54,8 +53,25 @@ export async function GET(_request: Request, context: StreamRouteContext) {
   }
 
   const record = productionSongRecords.find((song) => song.id === trackId);
-  if (!record || !record.hasMp3) {
+  if (!record) {
     return noStoreJson({ error: "track_not_found" }, 404);
+  }
+
+  if (normalizedFormat === "mp3" && !record.hasMp3) {
+    return noStoreJson({ error: "track_not_found" }, 404);
+  }
+
+  if (normalizedFormat === "wav" && !record.hasWav) {
+    return noStoreJson({ error: "track_not_found" }, 404);
+  }
+
+  if (normalizedFormat === "wav") {
+    const user = await currentUser();
+    const email = user?.primaryEmailAddress?.emailAddress;
+
+    if (!isWavReviewerEmail(email)) {
+      return noStoreJson({ error: "wav_review_access_denied" }, 403);
+    }
   }
 
   const secret = process.env.MEDIA_GATE_SIGNING_SECRET;
