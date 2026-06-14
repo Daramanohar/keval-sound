@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import PageTransition from "@/components/PageTransition";
 import SectionHeader from "@/components/SectionHeader";
 import PackCard from "@/components/PackCard";
@@ -13,8 +14,17 @@ import { cn } from "@/lib/utils";
 const CATEGORIES = ["All", ...productionCategories] as const;
 type PackCategoryFilter = (typeof CATEGORIES)[number];
 
-export default function PacksPage() {
-  const [activeCategory, setActiveCategory] = useState<PackCategoryFilter>("All");
+function isValidCategory(value: string | null): value is PackCategoryFilter {
+  return value != null && (CATEGORIES as readonly string[]).includes(value);
+}
+
+function PacksContent() {
+  const searchParams = useSearchParams();
+  const categoryParam = searchParams.get("category");
+  const initialCategory: PackCategoryFilter = isValidCategory(categoryParam)
+    ? categoryParam
+    : "All";
+  const [activeCategory, setActiveCategory] = useState<PackCategoryFilter>(initialCategory);
 
   const filteredPacks =
     activeCategory === "All"
@@ -68,5 +78,13 @@ export default function PacksPage() {
         )}
       </div>
     </PageTransition>
+  );
+}
+
+export default function PacksPage() {
+  return (
+    <Suspense fallback={null}>
+      <PacksContent />
+    </Suspense>
   );
 }
