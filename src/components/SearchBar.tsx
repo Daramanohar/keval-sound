@@ -207,7 +207,7 @@ export default function SearchBar({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-full left-0 right-0 mt-2 search-dropdown rounded-xl overflow-hidden z-20"
+            className="absolute top-full left-0 right-0 z-50 mt-2 overflow-hidden rounded-xl search-dropdown"
           >
             <div className="p-3">
               <p className="px-3 py-2 text-xs text-light-grey/50 font-medium uppercase tracking-wider">
