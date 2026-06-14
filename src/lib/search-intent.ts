@@ -129,6 +129,6 @@ export function createSearchAcknowledgement(query: string, total: number, vector
   }
 
   return vectorReady
-    ? `Yes, I found ${total} close matches for your idea. Listen through the list and pick the one that fits your scene.`
-    : `Yes, I found ${total} metadata matches for your idea. Listen through the list and pick the one that fits your scene.`;
+    ? "Yes, here are close matches for your idea. Listen through the list and pick the one that fits your scene."
+    : "Yes, here are strong catalog matches for your idea. Listen through the list and pick the one that fits your scene.";
 }

@@ -33,7 +33,6 @@ export default function FilterPanel({
   const options = [
     {
       name: "All Genres",
-      count: genreOptions.reduce((total, option) => total + (option.count ?? 0), 0),
       category: "All",
     },
     ...genreOptions,
@@ -42,7 +41,7 @@ export default function FilterPanel({
   return (
     <div className={cn("space-y-4", className)}>
       <div className="flex items-center justify-between">
-        <h3 className="text-sm font-semibold text-white">Genre</h3>
+        <h3 className="text-sm font-semibold text-white">Sound Tags</h3>
         {hasActiveFilters && (
           <button
             type="button"
@@ -72,22 +71,7 @@ export default function FilterPanel({
               <span className="block truncate font-semibold">
                 {option.name === "All Genres" ? "All" : option.name}
               </span>
-              {option.category && option.name !== "All Genres" && (
-                <span className="mt-0.5 block truncate text-[10px] opacity-55">
-                  {option.category}
-                </span>
-              )}
             </span>
-            {typeof option.count === "number" && (
-              <span
-                className={cn(
-                  "shrink-0 rounded-full px-1.5 py-0.5 text-[10px] font-semibold",
-                  value.genre === option.name ? "bg-white/20 text-white" : "bg-white/[0.06] text-muted"
-                )}
-              >
-                {option.count}
-              </span>
-            )}
           </button>
         ))}
       </div>

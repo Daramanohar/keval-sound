@@ -107,6 +107,20 @@ function includesWholeText(haystack: string, needle: string) {
   return Boolean(needle) && haystack.includes(needle);
 }
 
+function displayTagName(tag: string) {
+  return tag
+    .trim()
+    .replace(/\s+/g, " ")
+    .replace(/\bedm\b/gi, "EDM")
+    .replace(/\br&b\b/gi, "R&B")
+    .replace(/\brnb\b/gi, "R&B")
+    .replace(/\bdnb\b/gi, "D&B")
+    .replace(/\blofi\b/gi, "Lo-Fi")
+    .replace(/\bhip hop\b/gi, "Hip-Hop")
+    .replace(/\bhip-hop\b/gi, "Hip-Hop")
+    .replace(/\b\w/g, (character) => character.toUpperCase());
+}
+
 function countIncludes(values: string[], token: string, weight: number) {
   return values.reduce((score, value) => score + (value.includes(token) ? weight : 0), 0);
 }
@@ -185,6 +199,24 @@ function getSearchFields(record: ProductionSongRecord) {
   const source = normalizeText(record.sourcePath);
 
   return { title, pack, category, sourceCategory, tags, metadata, source };
+}
+
+export function matchesExploreFilter(record: ProductionSongRecord, filter: string) {
+  const normalizedFilter = filter === "All" ? "All Genres" : filter;
+  if (normalizedFilter === "All Genres") return true;
+
+  const phrase = normalizeText(normalizedFilter);
+  if (!phrase) return true;
+
+  const fields = getSearchFields(record);
+
+  return (
+    fields.pack === phrase ||
+    fields.category === phrase ||
+    fields.sourceCategory === phrase ||
+    fields.tags.some((tag) => tag === phrase || tag.includes(phrase) || phrase.includes(tag)) ||
+    includesWholeText(fields.metadata, phrase)
+  );
 }
 
 function scoreRecord(record: ProductionSongRecord, query: string, tokens: string[]) {
@@ -292,20 +324,27 @@ export function getExploreGenres(): ExploreGenreOption[] {
 
   for (const record of productionSongRecords) {
     if (!record.hasMp3) continue;
-    const current = counts.get(record.packTitle);
-    if (current) {
-      current.count += 1;
-    } else {
-      counts.set(record.packTitle, {
-        name: record.packTitle,
-        count: 1,
-        category: record.category,
-      });
+
+    for (const tag of record.tags) {
+      const normalizedTag = normalizeText(tag);
+      if (!normalizedTag || normalizedTag.length < 3) continue;
+
+      const current = counts.get(normalizedTag);
+      if (current) {
+        current.count += 1;
+      } else {
+        counts.set(normalizedTag, {
+          name: displayTagName(tag),
+          count: 1,
+          category: record.category,
+        });
+      }
     }
   }
 
   return Array.from(counts.values()).sort(
     (left, right) =>
+      right.count - left.count ||
       left.category.localeCompare(right.category) ||
       left.name.localeCompare(right.name)
   );
@@ -330,17 +369,17 @@ export function searchExploreTracks(query: string, genre = "All Genres", limit =
   const tokens = expandQuery(cleanQuery);
   const scopedRecords = productionSongRecords
     .filter((record) => record.hasMp3)
-    .filter((record) => normalizedGenre === "All Genres" || record.packTitle === normalizedGenre);
+    .filter((record) => matchesExploreFilter(record, normalizedGenre));
 
   if (!cleanQuery) {
     const records = normalizedGenre === "All Genres"
       ? mixRecordsAcrossPacks(scopedRecords)
-      : scopedRecords;
+      : diversifyRecordsAcrossPacks(scopedRecords, limit);
 
     return {
       query: cleanQuery,
       genre: normalizedGenre,
-      total: records.length,
+      total: scopedRecords.length,
       limit,
       tracks: records.slice(0, limit).map((record, index) => recordToExploreTrack(record, index)),
       genres: getExploreGenres(),

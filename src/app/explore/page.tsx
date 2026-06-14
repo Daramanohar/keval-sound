@@ -101,8 +101,6 @@ export default function ExplorePage() {
   }, [activeGenre, cleanQuery, requestKey]);
 
   const filteredTracks = payload?.tracks ?? [];
-  const totalMatches = payload?.total ?? 0;
-  const visibleLimit = payload?.limit ?? 160;
 
   const handleSearch = (nextQuery: string) => {
     const trimmedQuery = nextQuery.trim();
@@ -152,15 +150,20 @@ export default function ExplorePage() {
   };
 
   const searchSummary = useMemo(() => {
-    if (isLoading && !payload) return "Searching the Keval metadata library";
-    const searchLabel = payload?.searchMode === "vector" ? "AI matches" : "metadata matches";
+    if (isLoading && !payload) return "Searching the Keval catalog";
     if (cleanQuery && activeGenre !== defaultFilters.genre) {
-      return `${totalMatches} ${searchLabel} for "${cleanQuery}" inside ${activeGenre}`;
+      return `Results for "${cleanQuery}" in ${activeGenre}`;
     }
-    if (cleanQuery) return `${totalMatches} ${searchLabel} for "${cleanQuery}"`;
-    if (activeGenre !== defaultFilters.genre) return `${totalMatches} ${activeGenre} tracks available`;
-    return `${totalMatches} mixed tracks across the production catalog`;
-  }, [activeGenre, cleanQuery, isLoading, payload, totalMatches]);
+    if (cleanQuery) return `Results for "${cleanQuery}"`;
+    if (activeGenre !== defaultFilters.genre) return `${activeGenre} selections from the catalog`;
+    return "Mixed discovery across the production catalog";
+  }, [activeGenre, cleanQuery, isLoading, payload]);
+
+  const resultLabel = useMemo(() => {
+    if (cleanQuery) return "Curated matches";
+    if (activeGenre !== defaultFilters.genre) return `${activeGenre} selections`;
+    return "Mixed catalog picks";
+  }, [activeGenre, cleanQuery]);
 
   return (
     <PageTransition>
@@ -182,7 +185,7 @@ export default function ExplorePage() {
             <div className="mt-3 flex flex-wrap items-center gap-2 text-xs text-muted">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-vivid-blue/10 px-2.5 py-1 text-vivid-blue">
                 <BrainCircuit className="h-3.5 w-3.5" />
-                {payload?.searchMode === "vector" ? "Vector AI search" : "Metadata-ranked search"}
+                Smart discovery
               </span>
               <span>Try: cinematic trailer for a mountain scene</span>
               <span className="hidden sm:inline">or</span>
@@ -217,12 +220,7 @@ export default function ExplorePage() {
           <div className="flex-1 min-w-0">
             <div className="flex items-center justify-between mb-6 gap-4">
               <div className="text-sm text-muted">
-                Showing <span className="text-white font-medium">{filteredTracks.length}</span>
-                {totalMatches > visibleLimit ? (
-                  <>
-                    {" "}of <span className="text-white font-medium">{totalMatches}</span>
-                  </>
-                ) : null} tracks
+                <span className="text-white font-medium">{resultLabel}</span>
                 {!isDiscoveryView ? (
                   <button
                     type="button"
@@ -303,7 +301,7 @@ export default function ExplorePage() {
             {isLoading && !payload ? (
               <div className="flex items-center justify-center py-24 text-muted">
                 <Loader2 className="mr-2 h-5 w-5 animate-spin text-vivid-blue" />
-                Searching the Keval AI music index...
+                Searching the Keval music library...
               </div>
             ) : error ? (
               <div className="rounded-2xl border border-zesty-red/20 bg-zesty-red/10 p-6 text-sm text-zesty-red">

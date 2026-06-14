@@ -8,25 +8,21 @@ import { cn } from "@/lib/utils";
 const discoveryLanes = [
   {
     name: "Bollywood cinematic",
-    tracks: "2,400+",
     description: "Romance, drama, tension, and dance-ready cues built for screen storytelling.",
     gradient: "from-zesty-red via-grey-magenta to-mid-purple",
   },
   {
     name: "Regional roots",
-    tracks: "1,900+",
     description: "Punjabi, Tamil, Bengali, Gujarati, Marathi, and other regional textures with real cultural identity.",
     gradient: "from-mud-brown via-zesty-red to-dandelion",
   },
   {
     name: "Desi hip-hop and trap",
-    tracks: "1,500+",
     description: "Street-ready drums, heavy bass, and contemporary vocal space for bold creator-led releases.",
     gradient: "from-vampire-black via-mid-purple to-vivid-blue",
   },
   {
     name: "Ambient and folk fusion",
-    tracks: "1,200+",
     description: "Lo-fi, acoustic, devotional, and hybrid arrangements designed for atmosphere and emotion.",
     gradient: "from-grey-azure via-vivid-blue to-mid-purple",
   },
@@ -76,7 +72,7 @@ export default function GenreShowcase() {
               <div className={cn("h-28 bg-gradient-to-br", lane.gradient)} />
               <div className="p-5">
                 <p className="text-sm font-semibold text-white">{lane.name}</p>
-                <p className="mt-1 text-xs font-medium text-vivid-blue">{lane.tracks} source-ready cues</p>
+                <p className="mt-1 text-xs font-medium text-vivid-blue">Source-ready discovery lane</p>
                 <p className="mt-4 text-sm leading-relaxed text-muted">{lane.description}</p>
               </div>
             </motion.div>

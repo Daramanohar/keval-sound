@@ -146,7 +146,7 @@ export default function SamplesPage() {
         </div>
 
         <p className="text-center text-xs text-muted mt-6">
-          Showing {filteredSamples.length} of {samples.length} samples. All samples include instant licensing.
+          All samples include instant licensing.
         </p>
       </div>
     </PageTransition>

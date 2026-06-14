@@ -7,7 +7,6 @@ import PackCard from "@/components/PackCard";
 import {
   productionCategories,
   readyProductionPacks,
-  type CatalogCategory,
 } from "@/lib/production-catalog";
 import { cn } from "@/lib/utils";
 
@@ -22,22 +21,6 @@ export default function PacksPage() {
       ? readyProductionPacks
       : readyProductionPacks.filter((p) => p.category === activeCategory);
 
-  const livePackCountByCategory = readyProductionPacks.reduce<Record<CatalogCategory, number>>(
-    (acc, pack) => {
-      acc[pack.category as CatalogCategory] += 1;
-      return acc;
-    },
-    {
-      Occasion: 0,
-      Commercial: 0,
-      Electronic: 0,
-      Bollywood: 0,
-      Indie: 0,
-      Culture: 0,
-      Classic: 0,
-    }
-  );
-
   return (
     <PageTransition>
       {/* Header */}
@@ -46,33 +29,25 @@ export default function PacksPage() {
         <div className="relative z-10 pt-8 pb-6">
           <SectionHeader title="Song Packs" gradient />
           <p className="mt-2 text-sm text-muted">
-            Showing {readyProductionPacks.length.toLocaleString("en-IN")} live production packs from the cloud catalog.
+            Browse live production packs from the cloud catalog.
           </p>
 
           {/* Category filter bar */}
           <div className="mt-5 flex flex-wrap gap-2">
-            {CATEGORIES.map((cat) => {
-              const count =
-                cat === "All"
-                  ? readyProductionPacks.length
-                  : livePackCountByCategory[cat];
-
-              return (
-                <button
-                  key={cat}
-                  onClick={() => setActiveCategory(cat)}
-                  className={cn(
-                    "rounded-xl px-4 py-2 text-sm font-medium transition-all",
-                    activeCategory === cat
-                      ? "bg-vivid-blue text-white shadow-lg shadow-vivid-blue/20"
-                      : "glass-subtle text-muted hover:text-white hover:bg-white/[0.08]"
-                  )}
-                >
-                  {cat}
-                  <span className="ml-2 text-xs opacity-60">{count}</span>
-                </button>
-              );
-            })}
+            {CATEGORIES.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                className={cn(
+                  "rounded-xl px-4 py-2 text-sm font-medium transition-all",
+                  activeCategory === cat
+                    ? "bg-vivid-blue text-white shadow-lg shadow-vivid-blue/20"
+                    : "glass-subtle text-muted hover:text-white hover:bg-white/[0.08]"
+                )}
+              >
+                {cat}
+              </button>
+            ))}
           </div>
         </div>
       </div>

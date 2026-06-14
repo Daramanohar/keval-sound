@@ -150,9 +150,9 @@ export default function KevalPlayer() {
               </div>
               <div className="flex flex-wrap gap-2">
                 {[
-                  `${catalog.productionCatalogStats.tracksReady.toLocaleString("en-IN")} real songs indexed`,
-                  `${catalog.productionCatalogStats.instrumentalTracks.toLocaleString("en-IN")} instrumental`,
-                  `${catalog.productionCatalogStats.lyricalTracks.toLocaleString("en-IN")} lyrical`,
+                  "Production catalog",
+                  "Instrumental and vocal cues",
+                  "Cloud-secured previews",
                 ].map((label) => (
                   <span
                     key={label}
@@ -233,7 +233,7 @@ export default function KevalPlayer() {
         <section className="space-y-4">
           <SectionTitle
             title="Search Matches"
-            subtitle={`${searchResults.length} metadata-ranked results in ${activeCategory}`}
+            subtitle={`Curated results in ${activeCategory}`}
           />
           {searchResults.length ? (
             <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
@@ -251,7 +251,7 @@ export default function KevalPlayer() {
               ))}
             </div>
           ) : (
-            <EmptyState label="No metadata matches in this category yet" />
+            <EmptyState label="No matches in this category yet" />
           )}
         </section>
       ) : (
@@ -333,7 +333,7 @@ function PackRow({
             ) : null}
           </Link>
           <p className="text-xs text-muted">
-            {pack.availableTrackCount.toLocaleString("en-IN")} indexed songs · {pack.category}
+            Production pack - {pack.category}
           </p>
         </div>
       </div>

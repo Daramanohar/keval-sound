@@ -12,6 +12,7 @@ import {
   diversifyRecordsAcrossPacks,
   getExploreCategories,
   getExploreGenres,
+  matchesExploreFilter,
   recordToExploreTrack,
   searchExploreTracks,
   type ExploreSearchResponse,
@@ -93,28 +94,23 @@ async function querySimilarTrackIds(
   queryVector: number[],
   model: string,
   dimensions: number,
-  genre: string,
   limit: number
 ) {
   const pool = getVectorSearchPool();
-  const normalizedGenre = genre === "All" ? "All Genres" : genre;
-  const genreFilter = normalizedGenre === "All Genres" ? null : normalizedGenre;
   const result = await pool.query<VectorRow>(
     `
       select
         tracks.id,
         1 - (tracks.embedding <=> $1::vector) as similarity
       from tracks
-      join music_packs on music_packs.id = tracks.pack_id
       where tracks.embedding is not null
         and tracks.embedding_model = $2
         and tracks.embedding_dimensions = $3
         and tracks.has_mp3 = true
-        and ($4::text is null or music_packs.title = $4)
       order by tracks.embedding <=> $1::vector
-      limit $5
+      limit $4
     `,
-    [vectorToSql(queryVector), model, dimensions, genreFilter, limit]
+    [vectorToSql(queryVector), model, dimensions, limit]
   );
 
   return result.rows;
@@ -158,7 +154,7 @@ export async function searchExploreTracksSmart(query: string, genre = "All Genre
 
     const metadataCandidateLimit = Math.min(Math.max(limit * 2, 240), 500);
     const vectorCandidateLimit = Math.min(Math.max(limit * 4, 480), 1000);
-    const rows = await querySimilarTrackIds(queryVector, model, dimensions, genre, vectorCandidateLimit);
+    const rows = await querySimilarTrackIds(queryVector, model, dimensions, vectorCandidateLimit);
     const metadataCandidates = searchExploreTracks(searchQuery, genre, metadataCandidateLimit);
     const recordsById = new Map<string, ProductionSongRecord>(
       productionSongRecords.map((record) => [record.id, record as ProductionSongRecord])
@@ -201,7 +197,8 @@ export async function searchExploreTracksSmart(query: string, genre = "All Genre
 
     const orderedRecords = orderedIds
       .map((id) => recordsById.get(id))
-      .filter((record): record is ProductionSongRecord => Boolean(record));
+      .filter((record): record is ProductionSongRecord => Boolean(record))
+      .filter((record) => matchesExploreFilter(record, genre));
     const diversifiedRecords = diversifyRecordsAcrossPacks(orderedRecords, limit);
     const tracks = diversifiedRecords.map((record, index) => recordToExploreTrack(record, index));
 
