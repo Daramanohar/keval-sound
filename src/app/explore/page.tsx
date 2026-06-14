@@ -112,9 +112,12 @@ export default function ExplorePage() {
       return;
     }
 
-    const params = new URLSearchParams(searchParams.toString());
-
+    const params = new URLSearchParams();
     params.set("q", trimmedQuery);
+    setFilters(defaultFilters);
+    setPayload(null);
+    setErrorState(null);
+    setShowMobileFilters(false);
 
     startTransition(() => {
       router.push(`/explore${params.toString() ? `?${params.toString()}` : ""}`);

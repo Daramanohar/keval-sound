@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight, Search, Sparkles, Wand2, X } from "lucide-react";
+import { ArrowRight, History, Search, Sparkles, Trash2, Wand2, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { optimizeSearchPrompt } from "@/lib/search-intent";
 
@@ -14,6 +14,7 @@ const suggestions = [
   "Punjabi bhangra pop for dance video",
   "Emotional Bengali acoustic ballad",
 ];
+const SEARCH_HISTORY_KEY = "keval-search-history";
 
 interface SearchBarProps {
   size?: "hero" | "compact";
@@ -34,6 +35,7 @@ export default function SearchBar({
   const [focused, setFocused] = useState(false);
   const [placeholderIndex, setPlaceholderIndex] = useState(0);
   const [optimized, setOptimized] = useState(false);
+  const [recentSearches, setRecentSearches] = useState<string[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -48,23 +50,64 @@ export default function SearchBar({
     return () => window.clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    const savedSearches = window.localStorage.getItem(SEARCH_HISTORY_KEY);
+    if (!savedSearches) return;
+
+    try {
+      const parsed = JSON.parse(savedSearches);
+      if (Array.isArray(parsed)) {
+        setRecentSearches(parsed.filter((item) => typeof item === "string").slice(0, 6));
+      }
+    } catch {
+      window.localStorage.removeItem(SEARCH_HISTORY_KEY);
+    }
+  }, []);
+
+  const persistRecentSearches = (items: string[]) => {
+    setRecentSearches(items);
+    window.localStorage.setItem(SEARCH_HISTORY_KEY, JSON.stringify(items));
+  };
+
+  const saveRecentSearch = (value: string) => {
+    const trimmed = value.trim();
+    if (!trimmed) return;
+
+    persistRecentSearches([
+      trimmed,
+      ...recentSearches.filter((item) => item.toLowerCase() !== trimmed.toLowerCase()),
+    ].slice(0, 6));
+  };
+
+  const removeRecentSearch = (value: string) => {
+    persistRecentSearches(recentSearches.filter((item) => item !== value));
+  };
+
+  const runSearch = (value: string) => {
+    const trimmed = value.trim();
+    saveRecentSearch(trimmed);
+    onSearch?.(trimmed);
+    setFocused(false);
+  };
+
   const handleOptimize = () => {
     if (!query.trim()) return;
     const optimizedQuery = optimizeSearchPrompt(query);
 
     setQuery(optimizedQuery);
     setOptimized(true);
-    onSearch?.(optimizedQuery);
-    setFocused(false);
+    runSearch(optimizedQuery);
     window.setTimeout(() => setOptimized(false), 1800);
   };
 
   const handleSearch = () => {
-    onSearch?.(query.trim());
-    setFocused(false);
+    runSearch(query);
   };
 
   const isHero = size === "hero";
+  const dropdownSuggestions = recentSearches.length > 0
+    ? recentSearches
+    : suggestions.slice(0, isHero ? 4 : 5);
 
   return (
     <div className={cn("relative w-full", className)}>
@@ -158,7 +201,7 @@ export default function SearchBar({
       </div>
 
       <AnimatePresence>
-        {focused && !query && isHero && (
+        {focused && !query && (
           <motion.div
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
@@ -168,19 +211,49 @@ export default function SearchBar({
           >
             <div className="p-3">
               <p className="px-3 py-2 text-xs text-light-grey/50 font-medium uppercase tracking-wider">
-                Try searching with natural language
+                {recentSearches.length > 0 ? "Recent searches" : "Try searching with natural language"}
               </p>
-              {suggestions.slice(0, 4).map((suggestion) => (
-                <button
-                  key={suggestion}
-                  type="button"
-                  onMouseDown={() => setQuery(suggestion)}
-                  className="flex items-center gap-3 w-full px-3 py-2.5 rounded-lg text-sm text-light-grey/70 hover:text-white hover:bg-white/[0.06] transition-colors text-left"
-                >
-                  <ArrowRight className="w-3.5 h-3.5 shrink-0 text-vivid-blue" />
-                  {suggestion}
-                </button>
-              ))}
+              {dropdownSuggestions.map((suggestion) => {
+                const isRecent = recentSearches.includes(suggestion);
+
+                return (
+                  <div
+                    key={suggestion}
+                    className="group flex items-center gap-2 rounded-lg text-sm text-light-grey/70 transition-colors hover:bg-white/[0.06] hover:text-white"
+                  >
+                    <button
+                      type="button"
+                      onMouseDown={(event) => {
+                        event.preventDefault();
+                        setQuery(suggestion);
+                        runSearch(suggestion);
+                      }}
+                      className="flex min-w-0 flex-1 items-center gap-3 px-3 py-2.5 text-left"
+                    >
+                      {isRecent ? (
+                        <History className="w-3.5 h-3.5 shrink-0 text-dandelion/70" />
+                      ) : (
+                        <ArrowRight className="w-3.5 h-3.5 shrink-0 text-vivid-blue" />
+                      )}
+                      <span className="truncate">{suggestion}</span>
+                    </button>
+                    {isRecent ? (
+                      <button
+                        type="button"
+                        onMouseDown={(event) => {
+                          event.preventDefault();
+                          event.stopPropagation();
+                          removeRecentSearch(suggestion);
+                        }}
+                        className="mr-2 rounded-md p-1.5 text-muted/50 opacity-0 transition-colors hover:text-zesty-red group-hover:opacity-100"
+                        aria-label={`Remove ${suggestion} from recent searches`}
+                      >
+                        <Trash2 className="h-3.5 w-3.5" />
+                      </button>
+                    ) : null}
+                  </div>
+                );
+              })}
               <div className="mt-2 px-3 pt-2 border-t border-white/[0.06]">
                 <p className="text-[10px] text-light-grey/30 flex items-center gap-1.5">
                   <Wand2 className="w-3 h-3 text-dandelion/50" />

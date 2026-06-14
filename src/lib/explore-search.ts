@@ -250,6 +250,43 @@ function mixRecordsAcrossPacks(records: ProductionSongRecord[]) {
   return mixed;
 }
 
+export function diversifyRecordsAcrossPacks(records: ProductionSongRecord[], limit = MAX_RESULTS) {
+  if (!records.length) return [];
+
+  const buckets = new Map<string, ProductionSongRecord[]>();
+  const seen = new Set<string>();
+
+  for (const record of records) {
+    if (seen.has(record.id)) continue;
+    seen.add(record.id);
+
+    const bucket = buckets.get(record.packId) ?? [];
+    bucket.push(record);
+    buckets.set(record.packId, bucket);
+  }
+
+  const bucketList = Array.from(buckets.values());
+  const diversified: ProductionSongRecord[] = [];
+
+  while (diversified.length < limit) {
+    let addedInPass = false;
+
+    for (const bucket of bucketList) {
+      const record = bucket.shift();
+      if (!record) continue;
+
+      diversified.push(record);
+      addedInPass = true;
+
+      if (diversified.length >= limit) break;
+    }
+
+    if (!addedInPass) break;
+  }
+
+  return diversified;
+}
+
 export function getExploreGenres(): ExploreGenreOption[] {
   const counts = new Map<string, ExploreGenreOption>();
 
@@ -329,7 +366,10 @@ export function searchExploreTracks(query: string, genre = "All Genres", limit =
     genre: normalizedGenre,
     total: candidates.length,
     limit,
-    tracks: candidates.slice(0, limit).map((result, index) => recordToExploreTrack(result.record, index)),
+    tracks: diversifyRecordsAcrossPacks(
+      candidates.map((result) => result.record),
+      limit
+    ).map((record, index) => recordToExploreTrack(record, index)),
     genres: getExploreGenres(),
     categories: getExploreCategories(),
   } satisfies ExploreSearchResponse;

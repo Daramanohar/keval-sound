@@ -9,13 +9,14 @@ import {
 } from "@/lib/embedding-provider";
 import { createSearchAcknowledgement, optimizeSearchPrompt } from "@/lib/search-intent";
 import {
+  diversifyRecordsAcrossPacks,
   getExploreCategories,
   getExploreGenres,
   recordToExploreTrack,
   searchExploreTracks,
   type ExploreSearchResponse,
 } from "@/lib/explore-search";
-import { productionSongRecords } from "@/lib/production-catalog.generated";
+import { productionSongRecords, type ProductionSongRecord } from "@/lib/production-catalog.generated";
 import { isRerankerConfigured, rerankDocuments } from "@/lib/reranker-provider";
 
 const { Pool } = pg;
@@ -155,9 +156,22 @@ export async function searchExploreTracksSmart(query: string, genre = "All Genre
       return fallback("invalid_query_embedding");
     }
 
-    const rows = await querySimilarTrackIds(queryVector, model, dimensions, genre, limit);
-    const recordsById = new Map(productionSongRecords.map((record) => [record.id, record]));
-    let orderedIds = rows.map((row) => row.id);
+    const metadataCandidateLimit = Math.min(Math.max(limit * 2, 240), 500);
+    const vectorCandidateLimit = Math.min(Math.max(limit * 4, 480), 1000);
+    const rows = await querySimilarTrackIds(queryVector, model, dimensions, genre, vectorCandidateLimit);
+    const metadataCandidates = searchExploreTracks(searchQuery, genre, metadataCandidateLimit);
+    const recordsById = new Map<string, ProductionSongRecord>(
+      productionSongRecords.map((record) => [record.id, record as ProductionSongRecord])
+    );
+    const seenIds = new Set<string>();
+    let orderedIds = [
+      ...metadataCandidates.tracks.map((track) => track.id),
+      ...rows.map((row) => row.id),
+    ].filter((id) => {
+      if (seenIds.has(id)) return false;
+      seenIds.add(id);
+      return true;
+    });
     let reranked = false;
 
     if (isRerankerConfigured() && orderedIds.length > 1) {
@@ -185,12 +199,11 @@ export async function searchExploreTracksSmart(query: string, genre = "All Genre
       reranked = true;
     }
 
-    const tracks = orderedIds
-      .map((id, index) => {
-        const record = recordsById.get(id);
-        return record ? recordToExploreTrack(record, index) : null;
-      })
-      .filter((track) => track !== null);
+    const orderedRecords = orderedIds
+      .map((id) => recordsById.get(id))
+      .filter((record): record is ProductionSongRecord => Boolean(record));
+    const diversifiedRecords = diversifyRecordsAcrossPacks(orderedRecords, limit);
+    const tracks = diversifiedRecords.map((record, index) => recordToExploreTrack(record, index));
 
     if (!tracks.length) {
       return withSearchMode(
@@ -209,7 +222,7 @@ export async function searchExploreTracksSmart(query: string, genre = "All Genre
       optimizedQuery: searchQuery !== originalQuery ? searchQuery : undefined,
       acknowledgement: createSearchAcknowledgement(originalQuery, tracks.length, true),
       genre: genre === "All" ? "All Genres" : genre,
-      total: tracks.length,
+      total: Math.max(metadataCandidates.total, orderedRecords.length),
       limit,
       tracks,
       genres: getExploreGenres(),

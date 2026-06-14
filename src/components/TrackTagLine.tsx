@@ -179,7 +179,7 @@ export default function TrackTagLine({
           className={cn(
             "max-w-full truncate",
             index === 0 && "text-zesty-red/85",
-            index === 1 && "text-vivid-blue/85",
+            index === 1 && "text-dandelion/90",
             itemClassName
           )}
         >
