@@ -342,9 +342,9 @@ export function getExploreGenres(): ExploreGenreOption[] {
   return Array.from(counts.values())
     .sort(
       (left, right) =>
-        right.count - left.count ||
+        left.name.localeCompare(right.name) ||
         left.category.localeCompare(right.category) ||
-        left.name.localeCompare(right.name)
+        right.count - left.count
     );
 }
 
