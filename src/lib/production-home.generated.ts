@@ -2,7 +2,7 @@
 
 import type { Pack, Track } from "./mock-data";
 
-export const productionHomeGeneratedAt = "2026-06-03T06:30:29.790Z";
+export const productionHomeGeneratedAt = "2026-06-15T04:58:02.571Z";
 
 export const productionHomeTracks = [
   {
@@ -72,9 +72,7 @@ export const productionHomeTracks = [
     "tags": [
       "acoustic pop",
       "heartfelt",
-      "cinematic",
-      "commercial",
-      "pop"
+      "cinematic"
     ],
     "isExclusive": true,
     "isTrending": true,
@@ -149,10 +147,9 @@ export const productionHomeTracks = [
       0.764
     ],
     "tags": [
+      "hip hop rap",
       "commercial",
-      "hip",
-      "hop",
-      "rap"
+      "instrumental"
     ],
     "isExclusive": true,
     "isTrending": true,
@@ -229,7 +226,7 @@ export const productionHomeTracks = [
     "tags": [
       "contemporary r and b",
       "neo soul",
-      "commercial"
+      "r and b"
     ],
     "isExclusive": true,
     "isTrending": true,
@@ -306,9 +303,7 @@ export const productionHomeTracks = [
     "tags": [
       "electric",
       "indian rock",
-      "cinematic arena sized",
-      "commercial",
-      "rock"
+      "cinematic"
     ],
     "isExclusive": true,
     "isTrending": true,
@@ -386,9 +381,7 @@ export const productionHomeTracks = [
     "tags": [
       "bossa nova",
       "salsa",
-      "tropical latin",
-      "culture",
-      "latin"
+      "tropical latin"
     ],
     "isExclusive": true,
     "isTrending": true,
@@ -465,9 +458,7 @@ export const productionHomeTracks = [
     "tags": [
       "country folk",
       "folk",
-      "acoustic",
-      "culture",
-      "country"
+      "acoustic"
     ],
     "isExclusive": true,
     "isTrending": true,
@@ -544,9 +535,7 @@ export const productionHomeTracks = [
     "tags": [
       "afrobeat",
       "tropical house",
-      "electronic",
-      "edm",
-      "dance"
+      "edm dance"
     ],
     "isExclusive": true,
     "isTrending": true,
@@ -624,8 +613,7 @@ export const productionHomeTracks = [
     "tags": [
       "korean r",
       "cinematic urban pop",
-      "culture",
-      "pop"
+      "k pop"
     ],
     "isExclusive": true,
     "isTrending": true,
@@ -779,9 +767,7 @@ export const productionHomeTracks = [
     "tags": [
       "electro swing",
       "dubstep",
-      "glitch",
-      "electronic",
-      "swing"
+      "glitch"
     ],
     "isExclusive": true,
     "isTrending": true,
@@ -858,9 +844,7 @@ export const productionHomeTracks = [
     "tags": [
       "orchestral trap",
       "cinematic",
-      "dramatic",
-      "electronic",
-      "trap"
+      "dramatic"
     ],
     "isExclusive": true,
     "isTrending": true,
@@ -938,10 +922,7 @@ export const productionHomeTracks = [
     "tags": [
       "alternative rock",
       "trip hop",
-      "experimental",
-      "indie",
-      "alternative",
-      "rock"
+      "experimental"
     ],
     "isExclusive": true,
     "isTrending": true,
@@ -1019,9 +1000,7 @@ export const productionHomeTracks = [
     "tags": [
       "indie pop",
       "funky",
-      "nostalgic",
-      "indie",
-      "pop"
+      "nostalgic"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -1099,10 +1078,7 @@ export const productionHomeTracks = [
     "tags": [
       "pop rock",
       "soundtrack",
-      "cinematic uplifting",
-      "commercial",
-      "pop",
-      "rock"
+      "cinematic uplifting"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -1179,10 +1155,8 @@ export const productionHomeTracks = [
     ],
     "tags": [
       "bass house",
-      "club dance edm",
-      "big room electrohouse",
-      "electronic",
-      "house"
+      "club dance",
+      "big room electrohouse"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -1257,8 +1231,9 @@ export const productionHomeTracks = [
       0.719
     ],
     "tags": [
+      "techno",
       "electronic",
-      "techno"
+      "instrumental"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -1335,8 +1310,7 @@ export const productionHomeTracks = [
     "tags": [
       "cinematic metal",
       "melodic metalcore",
-      "metal",
-      "commercial"
+      "metal"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -1414,9 +1388,7 @@ export const productionHomeTracks = [
     "tags": [
       "indie folk",
       "folk",
-      "acoustic",
-      "joyful",
-      "indie"
+      "acoustic"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -1493,8 +1465,7 @@ export const productionHomeTracks = [
     "tags": [
       "soul",
       "motown",
-      "gospel",
-      "indie"
+      "gospel"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -1572,9 +1543,7 @@ export const productionHomeTracks = [
     "tags": [
       "contemporary gospel",
       "worship",
-      "cinematic ambient",
-      "indie",
-      "gospel"
+      "cinematic ambient"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -1651,8 +1620,7 @@ export const productionHomeTracks = [
     "tags": [
       "jazz",
       "lounge",
-      "classic warm swing",
-      "indie"
+      "classic warm swing"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -1729,8 +1697,7 @@ export const productionHomeTracks = [
     "tags": [
       "classical chamber music",
       "classical era",
-      "viennese style",
-      "classical"
+      "viennese style"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -1807,10 +1774,7 @@ export const productionHomeTracks = [
     "tags": [
       "trance",
       "orchestral",
-      "soundtrack",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "soundtrack"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -1887,10 +1851,7 @@ export const productionHomeTracks = [
     "tags": [
       "desi instrumental",
       "bollywood",
-      "cinematic",
-      "soulful",
-      "hindi",
-      "romance"
+      "cinematic"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -1967,10 +1928,7 @@ export const productionHomeTracks = [
     "tags": [
       "desi alternative rock",
       "bollywood rock",
-      "indie alt rock",
-      "bollywood",
-      "hindi",
-      "rock"
+      "indie alt rock"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -2048,11 +2006,7 @@ export const productionHomeTracks = [
     "tags": [
       "desi hip hop",
       "trap",
-      "cinematic film score",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "cinematic film score"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -2129,10 +2083,7 @@ export const productionHomeTracks = [
     "tags": [
       "ambient",
       "cinematic",
-      "devotional",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "devotional"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -2209,9 +2160,7 @@ export const productionHomeTracks = [
     "tags": [
       "emotional cinematic orchestral",
       "bollywood",
-      "film soundtrack",
-      "hindi",
-      "epic"
+      "film soundtrack"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -2289,10 +2238,7 @@ export const productionHomeTracks = [
     "tags": [
       "japanese fusion",
       "cinematic",
-      "electronic",
-      "culture",
-      "japanese",
-      "pop"
+      "electronic"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -2369,9 +2315,7 @@ export const productionHomeTracks = [
     "tags": [
       "anime instrumental",
       "acoustic",
-      "relaxing",
-      "culture",
-      "anime"
+      "relaxing"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -2449,10 +2393,7 @@ export const productionHomeTracks = [
     "tags": [
       "cinematic orchestral",
       "chinese orchestral",
-      "dramatic soundtrack",
-      "culture",
-      "chinese",
-      "pop"
+      "dramatic soundtrack"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -2529,17 +2470,7 @@ export const productionHomeTracks = [
     "tags": [
       "dream pop acoustic",
       "soft piano echoes",
-      "airy synth pads",
-      "slow cinematic",
-      "bell like glints",
-      "shimmering",
-      "ambient",
-      "acoustic",
-      "warm",
-      "soft",
-      "emotional",
-      "calming",
-      "commercial"
+      "airy synth pads"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -2617,7 +2548,6 @@ export const productionHomeTracks = [
     "tags": [
       "synth pop",
       "cinematic pop",
-      "culture",
       "polish"
     ],
     "isExclusive": true,
@@ -2696,10 +2626,7 @@ export const productionHomeTracks = [
     "tags": [
       "bossa nova",
       "smooth jazz",
-      "tropical lounge",
-      "culture",
-      "brazilian",
-      "funk"
+      "tropical lounge"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -2776,7 +2703,7 @@ export const productionHomeTracks = [
     "tags": [
       "chillhop",
       "cinematic lo fi",
-      "electronic"
+      "lo fi"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -2853,8 +2780,7 @@ export const productionHomeTracks = [
     "tags": [
       "ambient",
       "cinematic",
-      "meditative",
-      "electronic"
+      "meditative"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -2932,11 +2858,7 @@ export const productionHomeTracks = [
     "tags": [
       "soulful",
       "electric",
-      "blues rock",
-      "classic",
-      "blues",
-      "rock",
-      "indie"
+      "blues rock"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -3013,16 +2935,7 @@ export const productionHomeTracks = [
     "tags": [
       "crushing palm muted",
       "glossy",
-      "brutal",
-      "cinematic",
-      "electro",
-      "soaring",
-      "hard rock",
-      "electric",
-      "electronic",
-      "commercial",
-      "hard",
-      "rock"
+      "brutal"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -3099,10 +3012,7 @@ export const productionHomeTracks = [
     "tags": [
       "electric",
       "rock",
-      "deep",
-      "electronic",
-      "drum",
-      "bass"
+      "deep"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -3179,11 +3089,7 @@ export const productionHomeTracks = [
     "tags": [
       "dubstep",
       "bass music",
-      "electronic",
-      "rock",
-      "world",
-      "glitch",
-      "electric"
+      "electronic"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -3260,8 +3166,7 @@ export const productionHomeTracks = [
     "tags": [
       "psychedelic trance",
       "trance",
-      "euphoric trance",
-      "electronic"
+      "euphoric trance"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -3338,10 +3243,7 @@ export const productionHomeTracks = [
     "tags": [
       "afro house",
       "rhythmic electronic",
-      "soulful deep house",
-      "electronic",
-      "afro",
-      "house"
+      "soulful deep house"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -3418,9 +3320,7 @@ export const productionHomeTracks = [
     "tags": [
       "indian phonk",
       "trap",
-      "cinematic dark orchestral",
-      "electronic",
-      "phonk"
+      "cinematic dark orchestral"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -3497,7 +3397,8 @@ export const productionHomeTracks = [
     ],
     "tags": [
       "hyperpop",
-      "electronic"
+      "electronic",
+      "instrumental"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -3574,10 +3475,7 @@ export const productionHomeTracks = [
     "tags": [
       "tech house",
       "electronic",
-      "deep club dark",
-      "minimal",
-      "tech",
-      "house"
+      "deep club dark"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -3654,11 +3552,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic",
       "glitch",
-      "soundtrack",
-      "cyberpunk",
-      "occasion",
-      "gaming",
-      "streaming"
+      "soundtrack"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -3735,10 +3629,7 @@ export const productionHomeTracks = [
     "tags": [
       "ambient",
       "world",
-      "meditative",
-      "occasion",
-      "meditation",
-      "yoga"
+      "meditative"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -3815,10 +3706,7 @@ export const productionHomeTracks = [
     "tags": [
       "acoustic pop",
       "feel good",
-      "soundtrack",
-      "occasion",
-      "content",
-      "creator"
+      "soundtrack"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -3896,10 +3784,7 @@ export const productionHomeTracks = [
     "tags": [
       "trap",
       "hip hop",
-      "cinematic rap",
-      "occasion",
-      "fitness",
-      "workout"
+      "cinematic rap"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -3976,9 +3861,7 @@ export const productionHomeTracks = [
     "tags": [
       "ambient",
       "electronic",
-      "occasion",
-      "podcast",
-      "interview"
+      "podcast and interview"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -4055,10 +3938,7 @@ export const productionHomeTracks = [
     "tags": [
       "soundtrack",
       "ambient",
-      "world",
-      "occasion",
-      "travel",
-      "adventure"
+      "world"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -4135,10 +4015,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic",
       "cinematic",
-      "orchestral",
-      "occasion",
-      "corporate",
-      "presentation"
+      "orchestral"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -4215,10 +4092,7 @@ export const productionHomeTracks = [
     "tags": [
       "acoustic pop",
       "jazz influenced pop",
-      "feel good soundtrack",
-      "occasion",
-      "lifestyle",
-      "food"
+      "feel good soundtrack"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -4295,10 +4169,7 @@ export const productionHomeTracks = [
     "tags": [
       "cinematic",
       "orchestral",
-      "ambient",
-      "occasion",
-      "weddings",
-      "events"
+      "ambient"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -4375,10 +4246,7 @@ export const productionHomeTracks = [
     "tags": [
       "lo fi chillhop",
       "jazz",
-      "ambient",
-      "occasion",
-      "study",
-      "productivity"
+      "ambient"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -4455,10 +4323,7 @@ export const productionHomeTracks = [
     "tags": [
       "downtempo fusion",
       "hip hop",
-      "jazzy lo fi",
-      "occasion",
-      "420",
-      "sesh"
+      "jazzy lo fi"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -4535,10 +4400,7 @@ export const productionHomeTracks = [
     "tags": [
       "orchestral",
       "cinematic soundtrack",
-      "ambient drama",
-      "occasion",
-      "movies",
-      "osts"
+      "ambient drama"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -4616,9 +4478,7 @@ export const productionHomeTracks = [
     "tags": [
       "indie folk",
       "acoustic",
-      "folk pop",
-      "occasion",
-      "love"
+      "folk pop"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -4695,9 +4555,7 @@ export const productionHomeTracks = [
     "tags": [
       "psychedelic soundtrack",
       "downtempo",
-      "hypnotic",
-      "occasion",
-      "trippy"
+      "hypnotic"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -4774,10 +4632,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic house",
       "arabic house",
-      "club dance four",
-      "culture",
-      "middle",
-      "east"
+      "club dance"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -4855,10 +4710,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic",
       "house",
-      "arabic tribal arabic",
-      "culture",
-      "middle",
-      "east"
+      "arabic tribal"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -4935,10 +4787,7 @@ export const productionHomeTracks = [
     "tags": [
       "arabic house",
       "electronic dance",
-      "hypnotic dance club",
-      "culture",
-      "middle",
-      "east"
+      "hypnotic dance club"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -5015,10 +4864,7 @@ export const productionHomeTracks = [
     "tags": [
       "cinematic soundtrack",
       "arabic fusion",
-      "electronic orchestral",
-      "culture",
-      "middle",
-      "east"
+      "electronic orchestral"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -5095,10 +4941,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic",
       "arabic house",
-      "house",
-      "culture",
-      "middle",
-      "east"
+      "house"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -5174,9 +5017,8 @@ export const productionHomeTracks = [
     ],
     "tags": [
       "middle eastern chill",
-      "culture",
-      "middle",
-      "east"
+      "lounge",
+      "downtempo"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -5253,10 +5095,7 @@ export const productionHomeTracks = [
     "tags": [
       "dark trap",
       "middle eastern desert",
-      "cinematic gritty electronic",
-      "culture",
-      "middle",
-      "east"
+      "cinematic gritty electronic"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -5333,12 +5172,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic",
       "house",
-      "arabic middle eastern",
-      "hypnotic",
-      "festival ready",
-      "culture",
-      "middle",
-      "east"
+      "arabic electronic"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -5415,10 +5249,7 @@ export const productionHomeTracks = [
     "tags": [
       "middle eastern chill",
       "lounge",
-      "downtempo",
-      "culture",
-      "middle",
-      "east"
+      "downtempo"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -5495,10 +5326,7 @@ export const productionHomeTracks = [
     "tags": [
       "middle eastern fusion",
       "lounge",
-      "atmospheric",
-      "culture",
-      "middle",
-      "east"
+      "atmospheric"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -5574,9 +5402,8 @@ export const productionHomeTracks = [
     ],
     "tags": [
       "middle eastern chill",
-      "culture",
-      "middle",
-      "east"
+      "lounge",
+      "downtempo"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -5653,10 +5480,7 @@ export const productionHomeTracks = [
     "tags": [
       "middle eastern chill",
       "lounge",
-      "downtempo",
-      "culture",
-      "middle",
-      "east"
+      "downtempo"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -5733,10 +5557,7 @@ export const productionHomeTracks = [
     "tags": [
       "middle eastern trap",
       "trap",
-      "cinematic dark electronic",
-      "culture",
-      "middle",
-      "east"
+      "cinematic dark electronic"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -5813,10 +5634,7 @@ export const productionHomeTracks = [
     "tags": [
       "arabic house",
       "electronic",
-      "dancefloor hypnotic",
-      "culture",
-      "middle",
-      "east"
+      "dancefloor hypnotic"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -5893,12 +5711,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic",
       "house",
-      "arabic middle eastern",
-      "hypnotic",
-      "festival ready",
-      "culture",
-      "middle",
-      "east"
+      "arabic electronic"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -5975,12 +5788,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic house",
       "arabic house",
-      "chant",
-      "hypnotic",
-      "festival ready",
-      "culture",
-      "middle",
-      "east"
+      "chant"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -6055,9 +5863,9 @@ export const productionHomeTracks = [
       0.234
     ],
     "tags": [
+      "middle east",
       "culture",
-      "middle",
-      "east"
+      "instrumental"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -6134,10 +5942,7 @@ export const productionHomeTracks = [
     "tags": [
       "middle eastern trap",
       "trap",
-      "cinematic",
-      "culture",
-      "middle",
-      "east"
+      "cinematic"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -6214,12 +6019,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic house",
       "arabic house",
-      "chant",
-      "hypnotic",
-      "festival ready",
-      "culture",
-      "middle",
-      "east"
+      "chant"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -6296,12 +6096,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic house",
       "arabic house",
-      "chant",
-      "hypnotic",
-      "festival ready",
-      "culture",
-      "middle",
-      "east"
+      "chant"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -6378,12 +6173,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic house",
       "arabic house",
-      "chant",
-      "hypnotic",
-      "festival ready",
-      "culture",
-      "middle",
-      "east"
+      "chant"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -6460,12 +6250,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic house",
       "arabic house",
-      "chant",
-      "hypnotic",
-      "festival ready",
-      "culture",
-      "middle",
-      "east"
+      "chant"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -6542,12 +6327,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic house",
       "arabic house",
-      "chant",
-      "hypnotic",
-      "festival ready",
-      "culture",
-      "middle",
-      "east"
+      "chant"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -6624,12 +6404,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic house",
       "arabic house",
-      "chant",
-      "hypnotic",
-      "festival ready",
-      "culture",
-      "middle",
-      "east"
+      "chant"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -6706,12 +6481,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic house",
       "arabic house",
-      "chant",
-      "hypnotic",
-      "festival ready",
-      "culture",
-      "middle",
-      "east"
+      "chant"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -6788,10 +6558,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic",
       "orchestral",
-      "soundtrack",
-      "culture",
-      "middle",
-      "east"
+      "soundtrack"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -6868,10 +6635,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic",
       "orchestral",
-      "soundtrack",
-      "culture",
-      "middle",
-      "east"
+      "soundtrack"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -6948,10 +6712,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic",
       "orchestral",
-      "soundtrack",
-      "culture",
-      "middle",
-      "east"
+      "soundtrack"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -7028,10 +6789,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic",
       "orchestral",
-      "soundtrack",
-      "culture",
-      "middle",
-      "east"
+      "soundtrack"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -7108,10 +6866,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic",
       "orchestral",
-      "soundtrack",
-      "culture",
-      "middle",
-      "east"
+      "soundtrack"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -7188,10 +6943,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic",
       "orchestral",
-      "soundtrack",
-      "culture",
-      "middle",
-      "east"
+      "soundtrack"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -7268,10 +7020,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic",
       "orchestral",
-      "soundtrack",
-      "culture",
-      "middle",
-      "east"
+      "soundtrack"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -7348,10 +7097,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic",
       "orchestral",
-      "soundtrack",
-      "culture",
-      "middle",
-      "east"
+      "soundtrack"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -7428,10 +7174,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic",
       "orchestral",
-      "soundtrack",
-      "culture",
-      "middle",
-      "east"
+      "soundtrack"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -7508,10 +7251,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic",
       "orchestral",
-      "soundtrack",
-      "culture",
-      "middle",
-      "east"
+      "soundtrack"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -7588,10 +7328,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic",
       "orchestral",
-      "soundtrack",
-      "culture",
-      "middle",
-      "east"
+      "soundtrack"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -7668,11 +7405,7 @@ export const productionHomeTracks = [
     "tags": [
       "electronic",
       "house",
-      "hypnotic",
-      "festival club",
-      "culture",
-      "middle",
-      "east"
+      "hypnotic"
     ],
     "isExclusive": true,
     "isTrending": false,
@@ -7766,9 +7499,7 @@ export const productionHomePacks = [
         "tags": [
           "acoustic pop",
           "heartfelt",
-          "cinematic",
-          "commercial",
-          "pop"
+          "cinematic"
         ],
         "isExclusive": true,
         "isTrending": true,
@@ -7783,11 +7514,11 @@ export const productionHomePacks = [
       "acoustic pop",
       "heartfelt",
       "cinematic",
-      "commercial",
-      "pop",
       "singer songwriter",
       "uplifting",
-      "electronic"
+      "electronic",
+      "electro",
+      "pop"
     ],
     "featured": true
   },
@@ -7870,10 +7601,9 @@ export const productionHomePacks = [
           0.764
         ],
         "tags": [
+          "hip hop rap",
           "commercial",
-          "hip",
-          "hop",
-          "rap"
+          "instrumental"
         ],
         "isExclusive": true,
         "isTrending": true,
@@ -7885,14 +7615,14 @@ export const productionHomePacks = [
       }
     ],
     "tags": [
-      "commercial",
-      "hip",
-      "hop",
-      "rap",
       "hip hop rap",
+      "commercial",
+      "instrumental",
       "warm sub pulses",
       "soulful piano progressions",
-      "reverse"
+      "modern hip hop",
+      "trap swing",
+      "rap anthem"
     ],
     "featured": false
   },
@@ -7977,7 +7707,7 @@ export const productionHomePacks = [
         "tags": [
           "contemporary r and b",
           "neo soul",
-          "commercial"
+          "r and b"
         ],
         "isExclusive": true,
         "isTrending": true,
@@ -7991,10 +7721,9 @@ export const productionHomePacks = [
     "tags": [
       "contemporary r and b",
       "neo soul",
-      "commercial",
+      "r and b",
       "soulful",
       "smooth",
-      "sensual",
       "contemporary soul",
       "slow jam"
     ],
@@ -8081,9 +7810,7 @@ export const productionHomePacks = [
         "tags": [
           "electric",
           "indian rock",
-          "cinematic arena sized",
-          "commercial",
-          "rock"
+          "cinematic"
         ],
         "isExclusive": true,
         "isTrending": true,
@@ -8097,12 +7824,12 @@ export const productionHomePacks = [
     "tags": [
       "electric",
       "indian rock",
-      "cinematic arena sized",
-      "commercial",
-      "rock",
+      "cinematic",
       "cinematic rock",
       "fusion",
-      "electronic"
+      "electronic",
+      "synth rock",
+      "synthwave"
     ],
     "featured": false
   },
@@ -8188,9 +7915,7 @@ export const productionHomePacks = [
         "tags": [
           "bossa nova",
           "salsa",
-          "tropical latin",
-          "culture",
-          "latin"
+          "tropical latin"
         ],
         "isExclusive": true,
         "isTrending": true,
@@ -8205,11 +7930,11 @@ export const productionHomePacks = [
       "bossa nova",
       "salsa",
       "tropical latin",
-      "culture",
       "latin",
       "cinematic",
       "tropical",
-      "reggaeton"
+      "culture",
+      "instrumental"
     ],
     "featured": false
   },
@@ -8294,9 +8019,7 @@ export const productionHomePacks = [
         "tags": [
           "country folk",
           "folk",
-          "acoustic",
-          "culture",
-          "country"
+          "acoustic"
         ],
         "isExclusive": true,
         "isTrending": true,
@@ -8311,11 +8034,11 @@ export const productionHomePacks = [
       "country folk",
       "folk",
       "acoustic",
-      "culture",
-      "country",
       "outlaw country",
       "country rock",
-      "electric"
+      "electric",
+      "modern country",
+      "country pop"
     ],
     "featured": false
   },
@@ -8400,9 +8123,7 @@ export const productionHomePacks = [
         "tags": [
           "afrobeat",
           "tropical house",
-          "electronic",
-          "edm",
-          "dance"
+          "edm dance"
         ],
         "isExclusive": true,
         "isTrending": true,
@@ -8416,12 +8137,12 @@ export const productionHomePacks = [
     "tags": [
       "afrobeat",
       "tropical house",
+      "edm dance",
       "electronic",
-      "edm",
-      "dance",
       "trap",
       "cinematic",
-      "orchestral"
+      "orchestral",
+      "glitch"
     ],
     "featured": true
   },
@@ -8507,8 +8228,7 @@ export const productionHomePacks = [
         "tags": [
           "korean r",
           "cinematic urban pop",
-          "culture",
-          "pop"
+          "k pop"
         ],
         "isExclusive": true,
         "isTrending": true,
@@ -8522,12 +8242,12 @@ export const productionHomePacks = [
     "tags": [
       "korean r",
       "cinematic urban pop",
-      "culture",
-      "pop",
+      "k pop",
       "soul",
       "korean hip hop",
       "trap",
-      "aggressive hip hop"
+      "aggressive hip hop",
+      "korean indie ballad"
     ],
     "featured": false
   },
@@ -8716,9 +8436,7 @@ export const productionHomePacks = [
         "tags": [
           "electro swing",
           "dubstep",
-          "glitch",
-          "electronic",
-          "swing"
+          "glitch"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -8733,11 +8451,11 @@ export const productionHomePacks = [
       "electro swing",
       "dubstep",
       "glitch",
-      "electronic",
-      "swing",
       "jazz",
+      "electronic",
       "swing jazz",
-      "latin"
+      "latin",
+      "salsa"
     ],
     "featured": false
   },
@@ -8822,9 +8540,7 @@ export const productionHomePacks = [
         "tags": [
           "orchestral trap",
           "cinematic",
-          "dramatic",
-          "electronic",
-          "trap"
+          "dramatic"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -8839,11 +8555,11 @@ export const productionHomePacks = [
       "orchestral trap",
       "cinematic",
       "dramatic",
-      "electronic",
       "trap",
       "hip hop",
       "cinematic electronic",
-      "dark trap"
+      "dark trap",
+      "cinematic hip hop"
     ],
     "featured": false
   },
@@ -8929,10 +8645,7 @@ export const productionHomePacks = [
         "tags": [
           "alternative rock",
           "trip hop",
-          "experimental",
-          "indie",
-          "alternative",
-          "rock"
+          "experimental"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -8947,11 +8660,11 @@ export const productionHomePacks = [
       "alternative rock",
       "trip hop",
       "experimental",
-      "indie",
-      "alternative",
-      "rock",
       "indie rock",
-      "energetic"
+      "energetic",
+      "experimental indie",
+      "indie alternative rock",
+      "indie"
     ],
     "featured": false
   },
@@ -9037,9 +8750,7 @@ export const productionHomePacks = [
         "tags": [
           "indie pop",
           "funky",
-          "nostalgic",
-          "indie",
-          "pop"
+          "nostalgic"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -9054,11 +8765,11 @@ export const productionHomePacks = [
       "indie pop",
       "funky",
       "nostalgic",
-      "indie",
-      "pop",
       "feel good",
       "upbeat",
-      "bright"
+      "dreamy bedroom pop",
+      "atmospheric indie folk",
+      "soft indie rock"
     ],
     "featured": false
   },
@@ -9144,10 +8855,7 @@ export const productionHomePacks = [
         "tags": [
           "pop rock",
           "soundtrack",
-          "cinematic uplifting",
-          "commercial",
-          "pop",
-          "rock"
+          "cinematic uplifting"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -9163,10 +8871,10 @@ export const productionHomePacks = [
       "soundtrack",
       "cinematic uplifting",
       "commercial",
-      "pop",
-      "rock",
+      "instrumental",
       "uplifting",
-      "cinematic"
+      "cinematic",
+      "electric"
     ],
     "featured": false
   },
@@ -9251,10 +8959,8 @@ export const productionHomePacks = [
         ],
         "tags": [
           "bass house",
-          "club dance edm",
-          "big room electrohouse",
-          "electronic",
-          "house"
+          "club dance",
+          "big room electrohouse"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -9267,13 +8973,13 @@ export const productionHomePacks = [
     ],
     "tags": [
       "bass house",
-      "club dance edm",
+      "club dance",
       "big room electrohouse",
-      "electronic",
-      "house",
       "dark club",
       "festival electrohouse",
-      "electro house"
+      "electro house",
+      "rave club edm",
+      "electronic dance"
     ],
     "featured": false
   },
@@ -9356,8 +9062,9 @@ export const productionHomePacks = [
           0.719
         ],
         "tags": [
+          "techno",
           "electronic",
-          "techno"
+          "instrumental"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -9369,12 +9076,13 @@ export const productionHomePacks = [
       }
     ],
     "tags": [
-      "electronic",
       "techno",
+      "electronic",
+      "instrumental",
       "dub techno",
       "hypnotic",
       "glitch",
-      "glitchy futuristic",
+      "glitchy",
       "industrial"
     ],
     "featured": false
@@ -9460,8 +9168,7 @@ export const productionHomePacks = [
         "tags": [
           "cinematic metal",
           "melodic metalcore",
-          "metal",
-          "commercial"
+          "metal"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -9476,11 +9183,11 @@ export const productionHomePacks = [
       "cinematic metal",
       "melodic metalcore",
       "metal",
-      "commercial",
       "dark symphonic metal",
       "metalcore",
       "extreme metal",
-      "gothic metal"
+      "gothic metal",
+      "hardcore punk"
     ],
     "featured": false
   },
@@ -9566,9 +9273,7 @@ export const productionHomePacks = [
         "tags": [
           "indie folk",
           "folk",
-          "acoustic",
-          "joyful",
-          "indie"
+          "acoustic"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -9583,11 +9288,11 @@ export const productionHomePacks = [
       "indie folk",
       "folk",
       "acoustic",
-      "joyful",
-      "indie",
       "feel good",
       "appalachian folk",
-      "traditional folk"
+      "traditional folk",
+      "moody acoustic folk",
+      "soundtrack"
     ],
     "featured": false
   },
@@ -9672,8 +9377,7 @@ export const productionHomePacks = [
         "tags": [
           "soul",
           "motown",
-          "gospel",
-          "indie"
+          "gospel"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -9689,7 +9393,7 @@ export const productionHomePacks = [
       "motown",
       "gospel",
       "indie",
-      "female vocals",
+      "instrumental",
       "vintage soul"
     ],
     "featured": false
@@ -9776,9 +9480,7 @@ export const productionHomePacks = [
         "tags": [
           "contemporary gospel",
           "worship",
-          "cinematic ambient",
-          "indie",
-          "gospel"
+          "cinematic ambient"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -9793,11 +9495,11 @@ export const productionHomePacks = [
       "contemporary gospel",
       "worship",
       "cinematic ambient",
-      "indie",
       "gospel",
       "contemporary",
       "ambient",
-      "southern gospel"
+      "southern gospel",
+      "soul"
     ],
     "featured": false
   },
@@ -9882,8 +9584,7 @@ export const productionHomePacks = [
         "tags": [
           "jazz",
           "lounge",
-          "classic warm swing",
-          "indie"
+          "classic warm swing"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -9898,11 +9599,11 @@ export const productionHomePacks = [
       "jazz",
       "lounge",
       "classic warm swing",
-      "indie",
       "contemporary jazz",
       "modern jazz",
       "swing",
-      "classic"
+      "classic",
+      "smooth jazz"
     ],
     "featured": false
   },
@@ -9987,8 +9688,7 @@ export const productionHomePacks = [
         "tags": [
           "classical chamber music",
           "classical era",
-          "viennese style",
-          "classical"
+          "viennese style"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -10003,11 +9703,11 @@ export const productionHomePacks = [
       "classical chamber music",
       "classical era",
       "viennese style",
-      "classical",
       "romantic",
+      "classical",
       "ballroom",
-      "orchestral",
-      "orchestral waltz"
+      "orchestral waltz",
+      "romantic orchestral"
     ],
     "featured": true
   },
@@ -10092,10 +9792,7 @@ export const productionHomePacks = [
         "tags": [
           "trance",
           "orchestral",
-          "soundtrack",
-          "bollywood",
-          "hindi",
-          "electronic"
+          "soundtrack"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -10110,11 +9807,11 @@ export const productionHomePacks = [
       "trance",
       "orchestral",
       "soundtrack",
-      "bollywood",
-      "hindi",
-      "electronic",
       "electro rock",
-      "electro swing"
+      "electronic",
+      "electro swing",
+      "jazzy",
+      "synthwave"
     ],
     "featured": true
   },
@@ -10199,10 +9896,7 @@ export const productionHomePacks = [
         "tags": [
           "desi instrumental",
           "bollywood",
-          "cinematic",
-          "soulful",
-          "hindi",
-          "romance"
+          "cinematic"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -10217,11 +9911,11 @@ export const productionHomePacks = [
       "desi instrumental",
       "bollywood",
       "cinematic",
-      "soulful",
-      "hindi",
-      "romance",
       "contemporary bollywood",
-      "romantic pop"
+      "romantic pop",
+      "cinematic electronic",
+      "romantic ballad",
+      "indian classical inspired"
     ],
     "featured": false
   },
@@ -10306,10 +10000,7 @@ export const productionHomePacks = [
         "tags": [
           "desi alternative rock",
           "bollywood rock",
-          "indie alt rock",
-          "bollywood",
-          "hindi",
-          "rock"
+          "indie alt rock"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -10324,9 +10015,9 @@ export const productionHomePacks = [
       "desi alternative rock",
       "bollywood rock",
       "indie alt rock",
+      "hindi rock",
       "bollywood",
-      "hindi",
-      "rock",
+      "instrumental",
       "alternative rock",
       "moody"
     ],
@@ -10414,11 +10105,7 @@ export const productionHomePacks = [
         "tags": [
           "desi hip hop",
           "trap",
-          "cinematic film score",
-          "bollywood",
-          "hindi",
-          "hip",
-          "hop"
+          "cinematic film score"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -10433,11 +10120,11 @@ export const productionHomePacks = [
       "desi hip hop",
       "trap",
       "cinematic film score",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop",
-      "cinematic indian hindi"
+      "cinematic indian rap",
+      "hip hop",
+      "bollywood inspired",
+      "desi",
+      "boom bap"
     ],
     "featured": false
   },
@@ -10522,10 +10209,7 @@ export const productionHomePacks = [
         "tags": [
           "ambient",
           "cinematic",
-          "devotional",
-          "bollywood",
-          "hindi",
-          "fusion"
+          "devotional"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -10540,11 +10224,11 @@ export const productionHomePacks = [
       "ambient",
       "cinematic",
       "devotional",
-      "bollywood",
-      "hindi",
-      "fusion",
       "folk",
-      "acoustic"
+      "acoustic",
+      "lo fi",
+      "hip hop",
+      "indian"
     ],
     "featured": false
   },
@@ -10629,9 +10313,7 @@ export const productionHomePacks = [
         "tags": [
           "emotional cinematic orchestral",
           "bollywood",
-          "film soundtrack",
-          "hindi",
-          "epic"
+          "film soundtrack"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -10646,8 +10328,8 @@ export const productionHomePacks = [
       "emotional cinematic orchestral",
       "bollywood",
       "film soundtrack",
-      "hindi",
-      "epic",
+      "hindi epic",
+      "instrumental",
       "cinematic soundtrack",
       "orchestral",
       "inspirational folk"
@@ -10736,10 +10418,7 @@ export const productionHomePacks = [
         "tags": [
           "japanese fusion",
           "cinematic",
-          "electronic",
-          "culture",
-          "japanese",
-          "pop"
+          "electronic"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -10754,11 +10433,11 @@ export const productionHomePacks = [
       "japanese fusion",
       "cinematic",
       "electronic",
-      "culture",
-      "japanese",
-      "pop",
       "city pop",
-      "synthwave"
+      "synthwave",
+      "80s inspired funk",
+      "lo fi",
+      "hip hop"
     ],
     "featured": false
   },
@@ -10843,9 +10522,7 @@ export const productionHomePacks = [
         "tags": [
           "anime instrumental",
           "acoustic",
-          "relaxing",
-          "culture",
-          "anime"
+          "relaxing"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -10860,11 +10537,11 @@ export const productionHomePacks = [
       "anime instrumental",
       "acoustic",
       "relaxing",
-      "culture",
-      "anime",
       "gentle acoustic",
       "cinematic",
-      "instrumental"
+      "anime",
+      "instrumental",
+      "ambient"
     ],
     "featured": false
   },
@@ -10950,10 +10627,7 @@ export const productionHomePacks = [
         "tags": [
           "cinematic orchestral",
           "chinese orchestral",
-          "dramatic soundtrack",
-          "culture",
-          "chinese",
-          "pop"
+          "dramatic soundtrack"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -10968,11 +10642,11 @@ export const productionHomePacks = [
       "cinematic orchestral",
       "chinese orchestral",
       "dramatic soundtrack",
-      "culture",
-      "chinese",
-      "pop",
       "cinematic",
-      "chinese fusion"
+      "chinese fusion",
+      "electronic",
+      "chinese edm",
+      "electronic dance"
     ],
     "featured": false
   },
@@ -11057,17 +10731,7 @@ export const productionHomePacks = [
         "tags": [
           "dream pop acoustic",
           "soft piano echoes",
-          "airy synth pads",
-          "slow cinematic",
-          "bell like glints",
-          "shimmering",
-          "ambient",
-          "acoustic",
-          "warm",
-          "soft",
-          "emotional",
-          "calming",
-          "commercial"
+          "airy synth pads"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -11082,11 +10746,11 @@ export const productionHomePacks = [
       "dream pop acoustic",
       "soft piano echoes",
       "airy synth pads",
-      "slow cinematic",
-      "bell like glints",
-      "shimmering",
-      "ambient",
-      "acoustic"
+      "acoustic folk pop",
+      "warm live session",
+      "brushed textures",
+      "acoustic instrumental",
+      "felt piano"
     ],
     "featured": false
   },
@@ -11172,7 +10836,6 @@ export const productionHomePacks = [
         "tags": [
           "synth pop",
           "cinematic pop",
-          "culture",
           "polish"
         ],
         "isExclusive": true,
@@ -11187,12 +10850,12 @@ export const productionHomePacks = [
     "tags": [
       "synth pop",
       "cinematic pop",
-      "culture",
       "polish",
       "polish hip hop",
       "trap",
       "dark urban rap",
-      "dark atmospheric rap"
+      "dark atmospheric rap",
+      "polish rock ballad"
     ],
     "featured": false
   },
@@ -11278,10 +10941,7 @@ export const productionHomePacks = [
         "tags": [
           "bossa nova",
           "smooth jazz",
-          "tropical lounge",
-          "culture",
-          "brazilian",
-          "funk"
+          "tropical lounge"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -11296,11 +10956,11 @@ export const productionHomePacks = [
       "bossa nova",
       "smooth jazz",
       "tropical lounge",
-      "culture",
-      "brazilian",
-      "funk",
       "intro",
-      "brazilian funk"
+      "brazilian funk",
+      "culture",
+      "baile funk",
+      "dancehall"
     ],
     "featured": false
   },
@@ -11385,7 +11045,7 @@ export const productionHomePacks = [
         "tags": [
           "chillhop",
           "cinematic lo fi",
-          "electronic"
+          "lo fi"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -11399,12 +11059,12 @@ export const productionHomePacks = [
     "tags": [
       "chillhop",
       "cinematic lo fi",
-      "electronic",
+      "lo fi",
       "chill hop",
       "hip hop",
-      "lo fi",
       "mellow",
-      "chill mellow"
+      "chill mellow",
+      "cinematic"
     ],
     "featured": false
   },
@@ -11489,8 +11149,7 @@ export const productionHomePacks = [
         "tags": [
           "ambient",
           "cinematic",
-          "meditative",
-          "electronic"
+          "meditative"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -11505,11 +11164,11 @@ export const productionHomePacks = [
       "ambient",
       "cinematic",
       "meditative",
-      "electronic",
       "cinematic soundtrack",
       "orchestral",
       "soundtrack",
-      "drone"
+      "drone",
+      "cinematic ambient"
     ],
     "featured": false
   },
@@ -11595,11 +11254,7 @@ export const productionHomePacks = [
         "tags": [
           "soulful",
           "electric",
-          "blues rock",
-          "classic",
-          "blues",
-          "rock",
-          "indie"
+          "blues rock"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -11614,11 +11269,11 @@ export const productionHomePacks = [
       "soulful",
       "electric",
       "blues rock",
-      "classic",
-      "blues",
       "rock",
-      "indie",
-      "electric blues"
+      "blues",
+      "electric blues",
+      "delta blues",
+      "vintage soul"
     ],
     "featured": false
   },
@@ -11703,16 +11358,7 @@ export const productionHomePacks = [
         "tags": [
           "crushing palm muted",
           "glossy",
-          "brutal",
-          "cinematic",
-          "electro",
-          "soaring",
-          "hard rock",
-          "electric",
-          "electronic",
-          "commercial",
-          "hard",
-          "rock"
+          "brutal"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -11727,11 +11373,11 @@ export const productionHomePacks = [
       "crushing palm muted",
       "glossy",
       "brutal",
-      "cinematic",
-      "electro",
-      "soaring",
-      "hard rock",
-      "electric"
+      "hard rock anthem",
+      "thunderous live drums",
+      "heavy bass",
+      "toms",
+      "rising strings"
     ],
     "featured": false
   },
@@ -11816,10 +11462,7 @@ export const productionHomePacks = [
         "tags": [
           "electric",
           "rock",
-          "deep",
-          "electronic",
-          "drum",
-          "bass"
+          "deep"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -11834,11 +11477,11 @@ export const productionHomePacks = [
       "electric",
       "rock",
       "deep",
-      "electronic",
       "drum",
-      "bass",
       "cinematic orchestral",
-      "bass heavy electronic"
+      "bass heavy electronic",
+      "rave anthemic electronic",
+      "lo fi"
     ],
     "featured": false
   },
@@ -11923,11 +11566,7 @@ export const productionHomePacks = [
         "tags": [
           "dubstep",
           "bass music",
-          "electronic",
-          "rock",
-          "world",
-          "glitch",
-          "electric"
+          "electronic"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -11942,11 +11581,11 @@ export const productionHomePacks = [
       "dubstep",
       "bass music",
       "electronic",
-      "rock",
-      "world",
+      "alternative rock",
       "glitch",
-      "electric",
-      "alternative rock"
+      "rock",
+      "cinematic dubstep",
+      "hardcore"
     ],
     "featured": false
   },
@@ -12031,8 +11670,7 @@ export const productionHomePacks = [
         "tags": [
           "psychedelic trance",
           "trance",
-          "euphoric trance",
-          "electronic"
+          "euphoric trance"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -12047,11 +11685,11 @@ export const productionHomePacks = [
       "psychedelic trance",
       "trance",
       "euphoric trance",
-      "electronic",
       "rock",
+      "electronic",
       "orchestral",
-      "uplifting electronic",
-      "uplifting"
+      "instrumental",
+      "uplifting electronic"
     ],
     "featured": false
   },
@@ -12136,10 +11774,7 @@ export const productionHomePacks = [
         "tags": [
           "afro house",
           "rhythmic electronic",
-          "soulful deep house",
-          "electronic",
-          "afro",
-          "house"
+          "soulful deep house"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -12155,10 +11790,10 @@ export const productionHomePacks = [
       "rhythmic electronic",
       "soulful deep house",
       "electronic",
-      "afro",
-      "house",
       "euphoric club dance",
-      "electronic dance"
+      "electronic dance",
+      "hypnotic club euphoric",
+      "deep"
     ],
     "featured": false
   },
@@ -12243,9 +11878,7 @@ export const productionHomePacks = [
         "tags": [
           "indian phonk",
           "trap",
-          "cinematic dark orchestral",
-          "electronic",
-          "phonk"
+          "cinematic dark orchestral"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -12260,11 +11893,11 @@ export const productionHomePacks = [
       "indian phonk",
       "trap",
       "cinematic dark orchestral",
-      "electronic",
       "phonk",
       "distorted 808 slides",
       "hypnotic cowbell loops",
-      "pre builds"
+      "electronic",
+      "instrumental"
     ],
     "featured": false
   },
@@ -12349,7 +11982,8 @@ export const productionHomePacks = [
         ],
         "tags": [
           "hyperpop",
-          "electronic"
+          "electronic",
+          "instrumental"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -12363,12 +11997,12 @@ export const productionHomePacks = [
     "tags": [
       "hyperpop",
       "electronic",
+      "instrumental",
       "experimental",
       "glitch pop",
       "anime",
       "glitchy electronic",
-      "glitch electronic",
-      "japanese pop"
+      "glitch electronic"
     ],
     "featured": false
   },
@@ -12453,10 +12087,7 @@ export const productionHomePacks = [
         "tags": [
           "tech house",
           "electronic",
-          "deep club dark",
-          "minimal",
-          "tech",
-          "house"
+          "deep club dark"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -12471,11 +12102,11 @@ export const productionHomePacks = [
       "tech house",
       "electronic",
       "deep club dark",
-      "minimal",
-      "tech",
-      "house",
+      "instrumental",
       "smooth",
-      "bassline"
+      "bassline",
+      "hypnotic",
+      "deep"
     ],
     "featured": false
   },
@@ -12560,11 +12191,7 @@ export const productionHomePacks = [
         "tags": [
           "electronic",
           "glitch",
-          "soundtrack",
-          "cyberpunk",
-          "occasion",
-          "gaming",
-          "streaming"
+          "soundtrack"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -12579,11 +12206,11 @@ export const productionHomePacks = [
       "electronic",
       "glitch",
       "soundtrack",
-      "cyberpunk",
-      "occasion",
-      "gaming",
-      "streaming",
-      "orchestral"
+      "orchestral",
+      "cinematic dramatic",
+      "cinematic orchestral",
+      "orchestral fantasy",
+      "cyberpunk edm"
     ],
     "featured": false
   },
@@ -12668,10 +12295,7 @@ export const productionHomePacks = [
         "tags": [
           "ambient",
           "world",
-          "meditative",
-          "occasion",
-          "meditation",
-          "yoga"
+          "meditative"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -12686,11 +12310,11 @@ export const productionHomePacks = [
       "ambient",
       "world",
       "meditative",
-      "occasion",
       "meditation",
-      "yoga",
-      "world tibetan inspired",
-      "new age"
+      "new age",
+      "world music",
+      "ambient meditation",
+      "world ambient"
     ],
     "featured": false
   },
@@ -12775,10 +12399,7 @@ export const productionHomePacks = [
         "tags": [
           "acoustic pop",
           "feel good",
-          "soundtrack",
-          "occasion",
-          "content",
-          "creator"
+          "soundtrack"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -12793,11 +12414,11 @@ export const productionHomePacks = [
       "acoustic pop",
       "feel good",
       "soundtrack",
-      "occasion",
-      "content",
-      "creator",
       "lo fi",
-      "jazz inspired"
+      "jazz inspired",
+      "instrumental",
+      "acoustic",
+      "bright"
     ],
     "featured": false
   },
@@ -12883,10 +12504,7 @@ export const productionHomePacks = [
         "tags": [
           "trap",
           "hip hop",
-          "cinematic rap",
-          "occasion",
-          "fitness",
-          "workout"
+          "cinematic rap"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -12901,11 +12519,11 @@ export const productionHomePacks = [
       "trap",
       "hip hop",
       "cinematic rap",
-      "occasion",
-      "fitness",
-      "workout",
       "orchestral",
-      "electronic"
+      "electronic",
+      "soundtrack",
+      "cinematic soundtrack",
+      "trailer music"
     ],
     "featured": false
   },
@@ -12990,9 +12608,7 @@ export const productionHomePacks = [
         "tags": [
           "ambient",
           "electronic",
-          "occasion",
-          "podcast",
-          "interview"
+          "podcast and interview"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -13006,12 +12622,12 @@ export const productionHomePacks = [
     "tags": [
       "ambient",
       "electronic",
-      "occasion",
-      "podcast",
-      "interview",
+      "podcast and interview",
       "downtempo",
       "minimal",
-      "contemporary"
+      "ambient pop",
+      "contemporary ambient",
+      "downtempo electronic"
     ],
     "featured": false
   },
@@ -13096,10 +12712,7 @@ export const productionHomePacks = [
         "tags": [
           "soundtrack",
           "ambient",
-          "world",
-          "occasion",
-          "travel",
-          "adventure"
+          "world"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -13114,11 +12727,11 @@ export const productionHomePacks = [
       "soundtrack",
       "ambient",
       "world",
-      "occasion",
-      "travel",
-      "adventure",
       "orchestral",
-      "acoustic"
+      "acoustic",
+      "tropical",
+      "light percussion",
+      "indie folk pop"
     ],
     "featured": false
   },
@@ -13203,10 +12816,7 @@ export const productionHomePacks = [
         "tags": [
           "electronic",
           "cinematic",
-          "orchestral",
-          "occasion",
-          "corporate",
-          "presentation"
+          "orchestral"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -13221,11 +12831,10 @@ export const productionHomePacks = [
       "electronic",
       "cinematic",
       "orchestral",
-      "occasion",
-      "corporate",
-      "presentation",
       "ambient",
-      "minimal"
+      "minimal",
+      "orchestra",
+      "uplifting"
     ],
     "featured": false
   },
@@ -13310,10 +12919,7 @@ export const productionHomePacks = [
         "tags": [
           "acoustic pop",
           "jazz influenced pop",
-          "feel good soundtrack",
-          "occasion",
-          "lifestyle",
-          "food"
+          "feel good soundtrack"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -13328,11 +12934,11 @@ export const productionHomePacks = [
       "acoustic pop",
       "jazz influenced pop",
       "feel good soundtrack",
-      "occasion",
-      "lifestyle",
-      "food",
       "acoustic pop jazz",
-      "jazz pop"
+      "jazz pop",
+      "upbeat swung instrumental",
+      "jazz influenced",
+      "upbeat swing"
     ],
     "featured": false
   },
@@ -13417,10 +13023,7 @@ export const productionHomePacks = [
         "tags": [
           "cinematic",
           "orchestral",
-          "ambient",
-          "occasion",
-          "weddings",
-          "events"
+          "ambient"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -13435,11 +13038,11 @@ export const productionHomePacks = [
       "cinematic",
       "orchestral",
       "ambient",
-      "occasion",
-      "weddings",
-      "events",
       "cinematic orchestral pop",
-      "romantic orchestral"
+      "romantic orchestral",
+      "ambient pop",
+      "uplifting",
+      "cinematic orchestral"
     ],
     "featured": false
   },
@@ -13524,10 +13127,7 @@ export const productionHomePacks = [
         "tags": [
           "lo fi chillhop",
           "jazz",
-          "ambient",
-          "occasion",
-          "study",
-          "productivity"
+          "ambient"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -13542,11 +13142,11 @@ export const productionHomePacks = [
       "lo fi chillhop",
       "jazz",
       "ambient",
-      "occasion",
-      "study",
-      "productivity",
       "lo fi",
-      "chillhop"
+      "chillhop",
+      "ambient jazz",
+      "jazz influenced",
+      "swung drums"
     ],
     "featured": false
   },
@@ -13631,10 +13231,7 @@ export const productionHomePacks = [
         "tags": [
           "downtempo fusion",
           "hip hop",
-          "jazzy lo fi",
-          "occasion",
-          "420",
-          "sesh"
+          "jazzy lo fi"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -13649,11 +13246,11 @@ export const productionHomePacks = [
       "downtempo fusion",
       "hip hop",
       "jazzy lo fi",
-      "occasion",
-      "420",
-      "sesh",
       "chillhop",
-      "downtempo"
+      "downtempo",
+      "420 sesh",
+      "lo fi",
+      "chillhop downtempo fusion"
     ],
     "featured": false
   },
@@ -13738,10 +13335,7 @@ export const productionHomePacks = [
         "tags": [
           "orchestral",
           "cinematic soundtrack",
-          "ambient drama",
-          "occasion",
-          "movies",
-          "osts"
+          "ambient drama"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -13756,11 +13350,11 @@ export const productionHomePacks = [
       "orchestral",
       "cinematic soundtrack",
       "ambient drama",
-      "occasion",
-      "movies",
-      "osts",
       "orchestral soundtrack",
-      "cinematic"
+      "cinematic",
+      "ambient",
+      "dark cinematic",
+      "modern noir"
     ],
     "featured": false
   },
@@ -13846,9 +13440,7 @@ export const productionHomePacks = [
         "tags": [
           "indie folk",
           "acoustic",
-          "folk pop",
-          "occasion",
-          "love"
+          "folk pop"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -13863,11 +13455,11 @@ export const productionHomePacks = [
       "indie folk",
       "acoustic",
       "folk pop",
-      "occasion",
-      "love",
       "lo fi r",
       "lo fi",
-      "nostalgic"
+      "nostalgic",
+      "lo fi indie",
+      "indie pop"
     ],
     "featured": false
   },
@@ -13952,9 +13544,7 @@ export const productionHomePacks = [
         "tags": [
           "psychedelic soundtrack",
           "downtempo",
-          "hypnotic",
-          "occasion",
-          "trippy"
+          "hypnotic"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -13969,11 +13559,11 @@ export const productionHomePacks = [
       "psychedelic soundtrack",
       "downtempo",
       "hypnotic",
-      "occasion",
-      "trippy",
       "psychedelic",
       "soundtrack",
-      "ambient"
+      "ambient",
+      "psychedelic ambient",
+      "psychedelic downtempo"
     ],
     "featured": false
   },
@@ -14058,10 +13648,7 @@ export const productionHomePacks = [
         "tags": [
           "electronic house",
           "arabic house",
-          "club dance four",
-          "culture",
-          "middle",
-          "east"
+          "club dance"
         ],
         "isExclusive": true,
         "isTrending": false,
@@ -14075,12 +13662,12 @@ export const productionHomePacks = [
     "tags": [
       "electronic house",
       "arabic house",
-      "club dance four",
-      "culture",
-      "middle",
-      "east",
+      "club dance",
       "electronic",
-      "house"
+      "house",
+      "arabic tribal",
+      "electronic dance",
+      "hypnotic dance club"
     ],
     "featured": false
   }

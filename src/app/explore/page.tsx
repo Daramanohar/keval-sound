@@ -169,7 +169,7 @@ export default function ExplorePage() {
     <PageTransition>
       <div className="relative overflow-visible">
         <div className="absolute inset-0 bg-gradient-to-b from-mid-purple/10 via-transparent to-transparent pointer-events-none" />
-        <div className="relative z-40 pt-12 pb-8">
+        <div className="relative z-40 pt-6 pb-6">
           <SectionHeader
             title="Explore"
             subtitle={searchSummary}

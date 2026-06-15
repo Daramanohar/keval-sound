@@ -150,7 +150,7 @@ export default function AppShell({ children }: AppShellProps) {
         )}
       >
         <TopBar onMenuToggle={toggleMobileSidebar} mobileOpen={mobileSidebarOpen} />
-        <main className="flex-1 px-6 py-6 pb-8">
+        <main className="flex-1 px-6 pt-3 pb-8">
           <Suspense fallback={<RouteLoading />}>{children}</Suspense>
         </main>
         <Footer />

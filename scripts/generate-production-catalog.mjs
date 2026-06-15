@@ -250,7 +250,7 @@ function findFile(files, predicate) {
 }
 
 function compactMetadataTag(value) {
-  let tag = normalizeKey(value);
+  let tag = normalizeKey(value.replace(/\([^)]*\)/g, " "));
   if (!tag || tag.includes("bpm")) return "";
 
   const preferred = [
@@ -329,26 +329,22 @@ function isUsableGeneratedTag(tag) {
 
 function extractTags(metadata, category, packTitle) {
   const firstLine = metadata.split("\n").find((line) => line.trim()) ?? "";
-  const commaTags = firstLine
-    .split(",")
+  const metadataTags = firstLine
+    .split(/[;,]/)
     .map(compactMetadataTag)
     .filter(isUsableGeneratedTag);
 
-  const extra = [category, packTitle]
-    .flatMap((value) => normalizeKey(value).split(" "))
-    .filter((value) => value.length > 2 && !TAG_STOP_WORDS.has(value));
-
-  const tags = Array.from(new Set([...commaTags, ...extra])).filter(isUsableGeneratedTag);
+  const tags = Array.from(new Set(metadataTags)).filter(isUsableGeneratedTag);
   const fallbackTags = [packTitle, category, "instrumental", "exclusive"]
     .map((value) => normalizeKey(value))
     .filter(Boolean);
 
   for (const tag of fallbackTags) {
-    if (tags.length >= 2) break;
+    if (tags.length >= 3) break;
     if (!tags.includes(tag)) tags.push(tag);
   }
 
-  return tags.slice(0, 16);
+  return tags.slice(0, 3);
 }
 
 function createWaveformSeed(label) {

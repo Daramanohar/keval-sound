@@ -113,9 +113,12 @@ function displayTagName(tag: string) {
     .replace(/\s+/g, " ")
     .replace(/\bedm\b/gi, "EDM")
     .replace(/\br&b\b/gi, "R&B")
+    .replace(/\br and b\b/gi, "R&B")
     .replace(/\brnb\b/gi, "R&B")
     .replace(/\bdnb\b/gi, "D&B")
     .replace(/\blofi\b/gi, "Lo-Fi")
+    .replace(/\blo fi\b/gi, "Lo-Fi")
+    .replace(/\bhip hop rap\b/gi, "Hip-Hop / Rap")
     .replace(/\bhip hop\b/gi, "Hip-Hop")
     .replace(/\bhip-hop\b/gi, "Hip-Hop")
     .replace(/\b\w/g, (character) => character.toUpperCase());
@@ -211,11 +214,7 @@ export function matchesExploreFilter(record: ProductionSongRecord, filter: strin
   const fields = getSearchFields(record);
 
   return (
-    fields.pack === phrase ||
-    fields.category === phrase ||
-    fields.sourceCategory === phrase ||
-    fields.tags.some((tag) => tag === phrase || tag.includes(phrase) || phrase.includes(tag)) ||
-    includesWholeText(fields.metadata, phrase)
+    fields.tags.some((tag) => tag === phrase || tag.includes(phrase) || phrase.includes(tag))
   );
 }
 
@@ -342,12 +341,14 @@ export function getExploreGenres(): ExploreGenreOption[] {
     }
   }
 
-  return Array.from(counts.values()).sort(
-    (left, right) =>
-      right.count - left.count ||
-      left.category.localeCompare(right.category) ||
-      left.name.localeCompare(right.name)
-  );
+  return Array.from(counts.values())
+    .filter((option) => option.count > 1)
+    .sort(
+      (left, right) =>
+        right.count - left.count ||
+        left.category.localeCompare(right.category) ||
+        left.name.localeCompare(right.name)
+    );
 }
 
 export function getExploreCategories(): ExploreCategoryOption[] {

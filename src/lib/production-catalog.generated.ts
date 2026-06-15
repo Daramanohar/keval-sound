@@ -21,7 +21,7 @@ export interface ProductionSongRecord {
   tags: string[];
 }
 
-export const productionCatalogGeneratedAt = "2026-06-03T06:30:29.736Z";
+export const productionCatalogGeneratedAt = "2026-06-15T04:58:02.549Z";
 
 export const productionSongRecords = [
   {
@@ -44,10 +44,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic house",
       "arabic house",
-      "club dance four",
-      "culture",
-      "middle",
-      "east"
+      "club dance"
     ]
   },
   {
@@ -71,10 +68,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "house",
-      "arabic tribal arabic",
-      "culture",
-      "middle",
-      "east"
+      "arabic tribal"
     ]
   },
   {
@@ -97,10 +91,7 @@ export const productionSongRecords = [
     "tags": [
       "arabic house",
       "electronic dance",
-      "hypnotic dance club",
-      "culture",
-      "middle",
-      "east"
+      "hypnotic dance club"
     ]
   },
   {
@@ -123,10 +114,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic soundtrack",
       "arabic fusion",
-      "electronic orchestral",
-      "culture",
-      "middle",
-      "east"
+      "electronic orchestral"
     ]
   },
   {
@@ -149,10 +137,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "arabic house",
-      "house",
-      "culture",
-      "middle",
-      "east"
+      "house"
     ]
   },
   {
@@ -174,9 +159,8 @@ export const productionSongRecords = [
     "metadataText": "Middle Eastern chill fusion; lounge; downtempo (half-time groove)\n\nMiddle Eastern chill fusion with a laid-back half-time groove, soft oud phrases, brushed hand percussion, and warm sub pulses; verse texture stays sparse with airy pads and finger cymbals, the middle section opens with a rising qanun shimmer, and the final pass adds tabla fills and a gentle bass lift, Close, glossy, intimate mix with wide desert-air reverb and silky low end, warm, soft, smooth, relaxing, lounge, sophisticated",
     "tags": [
       "middle eastern chill",
-      "culture",
-      "middle",
-      "east"
+      "lounge",
+      "downtempo"
     ]
   },
   {
@@ -199,10 +183,7 @@ export const productionSongRecords = [
     "tags": [
       "dark trap",
       "middle eastern desert",
-      "cinematic gritty electronic",
-      "culture",
-      "middle",
-      "east"
+      "cinematic gritty electronic"
     ]
   },
   {
@@ -225,12 +206,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "house",
-      "arabic middle eastern",
-      "hypnotic",
-      "festival ready",
-      "culture",
-      "middle",
-      "east"
+      "arabic electronic"
     ]
   },
   {
@@ -253,10 +229,7 @@ export const productionSongRecords = [
     "tags": [
       "middle eastern chill",
       "lounge",
-      "downtempo",
-      "culture",
-      "middle",
-      "east"
+      "downtempo"
     ]
   },
   {
@@ -279,10 +252,7 @@ export const productionSongRecords = [
     "tags": [
       "middle eastern fusion",
       "lounge",
-      "atmospheric",
-      "culture",
-      "middle",
-      "east"
+      "atmospheric"
     ]
   },
   {
@@ -304,9 +274,8 @@ export const productionSongRecords = [
     "metadataText": "Middle Eastern chill fusion; lounge; downtempo (half-time groove)\n\nMiddle Eastern chill fusion with a laid-back half-time groove, soft oud phrases, brushed hand percussion, and warm sub pulses; verse texture stays sparse with airy pads and finger cymbals, the middle section opens with a rising qanun shimmer, and the final pass adds tabla fills and a gentle bass lift, Close, glossy, intimate mix with wide desert-air reverb and silky low end, warm, soft, smooth, relaxing, lounge, sophisticated",
     "tags": [
       "middle eastern chill",
-      "culture",
-      "middle",
-      "east"
+      "lounge",
+      "downtempo"
     ]
   },
   {
@@ -329,10 +298,7 @@ export const productionSongRecords = [
     "tags": [
       "middle eastern chill",
       "lounge",
-      "downtempo",
-      "culture",
-      "middle",
-      "east"
+      "downtempo"
     ]
   },
   {
@@ -355,10 +321,7 @@ export const productionSongRecords = [
     "tags": [
       "middle eastern trap",
       "trap",
-      "cinematic dark electronic",
-      "culture",
-      "middle",
-      "east"
+      "cinematic dark electronic"
     ]
   },
   {
@@ -381,10 +344,7 @@ export const productionSongRecords = [
     "tags": [
       "arabic house",
       "electronic",
-      "dancefloor hypnotic",
-      "culture",
-      "middle",
-      "east"
+      "dancefloor hypnotic"
     ]
   },
   {
@@ -407,12 +367,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "house",
-      "arabic middle eastern",
-      "hypnotic",
-      "festival ready",
-      "culture",
-      "middle",
-      "east"
+      "arabic electronic"
     ]
   },
   {
@@ -435,12 +390,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic house",
       "arabic house",
-      "chant",
-      "hypnotic",
-      "festival ready",
-      "culture",
-      "middle",
-      "east"
+      "chant"
     ]
   },
   {
@@ -461,9 +411,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/MIDDLE EAST/Jasmine & Sandstorms",
     "metadataText": "",
     "tags": [
+      "middle east",
       "culture",
-      "middle",
-      "east"
+      "instrumental"
     ]
   },
   {
@@ -486,10 +436,7 @@ export const productionSongRecords = [
     "tags": [
       "middle eastern trap",
       "trap",
-      "cinematic",
-      "culture",
-      "middle",
-      "east"
+      "cinematic"
     ]
   },
   {
@@ -512,12 +459,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic house",
       "arabic house",
-      "chant",
-      "hypnotic",
-      "festival ready",
-      "culture",
-      "middle",
-      "east"
+      "chant"
     ]
   },
   {
@@ -540,12 +482,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic house",
       "arabic house",
-      "chant",
-      "hypnotic",
-      "festival ready",
-      "culture",
-      "middle",
-      "east"
+      "chant"
     ]
   },
   {
@@ -568,12 +505,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic house",
       "arabic house",
-      "chant",
-      "hypnotic",
-      "festival ready",
-      "culture",
-      "middle",
-      "east"
+      "chant"
     ]
   },
   {
@@ -596,12 +528,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic house",
       "arabic house",
-      "chant",
-      "hypnotic",
-      "festival ready",
-      "culture",
-      "middle",
-      "east"
+      "chant"
     ]
   },
   {
@@ -624,12 +551,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic house",
       "arabic house",
-      "chant",
-      "hypnotic",
-      "festival ready",
-      "culture",
-      "middle",
-      "east"
+      "chant"
     ]
   },
   {
@@ -652,12 +574,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic house",
       "arabic house",
-      "chant",
-      "hypnotic",
-      "festival ready",
-      "culture",
-      "middle",
-      "east"
+      "chant"
     ]
   },
   {
@@ -680,12 +597,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic house",
       "arabic house",
-      "chant",
-      "hypnotic",
-      "festival ready",
-      "culture",
-      "middle",
-      "east"
+      "chant"
     ]
   },
   {
@@ -708,10 +620,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "orchestral",
-      "soundtrack",
-      "culture",
-      "middle",
-      "east"
+      "soundtrack"
     ]
   },
   {
@@ -734,10 +643,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "orchestral",
-      "soundtrack",
-      "culture",
-      "middle",
-      "east"
+      "soundtrack"
     ]
   },
   {
@@ -760,10 +666,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "orchestral",
-      "soundtrack",
-      "culture",
-      "middle",
-      "east"
+      "soundtrack"
     ]
   },
   {
@@ -786,10 +689,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "orchestral",
-      "soundtrack",
-      "culture",
-      "middle",
-      "east"
+      "soundtrack"
     ]
   },
   {
@@ -812,10 +712,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "orchestral",
-      "soundtrack",
-      "culture",
-      "middle",
-      "east"
+      "soundtrack"
     ]
   },
   {
@@ -838,10 +735,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "orchestral",
-      "soundtrack",
-      "culture",
-      "middle",
-      "east"
+      "soundtrack"
     ]
   },
   {
@@ -864,10 +758,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "orchestral",
-      "soundtrack",
-      "culture",
-      "middle",
-      "east"
+      "soundtrack"
     ]
   },
   {
@@ -890,10 +781,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "orchestral",
-      "soundtrack",
-      "culture",
-      "middle",
-      "east"
+      "soundtrack"
     ]
   },
   {
@@ -916,10 +804,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "orchestral",
-      "soundtrack",
-      "culture",
-      "middle",
-      "east"
+      "soundtrack"
     ]
   },
   {
@@ -942,10 +827,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "orchestral",
-      "soundtrack",
-      "culture",
-      "middle",
-      "east"
+      "soundtrack"
     ]
   },
   {
@@ -968,10 +850,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "orchestral",
-      "soundtrack",
-      "culture",
-      "middle",
-      "east"
+      "soundtrack"
     ]
   },
   {
@@ -994,11 +873,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "house",
-      "hypnotic",
-      "festival club",
-      "culture",
-      "middle",
-      "east"
+      "hypnotic"
     ]
   },
   {
@@ -1021,11 +896,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "house",
-      "hypnotic",
-      "festival club",
-      "culture",
-      "middle",
-      "east"
+      "hypnotic"
     ]
   },
   {
@@ -1048,11 +919,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "house",
-      "hypnotic",
-      "festival club",
-      "culture",
-      "middle",
-      "east"
+      "hypnotic"
     ]
   },
   {
@@ -1075,11 +942,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "house",
-      "hypnotic",
-      "festival club",
-      "culture",
-      "middle",
-      "east"
+      "hypnotic"
     ]
   },
   {
@@ -1102,11 +965,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "house",
-      "hypnotic",
-      "festival club",
-      "culture",
-      "middle",
-      "east"
+      "hypnotic"
     ]
   },
   {
@@ -1129,11 +988,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "house",
-      "hypnotic",
-      "festival club",
-      "culture",
-      "middle",
-      "east"
+      "hypnotic"
     ]
   },
   {
@@ -1156,11 +1011,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "house",
-      "hypnotic",
-      "festival club",
-      "culture",
-      "middle",
-      "east"
+      "hypnotic"
     ]
   },
   {
@@ -1183,11 +1034,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "house",
-      "hypnotic",
-      "festival club",
-      "culture",
-      "middle",
-      "east"
+      "hypnotic"
     ]
   },
   {
@@ -1210,11 +1057,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "house",
-      "hypnotic",
-      "festival club",
-      "culture",
-      "middle",
-      "east"
+      "hypnotic"
     ]
   },
   {
@@ -1235,9 +1078,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/MIDDLE EAST/The Last Oasis",
     "metadataText": "",
     "tags": [
+      "middle east",
       "culture",
-      "middle",
-      "east"
+      "instrumental"
     ]
   },
   {
@@ -1260,11 +1103,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "arabic house",
-      "dance",
-      "hypnotic",
-      "culture",
-      "middle",
-      "east"
+      "dance"
     ]
   },
   {
@@ -1287,11 +1126,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "arabic house",
-      "dance",
-      "hypnotic",
-      "culture",
-      "middle",
-      "east"
+      "dance"
     ]
   },
   {
@@ -1314,11 +1149,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "arabic house",
-      "dance",
-      "hypnotic",
-      "culture",
-      "middle",
-      "east"
+      "dance"
     ]
   },
   {
@@ -1341,11 +1172,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "arabic house",
-      "dance",
-      "hypnotic",
-      "culture",
-      "middle",
-      "east"
+      "dance"
     ]
   },
   {
@@ -1368,11 +1195,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "arabic house",
-      "dance",
-      "hypnotic",
-      "culture",
-      "middle",
-      "east"
+      "dance"
     ]
   },
   {
@@ -1395,11 +1218,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "arabic house",
-      "dance",
-      "hypnotic",
-      "culture",
-      "middle",
-      "east"
+      "dance"
     ]
   },
   {
@@ -1422,11 +1241,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "arabic house",
-      "dance",
-      "hypnotic",
-      "culture",
-      "middle",
-      "east"
+      "dance"
     ]
   },
   {
@@ -1449,11 +1264,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "arabic house",
-      "dance",
-      "hypnotic",
-      "culture",
-      "middle",
-      "east"
+      "dance"
     ]
   },
   {
@@ -1476,10 +1287,7 @@ export const productionSongRecords = [
     "tags": [
       "arabic house",
       "electronic dance",
-      "festival house",
-      "culture",
-      "middle",
-      "east"
+      "festival house"
     ]
   },
   {
@@ -1502,10 +1310,7 @@ export const productionSongRecords = [
     "tags": [
       "arabic house",
       "electronic dance",
-      "festival house",
-      "culture",
-      "middle",
-      "east"
+      "festival house"
     ]
   },
   {
@@ -1528,10 +1333,7 @@ export const productionSongRecords = [
     "tags": [
       "arabic house",
       "electronic dance",
-      "festival house",
-      "culture",
-      "middle",
-      "east"
+      "festival house"
     ]
   },
   {
@@ -1554,10 +1356,7 @@ export const productionSongRecords = [
     "tags": [
       "arabic house",
       "electronic dance",
-      "festival house",
-      "culture",
-      "middle",
-      "east"
+      "festival house"
     ]
   },
   {
@@ -1580,9 +1379,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop",
       "heartfelt",
-      "cinematic",
-      "commercial",
-      "pop"
+      "cinematic"
     ]
   },
   {
@@ -1605,9 +1402,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop",
       "heartfelt",
-      "cinematic",
-      "commercial",
-      "pop"
+      "cinematic"
     ]
   },
   {
@@ -1630,9 +1425,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop",
       "heartfelt",
-      "cinematic",
-      "commercial",
-      "pop"
+      "cinematic"
     ]
   },
   {
@@ -1655,9 +1448,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop",
       "heartfelt",
-      "cinematic",
-      "commercial",
-      "pop"
+      "cinematic"
     ]
   },
   {
@@ -1680,9 +1471,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop",
       "heartfelt",
-      "cinematic",
-      "commercial",
-      "pop"
+      "cinematic"
     ]
   },
   {
@@ -1705,9 +1494,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop",
       "singer songwriter",
-      "uplifting",
-      "commercial",
-      "pop"
+      "uplifting"
     ]
   },
   {
@@ -1730,9 +1517,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop",
       "singer songwriter",
-      "uplifting",
-      "commercial",
-      "pop"
+      "uplifting"
     ]
   },
   {
@@ -1755,9 +1540,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop",
       "singer songwriter",
-      "uplifting",
-      "commercial",
-      "pop"
+      "uplifting"
     ]
   },
   {
@@ -1780,9 +1563,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop",
       "singer songwriter",
-      "uplifting",
-      "commercial",
-      "pop"
+      "uplifting"
     ]
   },
   {
@@ -1805,9 +1586,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop",
       "singer songwriter",
-      "uplifting",
-      "commercial",
-      "pop"
+      "uplifting"
     ]
   },
   {
@@ -1830,9 +1609,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop",
       "singer songwriter",
-      "uplifting",
-      "commercial",
-      "pop"
+      "uplifting"
     ]
   },
   {
@@ -1855,9 +1632,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop",
       "singer songwriter",
-      "uplifting",
-      "commercial",
-      "pop"
+      "uplifting"
     ]
   },
   {
@@ -1880,7 +1655,6 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "electro",
-      "commercial",
       "pop"
     ]
   },
@@ -1904,7 +1678,6 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "electro",
-      "commercial",
       "pop"
     ]
   },
@@ -1928,7 +1701,6 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "electro",
-      "commercial",
       "pop"
     ]
   },
@@ -1952,7 +1724,6 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "electro",
-      "commercial",
       "pop"
     ]
   },
@@ -1976,7 +1747,6 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "electro",
-      "commercial",
       "pop"
     ]
   },
@@ -2000,9 +1770,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary pop",
       "pop anthem",
-      "dance pop",
-      "commercial",
-      "pop"
+      "dance pop"
     ]
   },
   {
@@ -2025,9 +1793,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary pop",
       "pop anthem",
-      "dance pop",
-      "commercial",
-      "pop"
+      "dance pop"
     ]
   },
   {
@@ -2050,9 +1816,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary pop",
       "pop anthem",
-      "dance pop",
-      "commercial",
-      "pop"
+      "dance pop"
     ]
   },
   {
@@ -2075,9 +1839,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary pop",
       "pop anthem",
-      "dance pop",
-      "commercial",
-      "pop"
+      "dance pop"
     ]
   },
   {
@@ -2100,9 +1862,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary pop",
       "pop anthem",
-      "dance pop",
-      "commercial",
-      "pop"
+      "dance pop"
     ]
   },
   {
@@ -2125,9 +1885,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary pop",
       "pop anthem",
-      "dance pop",
-      "commercial",
-      "pop"
+      "dance pop"
     ]
   },
   {
@@ -2150,9 +1908,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary pop",
       "pop anthem",
-      "dance pop",
-      "commercial",
-      "pop"
+      "dance pop"
     ]
   },
   {
@@ -2175,9 +1931,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary pop",
       "pop anthem",
-      "dance pop",
-      "commercial",
-      "pop"
+      "dance pop"
     ]
   },
   {
@@ -2200,9 +1954,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary pop",
       "pop anthem",
-      "dance pop",
-      "commercial",
-      "pop"
+      "dance pop"
     ]
   },
   {
@@ -2225,9 +1977,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary pop",
       "pop anthem",
-      "dance pop",
-      "commercial",
-      "pop"
+      "dance pop"
     ]
   },
   {
@@ -2250,9 +2000,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary pop",
       "pop anthem",
-      "dance pop",
-      "commercial",
-      "pop"
+      "dance pop"
     ]
   },
   {
@@ -2275,11 +2023,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "indie rock",
-      "feel good",
-      "warm",
-      "soft",
-      "commercial",
-      "pop"
+      "feel good"
     ]
   },
   {
@@ -2302,11 +2046,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "indie rock",
-      "feel good",
-      "warm",
-      "soft",
-      "commercial",
-      "pop"
+      "feel good"
     ]
   },
   {
@@ -2329,11 +2069,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "indie rock",
-      "feel good",
-      "warm",
-      "soft",
-      "commercial",
-      "pop"
+      "feel good"
     ]
   },
   {
@@ -2356,11 +2092,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "indie rock",
-      "feel good",
-      "warm",
-      "soft",
-      "commercial",
-      "pop"
+      "feel good"
     ]
   },
   {
@@ -2383,11 +2115,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "indie rock",
-      "feel good",
-      "warm",
-      "soft",
-      "commercial",
-      "pop"
+      "feel good"
     ]
   },
   {
@@ -2410,11 +2138,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "indie rock",
-      "feel good",
-      "warm",
-      "soft",
-      "commercial",
-      "pop"
+      "feel good"
     ]
   },
   {
@@ -2437,11 +2161,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "indie rock",
-      "feel good",
-      "warm",
-      "soft",
-      "commercial",
-      "pop"
+      "feel good"
     ]
   },
   {
@@ -2464,11 +2184,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "indie rock",
-      "feel good",
-      "warm",
-      "soft",
-      "commercial",
-      "pop"
+      "feel good"
     ]
   },
   {
@@ -2491,11 +2207,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "indie rock",
-      "feel good",
-      "warm",
-      "soft",
-      "commercial",
-      "pop"
+      "feel good"
     ]
   },
   {
@@ -2518,11 +2230,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "indie rock",
-      "feel good",
-      "warm",
-      "soft",
-      "commercial",
-      "pop"
+      "feel good"
     ]
   },
   {
@@ -2545,11 +2253,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "indie rock",
-      "feel good",
-      "warm",
-      "soft",
-      "commercial",
-      "pop"
+      "feel good"
     ]
   },
   {
@@ -2572,11 +2276,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "indie rock",
-      "feel good",
-      "warm",
-      "soft",
-      "commercial",
-      "pop"
+      "feel good"
     ]
   },
   {
@@ -2599,11 +2299,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "indie rock",
-      "feel good",
-      "warm",
-      "soft",
-      "commercial",
-      "pop"
+      "feel good"
     ]
   },
   {
@@ -2626,11 +2322,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "indie rock",
-      "feel good",
-      "warm",
-      "soft",
-      "commercial",
-      "pop"
+      "feel good"
     ]
   },
   {
@@ -2653,11 +2345,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "indie rock",
-      "feel good",
-      "warm",
-      "soft",
-      "commercial",
-      "pop"
+      "feel good"
     ]
   },
   {
@@ -2680,11 +2368,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "indie rock",
-      "feel good",
-      "warm",
-      "soft",
-      "commercial",
-      "pop"
+      "feel good"
     ]
   },
   {
@@ -2707,11 +2391,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "indie rock",
-      "feel good",
-      "warm",
-      "soft",
-      "commercial",
-      "pop"
+      "feel good"
     ]
   },
   {
@@ -2734,11 +2414,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "indie rock",
-      "feel good",
-      "warm",
-      "soft",
-      "commercial",
-      "pop"
+      "feel good"
     ]
   },
   {
@@ -2761,10 +2437,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop",
       "heartfelt",
-      "cinematic",
-      "uplifting",
-      "commercial",
-      "pop"
+      "cinematic"
     ]
   },
   {
@@ -2787,10 +2460,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop",
       "heartfelt",
-      "cinematic",
-      "uplifting",
-      "commercial",
-      "pop"
+      "cinematic"
     ]
   },
   {
@@ -2813,10 +2483,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop",
       "heartfelt",
-      "cinematic",
-      "uplifting",
-      "commercial",
-      "pop"
+      "cinematic"
     ]
   },
   {
@@ -2839,10 +2506,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop",
       "heartfelt",
-      "cinematic",
-      "uplifting",
-      "commercial",
-      "pop"
+      "cinematic"
     ]
   },
   {
@@ -2865,9 +2529,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "dubstep",
-      "glitch",
-      "electronic",
-      "swing"
+      "glitch"
     ]
   },
   {
@@ -2890,9 +2552,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "dubstep",
-      "glitch",
-      "electronic",
-      "swing"
+      "glitch"
     ]
   },
   {
@@ -2915,9 +2575,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "dubstep",
-      "glitch",
-      "electronic",
-      "swing"
+      "glitch"
     ]
   },
   {
@@ -2940,9 +2598,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "dubstep",
-      "glitch",
-      "electronic",
-      "swing"
+      "glitch"
     ]
   },
   {
@@ -2965,9 +2621,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "dubstep",
-      "glitch",
-      "electronic",
-      "swing"
+      "glitch"
     ]
   },
   {
@@ -2990,9 +2644,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "dubstep",
-      "glitch",
-      "electronic",
-      "swing"
+      "glitch"
     ]
   },
   {
@@ -3015,9 +2667,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "dubstep",
-      "glitch",
-      "electronic",
-      "swing"
+      "glitch"
     ]
   },
   {
@@ -3040,9 +2690,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "dubstep",
-      "glitch",
-      "electronic",
-      "swing"
+      "glitch"
     ]
   },
   {
@@ -3065,9 +2713,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "dubstep",
-      "glitch",
-      "electronic",
-      "swing"
+      "glitch"
     ]
   },
   {
@@ -3090,9 +2736,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "dubstep",
-      "glitch",
-      "electronic",
-      "swing"
+      "glitch"
     ]
   },
   {
@@ -3115,9 +2759,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "dubstep",
-      "glitch",
-      "electronic",
-      "swing"
+      "glitch"
     ]
   },
   {
@@ -3140,9 +2782,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "dubstep",
-      "glitch",
-      "electronic",
-      "swing"
+      "glitch"
     ]
   },
   {
@@ -3165,9 +2805,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "dubstep",
-      "glitch",
-      "electronic",
-      "swing"
+      "glitch"
     ]
   },
   {
@@ -3190,9 +2828,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "dubstep",
-      "glitch",
-      "electronic",
-      "swing"
+      "glitch"
     ]
   },
   {
@@ -3215,9 +2851,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "dubstep",
-      "glitch",
-      "electronic",
-      "swing"
+      "glitch"
     ]
   },
   {
@@ -3240,9 +2874,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "dubstep",
-      "glitch",
-      "electronic",
-      "swing"
+      "glitch"
     ]
   },
   {
@@ -3265,9 +2897,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "dubstep",
-      "glitch",
-      "electronic",
-      "swing"
+      "glitch"
     ]
   },
   {
@@ -3290,8 +2920,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "jazz",
-      "electronic",
-      "swing"
+      "electronic"
     ]
   },
   {
@@ -3314,8 +2943,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "jazz",
-      "electronic",
-      "swing"
+      "electronic"
     ]
   },
   {
@@ -3338,8 +2966,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "jazz",
-      "electronic",
-      "swing"
+      "electronic"
     ]
   },
   {
@@ -3362,8 +2989,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "jazz",
-      "electronic",
-      "swing"
+      "electronic"
     ]
   },
   {
@@ -3386,8 +3012,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "jazz",
-      "electronic",
-      "swing"
+      "electronic"
     ]
   },
   {
@@ -3410,8 +3035,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "jazz",
-      "electronic",
-      "swing"
+      "electronic"
     ]
   },
   {
@@ -3434,8 +3058,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "jazz",
-      "electronic",
-      "swing"
+      "electronic"
     ]
   },
   {
@@ -3458,8 +3081,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "jazz",
-      "electronic",
-      "swing"
+      "electronic"
     ]
   },
   {
@@ -3482,8 +3104,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "jazz",
-      "electronic",
-      "swing"
+      "electronic"
     ]
   },
   {
@@ -3506,8 +3127,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "jazz",
-      "electronic",
-      "swing"
+      "electronic"
     ]
   },
   {
@@ -3530,8 +3150,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "jazz",
-      "electronic",
-      "swing"
+      "electronic"
     ]
   },
   {
@@ -3554,8 +3173,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "jazz",
-      "electronic",
-      "swing"
+      "electronic"
     ]
   },
   {
@@ -3578,8 +3196,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "jazz",
-      "electronic",
-      "swing"
+      "electronic"
     ]
   },
   {
@@ -3602,8 +3219,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "jazz",
-      "electronic",
-      "swing"
+      "electronic"
     ]
   },
   {
@@ -3626,8 +3242,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "swing jazz",
-      "electronic",
-      "swing"
+      "electronic"
     ]
   },
   {
@@ -3650,8 +3265,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "swing jazz",
-      "electronic",
-      "swing"
+      "electronic"
     ]
   },
   {
@@ -3674,8 +3288,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "swing jazz",
-      "electronic",
-      "swing"
+      "electronic"
     ]
   },
   {
@@ -3698,8 +3311,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "swing jazz",
-      "electronic",
-      "swing"
+      "electronic"
     ]
   },
   {
@@ -3722,8 +3334,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "swing jazz",
-      "electronic",
-      "swing"
+      "electronic"
     ]
   },
   {
@@ -3746,8 +3357,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "swing jazz",
-      "electronic",
-      "swing"
+      "electronic"
     ]
   },
   {
@@ -3770,9 +3380,7 @@ export const productionSongRecords = [
     "tags": [
       "latin",
       "salsa",
-      "electro swing",
-      "electronic",
-      "swing"
+      "electro swing"
     ]
   },
   {
@@ -3795,9 +3403,7 @@ export const productionSongRecords = [
     "tags": [
       "latin",
       "salsa",
-      "electro swing",
-      "electronic",
-      "swing"
+      "electro swing"
     ]
   },
   {
@@ -3820,9 +3426,7 @@ export const productionSongRecords = [
     "tags": [
       "latin",
       "salsa",
-      "electro swing",
-      "electronic",
-      "swing"
+      "electro swing"
     ]
   },
   {
@@ -3845,9 +3449,7 @@ export const productionSongRecords = [
     "tags": [
       "latin",
       "salsa",
-      "electro swing",
-      "electronic",
-      "swing"
+      "electro swing"
     ]
   },
   {
@@ -3870,9 +3472,7 @@ export const productionSongRecords = [
     "tags": [
       "latin",
       "salsa",
-      "electro swing",
-      "electronic",
-      "swing"
+      "electro swing"
     ]
   },
   {
@@ -3895,9 +3495,7 @@ export const productionSongRecords = [
     "tags": [
       "latin",
       "salsa",
-      "electro swing",
-      "electronic",
-      "swing"
+      "electro swing"
     ]
   },
   {
@@ -3920,9 +3518,7 @@ export const productionSongRecords = [
     "tags": [
       "latin",
       "salsa",
-      "electro swing",
-      "electronic",
-      "swing"
+      "electro swing"
     ]
   },
   {
@@ -3945,9 +3541,7 @@ export const productionSongRecords = [
     "tags": [
       "latin",
       "salsa",
-      "electro swing",
-      "electronic",
-      "swing"
+      "electro swing"
     ]
   },
   {
@@ -3970,9 +3564,7 @@ export const productionSongRecords = [
     "tags": [
       "latin",
       "salsa",
-      "electro swing",
-      "electronic",
-      "swing"
+      "electro swing"
     ]
   },
   {
@@ -3995,9 +3587,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "vintage jazz",
-      "clubby groovy",
-      "electronic",
-      "swing"
+      "clubby groovy"
     ]
   },
   {
@@ -4020,9 +3610,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "vintage jazz",
-      "clubby groovy",
-      "electronic",
-      "swing"
+      "clubby groovy"
     ]
   },
   {
@@ -4045,9 +3633,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "vintage jazz",
-      "clubby groovy",
-      "electronic",
-      "swing"
+      "clubby groovy"
     ]
   },
   {
@@ -4070,9 +3656,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "vintage jazz",
-      "clubby groovy",
-      "electronic",
-      "swing"
+      "clubby groovy"
     ]
   },
   {
@@ -4095,9 +3679,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral trap",
       "cinematic",
-      "dramatic",
-      "electronic",
-      "trap"
+      "dramatic"
     ]
   },
   {
@@ -4120,9 +3702,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral trap",
       "cinematic",
-      "dramatic",
-      "electronic",
-      "trap"
+      "dramatic"
     ]
   },
   {
@@ -4145,9 +3725,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral trap",
       "cinematic",
-      "dramatic",
-      "electronic",
-      "trap"
+      "dramatic"
     ]
   },
   {
@@ -4170,9 +3748,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral trap",
       "cinematic",
-      "dramatic",
-      "electronic",
-      "trap"
+      "dramatic"
     ]
   },
   {
@@ -4195,9 +3771,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral trap",
       "cinematic",
-      "dramatic",
-      "electronic",
-      "trap"
+      "dramatic"
     ]
   },
   {
@@ -4220,9 +3794,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral trap",
       "cinematic",
-      "dramatic",
-      "electronic",
-      "trap"
+      "dramatic"
     ]
   },
   {
@@ -4245,9 +3817,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral trap",
       "cinematic",
-      "dramatic",
-      "electronic",
-      "trap"
+      "dramatic"
     ]
   },
   {
@@ -4270,9 +3840,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral trap",
       "cinematic",
-      "dramatic",
-      "electronic",
-      "trap"
+      "dramatic"
     ]
   },
   {
@@ -4295,9 +3863,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral trap",
       "cinematic",
-      "dramatic",
-      "electronic",
-      "trap"
+      "dramatic"
     ]
   },
   {
@@ -4321,9 +3887,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral trap",
       "cinematic",
-      "dramatic",
-      "electronic",
-      "trap"
+      "dramatic"
     ]
   },
   {
@@ -4346,9 +3910,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral trap",
       "cinematic",
-      "dramatic",
-      "electronic",
-      "trap"
+      "dramatic"
     ]
   },
   {
@@ -4371,9 +3933,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral trap",
       "cinematic",
-      "dramatic",
-      "electronic",
-      "trap"
+      "dramatic"
     ]
   },
   {
@@ -4396,9 +3956,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral trap",
       "cinematic",
-      "dramatic",
-      "electronic",
-      "trap"
+      "dramatic"
     ]
   },
   {
@@ -4421,9 +3979,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral trap",
       "cinematic",
-      "dramatic",
-      "electronic",
-      "trap"
+      "dramatic"
     ]
   },
   {
@@ -4446,9 +4002,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral trap",
       "cinematic",
-      "dramatic",
-      "electronic",
-      "trap"
+      "dramatic"
     ]
   },
   {
@@ -4471,9 +4025,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral trap",
       "cinematic",
-      "dramatic",
-      "electronic",
-      "trap"
+      "dramatic"
     ]
   },
   {
@@ -4496,9 +4048,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral trap",
       "cinematic",
-      "dramatic",
-      "electronic",
-      "trap"
+      "dramatic"
     ]
   },
   {
@@ -4521,9 +4071,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral trap",
       "cinematic",
-      "dramatic",
-      "electronic",
-      "trap"
+      "dramatic"
     ]
   },
   {
@@ -4546,9 +4094,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral trap",
       "cinematic",
-      "dramatic",
-      "electronic",
-      "trap"
+      "dramatic"
     ]
   },
   {
@@ -4571,9 +4117,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral trap",
       "cinematic",
-      "dramatic",
-      "electronic",
-      "trap"
+      "dramatic"
     ]
   },
   {
@@ -4596,9 +4140,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral trap",
       "cinematic",
-      "dramatic",
-      "electronic",
-      "trap"
+      "dramatic"
     ]
   },
   {
@@ -4621,9 +4163,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral trap",
       "cinematic",
-      "dramatic",
-      "electronic",
-      "trap"
+      "dramatic"
     ]
   },
   {
@@ -4646,9 +4186,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral trap",
       "cinematic",
-      "dramatic",
-      "electronic",
-      "trap"
+      "dramatic"
     ]
   },
   {
@@ -4671,9 +4209,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral trap",
       "cinematic",
-      "dramatic",
-      "electronic",
-      "trap"
+      "dramatic"
     ]
   },
   {
@@ -4696,9 +4232,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral trap",
       "cinematic",
-      "dramatic",
-      "electronic",
-      "trap"
+      "dramatic"
     ]
   },
   {
@@ -4721,9 +4255,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral trap",
       "cinematic",
-      "dramatic",
-      "electronic",
-      "trap"
+      "dramatic"
     ]
   },
   {
@@ -4746,9 +4278,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral trap",
       "cinematic",
-      "dramatic",
-      "electronic",
-      "trap"
+      "dramatic"
     ]
   },
   {
@@ -4771,8 +4301,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "cinematic electronic",
-      "electronic"
+      "cinematic electronic"
     ]
   },
   {
@@ -4795,8 +4324,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "cinematic electronic",
-      "electronic"
+      "cinematic electronic"
     ]
   },
   {
@@ -4819,8 +4347,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "cinematic electronic",
-      "electronic"
+      "cinematic electronic"
     ]
   },
   {
@@ -4844,8 +4371,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "cinematic electronic",
-      "electronic"
+      "cinematic electronic"
     ]
   },
   {
@@ -4868,8 +4394,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "cinematic electronic",
-      "electronic"
+      "cinematic electronic"
     ]
   },
   {
@@ -4892,8 +4417,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "cinematic electronic",
-      "electronic"
+      "cinematic electronic"
     ]
   },
   {
@@ -4916,8 +4440,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "cinematic electronic",
-      "electronic"
+      "cinematic electronic"
     ]
   },
   {
@@ -4940,8 +4463,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "cinematic electronic",
-      "electronic"
+      "cinematic electronic"
     ]
   },
   {
@@ -4964,8 +4486,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "cinematic electronic",
-      "electronic"
+      "cinematic electronic"
     ]
   },
   {
@@ -4988,8 +4509,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "cinematic electronic",
-      "electronic"
+      "cinematic electronic"
     ]
   },
   {
@@ -5012,8 +4532,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "cinematic electronic",
-      "electronic"
+      "cinematic electronic"
     ]
   },
   {
@@ -5036,8 +4555,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "cinematic electronic",
-      "electronic"
+      "cinematic electronic"
     ]
   },
   {
@@ -5060,8 +4578,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "cinematic electronic",
-      "electronic"
+      "cinematic electronic"
     ]
   },
   {
@@ -5084,8 +4601,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "cinematic electronic",
-      "electronic"
+      "cinematic electronic"
     ]
   },
   {
@@ -5108,8 +4624,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "cinematic electronic",
-      "electronic"
+      "cinematic electronic"
     ]
   },
   {
@@ -5132,8 +4647,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "cinematic electronic",
-      "electronic"
+      "cinematic electronic"
     ]
   },
   {
@@ -5156,8 +4670,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "cinematic electronic",
-      "electronic"
+      "cinematic electronic"
     ]
   },
   {
@@ -5180,8 +4693,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "dark trap",
-      "cinematic hip hop",
-      "electronic"
+      "cinematic hip hop"
     ]
   },
   {
@@ -5204,8 +4716,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "dark trap",
-      "cinematic hip hop",
-      "electronic"
+      "cinematic hip hop"
     ]
   },
   {
@@ -5228,8 +4739,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "dark trap",
-      "cinematic hip hop",
-      "electronic"
+      "cinematic hip hop"
     ]
   },
   {
@@ -5252,8 +4762,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "dark trap",
-      "cinematic hip hop",
-      "electronic"
+      "cinematic hip hop"
     ]
   },
   {
@@ -5276,8 +4785,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "dark trap",
-      "cinematic hip hop",
-      "electronic"
+      "cinematic hip hop"
     ]
   },
   {
@@ -5300,8 +4808,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "dark trap",
-      "cinematic hip hop",
-      "electronic"
+      "cinematic hip hop"
     ]
   },
   {
@@ -5324,8 +4831,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "dark trap",
-      "cinematic hip hop",
-      "electronic"
+      "cinematic hip hop"
     ]
   },
   {
@@ -5348,8 +4854,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "dark trap",
-      "cinematic hip hop",
-      "electronic"
+      "cinematic hip hop"
     ]
   },
   {
@@ -5372,8 +4877,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "dark trap",
-      "cinematic hip hop",
-      "electronic"
+      "cinematic hip hop"
     ]
   },
   {
@@ -5396,8 +4900,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "dark trap",
-      "cinematic hip hop",
-      "electronic"
+      "cinematic hip hop"
     ]
   },
   {
@@ -5420,8 +4923,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "dark trap",
-      "cinematic hip hop",
-      "electronic"
+      "cinematic hip hop"
     ]
   },
   {
@@ -5444,8 +4946,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "dark trap",
-      "cinematic hip hop",
-      "electronic"
+      "cinematic hip hop"
     ]
   },
   {
@@ -5468,8 +4969,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "dark trap",
-      "cinematic hip hop",
-      "electronic"
+      "cinematic hip hop"
     ]
   },
   {
@@ -5492,8 +4992,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "dark trap",
-      "cinematic hip hop",
-      "electronic"
+      "cinematic hip hop"
     ]
   },
   {
@@ -5516,8 +5015,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "dark trap",
-      "cinematic hip hop",
-      "electronic"
+      "cinematic hip hop"
     ]
   },
   {
@@ -5540,8 +5038,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "dark trap",
-      "cinematic hip hop",
-      "electronic"
+      "cinematic hip hop"
     ]
   },
   {
@@ -5564,8 +5061,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "dark trap",
-      "cinematic hip hop",
-      "electronic"
+      "cinematic hip hop"
     ]
   },
   {
@@ -5588,8 +5084,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "dark trap",
-      "cinematic hip hop",
-      "electronic"
+      "cinematic hip hop"
     ]
   },
   {
@@ -5612,8 +5107,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "dark trap",
-      "cinematic hip hop",
-      "electronic"
+      "cinematic hip hop"
     ]
   },
   {
@@ -5636,8 +5130,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "dark trap",
-      "cinematic hip hop",
-      "electronic"
+      "cinematic hip hop"
     ]
   },
   {
@@ -5661,8 +5154,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "dark trap",
-      "cinematic hip hop",
-      "electronic"
+      "cinematic hip hop"
     ]
   },
   {
@@ -5685,8 +5177,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "dark trap",
-      "cinematic hip hop",
-      "electronic"
+      "cinematic hip hop"
     ]
   },
   {
@@ -5709,8 +5200,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "dark trap",
-      "cinematic hip hop",
-      "electronic"
+      "cinematic hip hop"
     ]
   },
   {
@@ -5733,8 +5223,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "dark trap",
-      "cinematic hip hop",
-      "electronic"
+      "cinematic hip hop"
     ]
   },
   {
@@ -5757,8 +5246,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "dark trap",
-      "cinematic hip hop",
-      "electronic"
+      "cinematic hip hop"
     ]
   },
   {
@@ -5779,8 +5267,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Trap/Neon Bulletproof",
     "metadataText": "",
     "tags": [
+      "trap",
       "electronic",
-      "trap"
+      "instrumental"
     ]
   },
   {
@@ -5804,8 +5293,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "dark trap",
-      "cinematic hip hop",
-      "electronic"
+      "cinematic hip hop"
     ]
   },
   {
@@ -5828,8 +5316,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "dark trap",
-      "cinematic hip hop",
-      "electronic"
+      "cinematic hip hop"
     ]
   },
   {
@@ -5853,8 +5340,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "dark trap",
-      "cinematic hip hop",
-      "electronic"
+      "cinematic hip hop"
     ]
   },
   {
@@ -5877,8 +5363,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "dark trap",
-      "cinematic hip hop",
-      "electronic"
+      "cinematic hip hop"
     ]
   },
   {
@@ -5901,8 +5386,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "dark trap",
-      "cinematic hip hop",
-      "electronic"
+      "cinematic hip hop"
     ]
   },
   {
@@ -5926,8 +5410,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "moody",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -5950,8 +5433,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "moody",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -5974,8 +5456,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "moody",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -5998,8 +5479,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "moody",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -6023,8 +5503,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "moody",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -6047,8 +5526,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "moody",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -6071,8 +5549,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "moody",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -6095,8 +5572,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "moody",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -6119,8 +5595,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "moody",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -6143,8 +5618,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "moody",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -6168,8 +5642,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "moody",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -6192,8 +5665,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "moody",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -6216,8 +5688,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "moody",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -6240,8 +5711,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "moody",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -6264,8 +5734,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "moody",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -6288,8 +5757,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "moody",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -6312,8 +5780,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "moody",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -6336,8 +5803,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "moody",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -6360,8 +5826,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "moody",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -6384,8 +5849,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "moody",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -6408,8 +5872,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "moody",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -6432,8 +5895,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "moody",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -6456,8 +5918,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "dark trap",
-      "cinematic hip hop",
-      "electronic"
+      "cinematic hip hop"
     ]
   },
   {
@@ -6480,8 +5941,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "cinematic",
-      "dark electronic",
-      "electronic"
+      "dark electronic"
     ]
   },
   {
@@ -6504,8 +5964,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "cinematic",
-      "dark electronic",
-      "electronic"
+      "dark electronic"
     ]
   },
   {
@@ -6528,8 +5987,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "cinematic",
-      "dark electronic",
-      "electronic"
+      "dark electronic"
     ]
   },
   {
@@ -6552,8 +6010,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "cinematic",
-      "dark electronic",
-      "electronic"
+      "dark electronic"
     ]
   },
   {
@@ -6576,8 +6033,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "cinematic",
-      "dark electronic",
-      "electronic"
+      "dark electronic"
     ]
   },
   {
@@ -6600,8 +6056,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "cinematic",
-      "dark electronic",
-      "electronic"
+      "dark electronic"
     ]
   },
   {
@@ -6624,8 +6079,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "cinematic",
-      "dark electronic",
-      "electronic"
+      "dark electronic"
     ]
   },
   {
@@ -6648,8 +6102,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "cinematic",
-      "dark electronic",
-      "electronic"
+      "dark electronic"
     ]
   },
   {
@@ -6672,8 +6125,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "cinematic",
-      "dark electronic",
-      "electronic"
+      "dark electronic"
     ]
   },
   {
@@ -6696,8 +6148,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "cinematic",
-      "dark electronic",
-      "electronic"
+      "dark electronic"
     ]
   },
   {
@@ -6720,8 +6171,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "cinematic",
-      "dark electronic",
-      "electronic"
+      "dark electronic"
     ]
   },
   {
@@ -6744,8 +6194,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "cinematic",
-      "dark electronic",
-      "electronic"
+      "dark electronic"
     ]
   },
   {
@@ -6766,8 +6215,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Trap/The Last Violin Before War",
     "metadataText": "",
     "tags": [
+      "trap",
       "electronic",
-      "trap"
+      "instrumental"
     ]
   },
   {
@@ -6790,8 +6240,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "cinematic",
-      "dark electronic",
-      "electronic"
+      "dark electronic"
     ]
   },
   {
@@ -6814,8 +6263,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "cinematic",
-      "dark electronic",
-      "electronic"
+      "dark electronic"
     ]
   },
   {
@@ -6838,10 +6286,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "moody",
-      "dark",
-      "hypnotic",
-      "electronic"
+      "moody"
     ]
   },
   {
@@ -6862,8 +6307,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Trap/The Rise of Dark Royalty",
     "metadataText": "",
     "tags": [
+      "trap",
       "electronic",
-      "trap"
+      "instrumental"
     ]
   },
   {
@@ -6886,8 +6332,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "cinematic",
-      "dark electronic",
-      "electronic"
+      "dark electronic"
     ]
   },
   {
@@ -6910,8 +6355,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "cinematic",
-      "dark electronic",
-      "electronic"
+      "dark electronic"
     ]
   },
   {
@@ -6934,8 +6378,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "cinematic",
-      "dark electronic",
-      "electronic"
+      "dark electronic"
     ]
   },
   {
@@ -6958,8 +6401,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "cinematic",
-      "dark electronic",
-      "electronic"
+      "dark electronic"
     ]
   },
   {
@@ -6982,8 +6424,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "cinematic",
-      "dark electronic",
-      "electronic"
+      "dark electronic"
     ]
   },
   {
@@ -7006,8 +6447,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "cinematic",
-      "dark electronic",
-      "electronic"
+      "dark electronic"
     ]
   },
   {
@@ -7030,8 +6470,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "cinematic",
-      "dark electronic",
-      "electronic"
+      "dark electronic"
     ]
   },
   {
@@ -7054,8 +6493,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "cinematic",
-      "dark electronic",
-      "electronic"
+      "dark electronic"
     ]
   },
   {
@@ -7078,8 +6516,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "cinematic",
-      "dark electronic",
-      "electronic"
+      "dark electronic"
     ]
   },
   {
@@ -7102,8 +6539,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "cinematic",
-      "dark electronic",
-      "electronic"
+      "dark electronic"
     ]
   },
   {
@@ -7126,8 +6562,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "trap metal",
-      "dark electronic",
-      "electronic"
+      "dark electronic"
     ]
   },
   {
@@ -7150,8 +6585,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "trap metal",
-      "dark electronic",
-      "electronic"
+      "dark electronic"
     ]
   },
   {
@@ -7174,8 +6608,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "trap metal",
-      "dark electronic",
-      "electronic"
+      "dark electronic"
     ]
   },
   {
@@ -7198,8 +6631,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "trap metal",
-      "dark electronic",
-      "electronic"
+      "dark electronic"
     ]
   },
   {
@@ -7222,8 +6654,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "trap metal",
-      "dark electronic",
-      "electronic"
+      "dark electronic"
     ]
   },
   {
@@ -7246,8 +6677,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "trap metal",
-      "dark electronic",
-      "electronic"
+      "dark electronic"
     ]
   },
   {
@@ -7271,10 +6701,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "trip hop",
-      "experimental",
-      "indie",
-      "alternative",
-      "rock"
+      "experimental"
     ]
   },
   {
@@ -7298,10 +6725,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "trip hop",
-      "experimental",
-      "indie",
-      "alternative",
-      "rock"
+      "experimental"
     ]
   },
   {
@@ -7325,10 +6749,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "indie rock",
-      "energetic",
-      "indie",
-      "alternative",
-      "rock"
+      "energetic"
     ]
   },
   {
@@ -7352,12 +6773,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "trip hop",
-      "experimental",
-      "stylish",
-      "female vocals",
-      "indie",
-      "alternative",
-      "rock"
+      "experimental"
     ]
   },
   {
@@ -7381,10 +6797,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "trip hop",
-      "experimental",
-      "indie",
-      "alternative",
-      "rock"
+      "experimental"
     ]
   },
   {
@@ -7408,10 +6821,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "trip hop",
-      "experimental",
-      "indie",
-      "alternative",
-      "rock"
+      "experimental"
     ]
   },
   {
@@ -7435,11 +6845,7 @@ export const productionSongRecords = [
     "tags": [
       "experimental",
       "alternative rock",
-      "trip hop",
-      "groove",
-      "indie",
-      "alternative",
-      "rock"
+      "trip hop"
     ]
   },
   {
@@ -7463,12 +6869,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "experimental",
-      "trip hop",
-      "groovy",
-      "stylish",
-      "indie",
-      "alternative",
-      "rock"
+      "trip hop"
     ]
   },
   {
@@ -7492,10 +6893,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "trip hop",
-      "experimental",
-      "indie",
-      "alternative",
-      "rock"
+      "experimental"
     ]
   },
   {
@@ -7519,10 +6917,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "trip hop",
-      "experimental",
-      "indie",
-      "alternative",
-      "rock"
+      "experimental"
     ]
   },
   {
@@ -7546,10 +6941,7 @@ export const productionSongRecords = [
     "tags": [
       "experimental",
       "alternative rock",
-      "trip hop",
-      "indie",
-      "alternative",
-      "rock"
+      "trip hop"
     ]
   },
   {
@@ -7573,10 +6965,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "trip hop",
-      "experimental indie",
-      "indie",
-      "alternative",
-      "rock"
+      "experimental indie"
     ]
   },
   {
@@ -7600,10 +6989,7 @@ export const productionSongRecords = [
     "tags": [
       "indie alternative rock",
       "alternative rock",
-      "indie rock",
-      "indie",
-      "alternative",
-      "rock"
+      "indie rock"
     ]
   },
   {
@@ -7627,10 +7013,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "trip hop",
-      "experimental",
-      "indie",
-      "alternative",
-      "rock"
+      "experimental"
     ]
   },
   {
@@ -7652,9 +7035,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Indie/Alternative Rock/Paper Moon Rider",
     "metadataText": "",
     "tags": [
+      "alternative rock",
       "indie",
-      "alternative",
-      "rock"
+      "instrumental"
     ]
   },
   {
@@ -7678,10 +7061,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "trip hop",
-      "experimental indie",
-      "indie",
-      "alternative",
-      "rock"
+      "experimental indie"
     ]
   },
   {
@@ -7705,10 +7085,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "indie rock",
-      "indie pop",
-      "indie",
-      "alternative",
-      "rock"
+      "indie pop"
     ]
   },
   {
@@ -7732,10 +7109,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "trip hop",
-      "experimental",
-      "indie",
-      "alternative",
-      "rock"
+      "experimental"
     ]
   },
   {
@@ -7759,10 +7133,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "trip hop",
-      "experimental",
-      "indie",
-      "alternative",
-      "rock"
+      "experimental"
     ]
   },
   {
@@ -7786,10 +7157,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "trip hop",
-      "experimental",
-      "indie",
-      "alternative",
-      "rock"
+      "experimental"
     ]
   },
   {
@@ -7813,10 +7181,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "trip hop",
-      "experimental",
-      "indie",
-      "alternative",
-      "rock"
+      "experimental"
     ]
   },
   {
@@ -7840,10 +7205,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "trip hop",
-      "experimental",
-      "indie",
-      "alternative",
-      "rock"
+      "experimental"
     ]
   },
   {
@@ -7867,10 +7229,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "experimental",
-      "trip hop",
-      "indie",
-      "alternative",
-      "rock"
+      "trip hop"
     ]
   },
   {
@@ -7894,10 +7253,7 @@ export const productionSongRecords = [
     "tags": [
       "indie alternative rock",
       "alternative rock",
-      "indie rock",
-      "indie",
-      "alternative",
-      "rock"
+      "indie rock"
     ]
   },
   {
@@ -7921,10 +7277,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "trip hop",
-      "experimental",
-      "indie",
-      "alternative",
-      "rock"
+      "experimental"
     ]
   },
   {
@@ -7948,10 +7301,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "trip hop",
-      "experimental",
-      "indie",
-      "alternative",
-      "rock"
+      "experimental"
     ]
   },
   {
@@ -7975,10 +7325,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "trip hop",
-      "experimental",
-      "indie",
-      "alternative",
-      "rock"
+      "experimental"
     ]
   },
   {
@@ -8002,10 +7349,7 @@ export const productionSongRecords = [
     "tags": [
       "experimental",
       "alternative rock",
-      "trip hop",
-      "indie",
-      "alternative",
-      "rock"
+      "trip hop"
     ]
   },
   {
@@ -8029,10 +7373,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "trip hop",
-      "experimental",
-      "indie",
-      "alternative",
-      "rock"
+      "experimental"
     ]
   },
   {
@@ -8056,10 +7397,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "trip hop",
-      "experimental",
-      "indie",
-      "alternative",
-      "rock"
+      "experimental"
     ]
   },
   {
@@ -8083,10 +7421,7 @@ export const productionSongRecords = [
     "tags": [
       "experimental",
       "alternative rock",
-      "trip hop",
-      "indie",
-      "alternative",
-      "rock"
+      "trip hop"
     ]
   },
   {
@@ -8110,10 +7445,7 @@ export const productionSongRecords = [
     "tags": [
       "indie alternative rock",
       "indie rock",
-      "alternative rock",
-      "indie",
-      "alternative",
-      "rock"
+      "alternative rock"
     ]
   },
   {
@@ -8137,10 +7469,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "experimental",
-      "trip hop",
-      "indie",
-      "alternative",
-      "rock"
+      "trip hop"
     ]
   },
   {
@@ -8164,10 +7493,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "trip hop",
-      "experimental indie gloss",
-      "indie",
-      "alternative",
-      "rock"
+      "experimental indie gloss"
     ]
   },
   {
@@ -8191,10 +7517,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "trip hop",
-      "experimental indie",
-      "indie",
-      "alternative",
-      "rock"
+      "experimental indie"
     ]
   },
   {
@@ -8218,10 +7541,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "trip hop",
-      "experimental",
-      "indie",
-      "alternative",
-      "rock"
+      "experimental"
     ]
   },
   {
@@ -8245,10 +7565,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "trip hop",
-      "experimental indie",
-      "indie",
-      "alternative",
-      "rock"
+      "experimental indie"
     ]
   },
   {
@@ -8272,10 +7589,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "trip hop",
-      "experimental",
-      "indie",
-      "alternative",
-      "rock"
+      "experimental"
     ]
   },
   {
@@ -8299,10 +7613,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "trip hop",
-      "experimental",
-      "indie",
-      "alternative",
-      "rock"
+      "experimental"
     ]
   },
   {
@@ -8326,10 +7637,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "trip hop",
-      "experimental",
-      "indie",
-      "alternative",
-      "rock"
+      "experimental"
     ]
   },
   {
@@ -8353,9 +7661,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "funky",
-      "nostalgic",
-      "indie",
-      "pop"
+      "nostalgic"
     ]
   },
   {
@@ -8379,11 +7685,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "feel good",
-      "upbeat",
-      "bright",
-      "male vocals",
-      "indie",
-      "pop"
+      "upbeat"
     ]
   },
   {
@@ -8407,11 +7709,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "feel good",
-      "upbeat",
-      "male vocals",
-      "festival ready",
-      "indie",
-      "pop"
+      "upbeat"
     ]
   },
   {
@@ -8435,9 +7733,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "dreamy bedroom pop",
-      "atmospheric indie folk",
-      "indie",
-      "pop"
+      "atmospheric indie folk"
     ]
   },
   {
@@ -8461,12 +7757,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "soft indie rock",
-      "mellow",
-      "warm",
-      "nostalgic",
-      "atmospheric",
-      "indie",
-      "pop"
+      "mellow"
     ]
   },
   {
@@ -8490,10 +7781,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "mellow",
-      "warm nostalgic",
-      "soft emotional",
-      "indie",
-      "pop"
+      "warm nostalgic"
     ]
   },
   {
@@ -8517,9 +7805,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "electropop",
-      "upbeat feel good",
-      "indie",
-      "pop"
+      "upbeat feel good"
     ]
   },
   {
@@ -8543,9 +7829,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "dreamy",
-      "nostalgic",
-      "indie",
-      "pop"
+      "nostalgic"
     ]
   },
   {
@@ -8569,9 +7853,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "retro synth pop",
-      "funk pop",
-      "indie",
-      "pop"
+      "funk pop"
     ]
   },
   {
@@ -8595,9 +7877,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "retro synthwave",
-      "funk pop",
-      "indie",
-      "pop"
+      "funk pop"
     ]
   },
   {
@@ -8621,10 +7901,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "ballad",
-      "alternative pop",
-      "female vocals",
-      "indie",
-      "pop"
+      "alternative pop"
     ]
   },
   {
@@ -8648,9 +7925,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "funky pop",
-      "synth pop",
-      "indie",
-      "pop"
+      "synth pop"
     ]
   },
   {
@@ -8674,9 +7949,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "alternative pop",
-      "ballad",
-      "indie",
-      "pop"
+      "ballad"
     ]
   },
   {
@@ -8700,9 +7973,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "alternative pop",
-      "ballad",
-      "indie",
-      "pop"
+      "ballad"
     ]
   },
   {
@@ -8726,9 +7997,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "dreamy",
-      "nostalgic",
-      "indie",
-      "pop"
+      "nostalgic"
     ]
   },
   {
@@ -8752,9 +8021,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "dreamy indie",
-      "atmospheric modern indie",
-      "indie",
-      "pop"
+      "atmospheric"
     ]
   },
   {
@@ -8778,9 +8045,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "disco pop",
-      "funky",
-      "indie",
-      "pop"
+      "funky"
     ]
   },
   {
@@ -8804,9 +8069,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "upbeat feel good",
-      "indie rock pop",
-      "indie",
-      "pop"
+      "indie rock pop"
     ]
   },
   {
@@ -8830,9 +8093,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "bright",
-      "uplifting",
-      "indie",
-      "pop"
+      "uplifting"
     ]
   },
   {
@@ -8856,9 +8117,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "feel good",
-      "female vocals",
-      "indie",
-      "pop"
+      "female vocals"
     ]
   },
   {
@@ -8882,9 +8141,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "alternative pop",
-      "ballad",
-      "indie",
-      "pop"
+      "ballad"
     ]
   },
   {
@@ -8908,9 +8165,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "alternative pop",
-      "cinematic synth pop",
-      "indie",
-      "pop"
+      "cinematic synth pop"
     ]
   },
   {
@@ -8934,11 +8189,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "lo fi",
-      "warm",
-      "emotional",
-      "female vocals",
-      "indie",
-      "pop"
+      "warm"
     ]
   },
   {
@@ -8962,9 +8213,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "lo fi",
-      "indie pop lo",
-      "indie",
-      "pop"
+      "indie"
     ]
   },
   {
@@ -8988,9 +8237,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "ballad",
-      "alternative pop",
-      "indie",
-      "pop"
+      "alternative pop"
     ]
   },
   {
@@ -9014,9 +8261,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "alternative pop",
-      "ballad",
-      "indie",
-      "pop"
+      "ballad"
     ]
   },
   {
@@ -9040,9 +8285,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "synth pop",
-      "groove",
-      "indie",
-      "pop"
+      "groove"
     ]
   },
   {
@@ -9066,10 +8309,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "nostalgic",
-      "mellow",
-      "female vocals",
-      "indie",
-      "pop"
+      "mellow"
     ]
   },
   {
@@ -9093,9 +8333,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "dreamy indie",
-      "bedroom pop",
-      "indie",
-      "pop"
+      "bedroom pop"
     ]
   },
   {
@@ -9119,9 +8357,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative pop",
       "indie pop",
-      "ballad",
-      "indie",
-      "pop"
+      "ballad"
     ]
   },
   {
@@ -9145,9 +8381,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "lo fi",
-      "warm",
-      "indie",
-      "pop"
+      "warm"
     ]
   },
   {
@@ -9171,9 +8405,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "alternative pop",
-      "ballad",
-      "indie",
-      "pop"
+      "ballad"
     ]
   },
   {
@@ -9197,10 +8429,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "indie pop",
-      "warm",
-      "female vocals",
-      "indie",
-      "pop"
+      "warm"
     ]
   },
   {
@@ -9224,9 +8453,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "lo fi",
-      "warm",
-      "indie",
-      "pop"
+      "warm"
     ]
   },
   {
@@ -9250,9 +8477,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "lo fi",
-      "warm emotional",
-      "indie",
-      "pop"
+      "warm emotional"
     ]
   },
   {
@@ -9276,9 +8501,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "dreamy",
-      "soft female vocals",
-      "indie",
-      "pop"
+      "soft female vocals"
     ]
   },
   {
@@ -9302,9 +8525,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "indie electronic",
-      "bedroom pop",
-      "indie",
-      "pop"
+      "bedroom pop"
     ]
   },
   {
@@ -9328,9 +8549,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi indie",
       "lo fi",
-      "indie pop",
-      "indie",
-      "pop"
+      "indie pop"
     ]
   },
   {
@@ -9354,9 +8573,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "indie pop",
-      "warm",
-      "indie",
-      "pop"
+      "warm"
     ]
   },
   {
@@ -9380,9 +8597,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "lo fi",
-      "warm",
-      "indie",
-      "pop"
+      "warm"
     ]
   },
   {
@@ -9406,9 +8621,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "disco tinged funk",
-      "retro synthpop",
-      "indie",
-      "pop"
+      "retro synthpop"
     ]
   },
   {
@@ -9432,9 +8645,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "alternative pop",
-      "ballad",
-      "indie",
-      "pop"
+      "ballad"
     ]
   },
   {
@@ -9458,8 +8669,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "upbeat indie electronic",
-      "indie",
-      "pop"
+      "indie"
     ]
   },
   {
@@ -9483,9 +8693,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "feel good",
-      "bright",
-      "indie",
-      "pop"
+      "bright"
     ]
   },
   {
@@ -9509,9 +8717,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "upbeat indie rock",
-      "dance pop",
-      "indie",
-      "pop"
+      "dance pop"
     ]
   },
   {
@@ -9535,9 +8741,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "upbeat indie rock",
-      "electropop",
-      "indie",
-      "pop"
+      "electropop"
     ]
   },
   {
@@ -9561,9 +8765,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "funky",
-      "retro night pulse",
-      "indie",
-      "pop"
+      "retro night pulse"
     ]
   },
   {
@@ -9587,9 +8789,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "indie electronic",
-      "funk pop",
-      "indie",
-      "pop"
+      "funk pop"
     ]
   },
   {
@@ -9613,9 +8813,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "synth pop",
-      "retro electronic",
-      "indie",
-      "pop"
+      "retro electronic"
     ]
   },
   {
@@ -9639,9 +8837,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "bedroom pop",
-      "indie folk pop",
-      "indie",
-      "pop"
+      "indie folk pop"
     ]
   },
   {
@@ -9665,9 +8861,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "lo fi",
-      "warm",
-      "indie",
-      "pop"
+      "warm"
     ]
   },
   {
@@ -9691,10 +8885,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "soundtrack",
-      "cinematic uplifting",
-      "commercial",
-      "pop",
-      "rock"
+      "cinematic uplifting"
     ]
   },
   {
@@ -9717,10 +8908,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "soundtrack",
-      "cinematic uplifting",
-      "commercial",
-      "pop",
-      "rock"
+      "cinematic uplifting"
     ]
   },
   {
@@ -9743,10 +8931,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "soundtrack",
-      "cinematic uplifting",
-      "commercial",
-      "pop",
-      "rock"
+      "cinematic uplifting"
     ]
   },
   {
@@ -9770,10 +8955,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "soundtrack",
-      "cinematic uplifting",
-      "commercial",
-      "pop",
-      "rock"
+      "cinematic uplifting"
     ]
   },
   {
@@ -9796,10 +8978,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "soundtrack",
-      "cinematic uplifting",
-      "commercial",
-      "pop",
-      "rock"
+      "cinematic uplifting"
     ]
   },
   {
@@ -9822,10 +9001,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "soundtrack",
-      "cinematic uplifting",
-      "commercial",
-      "pop",
-      "rock"
+      "cinematic uplifting"
     ]
   },
   {
@@ -9849,10 +9025,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "soundtrack",
-      "cinematic uplifting",
-      "commercial",
-      "pop",
-      "rock"
+      "cinematic uplifting"
     ]
   },
   {
@@ -9875,10 +9048,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "soundtrack",
-      "cinematic uplifting",
-      "commercial",
-      "pop",
-      "rock"
+      "cinematic uplifting"
     ]
   },
   {
@@ -9901,10 +9071,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "soundtrack",
-      "cinematic uplifting",
-      "commercial",
-      "pop",
-      "rock"
+      "cinematic uplifting"
     ]
   },
   {
@@ -9927,10 +9094,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "soundtrack",
-      "cinematic uplifting",
-      "commercial",
-      "pop",
-      "rock"
+      "cinematic uplifting"
     ]
   },
   {
@@ -9954,10 +9118,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "soundtrack",
-      "cinematic uplifting",
-      "commercial",
-      "pop",
-      "rock"
+      "cinematic uplifting"
     ]
   },
   {
@@ -9981,10 +9142,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "soundtrack",
-      "cinematic uplifting",
-      "commercial",
-      "pop",
-      "rock"
+      "cinematic uplifting"
     ]
   },
   {
@@ -10005,9 +9163,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Pop Rock/Downtown Dreams & Stereo Waves",
     "metadataText": "",
     "tags": [
+      "pop rock",
       "commercial",
-      "pop",
-      "rock"
+      "instrumental"
     ]
   },
   {
@@ -10030,10 +9188,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "uplifting",
-      "cinematic",
-      "commercial",
-      "pop",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -10056,10 +9211,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "uplifting",
-      "cinematic",
-      "commercial",
-      "pop",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -10082,10 +9234,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "uplifting",
-      "cinematic",
-      "commercial",
-      "pop",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -10108,10 +9257,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "uplifting",
-      "cinematic",
-      "commercial",
-      "pop",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -10134,10 +9280,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "uplifting",
-      "cinematic",
-      "commercial",
-      "pop",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -10160,10 +9303,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "uplifting",
-      "cinematic",
-      "commercial",
-      "pop",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -10186,10 +9326,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "uplifting",
-      "cinematic",
-      "commercial",
-      "pop",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -10213,10 +9350,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "uplifting",
-      "cinematic",
-      "commercial",
-      "pop",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -10237,9 +9371,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Pop Rock/Golden Glow From the Gas Station",
     "metadataText": "",
     "tags": [
+      "pop rock",
       "commercial",
-      "pop",
-      "rock"
+      "instrumental"
     ]
   },
   {
@@ -10262,10 +9396,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "soundtrack",
-      "cinematic",
-      "commercial",
-      "pop",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -10288,10 +9419,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "soundtrack",
-      "cinematic",
-      "commercial",
-      "pop",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -10314,10 +9442,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "soundtrack",
-      "cinematic",
-      "commercial",
-      "pop",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -10340,10 +9465,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "soundtrack",
-      "cinematic",
-      "commercial",
-      "pop",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -10366,10 +9488,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "soundtrack",
-      "cinematic",
-      "commercial",
-      "pop",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -10392,10 +9511,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "soundtrack",
-      "cinematic",
-      "commercial",
-      "pop",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -10418,10 +9534,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "soundtrack",
-      "cinematic",
-      "commercial",
-      "pop",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -10444,10 +9557,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "soundtrack",
-      "cinematic",
-      "commercial",
-      "pop",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -10470,10 +9580,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "soundtrack",
-      "cinematic",
-      "commercial",
-      "pop",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -10497,10 +9604,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "soundtrack",
-      "cinematic",
-      "commercial",
-      "pop",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -10523,10 +9627,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "electric",
-      "acoustic",
-      "commercial",
-      "pop",
-      "rock"
+      "acoustic"
     ]
   },
   {
@@ -10550,10 +9651,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "electric",
-      "acoustic",
-      "commercial",
-      "pop",
-      "rock"
+      "acoustic"
     ]
   },
   {
@@ -10577,10 +9675,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "electric",
-      "acoustic",
-      "commercial",
-      "pop",
-      "rock"
+      "acoustic"
     ]
   },
   {
@@ -10603,10 +9698,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "electric",
-      "acoustic",
-      "commercial",
-      "pop",
-      "rock"
+      "acoustic"
     ]
   },
   {
@@ -10630,10 +9722,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "electric",
-      "acoustic",
-      "commercial",
-      "pop",
-      "rock"
+      "acoustic"
     ]
   },
   {
@@ -10656,10 +9745,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "electric",
-      "acoustic",
-      "commercial",
-      "pop",
-      "rock"
+      "acoustic"
     ]
   },
   {
@@ -10682,10 +9768,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "electric",
-      "acoustic",
-      "commercial",
-      "pop",
-      "rock"
+      "acoustic"
     ]
   },
   {
@@ -10708,10 +9791,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "electric",
-      "acoustic",
-      "commercial",
-      "pop",
-      "rock"
+      "acoustic"
     ]
   },
   {
@@ -10734,10 +9814,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "electric",
-      "acoustic",
-      "commercial",
-      "pop",
-      "rock"
+      "acoustic"
     ]
   },
   {
@@ -10760,10 +9837,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "electric",
-      "acoustic",
-      "commercial",
-      "pop",
-      "rock"
+      "acoustic"
     ]
   },
   {
@@ -10786,10 +9860,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "electric",
-      "acoustic",
-      "commercial",
-      "pop",
-      "rock"
+      "acoustic"
     ]
   },
   {
@@ -10812,10 +9883,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "cinematic soundtrack",
-      "feel good uplifting",
-      "commercial",
-      "pop",
-      "rock"
+      "feel good uplifting"
     ]
   },
   {
@@ -10838,10 +9906,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "cinematic soundtrack",
-      "feel good uplifting",
-      "commercial",
-      "pop",
-      "rock"
+      "feel good uplifting"
     ]
   },
   {
@@ -10864,11 +9929,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "cinematic soundtrack",
-      "uplifting emotional rock",
-      "inspiring feel good",
-      "commercial",
-      "pop",
-      "rock"
+      "uplifting emotional rock"
     ]
   },
   {
@@ -10891,11 +9952,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "cinematic soundtrack",
-      "uplifting emotional rock",
-      "inspiring feel good",
-      "commercial",
-      "pop",
-      "rock"
+      "uplifting emotional rock"
     ]
   },
   {
@@ -10918,11 +9975,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "cinematic soundtrack",
-      "uplifting emotional rock",
-      "inspiring feel good",
-      "commercial",
-      "pop",
-      "rock"
+      "uplifting emotional rock"
     ]
   },
   {
@@ -10945,11 +9998,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "cinematic soundtrack",
-      "uplifting emotional rock",
-      "inspiring feel good",
-      "commercial",
-      "pop",
-      "rock"
+      "uplifting emotional rock"
     ]
   },
   {
@@ -10972,11 +10021,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "cinematic soundtrack",
-      "uplifting emotional rock",
-      "inspiring feel good",
-      "commercial",
-      "pop",
-      "rock"
+      "uplifting emotional rock"
     ]
   },
   {
@@ -10999,11 +10044,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "cinematic soundtrack",
-      "uplifting emotional rock",
-      "inspiring feel good",
-      "commercial",
-      "pop",
-      "rock"
+      "uplifting emotional rock"
     ]
   },
   {
@@ -11026,11 +10067,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "soundtrack",
-      "uplifting",
-      "emotional",
-      "commercial",
-      "pop",
-      "rock"
+      "uplifting"
     ]
   },
   {
@@ -11053,11 +10090,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "soundtrack",
-      "uplifting",
-      "emotional",
-      "commercial",
-      "pop",
-      "rock"
+      "uplifting"
     ]
   },
   {
@@ -11080,10 +10113,8 @@ export const productionSongRecords = [
     "metadataText": "bass house, club/dance (EDM), big room electrohouse\n\nBass house anthem with 128 BPM four-on-the-floor drive, aggressive syncopated basslines, punchy kick drums, and distorted synth stabs; verse strips to kick, bass, and clipped vocal chops, pre-chorus builds with filtered risers and shouted fills, chorus explodes with massive drop hits and crowd chants, bridge pulls to a tense half-time breakdown before the final lift, Layered male-female hype vocals, gang shouts on the hook, short delay throws, reverse swells, and a bright, crushing club mix built for the main room",
     "tags": [
       "bass house",
-      "club dance edm",
-      "big room electrohouse",
-      "electronic",
-      "house"
+      "club dance",
+      "big room electrohouse"
     ]
   },
   {
@@ -11106,10 +10137,8 @@ export const productionSongRecords = [
     "metadataText": "bass house, club/dance (EDM), big room electrohouse\n\nBass house anthem with 128 BPM four-on-the-floor drive, aggressive syncopated basslines, punchy kick drums, and distorted synth stabs; verse strips to kick, bass, and clipped vocal chops, pre-chorus builds with filtered risers and shouted fills, chorus explodes with massive drop hits and crowd chants, bridge pulls to a tense half-time breakdown before the final lift, Layered male-female hype vocals, gang shouts on the hook, short delay throws, reverse swells, and a bright, crushing club mix built for the main room",
     "tags": [
       "bass house",
-      "club dance edm",
-      "big room electrohouse",
-      "electronic",
-      "house"
+      "club dance",
+      "big room electrohouse"
     ]
   },
   {
@@ -11133,9 +10162,7 @@ export const productionSongRecords = [
     "tags": [
       "bass house",
       "dark club",
-      "festival electrohouse",
-      "electronic",
-      "house"
+      "festival electrohouse"
     ]
   },
   {
@@ -11159,9 +10186,7 @@ export const productionSongRecords = [
     "tags": [
       "bass house",
       "electro house",
-      "rave club edm",
-      "electronic",
-      "house"
+      "rave club edm"
     ]
   },
   {
@@ -11185,9 +10210,7 @@ export const productionSongRecords = [
     "tags": [
       "bass house",
       "electronic dance",
-      "electro house",
-      "electronic",
-      "house"
+      "electro house"
     ]
   },
   {
@@ -11211,10 +10234,7 @@ export const productionSongRecords = [
     "tags": [
       "bass house",
       "club dance",
-      "electro edm",
-      "dark festival electro",
-      "electronic",
-      "house"
+      "electro edm"
     ]
   },
   {
@@ -11238,8 +10258,7 @@ export const productionSongRecords = [
     "tags": [
       "progressive house",
       "electronic",
-      "uplifting",
-      "house"
+      "uplifting"
     ]
   },
   {
@@ -11263,9 +10282,7 @@ export const productionSongRecords = [
     "tags": [
       "deep house",
       "soulful",
-      "soothing",
-      "electronic",
-      "house"
+      "soothing"
     ]
   },
   {
@@ -11289,8 +10306,7 @@ export const productionSongRecords = [
     "tags": [
       "deep house",
       "electronic",
-      "soulful",
-      "house"
+      "soulful"
     ]
   },
   {
@@ -11314,9 +10330,7 @@ export const productionSongRecords = [
     "tags": [
       "bass house",
       "festival electro",
-      "rave club dark",
-      "electronic",
-      "house"
+      "rave club"
     ]
   },
   {
@@ -11340,7 +10354,6 @@ export const productionSongRecords = [
     "tags": [
       "bass house",
       "electronic dance",
-      "electronic",
       "house"
     ]
   },
@@ -11365,8 +10378,7 @@ export const productionSongRecords = [
     "tags": [
       "progressive house",
       "electronic",
-      "uplifting",
-      "house"
+      "uplifting"
     ]
   },
   {
@@ -11390,8 +10402,7 @@ export const productionSongRecords = [
     "tags": [
       "progressive house",
       "electronic",
-      "uplifting",
-      "house"
+      "uplifting"
     ]
   },
   {
@@ -11415,8 +10426,7 @@ export const productionSongRecords = [
     "tags": [
       "progressive house",
       "electronic",
-      "euphoric festival edm",
-      "house"
+      "euphoric festival edm"
     ]
   },
   {
@@ -11440,9 +10450,7 @@ export const productionSongRecords = [
     "tags": [
       "bass house",
       "electro house",
-      "club dance electronic",
-      "electronic",
-      "house"
+      "club dance electronic"
     ]
   },
   {
@@ -11465,8 +10473,7 @@ export const productionSongRecords = [
     "tags": [
       "house",
       "deep house",
-      "soulful electronic",
-      "electronic"
+      "soulful electronic"
     ]
   },
   {
@@ -11513,8 +10520,7 @@ export const productionSongRecords = [
     "tags": [
       "house",
       "deep house",
-      "electronic",
-      "soulful"
+      "electronic"
     ]
   },
   {
@@ -11538,9 +10544,7 @@ export const productionSongRecords = [
     "tags": [
       "bass house",
       "electro club",
-      "festival edm",
-      "electronic",
-      "house"
+      "festival edm"
     ]
   },
   {
@@ -11564,8 +10568,7 @@ export const productionSongRecords = [
     "tags": [
       "house",
       "electronic dance",
-      "club track",
-      "electronic"
+      "club track"
     ]
   },
   {
@@ -11589,9 +10592,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "progressive house",
-      "uplifting",
-      "emotional",
-      "house"
+      "uplifting"
     ]
   },
   {
@@ -11615,9 +10616,7 @@ export const productionSongRecords = [
     "tags": [
       "bass house",
       "festival edm",
-      "club uk dance",
-      "electronic",
-      "house"
+      "club uk dance"
     ]
   },
   {
@@ -11641,9 +10640,7 @@ export const productionSongRecords = [
     "tags": [
       "bass house",
       "electronic dance",
-      "rave dark techno",
-      "electronic",
-      "house"
+      "rave dark techno"
     ]
   },
   {
@@ -11667,9 +10664,7 @@ export const productionSongRecords = [
     "tags": [
       "bass house",
       "electro house",
-      "uk bass",
-      "electronic",
-      "house"
+      "uk bass"
     ]
   },
   {
@@ -11693,9 +10688,7 @@ export const productionSongRecords = [
     "tags": [
       "bass house",
       "dance electronic",
-      "big room club",
-      "electronic",
-      "house"
+      "big room club"
     ]
   },
   {
@@ -11742,8 +10735,7 @@ export const productionSongRecords = [
     "tags": [
       "deep house",
       "electronic",
-      "soulful",
-      "house"
+      "soulful"
     ]
   },
   {
@@ -11767,9 +10759,7 @@ export const productionSongRecords = [
     "tags": [
       "deep house",
       "electronic",
-      "soulful",
-      "smooth",
-      "house"
+      "soulful"
     ]
   },
   {
@@ -11793,8 +10783,7 @@ export const productionSongRecords = [
     "tags": [
       "deep house",
       "electronic",
-      "soulful",
-      "house"
+      "soulful"
     ]
   },
   {
@@ -11818,9 +10807,7 @@ export const productionSongRecords = [
     "tags": [
       "bass house",
       "electro house",
-      "rave club edm",
-      "electronic",
-      "house"
+      "rave club edm"
     ]
   },
   {
@@ -11844,9 +10831,7 @@ export const productionSongRecords = [
     "tags": [
       "progressive house",
       "uplifting electronic",
-      "cinematic anthemic edm",
-      "electronic",
-      "house"
+      "cinematic anthemic edm"
     ]
   },
   {
@@ -11870,9 +10855,7 @@ export const productionSongRecords = [
     "tags": [
       "deep house",
       "soulful electronic",
-      "smooth electronic",
-      "electronic",
-      "house"
+      "smooth electronic"
     ]
   },
   {
@@ -11896,8 +10879,7 @@ export const productionSongRecords = [
     "tags": [
       "deep house",
       "electronic",
-      "soulful",
-      "house"
+      "soulful"
     ]
   },
   {
@@ -11921,8 +10903,7 @@ export const productionSongRecords = [
     "tags": [
       "deep house",
       "soulful house",
-      "electronic",
-      "house"
+      "electronic"
     ]
   },
   {
@@ -11946,8 +10927,7 @@ export const productionSongRecords = [
     "tags": [
       "deep house",
       "tropical house",
-      "electronic",
-      "house"
+      "electronic"
     ]
   },
   {
@@ -11971,10 +10951,7 @@ export const productionSongRecords = [
     "tags": [
       "upfront",
       "uplifting",
-      "emotional",
-      "progressive house",
-      "electronic",
-      "house"
+      "emotional"
     ]
   },
   {
@@ -11998,9 +10975,7 @@ export const productionSongRecords = [
     "tags": [
       "chill house",
       "deep house",
-      "tropical electronic",
-      "electronic",
-      "house"
+      "tropical electronic"
     ]
   },
   {
@@ -12048,8 +11023,7 @@ export const productionSongRecords = [
     "tags": [
       "deep house",
       "electronic",
-      "soulful",
-      "house"
+      "soulful"
     ]
   },
   {
@@ -12073,8 +11047,7 @@ export const productionSongRecords = [
     "tags": [
       "chill house",
       "house",
-      "tropical electronic",
-      "electronic"
+      "tropical electronic"
     ]
   },
   {
@@ -12095,8 +11068,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Techno/Afterhours in Motion",
     "metadataText": "",
     "tags": [
+      "techno",
       "electronic",
-      "techno"
+      "instrumental"
     ]
   },
   {
@@ -12119,7 +11093,6 @@ export const productionSongRecords = [
     "tags": [
       "dub techno",
       "hypnotic",
-      "electronic",
       "techno"
     ]
   },
@@ -12143,7 +11116,6 @@ export const productionSongRecords = [
     "tags": [
       "dub techno",
       "hypnotic",
-      "electronic",
       "techno"
     ]
   },
@@ -12167,7 +11139,6 @@ export const productionSongRecords = [
     "tags": [
       "dub techno",
       "hypnotic",
-      "electronic",
       "techno"
     ]
   },
@@ -12191,7 +11162,6 @@ export const productionSongRecords = [
     "tags": [
       "dub techno",
       "hypnotic",
-      "electronic",
       "techno"
     ]
   },
@@ -12215,7 +11185,6 @@ export const productionSongRecords = [
     "tags": [
       "dub techno",
       "hypnotic",
-      "electronic",
       "techno"
     ]
   },
@@ -12239,7 +11208,6 @@ export const productionSongRecords = [
     "tags": [
       "dub techno",
       "hypnotic",
-      "electronic",
       "techno"
     ]
   },
@@ -12263,7 +11231,6 @@ export const productionSongRecords = [
     "tags": [
       "dub techno",
       "hypnotic",
-      "electronic",
       "techno"
     ]
   },
@@ -12287,7 +11254,6 @@ export const productionSongRecords = [
     "tags": [
       "dub techno",
       "hypnotic",
-      "electronic",
       "techno"
     ]
   },
@@ -12311,7 +11277,6 @@ export const productionSongRecords = [
     "tags": [
       "dub techno",
       "hypnotic",
-      "electronic",
       "techno"
     ]
   },
@@ -12335,7 +11300,6 @@ export const productionSongRecords = [
     "tags": [
       "dub techno",
       "hypnotic",
-      "electronic",
       "techno"
     ]
   },
@@ -12359,7 +11323,6 @@ export const productionSongRecords = [
     "tags": [
       "dub techno",
       "hypnotic",
-      "electronic",
       "techno"
     ]
   },
@@ -12383,7 +11346,6 @@ export const productionSongRecords = [
     "tags": [
       "dub techno",
       "hypnotic",
-      "electronic",
       "techno"
     ]
   },
@@ -12407,7 +11369,6 @@ export const productionSongRecords = [
     "tags": [
       "dub techno",
       "hypnotic",
-      "electronic",
       "techno"
     ]
   },
@@ -12431,7 +11392,6 @@ export const productionSongRecords = [
     "tags": [
       "dub techno",
       "hypnotic",
-      "electronic",
       "techno"
     ]
   },
@@ -12455,7 +11415,6 @@ export const productionSongRecords = [
     "tags": [
       "dub techno",
       "hypnotic",
-      "electronic",
       "techno"
     ]
   },
@@ -12479,7 +11438,6 @@ export const productionSongRecords = [
     "tags": [
       "dub techno",
       "hypnotic",
-      "electronic",
       "techno"
     ]
   },
@@ -12503,7 +11461,6 @@ export const productionSongRecords = [
     "tags": [
       "dub techno",
       "hypnotic",
-      "electronic",
       "techno"
     ]
   },
@@ -12734,7 +11691,7 @@ export const productionSongRecords = [
     "tags": [
       "techno",
       "electronic",
-      "glitchy futuristic"
+      "glitchy"
     ]
   },
   {
@@ -12757,7 +11714,7 @@ export const productionSongRecords = [
     "tags": [
       "techno",
       "electronic",
-      "glitchy futuristic"
+      "glitchy"
     ]
   },
   {
@@ -12780,7 +11737,7 @@ export const productionSongRecords = [
     "tags": [
       "techno",
       "electronic",
-      "glitchy futuristic"
+      "glitchy"
     ]
   },
   {
@@ -12803,7 +11760,7 @@ export const productionSongRecords = [
     "tags": [
       "techno",
       "electronic",
-      "glitchy futuristic"
+      "glitchy"
     ]
   },
   {
@@ -12826,7 +11783,7 @@ export const productionSongRecords = [
     "tags": [
       "techno",
       "electronic",
-      "glitchy futuristic"
+      "glitchy"
     ]
   },
   {
@@ -12849,7 +11806,7 @@ export const productionSongRecords = [
     "tags": [
       "techno",
       "electronic",
-      "glitchy futuristic"
+      "glitchy"
     ]
   },
   {
@@ -12872,7 +11829,7 @@ export const productionSongRecords = [
     "tags": [
       "techno",
       "electronic",
-      "glitchy futuristic"
+      "glitchy"
     ]
   },
   {
@@ -12895,7 +11852,7 @@ export const productionSongRecords = [
     "tags": [
       "techno",
       "electronic",
-      "glitchy futuristic"
+      "glitchy"
     ]
   },
   {
@@ -12918,7 +11875,7 @@ export const productionSongRecords = [
     "tags": [
       "techno",
       "electronic",
-      "glitchy futuristic"
+      "glitchy"
     ]
   },
   {
@@ -12941,7 +11898,7 @@ export const productionSongRecords = [
     "tags": [
       "techno",
       "electronic",
-      "glitchy futuristic"
+      "glitchy"
     ]
   },
   {
@@ -12964,8 +11921,7 @@ export const productionSongRecords = [
     "tags": [
       "techno",
       "industrial",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -12988,8 +11944,7 @@ export const productionSongRecords = [
     "tags": [
       "techno",
       "industrial",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -13012,8 +11967,7 @@ export const productionSongRecords = [
     "tags": [
       "techno",
       "industrial",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -13036,8 +11990,7 @@ export const productionSongRecords = [
     "tags": [
       "techno",
       "industrial",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -13060,8 +12013,7 @@ export const productionSongRecords = [
     "tags": [
       "techno",
       "industrial",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -13084,8 +12036,7 @@ export const productionSongRecords = [
     "tags": [
       "techno",
       "industrial",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -13108,8 +12059,7 @@ export const productionSongRecords = [
     "tags": [
       "techno",
       "industrial",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -13132,8 +12082,7 @@ export const productionSongRecords = [
     "tags": [
       "techno",
       "industrial",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -13156,8 +12105,7 @@ export const productionSongRecords = [
     "tags": [
       "techno",
       "industrial",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -13180,8 +12128,7 @@ export const productionSongRecords = [
     "tags": [
       "techno",
       "industrial",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -13204,8 +12151,7 @@ export const productionSongRecords = [
     "tags": [
       "techno",
       "industrial",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -13228,8 +12174,7 @@ export const productionSongRecords = [
     "tags": [
       "techno",
       "industrial",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -13252,8 +12197,7 @@ export const productionSongRecords = [
     "tags": [
       "techno",
       "industrial",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -13276,8 +12220,7 @@ export const productionSongRecords = [
     "tags": [
       "techno",
       "industrial",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -13300,8 +12243,7 @@ export const productionSongRecords = [
     "tags": [
       "techno",
       "industrial",
-      "hypnotic",
-      "electronic"
+      "hypnotic"
     ]
   },
   {
@@ -13324,8 +12266,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic metal",
       "melodic metalcore",
-      "metal",
-      "commercial"
+      "metal"
     ]
   },
   {
@@ -13348,8 +12289,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic metal",
       "melodic metalcore",
-      "metal",
-      "commercial"
+      "metal"
     ]
   },
   {
@@ -13372,8 +12312,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic metal",
       "melodic metalcore",
-      "metal",
-      "commercial"
+      "metal"
     ]
   },
   {
@@ -13396,8 +12335,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic metal",
       "melodic metalcore",
-      "metal",
-      "commercial"
+      "metal"
     ]
   },
   {
@@ -13420,8 +12358,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic metal",
       "melodic metalcore",
-      "metal",
-      "commercial"
+      "metal"
     ]
   },
   {
@@ -13444,8 +12381,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic metal",
       "melodic metalcore",
-      "metal",
-      "commercial"
+      "metal"
     ]
   },
   {
@@ -13468,8 +12404,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic metal",
       "melodic metalcore",
-      "metal",
-      "commercial"
+      "metal"
     ]
   },
   {
@@ -13492,8 +12427,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic metal",
       "melodic metalcore",
-      "metal",
-      "commercial"
+      "metal"
     ]
   },
   {
@@ -13516,8 +12450,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic metal",
       "melodic metalcore",
-      "metal",
-      "commercial"
+      "metal"
     ]
   },
   {
@@ -13540,8 +12473,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic metal",
       "melodic metalcore",
-      "metal",
-      "commercial"
+      "metal"
     ]
   },
   {
@@ -13564,8 +12496,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic metal",
       "melodic metalcore",
-      "metal",
-      "commercial"
+      "metal"
     ]
   },
   {
@@ -13588,8 +12519,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic metal",
       "melodic metalcore",
-      "metal",
-      "commercial"
+      "metal"
     ]
   },
   {
@@ -13612,8 +12542,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic metal",
       "melodic metalcore",
-      "metal",
-      "commercial"
+      "metal"
     ]
   },
   {
@@ -13636,9 +12565,7 @@ export const productionSongRecords = [
     "tags": [
       "dark symphonic metal",
       "metalcore",
-      "extreme metal",
-      "commercial",
-      "metal"
+      "extreme metal"
     ]
   },
   {
@@ -13661,9 +12588,7 @@ export const productionSongRecords = [
     "tags": [
       "dark symphonic metal",
       "metalcore",
-      "extreme metal",
-      "commercial",
-      "metal"
+      "extreme metal"
     ]
   },
   {
@@ -13686,9 +12611,7 @@ export const productionSongRecords = [
     "tags": [
       "dark symphonic metal",
       "metalcore",
-      "extreme metal",
-      "commercial",
-      "metal"
+      "extreme metal"
     ]
   },
   {
@@ -13711,9 +12634,7 @@ export const productionSongRecords = [
     "tags": [
       "dark symphonic metal",
       "metalcore",
-      "extreme metal",
-      "commercial",
-      "metal"
+      "extreme metal"
     ]
   },
   {
@@ -13737,9 +12658,7 @@ export const productionSongRecords = [
     "tags": [
       "dark symphonic metal",
       "metalcore",
-      "extreme metal",
-      "commercial",
-      "metal"
+      "extreme metal"
     ]
   },
   {
@@ -13762,9 +12681,7 @@ export const productionSongRecords = [
     "tags": [
       "dark symphonic metal",
       "metalcore",
-      "extreme metal",
-      "commercial",
-      "metal"
+      "extreme metal"
     ]
   },
   {
@@ -13787,9 +12704,7 @@ export const productionSongRecords = [
     "tags": [
       "dark symphonic metal",
       "metalcore",
-      "extreme metal",
-      "commercial",
-      "metal"
+      "extreme metal"
     ]
   },
   {
@@ -13812,9 +12727,7 @@ export const productionSongRecords = [
     "tags": [
       "dark symphonic metal",
       "metalcore",
-      "extreme metal",
-      "commercial",
-      "metal"
+      "extreme metal"
     ]
   },
   {
@@ -13837,9 +12750,7 @@ export const productionSongRecords = [
     "tags": [
       "dark symphonic metal",
       "metalcore",
-      "extreme metal",
-      "commercial",
-      "metal"
+      "extreme metal"
     ]
   },
   {
@@ -13862,9 +12773,7 @@ export const productionSongRecords = [
     "tags": [
       "dark symphonic metal",
       "metalcore",
-      "extreme metal",
-      "commercial",
-      "metal"
+      "extreme metal"
     ]
   },
   {
@@ -13887,9 +12796,7 @@ export const productionSongRecords = [
     "tags": [
       "dark symphonic metal",
       "metalcore",
-      "extreme metal",
-      "commercial",
-      "metal"
+      "extreme metal"
     ]
   },
   {
@@ -13912,9 +12819,7 @@ export const productionSongRecords = [
     "tags": [
       "dark symphonic metal",
       "metalcore",
-      "extreme metal",
-      "commercial",
-      "metal"
+      "extreme metal"
     ]
   },
   {
@@ -13937,9 +12842,7 @@ export const productionSongRecords = [
     "tags": [
       "dark symphonic metal",
       "metalcore",
-      "extreme metal",
-      "commercial",
-      "metal"
+      "extreme metal"
     ]
   },
   {
@@ -13962,8 +12865,7 @@ export const productionSongRecords = [
     "tags": [
       "metal",
       "gothic metal",
-      "hardcore punk",
-      "commercial"
+      "hardcore punk"
     ]
   },
   {
@@ -13986,8 +12888,7 @@ export const productionSongRecords = [
     "tags": [
       "metal",
       "gothic metal",
-      "hardcore punk",
-      "commercial"
+      "hardcore punk"
     ]
   },
   {
@@ -14010,8 +12911,7 @@ export const productionSongRecords = [
     "tags": [
       "metal",
       "gothic metal",
-      "hardcore punk",
-      "commercial"
+      "hardcore punk"
     ]
   },
   {
@@ -14034,8 +12934,7 @@ export const productionSongRecords = [
     "tags": [
       "metal",
       "gothic metal",
-      "hardcore punk",
-      "commercial"
+      "hardcore punk"
     ]
   },
   {
@@ -14058,8 +12957,7 @@ export const productionSongRecords = [
     "tags": [
       "metal",
       "gothic metal",
-      "hardcore punk",
-      "commercial"
+      "hardcore punk"
     ]
   },
   {
@@ -14082,8 +12980,7 @@ export const productionSongRecords = [
     "tags": [
       "metal",
       "gothic metal",
-      "hardcore punk",
-      "commercial"
+      "hardcore punk"
     ]
   },
   {
@@ -14106,8 +13003,7 @@ export const productionSongRecords = [
     "tags": [
       "metal",
       "gothic metal",
-      "hardcore punk",
-      "commercial"
+      "hardcore punk"
     ]
   },
   {
@@ -14130,8 +13026,7 @@ export const productionSongRecords = [
     "tags": [
       "metal",
       "gothic metal",
-      "hardcore punk",
-      "commercial"
+      "hardcore punk"
     ]
   },
   {
@@ -14154,8 +13049,7 @@ export const productionSongRecords = [
     "tags": [
       "metal",
       "gothic metal",
-      "hardcore punk",
-      "commercial"
+      "hardcore punk"
     ]
   },
   {
@@ -14176,8 +13070,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Metal/The Soundtrack of the Apocalypse",
     "metadataText": "",
     "tags": [
+      "metal",
       "commercial",
-      "metal"
+      "instrumental"
     ]
   },
   {
@@ -14200,8 +13095,7 @@ export const productionSongRecords = [
     "tags": [
       "metal",
       "cinematic metal",
-      "hardcore punk or",
-      "commercial"
+      "hardcore punk"
     ]
   },
   {
@@ -14224,8 +13118,7 @@ export const productionSongRecords = [
     "tags": [
       "metal",
       "cinematic metal",
-      "hardcore punk or",
-      "commercial"
+      "hardcore punk"
     ]
   },
   {
@@ -14248,8 +13141,7 @@ export const productionSongRecords = [
     "tags": [
       "metal",
       "cinematic metal",
-      "hardcore punk or",
-      "commercial"
+      "hardcore punk"
     ]
   },
   {
@@ -14272,8 +13164,7 @@ export const productionSongRecords = [
     "tags": [
       "metal",
       "cinematic metal",
-      "hardcore punk or",
-      "commercial"
+      "hardcore punk"
     ]
   },
   {
@@ -14296,8 +13187,7 @@ export const productionSongRecords = [
     "tags": [
       "metal",
       "cinematic metal",
-      "hardcore punk or",
-      "commercial"
+      "hardcore punk"
     ]
   },
   {
@@ -14321,9 +13211,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "folk",
-      "acoustic",
-      "joyful",
-      "indie"
+      "acoustic"
     ]
   },
   {
@@ -14347,9 +13235,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "folk",
-      "feel good",
-      "acoustic",
-      "indie"
+      "feel good"
     ]
   },
   {
@@ -14373,8 +13259,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic",
       "folk",
-      "indie folk",
-      "indie"
+      "indie folk"
     ]
   },
   {
@@ -14398,10 +13283,7 @@ export const productionSongRecords = [
     "tags": [
       "folk",
       "indie folk",
-      "feel good",
-      "acoustic",
-      "joyful",
-      "indie"
+      "feel good"
     ]
   },
   {
@@ -14425,9 +13307,7 @@ export const productionSongRecords = [
     "tags": [
       "appalachian folk",
       "traditional folk",
-      "moody acoustic folk",
-      "indie",
-      "folk"
+      "moody acoustic folk"
     ]
   },
   {
@@ -14451,9 +13331,7 @@ export const productionSongRecords = [
     "tags": [
       "appalachian folk",
       "acoustic",
-      "traditional folk",
-      "indie",
-      "folk"
+      "traditional folk"
     ]
   },
   {
@@ -14476,8 +13354,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "folk",
-      "acoustic",
-      "indie"
+      "acoustic"
     ]
   },
   {
@@ -14501,10 +13378,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic",
       "indie folk",
-      "folk",
-      "feel good",
-      "joyful",
-      "indie"
+      "folk"
     ]
   },
   {
@@ -14527,8 +13401,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "folk",
-      "soundtrack",
-      "indie"
+      "soundtrack"
     ]
   },
   {
@@ -14552,8 +13425,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "folk",
-      "acoustic",
-      "indie"
+      "acoustic"
     ]
   },
   {
@@ -14576,8 +13448,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "folk",
-      "soundtrack",
-      "indie"
+      "soundtrack"
     ]
   },
   {
@@ -14600,8 +13471,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "folk",
-      "soundtrack",
-      "indie"
+      "soundtrack"
     ]
   },
   {
@@ -14625,11 +13495,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "folk",
-      "feel good",
-      "acoustic",
-      "warm",
-      "joyful",
-      "indie"
+      "feel good"
     ]
   },
   {
@@ -14653,8 +13519,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "folk",
-      "joyful",
-      "indie"
+      "joyful"
     ]
   },
   {
@@ -14678,8 +13543,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "folk",
-      "acoustic",
-      "indie"
+      "acoustic"
     ]
   },
   {
@@ -14703,10 +13567,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "folk",
-      "acoustic",
-      "feel good",
-      "joyful",
-      "indie"
+      "acoustic"
     ]
   },
   {
@@ -14730,9 +13591,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "folk",
-      "acoustic",
-      "warm",
-      "indie"
+      "acoustic"
     ]
   },
   {
@@ -14756,10 +13615,7 @@ export const productionSongRecords = [
     "tags": [
       "appalachian folk",
       "traditional folk",
-      "acoustic",
-      "emotional",
-      "indie",
-      "folk"
+      "acoustic"
     ]
   },
   {
@@ -14783,9 +13639,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "folk",
-      "joyful",
-      "acoustic",
-      "indie"
+      "joyful"
     ]
   },
   {
@@ -14809,9 +13663,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "folk",
-      "feel good",
-      "acoustic",
-      "indie"
+      "feel good"
     ]
   },
   {
@@ -14834,8 +13686,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "folk",
-      "acoustic",
-      "indie"
+      "acoustic"
     ]
   },
   {
@@ -14858,8 +13709,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "folk",
-      "soundtrack",
-      "indie"
+      "soundtrack"
     ]
   },
   {
@@ -14883,8 +13733,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "folk",
-      "acoustic",
-      "indie"
+      "acoustic"
     ]
   },
   {
@@ -14907,8 +13756,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "folk",
-      "soundtrack",
-      "indie"
+      "soundtrack"
     ]
   },
   {
@@ -14931,8 +13779,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "folk",
-      "soundtrack",
-      "indie"
+      "soundtrack"
     ]
   },
   {
@@ -14953,10 +13800,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Backseat Atlas",
     "metadataText": "",
     "tags": [
+      "hip hop rap",
       "commercial",
-      "hip",
-      "hop",
-      "rap"
+      "instrumental"
     ]
   },
   {
@@ -14980,9 +13826,7 @@ export const productionSongRecords = [
     "tags": [
       "hip hop rap",
       "commercial",
-      "hip",
-      "hop",
-      "rap"
+      "instrumental"
     ]
   },
   {
@@ -15006,19 +13850,7 @@ export const productionSongRecords = [
     "tags": [
       "hip hop rap",
       "warm sub pulses",
-      "soulful piano progressions",
-      "reverse",
-      "polished",
-      "cinematic urban",
-      "warm",
-      "hip hop",
-      "soulful",
-      "smooth",
-      "emotional",
-      "commercial",
-      "hip",
-      "hop",
-      "rap"
+      "soulful piano progressions"
     ]
   },
   {
@@ -15041,10 +13873,8 @@ export const productionSongRecords = [
     "metadataText": "Aggressive modern hip-hop with rapid-fire triplet pockets\n\n syncopated punch drums, and dark cinematic synth stabs; verse rides tense minimal groove with tight doubles and clipped ad-libs, pre-chorus strips to bass and vocal chants, chorus slams with stacked gang hooks and octave bass hits, bridge drops to half-time with filtered voice and risers before a final explosive lift, Raw close-mic lead, gritty shouted layers, sharp delay throws, bright punchy mix with huge low end, lyrical, dramatic, hip-hop, rap, vocal, rapid, emotional, beats, raw",
     "tags": [
       "modern hip hop",
-      "commercial",
-      "hip",
-      "hop",
-      "rap"
+      "hip hop rap",
+      "commercial"
     ]
   },
   {
@@ -15067,10 +13897,8 @@ export const productionSongRecords = [
     "metadataText": "Hard-hitting hip-hop at a breakneck tempo with trap swing\n\n jagged hi-hats, booming kick-snare hits, and tense bass pulses, Verse 1 runs dense and confrontational; pre-chorus tightens with half-time drums and stacked shouts; chorus snaps into a short chant with gang doubles and delay throws, Bridge cuts to filtered pads and a lone vocal before the final explode, Dry, upfront lead with gritty doubles, wide ad-libs, and punchy, cinematic mix, rapid, raw, rap, lyrical, emotional, hip-hop, beats, dramatic, vocal",
     "tags": [
       "trap swing",
-      "commercial",
-      "hip",
-      "hop",
-      "rap"
+      "hip hop rap",
+      "commercial"
     ]
   },
   {
@@ -15093,10 +13921,8 @@ export const productionSongRecords = [
     "metadataText": "Hip-hop and rap anthem with hard-hitting mid-tempo trap bounce\n\n deep sub pulses, punchy drums, and tense atmospheric synth lines; verse rides sparse and controlled, pre-chorus opens with stacked chants and rising tension, chorus hits with gang doubles and a short chantable hook, Vocal delivery stays close-mic and confident in verses, wider doubled on the hook, with ad-lib throws at line ends, Ear candy includes reversed swells into the drop, metallic risers, and tape-stop flickers before the final chorus, Bright, heavy, cinematic mix with glossy low-end weight, rhythmic, vocal, hip-hop, dynamic, rap, emotional, motivational, deep",
     "tags": [
       "rap anthem",
-      "commercial",
-      "hip",
-      "hop",
-      "rap"
+      "hip hop rap",
+      "commercial"
     ]
   },
   {
@@ -15120,20 +13946,7 @@ export const productionSongRecords = [
     "tags": [
       "lyrical rap",
       "grim minor key",
-      "bass that punches",
-      "pings",
-      "bright",
-      "aggressive",
-      "cinematic",
-      "lyrical",
-      "dramatic",
-      "hip hop",
-      "emotional",
-      "beats",
-      "commercial",
-      "hip",
-      "hop",
-      "rap"
+      "bass that punches"
     ]
   },
   {
@@ -15157,20 +13970,7 @@ export const productionSongRecords = [
     "tags": [
       "trap swing",
       "syncopated hi hats",
-      "punchy drums",
-      "tense bounce",
-      "dark",
-      "cinematic",
-      "bright punched",
-      "hip hop",
-      "lyrical",
-      "emotional",
-      "beats",
-      "dramatic",
-      "commercial",
-      "hip",
-      "hop",
-      "rap"
+      "punchy drums"
     ]
   },
   {
@@ -15194,20 +13994,7 @@ export const productionSongRecords = [
     "tags": [
       "west coast swing",
       "jazzy chord stabs",
-      "soul samples",
-      "warm bass",
-      "laid back",
-      "spoken word",
-      "whispered",
-      "punchy drums",
-      "cinematic",
-      "hip hop",
-      "dynamic",
-      "soulful",
-      "warm",
-      "emotional",
-      "lyrical",
-      "jazz"
+      "soul samples"
     ]
   },
   {
@@ -15231,20 +14018,7 @@ export const productionSongRecords = [
     "tags": [
       "trap anthem",
       "swung hi hats",
-      "sub bass",
-      "punchy drums",
-      "polished",
-      "cinematic",
-      "dark",
-      "dynamic",
-      "emotional",
-      "hip hop",
-      "motivational",
-      "rhythmic",
-      "deep",
-      "commercial",
-      "hip",
-      "hop"
+      "sub bass"
     ]
   },
   {
@@ -15268,20 +14042,7 @@ export const productionSongRecords = [
     "tags": [
       "west coast bounce",
       "swung drums",
-      "warm bass",
-      "jazz piano",
-      "soul samples",
-      "dynamic flow",
-      "spoken word",
-      "hook",
-      "echoes",
-      "tape stop",
-      "earthy",
-      "jazz",
-      "soulful",
-      "warm",
-      "poetic",
-      "dynamic"
+      "warm bass"
     ]
   },
   {
@@ -15305,20 +14066,7 @@ export const productionSongRecords = [
     "tags": [
       "west coast swing",
       "swung drums",
-      "warm bass",
-      "soul samples",
-      "dusty jazz",
-      "spoken word",
-      "cinematic",
-      "lyrical",
-      "deep",
-      "emotional",
-      "soulful",
-      "hip hop",
-      "poetic",
-      "dynamic",
-      "jazz",
-      "warm"
+      "warm bass"
     ]
   },
   {
@@ -15342,20 +14090,7 @@ export const productionSongRecords = [
     "tags": [
       "west coast swing",
       "upright bass warmth",
-      "punchy drums",
-      "spoken word",
-      "short chant",
-      "tape hiss",
-      "gritty",
-      "lyrical",
-      "dynamic",
-      "soulful",
-      "deep",
-      "hip hop",
-      "jazz",
-      "emotional",
-      "poetic",
-      "warm"
+      "punchy drums"
     ]
   },
   {
@@ -15379,20 +14114,7 @@ export const productionSongRecords = [
     "tags": [
       "pop rock",
       "guitar riff",
-      "bright",
-      "polished",
-      "stadium sized",
-      "heartfelt",
-      "uplifting",
-      "dynamic",
-      "rhythmic",
-      "rock",
-      "emotional",
-      "inspiring",
-      "commercial",
-      "hip",
-      "hop",
-      "rap"
+      "bright"
     ]
   },
   {
@@ -15416,18 +14138,7 @@ export const productionSongRecords = [
     "tags": [
       "razor edged kick",
       "booming sub bass",
-      "bright",
-      "punchy",
-      "cinematic",
-      "lyrical",
-      "emotional",
-      "beats",
-      "hip hop",
-      "dramatic",
-      "commercial",
-      "hip",
-      "hop",
-      "rap"
+      "bright"
     ]
   },
   {
@@ -15451,19 +14162,7 @@ export const productionSongRecords = [
     "tags": [
       "hip hop rap",
       "warm 808 bounce",
-      "crisp drum grooves",
-      "atmospheric textures",
-      "polished",
-      "cinematic",
-      "emotional",
-      "hip hop",
-      "soulful",
-      "smooth",
-      "warm",
-      "commercial",
-      "hip",
-      "hop",
-      "rap"
+      "crisp drum grooves"
     ]
   },
   {
@@ -15487,20 +14186,7 @@ export const productionSongRecords = [
     "tags": [
       "rap anthem",
       "syncopated punch drums",
-      "nasty bass slides",
-      "dark cinematic stabs",
-      "gritty",
-      "reverse",
-      "bright punchy",
-      "beats",
-      "emotional",
-      "dramatic",
-      "lyrical",
-      "hip hop",
-      "commercial",
-      "hip",
-      "hop",
-      "rap"
+      "nasty bass slides"
     ]
   },
   {
@@ -15524,20 +14210,7 @@ export const productionSongRecords = [
     "tags": [
       "rap anthem",
       "deep 808 pulses",
-      "atmospheric synth beds",
-      "confident",
-      "stacks",
-      "polished",
-      "dark",
-      "cinematic",
-      "bass heavy",
-      "hip hop",
-      "motivational",
-      "rhythmic",
-      "emotional",
-      "dynamic",
-      "deep",
-      "commercial"
+      "atmospheric synth beds"
     ]
   },
   {
@@ -15561,19 +14234,7 @@ export const productionSongRecords = [
     "tags": [
       "rap anthem",
       "tense time drops",
-      "hard snare snaps",
-      "sub bass under",
-      "bright",
-      "punchy",
-      "dramatic",
-      "lyrical",
-      "emotional",
-      "hip hop",
-      "beats",
-      "commercial",
-      "hip",
-      "hop",
-      "rap"
+      "hard snare snaps"
     ]
   },
   {
@@ -15597,20 +14258,7 @@ export const productionSongRecords = [
     "tags": [
       "deep sub pulse",
       "silky chord movement",
-      "polished",
-      "warm",
-      "cinematic",
-      "sensual",
-      "rhythmic",
-      "deep",
-      "soulful",
-      "lyrical",
-      "romantic",
-      "moody",
-      "heartfelt",
-      "contemporary",
-      "rich",
-      "emotional"
+      "polished"
     ]
   },
   {
@@ -15633,20 +14281,7 @@ export const productionSongRecords = [
     "tags": [
       "electro hard rock",
       "punchy hybrid drums",
-      "pulse synced bass",
-      "groove",
-      "is gritty",
-      "chopped",
-      "glitch sparks",
-      "polished",
-      "cinematic",
-      "high impact",
-      "electric",
-      "hard rock",
-      "electronic",
-      "electro",
-      "soaring",
-      "commercial"
+      "pulse synced bass"
     ]
   },
   {
@@ -15669,20 +14304,7 @@ export const productionSongRecords = [
     "tags": [
       "deep sub pulse",
       "silky chord movement",
-      "polished",
-      "warm",
-      "cinematic",
-      "sensual",
-      "rhythmic",
-      "deep",
-      "soulful",
-      "lyrical",
-      "romantic",
-      "moody",
-      "heartfelt",
-      "contemporary",
-      "rich",
-      "emotional"
+      "polished"
     ]
   },
   {
@@ -15703,10 +14325,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hip-Hop  Rap/Midnight Window Seat",
     "metadataText": "",
     "tags": [
+      "hip hop rap",
       "commercial",
-      "hip",
-      "hop",
-      "rap"
+      "instrumental"
     ]
   },
   {
@@ -15729,10 +14350,8 @@ export const productionSongRecords = [
     "metadataText": "Modern hip-hop and rap anthem with hard-hitting trap drums\n\n deep sub pulses, and ominous synth atmospheres; verse rides tense half-time pocket with crisp triplet flow, pre-chorus strips to snapped percussion and filtered pads, chorus hits with stacked gang ad-libs and a chantable hook, Vocal is confident and close-mic in verses, doubled on key bars, with delay throws on the hook words, Ear candy: reverse swells into the drop, vinyl grit under the intro, and risers punching into each chorus, Mix is polished, bass-heavy, bright on top, and cinematic in the low end, motivational, rhythmic, dynamic, vocal, emotional, hip-hop, rap, deep",
     "tags": [
       "rap anthem",
-      "commercial",
-      "hip",
-      "hop",
-      "rap"
+      "hip hop rap",
+      "commercial"
     ]
   },
   {
@@ -15756,20 +14375,7 @@ export const productionSongRecords = [
     "tags": [
       "hip hop rap",
       "warm sub bass",
-      "soulful piano loops",
-      "atmospheric pads",
-      "reverse piano",
-      "polished",
-      "cinematic urban",
-      "soulful",
-      "emotional",
-      "hip hop",
-      "warm",
-      "smooth",
-      "commercial",
-      "hip",
-      "hop",
-      "rap"
+      "soulful piano loops"
     ]
   },
   {
@@ -15793,20 +14399,7 @@ export const productionSongRecords = [
     "tags": [
       "rap anthem",
       "punchy trap drums",
-      "swung hi hats",
-      "dark cinematic synths",
-      "distant siren like",
-      "polished",
-      "bass heavy",
-      "bright impact",
-      "hip hop",
-      "emotional",
-      "dynamic",
-      "deep",
-      "rhythmic",
-      "motivational",
-      "commercial",
-      "hip"
+      "swung hi hats"
     ]
   },
   {
@@ -15830,18 +14423,7 @@ export const productionSongRecords = [
     "tags": [
       "rap anthem",
       "syncopated kick snare",
-      "reverse risers",
-      "bright",
-      "punchy",
-      "hip hop",
-      "beats",
-      "lyrical",
-      "emotional",
-      "dramatic",
-      "commercial",
-      "hip",
-      "hop",
-      "rap"
+      "reverse risers"
     ]
   },
   {
@@ -15864,10 +14446,8 @@ export const productionSongRecords = [
     "metadataText": "Hip-hop and rap anthem with slow-bouncing trap drums\n\n deep sub-bass pulses, minor-key synth stabs, and tense cinematic builds; verse rides sparse drums and tight bass, pre-chorus opens with rising pads and clipped responses, chorus lands with stacked doubles and a chantable hook, Confident lead vocal, gritty ad-libs, delay throws on key words, reverse swells into each drop, glossy low-end heavy mix with bright top-end punch, rap, deep, motivational, vocal, dynamic, emotional, rhythmic, hip-hop",
     "tags": [
       "rap anthem",
-      "commercial",
-      "hip",
-      "hop",
-      "rap"
+      "hip hop rap",
+      "commercial"
     ]
   },
   {
@@ -15890,10 +14470,8 @@ export const productionSongRecords = [
     "metadataText": "Synth-pop with mid-tempo four-on-the-floor pulse\n\n soft syncopated kick patterns, and cinematic drum builds; verse stays intimate with filtered pads, muted arp plucks, and close-mic vocal leads, pre-chorus opens wide with rising toms and stacked harmonies, chorus blooms into glossy synth layers and a soaring hook, bridge drops to half-time with airy keys then returns bigger, Emotional male vocal with doubles, breathy ad-libs, delay throws on the hook, reversed swells and shimmering bells between lines; bright, wide, polished mix with nostalgic glow, heartfelt, emotional, nostalgic, pop",
     "tags": [
       "synth pop",
-      "commercial",
-      "hip",
-      "hop",
-      "rap"
+      "hip hop rap",
+      "commercial"
     ]
   },
   {
@@ -15917,9 +14495,7 @@ export const productionSongRecords = [
     "tags": [
       "hip hop rap",
       "commercial",
-      "hip",
-      "hop",
-      "rap"
+      "instrumental"
     ]
   },
   {
@@ -15943,10 +14519,7 @@ export const productionSongRecords = [
     "tags": [
       "rap anthem",
       "aggressive delivery",
-      "commercial",
-      "hip",
-      "hop",
-      "rap"
+      "hip hop rap"
     ]
   },
   {
@@ -15969,10 +14542,8 @@ export const productionSongRecords = [
     "metadataText": "Hard-hitting modern hip-hop with rapid-fire trap pulse\n\n switch-up tempo flips, tense minor-key piano stabs, punchy drums, and booming sub-bass, Verse 1 stays stripped with clipped snares and cold atmospherics; pre-chorus tightens with snare rolls and rising brass; chorus opens with shouted doubles and gang hooks, Ad-libs, delay throws, tape-stop turns, bright-but-brutal mix, beats, emotional, dramatic, rap, hip-hop, vocal, lyrical, raw, rapid",
     "tags": [
       "modern hip hop",
-      "commercial",
-      "hip",
-      "hop",
-      "rap"
+      "hip hop rap",
+      "commercial"
     ]
   },
   {
@@ -15995,10 +14566,8 @@ export const productionSongRecords = [
     "metadataText": "Hard-hitting modern hip-hop with rapid-fire trap pulse\n\n switch-up tempo flips, tense minor-key piano stabs, punchy drums, and booming sub-bass, Verse 1 stays stripped with clipped snares and cold atmospherics; pre-chorus tightens with snare rolls and rising brass; chorus opens with shouted doubles and gang hooks, Ad-libs, delay throws, tape-stop turns, bright-but-brutal mix, beats, emotional, dramatic, rap, hip-hop, vocal, lyrical, raw, rapid",
     "tags": [
       "modern hip hop",
-      "commercial",
-      "hip",
-      "hop",
-      "rap"
+      "hip hop rap",
+      "commercial"
     ]
   },
   {
@@ -16021,10 +14590,8 @@ export const productionSongRecords = [
     "metadataText": "Hard-hitting rap anthem with rapid-fire double-time pockets\n\n swung trap drums, grim minor-key piano stabs, and heavy sub pressure; verse rides tense and sparse, pre-chorus opens with clipped chants and risers, chorus hits with gang shouts and a doubled anchor, bridge drops to filtered drums and a lone voice before the final barrage, Aggressive lead vocal with tight doubles, ad-lib pings, delay throws on punchlines, and a bright, punchy mix with cinematic low-end slam, emotional, rapid, dramatic, vocal, hip-hop, lyrical, beats, raw, rap",
     "tags": [
       "rap anthem",
-      "commercial",
-      "hip",
-      "hop",
-      "rap"
+      "hip hop rap",
+      "commercial"
     ]
   },
   {
@@ -16048,9 +14615,7 @@ export const productionSongRecords = [
     "tags": [
       "hip hop rap",
       "commercial",
-      "hip",
-      "hop",
-      "rap"
+      "instrumental"
     ]
   },
   {
@@ -16074,10 +14639,7 @@ export const productionSongRecords = [
     "tags": [
       "rap anthem",
       "propulsive pulse",
-      "commercial",
-      "hip",
-      "hop",
-      "rap"
+      "hip hop rap"
     ]
   },
   {
@@ -16100,10 +14662,8 @@ export const productionSongRecords = [
     "metadataText": "Contemporary R&B with a laid-back swung groove\n\n deep sub-bass, warm piano chords, and silky synth beds; verse stays intimate and close-mic, pre-chorus lifts with stacked harmonies and filtered risers, chorus opens with lush vocal layers and a short hook chant, Add delay throws on key words, breathy ad-libs in the gaps, and a muted percussion pocket that blooms into wider drums on the hook, Polished, glossy mix with cinematic depth and a warm low-end glow, smooth, vocal, deep, warm, emotional, moody, contemporary, soulful, heartfelt, rich, romantic, sensual, lyrical, rhythmic, r&b",
     "tags": [
       "contemporary r and b",
-      "commercial",
-      "hip",
-      "hop",
-      "rap"
+      "hip hop rap",
+      "commercial"
     ]
   },
   {
@@ -16127,9 +14687,7 @@ export const productionSongRecords = [
     "tags": [
       "hip hop rap",
       "commercial",
-      "hip",
-      "hop",
-      "rap"
+      "instrumental"
     ]
   },
   {
@@ -16152,8 +14710,7 @@ export const productionSongRecords = [
     "tags": [
       "soul",
       "motown",
-      "gospel",
-      "indie"
+      "gospel"
     ]
   },
   {
@@ -16176,8 +14733,7 @@ export const productionSongRecords = [
     "tags": [
       "soul",
       "motown",
-      "gospel",
-      "indie"
+      "gospel"
     ]
   },
   {
@@ -16201,8 +14757,7 @@ export const productionSongRecords = [
     "tags": [
       "soul",
       "gospel",
-      "motown",
-      "indie"
+      "motown"
     ]
   },
   {
@@ -16226,8 +14781,7 @@ export const productionSongRecords = [
     "tags": [
       "soul",
       "gospel",
-      "motown",
-      "indie"
+      "motown"
     ]
   },
   {
@@ -16251,8 +14805,7 @@ export const productionSongRecords = [
     "tags": [
       "motown",
       "soul",
-      "gospel",
-      "indie"
+      "gospel"
     ]
   },
   {
@@ -16276,8 +14829,7 @@ export const productionSongRecords = [
     "tags": [
       "soul",
       "gospel",
-      "motown",
-      "indie"
+      "motown"
     ]
   },
   {
@@ -16301,8 +14853,7 @@ export const productionSongRecords = [
     "tags": [
       "gospel",
       "soul",
-      "motown",
-      "indie"
+      "motown"
     ]
   },
   {
@@ -16326,8 +14877,7 @@ export const productionSongRecords = [
     "tags": [
       "soul",
       "motown",
-      "gospel",
-      "indie"
+      "gospel"
     ]
   },
   {
@@ -16351,8 +14901,7 @@ export const productionSongRecords = [
     "tags": [
       "soul",
       "motown",
-      "gospel",
-      "indie"
+      "gospel"
     ]
   },
   {
@@ -16376,8 +14925,7 @@ export const productionSongRecords = [
     "tags": [
       "gospel",
       "soul",
-      "motown",
-      "indie"
+      "motown"
     ]
   },
   {
@@ -16399,8 +14947,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Indie/Soul/Hold My Coat",
     "metadataText": "",
     "tags": [
+      "soul",
       "indie",
-      "soul"
+      "instrumental"
     ]
   },
   {
@@ -16424,8 +14973,7 @@ export const productionSongRecords = [
     "tags": [
       "soul",
       "motown",
-      "gospel",
-      "indie"
+      "gospel"
     ]
   },
   {
@@ -16448,8 +14996,7 @@ export const productionSongRecords = [
     "tags": [
       "soul",
       "motown",
-      "gospel",
-      "indie"
+      "gospel"
     ]
   },
   {
@@ -16473,9 +15020,7 @@ export const productionSongRecords = [
     "tags": [
       "soul",
       "motown",
-      "gospel",
-      "female vocals",
-      "indie"
+      "gospel"
     ]
   },
   {
@@ -16498,8 +15043,7 @@ export const productionSongRecords = [
     "tags": [
       "soul",
       "motown",
-      "gospel",
-      "indie"
+      "gospel"
     ]
   },
   {
@@ -16523,9 +15067,7 @@ export const productionSongRecords = [
     "tags": [
       "vintage soul",
       "motown",
-      "gospel",
-      "indie",
-      "soul"
+      "gospel"
     ]
   },
   {
@@ -16549,8 +15091,7 @@ export const productionSongRecords = [
     "tags": [
       "soul",
       "gospel",
-      "motown",
-      "indie"
+      "motown"
     ]
   },
   {
@@ -16574,8 +15115,7 @@ export const productionSongRecords = [
     "tags": [
       "soul",
       "motown",
-      "gospel",
-      "indie"
+      "gospel"
     ]
   },
   {
@@ -16599,8 +15139,7 @@ export const productionSongRecords = [
     "tags": [
       "motown",
       "gospel",
-      "soul",
-      "indie"
+      "soul"
     ]
   },
   {
@@ -16624,8 +15163,7 @@ export const productionSongRecords = [
     "tags": [
       "motown",
       "soul",
-      "gospel",
-      "indie"
+      "gospel"
     ]
   },
   {
@@ -16648,8 +15186,7 @@ export const productionSongRecords = [
     "tags": [
       "soul",
       "motown",
-      "gospel",
-      "indie"
+      "gospel"
     ]
   },
   {
@@ -16673,8 +15210,7 @@ export const productionSongRecords = [
     "tags": [
       "soul",
       "motown",
-      "gospel",
-      "indie"
+      "gospel"
     ]
   },
   {
@@ -16698,8 +15234,7 @@ export const productionSongRecords = [
     "tags": [
       "soul",
       "gospel",
-      "motown",
-      "indie"
+      "motown"
     ]
   },
   {
@@ -16723,8 +15258,7 @@ export const productionSongRecords = [
     "tags": [
       "soul",
       "motown",
-      "gospel",
-      "indie"
+      "gospel"
     ]
   },
   {
@@ -16747,8 +15281,7 @@ export const productionSongRecords = [
     "tags": [
       "soul",
       "motown",
-      "gospel",
-      "indie"
+      "gospel"
     ]
   },
   {
@@ -16772,9 +15305,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary gospel",
       "worship",
-      "cinematic ambient",
-      "indie",
-      "gospel"
+      "cinematic ambient"
     ]
   },
   {
@@ -16798,8 +15329,7 @@ export const productionSongRecords = [
     "tags": [
       "gospel",
       "contemporary",
-      "ambient",
-      "indie"
+      "ambient"
     ]
   },
   {
@@ -16823,9 +15353,7 @@ export const productionSongRecords = [
     "tags": [
       "southern gospel",
       "soul",
-      "blues",
-      "indie",
-      "gospel"
+      "blues"
     ]
   },
   {
@@ -16849,8 +15377,7 @@ export const productionSongRecords = [
     "tags": [
       "gospel",
       "soulful",
-      "uplifting",
-      "indie"
+      "uplifting"
     ]
   },
   {
@@ -16873,10 +15400,7 @@ export const productionSongRecords = [
     "tags": [
       "southern gospel",
       "soul",
-      "blues",
-      "gospel choir",
-      "indie",
-      "gospel"
+      "blues"
     ]
   },
   {
@@ -16899,9 +15423,7 @@ export const productionSongRecords = [
     "tags": [
       "vintage gospel",
       "soul",
-      "blues",
-      "indie",
-      "gospel"
+      "blues"
     ]
   },
   {
@@ -16925,11 +15447,7 @@ export const productionSongRecords = [
     "tags": [
       "gospel",
       "inspiring",
-      "soulful",
-      "uplifting",
-      "emotional",
-      "female vocals",
-      "indie"
+      "soulful"
     ]
   },
   {
@@ -16953,9 +15471,7 @@ export const productionSongRecords = [
     "tags": [
       "gospel",
       "soulful",
-      "uplifting",
-      "emotional",
-      "indie"
+      "uplifting"
     ]
   },
   {
@@ -16979,8 +15495,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary",
       "worship",
-      "gospel",
-      "indie"
+      "gospel"
     ]
   },
   {
@@ -17004,8 +15519,7 @@ export const productionSongRecords = [
     "tags": [
       "gospel",
       "soulful",
-      "uplifting",
-      "indie"
+      "uplifting"
     ]
   },
   {
@@ -17029,9 +15543,7 @@ export const productionSongRecords = [
     "tags": [
       "gospel",
       "uplifting",
-      "soulful",
-      "emotional",
-      "indie"
+      "soulful"
     ]
   },
   {
@@ -17055,8 +15567,7 @@ export const productionSongRecords = [
     "tags": [
       "gospel",
       "soulful",
-      "inspiring",
-      "indie"
+      "inspiring"
     ]
   },
   {
@@ -17080,8 +15591,7 @@ export const productionSongRecords = [
     "tags": [
       "gospel",
       "soulful",
-      "uplifting",
-      "indie"
+      "uplifting"
     ]
   },
   {
@@ -17105,8 +15615,7 @@ export const productionSongRecords = [
     "tags": [
       "gospel",
       "uplifting",
-      "soulful",
-      "indie"
+      "soulful"
     ]
   },
   {
@@ -17130,9 +15639,7 @@ export const productionSongRecords = [
     "tags": [
       "southern gospel",
       "soul",
-      "vintage gospel",
-      "indie",
-      "gospel"
+      "vintage gospel"
     ]
   },
   {
@@ -17156,8 +15663,7 @@ export const productionSongRecords = [
     "tags": [
       "gospel",
       "soulful",
-      "uplifting",
-      "indie"
+      "uplifting"
     ]
   },
   {
@@ -17181,9 +15687,7 @@ export const productionSongRecords = [
     "tags": [
       "southern gospel",
       "soul",
-      "bluesy gospel",
-      "indie",
-      "gospel"
+      "bluesy gospel"
     ]
   },
   {
@@ -17207,9 +15711,7 @@ export const productionSongRecords = [
     "tags": [
       "soul",
       "blues",
-      "southern gospel",
-      "indie",
-      "gospel"
+      "southern gospel"
     ]
   },
   {
@@ -17232,10 +15734,7 @@ export const productionSongRecords = [
     "tags": [
       "southern gospel",
       "soul",
-      "blues",
-      "gospel choir",
-      "indie",
-      "gospel"
+      "blues"
     ]
   },
   {
@@ -17259,9 +15758,7 @@ export const productionSongRecords = [
     "tags": [
       "southern gospel",
       "soul",
-      "blues",
-      "indie",
-      "gospel"
+      "blues"
     ]
   },
   {
@@ -17285,10 +15782,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary gospel",
       "worship",
-      "cinematic",
-      "ambient",
-      "indie",
-      "gospel"
+      "cinematic"
     ]
   },
   {
@@ -17311,9 +15805,7 @@ export const productionSongRecords = [
     "tags": [
       "vintage gospel",
       "soul",
-      "blues",
-      "indie",
-      "gospel"
+      "blues"
     ]
   },
   {
@@ -17337,9 +15829,7 @@ export const productionSongRecords = [
     "tags": [
       "gospel",
       "contemporary gospel",
-      "worship",
-      "inspirational",
-      "indie"
+      "worship"
     ]
   },
   {
@@ -17363,8 +15853,7 @@ export const productionSongRecords = [
     "tags": [
       "gospel",
       "soulful",
-      "uplifting",
-      "indie"
+      "uplifting"
     ]
   },
   {
@@ -17388,9 +15877,7 @@ export const productionSongRecords = [
     "tags": [
       "southern gospel",
       "gospel soul",
-      "blues",
-      "indie",
-      "gospel"
+      "blues"
     ]
   },
   {
@@ -17413,8 +15900,7 @@ export const productionSongRecords = [
     "tags": [
       "jazz",
       "lounge",
-      "classic warm swing",
-      "indie"
+      "classic warm swing"
     ]
   },
   {
@@ -17437,9 +15923,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "modern jazz",
-      "swing",
-      "indie",
-      "jazz"
+      "swing"
     ]
   },
   {
@@ -17462,8 +15946,7 @@ export const productionSongRecords = [
     "tags": [
       "jazz",
       "lounge",
-      "classic",
-      "indie"
+      "classic"
     ]
   },
   {
@@ -17486,9 +15969,7 @@ export const productionSongRecords = [
     "tags": [
       "modern jazz",
       "smooth jazz",
-      "contemporary jazz",
-      "indie",
-      "jazz"
+      "contemporary jazz"
     ]
   },
   {
@@ -17511,9 +15992,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "modern jazz",
-      "cool jazz",
-      "indie",
-      "jazz"
+      "cool jazz"
     ]
   },
   {
@@ -17536,9 +16015,7 @@ export const productionSongRecords = [
     "tags": [
       "modern jazz",
       "contemporary jazz",
-      "smooth jazz",
-      "indie",
-      "jazz"
+      "smooth jazz"
     ]
   },
   {
@@ -17561,8 +16038,7 @@ export const productionSongRecords = [
     "tags": [
       "jazz",
       "lounge",
-      "smooth",
-      "indie"
+      "smooth"
     ]
   },
   {
@@ -17585,8 +16061,7 @@ export const productionSongRecords = [
     "tags": [
       "jazz",
       "lounge",
-      "mellow",
-      "indie"
+      "mellow"
     ]
   },
   {
@@ -17609,9 +16084,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "sophisticated",
-      "smooth",
-      "indie",
-      "jazz"
+      "smooth"
     ]
   },
   {
@@ -17634,9 +16107,7 @@ export const productionSongRecords = [
     "tags": [
       "modern jazz",
       "contemporary jazz",
-      "smooth jazz",
-      "indie",
-      "jazz"
+      "smooth jazz"
     ]
   },
   {
@@ -17659,9 +16130,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "smooth",
-      "sophisticated",
-      "indie",
-      "jazz"
+      "sophisticated"
     ]
   },
   {
@@ -17684,9 +16153,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "smooth",
-      "sophisticated",
-      "indie",
-      "jazz"
+      "sophisticated"
     ]
   },
   {
@@ -17709,9 +16176,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "modern jazz",
-      "swing",
-      "indie",
-      "jazz"
+      "swing"
     ]
   },
   {
@@ -17734,9 +16199,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "smooth jazz",
-      "modern jazz",
-      "indie",
-      "jazz"
+      "modern jazz"
     ]
   },
   {
@@ -17759,8 +16222,7 @@ export const productionSongRecords = [
     "tags": [
       "jazz",
       "lounge",
-      "smooth",
-      "indie"
+      "smooth"
     ]
   },
   {
@@ -17783,9 +16245,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "smooth jazz",
-      "modern jazz",
-      "indie",
-      "jazz"
+      "modern jazz"
     ]
   },
   {
@@ -17808,9 +16268,7 @@ export const productionSongRecords = [
     "tags": [
       "modern jazz",
       "contemporary jazz",
-      "smooth jazz",
-      "indie",
-      "jazz"
+      "smooth jazz"
     ]
   },
   {
@@ -17833,9 +16291,7 @@ export const productionSongRecords = [
     "tags": [
       "modern jazz",
       "contemporary jazz",
-      "smooth jazz",
-      "indie",
-      "jazz"
+      "smooth jazz"
     ]
   },
   {
@@ -17858,8 +16314,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "jazz",
-      "smooth jazz",
-      "indie"
+      "smooth jazz"
     ]
   },
   {
@@ -17882,9 +16337,7 @@ export const productionSongRecords = [
     "tags": [
       "classic jazz",
       "smooth jazz",
-      "lounge",
-      "indie",
-      "jazz"
+      "lounge"
     ]
   },
   {
@@ -17907,9 +16360,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "smooth jazz",
-      "modern jazz",
-      "indie",
-      "jazz"
+      "modern jazz"
     ]
   },
   {
@@ -17932,9 +16383,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "modern jazz",
-      "smooth jazz",
-      "indie",
-      "jazz"
+      "smooth jazz"
     ]
   },
   {
@@ -17957,8 +16406,7 @@ export const productionSongRecords = [
     "tags": [
       "jazz",
       "lounge",
-      "mellow",
-      "indie"
+      "mellow"
     ]
   },
   {
@@ -17981,8 +16429,7 @@ export const productionSongRecords = [
     "tags": [
       "jazz",
       "contemporary jazz",
-      "smooth jazz",
-      "indie"
+      "smooth jazz"
     ]
   },
   {
@@ -18005,9 +16452,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "smooth jazz",
-      "modern jazz",
-      "indie",
-      "jazz"
+      "modern jazz"
     ]
   },
   {
@@ -18030,9 +16475,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "modern jazz",
-      "swung jazz",
-      "indie",
-      "jazz"
+      "swung jazz"
     ]
   },
   {
@@ -18055,9 +16498,7 @@ export const productionSongRecords = [
     "tags": [
       "classic jazz",
       "lounge jazz",
-      "smooth jazz",
-      "indie",
-      "jazz"
+      "smooth jazz"
     ]
   },
   {
@@ -18080,9 +16521,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "modern jazz",
-      "cool jazz",
-      "indie",
-      "jazz"
+      "cool jazz"
     ]
   },
   {
@@ -18105,9 +16544,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "modern jazz",
-      "smooth jazz",
-      "indie",
-      "jazz"
+      "smooth jazz"
     ]
   },
   {
@@ -18130,8 +16567,7 @@ export const productionSongRecords = [
     "tags": [
       "jazz",
       "contemporary jazz",
-      "smooth jazz",
-      "indie"
+      "smooth jazz"
     ]
   },
   {
@@ -18154,9 +16590,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "sophisticated jazz",
-      "smooth jazz",
-      "indie",
-      "jazz"
+      "smooth jazz"
     ]
   },
   {
@@ -18179,9 +16613,7 @@ export const productionSongRecords = [
     "tags": [
       "modern jazz",
       "contemporary jazz",
-      "smooth jazz",
-      "indie",
-      "jazz"
+      "smooth jazz"
     ]
   },
   {
@@ -18204,9 +16636,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "sophisticated jazz",
-      "smooth jazz",
-      "indie",
-      "jazz"
+      "smooth jazz"
     ]
   },
   {
@@ -18229,9 +16659,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "smooth jazz",
-      "modern jazz",
-      "indie",
-      "jazz"
+      "modern jazz"
     ]
   },
   {
@@ -18254,9 +16682,7 @@ export const productionSongRecords = [
     "tags": [
       "modern jazz",
       "contemporary jazz",
-      "smooth jazz",
-      "indie",
-      "jazz"
+      "smooth jazz"
     ]
   },
   {
@@ -18279,9 +16705,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "smooth jazz",
-      "modern jazz",
-      "indie",
-      "jazz"
+      "modern jazz"
     ]
   },
   {
@@ -18304,8 +16728,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "jazz",
-      "swung jazz",
-      "indie"
+      "swung jazz"
     ]
   },
   {
@@ -18328,8 +16751,7 @@ export const productionSongRecords = [
     "tags": [
       "jazz",
       "lounge",
-      "classic",
-      "indie"
+      "classic"
     ]
   },
   {
@@ -18352,9 +16774,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "modern jazz",
-      "swung jazz",
-      "indie",
-      "jazz"
+      "swung jazz"
     ]
   },
   {
@@ -18377,8 +16797,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "jazz",
-      "smooth jazz",
-      "indie"
+      "smooth jazz"
     ]
   },
   {
@@ -18401,9 +16820,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "sophisticated",
-      "smooth",
-      "indie",
-      "jazz"
+      "smooth"
     ]
   },
   {
@@ -18426,9 +16843,7 @@ export const productionSongRecords = [
     "tags": [
       "classic jazz",
       "lounge jazz",
-      "smooth jazz",
-      "indie",
-      "jazz"
+      "smooth jazz"
     ]
   },
   {
@@ -18451,9 +16866,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "modern jazz",
-      "swung jazz",
-      "indie",
-      "jazz"
+      "swung jazz"
     ]
   },
   {
@@ -18476,9 +16889,7 @@ export const productionSongRecords = [
     "tags": [
       "jazz",
       "contemporary jazz",
-      "smooth",
-      "relaxing",
-      "indie"
+      "smooth"
     ]
   },
   {
@@ -18501,9 +16912,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "modern jazz",
-      "swung jazz",
-      "indie",
-      "jazz"
+      "swung jazz"
     ]
   },
   {
@@ -18526,9 +16935,7 @@ export const productionSongRecords = [
     "tags": [
       "jazz",
       "contemporary jazz",
-      "smooth",
-      "relaxing",
-      "indie"
+      "smooth"
     ]
   },
   {
@@ -18551,9 +16958,7 @@ export const productionSongRecords = [
     "tags": [
       "classic jazz",
       "smooth jazz",
-      "lounge",
-      "indie",
-      "jazz"
+      "lounge"
     ]
   },
   {
@@ -18576,9 +16981,7 @@ export const productionSongRecords = [
     "tags": [
       "modern jazz",
       "smooth jazz",
-      "contemporary jazz",
-      "indie",
-      "jazz"
+      "contemporary jazz"
     ]
   },
   {
@@ -18601,8 +17004,7 @@ export const productionSongRecords = [
     "tags": [
       "jazz",
       "lounge",
-      "classic warm swing",
-      "indie"
+      "classic warm swing"
     ]
   },
   {
@@ -18625,8 +17027,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary jazz",
       "jazz",
-      "swung jazz",
-      "indie"
+      "swung jazz"
     ]
   },
   {
@@ -18649,8 +17050,7 @@ export const productionSongRecords = [
     "tags": [
       "classical chamber music",
       "classical era",
-      "viennese style",
-      "classical"
+      "viennese style"
     ]
   },
   {
@@ -18673,8 +17073,7 @@ export const productionSongRecords = [
     "tags": [
       "romantic",
       "classical",
-      "ballroom",
-      "orchestral"
+      "ballroom"
     ]
   },
   {
@@ -18720,8 +17119,7 @@ export const productionSongRecords = [
     "tags": [
       "romantic orchestral",
       "symphonic classical",
-      "emotive dramatic classical",
-      "classical"
+      "emotive dramatic classical"
     ]
   },
   {
@@ -18767,9 +17165,7 @@ export const productionSongRecords = [
     "tags": [
       "classical chamber music",
       "minuet",
-      "refined ballroom like",
-      "light string quartet",
-      "classical"
+      "refined ballroom like"
     ]
   },
   {
@@ -18815,8 +17211,7 @@ export const productionSongRecords = [
     "tags": [
       "classical",
       "romantic",
-      "orchestral",
-      "dramatic"
+      "orchestral"
     ]
   },
   {
@@ -18839,8 +17234,7 @@ export const productionSongRecords = [
     "tags": [
       "classical",
       "chamber music",
-      "viennese classical",
-      "ballroom"
+      "viennese classical"
     ]
   },
   {
@@ -18863,8 +17257,7 @@ export const productionSongRecords = [
     "tags": [
       "dramatic classical",
       "romantic",
-      "orchestral",
-      "classical"
+      "orchestral"
     ]
   },
   {
@@ -18910,8 +17303,7 @@ export const productionSongRecords = [
     "tags": [
       "dramatic classical",
       "romantic",
-      "orchestral",
-      "classical"
+      "orchestral"
     ]
   },
   {
@@ -18934,9 +17326,7 @@ export const productionSongRecords = [
     "tags": [
       "classical chamber music",
       "minuet",
-      "refined ballroom like",
-      "light string quartet",
-      "classical"
+      "refined ballroom like"
     ]
   },
   {
@@ -18959,8 +17349,7 @@ export const productionSongRecords = [
     "tags": [
       "classical",
       "romantic",
-      "orchestral",
-      "dramatic"
+      "orchestral"
     ]
   },
   {
@@ -18983,8 +17372,7 @@ export const productionSongRecords = [
     "tags": [
       "romantic",
       "classical",
-      "ballroom",
-      "orchestral"
+      "ballroom"
     ]
   },
   {
@@ -19007,7 +17395,7 @@ export const productionSongRecords = [
     "tags": [
       "classical",
       "chamber",
-      "viennese waltz 3"
+      "viennese waltz"
     ]
   },
   {
@@ -19030,8 +17418,7 @@ export const productionSongRecords = [
     "tags": [
       "romantic orchestral",
       "symphonic classical",
-      "emotive dramatic classical",
-      "classical"
+      "emotive dramatic classical"
     ]
   },
   {
@@ -19123,8 +17510,7 @@ export const productionSongRecords = [
     "tags": [
       "classical chamber music",
       "classical era",
-      "viennese style",
-      "classical"
+      "viennese style"
     ]
   },
   {
@@ -19170,8 +17556,7 @@ export const productionSongRecords = [
     "tags": [
       "classical",
       "chamber music",
-      "viennese classical",
-      "ballroom"
+      "viennese classical"
     ]
   },
   {
@@ -19240,7 +17625,7 @@ export const productionSongRecords = [
     "tags": [
       "classical",
       "chamber",
-      "viennese waltz 3"
+      "viennese waltz"
     ]
   },
   {
@@ -19263,10 +17648,7 @@ export const productionSongRecords = [
     "tags": [
       "trance",
       "orchestral",
-      "soundtrack",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "soundtrack"
     ]
   },
   {
@@ -19289,9 +17671,7 @@ export const productionSongRecords = [
     "tags": [
       "electro rock",
       "electronic",
-      "soundtrack",
-      "bollywood",
-      "hindi"
+      "soundtrack"
     ]
   },
   {
@@ -19314,9 +17694,7 @@ export const productionSongRecords = [
     "tags": [
       "electro rock",
       "electronic",
-      "soundtrack",
-      "bollywood",
-      "hindi"
+      "soundtrack"
     ]
   },
   {
@@ -19339,9 +17717,7 @@ export const productionSongRecords = [
     "tags": [
       "electro rock",
       "electronic",
-      "soundtrack",
-      "bollywood",
-      "hindi"
+      "soundtrack"
     ]
   },
   {
@@ -19364,9 +17740,7 @@ export const productionSongRecords = [
     "tags": [
       "electro rock",
       "electronic",
-      "soundtrack",
-      "bollywood",
-      "hindi"
+      "soundtrack"
     ]
   },
   {
@@ -19389,9 +17763,7 @@ export const productionSongRecords = [
     "tags": [
       "electro rock",
       "electronic",
-      "soundtrack",
-      "bollywood",
-      "hindi"
+      "soundtrack"
     ]
   },
   {
@@ -19414,9 +17786,7 @@ export const productionSongRecords = [
     "tags": [
       "electro rock",
       "electronic",
-      "soundtrack",
-      "bollywood",
-      "hindi"
+      "soundtrack"
     ]
   },
   {
@@ -19439,9 +17809,7 @@ export const productionSongRecords = [
     "tags": [
       "electro rock",
       "electronic",
-      "soundtrack",
-      "bollywood",
-      "hindi"
+      "soundtrack"
     ]
   },
   {
@@ -19464,10 +17832,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "electronic",
-      "jazzy",
-      "swing",
-      "bollywood",
-      "hindi"
+      "jazzy"
     ]
   },
   {
@@ -19490,10 +17855,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "electronic",
-      "jazzy",
-      "swing",
-      "bollywood",
-      "hindi"
+      "jazzy"
     ]
   },
   {
@@ -19516,10 +17878,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "electronic",
-      "jazzy",
-      "swing",
-      "bollywood",
-      "hindi"
+      "jazzy"
     ]
   },
   {
@@ -19542,9 +17901,7 @@ export const productionSongRecords = [
     "tags": [
       "synthwave",
       "hindi pop",
-      "electronic",
-      "bollywood",
-      "hindi"
+      "electronic"
     ]
   },
   {
@@ -19567,9 +17924,7 @@ export const productionSongRecords = [
     "tags": [
       "synthwave",
       "hindi pop",
-      "electronic",
-      "bollywood",
-      "hindi"
+      "electronic"
     ]
   },
   {
@@ -19592,9 +17947,7 @@ export const productionSongRecords = [
     "tags": [
       "synthwave",
       "hindi pop",
-      "electronic",
-      "bollywood",
-      "hindi"
+      "electronic"
     ]
   },
   {
@@ -19617,9 +17970,7 @@ export const productionSongRecords = [
     "tags": [
       "synthwave",
       "hindi pop",
-      "electronic",
-      "bollywood",
-      "hindi"
+      "electronic"
     ]
   },
   {
@@ -19642,11 +17993,7 @@ export const productionSongRecords = [
     "tags": [
       "psy trance",
       "trance",
-      "orchestral",
-      "uplifting",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "orchestral"
     ]
   },
   {
@@ -19669,11 +18016,7 @@ export const productionSongRecords = [
     "tags": [
       "psy trance",
       "trance",
-      "orchestral",
-      "uplifting",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "orchestral"
     ]
   },
   {
@@ -19696,11 +18039,7 @@ export const productionSongRecords = [
     "tags": [
       "psy trance",
       "trance",
-      "orchestral",
-      "uplifting",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "orchestral"
     ]
   },
   {
@@ -19723,11 +18062,7 @@ export const productionSongRecords = [
     "tags": [
       "psy trance",
       "trance",
-      "orchestral",
-      "uplifting",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "orchestral"
     ]
   },
   {
@@ -19750,11 +18085,7 @@ export const productionSongRecords = [
     "tags": [
       "psy trance",
       "trance",
-      "orchestral",
-      "uplifting",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "orchestral"
     ]
   },
   {
@@ -19777,11 +18108,7 @@ export const productionSongRecords = [
     "tags": [
       "psy trance",
       "trance",
-      "orchestral",
-      "uplifting",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "orchestral"
     ]
   },
   {
@@ -19804,11 +18131,7 @@ export const productionSongRecords = [
     "tags": [
       "psy trance",
       "trance",
-      "orchestral",
-      "uplifting",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "orchestral"
     ]
   },
   {
@@ -19831,11 +18154,7 @@ export const productionSongRecords = [
     "tags": [
       "psy trance",
       "trance",
-      "orchestral",
-      "uplifting",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "orchestral"
     ]
   },
   {
@@ -19858,11 +18177,7 @@ export const productionSongRecords = [
     "tags": [
       "psy trance",
       "trance",
-      "orchestral",
-      "uplifting",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "orchestral"
     ]
   },
   {
@@ -19885,11 +18200,7 @@ export const productionSongRecords = [
     "tags": [
       "psy trance",
       "trance",
-      "orchestral",
-      "uplifting",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "orchestral"
     ]
   },
   {
@@ -19912,10 +18223,7 @@ export const productionSongRecords = [
     "tags": [
       "trance",
       "uplifting",
-      "orchestral",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "orchestral"
     ]
   },
   {
@@ -19938,10 +18246,7 @@ export const productionSongRecords = [
     "tags": [
       "trance",
       "uplifting",
-      "orchestral",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "orchestral"
     ]
   },
   {
@@ -19964,10 +18269,7 @@ export const productionSongRecords = [
     "tags": [
       "trance",
       "uplifting",
-      "orchestral",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "orchestral"
     ]
   },
   {
@@ -19990,10 +18292,7 @@ export const productionSongRecords = [
     "tags": [
       "trance",
       "uplifting",
-      "orchestral",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "orchestral"
     ]
   },
   {
@@ -20016,10 +18315,7 @@ export const productionSongRecords = [
     "tags": [
       "trance",
       "uplifting",
-      "orchestral",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "orchestral"
     ]
   },
   {
@@ -20042,10 +18338,7 @@ export const productionSongRecords = [
     "tags": [
       "trance",
       "cinematic soundtrack",
-      "orchestral",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "orchestral"
     ]
   },
   {
@@ -20068,10 +18361,7 @@ export const productionSongRecords = [
     "tags": [
       "trance",
       "cinematic soundtrack",
-      "orchestral",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "orchestral"
     ]
   },
   {
@@ -20094,9 +18384,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "dubstep",
-      "electronic",
-      "bollywood",
-      "hindi"
+      "electronic"
     ]
   },
   {
@@ -20119,9 +18407,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "dubstep",
-      "electronic",
-      "bollywood",
-      "hindi"
+      "electronic"
     ]
   },
   {
@@ -20144,9 +18430,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "dubstep",
-      "electronic",
-      "bollywood",
-      "hindi"
+      "electronic"
     ]
   },
   {
@@ -20169,9 +18453,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "dubstep",
-      "electronic",
-      "bollywood",
-      "hindi"
+      "electronic"
     ]
   },
   {
@@ -20194,9 +18476,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "dubstep",
-      "electronic",
-      "bollywood",
-      "hindi"
+      "electronic"
     ]
   },
   {
@@ -20219,9 +18499,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "dubstep",
-      "electronic",
-      "bollywood",
-      "hindi"
+      "electronic"
     ]
   },
   {
@@ -20244,9 +18522,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "dubstep",
-      "electronic",
-      "bollywood",
-      "hindi"
+      "electronic"
     ]
   },
   {
@@ -20269,9 +18545,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "dubstep",
-      "electronic",
-      "bollywood",
-      "hindi"
+      "electronic"
     ]
   },
   {
@@ -20294,9 +18568,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "dubstep",
-      "electronic",
-      "bollywood",
-      "hindi"
+      "electronic"
     ]
   },
   {
@@ -20319,9 +18591,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "dubstep",
-      "electronic",
-      "bollywood",
-      "hindi"
+      "electronic"
     ]
   },
   {
@@ -20344,9 +18614,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "dubstep",
-      "electronic",
-      "bollywood",
-      "hindi"
+      "electronic"
     ]
   },
   {
@@ -20369,10 +18637,7 @@ export const productionSongRecords = [
     "tags": [
       "trance",
       "cinematic soundtrack",
-      "orchestral",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "orchestral"
     ]
   },
   {
@@ -20395,9 +18660,7 @@ export const productionSongRecords = [
     "tags": [
       "synthwave",
       "electronic",
-      "emotional nostalgic",
-      "bollywood",
-      "hindi"
+      "emotional nostalgic"
     ]
   },
   {
@@ -20420,9 +18683,7 @@ export const productionSongRecords = [
     "tags": [
       "synthwave",
       "electronic",
-      "emotional nostalgic",
-      "bollywood",
-      "hindi"
+      "emotional nostalgic"
     ]
   },
   {
@@ -20445,9 +18706,7 @@ export const productionSongRecords = [
     "tags": [
       "synthwave",
       "electronic",
-      "emotional nostalgic",
-      "bollywood",
-      "hindi"
+      "emotional nostalgic"
     ]
   },
   {
@@ -20470,9 +18729,7 @@ export const productionSongRecords = [
     "tags": [
       "synthwave",
       "electronic",
-      "emotional nostalgic",
-      "bollywood",
-      "hindi"
+      "emotional nostalgic"
     ]
   },
   {
@@ -20493,9 +18750,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI ELECTRONIC/Mumbai Drift Frequencies",
     "metadataText": "",
     "tags": [
+      "hindi electronic",
       "bollywood",
-      "hindi",
-      "electronic"
+      "instrumental"
     ]
   },
   {
@@ -20518,9 +18775,7 @@ export const productionSongRecords = [
     "tags": [
       "future bass",
       "electronic",
-      "uplifting",
-      "bollywood",
-      "hindi"
+      "uplifting"
     ]
   },
   {
@@ -20543,9 +18798,7 @@ export const productionSongRecords = [
     "tags": [
       "future bass",
       "electronic",
-      "uplifting",
-      "bollywood",
-      "hindi"
+      "uplifting"
     ]
   },
   {
@@ -20568,9 +18821,7 @@ export const productionSongRecords = [
     "tags": [
       "future bass",
       "electronic",
-      "uplifting",
-      "bollywood",
-      "hindi"
+      "uplifting"
     ]
   },
   {
@@ -20593,9 +18844,7 @@ export const productionSongRecords = [
     "tags": [
       "future bass",
       "electronic",
-      "uplifting",
-      "bollywood",
-      "hindi"
+      "uplifting"
     ]
   },
   {
@@ -20618,9 +18867,7 @@ export const productionSongRecords = [
     "tags": [
       "synthwave",
       "electronic",
-      "emotional nostalgic",
-      "bollywood",
-      "hindi"
+      "emotional nostalgic"
     ]
   },
   {
@@ -20643,9 +18890,7 @@ export const productionSongRecords = [
     "tags": [
       "synthwave",
       "electronic",
-      "emotional nostalgic",
-      "bollywood",
-      "hindi"
+      "emotional nostalgic"
     ]
   },
   {
@@ -20668,11 +18913,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "electronic",
-      "orchestral",
-      "club punch",
-      "bollywood inspired",
-      "bollywood",
-      "hindi"
+      "orchestral"
     ]
   },
   {
@@ -20695,11 +18936,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "electronic",
-      "orchestral",
-      "club punch",
-      "bollywood inspired",
-      "bollywood",
-      "hindi"
+      "orchestral"
     ]
   },
   {
@@ -20722,11 +18959,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "electronic",
-      "orchestral",
-      "club punch",
-      "bollywood inspired",
-      "bollywood",
-      "hindi"
+      "orchestral"
     ]
   },
   {
@@ -20749,11 +18982,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "electronic",
-      "orchestral",
-      "club punch",
-      "bollywood inspired",
-      "bollywood",
-      "hindi"
+      "orchestral"
     ]
   },
   {
@@ -20776,10 +19005,7 @@ export const productionSongRecords = [
     "tags": [
       "techno",
       "hypnotic",
-      "bollywood rave",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "bollywood rave"
     ]
   },
   {
@@ -20802,10 +19028,7 @@ export const productionSongRecords = [
     "tags": [
       "techno",
       "hypnotic",
-      "bollywood rave",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "bollywood rave"
     ]
   },
   {
@@ -20828,10 +19051,7 @@ export const productionSongRecords = [
     "tags": [
       "techno",
       "hypnotic",
-      "bollywood rave",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "bollywood rave"
     ]
   },
   {
@@ -20854,9 +19074,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "orchestral",
-      "dubstep",
-      "bollywood",
-      "hindi"
+      "dubstep"
     ]
   },
   {
@@ -20879,9 +19097,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "orchestral",
-      "dubstep",
-      "bollywood",
-      "hindi"
+      "dubstep"
     ]
   },
   {
@@ -20904,9 +19120,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "orchestral",
-      "dubstep",
-      "bollywood",
-      "hindi"
+      "dubstep"
     ]
   },
   {
@@ -20929,9 +19143,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "orchestral",
-      "dubstep",
-      "bollywood",
-      "hindi"
+      "dubstep"
     ]
   },
   {
@@ -20954,9 +19166,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "orchestral",
-      "dubstep",
-      "bollywood",
-      "hindi"
+      "dubstep"
     ]
   },
   {
@@ -20979,9 +19189,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "orchestral",
-      "dubstep",
-      "bollywood",
-      "hindi"
+      "dubstep"
     ]
   },
   {
@@ -21004,9 +19212,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "orchestral",
-      "dubstep",
-      "bollywood",
-      "hindi"
+      "dubstep"
     ]
   },
   {
@@ -21029,9 +19235,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "orchestral",
-      "dubstep",
-      "bollywood",
-      "hindi"
+      "dubstep"
     ]
   },
   {
@@ -21054,9 +19258,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "hypnotic",
-      "bollywood",
-      "hindi"
+      "hypnotic"
     ]
   },
   {
@@ -21079,9 +19281,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "hypnotic",
-      "bollywood",
-      "hindi"
+      "hypnotic"
     ]
   },
   {
@@ -21104,9 +19304,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "hypnotic",
-      "bollywood",
-      "hindi"
+      "hypnotic"
     ]
   },
   {
@@ -21129,9 +19327,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "hypnotic",
-      "bollywood",
-      "hindi"
+      "hypnotic"
     ]
   },
   {
@@ -21154,9 +19350,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "hypnotic",
-      "bollywood",
-      "hindi"
+      "hypnotic"
     ]
   },
   {
@@ -21179,9 +19373,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "hypnotic",
-      "bollywood",
-      "hindi"
+      "hypnotic"
     ]
   },
   {
@@ -21204,9 +19396,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "hypnotic",
-      "bollywood",
-      "hindi"
+      "hypnotic"
     ]
   },
   {
@@ -21229,10 +19419,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "hindi bollywood",
-      "cinematic edm",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "cinematic edm"
     ]
   },
   {
@@ -21255,10 +19442,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "hindi bollywood",
-      "cinematic edm",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "cinematic edm"
     ]
   },
   {
@@ -21281,10 +19465,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "hindi bollywood",
-      "cinematic edm",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "cinematic edm"
     ]
   },
   {
@@ -21307,10 +19488,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "hindi bollywood",
-      "cinematic edm",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "cinematic edm"
     ]
   },
   {
@@ -21333,10 +19511,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "hindi bollywood",
-      "cinematic edm",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "cinematic edm"
     ]
   },
   {
@@ -21359,10 +19534,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "hindi bollywood",
-      "cinematic edm",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "cinematic edm"
     ]
   },
   {
@@ -21385,10 +19557,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "hindi bollywood",
-      "cinematic edm",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "cinematic edm"
     ]
   },
   {
@@ -21411,10 +19580,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "hindi bollywood",
-      "cinematic edm",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "cinematic edm"
     ]
   },
   {
@@ -21437,10 +19603,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "hindi bollywood",
-      "cinematic edm",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "cinematic edm"
     ]
   },
   {
@@ -21463,10 +19626,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "hindi bollywood",
-      "cinematic edm",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "cinematic edm"
     ]
   },
   {
@@ -21489,9 +19649,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "swing",
-      "electronic",
-      "bollywood",
-      "hindi"
+      "electronic"
     ]
   },
   {
@@ -21514,9 +19672,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "swing",
-      "electronic",
-      "bollywood",
-      "hindi"
+      "electronic"
     ]
   },
   {
@@ -21539,9 +19695,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "swing",
-      "electronic",
-      "bollywood",
-      "hindi"
+      "electronic"
     ]
   },
   {
@@ -21564,9 +19718,7 @@ export const productionSongRecords = [
     "tags": [
       "electro swing",
       "swing",
-      "electronic",
-      "bollywood",
-      "hindi"
+      "electronic"
     ]
   },
   {
@@ -21589,9 +19741,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "electro rock",
-      "soundtrack",
-      "bollywood",
-      "hindi"
+      "soundtrack"
     ]
   },
   {
@@ -21614,9 +19764,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "electro rock",
-      "soundtrack",
-      "bollywood",
-      "hindi"
+      "soundtrack"
     ]
   },
   {
@@ -21639,9 +19787,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "electro rock",
-      "soundtrack",
-      "bollywood",
-      "hindi"
+      "soundtrack"
     ]
   },
   {
@@ -21664,9 +19810,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "electro rock",
-      "soundtrack",
-      "bollywood",
-      "hindi"
+      "soundtrack"
     ]
   },
   {
@@ -21689,9 +19833,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "electro rock",
-      "soundtrack",
-      "bollywood",
-      "hindi"
+      "soundtrack"
     ]
   },
   {
@@ -21714,10 +19856,7 @@ export const productionSongRecords = [
     "tags": [
       "hindi house",
       "house",
-      "electronic dance",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "electronic dance"
     ]
   },
   {
@@ -21740,10 +19879,7 @@ export const productionSongRecords = [
     "tags": [
       "hindi house",
       "electronic dance",
-      "club banger",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "club banger"
     ]
   },
   {
@@ -21766,10 +19902,7 @@ export const productionSongRecords = [
     "tags": [
       "techno",
       "hypnotic techno",
-      "dark electronic",
-      "bollywood",
-      "hindi",
-      "electronic"
+      "dark electronic"
     ]
   },
   {
@@ -21792,10 +19925,7 @@ export const productionSongRecords = [
     "tags": [
       "desi instrumental",
       "bollywood",
-      "cinematic",
-      "soulful",
-      "hindi",
-      "romance"
+      "cinematic"
     ]
   },
   {
@@ -21819,10 +19949,7 @@ export const productionSongRecords = [
     "tags": [
       "desi instrumental",
       "bollywood",
-      "cinematic",
-      "soulful",
-      "hindi",
-      "romance"
+      "cinematic"
     ]
   },
   {
@@ -21846,10 +19973,7 @@ export const productionSongRecords = [
     "tags": [
       "desi instrumental",
       "bollywood",
-      "cinematic",
-      "soulful",
-      "hindi",
-      "romance"
+      "cinematic"
     ]
   },
   {
@@ -21872,10 +19996,7 @@ export const productionSongRecords = [
     "tags": [
       "desi instrumental",
       "bollywood",
-      "cinematic",
-      "soulful",
-      "hindi",
-      "romance"
+      "cinematic"
     ]
   },
   {
@@ -21898,10 +20019,7 @@ export const productionSongRecords = [
     "tags": [
       "desi instrumental",
       "bollywood",
-      "cinematic",
-      "soulful",
-      "hindi",
-      "romance"
+      "cinematic"
     ]
   },
   {
@@ -21925,10 +20043,7 @@ export const productionSongRecords = [
     "tags": [
       "desi instrumental",
       "bollywood",
-      "cinematic",
-      "soulful",
-      "hindi",
-      "romance"
+      "cinematic"
     ]
   },
   {
@@ -21951,10 +20066,7 @@ export const productionSongRecords = [
     "tags": [
       "desi instrumental",
       "bollywood",
-      "cinematic",
-      "soulful",
-      "hindi",
-      "romance"
+      "cinematic"
     ]
   },
   {
@@ -21978,10 +20090,7 @@ export const productionSongRecords = [
     "tags": [
       "desi instrumental",
       "bollywood",
-      "cinematic",
-      "soulful",
-      "hindi",
-      "romance"
+      "cinematic"
     ]
   },
   {
@@ -22004,10 +20113,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary bollywood",
       "romantic pop",
-      "cinematic electronic",
-      "bollywood",
-      "hindi",
-      "romance"
+      "cinematic electronic"
     ]
   },
   {
@@ -22031,10 +20137,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary bollywood",
       "romantic pop",
-      "cinematic electronic",
-      "bollywood",
-      "hindi",
-      "romance"
+      "cinematic electronic"
     ]
   },
   {
@@ -22057,10 +20160,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary bollywood",
       "romantic pop",
-      "cinematic electronic",
-      "bollywood",
-      "hindi",
-      "romance"
+      "cinematic electronic"
     ]
   },
   {
@@ -22083,10 +20183,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary bollywood",
       "romantic pop",
-      "cinematic electronic",
-      "bollywood",
-      "hindi",
-      "romance"
+      "cinematic electronic"
     ]
   },
   {
@@ -22109,10 +20206,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary bollywood",
       "romantic pop",
-      "cinematic electronic",
-      "bollywood",
-      "hindi",
-      "romance"
+      "cinematic electronic"
     ]
   },
   {
@@ -22135,10 +20229,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary bollywood",
       "romantic pop",
-      "cinematic electronic",
-      "bollywood",
-      "hindi",
-      "romance"
+      "cinematic electronic"
     ]
   },
   {
@@ -22162,9 +20253,7 @@ export const productionSongRecords = [
     "tags": [
       "bollywood",
       "romantic ballad",
-      "indian classical inspired",
-      "hindi",
-      "romance"
+      "indian classical inspired"
     ]
   },
   {
@@ -22188,9 +20277,7 @@ export const productionSongRecords = [
     "tags": [
       "bollywood",
       "romantic ballad",
-      "indian classical inspired",
-      "hindi",
-      "romance"
+      "indian classical inspired"
     ]
   },
   {
@@ -22213,9 +20300,7 @@ export const productionSongRecords = [
     "tags": [
       "bollywood",
       "romantic ballad",
-      "indian classical inspired",
-      "hindi",
-      "romance"
+      "indian classical inspired"
     ]
   },
   {
@@ -22239,9 +20324,7 @@ export const productionSongRecords = [
     "tags": [
       "bollywood",
       "romantic ballad",
-      "indian classical inspired",
-      "hindi",
-      "romance"
+      "indian classical inspired"
     ]
   },
   {
@@ -22265,9 +20348,7 @@ export const productionSongRecords = [
     "tags": [
       "bollywood",
       "romantic ballad",
-      "indian classical inspired",
-      "hindi",
-      "romance"
+      "indian classical inspired"
     ]
   },
   {
@@ -22290,9 +20371,7 @@ export const productionSongRecords = [
     "tags": [
       "bollywood",
       "romantic ballad",
-      "indian classical inspired",
-      "hindi",
-      "romance"
+      "indian classical inspired"
     ]
   },
   {
@@ -22316,9 +20395,7 @@ export const productionSongRecords = [
     "tags": [
       "bollywood",
       "romantic",
-      "cinematic",
-      "hindi",
-      "romance"
+      "cinematic"
     ]
   },
   {
@@ -22341,9 +20418,7 @@ export const productionSongRecords = [
     "tags": [
       "bollywood",
       "romantic",
-      "cinematic",
-      "hindi",
-      "romance"
+      "cinematic"
     ]
   },
   {
@@ -22366,9 +20441,7 @@ export const productionSongRecords = [
     "tags": [
       "bollywood",
       "romantic",
-      "cinematic",
-      "hindi",
-      "romance"
+      "cinematic"
     ]
   },
   {
@@ -22392,9 +20465,7 @@ export const productionSongRecords = [
     "tags": [
       "bollywood",
       "romantic",
-      "cinematic",
-      "hindi",
-      "romance"
+      "cinematic"
     ]
   },
   {
@@ -22417,9 +20488,7 @@ export const productionSongRecords = [
     "tags": [
       "bollywood",
       "romantic",
-      "cinematic",
-      "hindi",
-      "romance"
+      "cinematic"
     ]
   },
   {
@@ -22443,9 +20512,7 @@ export const productionSongRecords = [
     "tags": [
       "bollywood",
       "romantic",
-      "cinematic",
-      "hindi",
-      "romance"
+      "cinematic"
     ]
   },
   {
@@ -22469,9 +20536,7 @@ export const productionSongRecords = [
     "tags": [
       "bollywood",
       "romantic",
-      "cinematic",
-      "hindi",
-      "romance"
+      "cinematic"
     ]
   },
   {
@@ -22495,9 +20560,7 @@ export const productionSongRecords = [
     "tags": [
       "bollywood",
       "romantic",
-      "cinematic",
-      "hindi",
-      "romance"
+      "cinematic"
     ]
   },
   {
@@ -22520,9 +20583,7 @@ export const productionSongRecords = [
     "tags": [
       "bollywood",
       "romantic",
-      "cinematic",
-      "hindi",
-      "romance"
+      "cinematic"
     ]
   },
   {
@@ -22546,9 +20607,7 @@ export const productionSongRecords = [
     "tags": [
       "bollywood",
       "romantic indian classical",
-      "cinematic ballad",
-      "hindi",
-      "romance"
+      "cinematic ballad"
     ]
   },
   {
@@ -22572,9 +20631,7 @@ export const productionSongRecords = [
     "tags": [
       "bollywood",
       "romantic indian classical",
-      "cinematic ballad",
-      "hindi",
-      "romance"
+      "cinematic ballad"
     ]
   },
   {
@@ -22598,9 +20655,7 @@ export const productionSongRecords = [
     "tags": [
       "bollywood",
       "romantic indian classical",
-      "cinematic ballad",
-      "hindi",
-      "romance"
+      "cinematic ballad"
     ]
   },
   {
@@ -22623,9 +20678,7 @@ export const productionSongRecords = [
     "tags": [
       "bollywood",
       "romantic indian classical",
-      "cinematic ballad",
-      "hindi",
-      "romance"
+      "cinematic ballad"
     ]
   },
   {
@@ -22648,9 +20701,7 @@ export const productionSongRecords = [
     "tags": [
       "bollywood",
       "romantic indian classical",
-      "cinematic ballad",
-      "hindi",
-      "romance"
+      "cinematic ballad"
     ]
   },
   {
@@ -22674,9 +20725,7 @@ export const productionSongRecords = [
     "tags": [
       "bollywood",
       "romantic indian classical",
-      "cinematic ballad",
-      "hindi",
-      "romance"
+      "cinematic ballad"
     ]
   },
   {
@@ -22698,12 +20747,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI ROMANCE/Saans",
     "metadataText": "modern Bollywood (Hindi film music), romantic pop, cinematic synth-pop\n\nMelodic modern Indian romantic track with smooth male and female vocals, catchy emotional hooks, atmospheric synth textures, acoustic guitar, soft dholak grooves, cinematic production and dreamy late-night romance vibe perfect for contemporary Bollywood-style love songs",
     "tags": [
-      "modern bollywood hindi",
+      "modern bollywood",
       "romantic pop",
-      "cinematic synth pop",
-      "bollywood",
-      "hindi",
-      "romance"
+      "cinematic synth pop"
     ]
   },
   {
@@ -22724,12 +20770,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI ROMANCE/Saat Samundar",
     "metadataText": "modern Bollywood (Hindi film music), romantic pop, cinematic synth-pop\n\nMelodic modern Indian romantic track with smooth male and female vocals, catchy emotional hooks, atmospheric synth textures, acoustic guitar, soft dholak grooves, cinematic production and dreamy late-night romance vibe perfect for contemporary Bollywood-style love songs",
     "tags": [
-      "modern bollywood hindi",
+      "modern bollywood",
       "romantic pop",
-      "cinematic synth pop",
-      "bollywood",
-      "hindi",
-      "romance"
+      "cinematic synth pop"
     ]
   },
   {
@@ -22751,12 +20794,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI ROMANCE/Shifa",
     "metadataText": "modern Bollywood (Hindi film music), romantic pop, cinematic synth-pop\n\nMelodic modern Indian romantic track with smooth male and female vocals, catchy emotional hooks, atmospheric synth textures, acoustic guitar, soft dholak grooves, cinematic production and dreamy late-night romance vibe perfect for contemporary Bollywood-style love songs",
     "tags": [
-      "modern bollywood hindi",
+      "modern bollywood",
       "romantic pop",
-      "cinematic synth pop",
-      "bollywood",
-      "hindi",
-      "romance"
+      "cinematic synth pop"
     ]
   },
   {
@@ -22777,12 +20817,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI ROMANCE/Surat Pyaar",
     "metadataText": "modern Bollywood (Hindi film music), romantic pop, cinematic synth-pop\n\nMelodic modern Indian romantic track with smooth male and female vocals, catchy emotional hooks, atmospheric synth textures, acoustic guitar, soft dholak grooves, cinematic production and dreamy late-night romance vibe perfect for contemporary Bollywood-style love songs",
     "tags": [
-      "modern bollywood hindi",
+      "modern bollywood",
       "romantic pop",
-      "cinematic synth pop",
-      "bollywood",
-      "hindi",
-      "romance"
+      "cinematic synth pop"
     ]
   },
   {
@@ -22804,12 +20841,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI ROMANCE/Tera Naam",
     "metadataText": "modern Bollywood (Hindi film music), romantic pop, cinematic synth-pop\n\nMelodic modern Indian romantic track with smooth male and female vocals, catchy emotional hooks, atmospheric synth textures, acoustic guitar, soft dholak grooves, cinematic production and dreamy late-night romance vibe perfect for contemporary Bollywood-style love songs",
     "tags": [
-      "modern bollywood hindi",
+      "modern bollywood",
       "romantic pop",
-      "cinematic synth pop",
-      "bollywood",
-      "hindi",
-      "romance"
+      "cinematic synth pop"
     ]
   },
   {
@@ -22830,12 +20864,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI ROMANCE/teri awaaz in the rain",
     "metadataText": "modern Bollywood (Hindi film music), romantic pop, cinematic synth-pop\n\nMelodic modern Indian romantic track with smooth male and female vocals, catchy emotional hooks, atmospheric synth textures, acoustic guitar, soft dholak grooves, cinematic production and dreamy late-night romance vibe perfect for contemporary Bollywood-style love songs",
     "tags": [
-      "modern bollywood hindi",
+      "modern bollywood",
       "romantic pop",
-      "cinematic synth pop",
-      "bollywood",
-      "hindi",
-      "romance"
+      "cinematic synth pop"
     ]
   },
   {
@@ -22856,12 +20887,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI ROMANCE/Tujhse Mulaqat",
     "metadataText": "modern Bollywood (Hindi film music), romantic pop, cinematic synth-pop\n\nMelodic modern Indian romantic track with smooth male and female vocals, catchy emotional hooks, atmospheric synth textures, acoustic guitar, soft dholak grooves, cinematic production and dreamy late-night romance vibe perfect for contemporary Bollywood-style love songs",
     "tags": [
-      "modern bollywood hindi",
+      "modern bollywood",
       "romantic pop",
-      "cinematic synth pop",
-      "bollywood",
-      "hindi",
-      "romance"
+      "cinematic synth pop"
     ]
   },
   {
@@ -22882,12 +20910,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI ROMANCE/tum paas ho",
     "metadataText": "modern Bollywood (Hindi film music), romantic pop, cinematic synth-pop\n\nMelodic modern Indian romantic track with smooth male and female vocals, catchy emotional hooks, atmospheric synth textures, acoustic guitar, soft dholak grooves, cinematic production and dreamy late-night romance vibe perfect for contemporary Bollywood-style love songs",
     "tags": [
-      "modern bollywood hindi",
+      "modern bollywood",
       "romantic pop",
-      "cinematic synth pop",
-      "bollywood",
-      "hindi",
-      "romance"
+      "cinematic synth pop"
     ]
   },
   {
@@ -22910,9 +20935,7 @@ export const productionSongRecords = [
     "tags": [
       "bollywood",
       "romantic indian classical",
-      "cinematic ballad",
-      "hindi",
-      "romance"
+      "cinematic ballad"
     ]
   },
   {
@@ -22936,10 +20959,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary bollywood",
       "romantic pop",
-      "cinematic dream pop",
-      "bollywood",
-      "hindi",
-      "romance"
+      "cinematic dream pop"
     ]
   },
   {
@@ -22962,10 +20982,7 @@ export const productionSongRecords = [
     "tags": [
       "desi alternative rock",
       "bollywood rock",
-      "indie alt rock",
-      "bollywood",
-      "hindi",
-      "rock"
+      "indie alt rock"
     ]
   },
   {
@@ -22989,10 +21006,7 @@ export const productionSongRecords = [
     "tags": [
       "desi alternative rock",
       "bollywood rock",
-      "indie alt rock",
-      "bollywood",
-      "hindi",
-      "rock"
+      "indie alt rock"
     ]
   },
   {
@@ -23016,10 +21030,7 @@ export const productionSongRecords = [
     "tags": [
       "desi alternative rock",
       "bollywood rock",
-      "indie alt rock",
-      "bollywood",
-      "hindi",
-      "rock"
+      "indie alt rock"
     ]
   },
   {
@@ -23042,10 +21053,7 @@ export const productionSongRecords = [
     "tags": [
       "desi alternative rock",
       "bollywood rock",
-      "indie alt rock",
-      "bollywood",
-      "hindi",
-      "rock"
+      "indie alt rock"
     ]
   },
   {
@@ -23068,10 +21076,7 @@ export const productionSongRecords = [
     "tags": [
       "desi alternative rock",
       "bollywood rock",
-      "indie alt rock",
-      "bollywood",
-      "hindi",
-      "rock"
+      "indie alt rock"
     ]
   },
   {
@@ -23094,10 +21099,7 @@ export const productionSongRecords = [
     "tags": [
       "desi alternative rock",
       "bollywood rock",
-      "indie alt rock",
-      "bollywood",
-      "hindi",
-      "rock"
+      "indie alt rock"
     ]
   },
   {
@@ -23120,10 +21122,7 @@ export const productionSongRecords = [
     "tags": [
       "desi alternative rock",
       "bollywood rock",
-      "indie alt rock",
-      "bollywood",
-      "hindi",
-      "rock"
+      "indie alt rock"
     ]
   },
   {
@@ -23146,10 +21145,7 @@ export const productionSongRecords = [
     "tags": [
       "desi alternative rock",
       "bollywood rock",
-      "indie alt rock",
-      "bollywood",
-      "hindi",
-      "rock"
+      "indie alt rock"
     ]
   },
   {
@@ -23170,9 +21166,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI ROCK/broken soul ka safar",
     "metadataText": "",
     "tags": [
+      "hindi rock",
       "bollywood",
-      "hindi",
-      "rock"
+      "instrumental"
     ]
   },
   {
@@ -23195,10 +21191,7 @@ export const productionSongRecords = [
     "tags": [
       "desi alternative rock",
       "bollywood rock",
-      "indie alt rock",
-      "bollywood",
-      "hindi",
-      "rock"
+      "indie alt rock"
     ]
   },
   {
@@ -23221,10 +21214,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "moody",
-      "cinematic",
-      "bollywood",
-      "hindi",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -23247,10 +21237,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "moody",
-      "cinematic",
-      "bollywood",
-      "hindi",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -23273,10 +21260,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "moody",
-      "cinematic",
-      "bollywood",
-      "hindi",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -23299,10 +21283,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "moody",
-      "cinematic",
-      "bollywood",
-      "hindi",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -23325,10 +21306,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "moody",
-      "cinematic",
-      "bollywood",
-      "hindi",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -23351,10 +21329,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "moody",
-      "cinematic",
-      "bollywood",
-      "hindi",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -23377,10 +21352,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "moody",
-      "cinematic",
-      "bollywood",
-      "hindi",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -23404,10 +21376,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "moody",
-      "cinematic",
-      "bollywood",
-      "hindi",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -23430,10 +21399,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "moody",
-      "cinematic",
-      "bollywood",
-      "hindi",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -23456,10 +21422,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "moody",
-      "cinematic",
-      "bollywood",
-      "hindi",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -23483,10 +21446,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "moody",
-      "cinematic",
-      "bollywood",
-      "hindi",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -23509,9 +21469,7 @@ export const productionSongRecords = [
     "tags": [
       "folk rock",
       "rock",
-      "desi punjabi",
-      "bollywood",
-      "hindi"
+      "desi punjabi"
     ]
   },
   {
@@ -23534,9 +21492,7 @@ export const productionSongRecords = [
     "tags": [
       "folk rock",
       "rock",
-      "desi punjabi",
-      "bollywood",
-      "hindi"
+      "desi punjabi"
     ]
   },
   {
@@ -23559,9 +21515,7 @@ export const productionSongRecords = [
     "tags": [
       "folk rock",
       "rock",
-      "desi punjabi",
-      "bollywood",
-      "hindi"
+      "desi punjabi"
     ]
   },
   {
@@ -23584,9 +21538,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "moody",
-      "bollywood",
-      "hindi",
-      "rock"
+      "hindi rock"
     ]
   },
   {
@@ -23609,9 +21561,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "moody",
-      "bollywood",
-      "hindi",
-      "rock"
+      "hindi rock"
     ]
   },
   {
@@ -23634,9 +21584,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "moody",
-      "bollywood",
-      "hindi",
-      "rock"
+      "hindi rock"
     ]
   },
   {
@@ -23659,10 +21607,7 @@ export const productionSongRecords = [
     "tags": [
       "punjabi rock",
       "folk",
-      "desi",
-      "bollywood",
-      "hindi",
-      "rock"
+      "desi"
     ]
   },
   {
@@ -23685,10 +21630,7 @@ export const productionSongRecords = [
     "tags": [
       "punjabi rock",
       "folk rock",
-      "desi folk",
-      "bollywood",
-      "hindi",
-      "rock"
+      "desi folk"
     ]
   },
   {
@@ -23712,10 +21654,7 @@ export const productionSongRecords = [
     "tags": [
       "desi alternative rock",
       "alternative rock",
-      "bollywood fusion",
-      "bollywood",
-      "hindi",
-      "rock"
+      "bollywood fusion"
     ]
   },
   {
@@ -23739,10 +21678,7 @@ export const productionSongRecords = [
     "tags": [
       "desi alternative rock",
       "alternative rock",
-      "bollywood fusion",
-      "bollywood",
-      "hindi",
-      "rock"
+      "bollywood fusion"
     ]
   },
   {
@@ -23766,10 +21702,7 @@ export const productionSongRecords = [
     "tags": [
       "desi alternative rock",
       "alternative rock",
-      "bollywood fusion",
-      "bollywood",
-      "hindi",
-      "rock"
+      "bollywood fusion"
     ]
   },
   {
@@ -23793,10 +21726,7 @@ export const productionSongRecords = [
     "tags": [
       "desi alternative rock",
       "alternative rock",
-      "bollywood fusion",
-      "bollywood",
-      "hindi",
-      "rock"
+      "bollywood fusion"
     ]
   },
   {
@@ -23819,10 +21749,7 @@ export const productionSongRecords = [
     "tags": [
       "desi alternative rock",
       "alternative rock",
-      "bollywood fusion",
-      "bollywood",
-      "hindi",
-      "rock"
+      "bollywood fusion"
     ]
   },
   {
@@ -23846,10 +21773,7 @@ export const productionSongRecords = [
     "tags": [
       "desi alternative rock",
       "alternative rock",
-      "bollywood fusion",
-      "bollywood",
-      "hindi",
-      "rock"
+      "bollywood fusion"
     ]
   },
   {
@@ -23872,9 +21796,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "moody",
-      "bollywood",
-      "hindi",
-      "rock"
+      "hindi rock"
     ]
   },
   {
@@ -23897,9 +21819,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "moody",
-      "bollywood",
-      "hindi",
-      "rock"
+      "hindi rock"
     ]
   },
   {
@@ -23922,10 +21842,7 @@ export const productionSongRecords = [
     "tags": [
       "desi rock",
       "electric rock",
-      "orchestral",
-      "bollywood",
-      "hindi",
-      "rock"
+      "orchestral"
     ]
   },
   {
@@ -23946,9 +21863,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI ROCK/loud guitars aur yaadein",
     "metadataText": "",
     "tags": [
+      "hindi rock",
       "bollywood",
-      "hindi",
-      "rock"
+      "instrumental"
     ]
   },
   {
@@ -23971,11 +21888,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "desi",
-      "moody",
-      "cinematic",
-      "bollywood",
-      "hindi",
-      "rock"
+      "moody"
     ]
   },
   {
@@ -23998,11 +21911,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "desi",
-      "moody",
-      "cinematic",
-      "bollywood",
-      "hindi",
-      "rock"
+      "moody"
     ]
   },
   {
@@ -24025,11 +21934,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "desi",
-      "moody",
-      "cinematic",
-      "bollywood",
-      "hindi",
-      "rock"
+      "moody"
     ]
   },
   {
@@ -24052,11 +21957,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "desi",
-      "moody",
-      "cinematic",
-      "bollywood",
-      "hindi",
-      "rock"
+      "moody"
     ]
   },
   {
@@ -24079,11 +21980,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "desi",
-      "moody",
-      "cinematic",
-      "bollywood",
-      "hindi",
-      "rock"
+      "moody"
     ]
   },
   {
@@ -24106,9 +22003,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "moody",
-      "bollywood",
-      "hindi",
-      "rock"
+      "hindi rock"
     ]
   },
   {
@@ -24132,9 +22027,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "moody",
-      "bollywood",
-      "hindi",
-      "rock"
+      "hindi rock"
     ]
   },
   {
@@ -24157,9 +22050,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "moody",
-      "bollywood",
-      "hindi",
-      "rock"
+      "hindi rock"
     ]
   },
   {
@@ -24182,9 +22073,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "moody",
-      "bollywood",
-      "hindi",
-      "rock"
+      "hindi rock"
     ]
   },
   {
@@ -24207,9 +22096,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "moody",
-      "bollywood",
-      "hindi",
-      "rock"
+      "hindi rock"
     ]
   },
   {
@@ -24232,9 +22119,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "moody",
-      "bollywood",
-      "hindi",
-      "rock"
+      "hindi rock"
     ]
   },
   {
@@ -24257,9 +22142,7 @@ export const productionSongRecords = [
     "tags": [
       "alternative rock",
       "moody",
-      "bollywood",
-      "hindi",
-      "rock"
+      "hindi rock"
     ]
   },
   {
@@ -24283,10 +22166,7 @@ export const productionSongRecords = [
     "tags": [
       "desi alternative rock",
       "indie rock",
-      "bollywood inspired fusion",
-      "bollywood",
-      "hindi",
-      "rock"
+      "bollywood inspired fusion"
     ]
   },
   {
@@ -24309,10 +22189,7 @@ export const productionSongRecords = [
     "tags": [
       "desi alternative rock",
       "bollywood inspired rock",
-      "cinematic alt rock",
-      "bollywood",
-      "hindi",
-      "rock"
+      "cinematic alt rock"
     ]
   },
   {
@@ -24335,10 +22212,7 @@ export const productionSongRecords = [
     "tags": [
       "desi alternative rock",
       "bollywood inspired rock",
-      "cinematic alt rock",
-      "bollywood",
-      "hindi",
-      "rock"
+      "cinematic alt rock"
     ]
   },
   {
@@ -24361,10 +22235,7 @@ export const productionSongRecords = [
     "tags": [
       "desi alternative rock",
       "bollywood inspired rock",
-      "cinematic alt rock",
-      "bollywood",
-      "hindi",
-      "rock"
+      "cinematic alt rock"
     ]
   },
   {
@@ -24387,10 +22258,7 @@ export const productionSongRecords = [
     "tags": [
       "desi alternative rock",
       "bollywood inspired rock",
-      "cinematic alt rock",
-      "bollywood",
-      "hindi",
-      "rock"
+      "cinematic alt rock"
     ]
   },
   {
@@ -24414,10 +22282,7 @@ export const productionSongRecords = [
     "tags": [
       "desi alternative rock",
       "alternative rock",
-      "cinematic rock",
-      "bollywood",
-      "hindi",
-      "rock"
+      "cinematic rock"
     ]
   },
   {
@@ -24441,10 +22306,7 @@ export const productionSongRecords = [
     "tags": [
       "desi alternative rock",
       "alternative rock",
-      "cinematic rock",
-      "bollywood",
-      "hindi",
-      "rock"
+      "cinematic rock"
     ]
   },
   {
@@ -24467,9 +22329,7 @@ export const productionSongRecords = [
     "tags": [
       "folk rock",
       "rock",
-      "desi punjabi",
-      "bollywood",
-      "hindi"
+      "desi punjabi"
     ]
   },
   {
@@ -24493,10 +22353,7 @@ export const productionSongRecords = [
     "tags": [
       "desi alternative rock",
       "alternative rock",
-      "bollywood influenced rock",
-      "bollywood",
-      "hindi",
-      "rock"
+      "bollywood influenced rock"
     ]
   },
   {
@@ -24520,11 +22377,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "cinematic film score",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "cinematic film score"
     ]
   },
   {
@@ -24548,11 +22401,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "cinematic film score",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "cinematic film score"
     ]
   },
   {
@@ -24576,11 +22425,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "cinematic film score",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "cinematic film score"
     ]
   },
   {
@@ -24604,11 +22449,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "cinematic film score",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "cinematic film score"
     ]
   },
   {
@@ -24632,11 +22473,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "cinematic film score",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "cinematic film score"
     ]
   },
   {
@@ -24660,11 +22497,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "cinematic film score",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "cinematic film score"
     ]
   },
   {
@@ -24688,11 +22521,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "cinematic film score",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "cinematic film score"
     ]
   },
   {
@@ -24716,11 +22545,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "cinematic film score",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "cinematic film score"
     ]
   },
   {
@@ -24744,11 +22569,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "cinematic film score",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "cinematic film score"
     ]
   },
   {
@@ -24772,11 +22593,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "cinematic film score",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "cinematic film score"
     ]
   },
   {
@@ -24800,11 +22617,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "cinematic indian hindi",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "cinematic indian rap"
     ]
   },
   {
@@ -24828,11 +22641,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "hip hop",
-      "bollywood inspired",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "bollywood inspired"
     ]
   },
   {
@@ -24856,11 +22665,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "hip hop",
-      "bollywood inspired",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "bollywood inspired"
     ]
   },
   {
@@ -24884,11 +22689,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "hip hop",
-      "bollywood inspired",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "bollywood inspired"
     ]
   },
   {
@@ -24911,11 +22712,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "hip hop",
-      "bollywood inspired",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "bollywood inspired"
     ]
   },
   {
@@ -24938,11 +22735,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "hip hop",
-      "bollywood inspired",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "bollywood inspired"
     ]
   },
   {
@@ -24965,11 +22758,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "hip hop",
-      "bollywood inspired",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "bollywood inspired"
     ]
   },
   {
@@ -24993,11 +22782,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "hip hop",
-      "bollywood inspired",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "bollywood inspired"
     ]
   },
   {
@@ -25021,11 +22806,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "hip hop",
-      "bollywood inspired",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "bollywood inspired"
     ]
   },
   {
@@ -25049,11 +22830,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "hip hop",
-      "bollywood inspired",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "bollywood inspired"
     ]
   },
   {
@@ -25076,13 +22853,8 @@ export const productionSongRecords = [
     "metadataText": "hip hop, desi (Hindi-inspired), boom bap, soulful\n\nBoom bap instrumental with swung classic hip-hop drums, dusty vinyl crackle, and smooth bass grooves; verse sections ride sparse piano chords and tabla taps, pre-chorus lifts with filtered sarangi lines, chorus opens into soulful Hindi-inspired melody stacks and warm harmonic swells, Airy tape hiss, reversed chime pickups, subtle room reverb, bright yet nostalgic mix, smooth, soulful, hip-hop, warm, classic, desi, nostalgic, emotional",
     "tags": [
       "hip hop",
-      "desi hindi inspired",
-      "boom bap",
-      "soulful",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "desi",
+      "boom bap"
     ]
   },
   {
@@ -25104,13 +22876,8 @@ export const productionSongRecords = [
     "metadataText": "hip hop, desi (Hindi-inspired), boom bap, soulful\n\nBoom bap instrumental with swung classic hip-hop drums, dusty vinyl crackle, and smooth bass grooves; verse sections ride sparse piano chords and tabla taps, pre-chorus lifts with filtered sarangi lines, chorus opens into soulful Hindi-inspired melody stacks and warm harmonic swells, Airy tape hiss, reversed chime pickups, subtle room reverb, bright yet nostalgic mix, smooth, soulful, hip-hop, warm, classic, desi, nostalgic, emotional",
     "tags": [
       "hip hop",
-      "desi hindi inspired",
-      "boom bap",
-      "soulful",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "desi",
+      "boom bap"
     ]
   },
   {
@@ -25133,13 +22900,8 @@ export const productionSongRecords = [
     "metadataText": "hip hop, desi (Hindi-inspired), boom bap, soulful\n\nBoom bap instrumental with swung classic hip-hop drums, dusty vinyl crackle, and smooth bass grooves; verse sections ride sparse piano chords and tabla taps, pre-chorus lifts with filtered sarangi lines, chorus opens into soulful Hindi-inspired melody stacks and warm harmonic swells, Airy tape hiss, reversed chime pickups, subtle room reverb, bright yet nostalgic mix, smooth, soulful, hip-hop, warm, classic, desi, nostalgic, emotional",
     "tags": [
       "hip hop",
-      "desi hindi inspired",
-      "boom bap",
-      "soulful",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "desi",
+      "boom bap"
     ]
   },
   {
@@ -25162,13 +22924,8 @@ export const productionSongRecords = [
     "metadataText": "hip hop, desi (Hindi-inspired), boom bap, soulful\n\nBoom bap instrumental with swung classic hip-hop drums, dusty vinyl crackle, and smooth bass grooves; verse sections ride sparse piano chords and tabla taps, pre-chorus lifts with filtered sarangi lines, chorus opens into soulful Hindi-inspired melody stacks and warm harmonic swells, Airy tape hiss, reversed chime pickups, subtle room reverb, bright yet nostalgic mix, smooth, soulful, hip-hop, warm, classic, desi, nostalgic, emotional",
     "tags": [
       "hip hop",
-      "desi hindi inspired",
-      "boom bap",
-      "soulful",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "desi",
+      "boom bap"
     ]
   },
   {
@@ -25191,13 +22948,8 @@ export const productionSongRecords = [
     "metadataText": "hip hop, desi (Hindi-inspired), boom bap, soulful\n\nBoom bap instrumental with swung classic hip-hop drums, dusty vinyl crackle, and smooth bass grooves; verse sections ride sparse piano chords and tabla taps, pre-chorus lifts with filtered sarangi lines, chorus opens into soulful Hindi-inspired melody stacks and warm harmonic swells, Airy tape hiss, reversed chime pickups, subtle room reverb, bright yet nostalgic mix, smooth, soulful, hip-hop, warm, classic, desi, nostalgic, emotional",
     "tags": [
       "hip hop",
-      "desi hindi inspired",
-      "boom bap",
-      "soulful",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "desi",
+      "boom bap"
     ]
   },
   {
@@ -25220,11 +22972,7 @@ export const productionSongRecords = [
     "tags": [
       "punjabi hip hop",
       "trap",
-      "bhangra punjabi folk",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "bhangra"
     ]
   },
   {
@@ -25248,13 +22996,7 @@ export const productionSongRecords = [
     "tags": [
       "indian club hip",
       "punjabi hindi rap",
-      "bollywood party",
-      "trap",
-      "dhol percussion",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "bollywood party"
     ]
   },
   {
@@ -25278,11 +23020,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "bollywood cinematic rap",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "bollywood cinematic rap"
     ]
   },
   {
@@ -25306,11 +23044,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "bollywood cinematic rap",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "bollywood cinematic rap"
     ]
   },
   {
@@ -25334,11 +23068,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "bollywood cinematic rap",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "bollywood cinematic rap"
     ]
   },
   {
@@ -25362,11 +23092,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "bollywood cinematic rap",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "bollywood cinematic rap"
     ]
   },
   {
@@ -25390,11 +23116,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "bollywood cinematic rap",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "bollywood cinematic rap"
     ]
   },
   {
@@ -25418,11 +23140,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "bollywood cinematic rap",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "bollywood cinematic rap"
     ]
   },
   {
@@ -25446,10 +23164,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "hindi hip hop"
     ]
   },
   {
@@ -25473,10 +23188,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "hindi hip hop"
     ]
   },
   {
@@ -25500,10 +23212,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "hindi hip hop"
     ]
   },
   {
@@ -25527,10 +23236,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "hindi hip hop"
     ]
   },
   {
@@ -25553,11 +23259,7 @@ export const productionSongRecords = [
     "tags": [
       "indian club hip",
       "punjabi hindi hip",
-      "trap bollywood party",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "trap bollywood party"
     ]
   },
   {
@@ -25581,11 +23283,7 @@ export const productionSongRecords = [
     "tags": [
       "indian club hip",
       "punjabi hindi hip",
-      "trap bollywood party",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "trap bollywood party"
     ]
   },
   {
@@ -25609,11 +23307,7 @@ export const productionSongRecords = [
     "tags": [
       "indian club hip",
       "punjabi hindi hip",
-      "trap bollywood party",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "trap bollywood party"
     ]
   },
   {
@@ -25637,11 +23331,7 @@ export const productionSongRecords = [
     "tags": [
       "indian club hip",
       "punjabi hindi hip",
-      "trap bollywood party",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "trap bollywood party"
     ]
   },
   {
@@ -25665,11 +23355,7 @@ export const productionSongRecords = [
     "tags": [
       "indian club hip",
       "punjabi hindi hip",
-      "trap bollywood party",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "trap bollywood party"
     ]
   },
   {
@@ -25693,11 +23379,7 @@ export const productionSongRecords = [
     "tags": [
       "boom bap hip",
       "desi hip hop",
-      "soulful",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "soulful"
     ]
   },
   {
@@ -25721,11 +23403,7 @@ export const productionSongRecords = [
     "tags": [
       "boom bap hip",
       "desi hip hop",
-      "soulful",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "soulful"
     ]
   },
   {
@@ -25749,11 +23427,7 @@ export const productionSongRecords = [
     "tags": [
       "boom bap hip",
       "desi hip hop",
-      "soulful",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "soulful"
     ]
   },
   {
@@ -25777,11 +23451,7 @@ export const productionSongRecords = [
     "tags": [
       "boom bap hip",
       "desi hip hop",
-      "soulful",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "soulful"
     ]
   },
   {
@@ -25805,11 +23475,7 @@ export const productionSongRecords = [
     "tags": [
       "boom bap hip",
       "desi hip hop",
-      "soulful",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "soulful"
     ]
   },
   {
@@ -25832,11 +23498,7 @@ export const productionSongRecords = [
     "tags": [
       "boom bap hip",
       "desi hip hop",
-      "soulful",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "soulful"
     ]
   },
   {
@@ -25860,11 +23522,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "cinematic bollywood",
-      "trap",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "trap"
     ]
   },
   {
@@ -25888,11 +23546,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "cinematic bollywood",
-      "trap",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "trap"
     ]
   },
   {
@@ -25916,11 +23570,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "cinematic bollywood",
-      "trap",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "trap"
     ]
   },
   {
@@ -25944,11 +23594,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "cinematic bollywood",
-      "trap",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "trap"
     ]
   },
   {
@@ -25971,12 +23617,8 @@ export const productionSongRecords = [
     "metadataText": "desi hip-hop, hip hop (boom bap), Bollywood/soulful cinematic\n\nNostalgic desi hip-hop track sampling vintage Bollywood melodies, featuring soulful Hindi vocals, boom bap drums, warm bass grooves, tabla rhythms, vinyl textures, poetic rap verses and emotional storytelling inspired by classic Indian cinema",
     "tags": [
       "desi hip hop",
-      "hip hop boom",
-      "bollywood soulful cinematic",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "hip hop",
+      "bollywood soulful cinematic"
     ]
   },
   {
@@ -26000,11 +23642,7 @@ export const productionSongRecords = [
     "tags": [
       "punjabi hip hop",
       "trap",
-      "bhangra desi dhol",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "bhangra"
     ]
   },
   {
@@ -26027,11 +23665,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "bollywood indian classical",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "bollywood indian classical"
     ]
   },
   {
@@ -26055,11 +23689,7 @@ export const productionSongRecords = [
     "tags": [
       "indian club hip",
       "punjabi hindi bhangra",
-      "trap bollywood party",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "trap bollywood party"
     ]
   },
   {
@@ -26082,11 +23712,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "boom bap",
-      "bollywood inspired vintage",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "bollywood inspired"
     ]
   },
   {
@@ -26110,11 +23736,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "trap",
-      "cinematic rap",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "cinematic rap"
     ]
   },
   {
@@ -26138,11 +23760,7 @@ export const productionSongRecords = [
     "tags": [
       "desi hip hop",
       "cinematic hip hop",
-      "bollywood inspired",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "bollywood inspired"
     ]
   },
   {
@@ -26166,11 +23784,7 @@ export const productionSongRecords = [
     "tags": [
       "uk drill",
       "desi drill",
-      "indian trap",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "indian trap"
     ]
   },
   {
@@ -26194,11 +23808,7 @@ export const productionSongRecords = [
     "tags": [
       "indian club hip",
       "punjabi hindi rap",
-      "trap beats aggressive",
-      "bollywood",
-      "hindi",
-      "hip",
-      "hop"
+      "trap beats"
     ]
   },
   {
@@ -26221,7 +23831,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary r and b",
       "neo soul",
-      "commercial"
+      "r and b"
     ]
   },
   {
@@ -26244,7 +23854,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary r and b",
       "neo soul",
-      "commercial"
+      "r and b"
     ]
   },
   {
@@ -26267,7 +23877,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary r and b",
       "neo soul",
-      "commercial"
+      "r and b"
     ]
   },
   {
@@ -26290,7 +23900,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary r and b",
       "neo soul",
-      "commercial"
+      "r and b"
     ]
   },
   {
@@ -26313,7 +23923,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary r and b",
       "neo soul",
-      "commercial"
+      "r and b"
     ]
   },
   {
@@ -26336,7 +23946,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary r and b",
       "neo soul",
-      "commercial"
+      "r and b"
     ]
   },
   {
@@ -26359,7 +23969,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary r and b",
       "neo soul",
-      "commercial"
+      "r and b"
     ]
   },
   {
@@ -26382,9 +23992,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary r and b",
       "soulful",
-      "smooth",
-      "sensual",
-      "commercial"
+      "smooth"
     ]
   },
   {
@@ -26407,9 +24015,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary r and b",
       "soulful",
-      "smooth",
-      "sensual",
-      "commercial"
+      "smooth"
     ]
   },
   {
@@ -26432,9 +24038,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary r and b",
       "soulful",
-      "smooth",
-      "sensual",
-      "commercial"
+      "smooth"
     ]
   },
   {
@@ -26457,9 +24061,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary r and b",
       "soulful",
-      "smooth",
-      "sensual",
-      "commercial"
+      "smooth"
     ]
   },
   {
@@ -26482,9 +24084,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary r and b",
       "soulful",
-      "smooth",
-      "sensual",
-      "commercial"
+      "smooth"
     ]
   },
   {
@@ -26507,9 +24107,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary r and b",
       "soulful",
-      "smooth",
-      "sensual",
-      "commercial"
+      "smooth"
     ]
   },
   {
@@ -26533,9 +24131,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary r and b",
       "soulful",
-      "smooth",
-      "sensual",
-      "commercial"
+      "smooth"
     ]
   },
   {
@@ -26559,9 +24155,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary r and b",
       "soulful",
-      "smooth",
-      "sensual",
-      "commercial"
+      "smooth"
     ]
   },
   {
@@ -26585,9 +24179,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary r and b",
       "soulful",
-      "smooth",
-      "sensual",
-      "commercial"
+      "smooth"
     ]
   },
   {
@@ -26611,9 +24203,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary r and b",
       "soulful",
-      "smooth",
-      "sensual",
-      "commercial"
+      "smooth"
     ]
   },
   {
@@ -26637,9 +24227,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary r and b",
       "soulful",
-      "smooth",
-      "sensual",
-      "commercial"
+      "smooth"
     ]
   },
   {
@@ -26663,7 +24251,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary soul",
       "slow jam",
-      "commercial"
+      "r and b"
     ]
   },
   {
@@ -26687,7 +24275,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary r and b",
       "soulful",
-      "commercial"
+      "r and b"
     ]
   },
   {
@@ -26711,7 +24299,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary r and b",
       "soulful",
-      "commercial"
+      "r and b"
     ]
   },
   {
@@ -26735,7 +24323,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary r and b",
       "soulful",
-      "commercial"
+      "r and b"
     ]
   },
   {
@@ -26759,7 +24347,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary r and b",
       "soulful",
-      "commercial"
+      "r and b"
     ]
   },
   {
@@ -26783,7 +24371,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary r and b",
       "soulful",
-      "commercial"
+      "r and b"
     ]
   },
   {
@@ -26807,9 +24395,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary r and b",
       "soulful",
-      "smooth",
-      "moody",
-      "commercial"
+      "smooth"
     ]
   },
   {
@@ -26832,10 +24418,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "devotional",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "devotional"
     ]
   },
   {
@@ -26858,10 +24441,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "devotional",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "devotional"
     ]
   },
   {
@@ -26884,10 +24464,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "devotional",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "devotional"
     ]
   },
   {
@@ -26910,10 +24487,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "devotional",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "devotional"
     ]
   },
   {
@@ -26936,10 +24510,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "devotional",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "devotional"
     ]
   },
   {
@@ -26962,10 +24533,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "devotional",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "devotional"
     ]
   },
   {
@@ -26988,10 +24556,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "devotional",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "devotional"
     ]
   },
   {
@@ -27014,11 +24579,7 @@ export const productionSongRecords = [
     "tags": [
       "folk",
       "acoustic",
-      "cinematic",
-      "soulful",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "cinematic"
     ]
   },
   {
@@ -27041,11 +24602,7 @@ export const productionSongRecords = [
     "tags": [
       "folk",
       "acoustic",
-      "cinematic",
-      "soulful",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "cinematic"
     ]
   },
   {
@@ -27068,11 +24625,7 @@ export const productionSongRecords = [
     "tags": [
       "folk",
       "acoustic",
-      "cinematic",
-      "soulful",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "cinematic"
     ]
   },
   {
@@ -27095,11 +24648,7 @@ export const productionSongRecords = [
     "tags": [
       "folk",
       "acoustic",
-      "cinematic",
-      "soulful",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "cinematic"
     ]
   },
   {
@@ -27122,11 +24671,7 @@ export const productionSongRecords = [
     "tags": [
       "folk",
       "acoustic",
-      "cinematic",
-      "soulful",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "cinematic"
     ]
   },
   {
@@ -27149,11 +24694,7 @@ export const productionSongRecords = [
     "tags": [
       "folk",
       "acoustic",
-      "cinematic",
-      "soulful",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "cinematic"
     ]
   },
   {
@@ -27176,10 +24717,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "hip hop",
-      "indian sitar tabla",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "indian"
     ]
   },
   {
@@ -27202,10 +24740,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "hip hop",
-      "indian sitar tabla",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "indian"
     ]
   },
   {
@@ -27228,10 +24763,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "hip hop",
-      "indian sitar tabla",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "indian"
     ]
   },
   {
@@ -27254,10 +24786,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "hip hop",
-      "indian sitar tabla",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "indian"
     ]
   },
   {
@@ -27280,10 +24809,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "hip hop",
-      "indian sitar tabla",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "indian"
     ]
   },
   {
@@ -27306,10 +24832,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "hip hop",
-      "indian sitar tabla",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "indian"
     ]
   },
   {
@@ -27332,10 +24855,7 @@ export const productionSongRecords = [
     "tags": [
       "hindi trap",
       "cinematic bollywood inspired",
-      "cinematic urban",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "cinematic urban"
     ]
   },
   {
@@ -27358,10 +24878,7 @@ export const productionSongRecords = [
     "tags": [
       "hindi trap",
       "cinematic bollywood inspired",
-      "cinematic urban",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "cinematic urban"
     ]
   },
   {
@@ -27384,10 +24901,7 @@ export const productionSongRecords = [
     "tags": [
       "hindi trap",
       "cinematic bollywood inspired",
-      "cinematic urban",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "cinematic urban"
     ]
   },
   {
@@ -27410,10 +24924,7 @@ export const productionSongRecords = [
     "tags": [
       "hindi trap",
       "cinematic bollywood inspired",
-      "cinematic urban",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "cinematic urban"
     ]
   },
   {
@@ -27436,10 +24947,7 @@ export const productionSongRecords = [
     "tags": [
       "hindi trap",
       "cinematic bollywood inspired",
-      "cinematic urban",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "cinematic urban"
     ]
   },
   {
@@ -27462,10 +24970,7 @@ export const productionSongRecords = [
     "tags": [
       "hindi trap",
       "cinematic bollywood inspired",
-      "cinematic urban",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "cinematic urban"
     ]
   },
   {
@@ -27488,10 +24993,7 @@ export const productionSongRecords = [
     "tags": [
       "hindi trap",
       "cinematic bollywood inspired",
-      "cinematic urban",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "cinematic urban"
     ]
   },
   {
@@ -27512,9 +25014,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI FUSION/past midnight at the tea stall",
     "metadataText": "",
     "tags": [
+      "hindi fusion",
       "bollywood",
-      "hindi",
-      "fusion"
+      "instrumental"
     ]
   },
   {
@@ -27537,10 +25039,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "hip hop",
-      "ambient",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "ambient"
     ]
   },
   {
@@ -27563,10 +25062,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "hip hop",
-      "ambient",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "ambient"
     ]
   },
   {
@@ -27589,10 +25085,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "hip hop",
-      "ambient",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "ambient"
     ]
   },
   {
@@ -27615,9 +25108,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "nostalgic",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "hindi fusion"
     ]
   },
   {
@@ -27640,9 +25131,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "nostalgic",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "hindi fusion"
     ]
   },
   {
@@ -27665,9 +25154,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "nostalgic",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "hindi fusion"
     ]
   },
   {
@@ -27690,9 +25177,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "nostalgic",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "hindi fusion"
     ]
   },
   {
@@ -27715,9 +25200,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "nostalgic",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "hindi fusion"
     ]
   },
   {
@@ -27740,10 +25223,7 @@ export const productionSongRecords = [
     "tags": [
       "tropical house",
       "bollywood inspired",
-      "upbeat instrumental",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "upbeat instrumental"
     ]
   },
   {
@@ -27766,10 +25246,7 @@ export const productionSongRecords = [
     "tags": [
       "tropical house",
       "bollywood inspired",
-      "upbeat instrumental",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "upbeat instrumental"
     ]
   },
   {
@@ -27792,10 +25269,7 @@ export const productionSongRecords = [
     "tags": [
       "tropical house",
       "bollywood inspired",
-      "upbeat instrumental",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "upbeat instrumental"
     ]
   },
   {
@@ -27818,10 +25292,7 @@ export const productionSongRecords = [
     "tags": [
       "tropical house",
       "bollywood inspired",
-      "upbeat instrumental",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "upbeat instrumental"
     ]
   },
   {
@@ -27844,10 +25315,7 @@ export const productionSongRecords = [
     "tags": [
       "tropical house",
       "bollywood inspired",
-      "upbeat instrumental",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "upbeat instrumental"
     ]
   },
   {
@@ -27870,10 +25338,7 @@ export const productionSongRecords = [
     "tags": [
       "tropical house",
       "bollywood inspired",
-      "upbeat instrumental",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "upbeat instrumental"
     ]
   },
   {
@@ -27896,10 +25361,7 @@ export const productionSongRecords = [
     "tags": [
       "tropical house",
       "bollywood inspired",
-      "upbeat instrumental",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "upbeat instrumental"
     ]
   },
   {
@@ -27922,10 +25384,7 @@ export const productionSongRecords = [
     "tags": [
       "tropical house",
       "bollywood inspired",
-      "upbeat instrumental",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "upbeat instrumental"
     ]
   },
   {
@@ -27948,10 +25407,7 @@ export const productionSongRecords = [
     "tags": [
       "hindi trap",
       "trap beat",
-      "cinematic bollywood pop",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "cinematic bollywood pop"
     ]
   },
   {
@@ -27974,10 +25430,7 @@ export const productionSongRecords = [
     "tags": [
       "hindi trap",
       "trap beat",
-      "cinematic bollywood pop",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "cinematic bollywood pop"
     ]
   },
   {
@@ -28000,10 +25453,7 @@ export const productionSongRecords = [
     "tags": [
       "hindi trap",
       "trap beat",
-      "cinematic bollywood pop",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "cinematic bollywood pop"
     ]
   },
   {
@@ -28026,10 +25476,7 @@ export const productionSongRecords = [
     "tags": [
       "hindi trap",
       "trap beat",
-      "cinematic bollywood pop",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "cinematic bollywood pop"
     ]
   },
   {
@@ -28052,10 +25499,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "devotional",
-      "cinematic",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "cinematic"
     ]
   },
   {
@@ -28078,10 +25522,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "devotional",
-      "cinematic",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "cinematic"
     ]
   },
   {
@@ -28104,10 +25545,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "devotional",
-      "cinematic",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "cinematic"
     ]
   },
   {
@@ -28130,10 +25568,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "devotional",
-      "cinematic",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "cinematic"
     ]
   },
   {
@@ -28156,10 +25591,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "devotional",
-      "cinematic",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "cinematic"
     ]
   },
   {
@@ -28182,10 +25614,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "devotional",
-      "cinematic",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "cinematic"
     ]
   },
   {
@@ -28208,10 +25637,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "hip hop",
-      "ambient",
-      "bollywood",
-      "hindi",
-      "fusion"
+      "ambient"
     ]
   },
   {
@@ -28234,9 +25660,7 @@ export const productionSongRecords = [
     "tags": [
       "emotional cinematic orchestral",
       "bollywood",
-      "film soundtrack",
-      "hindi",
-      "epic"
+      "film soundtrack"
     ]
   },
   {
@@ -28259,9 +25683,7 @@ export const productionSongRecords = [
     "tags": [
       "emotional cinematic orchestral",
       "bollywood",
-      "film soundtrack",
-      "hindi",
-      "epic"
+      "film soundtrack"
     ]
   },
   {
@@ -28284,9 +25706,7 @@ export const productionSongRecords = [
     "tags": [
       "emotional cinematic orchestral",
       "bollywood",
-      "film soundtrack",
-      "hindi",
-      "epic"
+      "film soundtrack"
     ]
   },
   {
@@ -28309,9 +25729,7 @@ export const productionSongRecords = [
     "tags": [
       "emotional cinematic orchestral",
       "bollywood",
-      "film soundtrack",
-      "hindi",
-      "epic"
+      "film soundtrack"
     ]
   },
   {
@@ -28334,9 +25752,7 @@ export const productionSongRecords = [
     "tags": [
       "emotional cinematic orchestral",
       "bollywood",
-      "film soundtrack",
-      "hindi",
-      "epic"
+      "film soundtrack"
     ]
   },
   {
@@ -28359,9 +25775,7 @@ export const productionSongRecords = [
     "tags": [
       "emotional cinematic orchestral",
       "bollywood",
-      "film soundtrack",
-      "hindi",
-      "epic"
+      "film soundtrack"
     ]
   },
   {
@@ -28384,9 +25798,7 @@ export const productionSongRecords = [
     "tags": [
       "emotional cinematic orchestral",
       "bollywood",
-      "film soundtrack",
-      "hindi",
-      "epic"
+      "film soundtrack"
     ]
   },
   {
@@ -28407,9 +25819,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI EPIC/Empire of Ashoka",
     "metadataText": "",
     "tags": [
+      "hindi epic",
       "bollywood",
-      "hindi",
-      "epic"
+      "instrumental"
     ]
   },
   {
@@ -28430,9 +25842,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI EPIC/Flames of Devotion",
     "metadataText": "",
     "tags": [
+      "hindi epic",
       "bollywood",
-      "hindi",
-      "epic"
+      "instrumental"
     ]
   },
   {
@@ -28455,9 +25867,7 @@ export const productionSongRecords = [
     "tags": [
       "emotional cinematic orchestral",
       "bollywood",
-      "film soundtrack",
-      "hindi",
-      "epic"
+      "film soundtrack"
     ]
   },
   {
@@ -28480,11 +25890,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic soundtrack",
       "orchestral",
-      "inspirational folk",
-      "dramatic anthem",
-      "bollywood",
-      "hindi",
-      "epic"
+      "inspirational folk"
     ]
   },
   {
@@ -28507,11 +25913,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic soundtrack",
       "orchestral",
-      "inspirational folk",
-      "dramatic anthem",
-      "bollywood",
-      "hindi",
-      "epic"
+      "inspirational folk"
     ]
   },
   {
@@ -28532,9 +25934,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI EPIC/Legacy of the Maharajas",
     "metadataText": "",
     "tags": [
+      "hindi epic",
       "bollywood",
-      "hindi",
-      "epic"
+      "instrumental"
     ]
   },
   {
@@ -28557,11 +25959,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic soundtrack",
       "orchestral",
-      "inspirational folk",
-      "dramatic anthem",
-      "bollywood",
-      "hindi",
-      "epic"
+      "inspirational folk"
     ]
   },
   {
@@ -28582,9 +25980,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI EPIC/Raga of the Brave",
     "metadataText": "",
     "tags": [
+      "hindi epic",
       "bollywood",
-      "hindi",
-      "epic"
+      "instrumental"
     ]
   },
   {
@@ -28607,11 +26005,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic soundtrack",
       "orchestral",
-      "inspirational folk",
-      "dramatic anthem",
-      "bollywood",
-      "hindi",
-      "epic"
+      "inspirational folk"
     ]
   },
   {
@@ -28634,11 +26028,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic soundtrack",
       "orchestral",
-      "inspirational folk",
-      "dramatic anthem",
-      "bollywood",
-      "hindi",
-      "epic"
+      "inspirational folk"
     ]
   },
   {
@@ -28659,9 +26049,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI EPIC/Rise of the Rajputs",
     "metadataText": "",
     "tags": [
+      "hindi epic",
       "bollywood",
-      "hindi",
-      "epic"
+      "instrumental"
     ]
   },
   {
@@ -28682,9 +26072,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI EPIC/Saffron Skies",
     "metadataText": "",
     "tags": [
+      "hindi epic",
       "bollywood",
-      "hindi",
-      "epic"
+      "instrumental"
     ]
   },
   {
@@ -28705,9 +26095,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI EPIC/Sands of Rajasthan",
     "metadataText": "",
     "tags": [
+      "hindi epic",
       "bollywood",
-      "hindi",
-      "epic"
+      "instrumental"
     ]
   },
   {
@@ -28728,9 +26118,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI EPIC/Shadows of the Empire",
     "metadataText": "",
     "tags": [
+      "hindi epic",
       "bollywood",
-      "hindi",
-      "epic"
+      "instrumental"
     ]
   },
   {
@@ -28753,10 +26143,7 @@ export const productionSongRecords = [
     "tags": [
       "film soundtrack",
       "orchestral",
-      "cinematic dramatic",
-      "bollywood",
-      "hindi",
-      "epic"
+      "cinematic dramatic"
     ]
   },
   {
@@ -28777,9 +26164,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI EPIC/Song of the Sacred Earth",
     "metadataText": "",
     "tags": [
+      "hindi epic",
       "bollywood",
-      "hindi",
-      "epic"
+      "instrumental"
     ]
   },
   {
@@ -28800,9 +26187,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Bollywood/HINDI EPIC/Soul of Hindustan",
     "metadataText": "",
     "tags": [
+      "hindi epic",
       "bollywood",
-      "hindi",
-      "epic"
+      "instrumental"
     ]
   },
   {
@@ -28825,10 +26212,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "orchestral",
-      "spiritual",
-      "bollywood",
-      "hindi",
-      "epic"
+      "spiritual"
     ]
   },
   {
@@ -28851,10 +26235,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "orchestral",
-      "spiritual",
-      "bollywood",
-      "hindi",
-      "epic"
+      "spiritual"
     ]
   },
   {
@@ -28877,10 +26258,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "orchestral",
-      "spiritual",
-      "bollywood",
-      "hindi",
-      "epic"
+      "spiritual"
     ]
   },
   {
@@ -28903,10 +26281,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "orchestral",
-      "spiritual",
-      "bollywood",
-      "hindi",
-      "epic"
+      "spiritual"
     ]
   },
   {
@@ -28929,10 +26304,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "orchestral",
-      "spiritual",
-      "bollywood",
-      "hindi",
-      "epic"
+      "spiritual"
     ]
   },
   {
@@ -28955,10 +26327,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "orchestral",
-      "spiritual",
-      "bollywood",
-      "hindi",
-      "epic"
+      "spiritual"
     ]
   },
   {
@@ -28981,11 +26350,7 @@ export const productionSongRecords = [
     "tags": [
       "epic cinematic orchestral",
       "indian fusion",
-      "orchestral epic",
-      "tribal grooves",
-      "bollywood",
-      "hindi",
-      "epic"
+      "orchestral epic"
     ]
   },
   {
@@ -29008,11 +26373,7 @@ export const productionSongRecords = [
     "tags": [
       "epic cinematic orchestral",
       "indian fusion",
-      "orchestral epic",
-      "tribal grooves",
-      "bollywood",
-      "hindi",
-      "epic"
+      "orchestral epic"
     ]
   },
   {
@@ -29035,11 +26396,7 @@ export const productionSongRecords = [
     "tags": [
       "epic cinematic orchestral",
       "indian fusion",
-      "orchestral epic",
-      "tribal grooves",
-      "bollywood",
-      "hindi",
-      "epic"
+      "orchestral epic"
     ]
   },
   {
@@ -29062,11 +26419,7 @@ export const productionSongRecords = [
     "tags": [
       "epic cinematic orchestral",
       "indian fusion",
-      "orchestral epic",
-      "tribal grooves",
-      "bollywood",
-      "hindi",
-      "epic"
+      "orchestral epic"
     ]
   },
   {
@@ -29089,10 +26442,7 @@ export const productionSongRecords = [
     "tags": [
       "film soundtrack",
       "orchestral",
-      "cinematic dramatic",
-      "bollywood",
-      "hindi",
-      "epic"
+      "cinematic dramatic"
     ]
   },
   {
@@ -29115,10 +26465,7 @@ export const productionSongRecords = [
     "tags": [
       "film soundtrack",
       "orchestral",
-      "cinematic dramatic",
-      "bollywood",
-      "hindi",
-      "epic"
+      "cinematic dramatic"
     ]
   },
   {
@@ -29141,10 +26488,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "bollywood inspired",
-      "film soundtrack",
-      "bollywood",
-      "hindi",
-      "epic"
+      "film soundtrack"
     ]
   },
   {
@@ -29167,10 +26511,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "bollywood inspired",
-      "film soundtrack",
-      "bollywood",
-      "hindi",
-      "epic"
+      "film soundtrack"
     ]
   },
   {
@@ -29193,10 +26534,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "bollywood inspired",
-      "film soundtrack",
-      "bollywood",
-      "hindi",
-      "epic"
+      "film soundtrack"
     ]
   },
   {
@@ -29219,10 +26557,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "bollywood inspired",
-      "film soundtrack",
-      "bollywood",
-      "hindi",
-      "epic"
+      "film soundtrack"
     ]
   },
   {
@@ -29245,10 +26580,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "bollywood inspired",
-      "film soundtrack",
-      "bollywood",
-      "hindi",
-      "epic"
+      "film soundtrack"
     ]
   },
   {
@@ -29271,10 +26603,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "indian classical inspired",
-      "devotional epic chant",
-      "bollywood",
-      "hindi",
-      "epic"
+      "devotional epic chant"
     ]
   },
   {
@@ -29297,10 +26626,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "indian classical inspired",
-      "devotional epic chant",
-      "bollywood",
-      "hindi",
-      "epic"
+      "devotional epic chant"
     ]
   },
   {
@@ -29323,10 +26649,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "indian classical inspired",
-      "devotional epic chant",
-      "bollywood",
-      "hindi",
-      "epic"
+      "devotional epic chant"
     ]
   },
   {
@@ -29349,10 +26672,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "indian classical inspired",
-      "devotional epic chant",
-      "bollywood",
-      "hindi",
-      "epic"
+      "devotional epic chant"
     ]
   },
   {
@@ -29375,10 +26695,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "indian classical inspired",
-      "devotional epic chant",
-      "bollywood",
-      "hindi",
-      "epic"
+      "devotional epic chant"
     ]
   },
   {
@@ -29401,10 +26718,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "indian classical inspired",
-      "devotional epic chant",
-      "bollywood",
-      "hindi",
-      "epic"
+      "devotional epic chant"
     ]
   },
   {
@@ -29427,10 +26741,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "indian classical inspired",
-      "devotional epic chant",
-      "bollywood",
-      "hindi",
-      "epic"
+      "devotional epic chant"
     ]
   },
   {
@@ -29453,10 +26764,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "indian classical inspired",
-      "devotional epic chant",
-      "bollywood",
-      "hindi",
-      "epic"
+      "devotional epic chant"
     ]
   },
   {
@@ -29479,10 +26787,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "indian classical inspired",
-      "devotional epic chant",
-      "bollywood",
-      "hindi",
-      "epic"
+      "devotional epic chant"
     ]
   },
   {
@@ -29505,10 +26810,7 @@ export const productionSongRecords = [
     "tags": [
       "indian cinematic orchestral",
       "epic orchestral",
-      "devotional tribal dhol",
-      "bollywood",
-      "hindi",
-      "epic"
+      "devotional tribal"
     ]
   },
   {
@@ -29531,10 +26833,7 @@ export const productionSongRecords = [
     "tags": [
       "indian cinematic orchestral",
       "epic orchestral",
-      "devotional tribal dhol",
-      "bollywood",
-      "hindi",
-      "epic"
+      "devotional tribal"
     ]
   },
   {
@@ -29557,10 +26856,7 @@ export const productionSongRecords = [
     "tags": [
       "indian cinematic orchestral",
       "epic orchestral",
-      "devotional tribal dhol",
-      "bollywood",
-      "hindi",
-      "epic"
+      "devotional tribal"
     ]
   },
   {
@@ -29583,10 +26879,7 @@ export const productionSongRecords = [
     "tags": [
       "indian cinematic orchestral",
       "epic orchestral",
-      "devotional tribal dhol",
-      "bollywood",
-      "hindi",
-      "epic"
+      "devotional tribal"
     ]
   },
   {
@@ -29609,10 +26902,7 @@ export const productionSongRecords = [
     "tags": [
       "indian cinematic orchestral",
       "epic orchestral",
-      "devotional tribal dhol",
-      "bollywood",
-      "hindi",
-      "epic"
+      "devotional tribal"
     ]
   },
   {
@@ -29635,10 +26925,7 @@ export const productionSongRecords = [
     "tags": [
       "indian cinematic orchestral",
       "epic orchestral",
-      "devotional tribal dhol",
-      "bollywood",
-      "hindi",
-      "epic"
+      "devotional tribal"
     ]
   },
   {
@@ -29661,10 +26948,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "cinematic",
-      "orchestral",
-      "bollywood",
-      "hindi",
-      "epic"
+      "orchestral"
     ]
   },
   {
@@ -29687,10 +26971,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "cinematic",
-      "orchestral",
-      "bollywood",
-      "hindi",
-      "epic"
+      "orchestral"
     ]
   },
   {
@@ -29713,10 +26994,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "orchestral soundtrack",
-      "bollywood inspired epic",
-      "bollywood",
-      "hindi",
-      "epic"
+      "bollywood inspired epic"
     ]
   },
   {
@@ -29739,10 +27017,7 @@ export const productionSongRecords = [
     "tags": [
       "modern bollywood thriller",
       "suspenseful orchestral film",
-      "dark hybrid percussion",
-      "bollywood",
-      "hindi",
-      "epic"
+      "dark hybrid percussion"
     ]
   },
   {
@@ -29765,10 +27040,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "electronic",
-      "soundtrack",
-      "bollywood",
-      "hindi",
-      "epic"
+      "soundtrack"
     ]
   },
   {
@@ -29792,10 +27064,7 @@ export const productionSongRecords = [
     "tags": [
       "japanese fusion",
       "cinematic",
-      "electronic",
-      "culture",
-      "japanese",
-      "pop"
+      "electronic"
     ]
   },
   {
@@ -29819,10 +27088,7 @@ export const productionSongRecords = [
     "tags": [
       "city pop",
       "synthwave",
-      "80s inspired funk",
-      "culture",
-      "japanese",
-      "pop"
+      "80s inspired funk"
     ]
   },
   {
@@ -29846,10 +27112,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "hip hop",
-      "ambient",
-      "culture",
-      "japanese",
-      "pop"
+      "ambient"
     ]
   },
   {
@@ -29873,10 +27136,7 @@ export const productionSongRecords = [
     "tags": [
       "city pop",
       "synth pop",
-      "funk pop",
-      "culture",
-      "japanese",
-      "pop"
+      "funk pop"
     ]
   },
   {
@@ -29898,9 +27158,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/JAPANESE/Riding in Tokyo",
     "metadataText": "",
     "tags": [
+      "japanese j pop",
       "culture",
-      "japanese",
-      "pop"
+      "instrumental"
     ]
   },
   {
@@ -29922,9 +27182,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/JAPANESE/Shadows of the Sky",
     "metadataText": "",
     "tags": [
+      "japanese j pop",
       "culture",
-      "japanese",
-      "pop"
+      "instrumental"
     ]
   },
   {
@@ -29946,9 +27206,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/JAPANESE/Shine Together",
     "metadataText": "",
     "tags": [
+      "japanese j pop",
       "culture",
-      "japanese",
-      "pop"
+      "instrumental"
     ]
   },
   {
@@ -29970,9 +27230,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/JAPANESE/Soggy Dystopia",
     "metadataText": "",
     "tags": [
+      "japanese j pop",
       "culture",
-      "japanese",
-      "pop"
+      "instrumental"
     ]
   },
   {
@@ -29994,9 +27254,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/JAPANESE/Stage",
     "metadataText": "",
     "tags": [
+      "japanese j pop",
       "culture",
-      "japanese",
-      "pop"
+      "instrumental"
     ]
   },
   {
@@ -30020,10 +27280,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "hip hop",
-      "ambient",
-      "culture",
-      "japanese",
-      "pop"
+      "ambient"
     ]
   },
   {
@@ -30047,10 +27304,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "hip hop",
-      "ambient",
-      "culture",
-      "japanese",
-      "pop"
+      "ambient"
     ]
   },
   {
@@ -30074,10 +27328,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "hip hop",
-      "ambient",
-      "culture",
-      "japanese",
-      "pop"
+      "ambient"
     ]
   },
   {
@@ -30101,10 +27352,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "hip hop",
-      "ambient",
-      "culture",
-      "japanese",
-      "pop"
+      "ambient"
     ]
   },
   {
@@ -30128,10 +27376,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "future bass",
-      "culture",
-      "japanese",
-      "pop"
+      "future bass"
     ]
   },
   {
@@ -30155,10 +27400,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "future bass",
-      "culture",
-      "japanese",
-      "pop"
+      "future bass"
     ]
   },
   {
@@ -30182,10 +27424,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "future bass",
-      "culture",
-      "japanese",
-      "pop"
+      "future bass"
     ]
   },
   {
@@ -30209,10 +27448,7 @@ export const productionSongRecords = [
     "tags": [
       "visual kei",
       "japanese rock",
-      "gothic rock",
-      "culture",
-      "japanese",
-      "pop"
+      "gothic rock"
     ]
   },
   {
@@ -30236,10 +27472,7 @@ export const productionSongRecords = [
     "tags": [
       "visual kei",
       "japanese rock",
-      "gothic rock",
-      "culture",
-      "japanese",
-      "pop"
+      "gothic rock"
     ]
   },
   {
@@ -30262,11 +27495,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "japanese fusion",
-      "electronic",
-      "soundtrack",
-      "culture",
-      "japanese",
-      "pop"
+      "electronic"
     ]
   },
   {
@@ -30290,11 +27519,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "japanese fusion",
-      "electronic",
-      "soundtrack",
-      "culture",
-      "japanese",
-      "pop"
+      "electronic"
     ]
   },
   {
@@ -30318,11 +27543,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "japanese fusion",
-      "electronic",
-      "soundtrack",
-      "culture",
-      "japanese",
-      "pop"
+      "electronic"
     ]
   },
   {
@@ -30346,11 +27567,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "japanese fusion",
-      "electronic",
-      "soundtrack",
-      "culture",
-      "japanese",
-      "pop"
+      "electronic"
     ]
   },
   {
@@ -30374,11 +27591,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "japanese fusion",
-      "electronic",
-      "soundtrack",
-      "culture",
-      "japanese",
-      "pop"
+      "electronic"
     ]
   },
   {
@@ -30402,11 +27615,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "japanese fusion",
-      "electronic",
-      "soundtrack",
-      "culture",
-      "japanese",
-      "pop"
+      "electronic"
     ]
   },
   {
@@ -30430,11 +27639,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "japanese fusion",
-      "electronic",
-      "soundtrack",
-      "culture",
-      "japanese",
-      "pop"
+      "electronic"
     ]
   },
   {
@@ -30457,9 +27662,7 @@ export const productionSongRecords = [
     "tags": [
       "anime instrumental",
       "acoustic",
-      "relaxing",
-      "culture",
-      "anime"
+      "relaxing"
     ]
   },
   {
@@ -30482,9 +27685,7 @@ export const productionSongRecords = [
     "tags": [
       "anime instrumental",
       "acoustic",
-      "relaxing",
-      "culture",
-      "anime"
+      "relaxing"
     ]
   },
   {
@@ -30507,9 +27708,7 @@ export const productionSongRecords = [
     "tags": [
       "anime instrumental",
       "acoustic",
-      "relaxing",
-      "culture",
-      "anime"
+      "relaxing"
     ]
   },
   {
@@ -30532,9 +27731,7 @@ export const productionSongRecords = [
     "tags": [
       "anime instrumental",
       "acoustic",
-      "relaxing",
-      "culture",
-      "anime"
+      "relaxing"
     ]
   },
   {
@@ -30557,9 +27754,7 @@ export const productionSongRecords = [
     "tags": [
       "anime instrumental",
       "acoustic",
-      "relaxing",
-      "culture",
-      "anime"
+      "relaxing"
     ]
   },
   {
@@ -30582,9 +27777,7 @@ export const productionSongRecords = [
     "tags": [
       "anime instrumental",
       "acoustic",
-      "relaxing",
-      "culture",
-      "anime"
+      "relaxing"
     ]
   },
   {
@@ -30607,9 +27800,7 @@ export const productionSongRecords = [
     "tags": [
       "anime instrumental",
       "gentle acoustic",
-      "cinematic",
-      "culture",
-      "anime"
+      "cinematic"
     ]
   },
   {
@@ -30632,9 +27823,7 @@ export const productionSongRecords = [
     "tags": [
       "anime instrumental",
       "gentle acoustic",
-      "cinematic",
-      "culture",
-      "anime"
+      "cinematic"
     ]
   },
   {
@@ -30657,9 +27846,7 @@ export const productionSongRecords = [
     "tags": [
       "anime instrumental",
       "gentle acoustic",
-      "cinematic",
-      "culture",
-      "anime"
+      "cinematic"
     ]
   },
   {
@@ -30682,9 +27869,7 @@ export const productionSongRecords = [
     "tags": [
       "anime instrumental",
       "gentle acoustic",
-      "cinematic",
-      "culture",
-      "anime"
+      "cinematic"
     ]
   },
   {
@@ -30707,9 +27892,7 @@ export const productionSongRecords = [
     "tags": [
       "anime instrumental",
       "gentle acoustic",
-      "cinematic",
-      "culture",
-      "anime"
+      "cinematic"
     ]
   },
   {
@@ -30732,9 +27915,7 @@ export const productionSongRecords = [
     "tags": [
       "anime instrumental",
       "gentle acoustic",
-      "cinematic",
-      "culture",
-      "anime"
+      "cinematic"
     ]
   },
   {
@@ -30757,9 +27938,7 @@ export const productionSongRecords = [
     "tags": [
       "anime instrumental",
       "gentle acoustic",
-      "cinematic",
-      "culture",
-      "anime"
+      "cinematic"
     ]
   },
   {
@@ -30782,9 +27961,7 @@ export const productionSongRecords = [
     "tags": [
       "anime instrumental",
       "gentle acoustic",
-      "cinematic",
-      "culture",
-      "anime"
+      "cinematic"
     ]
   },
   {
@@ -30807,9 +27984,7 @@ export const productionSongRecords = [
     "tags": [
       "anime instrumental",
       "gentle acoustic",
-      "cinematic",
-      "culture",
-      "anime"
+      "cinematic"
     ]
   },
   {
@@ -30832,8 +28007,7 @@ export const productionSongRecords = [
     "tags": [
       "anime",
       "instrumental",
-      "ambient",
-      "culture"
+      "ambient"
     ]
   },
   {
@@ -30856,8 +28030,7 @@ export const productionSongRecords = [
     "tags": [
       "anime",
       "instrumental",
-      "ambient",
-      "culture"
+      "ambient"
     ]
   },
   {
@@ -30880,8 +28053,7 @@ export const productionSongRecords = [
     "tags": [
       "anime",
       "instrumental",
-      "ambient",
-      "culture"
+      "ambient"
     ]
   },
   {
@@ -30904,8 +28076,7 @@ export const productionSongRecords = [
     "tags": [
       "anime",
       "instrumental",
-      "ambient",
-      "culture"
+      "ambient"
     ]
   },
   {
@@ -30928,8 +28099,7 @@ export const productionSongRecords = [
     "tags": [
       "anime",
       "instrumental",
-      "ambient",
-      "culture"
+      "ambient"
     ]
   },
   {
@@ -30952,8 +28122,7 @@ export const productionSongRecords = [
     "tags": [
       "anime",
       "instrumental",
-      "ambient",
-      "culture"
+      "ambient"
     ]
   },
   {
@@ -30976,8 +28145,7 @@ export const productionSongRecords = [
     "tags": [
       "anime",
       "instrumental",
-      "ambient",
-      "culture"
+      "ambient"
     ]
   },
   {
@@ -31000,10 +28168,7 @@ export const productionSongRecords = [
     "tags": [
       "anime soundtrack",
       "cinematic orchestral",
-      "dark orchestral drama",
-      "taiko infused",
-      "culture",
-      "anime"
+      "dark orchestral drama"
     ]
   },
   {
@@ -31026,10 +28191,7 @@ export const productionSongRecords = [
     "tags": [
       "anime soundtrack",
       "cinematic orchestral",
-      "dark orchestral drama",
-      "taiko infused",
-      "culture",
-      "anime"
+      "dark orchestral drama"
     ]
   },
   {
@@ -31052,10 +28214,7 @@ export const productionSongRecords = [
     "tags": [
       "anime soundtrack",
       "cinematic orchestral",
-      "dark orchestral drama",
-      "taiko infused",
-      "culture",
-      "anime"
+      "dark orchestral drama"
     ]
   },
   {
@@ -31078,10 +28237,7 @@ export const productionSongRecords = [
     "tags": [
       "anime soundtrack",
       "cinematic orchestral",
-      "dark orchestral drama",
-      "taiko infused",
-      "culture",
-      "anime"
+      "dark orchestral drama"
     ]
   },
   {
@@ -31104,10 +28260,7 @@ export const productionSongRecords = [
     "tags": [
       "anime soundtrack",
       "cinematic orchestral",
-      "dark orchestral drama",
-      "taiko infused",
-      "culture",
-      "anime"
+      "dark orchestral drama"
     ]
   },
   {
@@ -31130,10 +28283,7 @@ export const productionSongRecords = [
     "tags": [
       "anime soundtrack",
       "cinematic orchestral",
-      "dark orchestral drama",
-      "taiko infused",
-      "culture",
-      "anime"
+      "dark orchestral drama"
     ]
   },
   {
@@ -31156,10 +28306,7 @@ export const productionSongRecords = [
     "tags": [
       "anime soundtrack",
       "cinematic orchestral",
-      "dark orchestral drama",
-      "taiko infused",
-      "culture",
-      "anime"
+      "dark orchestral drama"
     ]
   },
   {
@@ -31180,8 +28327,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/ANIME/Oni Throne",
     "metadataText": "",
     "tags": [
+      "anime",
       "culture",
-      "anime"
+      "instrumental"
     ]
   },
   {
@@ -31204,9 +28352,7 @@ export const productionSongRecords = [
     "tags": [
       "anime instrumental",
       "gentle acoustic",
-      "cinematic",
-      "culture",
-      "anime"
+      "cinematic"
     ]
   },
   {
@@ -31229,9 +28375,7 @@ export const productionSongRecords = [
     "tags": [
       "anime orchestral rock",
       "cinematic orchestral",
-      "dramatic electric rock",
-      "culture",
-      "anime"
+      "dramatic electric rock"
     ]
   },
   {
@@ -31254,8 +28398,7 @@ export const productionSongRecords = [
     "tags": [
       "deep orchestral",
       "dramatic soundtrack",
-      "anime",
-      "culture"
+      "anime"
     ]
   },
   {
@@ -31278,9 +28421,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "orchestral",
-      "cinematic",
-      "anime",
-      "culture"
+      "cinematic"
     ]
   },
   {
@@ -31303,9 +28444,7 @@ export const productionSongRecords = [
     "tags": [
       "anime soundtrack",
       "orchestral",
-      "cinematic",
-      "culture",
-      "anime"
+      "cinematic"
     ]
   },
   {
@@ -31328,9 +28467,7 @@ export const productionSongRecords = [
     "tags": [
       "anime soundtrack",
       "orchestral",
-      "cinematic",
-      "culture",
-      "anime"
+      "cinematic"
     ]
   },
   {
@@ -31353,9 +28490,7 @@ export const productionSongRecords = [
     "tags": [
       "anime soundtrack",
       "orchestral",
-      "cinematic",
-      "culture",
-      "anime"
+      "cinematic"
     ]
   },
   {
@@ -31378,9 +28513,7 @@ export const productionSongRecords = [
     "tags": [
       "anime soundtrack",
       "orchestral",
-      "cinematic",
-      "culture",
-      "anime"
+      "cinematic"
     ]
   },
   {
@@ -31403,9 +28536,7 @@ export const productionSongRecords = [
     "tags": [
       "anime soundtrack",
       "orchestral",
-      "cinematic",
-      "culture",
-      "anime"
+      "cinematic"
     ]
   },
   {
@@ -31428,9 +28559,7 @@ export const productionSongRecords = [
     "tags": [
       "anime soundtrack",
       "orchestral",
-      "cinematic",
-      "culture",
-      "anime"
+      "cinematic"
     ]
   },
   {
@@ -31453,9 +28582,7 @@ export const productionSongRecords = [
     "tags": [
       "anime soundtrack",
       "orchestral",
-      "cinematic",
-      "culture",
-      "anime"
+      "cinematic"
     ]
   },
   {
@@ -31478,8 +28605,7 @@ export const productionSongRecords = [
     "tags": [
       "anime",
       "orchestral",
-      "soundtrack",
-      "culture"
+      "soundtrack"
     ]
   },
   {
@@ -31502,9 +28628,7 @@ export const productionSongRecords = [
     "tags": [
       "anime instrumental",
       "gentle acoustic",
-      "cinematic",
-      "culture",
-      "anime"
+      "cinematic"
     ]
   },
   {
@@ -31527,8 +28651,7 @@ export const productionSongRecords = [
     "tags": [
       "anime",
       "instrumental",
-      "ambient",
-      "culture"
+      "ambient"
     ]
   },
   {
@@ -31551,9 +28674,7 @@ export const productionSongRecords = [
     "tags": [
       "anime orchestral rock",
       "cinematic orchestral",
-      "dramatic electric rock",
-      "culture",
-      "anime"
+      "dramatic electric rock"
     ]
   },
   {
@@ -31576,10 +28697,7 @@ export const productionSongRecords = [
     "tags": [
       "anime soundtrack",
       "ambient",
-      "emotional cinematic orchestration",
-      "soft piano ballad",
-      "culture",
-      "anime"
+      "emotional cinematic orchestration"
     ]
   },
   {
@@ -31602,9 +28720,7 @@ export const productionSongRecords = [
     "tags": [
       "anime instrumental",
       "cinematic orchestral",
-      "dramatic electric",
-      "culture",
-      "anime"
+      "dramatic electric"
     ]
   },
   {
@@ -31627,12 +28743,7 @@ export const productionSongRecords = [
     "tags": [
       "anime soundtrack",
       "instrumental",
-      "lullaby",
-      "acoustic",
-      "gentle warm",
-      "nostalgic",
-      "culture",
-      "anime"
+      "lullaby"
     ]
   },
   {
@@ -31655,9 +28766,7 @@ export const productionSongRecords = [
     "tags": [
       "anime soundtrack",
       "orchestral",
-      "ambient",
-      "culture",
-      "anime"
+      "ambient"
     ]
   },
   {
@@ -31680,9 +28789,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "orchestral",
-      "cinematic",
-      "anime",
-      "culture"
+      "cinematic"
     ]
   },
   {
@@ -31706,10 +28813,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "chinese orchestral",
-      "dramatic soundtrack",
-      "culture",
-      "chinese",
-      "pop"
+      "dramatic soundtrack"
     ]
   },
   {
@@ -31733,10 +28837,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "chinese orchestral",
-      "dramatic soundtrack",
-      "culture",
-      "chinese",
-      "pop"
+      "dramatic soundtrack"
     ]
   },
   {
@@ -31760,10 +28861,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "chinese orchestral",
-      "dramatic soundtrack",
-      "culture",
-      "chinese",
-      "pop"
+      "dramatic soundtrack"
     ]
   },
   {
@@ -31787,10 +28885,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "chinese orchestral",
-      "dramatic soundtrack",
-      "culture",
-      "chinese",
-      "pop"
+      "dramatic soundtrack"
     ]
   },
   {
@@ -31814,10 +28909,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "chinese orchestral",
-      "dramatic soundtrack",
-      "culture",
-      "chinese",
-      "pop"
+      "dramatic soundtrack"
     ]
   },
   {
@@ -31841,10 +28933,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "chinese fusion",
-      "electronic",
-      "culture",
-      "chinese",
-      "pop"
+      "electronic"
     ]
   },
   {
@@ -31868,10 +28957,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "chinese fusion",
-      "electronic",
-      "culture",
-      "chinese",
-      "pop"
+      "electronic"
     ]
   },
   {
@@ -31895,10 +28981,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "chinese fusion",
-      "electronic",
-      "culture",
-      "chinese",
-      "pop"
+      "electronic"
     ]
   },
   {
@@ -31922,10 +29005,7 @@ export const productionSongRecords = [
     "tags": [
       "chinese edm",
       "electronic dance",
-      "festival anthemic electro",
-      "culture",
-      "chinese",
-      "pop"
+      "festival anthemic electro"
     ]
   },
   {
@@ -31949,10 +29029,7 @@ export const productionSongRecords = [
     "tags": [
       "chinese hip hop",
       "trap",
-      "atmospheric synthwave",
-      "culture",
-      "chinese",
-      "pop"
+      "atmospheric synthwave"
     ]
   },
   {
@@ -31976,10 +29053,7 @@ export const productionSongRecords = [
     "tags": [
       "chinese hip hop",
       "trap",
-      "atmospheric synthwave",
-      "culture",
-      "chinese",
-      "pop"
+      "atmospheric synthwave"
     ]
   },
   {
@@ -32003,10 +29077,7 @@ export const productionSongRecords = [
     "tags": [
       "chinese hip hop",
       "trap",
-      "atmospheric synthwave",
-      "culture",
-      "chinese",
-      "pop"
+      "atmospheric synthwave"
     ]
   },
   {
@@ -32028,9 +29099,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/CHINESE/Sunset Red",
     "metadataText": "",
     "tags": [
+      "chinese c pop",
       "culture",
-      "chinese",
-      "pop"
+      "instrumental"
     ]
   },
   {
@@ -32054,10 +29125,7 @@ export const productionSongRecords = [
     "tags": [
       "chinese hip hop",
       "trap",
-      "atmospheric synthwave",
-      "culture",
-      "chinese",
-      "pop"
+      "atmospheric synthwave"
     ]
   },
   {
@@ -32081,10 +29149,7 @@ export const productionSongRecords = [
     "tags": [
       "chinese hip hop",
       "trap",
-      "atmospheric synthwave",
-      "culture",
-      "chinese",
-      "pop"
+      "atmospheric synthwave"
     ]
   },
   {
@@ -32108,10 +29173,7 @@ export const productionSongRecords = [
     "tags": [
       "modern chinese hip",
       "trap",
-      "atmospheric synthwave alt",
-      "culture",
-      "chinese",
-      "pop"
+      "atmospheric synthwave alt"
     ]
   },
   {
@@ -32135,10 +29197,7 @@ export const productionSongRecords = [
     "tags": [
       "modern chinese hip",
       "trap",
-      "atmospheric synthwave alt",
-      "culture",
-      "chinese",
-      "pop"
+      "atmospheric synthwave alt"
     ]
   },
   {
@@ -32162,10 +29221,7 @@ export const productionSongRecords = [
     "tags": [
       "modern chinese hip",
       "trap",
-      "atmospheric synthwave alt",
-      "culture",
-      "chinese",
-      "pop"
+      "atmospheric synthwave alt"
     ]
   },
   {
@@ -32189,10 +29245,7 @@ export const productionSongRecords = [
     "tags": [
       "modern chinese hip",
       "trap",
-      "atmospheric synthwave alt",
-      "culture",
-      "chinese",
-      "pop"
+      "atmospheric synthwave alt"
     ]
   },
   {
@@ -32216,10 +29269,7 @@ export const productionSongRecords = [
     "tags": [
       "modern chinese hip",
       "trap",
-      "atmospheric synthwave alt",
-      "culture",
-      "chinese",
-      "pop"
+      "atmospheric synthwave alt"
     ]
   },
   {
@@ -32243,10 +29293,7 @@ export const productionSongRecords = [
     "tags": [
       "chinese hip hop",
       "trap",
-      "atmospheric synthwave",
-      "culture",
-      "chinese",
-      "pop"
+      "atmospheric synthwave"
     ]
   },
   {
@@ -32270,10 +29317,7 @@ export const productionSongRecords = [
     "tags": [
       "chinese hip hop",
       "trap",
-      "atmospheric synthwave",
-      "culture",
-      "chinese",
-      "pop"
+      "atmospheric synthwave"
     ]
   },
   {
@@ -32297,10 +29341,7 @@ export const productionSongRecords = [
     "tags": [
       "chinese hip hop",
       "trap",
-      "atmospheric synthwave",
-      "culture",
-      "chinese",
-      "pop"
+      "atmospheric synthwave"
     ]
   },
   {
@@ -32324,10 +29365,7 @@ export const productionSongRecords = [
     "tags": [
       "chinese hip hop",
       "trap",
-      "808 heavy rap",
-      "culture",
-      "chinese",
-      "pop"
+      "808 heavy rap"
     ]
   },
   {
@@ -32351,10 +29389,7 @@ export const productionSongRecords = [
     "tags": [
       "chinese hip hop",
       "trap",
-      "808 heavy rap",
-      "culture",
-      "chinese",
-      "pop"
+      "808 heavy rap"
     ]
   },
   {
@@ -32377,17 +29412,7 @@ export const productionSongRecords = [
     "tags": [
       "dream pop acoustic",
       "soft piano echoes",
-      "airy synth pads",
-      "slow cinematic",
-      "bell like glints",
-      "shimmering",
-      "ambient",
-      "acoustic",
-      "warm",
-      "soft",
-      "emotional",
-      "calming",
-      "commercial"
+      "airy synth pads"
     ]
   },
   {
@@ -32411,20 +29436,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic folk pop",
       "warm live session",
-      "brushed textures",
-      "soft room tone",
-      "beautiful",
-      "lyrical",
-      "emotional",
-      "warm",
-      "heartfelt",
-      "acoustic",
-      "uplifting",
-      "nostalgic",
-      "soulful",
-      "rich",
-      "natural",
-      "soft"
+      "brushed textures"
     ]
   },
   {
@@ -32447,20 +29459,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic instrumental",
       "felt piano",
-      "room tone",
-      "gentle string bed",
-      "before a fuller",
-      "close live session",
-      "rich natural reverb",
-      "organic",
-      "rich",
-      "nostalgic",
-      "acoustic",
-      "calming",
-      "uplifting",
-      "emotional",
-      "natural",
-      "heartfelt"
+      "room tone"
     ]
   },
   {
@@ -32483,20 +29482,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic cinematic folk",
       "soft piano clusters",
-      "subtle string",
-      "brushed frame percussion",
-      "gentle time pulse",
-      "pre build adds",
-      "lift brings full",
-      "close",
-      "live session intimacy",
-      "rich natural reverb",
-      "lush",
-      "warm",
-      "uplifting",
-      "calming",
-      "soft",
-      "acoustic"
+      "subtle string"
     ]
   },
   {
@@ -32519,19 +29505,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic jazz instrumental",
       "warm hollow body",
-      "upright bass walking",
-      "mellow piano phrases",
-      "intro starts",
-      "warm",
-      "soft ride shimmer",
-      "subtle tape glow",
-      "soulful",
-      "smooth",
-      "sophisticated",
-      "jazz",
-      "mellow",
-      "acoustic",
-      "commercial"
+      "upright bass walking"
     ]
   },
   {
@@ -32555,20 +29529,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic indie folk",
       "soft piano countermelodies",
-      "male vocals",
-      "small room echo",
-      "human",
-      "cinematic",
-      "heartfelt",
-      "soulful",
-      "minimal",
-      "rich",
-      "soft",
-      "warm",
-      "nostalgic",
-      "acoustic",
-      "gentle",
-      "emotional"
+      "male vocals"
     ]
   },
   {
@@ -32591,17 +29552,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic fusion",
       "warm fingerpicked guitar",
-      "tabla grooves",
-      "sitar textures",
-      "layered bansuri harmonies",
-      "lift brings full",
-      "close",
-      "natural room mics",
-      "glowing midrange",
-      "warm",
-      "emotional",
-      "acoustic",
-      "commercial"
+      "tabla grooves"
     ]
   },
   {
@@ -32624,19 +29575,7 @@ export const productionSongRecords = [
     "tags": [
       "dreamy acoustic ambient",
       "soft pulse percussion",
-      "airy synth beds",
-      "is breathy",
-      "piano echoes",
-      "filtered risers color",
-      "warm",
-      "cinematic",
-      "spacious",
-      "ambient",
-      "calming",
-      "emotional",
-      "acoustic",
-      "soft",
-      "commercial"
+      "airy synth beds"
     ]
   },
   {
@@ -32660,20 +29599,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic folk",
       "warm harmony lifts",
-      "soft string",
-      "brushed hand percussion",
-      "organic live session",
-      "human",
-      "soulful",
-      "folk",
-      "ambient",
-      "soft",
-      "warm",
-      "acoustic",
-      "heartfelt",
-      "nostalgic",
-      "uplifting",
-      "emotional"
+      "soft string"
     ]
   },
   {
@@ -32697,20 +29623,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic folk",
       "soft brushed percussion",
-      "warm stacked harmonies",
-      "subtle string",
-      "organic live session",
-      "warm",
-      "cinematic",
-      "acoustic",
-      "soulful",
-      "folk",
-      "soft",
-      "ambient",
-      "uplifting",
-      "emotional",
-      "beautiful",
-      "heartfelt"
+      "warm stacked harmonies"
     ]
   },
   {
@@ -32733,20 +29646,7 @@ export const productionSongRecords = [
     "tags": [
       "dreamy ambient folk",
       "soft piano figures",
-      "synthetic pads under",
-      "time pulse",
-      "use reverse",
-      "glassy chimes between",
-      "long tail of",
-      "is warm",
-      "cinematic",
-      "acoustic",
-      "emotional",
-      "soft",
-      "warm",
-      "ambient",
-      "calming",
-      "commercial"
+      "synthetic pads under"
     ]
   },
   {
@@ -32769,20 +29669,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic jazz",
       "warm guitar chord",
-      "brushed drums",
-      "upright bass walking",
-      "mellow piano phrases",
-      "pre adds soft",
-      "whispery room tone",
-      "subtle ride cymbal",
-      "brushed snare swishes",
-      "cozy",
-      "smooth",
-      "warm",
-      "jazz",
-      "acoustic",
-      "soulful",
-      "mellow"
+      "brushed drums"
     ]
   },
   {
@@ -32805,18 +29692,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient acoustic instrumental",
       "warm synth pads",
-      "soft piano echoes",
-      "long cinematic textures",
-      "breathy",
-      "subtle room bloom",
-      "glassy smooth",
-      "warm",
-      "ambient",
-      "soft",
-      "calming",
-      "emotional",
-      "acoustic",
-      "commercial"
+      "soft piano echoes"
     ]
   },
   {
@@ -32839,19 +29715,7 @@ export const productionSongRecords = [
     "tags": [
       "dreamy ambient acoustic",
       "slow pulse",
-      "soft piano echoes",
-      "cinematic pad",
-      "whispered doubles",
-      "soft gang oohs",
-      "glowing",
-      "immersive",
-      "emotional",
-      "acoustic",
-      "soft",
-      "calming",
-      "ambient",
-      "warm",
-      "commercial"
+      "soft piano echoes"
     ]
   },
   {
@@ -32875,9 +29739,7 @@ export const productionSongRecords = [
     "tags": [
       "folk pop",
       "acoustic ballad",
-      "singer songwriter",
-      "commercial",
-      "acoustic"
+      "singer songwriter"
     ]
   },
   {
@@ -32898,8 +29760,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Fields at Dusk (1)",
     "metadataText": "",
     "tags": [
+      "acoustic",
       "commercial",
-      "acoustic"
+      "instrumental"
     ]
   },
   {
@@ -32922,16 +29785,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient acoustic instrumental",
       "soft piano echoes",
-      "warm synth pads",
-      "layers in brushed",
-      "velvety",
-      "ambient",
-      "acoustic",
-      "soft",
-      "warm",
-      "calming",
-      "emotional",
-      "commercial"
+      "warm synth pads"
     ]
   },
   {
@@ -32954,20 +29808,7 @@ export const productionSongRecords = [
     "tags": [
       "dreamy ambient folk",
       "soft piano figures",
-      "synthetic pads under",
-      "time pulse",
-      "use reverse",
-      "glassy chimes between",
-      "long tail of",
-      "is warm",
-      "cinematic",
-      "acoustic",
-      "emotional",
-      "soft",
-      "warm",
-      "ambient",
-      "calming",
-      "commercial"
+      "synthetic pads under"
     ]
   },
   {
@@ -32990,20 +29831,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic jazz",
       "warm guitar chord",
-      "brushed drums",
-      "upright bass walking",
-      "mellow piano phrases",
-      "pre adds soft",
-      "whispery room tone",
-      "subtle ride cymbal",
-      "brushed snare swishes",
-      "cozy",
-      "smooth",
-      "warm",
-      "jazz",
-      "acoustic",
-      "soulful",
-      "mellow"
+      "brushed drums"
     ]
   },
   {
@@ -33026,19 +29854,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock anthem",
       "octave guitars",
-      "massive timpani accents",
-      "low sub hits",
-      "sword sharp string",
-      "huge",
-      "bright",
-      "battle ready",
-      "dramatic",
-      "emotional",
-      "orchestral",
-      "soaring",
-      "hard rock",
-      "commercial",
-      "acoustic"
+      "massive timpani accents"
     ]
   },
   {
@@ -33061,20 +29877,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic cinematic folk",
       "soft piano beds",
-      "subtle string",
-      "brushed hand percussion",
-      "slow 4 4",
-      "lift",
-      "warm live session",
-      "natural reverb",
-      "rich",
-      "handmade",
-      "emotional",
-      "calming",
-      "warm",
-      "natural",
-      "soft",
-      "uplifting"
+      "subtle string"
     ]
   },
   {
@@ -33098,20 +29901,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic folk ballad",
       "light brushed percussion",
-      "room clap accents",
-      "warm cinematic lift",
-      "organic",
-      "beautiful",
-      "ambient",
-      "nostalgic",
-      "uplifting",
-      "soft",
-      "heartfelt",
-      "acoustic",
-      "emotional",
-      "soulful",
-      "warm",
-      "folk"
+      "room clap accents"
     ]
   },
   {
@@ -33135,20 +29925,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic folk",
       "brushed intro",
-      "room noise tails",
-      "warm",
-      "organic live session",
-      "uplifting",
-      "beautiful",
-      "acoustic",
-      "ambient",
-      "emotional",
-      "folk",
-      "soulful",
-      "nostalgic",
-      "heartfelt",
-      "soft",
-      "commercial"
+      "room noise tails"
     ]
   },
   {
@@ -33172,20 +29949,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic folk pop",
       "warm live session",
-      "brushed textures",
-      "soft room tone",
-      "beautiful",
-      "lyrical",
-      "emotional",
-      "warm",
-      "heartfelt",
-      "acoustic",
-      "uplifting",
-      "nostalgic",
-      "soulful",
-      "rich",
-      "natural",
-      "soft"
+      "brushed textures"
     ]
   },
   {
@@ -33208,19 +29972,7 @@ export const productionSongRecords = [
     "tags": [
       "dreamy ambient acoustic",
       "slow pulse",
-      "soft piano echoes",
-      "cinematic pad",
-      "whispered doubles",
-      "soft gang oohs",
-      "glowing",
-      "immersive",
-      "emotional",
-      "acoustic",
-      "soft",
-      "calming",
-      "ambient",
-      "warm",
-      "commercial"
+      "soft piano echoes"
     ]
   },
   {
@@ -33243,17 +29995,7 @@ export const productionSongRecords = [
     "tags": [
       "dream pop acoustic",
       "soft piano echoes",
-      "airy synth pads",
-      "slow cinematic",
-      "bell like glints",
-      "shimmering",
-      "ambient",
-      "acoustic",
-      "warm",
-      "soft",
-      "emotional",
-      "calming",
-      "commercial"
+      "airy synth pads"
     ]
   },
   {
@@ -33276,20 +30018,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic celtic instrumental",
       "rising violin",
-      "airy tin whistle",
-      "hand drum organic",
-      "fantasy folk arc",
-      "soaring refrain",
-      "breathier textures bloom",
-      "warm earthy",
-      "open",
-      "storybook cinematic",
-      "folk",
-      "emotional",
-      "acoustic",
-      "violin",
-      "celtic",
-      "commercial"
+      "airy tin whistle"
     ]
   },
   {
@@ -33312,20 +30041,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic cinematic folk",
       "soft piano beds",
-      "subtle string",
-      "brushed hand percussion",
-      "slow 4 4",
-      "lift",
-      "warm live session",
-      "natural reverb",
-      "rich",
-      "handmade",
-      "emotional",
-      "calming",
-      "warm",
-      "natural",
-      "soft",
-      "uplifting"
+      "subtle string"
     ]
   },
   {
@@ -33348,20 +30064,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic cinematic folk",
       "soft piano clusters",
-      "subtle string",
-      "brushed frame percussion",
-      "gentle time pulse",
-      "pre build adds",
-      "lift brings full",
-      "close",
-      "live session intimacy",
-      "rich natural reverb",
-      "lush",
-      "warm",
-      "uplifting",
-      "calming",
-      "soft",
-      "acoustic"
+      "subtle string"
     ]
   },
   {
@@ -33385,9 +30088,7 @@ export const productionSongRecords = [
     "tags": [
       "folk pop",
       "acoustic ballad",
-      "singer songwriter",
-      "commercial",
-      "acoustic"
+      "singer songwriter"
     ]
   },
   {
@@ -33411,19 +30112,7 @@ export const productionSongRecords = [
     "tags": [
       "gentle backing vocals",
       "cozy",
-      "cinematic",
-      "organic",
-      "warm",
-      "emotional",
-      "gentle",
-      "heartfelt",
-      "acoustic",
-      "minimal",
-      "soulful",
-      "nostalgic",
-      "rich",
-      "soft",
-      "commercial"
+      "cinematic"
     ]
   },
   {
@@ -33447,7 +30136,6 @@ export const productionSongRecords = [
     "tags": [
       "contemporary r and b",
       "neo soul",
-      "commercial",
       "acoustic"
     ]
   },
@@ -33471,15 +30159,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic celtic instrumental",
       "lyrical violin leads",
-      "airy tin whistle",
-      "glowing",
-      "story rich",
-      "celtic",
-      "folk",
-      "acoustic",
-      "emotional",
-      "violin",
-      "commercial"
+      "airy tin whistle"
     ]
   },
   {
@@ -33503,20 +30183,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic singer songwriter",
       "soft kick pulse",
-      "is warm",
-      "natural",
-      "cinematic",
-      "heartfelt",
-      "rich",
-      "minimal",
-      "nostalgic",
-      "gentle",
-      "acoustic",
-      "warm",
-      "soft",
-      "soulful",
-      "emotional",
-      "commercial"
+      "is warm"
     ]
   },
   {
@@ -33540,20 +30207,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop ballad",
       "soft",
-      "airy harmony tails",
-      "handcrafted",
-      "acoustic",
-      "lyrical",
-      "warm",
-      "beautiful",
-      "uplifting",
-      "soulful",
-      "nostalgic",
-      "emotional",
-      "rich",
-      "heartfelt",
-      "natural",
-      "commercial"
+      "airy harmony tails"
     ]
   },
   {
@@ -33576,20 +30230,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi acoustic",
       "fingerpicked guitar motifs",
-      "warm bass",
-      "relaxed late night",
-      "gentle lift adds",
-      "handcrafted",
-      "mellow",
-      "grainy",
-      "cozy",
-      "soft",
-      "warm",
-      "acoustic",
-      "nostalgic",
-      "lo fi",
-      "hip hop",
-      "commercial"
+      "warm bass"
     ]
   },
   {
@@ -33612,17 +30253,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi acoustic",
       "mellow fingerpicked guitar",
-      "warm bass",
-      "laid back head",
-      "soft focus",
-      "acoustic",
-      "hip hop",
-      "nostalgic",
-      "lo fi",
-      "warm",
-      "soft",
-      "mellow",
-      "commercial"
+      "warm bass"
     ]
   },
   {
@@ -33645,13 +30276,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic fusion",
       "airy reverb tails",
-      "soft drone lift",
-      "cinematic",
-      "earthy",
-      "acoustic",
-      "warm",
-      "emotional",
-      "commercial"
+      "soft drone lift"
     ]
   },
   {
@@ -33674,19 +30299,7 @@ export const productionSongRecords = [
     "tags": [
       "dreamy acoustic indie",
       "warm fingerpicked guitar",
-      "airy synth pads",
-      "soft piano echoes",
-      "cinematic",
-      "light breathy",
-      "delicate bell chimes",
-      "glossy",
-      "ambient",
-      "warm",
-      "soft",
-      "calming",
-      "emotional",
-      "acoustic",
-      "commercial"
+      "airy synth pads"
     ]
   },
   {
@@ -33709,20 +30322,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic cinematic folk",
       "soft piano cushions",
-      "subtle string blooms",
-      "live session intimacy",
-      "rich natural reverb",
-      "warm",
-      "emotional",
-      "natural",
-      "heartfelt",
-      "acoustic",
-      "rich",
-      "soft",
-      "uplifting",
-      "calming",
-      "nostalgic",
-      "commercial"
+      "subtle string blooms"
     ]
   },
   {
@@ -33743,8 +30343,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Acoustic/Summer Nights on Willow Creek",
     "metadataText": "",
     "tags": [
+      "acoustic",
       "commercial",
-      "acoustic"
+      "instrumental"
     ]
   },
   {
@@ -33767,20 +30368,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi acoustic",
       "fingerpicked guitar motifs",
-      "warm bass",
-      "relaxed late night",
-      "gentle lift adds",
-      "handcrafted",
-      "mellow",
-      "grainy",
-      "cozy",
-      "soft",
-      "warm",
-      "acoustic",
-      "nostalgic",
-      "lo fi",
-      "hip hop",
-      "commercial"
+      "warm bass"
     ]
   },
   {
@@ -33803,19 +30391,7 @@ export const productionSongRecords = [
     "tags": [
       "dreamy acoustic ambient",
       "soft pulse percussion",
-      "airy synth beds",
-      "is breathy",
-      "piano echoes",
-      "filtered risers color",
-      "warm",
-      "cinematic",
-      "spacious",
-      "ambient",
-      "calming",
-      "emotional",
-      "acoustic",
-      "soft",
-      "commercial"
+      "airy synth beds"
     ]
   },
   {
@@ -33838,16 +30414,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient acoustic instrumental",
       "soft piano echoes",
-      "warm synth pads",
-      "layers in brushed",
-      "velvety",
-      "ambient",
-      "acoustic",
-      "soft",
-      "warm",
-      "calming",
-      "emotional",
-      "commercial"
+      "warm synth pads"
     ]
   },
   {
@@ -33870,15 +30437,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic celtic instrumental",
       "lyrical violin leads",
-      "airy tin whistle",
-      "glowing",
-      "story rich",
-      "celtic",
-      "folk",
-      "acoustic",
-      "emotional",
-      "violin",
-      "commercial"
+      "airy tin whistle"
     ]
   },
   {
@@ -33901,17 +30460,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic fusion",
       "warm fingerpicked guitar",
-      "tabla grooves",
-      "sitar textures",
-      "layered bansuri harmonies",
-      "lift brings full",
-      "close",
-      "natural room mics",
-      "glowing midrange",
-      "warm",
-      "emotional",
-      "acoustic",
-      "commercial"
+      "tabla grooves"
     ]
   },
   {
@@ -33934,20 +30483,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic cinematic folk",
       "soft piano cushions",
-      "subtle string blooms",
-      "live session intimacy",
-      "rich natural reverb",
-      "warm",
-      "emotional",
-      "natural",
-      "heartfelt",
-      "acoustic",
-      "rich",
-      "soft",
-      "uplifting",
-      "calming",
-      "nostalgic",
-      "commercial"
+      "subtle string blooms"
     ]
   },
   {
@@ -33970,19 +30506,7 @@ export const productionSongRecords = [
     "tags": [
       "dreamy acoustic indie",
       "warm fingerpicked guitar",
-      "airy synth pads",
-      "soft piano echoes",
-      "cinematic",
-      "light breathy",
-      "delicate bell chimes",
-      "glossy",
-      "ambient",
-      "warm",
-      "soft",
-      "calming",
-      "emotional",
-      "acoustic",
-      "commercial"
+      "airy synth pads"
     ]
   },
   {
@@ -34005,20 +30529,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic instrumental",
       "felt piano",
-      "room tone",
-      "gentle string bed",
-      "before a fuller",
-      "close live session",
-      "rich natural reverb",
-      "organic",
-      "rich",
-      "nostalgic",
-      "acoustic",
-      "calming",
-      "uplifting",
-      "emotional",
-      "natural",
-      "heartfelt"
+      "room tone"
     ]
   },
   {
@@ -34041,20 +30552,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic celtic instrumental",
       "rising violin",
-      "airy tin whistle",
-      "hand drum organic",
-      "fantasy folk arc",
-      "soaring refrain",
-      "breathier textures bloom",
-      "warm earthy",
-      "open",
-      "storybook cinematic",
-      "folk",
-      "emotional",
-      "acoustic",
-      "violin",
-      "celtic",
-      "commercial"
+      "airy tin whistle"
     ]
   },
   {
@@ -34077,20 +30575,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic instrumental",
       "soft piano textures",
-      "subtle strings",
-      "gentle lift adds",
-      "live session feel",
-      "rich natural reverb",
-      "cinematic",
-      "bright",
-      "soft",
-      "uplifting",
-      "warm",
-      "rich",
-      "acoustic",
-      "heartfelt",
-      "calming",
-      "emotional"
+      "subtle strings"
     ]
   },
   {
@@ -34113,13 +30598,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic fusion",
       "airy reverb tails",
-      "soft drone lift",
-      "cinematic",
-      "earthy",
-      "acoustic",
-      "warm",
-      "emotional",
-      "commercial"
+      "soft drone lift"
     ]
   },
   {
@@ -34142,19 +30621,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic jazz instrumental",
       "warm hollow body",
-      "upright bass walking",
-      "mellow piano phrases",
-      "intro starts",
-      "warm",
-      "soft ride shimmer",
-      "subtle tape glow",
-      "soulful",
-      "smooth",
-      "sophisticated",
-      "jazz",
-      "mellow",
-      "acoustic",
-      "commercial"
+      "upright bass walking"
     ]
   },
   {
@@ -34177,17 +30644,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi acoustic",
       "mellow fingerpicked guitar",
-      "warm bass",
-      "laid back head",
-      "soft focus",
-      "acoustic",
-      "hip hop",
-      "nostalgic",
-      "lo fi",
-      "warm",
-      "soft",
-      "mellow",
-      "commercial"
+      "warm bass"
     ]
   },
   {
@@ -34210,18 +30667,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient acoustic instrumental",
       "warm synth pads",
-      "soft piano echoes",
-      "long cinematic textures",
-      "breathy",
-      "subtle room bloom",
-      "glassy smooth",
-      "warm",
-      "ambient",
-      "soft",
-      "calming",
-      "emotional",
-      "acoustic",
-      "commercial"
+      "soft piano echoes"
     ]
   },
   {
@@ -34245,7 +30691,6 @@ export const productionSongRecords = [
     "tags": [
       "synth pop",
       "cinematic pop",
-      "culture",
       "polish"
     ]
   },
@@ -34270,9 +30715,7 @@ export const productionSongRecords = [
     "tags": [
       "polish hip hop",
       "trap",
-      "dark urban rap",
-      "culture",
-      "polish"
+      "dark urban rap"
     ]
   },
   {
@@ -34296,7 +30739,6 @@ export const productionSongRecords = [
     "tags": [
       "synth pop",
       "cinematic pop",
-      "culture",
       "polish"
     ]
   },
@@ -34321,7 +30763,6 @@ export const productionSongRecords = [
     "tags": [
       "synth pop",
       "cinematic pop",
-      "culture",
       "polish"
     ]
   },
@@ -34346,7 +30787,6 @@ export const productionSongRecords = [
     "tags": [
       "synth pop",
       "cinematic pop",
-      "culture",
       "polish"
     ]
   },
@@ -34371,7 +30811,6 @@ export const productionSongRecords = [
     "tags": [
       "synth pop",
       "cinematic pop",
-      "culture",
       "polish"
     ]
   },
@@ -34396,7 +30835,6 @@ export const productionSongRecords = [
     "tags": [
       "synth pop",
       "cinematic pop",
-      "culture",
       "polish"
     ]
   },
@@ -34421,7 +30859,6 @@ export const productionSongRecords = [
     "tags": [
       "synth pop",
       "cinematic pop",
-      "culture",
       "polish"
     ]
   },
@@ -34446,7 +30883,6 @@ export const productionSongRecords = [
     "tags": [
       "synth pop",
       "cinematic pop",
-      "culture",
       "polish"
     ]
   },
@@ -34471,9 +30907,7 @@ export const productionSongRecords = [
     "tags": [
       "polish hip hop",
       "trap",
-      "dark atmospheric rap",
-      "culture",
-      "polish"
+      "dark atmospheric rap"
     ]
   },
   {
@@ -34497,10 +30931,7 @@ export const productionSongRecords = [
     "tags": [
       "polish rock ballad",
       "rock ballad",
-      "cinematic european rock",
-      "arena rock production",
-      "culture",
-      "polish"
+      "cinematic european rock"
     ]
   },
   {
@@ -34524,10 +30955,7 @@ export const productionSongRecords = [
     "tags": [
       "polish rock ballad",
       "rock ballad",
-      "cinematic european rock",
-      "arena rock production",
-      "culture",
-      "polish"
+      "cinematic european rock"
     ]
   },
   {
@@ -34551,10 +30979,7 @@ export const productionSongRecords = [
     "tags": [
       "polish rock ballad",
       "rock ballad",
-      "cinematic european rock",
-      "arena rock production",
-      "culture",
-      "polish"
+      "cinematic european rock"
     ]
   },
   {
@@ -34578,10 +31003,7 @@ export const productionSongRecords = [
     "tags": [
       "polish rock ballad",
       "rock ballad",
-      "cinematic european rock",
-      "arena rock production",
-      "culture",
-      "polish"
+      "cinematic european rock"
     ]
   },
   {
@@ -34605,10 +31027,7 @@ export const productionSongRecords = [
     "tags": [
       "polish rock ballad",
       "rock ballad",
-      "cinematic european rock",
-      "arena rock production",
-      "culture",
-      "polish"
+      "cinematic european rock"
     ]
   },
   {
@@ -34632,10 +31051,7 @@ export const productionSongRecords = [
     "tags": [
       "polish rock ballad",
       "rock ballad",
-      "cinematic european rock",
-      "arena rock production",
-      "culture",
-      "polish"
+      "cinematic european rock"
     ]
   },
   {
@@ -34659,9 +31075,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "acoustic folk",
-      "singer songwriter",
-      "culture",
-      "polish"
+      "singer songwriter"
     ]
   },
   {
@@ -34685,9 +31099,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "acoustic folk",
-      "singer songwriter",
-      "culture",
-      "polish"
+      "singer songwriter"
     ]
   },
   {
@@ -34711,9 +31123,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "acoustic folk",
-      "singer songwriter",
-      "culture",
-      "polish"
+      "singer songwriter"
     ]
   },
   {
@@ -34737,9 +31147,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "acoustic folk",
-      "singer songwriter",
-      "culture",
-      "polish"
+      "singer songwriter"
     ]
   },
   {
@@ -34763,9 +31171,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "acoustic folk",
-      "singer songwriter",
-      "culture",
-      "polish"
+      "singer songwriter"
     ]
   },
   {
@@ -34789,9 +31195,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "acoustic folk",
-      "singer songwriter",
-      "culture",
-      "polish"
+      "singer songwriter"
     ]
   },
   {
@@ -34815,9 +31219,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "acoustic folk",
-      "singer songwriter",
-      "culture",
-      "polish"
+      "singer songwriter"
     ]
   },
   {
@@ -34841,9 +31243,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "acoustic folk",
-      "singer songwriter",
-      "culture",
-      "polish"
+      "singer songwriter"
     ]
   },
   {
@@ -34867,9 +31267,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "acoustic folk",
-      "singer songwriter",
-      "culture",
-      "polish"
+      "singer songwriter"
     ]
   },
   {
@@ -34893,9 +31291,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "acoustic folk",
-      "singer songwriter",
-      "culture",
-      "polish"
+      "singer songwriter"
     ]
   },
   {
@@ -34919,9 +31315,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "acoustic folk",
-      "singer songwriter",
-      "culture",
-      "polish"
+      "singer songwriter"
     ]
   },
   {
@@ -34945,10 +31339,7 @@ export const productionSongRecords = [
     "tags": [
       "bossa nova",
       "smooth jazz",
-      "tropical lounge",
-      "culture",
-      "brazilian",
-      "funk"
+      "tropical lounge"
     ]
   },
   {
@@ -34972,10 +31363,7 @@ export const productionSongRecords = [
     "tags": [
       "bossa nova",
       "smooth jazz",
-      "tropical lounge",
-      "culture",
-      "brazilian",
-      "funk"
+      "tropical lounge"
     ]
   },
   {
@@ -34999,10 +31387,7 @@ export const productionSongRecords = [
     "tags": [
       "bossa nova",
       "smooth jazz",
-      "tropical lounge",
-      "culture",
-      "brazilian",
-      "funk"
+      "tropical lounge"
     ]
   },
   {
@@ -35026,10 +31411,7 @@ export const productionSongRecords = [
     "tags": [
       "bossa nova",
       "smooth jazz",
-      "tropical lounge",
-      "culture",
-      "brazilian",
-      "funk"
+      "tropical lounge"
     ]
   },
   {
@@ -35052,9 +31434,8 @@ export const productionSongRecords = [
     "metadataText": "[Intro]\nLelelelelele\nLelelelelele\nLelelelelele\nLelelelelele\n\n[Verso]\nDe onde nós vem\nNão é normal vencer\nNem só a vida\nMas a fé tem que ter\nEu não vou parar até os meus comer\nEu não vou parar até os meus comer\nQuero ver os meus irmão num Mercedes\nQuero ver as minha irmã de Mercedes\nRádio tocando\nTocando e f**a-se\nCopa do Mundo\nMano\nVamos vencer\nVou passar tudo\nMano\nAté morrer\nNão tem mais ninguém\nÉ nóis até o fim\nAté o fim\n\n[Refrão]\nDizem que não\nDizem que não\nMas ninguém não tá mais aqui\nDizem que não\nDizem que não\nMas ninguém não tá mais aqui\nDizem que não\nDizem que não\nMas ninguém não tá mais aqui\nDizem que não\nDizem que não\nMas ninguém não tá mais aqui\n\n[Ponte]\nAté o fim\nAté o fim\nAté o fim\nAté o fim",
     "tags": [
       "intro",
-      "culture",
-      "brazilian",
-      "funk"
+      "brazilian funk",
+      "culture"
     ]
   },
   {
@@ -35078,10 +31459,7 @@ export const productionSongRecords = [
     "tags": [
       "brazilian funk",
       "baile funk",
-      "dancehall street oriented",
-      "culture",
-      "brazilian",
-      "funk"
+      "dancehall"
     ]
   },
   {
@@ -35105,10 +31483,7 @@ export const productionSongRecords = [
     "tags": [
       "brazilian funk",
       "baile funk",
-      "dancehall street oriented",
-      "culture",
-      "brazilian",
-      "funk"
+      "dancehall"
     ]
   },
   {
@@ -35132,10 +31507,7 @@ export const productionSongRecords = [
     "tags": [
       "brazilian funk",
       "baile funk",
-      "dancehall street oriented",
-      "culture",
-      "brazilian",
-      "funk"
+      "dancehall"
     ]
   },
   {
@@ -35159,10 +31531,7 @@ export const productionSongRecords = [
     "tags": [
       "brazilian funk",
       "baile funk",
-      "dancehall street oriented",
-      "culture",
-      "brazilian",
-      "funk"
+      "dancehall"
     ]
   },
   {
@@ -35186,10 +31555,7 @@ export const productionSongRecords = [
     "tags": [
       "brazilian funk",
       "baile funk",
-      "dancehall street oriented",
-      "culture",
-      "brazilian",
-      "funk"
+      "dancehall"
     ]
   },
   {
@@ -35213,10 +31579,7 @@ export const productionSongRecords = [
     "tags": [
       "samba",
       "carnival",
-      "brass festive latin",
-      "culture",
-      "brazilian",
-      "funk"
+      "brass festive latin"
     ]
   },
   {
@@ -35240,10 +31603,7 @@ export const productionSongRecords = [
     "tags": [
       "samba",
       "carnival",
-      "brass festive latin",
-      "culture",
-      "brazilian",
-      "funk"
+      "brass festive latin"
     ]
   },
   {
@@ -35267,10 +31627,7 @@ export const productionSongRecords = [
     "tags": [
       "samba",
       "carnival",
-      "brass festive latin",
-      "culture",
-      "brazilian",
-      "funk"
+      "brass festive latin"
     ]
   },
   {
@@ -35294,10 +31651,7 @@ export const productionSongRecords = [
     "tags": [
       "samba",
       "carnival",
-      "brass festive latin",
-      "culture",
-      "brazilian",
-      "funk"
+      "brass festive latin"
     ]
   },
   {
@@ -35321,10 +31675,7 @@ export const productionSongRecords = [
     "tags": [
       "samba",
       "carnival",
-      "brass festive latin",
-      "culture",
-      "brazilian",
-      "funk"
+      "brass festive latin"
     ]
   },
   {
@@ -35348,10 +31699,7 @@ export const productionSongRecords = [
     "tags": [
       "baile funk",
       "brazilian funk",
-      "reggaeton",
-      "culture",
-      "brazilian",
-      "funk"
+      "reggaeton"
     ]
   },
   {
@@ -35375,10 +31723,7 @@ export const productionSongRecords = [
     "tags": [
       "baile funk",
       "brazilian funk",
-      "reggaeton",
-      "culture",
-      "brazilian",
-      "funk"
+      "reggaeton"
     ]
   },
   {
@@ -35402,10 +31747,7 @@ export const productionSongRecords = [
     "tags": [
       "baile funk",
       "brazilian funk",
-      "reggaeton",
-      "culture",
-      "brazilian",
-      "funk"
+      "reggaeton"
     ]
   },
   {
@@ -35429,10 +31771,7 @@ export const productionSongRecords = [
     "tags": [
       "baile funk",
       "brazilian funk",
-      "reggaeton",
-      "culture",
-      "brazilian",
-      "funk"
+      "reggaeton"
     ]
   },
   {
@@ -35456,10 +31795,7 @@ export const productionSongRecords = [
     "tags": [
       "baile funk",
       "brazilian funk",
-      "reggaeton",
-      "culture",
-      "brazilian",
-      "funk"
+      "reggaeton"
     ]
   },
   {
@@ -35483,10 +31819,7 @@ export const productionSongRecords = [
     "tags": [
       "samba",
       "latin",
-      "carnival",
-      "culture",
-      "brazilian",
-      "funk"
+      "carnival"
     ]
   },
   {
@@ -35510,10 +31843,7 @@ export const productionSongRecords = [
     "tags": [
       "samba",
       "latin",
-      "carnival",
-      "culture",
-      "brazilian",
-      "funk"
+      "carnival"
     ]
   },
   {
@@ -35537,10 +31867,7 @@ export const productionSongRecords = [
     "tags": [
       "samba",
       "latin",
-      "carnival",
-      "culture",
-      "brazilian",
-      "funk"
+      "carnival"
     ]
   },
   {
@@ -35564,10 +31891,7 @@ export const productionSongRecords = [
     "tags": [
       "samba",
       "latin",
-      "carnival",
-      "culture",
-      "brazilian",
-      "funk"
+      "carnival"
     ]
   },
   {
@@ -35591,10 +31915,7 @@ export const productionSongRecords = [
     "tags": [
       "samba",
       "latin",
-      "carnival",
-      "culture",
-      "brazilian",
-      "funk"
+      "carnival"
     ]
   },
   {
@@ -35616,9 +31937,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/BRAZILIAN/Perigo",
     "metadataText": "",
     "tags": [
+      "brazilian funk",
       "culture",
-      "brazilian",
-      "funk"
+      "instrumental"
     ]
   },
   {
@@ -35642,10 +31963,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "baile funk",
-      "brazilian underground street",
-      "culture",
-      "brazilian",
-      "funk"
+      "brazilian underground"
     ]
   },
   {
@@ -35669,10 +31987,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "baile funk",
-      "brazilian underground street",
-      "culture",
-      "brazilian",
-      "funk"
+      "brazilian underground"
     ]
   },
   {
@@ -35696,10 +32011,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "baile funk",
-      "street racing dark",
-      "culture",
-      "brazilian",
-      "funk"
+      "street racing dark"
     ]
   },
   {
@@ -35723,10 +32035,7 @@ export const productionSongRecords = [
     "tags": [
       "samba",
       "latin",
-      "festive anthemic",
-      "culture",
-      "brazilian",
-      "funk"
+      "festive anthemic"
     ]
   },
   {
@@ -35749,9 +32058,7 @@ export const productionSongRecords = [
     "tags": [
       "electric",
       "indian rock",
-      "cinematic arena sized",
-      "commercial",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -35774,9 +32081,7 @@ export const productionSongRecords = [
     "tags": [
       "electric",
       "indian rock",
-      "cinematic arena sized",
-      "commercial",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -35799,9 +32104,7 @@ export const productionSongRecords = [
     "tags": [
       "electric",
       "indian rock",
-      "cinematic arena sized",
-      "commercial",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -35824,9 +32127,7 @@ export const productionSongRecords = [
     "tags": [
       "electric",
       "indian rock",
-      "cinematic arena sized",
-      "commercial",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -35849,9 +32150,7 @@ export const productionSongRecords = [
     "tags": [
       "electric",
       "indian rock",
-      "cinematic arena sized",
-      "commercial",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -35874,9 +32173,7 @@ export const productionSongRecords = [
     "tags": [
       "electric",
       "indian rock",
-      "cinematic arena sized",
-      "commercial",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -35899,9 +32196,7 @@ export const productionSongRecords = [
     "tags": [
       "electric",
       "indian rock",
-      "cinematic arena sized",
-      "commercial",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -35924,9 +32219,7 @@ export const productionSongRecords = [
     "tags": [
       "electric",
       "indian rock",
-      "cinematic arena sized",
-      "commercial",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -35949,9 +32242,7 @@ export const productionSongRecords = [
     "tags": [
       "electric",
       "indian rock",
-      "cinematic arena sized",
-      "commercial",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -35974,9 +32265,7 @@ export const productionSongRecords = [
     "tags": [
       "electric",
       "indian rock",
-      "cinematic arena sized",
-      "commercial",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -35999,9 +32288,7 @@ export const productionSongRecords = [
     "tags": [
       "electric",
       "indian rock",
-      "cinematic arena sized",
-      "commercial",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -36024,9 +32311,7 @@ export const productionSongRecords = [
     "tags": [
       "electric",
       "indian rock",
-      "cinematic arena sized",
-      "commercial",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -36049,9 +32334,7 @@ export const productionSongRecords = [
     "tags": [
       "electric",
       "indian rock",
-      "cinematic arena sized",
-      "commercial",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -36074,9 +32357,7 @@ export const productionSongRecords = [
     "tags": [
       "electric",
       "indian rock",
-      "cinematic arena sized",
-      "commercial",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -36099,9 +32380,7 @@ export const productionSongRecords = [
     "tags": [
       "electric",
       "indian rock",
-      "cinematic arena sized",
-      "commercial",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -36124,9 +32403,7 @@ export const productionSongRecords = [
     "tags": [
       "electric",
       "indian rock",
-      "cinematic arena sized",
-      "commercial",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -36149,9 +32426,7 @@ export const productionSongRecords = [
     "tags": [
       "electric",
       "indian rock",
-      "cinematic arena sized",
-      "commercial",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -36174,9 +32449,7 @@ export const productionSongRecords = [
     "tags": [
       "electric",
       "indian rock",
-      "cinematic arena sized",
-      "commercial",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -36199,9 +32472,7 @@ export const productionSongRecords = [
     "tags": [
       "electric",
       "indian rock",
-      "cinematic arena sized",
-      "commercial",
-      "rock"
+      "cinematic"
     ]
   },
   {
@@ -36224,9 +32495,7 @@ export const productionSongRecords = [
     "tags": [
       "indian rock",
       "cinematic rock",
-      "fusion",
-      "commercial",
-      "rock"
+      "fusion"
     ]
   },
   {
@@ -36249,9 +32518,7 @@ export const productionSongRecords = [
     "tags": [
       "indian rock",
       "cinematic rock",
-      "fusion",
-      "commercial",
-      "rock"
+      "fusion"
     ]
   },
   {
@@ -36274,9 +32541,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "synth rock",
-      "synthwave",
-      "commercial",
-      "rock"
+      "synthwave"
     ]
   },
   {
@@ -36299,9 +32564,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "synth rock",
-      "synthwave",
-      "commercial",
-      "rock"
+      "synthwave"
     ]
   },
   {
@@ -36324,9 +32587,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "synth rock",
-      "synthwave",
-      "commercial",
-      "rock"
+      "synthwave"
     ]
   },
   {
@@ -36349,9 +32610,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "synth rock",
-      "synthwave",
-      "commercial",
-      "rock"
+      "synthwave"
     ]
   },
   {
@@ -36374,9 +32633,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "synth rock",
-      "synthwave",
-      "commercial",
-      "rock"
+      "synthwave"
     ]
   },
   {
@@ -36399,9 +32656,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "synth rock",
-      "synthwave",
-      "commercial",
-      "rock"
+      "synthwave"
     ]
   },
   {
@@ -36424,9 +32679,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "synth rock",
-      "synthwave",
-      "commercial",
-      "rock"
+      "synthwave"
     ]
   },
   {
@@ -36449,9 +32702,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "synth rock",
-      "synthwave",
-      "commercial",
-      "rock"
+      "synthwave"
     ]
   },
   {
@@ -36474,9 +32725,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "synth rock",
-      "synthwave",
-      "commercial",
-      "rock"
+      "synthwave"
     ]
   },
   {
@@ -36499,9 +32748,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "synth rock",
-      "synthwave",
-      "commercial",
-      "rock"
+      "synthwave"
     ]
   },
   {
@@ -36524,9 +32771,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "synth rock",
-      "synthwave",
-      "commercial",
-      "rock"
+      "synthwave"
     ]
   },
   {
@@ -36549,9 +32794,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "synth rock",
-      "synthwave",
-      "commercial",
-      "rock"
+      "synthwave"
     ]
   },
   {
@@ -36574,9 +32817,7 @@ export const productionSongRecords = [
     "tags": [
       "epic cinematic rock",
       "orchestral rock",
-      "film score trailer",
-      "commercial",
-      "rock"
+      "film score trailer"
     ]
   },
   {
@@ -36599,9 +32840,7 @@ export const productionSongRecords = [
     "tags": [
       "epic cinematic rock",
       "orchestral rock",
-      "film score trailer",
-      "commercial",
-      "rock"
+      "film score trailer"
     ]
   },
   {
@@ -36624,9 +32863,7 @@ export const productionSongRecords = [
     "tags": [
       "epic cinematic rock",
       "orchestral rock",
-      "film score trailer",
-      "commercial",
-      "rock"
+      "film score trailer"
     ]
   },
   {
@@ -36649,9 +32886,7 @@ export const productionSongRecords = [
     "tags": [
       "epic cinematic rock",
       "orchestral rock",
-      "film score trailer",
-      "commercial",
-      "rock"
+      "film score trailer"
     ]
   },
   {
@@ -36674,9 +32909,7 @@ export const productionSongRecords = [
     "tags": [
       "epic cinematic rock",
       "orchestral rock",
-      "film score trailer",
-      "commercial",
-      "rock"
+      "film score trailer"
     ]
   },
   {
@@ -36699,9 +32932,7 @@ export const productionSongRecords = [
     "tags": [
       "epic cinematic rock",
       "orchestral rock",
-      "film score trailer",
-      "commercial",
-      "rock"
+      "film score trailer"
     ]
   },
   {
@@ -36724,9 +32955,7 @@ export const productionSongRecords = [
     "tags": [
       "epic cinematic rock",
       "orchestral rock",
-      "film score trailer",
-      "commercial",
-      "rock"
+      "film score trailer"
     ]
   },
   {
@@ -36749,9 +32978,7 @@ export const productionSongRecords = [
     "tags": [
       "epic cinematic rock",
       "orchestral rock",
-      "film score trailer",
-      "commercial",
-      "rock"
+      "film score trailer"
     ]
   },
   {
@@ -36774,9 +33001,7 @@ export const productionSongRecords = [
     "tags": [
       "epic cinematic rock",
       "orchestral rock",
-      "film score trailer",
-      "commercial",
-      "rock"
+      "film score trailer"
     ]
   },
   {
@@ -36799,8 +33024,7 @@ export const productionSongRecords = [
     "tags": [
       "rock",
       "orchestral",
-      "cinematic",
-      "commercial"
+      "cinematic"
     ]
   },
   {
@@ -36823,8 +33047,7 @@ export const productionSongRecords = [
     "tags": [
       "rock",
       "orchestral",
-      "cinematic",
-      "commercial"
+      "cinematic"
     ]
   },
   {
@@ -36847,8 +33070,7 @@ export const productionSongRecords = [
     "tags": [
       "rock",
       "orchestral",
-      "cinematic",
-      "commercial"
+      "cinematic"
     ]
   },
   {
@@ -36871,8 +33093,7 @@ export const productionSongRecords = [
     "tags": [
       "rock",
       "orchestral",
-      "cinematic",
-      "commercial"
+      "cinematic"
     ]
   },
   {
@@ -36895,8 +33116,7 @@ export const productionSongRecords = [
     "tags": [
       "rock",
       "orchestral",
-      "cinematic",
-      "commercial"
+      "cinematic"
     ]
   },
   {
@@ -36919,8 +33139,7 @@ export const productionSongRecords = [
     "tags": [
       "rock",
       "orchestral",
-      "cinematic",
-      "commercial"
+      "cinematic"
     ]
   },
   {
@@ -36943,8 +33162,7 @@ export const productionSongRecords = [
     "tags": [
       "rock",
       "orchestral",
-      "cinematic",
-      "commercial"
+      "cinematic"
     ]
   },
   {
@@ -36967,8 +33185,7 @@ export const productionSongRecords = [
     "tags": [
       "rock",
       "orchestral",
-      "cinematic",
-      "commercial"
+      "cinematic"
     ]
   },
   {
@@ -36991,8 +33208,7 @@ export const productionSongRecords = [
     "tags": [
       "rock",
       "orchestral",
-      "cinematic",
-      "commercial"
+      "cinematic"
     ]
   },
   {
@@ -37015,8 +33231,7 @@ export const productionSongRecords = [
     "tags": [
       "rock",
       "orchestral",
-      "cinematic",
-      "commercial"
+      "cinematic"
     ]
   },
   {
@@ -37039,8 +33254,7 @@ export const productionSongRecords = [
     "tags": [
       "rock",
       "orchestral",
-      "cinematic",
-      "commercial"
+      "cinematic"
     ]
   },
   {
@@ -37063,9 +33277,7 @@ export const productionSongRecords = [
     "tags": [
       "modern rock",
       "rock anthem",
-      "alternative rock",
-      "commercial",
-      "rock"
+      "alternative rock"
     ]
   },
   {
@@ -37088,9 +33300,7 @@ export const productionSongRecords = [
     "tags": [
       "modern rock",
       "rock anthem",
-      "alternative rock",
-      "commercial",
-      "rock"
+      "alternative rock"
     ]
   },
   {
@@ -37113,9 +33323,7 @@ export const productionSongRecords = [
     "tags": [
       "modern rock",
       "rock anthem",
-      "alternative rock",
-      "commercial",
-      "rock"
+      "alternative rock"
     ]
   },
   {
@@ -37138,9 +33346,7 @@ export const productionSongRecords = [
     "tags": [
       "modern rock",
       "rock anthem",
-      "alternative rock",
-      "commercial",
-      "rock"
+      "alternative rock"
     ]
   },
   {
@@ -37163,9 +33369,7 @@ export const productionSongRecords = [
     "tags": [
       "modern rock",
       "rock anthem",
-      "alternative rock",
-      "commercial",
-      "rock"
+      "alternative rock"
     ]
   },
   {
@@ -37188,7 +33392,7 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "cinematic lo fi",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -37211,7 +33415,7 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "cinematic lo fi",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -37234,7 +33438,7 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "cinematic lo fi",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -37257,7 +33461,7 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "cinematic lo fi",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -37280,7 +33484,7 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "cinematic lo fi",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -37303,7 +33507,7 @@ export const productionSongRecords = [
     "tags": [
       "chill hop",
       "cinematic lo fi",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -37326,7 +33530,7 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "cinematic lo fi",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -37349,7 +33553,7 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "cinematic lo fi",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -37372,7 +33576,7 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "cinematic lo fi",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -37395,7 +33599,7 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "cinematic lo fi",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -37418,7 +33622,7 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "cinematic lo fi",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -37441,7 +33645,7 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "cinematic lo fi",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -37464,7 +33668,7 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "cinematic lo fi",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -37487,7 +33691,7 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "cinematic lo fi",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -37510,7 +33714,7 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "cinematic lo fi",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -37533,8 +33737,7 @@ export const productionSongRecords = [
     "tags": [
       "hip hop",
       "lo fi",
-      "mellow",
-      "electronic"
+      "mellow"
     ]
   },
   {
@@ -37557,8 +33760,7 @@ export const productionSongRecords = [
     "tags": [
       "hip hop",
       "lo fi",
-      "mellow",
-      "electronic"
+      "mellow"
     ]
   },
   {
@@ -37581,8 +33783,7 @@ export const productionSongRecords = [
     "tags": [
       "hip hop",
       "lo fi",
-      "mellow",
-      "electronic"
+      "mellow"
     ]
   },
   {
@@ -37605,8 +33806,7 @@ export const productionSongRecords = [
     "tags": [
       "hip hop",
       "lo fi",
-      "mellow",
-      "electronic"
+      "mellow"
     ]
   },
   {
@@ -37629,8 +33829,7 @@ export const productionSongRecords = [
     "tags": [
       "hip hop",
       "lo fi",
-      "mellow",
-      "electronic"
+      "mellow"
     ]
   },
   {
@@ -37653,8 +33852,7 @@ export const productionSongRecords = [
     "tags": [
       "hip hop",
       "lo fi",
-      "mellow",
-      "electronic"
+      "mellow"
     ]
   },
   {
@@ -37677,8 +33875,7 @@ export const productionSongRecords = [
     "tags": [
       "hip hop",
       "lo fi",
-      "mellow",
-      "electronic"
+      "mellow"
     ]
   },
   {
@@ -37701,8 +33898,7 @@ export const productionSongRecords = [
     "tags": [
       "hip hop",
       "lo fi",
-      "mellow",
-      "electronic"
+      "mellow"
     ]
   },
   {
@@ -37725,8 +33921,7 @@ export const productionSongRecords = [
     "tags": [
       "hip hop",
       "lo fi",
-      "mellow",
-      "electronic"
+      "mellow"
     ]
   },
   {
@@ -37749,8 +33944,7 @@ export const productionSongRecords = [
     "tags": [
       "hip hop",
       "lo fi",
-      "mellow",
-      "electronic"
+      "mellow"
     ]
   },
   {
@@ -37773,8 +33967,7 @@ export const productionSongRecords = [
     "tags": [
       "hip hop",
       "lo fi",
-      "mellow",
-      "electronic"
+      "mellow"
     ]
   },
   {
@@ -37797,8 +33990,7 @@ export const productionSongRecords = [
     "tags": [
       "hip hop",
       "lo fi",
-      "mellow",
-      "electronic"
+      "mellow"
     ]
   },
   {
@@ -37821,8 +34013,7 @@ export const productionSongRecords = [
     "tags": [
       "hip hop",
       "lo fi",
-      "mellow",
-      "electronic"
+      "mellow"
     ]
   },
   {
@@ -37845,8 +34036,7 @@ export const productionSongRecords = [
     "tags": [
       "hip hop",
       "lo fi",
-      "mellow",
-      "electronic"
+      "mellow"
     ]
   },
   {
@@ -37869,8 +34059,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "chill mellow",
-      "cinematic",
-      "electronic"
+      "cinematic"
     ]
   },
   {
@@ -37893,8 +34082,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "chill mellow",
-      "cinematic",
-      "electronic"
+      "cinematic"
     ]
   },
   {
@@ -37917,8 +34105,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "chill mellow",
-      "cinematic",
-      "electronic"
+      "cinematic"
     ]
   },
   {
@@ -37941,8 +34128,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "chill mellow",
-      "cinematic",
-      "electronic"
+      "cinematic"
     ]
   },
   {
@@ -37965,8 +34151,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "chill mellow",
-      "cinematic",
-      "electronic"
+      "cinematic"
     ]
   },
   {
@@ -37989,8 +34174,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "chill mellow",
-      "cinematic",
-      "electronic"
+      "cinematic"
     ]
   },
   {
@@ -38013,8 +34197,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "chill mellow",
-      "cinematic",
-      "electronic"
+      "cinematic"
     ]
   },
   {
@@ -38037,8 +34220,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "chill mellow",
-      "cinematic",
-      "electronic"
+      "cinematic"
     ]
   },
   {
@@ -38061,8 +34243,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "chill mellow",
-      "cinematic",
-      "electronic"
+      "cinematic"
     ]
   },
   {
@@ -38085,8 +34266,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "chill mellow",
-      "cinematic",
-      "electronic"
+      "cinematic"
     ]
   },
   {
@@ -38109,8 +34289,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "chill mellow",
-      "cinematic",
-      "electronic"
+      "cinematic"
     ]
   },
   {
@@ -38133,8 +34312,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "chill mellow",
-      "cinematic",
-      "electronic"
+      "cinematic"
     ]
   },
   {
@@ -38157,7 +34335,7 @@ export const productionSongRecords = [
     "tags": [
       "jazz tinged",
       "warm nostalgic",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -38180,7 +34358,7 @@ export const productionSongRecords = [
     "tags": [
       "jazz tinged",
       "warm nostalgic",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -38203,7 +34381,7 @@ export const productionSongRecords = [
     "tags": [
       "jazz tinged",
       "warm nostalgic",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -38226,7 +34404,7 @@ export const productionSongRecords = [
     "tags": [
       "jazz tinged",
       "warm nostalgic",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -38249,7 +34427,7 @@ export const productionSongRecords = [
     "tags": [
       "jazz tinged",
       "warm nostalgic",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -38272,7 +34450,7 @@ export const productionSongRecords = [
     "tags": [
       "jazz tinged",
       "warm nostalgic",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -38295,7 +34473,7 @@ export const productionSongRecords = [
     "tags": [
       "jazz tinged",
       "warm nostalgic",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -38318,7 +34496,7 @@ export const productionSongRecords = [
     "tags": [
       "jazz tinged",
       "warm nostalgic",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -38341,7 +34519,7 @@ export const productionSongRecords = [
     "tags": [
       "jazz tinged",
       "warm nostalgic",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -38364,7 +34542,7 @@ export const productionSongRecords = [
     "tags": [
       "calming",
       "warm",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -38387,7 +34565,7 @@ export const productionSongRecords = [
     "tags": [
       "calming",
       "warm",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -38410,7 +34588,7 @@ export const productionSongRecords = [
     "tags": [
       "calming",
       "warm",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -38433,7 +34611,7 @@ export const productionSongRecords = [
     "tags": [
       "calming",
       "warm",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -38456,7 +34634,7 @@ export const productionSongRecords = [
     "tags": [
       "calming",
       "warm",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -38479,7 +34657,7 @@ export const productionSongRecords = [
     "tags": [
       "calming",
       "warm",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -38502,7 +34680,7 @@ export const productionSongRecords = [
     "tags": [
       "calming",
       "warm",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -38525,7 +34703,7 @@ export const productionSongRecords = [
     "tags": [
       "calming",
       "warm",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -38548,7 +34726,7 @@ export const productionSongRecords = [
     "tags": [
       "calming",
       "warm",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -38571,7 +34749,7 @@ export const productionSongRecords = [
     "tags": [
       "calming",
       "warm",
-      "electronic"
+      "lo fi"
     ]
   },
   {
@@ -38594,8 +34772,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "meditative",
-      "electronic"
+      "meditative"
     ]
   },
   {
@@ -38618,8 +34795,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic soundtrack",
-      "orchestral",
-      "electronic"
+      "orchestral"
     ]
   },
   {
@@ -38642,8 +34818,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "soundtrack",
-      "drone",
-      "electronic"
+      "drone"
     ]
   },
   {
@@ -38666,8 +34841,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "soundtrack",
-      "cinematic",
-      "electronic"
+      "cinematic"
     ]
   },
   {
@@ -38690,9 +34864,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic ambient",
       "orchestral ambient",
-      "sci fi cinematic",
-      "electronic",
-      "ambient"
+      "sci fi cinematic"
     ]
   },
   {
@@ -38715,9 +34887,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "ambient soundtrack",
-      "cinematic",
-      "electronic",
-      "ambient"
+      "cinematic"
     ]
   },
   {
@@ -38740,8 +34910,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "soundtrack",
-      "drone",
-      "electronic"
+      "drone"
     ]
   },
   {
@@ -38764,10 +34933,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "ambient",
-      "orchestral",
-      "cinematic",
-      "dramatic",
-      "electronic"
+      "orchestral"
     ]
   },
   {
@@ -38790,8 +34956,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "drone soundtrack",
-      "electronic"
+      "drone"
     ]
   },
   {
@@ -38814,16 +34979,7 @@ export const productionSongRecords = [
     "tags": [
       "soothing",
       "calming",
-      "sleep",
-      "sonic",
-      "deep",
-      "slow",
-      "warm",
-      "ambient",
-      "soft",
-      "emotional",
-      "gentle",
-      "electronic"
+      "sleep"
     ]
   },
   {
@@ -38846,8 +35002,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "drone",
-      "electronic"
+      "drone"
     ]
   },
   {
@@ -38870,9 +35025,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "ambient soundtrack",
-      "cinematic",
-      "electronic",
-      "ambient"
+      "cinematic"
     ]
   },
   {
@@ -38895,8 +35048,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "sleep",
-      "electronic"
+      "sleep"
     ]
   },
   {
@@ -38919,8 +35071,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "drone",
-      "electronic"
+      "drone"
     ]
   },
   {
@@ -38943,8 +35094,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "drone",
-      "soundtrack",
-      "electronic"
+      "soundtrack"
     ]
   },
   {
@@ -38967,8 +35117,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "downtempo",
-      "electronic"
+      "downtempo"
     ]
   },
   {
@@ -38991,8 +35140,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "drone ambient",
-      "electronic"
+      "drone ambient"
     ]
   },
   {
@@ -39015,9 +35163,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic soundtrack",
-      "orchestral",
-      "futuristic immersive",
-      "electronic"
+      "orchestral"
     ]
   },
   {
@@ -39040,10 +35186,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic ambient",
       "orchestral soundtrack",
-      "cinematic drama",
-      "ambient",
-      "world",
-      "electronic"
+      "cinematic drama"
     ]
   },
   {
@@ -39066,20 +35209,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient soundscape",
       "soft piano echoes",
-      "cinematic drones",
-      "gentle pulsing textures",
-      "layers bloom",
-      "finally thinning again",
-      "subtle stereo movement",
-      "deep",
-      "spacious",
-      "ambient",
-      "calming",
-      "warm",
-      "sleep",
-      "soft",
-      "sonic",
-      "gentle"
+      "cinematic drones"
     ]
   },
   {
@@ -39102,8 +35232,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic soundtrack",
-      "drone",
-      "electronic"
+      "drone"
     ]
   },
   {
@@ -39126,9 +35255,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "drone",
-      "warm ambient",
-      "electronic"
+      "drone"
     ]
   },
   {
@@ -39151,8 +35278,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic soundtrack",
-      "orchestral",
-      "electronic"
+      "orchestral"
     ]
   },
   {
@@ -39175,9 +35301,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "drone",
-      "warm synth pads",
-      "electronic"
+      "drone"
     ]
   },
   {
@@ -39200,8 +35324,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "orchestral",
-      "electronic"
+      "orchestral"
     ]
   },
   {
@@ -39224,8 +35347,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "drone",
-      "cinematic soundtrack",
-      "electronic"
+      "cinematic soundtrack"
     ]
   },
   {
@@ -39248,8 +35370,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "soundtrack",
-      "cinematic",
-      "electronic"
+      "cinematic"
     ]
   },
   {
@@ -39272,8 +35393,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "deep ambient",
-      "electronic"
+      "deep ambient"
     ]
   },
   {
@@ -39296,8 +35416,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "drones",
-      "electronic"
+      "drones"
     ]
   },
   {
@@ -39320,8 +35439,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic soundtrack",
-      "drone",
-      "electronic"
+      "drone"
     ]
   },
   {
@@ -39344,8 +35462,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "meditative",
-      "electronic"
+      "meditative"
     ]
   },
   {
@@ -39368,8 +35485,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "drone",
-      "soundtrack",
-      "electronic"
+      "soundtrack"
     ]
   },
   {
@@ -39392,8 +35508,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "drone",
-      "cinematic soundtrack",
-      "electronic"
+      "cinematic soundtrack"
     ]
   },
   {
@@ -39416,8 +35531,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "drone",
-      "soundtrack",
-      "electronic"
+      "soundtrack"
     ]
   },
   {
@@ -39440,8 +35554,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "drone",
-      "soundtrack",
-      "electronic"
+      "soundtrack"
     ]
   },
   {
@@ -39464,8 +35577,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "soundtrack",
-      "drone",
-      "electronic"
+      "drone"
     ]
   },
   {
@@ -39488,8 +35600,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "soundtrack",
-      "drone",
-      "electronic"
+      "drone"
     ]
   },
   {
@@ -39512,9 +35623,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic ambient",
       "orchestral ambient",
-      "sci fi cinematic",
-      "electronic",
-      "ambient"
+      "sci fi cinematic"
     ]
   },
   {
@@ -39537,8 +35646,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic soundtrack",
-      "drone",
-      "electronic"
+      "drone"
     ]
   },
   {
@@ -39561,9 +35669,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic soundtrack",
-      "orchestral",
-      "futuristic immersive",
-      "electronic"
+      "orchestral"
     ]
   },
   {
@@ -39586,8 +35692,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "drones",
-      "electronic"
+      "drones"
     ]
   },
   {
@@ -39610,10 +35715,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic ambient",
       "orchestral soundtrack",
-      "cinematic drama",
-      "ambient",
-      "world",
-      "electronic"
+      "cinematic drama"
     ]
   },
   {
@@ -39636,8 +35738,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic soundtrack",
-      "orchestral",
-      "electronic"
+      "orchestral"
     ]
   },
   {
@@ -39660,8 +35761,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic soundtrack",
-      "drone",
-      "electronic"
+      "drone"
     ]
   },
   {
@@ -39684,8 +35784,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic soundtrack",
-      "orchestral",
-      "electronic"
+      "orchestral"
     ]
   },
   {
@@ -39708,9 +35807,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "drone",
-      "warm synth pads",
-      "electronic"
+      "drone"
     ]
   },
   {
@@ -39733,10 +35830,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "ambient",
-      "orchestral",
-      "cinematic",
-      "dramatic",
-      "electronic"
+      "orchestral"
     ]
   },
   {
@@ -39759,8 +35853,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "drone soundtrack",
-      "electronic"
+      "drone"
     ]
   },
   {
@@ -39783,8 +35876,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "drone ambient",
-      "electronic"
+      "drone ambient"
     ]
   },
   {
@@ -39807,9 +35899,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic ambient",
       "orchestral",
-      "soundtrack",
-      "electronic",
-      "ambient"
+      "soundtrack"
     ]
   },
   {
@@ -39832,8 +35922,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "deep ambient",
-      "electronic"
+      "deep ambient"
     ]
   },
   {
@@ -39856,8 +35945,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "drone",
-      "cinematic soundtrack",
-      "electronic"
+      "cinematic soundtrack"
     ]
   },
   {
@@ -39880,8 +35968,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "sleep",
-      "electronic"
+      "sleep"
     ]
   },
   {
@@ -39904,9 +35991,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic ambient",
       "orchestral",
-      "soundtrack",
-      "electronic",
-      "ambient"
+      "soundtrack"
     ]
   },
   {
@@ -39929,8 +36014,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "drone",
-      "cinematic soundtrack",
-      "electronic"
+      "cinematic soundtrack"
     ]
   },
   {
@@ -39953,8 +36037,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "orchestral",
-      "electronic"
+      "orchestral"
     ]
   },
   {
@@ -39977,8 +36060,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "downtempo",
-      "electronic"
+      "downtempo"
     ]
   },
   {
@@ -40001,16 +36083,7 @@ export const productionSongRecords = [
     "tags": [
       "soothing",
       "calming",
-      "sleep",
-      "sonic",
-      "deep",
-      "slow",
-      "warm",
-      "ambient",
-      "soft",
-      "emotional",
-      "gentle",
-      "electronic"
+      "sleep"
     ]
   },
   {
@@ -40033,8 +36106,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "drone",
-      "cinematic soundtrack",
-      "electronic"
+      "cinematic soundtrack"
     ]
   },
   {
@@ -40057,8 +36129,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "drone",
-      "cinematic soundtrack",
-      "electronic"
+      "cinematic soundtrack"
     ]
   },
   {
@@ -40082,11 +36153,7 @@ export const productionSongRecords = [
     "tags": [
       "soulful",
       "electric",
-      "blues rock",
-      "classic",
-      "blues",
-      "rock",
-      "indie"
+      "blues rock"
     ]
   },
   {
@@ -40110,9 +36177,7 @@ export const productionSongRecords = [
     "tags": [
       "electric",
       "rock",
-      "blues rock",
-      "indie",
-      "blues"
+      "blues rock"
     ]
   },
   {
@@ -40136,8 +36201,7 @@ export const productionSongRecords = [
     "tags": [
       "blues rock",
       "rock",
-      "blues",
-      "indie"
+      "blues"
     ]
   },
   {
@@ -40161,9 +36225,7 @@ export const productionSongRecords = [
     "tags": [
       "blues rock",
       "rock",
-      "electric blues",
-      "indie",
-      "blues"
+      "electric blues"
     ]
   },
   {
@@ -40187,8 +36249,7 @@ export const productionSongRecords = [
     "tags": [
       "delta blues",
       "blues",
-      "soulful",
-      "indie"
+      "soulful"
     ]
   },
   {
@@ -40212,8 +36273,7 @@ export const productionSongRecords = [
     "tags": [
       "delta blues",
       "blues",
-      "soulful",
-      "indie"
+      "soulful"
     ]
   },
   {
@@ -40237,8 +36297,7 @@ export const productionSongRecords = [
     "tags": [
       "delta blues",
       "blues",
-      "soulful",
-      "indie"
+      "soulful"
     ]
   },
   {
@@ -40262,8 +36321,7 @@ export const productionSongRecords = [
     "tags": [
       "delta blues",
       "blues",
-      "vintage soul",
-      "indie"
+      "vintage soul"
     ]
   },
   {
@@ -40287,8 +36345,7 @@ export const productionSongRecords = [
     "tags": [
       "delta blues",
       "blues",
-      "soulful",
-      "indie"
+      "soulful"
     ]
   },
   {
@@ -40336,8 +36393,7 @@ export const productionSongRecords = [
     "tags": [
       "delta blues",
       "blues",
-      "soul blues",
-      "indie"
+      "soul blues"
     ]
   },
   {
@@ -40361,8 +36417,7 @@ export const productionSongRecords = [
     "tags": [
       "blues rock",
       "rock",
-      "blues",
-      "indie"
+      "blues"
     ]
   },
   {
@@ -40386,8 +36441,7 @@ export const productionSongRecords = [
     "tags": [
       "electric blues",
       "blues",
-      "jazz",
-      "indie"
+      "jazz"
     ]
   },
   {
@@ -40411,9 +36465,7 @@ export const productionSongRecords = [
     "tags": [
       "electric blues",
       "jazz blues",
-      "soulful",
-      "indie",
-      "blues"
+      "soulful"
     ]
   },
   {
@@ -40437,8 +36489,7 @@ export const productionSongRecords = [
     "tags": [
       "electric blues",
       "soulful",
-      "blues",
-      "indie"
+      "blues"
     ]
   },
   {
@@ -40462,9 +36513,7 @@ export const productionSongRecords = [
     "tags": [
       "electric blues",
       "soul",
-      "smooth jazz",
-      "indie",
-      "blues"
+      "smooth jazz"
     ]
   },
   {
@@ -40487,8 +36536,7 @@ export const productionSongRecords = [
     "tags": [
       "blues",
       "electric blues",
-      "jazz",
-      "indie"
+      "jazz"
     ]
   },
   {
@@ -40512,8 +36560,7 @@ export const productionSongRecords = [
     "tags": [
       "delta blues",
       "blues",
-      "raw soulful",
-      "indie"
+      "raw soulful"
     ]
   },
   {
@@ -40537,8 +36584,7 @@ export const productionSongRecords = [
     "tags": [
       "delta blues",
       "blues",
-      "heartfelt soulful raw",
-      "indie"
+      "heartfelt soulful raw"
     ]
   },
   {
@@ -40562,8 +36608,7 @@ export const productionSongRecords = [
     "tags": [
       "delta blues",
       "blues",
-      "emotional soulful blues",
-      "indie"
+      "emotional soulful blues"
     ]
   },
   {
@@ -40586,8 +36631,7 @@ export const productionSongRecords = [
     "tags": [
       "electric blues",
       "blues",
-      "jazz",
-      "indie"
+      "jazz"
     ]
   },
   {
@@ -40610,8 +36654,7 @@ export const productionSongRecords = [
     "tags": [
       "blues",
       "electric blues",
-      "jazz",
-      "indie"
+      "jazz"
     ]
   },
   {
@@ -40635,9 +36678,7 @@ export const productionSongRecords = [
     "tags": [
       "smooth blues",
       "electric blues",
-      "soulful jazz",
-      "indie",
-      "blues"
+      "soulful jazz"
     ]
   },
   {
@@ -40661,9 +36702,7 @@ export const productionSongRecords = [
     "tags": [
       "electric blues",
       "jazz inflected blues",
-      "soulful",
-      "indie",
-      "blues"
+      "soulful"
     ]
   },
   {
@@ -40686,8 +36725,7 @@ export const productionSongRecords = [
     "tags": [
       "electric blues",
       "blues",
-      "jazz",
-      "indie"
+      "jazz"
     ]
   },
   {
@@ -40710,16 +36748,7 @@ export const productionSongRecords = [
     "tags": [
       "crushing palm muted",
       "glossy",
-      "brutal",
-      "cinematic",
-      "electro",
-      "soaring",
-      "hard rock",
-      "electric",
-      "electronic",
-      "commercial",
-      "hard",
-      "rock"
+      "brutal"
     ]
   },
   {
@@ -40742,20 +36771,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock anthem",
       "thunderous live drums",
-      "heavy bass",
-      "gritty male vocals",
-      "reverse cymbal",
-      "snare flam accents",
-      "polished",
-      "massive",
-      "aggressive",
-      "emotional",
-      "rock",
-      "rhythmic",
-      "headbanging",
-      "hard rock",
-      "soaring",
-      "electric"
+      "heavy bass"
     ]
   },
   {
@@ -40778,20 +36794,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock anthem",
       "toms",
-      "rising strings",
-      "brass hits",
-      "snap string runs",
-      "massive",
-      "bright",
-      "battle ready",
-      "emotional",
-      "soaring",
-      "hard rock",
-      "dramatic",
-      "orchestral",
-      "commercial",
-      "hard",
-      "rock"
+      "rising strings"
     ]
   },
   {
@@ -40814,20 +36817,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock anthem",
       "palm muted riff",
-      "cinematic orchestral",
-      "power chords",
-      "unison hook",
-      "vocals are gritty",
-      "stacked",
-      "timpani hits before",
-      "soaring string lift",
-      "is huge",
-      "bright",
-      "battle cinematic",
-      "dramatic",
-      "soaring",
-      "hard rock",
-      "emotional"
+      "cinematic orchestral"
     ]
   },
   {
@@ -40850,19 +36840,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock anthem",
       "gritty",
-      "screaming guitar pinch",
-      "polished",
-      "massive",
-      "stadium bright",
-      "headbanging",
-      "electric",
-      "rock",
-      "rhythmic",
-      "hard rock",
-      "soaring",
-      "emotional",
-      "commercial",
-      "hard"
+      "screaming guitar pinch"
     ]
   },
   {
@@ -40885,18 +36863,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock",
       "pounding toms",
-      "deep bass grooves",
-      "cinematic tension",
-      "reverse",
-      "punchy modern low",
-      "raw live band",
-      "dramatic",
-      "emotional",
-      "melodic hard rock",
-      "deep",
-      "commercial",
-      "hard",
-      "rock"
+      "deep bass grooves"
     ]
   },
   {
@@ -40919,20 +36886,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock",
       "syncopated palm muted",
-      "thunderous live drums",
-      "an anthem ready",
-      "gritty male vocals",
-      "rasped",
-      "layered hook doubles",
-      "shout along gang",
-      "stadium sized",
-      "headbanging",
-      "electric",
-      "emotional",
-      "rock",
-      "rhythmic",
-      "soaring",
-      "commercial"
+      "thunderous live drums"
     ]
   },
   {
@@ -40955,20 +36909,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock anthem",
       "syncopated palm muted",
-      "thunderous tom hits",
-      "sweeping string brass",
-      "soaring high note",
-      "explosive risers",
-      "reverse cymbal",
-      "huge bright",
-      "hard rock",
-      "dramatic",
-      "soaring",
-      "orchestral",
-      "emotional",
-      "commercial",
-      "hard",
-      "rock"
+      "thunderous tom hits"
     ]
   },
   {
@@ -40991,20 +36932,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock anthem",
       "thunderous live drums",
-      "gritty male vocals",
-      "tape stop hit",
-      "soaring guitar after",
-      "polished",
-      "massive",
-      "stadium bright",
-      "headbanging",
-      "emotional",
-      "soaring",
-      "electric",
-      "rhythmic",
-      "rock",
-      "hard rock",
-      "commercial"
+      "gritty male vocals"
     ]
   },
   {
@@ -41027,20 +36955,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock anthem",
       "syncopated palm muted",
-      "thunderous tom hits",
-      "sweeping string brass",
-      "soaring high note",
-      "explosive risers",
-      "reverse cymbal",
-      "huge bright",
-      "hard rock",
-      "dramatic",
-      "soaring",
-      "orchestral",
-      "emotional",
-      "commercial",
-      "hard",
-      "rock"
+      "thunderous tom hits"
     ]
   },
   {
@@ -41063,20 +36978,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock anthem",
       "syncopated palm muted",
-      "thunderous live drums",
-      "hook that opens",
-      "gritty male vocals",
-      "on key phrases",
-      "reverse cymbal before",
-      "polished",
-      "punishingly loud",
-      "hard rock",
-      "soaring",
-      "headbanging",
-      "electric",
-      "rock",
-      "rhythmic",
-      "emotional"
+      "thunderous live drums"
     ]
   },
   {
@@ -41099,19 +37001,7 @@ export const productionSongRecords = [
     "tags": [
       "dark melodic hard",
       "tom hits",
-      "gritty guitar chugs",
-      "stacked doubles",
-      "chantable gang hook",
-      "raw live band",
-      "cinematic textures",
-      "bright punchy",
-      "deep",
-      "emotional",
-      "dramatic",
-      "melodic hard rock",
-      "commercial",
-      "hard",
-      "rock"
+      "gritty guitar chugs"
     ]
   },
   {
@@ -41134,20 +37024,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock anthem",
       "brass stabs",
-      "power chords",
-      "is rough",
-      "taiko rolls",
-      "is huge",
-      "bright",
-      "battle cinematic",
-      "emotional",
-      "orchestral",
-      "dramatic",
-      "hard rock",
-      "soaring",
-      "commercial",
-      "hard",
-      "rock"
+      "power chords"
     ]
   },
   {
@@ -41170,20 +37047,7 @@ export const productionSongRecords = [
     "tags": [
       "electro hard rock",
       "aggressive electronic basslines",
-      "punchy hybrid drums",
-      "cinematic synth",
-      "explosive sections",
-      "rebellious stadium chants",
-      "male vocals",
-      "gritty doubles",
-      "reverse impacts",
-      "polished",
-      "hard rock",
-      "soaring",
-      "electric",
-      "electronic",
-      "electro",
-      "commercial"
+      "punchy hybrid drums"
     ]
   },
   {
@@ -41206,18 +37070,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock anthem",
       "punchy hybrid drums",
-      "polished",
-      "aggressive",
-      "futuristic",
-      "stadium bright",
-      "hard rock",
-      "electro",
-      "electric",
-      "soaring",
-      "electronic",
-      "commercial",
-      "hard",
-      "rock"
+      "polished"
     ]
   },
   {
@@ -41240,17 +37093,7 @@ export const productionSongRecords = [
     "tags": [
       "dark melodic hard",
       "distorted",
-      "punchy",
-      "cinematic",
-      "tape worn impacts",
-      "bright modern stadium",
-      "dramatic",
-      "emotional",
-      "deep",
-      "melodic hard rock",
-      "commercial",
-      "hard",
-      "rock"
+      "punchy"
     ]
   },
   {
@@ -41273,19 +37116,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock anthem",
       "crushing palm muted",
-      "is gritty",
-      "taiko hits",
-      "massive",
-      "bright",
-      "punchy",
-      "hard rock",
-      "orchestral",
-      "soaring",
-      "dramatic",
-      "emotional",
-      "commercial",
-      "hard",
-      "rock"
+      "is gritty"
     ]
   },
   {
@@ -41306,9 +37137,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Commercial/Hard Rock/Electric Thunder Through the Veins",
     "metadataText": "",
     "tags": [
+      "hard rock",
       "commercial",
-      "hard",
-      "rock"
+      "instrumental"
     ]
   },
   {
@@ -41331,20 +37162,7 @@ export const productionSongRecords = [
     "tags": [
       "electro hard rock",
       "punchy hybrid drums",
-      "pulse synced bass",
-      "groove",
-      "is gritty",
-      "chopped",
-      "glitch sparks",
-      "polished",
-      "cinematic",
-      "high impact",
-      "electric",
-      "hard rock",
-      "electronic",
-      "electro",
-      "soaring",
-      "commercial"
+      "pulse synced bass"
     ]
   },
   {
@@ -41367,20 +37185,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock anthem",
       "punchy palm muted",
-      "thunderous live drums",
-      "snarling bass",
-      "reverse",
-      "cymbal lifts",
-      "bright",
-      "huge",
-      "arena ready",
-      "electric",
-      "rhythmic",
-      "hard rock",
-      "emotional",
-      "rock",
-      "soaring",
-      "headbanging"
+      "thunderous live drums"
     ]
   },
   {
@@ -41403,20 +37208,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock",
       "pounding kick snare",
-      "thick bass",
-      "razor guitar riffs",
-      "stadium sized",
-      "polished",
-      "bright",
-      "aggressive",
-      "reverse",
-      "explosive cymbal lifts",
-      "rock",
-      "electric",
-      "rhythmic",
-      "emotional",
-      "soaring",
-      "headbanging"
+      "thick bass"
     ]
   },
   {
@@ -41439,20 +37231,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock anthem",
       "octave guitars",
-      "massive timpani accents",
-      "low sub hits",
-      "sword sharp string",
-      "huge",
-      "bright",
-      "battle ready",
-      "dramatic",
-      "emotional",
-      "orchestral",
-      "soaring",
-      "hard rock",
-      "commercial",
-      "hard",
-      "rock"
+      "massive timpani accents"
     ]
   },
   {
@@ -41475,20 +37254,7 @@ export const productionSongRecords = [
     "tags": [
       "electro hard rock",
       "syncopated hybrid drums",
-      "crushing palm muted",
-      "aggressive synth bass",
-      "reverse cymbal",
-      "impact hits",
-      "polished",
-      "bright",
-      "stadium sized",
-      "soaring",
-      "electronic",
-      "electric",
-      "electro",
-      "hard rock",
-      "commercial",
-      "hard"
+      "crushing palm muted"
     ]
   },
   {
@@ -41511,20 +37277,7 @@ export const productionSongRecords = [
     "tags": [
       "electro hard rock",
       "syncopated hybrid drums",
-      "crushing palm muted",
-      "aggressive synth bass",
-      "reverse cymbal",
-      "impact hits",
-      "polished",
-      "bright",
-      "stadium sized",
-      "soaring",
-      "electronic",
-      "electric",
-      "electro",
-      "hard rock",
-      "commercial",
-      "hard"
+      "crushing palm muted"
     ]
   },
   {
@@ -41547,20 +37300,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock anthem",
       "toms",
-      "rising strings",
-      "brass hits",
-      "snap string runs",
-      "massive",
-      "bright",
-      "battle ready",
-      "emotional",
-      "soaring",
-      "hard rock",
-      "dramatic",
-      "orchestral",
-      "commercial",
-      "hard",
-      "rock"
+      "rising strings"
     ]
   },
   {
@@ -41583,20 +37323,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock anthem",
       "syncopated palm muted",
-      "thunderous live drums",
-      "hook that opens",
-      "gritty male vocals",
-      "on key phrases",
-      "reverse cymbal before",
-      "polished",
-      "punishingly loud",
-      "hard rock",
-      "soaring",
-      "headbanging",
-      "electric",
-      "rock",
-      "rhythmic",
-      "emotional"
+      "thunderous live drums"
     ]
   },
   {
@@ -41619,20 +37346,7 @@ export const productionSongRecords = [
     "tags": [
       "electro hard rock",
       "punchy hybrid drums",
-      "pulse synced bass",
-      "groove",
-      "is gritty",
-      "chopped",
-      "glitch sparks",
-      "polished",
-      "cinematic",
-      "high impact",
-      "electric",
-      "hard rock",
-      "electronic",
-      "electro",
-      "soaring",
-      "commercial"
+      "pulse synced bass"
     ]
   },
   {
@@ -41655,20 +37369,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock anthem",
       "thunderous live drums",
-      "gritty male vocals",
-      "heavy bass",
-      "aggressive rhythmic drive",
-      "explodes into a",
-      "polished modern rock",
-      "huge low end",
-      "bright guitars",
-      "raw stadium punch",
-      "crowd ready",
-      "rhythmic",
-      "electric",
-      "rock",
-      "emotional",
-      "hard rock"
+      "gritty male vocals"
     ]
   },
   {
@@ -41691,20 +37392,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock anthem",
       "palm muted riff",
-      "cinematic orchestral",
-      "power chords",
-      "unison hook",
-      "vocals are gritty",
-      "stacked",
-      "timpani hits before",
-      "soaring string lift",
-      "is huge",
-      "bright",
-      "battle cinematic",
-      "dramatic",
-      "soaring",
-      "hard rock",
-      "emotional"
+      "cinematic orchestral"
     ]
   },
   {
@@ -41727,19 +37415,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock anthem",
       "crushing palm muted",
-      "reverse cymbal",
-      "feedback dives",
-      "polished",
-      "massive stadium",
-      "rhythmic",
-      "soaring",
-      "electric",
-      "rock",
-      "emotional",
-      "headbanging",
-      "hard rock",
-      "commercial",
-      "hard"
+      "reverse cymbal"
     ]
   },
   {
@@ -41762,20 +37438,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock anthem",
       "syncopated palm muted",
-      "thunderous tom hits",
-      "sweeping string brass",
-      "soaring high note",
-      "explosive risers",
-      "reverse cymbal",
-      "huge bright",
-      "hard rock",
-      "dramatic",
-      "soaring",
-      "orchestral",
-      "emotional",
-      "commercial",
-      "hard",
-      "rock"
+      "thunderous tom hits"
     ]
   },
   {
@@ -41798,17 +37461,7 @@ export const productionSongRecords = [
     "tags": [
       "dark melodic hard",
       "distorted",
-      "punchy",
-      "cinematic",
-      "tape worn impacts",
-      "bright modern stadium",
-      "dramatic",
-      "emotional",
-      "deep",
-      "melodic hard rock",
-      "commercial",
-      "hard",
-      "rock"
+      "punchy"
     ]
   },
   {
@@ -41831,19 +37484,7 @@ export const productionSongRecords = [
     "tags": [
       "dark melodic hard",
       "tom hits",
-      "gritty guitar chugs",
-      "stacked doubles",
-      "chantable gang hook",
-      "raw live band",
-      "cinematic textures",
-      "bright punchy",
-      "deep",
-      "emotional",
-      "dramatic",
-      "melodic hard rock",
-      "commercial",
-      "hard",
-      "rock"
+      "gritty guitar chugs"
     ]
   },
   {
@@ -41866,19 +37507,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock anthem",
       "chugging palm muted",
-      "heavy bass lock",
-      "gritty",
-      "arena sized gang",
-      "bright",
-      "hard rock",
-      "emotional",
-      "electric",
-      "rhythmic",
-      "headbanging",
-      "rock",
-      "soaring",
-      "commercial",
-      "hard"
+      "heavy bass lock"
     ]
   },
   {
@@ -41901,18 +37530,7 @@ export const productionSongRecords = [
     "tags": [
       "swung drums",
       "heavy distorted guitar",
-      "deep bass grooves",
-      "gritty male vocals",
-      "dramatic solo explodes",
-      "cinematic",
-      "bright punchy",
-      "melodic hard rock",
-      "emotional",
-      "dramatic",
-      "deep",
-      "commercial",
-      "hard",
-      "rock"
+      "deep bass grooves"
     ]
   },
   {
@@ -41935,16 +37553,7 @@ export const productionSongRecords = [
     "tags": [
       "crushing palm muted",
       "glossy",
-      "brutal",
-      "cinematic",
-      "electro",
-      "soaring",
-      "hard rock",
-      "electric",
-      "electronic",
-      "commercial",
-      "hard",
-      "rock"
+      "brutal"
     ]
   },
   {
@@ -41967,19 +37576,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock anthem",
       "crushing palm muted",
-      "is gritty",
-      "taiko hits",
-      "massive",
-      "bright",
-      "punchy",
-      "hard rock",
-      "orchestral",
-      "soaring",
-      "dramatic",
-      "emotional",
-      "commercial",
-      "hard",
-      "rock"
+      "is gritty"
     ]
   },
   {
@@ -42002,20 +37599,7 @@ export const productionSongRecords = [
     "tags": [
       "electro hard rock",
       "aggressive synth bass",
-      "punchy hybrid drums",
-      "soaring guitar fills",
-      "glitch sparks",
-      "reverse",
-      "huge sidechain pulses",
-      "polished",
-      "dark",
-      "arena bright",
-      "electric",
-      "electro",
-      "hard rock",
-      "soaring",
-      "electronic",
-      "commercial"
+      "punchy hybrid drums"
     ]
   },
   {
@@ -42038,19 +37622,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock",
       "thunderous live drums",
-      "gritty male vocals",
-      "heavy bass push",
-      "halftime",
-      "delivery is raw",
-      "bright",
-      "electric",
-      "headbanging",
-      "rock",
-      "rhythmic",
-      "emotional",
-      "soaring",
-      "commercial",
-      "hard"
+      "gritty male vocals"
     ]
   },
   {
@@ -42073,20 +37645,7 @@ export const productionSongRecords = [
     "tags": [
       "electro hard rock",
       "aggressive electronic basslines",
-      "punchy hybrid drums",
-      "cinematic synth",
-      "explosive sections",
-      "rebellious stadium chants",
-      "male vocals",
-      "gritty doubles",
-      "reverse impacts",
-      "polished",
-      "hard rock",
-      "soaring",
-      "electric",
-      "electronic",
-      "electro",
-      "commercial"
+      "punchy hybrid drums"
     ]
   },
   {
@@ -42109,18 +37668,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock",
       "pounding toms",
-      "deep bass grooves",
-      "cinematic tension",
-      "reverse",
-      "punchy modern low",
-      "raw live band",
-      "dramatic",
-      "emotional",
-      "melodic hard rock",
-      "deep",
-      "commercial",
-      "hard",
-      "rock"
+      "deep bass grooves"
     ]
   },
   {
@@ -42143,18 +37691,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock anthem",
       "punchy hybrid drums",
-      "polished",
-      "aggressive",
-      "futuristic",
-      "stadium bright",
-      "hard rock",
-      "electro",
-      "electric",
-      "soaring",
-      "electronic",
-      "commercial",
-      "hard",
-      "rock"
+      "polished"
     ]
   },
   {
@@ -42177,19 +37714,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock anthem",
       "chugging palm muted",
-      "heavy bass lock",
-      "gritty",
-      "arena sized gang",
-      "bright",
-      "hard rock",
-      "emotional",
-      "electric",
-      "rhythmic",
-      "headbanging",
-      "rock",
-      "soaring",
-      "commercial",
-      "hard"
+      "heavy bass lock"
     ]
   },
   {
@@ -42212,20 +37737,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock anthem",
       "thunderous live drums",
-      "gritty male vocals",
-      "tape stop hit",
-      "soaring guitar after",
-      "polished",
-      "massive",
-      "stadium bright",
-      "headbanging",
-      "emotional",
-      "soaring",
-      "electric",
-      "rhythmic",
-      "rock",
-      "hard rock",
-      "commercial"
+      "gritty male vocals"
     ]
   },
   {
@@ -42248,20 +37760,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock anthem",
       "syncopated palm muted",
-      "thunderous tom hits",
-      "sweeping string brass",
-      "soaring high note",
-      "explosive risers",
-      "reverse cymbal",
-      "huge bright",
-      "hard rock",
-      "dramatic",
-      "soaring",
-      "orchestral",
-      "emotional",
-      "commercial",
-      "hard",
-      "rock"
+      "thunderous tom hits"
     ]
   },
   {
@@ -42284,20 +37783,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock anthem",
       "brass stabs",
-      "power chords",
-      "is rough",
-      "taiko rolls",
-      "is huge",
-      "bright",
-      "battle cinematic",
-      "emotional",
-      "orchestral",
-      "dramatic",
-      "hard rock",
-      "soaring",
-      "commercial",
-      "hard",
-      "rock"
+      "power chords"
     ]
   },
   {
@@ -42320,20 +37806,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock",
       "syncopated distorted riffs",
-      "pounding toms",
-      "deep bass grooves",
-      "bass",
-      "rising feedback",
-      "rough male",
-      "reverse",
-      "cinematic",
-      "modern punch",
-      "dramatic",
-      "emotional",
-      "melodic hard rock",
-      "deep",
-      "commercial",
-      "hard"
+      "pounding toms"
     ]
   },
   {
@@ -42356,20 +37829,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock anthem",
       "punchy palm muted",
-      "thunderous live drums",
-      "snarling bass",
-      "reverse",
-      "cymbal lifts",
-      "bright",
-      "huge",
-      "arena ready",
-      "electric",
-      "rhythmic",
-      "hard rock",
-      "emotional",
-      "rock",
-      "soaring",
-      "headbanging"
+      "thunderous live drums"
     ]
   },
   {
@@ -42392,20 +37852,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock anthem",
       "octave guitars",
-      "massive timpani accents",
-      "low sub hits",
-      "sword sharp string",
-      "huge",
-      "bright",
-      "battle ready",
-      "dramatic",
-      "emotional",
-      "orchestral",
-      "soaring",
-      "hard rock",
-      "commercial",
-      "hard",
-      "rock"
+      "massive timpani accents"
     ]
   },
   {
@@ -42428,20 +37875,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock anthem",
       "thunderous live drums",
-      "gritty male vocals",
-      "heavy bass",
-      "aggressive rhythmic drive",
-      "explodes into a",
-      "polished modern rock",
-      "huge low end",
-      "bright guitars",
-      "raw stadium punch",
-      "crowd ready",
-      "rhythmic",
-      "electric",
-      "rock",
-      "emotional",
-      "hard rock"
+      "gritty male vocals"
     ]
   },
   {
@@ -42464,20 +37898,7 @@ export const productionSongRecords = [
     "tags": [
       "electro hard rock",
       "aggressive synth bass",
-      "punchy hybrid drums",
-      "soaring guitar fills",
-      "glitch sparks",
-      "reverse",
-      "huge sidechain pulses",
-      "polished",
-      "dark",
-      "arena bright",
-      "electric",
-      "electro",
-      "hard rock",
-      "soaring",
-      "electronic",
-      "commercial"
+      "punchy hybrid drums"
     ]
   },
   {
@@ -42500,19 +37921,7 @@ export const productionSongRecords = [
     "tags": [
       "hard rock anthem",
       "crushing palm muted",
-      "reverse cymbal",
-      "feedback dives",
-      "polished",
-      "massive stadium",
-      "rhythmic",
-      "soaring",
-      "electric",
-      "rock",
-      "emotional",
-      "headbanging",
-      "hard rock",
-      "commercial",
-      "hard"
+      "reverse cymbal"
     ]
   },
   {
@@ -42535,10 +37944,7 @@ export const productionSongRecords = [
     "tags": [
       "electric",
       "rock",
-      "deep",
-      "electronic",
-      "drum",
-      "bass"
+      "deep"
     ]
   },
   {
@@ -42561,9 +37967,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "cinematic orchestral",
-      "bass heavy electronic",
-      "electronic",
-      "bass"
+      "bass heavy electronic"
     ]
   },
   {
@@ -42586,9 +37990,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "cinematic orchestral",
-      "rave anthemic electronic",
-      "electronic",
-      "bass"
+      "rave anthemic electronic"
     ]
   },
   {
@@ -42611,9 +38013,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "drum",
-      "chillstep",
-      "electronic",
-      "bass"
+      "chillstep"
     ]
   },
   {
@@ -42636,9 +38036,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "indian fusion",
-      "cinematic electronic",
-      "electronic",
-      "bass"
+      "cinematic electronic"
     ]
   },
   {
@@ -42661,9 +38059,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "indian classical fusion",
-      "cinematic electronic",
-      "electronic",
-      "bass"
+      "cinematic electronic"
     ]
   },
   {
@@ -42686,10 +38082,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "metal",
-      "breakbeat",
-      "aggressive",
-      "electronic",
-      "bass"
+      "breakbeat"
     ]
   },
   {
@@ -42712,9 +38105,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "neurofunk",
-      "cyberpunk electronic",
-      "electronic",
-      "bass"
+      "cyberpunk electronic"
     ]
   },
   {
@@ -42737,8 +38128,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "electric rock",
-      "electronic",
-      "bass"
+      "drum and bass"
     ]
   },
   {
@@ -42761,9 +38151,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "cinematic orchestral",
-      "bass heavy electronic",
-      "electronic",
-      "bass"
+      "bass heavy electronic"
     ]
   },
   {
@@ -42786,9 +38174,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "liquid drum",
-      "dark electronic",
-      "electronic",
-      "bass"
+      "dark electronic"
     ]
   },
   {
@@ -42811,9 +38197,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "cinematic electronic",
-      "middle eastern arabic",
-      "electronic",
-      "bass"
+      "middle eastern arabic"
     ]
   },
   {
@@ -42836,8 +38220,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "electronic",
-      "cinematic dark rave",
-      "bass"
+      "cinematic dark rave"
     ]
   },
   {
@@ -42860,8 +38243,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "electronic",
-      "futuristic club dark",
-      "bass"
+      "futuristic club"
     ]
   },
   {
@@ -42884,10 +38266,7 @@ export const productionSongRecords = [
     "tags": [
       "dark drum",
       "phonk",
-      "underground electronic",
-      "electronic",
-      "drum",
-      "bass"
+      "underground electronic"
     ]
   },
   {
@@ -42910,9 +38289,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "liquid drum",
-      "cyberpunk electronic",
-      "electronic",
-      "bass"
+      "cyberpunk electronic"
     ]
   },
   {
@@ -42935,9 +38312,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "cinematic electronic",
-      "dark ambient",
-      "electronic",
-      "bass"
+      "dark ambient"
     ]
   },
   {
@@ -42960,9 +38335,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "phonk",
-      "hardstyle uk hardstyle",
-      "electronic",
-      "bass"
+      "hardstyle uk hardstyle"
     ]
   },
   {
@@ -42985,9 +38358,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "liquid drum",
-      "neurofunk",
-      "electronic",
-      "bass"
+      "neurofunk"
     ]
   },
   {
@@ -43010,9 +38381,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "metal",
-      "breakbeat",
-      "electronic",
-      "bass"
+      "breakbeat"
     ]
   },
   {
@@ -43035,10 +38404,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi drum",
       "lo fi",
-      "ambient chill",
-      "electronic",
-      "drum",
-      "bass"
+      "ambient chill"
     ]
   },
   {
@@ -43061,9 +38427,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "cinematic electronic",
-      "middle eastern arabic",
-      "electronic",
-      "bass"
+      "middle eastern arabic"
     ]
   },
   {
@@ -43086,9 +38450,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "orchestral",
-      "cinematic",
-      "electronic",
-      "bass"
+      "cinematic"
     ]
   },
   {
@@ -43111,9 +38473,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "rock",
-      "electric",
-      "electronic",
-      "bass"
+      "electric"
     ]
   },
   {
@@ -43136,9 +38496,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "cinematic electronic",
-      "dark ambient",
-      "electronic",
-      "bass"
+      "dark ambient"
     ]
   },
   {
@@ -43161,10 +38519,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "metal",
-      "breakbeat",
-      "aggressive",
-      "electronic",
-      "bass"
+      "breakbeat"
     ]
   },
   {
@@ -43187,9 +38542,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "neurofunk",
-      "cyberpunk electronic",
-      "electronic",
-      "bass"
+      "cyberpunk electronic"
     ]
   },
   {
@@ -43212,9 +38565,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "indian fusion",
-      "cinematic electronic",
-      "electronic",
-      "bass"
+      "cinematic electronic"
     ]
   },
   {
@@ -43237,9 +38588,7 @@ export const productionSongRecords = [
     "tags": [
       "metal",
       "drum",
-      "dubstep metal hybrid",
-      "electronic",
-      "bass"
+      "dubstep metal"
     ]
   },
   {
@@ -43262,9 +38611,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "dubstep",
-      "arabic oriental electronic",
-      "electronic",
-      "bass"
+      "arabic oriental electronic"
     ]
   },
   {
@@ -43287,8 +38634,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "electronic",
-      "reese sub bass",
-      "bass"
+      "reese sub bass"
     ]
   },
   {
@@ -43311,9 +38657,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "dark ambient ritual",
-      "arabic influenced electronic",
-      "electronic",
-      "bass"
+      "arabic influenced electronic"
     ]
   },
   {
@@ -43336,10 +38680,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi drum",
       "lo fi",
-      "ambient chill",
-      "electronic",
-      "drum",
-      "bass"
+      "ambient chill"
     ]
   },
   {
@@ -43362,9 +38703,7 @@ export const productionSongRecords = [
     "tags": [
       "metal",
       "drum",
-      "dubstep metal hybrid",
-      "electronic",
-      "bass"
+      "dubstep metal"
     ]
   },
   {
@@ -43387,8 +38726,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "electronic",
-      "futuristic club dark",
-      "bass"
+      "futuristic club"
     ]
   },
   {
@@ -43411,9 +38749,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "phonk",
-      "hardstyle uk hardstyle",
-      "electronic",
-      "bass"
+      "hardstyle uk hardstyle"
     ]
   },
   {
@@ -43436,9 +38772,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "liquid drum",
-      "cyberpunk electronic",
-      "electronic",
-      "bass"
+      "cyberpunk electronic"
     ]
   },
   {
@@ -43461,9 +38795,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "dubstep",
-      "arabic oriental electronic",
-      "electronic",
-      "bass"
+      "arabic oriental electronic"
     ]
   },
   {
@@ -43486,8 +38818,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "electronic",
-      "cinematic dark rave",
-      "bass"
+      "cinematic dark rave"
     ]
   },
   {
@@ -43510,9 +38841,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "dark ambient ritual",
-      "arabic influenced electronic",
-      "electronic",
-      "bass"
+      "arabic influenced electronic"
     ]
   },
   {
@@ -43535,8 +38864,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "electric rock",
-      "electronic",
-      "bass"
+      "drum and bass"
     ]
   },
   {
@@ -43559,9 +38887,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "drum",
-      "chillstep",
-      "electronic",
-      "bass"
+      "chillstep"
     ]
   },
   {
@@ -43584,8 +38910,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "electronic",
-      "reese sub bass",
-      "bass"
+      "reese sub bass"
     ]
   },
   {
@@ -43608,9 +38933,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "orchestral",
-      "cinematic",
-      "electronic",
-      "bass"
+      "cinematic"
     ]
   },
   {
@@ -43633,10 +38956,7 @@ export const productionSongRecords = [
     "tags": [
       "dark drum",
       "phonk",
-      "underground electronic",
-      "electronic",
-      "drum",
-      "bass"
+      "underground electronic"
     ]
   },
   {
@@ -43659,9 +38979,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "metal",
-      "breakbeat",
-      "electronic",
-      "bass"
+      "breakbeat"
     ]
   },
   {
@@ -43684,9 +39002,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "liquid drum",
-      "neurofunk",
-      "electronic",
-      "bass"
+      "neurofunk"
     ]
   },
   {
@@ -43709,10 +39025,7 @@ export const productionSongRecords = [
     "tags": [
       "electric",
       "rock",
-      "deep",
-      "electronic",
-      "drum",
-      "bass"
+      "deep"
     ]
   },
   {
@@ -43735,9 +39048,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "cinematic orchestral",
-      "rave anthemic electronic",
-      "electronic",
-      "bass"
+      "rave anthemic electronic"
     ]
   },
   {
@@ -43760,9 +39071,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "liquid drum",
-      "dark electronic",
-      "electronic",
-      "bass"
+      "dark electronic"
     ]
   },
   {
@@ -43785,9 +39094,7 @@ export const productionSongRecords = [
     "tags": [
       "drum",
       "indian classical fusion",
-      "cinematic electronic",
-      "electronic",
-      "bass"
+      "cinematic electronic"
     ]
   },
   {
@@ -43810,11 +39117,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "bass music",
-      "electronic",
-      "rock",
-      "world",
-      "glitch",
-      "electric"
+      "electronic"
     ]
   },
   {
@@ -43860,9 +39163,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "bass music",
-      "glitch",
-      "electronic",
-      "cinematic dubstep"
+      "glitch"
     ]
   },
   {
@@ -43885,9 +39186,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "electronic",
-      "rock",
-      "glitch",
-      "world bass music"
+      "rock"
     ]
   },
   {
@@ -43910,9 +39209,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "bass music",
-      "glitch",
-      "cinematic dubstep",
-      "dubstep"
+      "glitch"
     ]
   },
   {
@@ -43935,9 +39232,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "cinematic dubstep",
-      "bass music",
-      "glitch",
-      "dubstep"
+      "bass music"
     ]
   },
   {
@@ -43960,9 +39255,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "bass music",
-      "dubstep",
-      "alternative rock",
-      "glitch"
+      "dubstep"
     ]
   },
   {
@@ -43985,8 +39278,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "glitch",
-      "hardcore",
-      "electronic"
+      "hardcore"
     ]
   },
   {
@@ -44009,8 +39301,7 @@ export const productionSongRecords = [
     "tags": [
       "glitch",
       "electronic",
-      "dubstep",
-      "hardcore"
+      "dubstep"
     ]
   },
   {
@@ -44033,9 +39324,7 @@ export const productionSongRecords = [
     "tags": [
       "glitch",
       "cinematic dubstep",
-      "bass music",
-      "electronic",
-      "dubstep"
+      "bass music"
     ]
   },
   {
@@ -44058,8 +39347,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "electronic",
-      "glitch",
-      "cinematic dubstep"
+      "glitch"
     ]
   },
   {
@@ -44105,8 +39393,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "glitch",
-      "bass music",
-      "electronic"
+      "bass music"
     ]
   },
   {
@@ -44129,12 +39416,7 @@ export const productionSongRecords = [
     "tags": [
       "rock",
       "bass music",
-      "alternative rock",
-      "electronic",
-      "glitch",
-      "electric",
-      "emotional",
-      "dubstep"
+      "alternative rock"
     ]
   },
   {
@@ -44157,9 +39439,7 @@ export const productionSongRecords = [
     "tags": [
       "glitch",
       "electronic",
-      "cinematic dubstep",
-      "bass music",
-      "dubstep"
+      "cinematic dubstep"
     ]
   },
   {
@@ -44182,8 +39462,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "rock",
-      "electric",
-      "electronic"
+      "electric"
     ]
   },
   {
@@ -44206,9 +39485,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep rock hybrid",
       "dubstep",
-      "rock",
-      "glitch",
-      "electronic"
+      "rock"
     ]
   },
   {
@@ -44231,7 +39508,6 @@ export const productionSongRecords = [
     "tags": [
       "glitch",
       "cinematic dubstep",
-      "electronic",
       "dubstep"
     ]
   },
@@ -44278,8 +39554,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "rock",
-      "electronic",
-      "bass music"
+      "electronic"
     ]
   },
   {
@@ -44302,9 +39577,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "electronic",
-      "rock",
-      "glitch",
-      "world bass music"
+      "rock"
     ]
   },
   {
@@ -44327,9 +39600,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep rock hybrid",
       "dubstep",
-      "rock",
-      "glitch",
-      "electronic"
+      "rock"
     ]
   },
   {
@@ -44352,8 +39623,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "cinematic dubstep",
-      "glitch electronic edm",
-      "electronic"
+      "glitch"
     ]
   },
   {
@@ -44376,8 +39646,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "cinematic dubstep",
-      "glitch",
-      "electronic"
+      "glitch"
     ]
   },
   {
@@ -44400,9 +39669,7 @@ export const productionSongRecords = [
     "tags": [
       "glitch",
       "electronic",
-      "cinematic dubstep",
-      "bass music",
-      "dubstep"
+      "cinematic dubstep"
     ]
   },
   {
@@ -44425,8 +39692,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "cinematic dubstep",
-      "glitch electronic edm",
-      "electronic"
+      "glitch"
     ]
   },
   {
@@ -44472,12 +39738,7 @@ export const productionSongRecords = [
     "tags": [
       "rock",
       "bass music",
-      "alternative rock",
-      "electronic",
-      "glitch",
-      "electric",
-      "emotional",
-      "dubstep"
+      "alternative rock"
     ]
   },
   {
@@ -44523,8 +39784,7 @@ export const productionSongRecords = [
     "tags": [
       "glitch",
       "electronic",
-      "dubstep",
-      "hardcore"
+      "dubstep"
     ]
   },
   {
@@ -44547,9 +39807,7 @@ export const productionSongRecords = [
     "tags": [
       "glitch",
       "cinematic dubstep",
-      "bass music",
-      "electronic",
-      "dubstep"
+      "bass music"
     ]
   },
   {
@@ -44595,9 +39853,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "glitch",
-      "rock",
-      "world",
-      "electronic"
+      "rock"
     ]
   },
   {
@@ -44620,9 +39876,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "cinematic dubstep",
-      "bass music",
-      "glitch",
-      "dubstep"
+      "bass music"
     ]
   },
   {
@@ -44645,7 +39899,6 @@ export const productionSongRecords = [
     "tags": [
       "glitch",
       "cinematic dubstep",
-      "electronic",
       "dubstep"
     ]
   },
@@ -44669,9 +39922,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "bass music",
-      "glitch",
-      "electronic",
-      "cinematic dubstep"
+      "glitch"
     ]
   },
   {
@@ -44694,9 +39945,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "bass music",
-      "glitch",
-      "cinematic dubstep",
-      "dubstep"
+      "glitch"
     ]
   },
   {
@@ -44719,9 +39968,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "bass music",
-      "glitch",
-      "cinematic dubstep",
-      "dubstep"
+      "glitch"
     ]
   },
   {
@@ -44744,8 +39991,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "rock",
-      "electric",
-      "electronic"
+      "electric"
     ]
   },
   {
@@ -44768,8 +40014,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "glitch",
-      "hardcore",
-      "electronic"
+      "hardcore"
     ]
   },
   {
@@ -44792,8 +40037,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "glitch",
-      "bass music",
-      "electronic"
+      "bass music"
     ]
   },
   {
@@ -44839,8 +40083,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "electronic",
-      "rock",
-      "bass music"
+      "rock"
     ]
   },
   {
@@ -44863,9 +40106,7 @@ export const productionSongRecords = [
     "tags": [
       "glitch",
       "electronic",
-      "cinematic dubstep",
-      "bass music",
-      "dubstep"
+      "cinematic dubstep"
     ]
   },
   {
@@ -44888,7 +40129,6 @@ export const productionSongRecords = [
     "tags": [
       "cinematic dubstep",
       "glitch",
-      "electronic",
       "dubstep"
     ]
   },
@@ -44935,8 +40175,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "rock",
-      "electronic",
-      "bass music"
+      "electronic"
     ]
   },
   {
@@ -44959,8 +40198,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "cinematic dubstep",
-      "glitch",
-      "electronic"
+      "glitch"
     ]
   },
   {
@@ -44983,8 +40221,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "electronic",
-      "rock",
-      "bass music"
+      "rock"
     ]
   },
   {
@@ -45030,11 +40267,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "bass music",
-      "electronic",
-      "rock",
-      "world",
-      "glitch",
-      "electric"
+      "electronic"
     ]
   },
   {
@@ -45057,8 +40290,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "electronic",
-      "glitch",
-      "cinematic dubstep"
+      "glitch"
     ]
   },
   {
@@ -45081,9 +40313,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "bass music",
-      "glitch",
-      "cinematic dubstep",
-      "dubstep"
+      "glitch"
     ]
   },
   {
@@ -45106,9 +40336,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "glitch",
-      "rock",
-      "world",
-      "electronic"
+      "rock"
     ]
   },
   {
@@ -45131,8 +40359,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "dubstep rock",
-      "electronic",
-      "glitch"
+      "electronic"
     ]
   },
   {
@@ -45178,9 +40405,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "bass music",
-      "dubstep",
-      "alternative rock",
-      "glitch"
+      "dubstep"
     ]
   },
   {
@@ -45203,9 +40428,7 @@ export const productionSongRecords = [
     "tags": [
       "glitch",
       "electronic",
-      "cinematic dubstep",
-      "bass music",
-      "dubstep"
+      "cinematic dubstep"
     ]
   },
   {
@@ -45228,7 +40451,6 @@ export const productionSongRecords = [
     "tags": [
       "cinematic dubstep",
       "glitch",
-      "electronic",
       "dubstep"
     ]
   },
@@ -45252,8 +40474,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "dubstep rock",
-      "electronic",
-      "glitch"
+      "electronic"
     ]
   },
   {
@@ -45276,8 +40497,7 @@ export const productionSongRecords = [
     "tags": [
       "psychedelic trance",
       "trance",
-      "euphoric trance",
-      "electronic"
+      "euphoric trance"
     ]
   },
   {
@@ -45300,8 +40520,7 @@ export const productionSongRecords = [
     "tags": [
       "psychedelic trance",
       "trance",
-      "euphoric trance",
-      "electronic"
+      "euphoric trance"
     ]
   },
   {
@@ -45324,8 +40543,7 @@ export const productionSongRecords = [
     "tags": [
       "psychedelic trance",
       "trance",
-      "euphoric trance",
-      "electronic"
+      "euphoric trance"
     ]
   },
   {
@@ -45348,8 +40566,7 @@ export const productionSongRecords = [
     "tags": [
       "psychedelic trance",
       "trance",
-      "euphoric trance",
-      "electronic"
+      "euphoric trance"
     ]
   },
   {
@@ -45372,8 +40589,7 @@ export const productionSongRecords = [
     "tags": [
       "psychedelic trance",
       "trance",
-      "euphoric trance",
-      "electronic"
+      "euphoric trance"
     ]
   },
   {
@@ -45396,8 +40612,7 @@ export const productionSongRecords = [
     "tags": [
       "psychedelic trance",
       "trance",
-      "euphoric trance",
-      "electronic"
+      "euphoric trance"
     ]
   },
   {
@@ -45420,8 +40635,7 @@ export const productionSongRecords = [
     "tags": [
       "psychedelic trance",
       "trance",
-      "euphoric trance",
-      "electronic"
+      "euphoric trance"
     ]
   },
   {
@@ -45444,8 +40658,7 @@ export const productionSongRecords = [
     "tags": [
       "psychedelic trance",
       "trance",
-      "euphoric trance",
-      "electronic"
+      "euphoric trance"
     ]
   },
   {
@@ -45468,8 +40681,7 @@ export const productionSongRecords = [
     "tags": [
       "psychedelic trance",
       "trance",
-      "euphoric trance",
-      "electronic"
+      "euphoric trance"
     ]
   },
   {
@@ -45812,8 +41024,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Trance/Orchestra of the Night Sky",
     "metadataText": "",
     "tags": [
+      "trance",
       "electronic",
-      "trance"
+      "instrumental"
     ]
   },
   {
@@ -45836,8 +41049,7 @@ export const productionSongRecords = [
     "tags": [
       "trance",
       "orchestral",
-      "uplifting electronic",
-      "electronic"
+      "uplifting electronic"
     ]
   },
   {
@@ -45860,8 +41072,7 @@ export const productionSongRecords = [
     "tags": [
       "trance",
       "orchestral",
-      "uplifting electronic",
-      "electronic"
+      "uplifting electronic"
     ]
   },
   {
@@ -45884,8 +41095,7 @@ export const productionSongRecords = [
     "tags": [
       "trance",
       "orchestral",
-      "uplifting electronic",
-      "electronic"
+      "uplifting electronic"
     ]
   },
   {
@@ -45908,8 +41118,7 @@ export const productionSongRecords = [
     "tags": [
       "trance",
       "orchestral",
-      "uplifting electronic",
-      "electronic"
+      "uplifting electronic"
     ]
   },
   {
@@ -45932,8 +41141,7 @@ export const productionSongRecords = [
     "tags": [
       "trance",
       "orchestral",
-      "uplifting electronic",
-      "electronic"
+      "uplifting electronic"
     ]
   },
   {
@@ -45956,8 +41164,7 @@ export const productionSongRecords = [
     "tags": [
       "trance",
       "orchestral",
-      "uplifting electronic",
-      "electronic"
+      "uplifting electronic"
     ]
   },
   {
@@ -45980,8 +41187,7 @@ export const productionSongRecords = [
     "tags": [
       "trance",
       "orchestral",
-      "uplifting electronic",
-      "electronic"
+      "uplifting electronic"
     ]
   },
   {
@@ -46004,8 +41210,7 @@ export const productionSongRecords = [
     "tags": [
       "trance",
       "orchestral",
-      "uplifting electronic",
-      "electronic"
+      "uplifting electronic"
     ]
   },
   {
@@ -46028,8 +41233,7 @@ export const productionSongRecords = [
     "tags": [
       "trance",
       "orchestral",
-      "uplifting electronic",
-      "electronic"
+      "uplifting electronic"
     ]
   },
   {
@@ -46052,8 +41256,7 @@ export const productionSongRecords = [
     "tags": [
       "trance",
       "orchestral",
-      "uplifting electronic",
-      "electronic"
+      "uplifting electronic"
     ]
   },
   {
@@ -46076,8 +41279,7 @@ export const productionSongRecords = [
     "tags": [
       "trance",
       "orchestral",
-      "uplifting electronic",
-      "electronic"
+      "uplifting electronic"
     ]
   },
   {
@@ -46100,8 +41302,7 @@ export const productionSongRecords = [
     "tags": [
       "trance",
       "orchestral",
-      "uplifting electronic",
-      "electronic"
+      "uplifting electronic"
     ]
   },
   {
@@ -46124,8 +41325,7 @@ export const productionSongRecords = [
     "tags": [
       "trance",
       "orchestral",
-      "uplifting electronic",
-      "electronic"
+      "uplifting electronic"
     ]
   },
   {
@@ -46148,9 +41348,7 @@ export const productionSongRecords = [
     "tags": [
       "trance",
       "electronic",
-      "uplifting",
-      "festival ready",
-      "euphoric"
+      "uplifting"
     ]
   },
   {
@@ -46173,9 +41371,7 @@ export const productionSongRecords = [
     "tags": [
       "trance",
       "electronic",
-      "uplifting",
-      "festival ready",
-      "euphoric"
+      "uplifting"
     ]
   },
   {
@@ -46198,9 +41394,7 @@ export const productionSongRecords = [
     "tags": [
       "trance",
       "electronic",
-      "uplifting",
-      "festival ready",
-      "euphoric"
+      "uplifting"
     ]
   },
   {
@@ -46223,9 +41417,7 @@ export const productionSongRecords = [
     "tags": [
       "trance",
       "electronic",
-      "uplifting",
-      "festival ready",
-      "euphoric"
+      "uplifting"
     ]
   },
   {
@@ -46248,9 +41440,7 @@ export const productionSongRecords = [
     "tags": [
       "trance",
       "electronic",
-      "uplifting",
-      "festival ready",
-      "euphoric"
+      "uplifting"
     ]
   },
   {
@@ -46273,9 +41463,7 @@ export const productionSongRecords = [
     "tags": [
       "trance",
       "electronic",
-      "uplifting",
-      "festival ready",
-      "euphoric"
+      "uplifting"
     ]
   },
   {
@@ -46298,8 +41486,7 @@ export const productionSongRecords = [
     "tags": [
       "trance",
       "electronic",
-      "uplifting",
-      "euphoric"
+      "uplifting"
     ]
   },
   {
@@ -46322,8 +41509,7 @@ export const productionSongRecords = [
     "tags": [
       "trance",
       "electronic",
-      "uplifting",
-      "euphoric"
+      "uplifting"
     ]
   },
   {
@@ -46346,8 +41532,7 @@ export const productionSongRecords = [
     "tags": [
       "trance",
       "electronic",
-      "uplifting",
-      "euphoric"
+      "uplifting"
     ]
   },
   {
@@ -46370,8 +41555,7 @@ export const productionSongRecords = [
     "tags": [
       "trance",
       "electronic",
-      "uplifting",
-      "euphoric"
+      "uplifting"
     ]
   },
   {
@@ -46394,10 +41578,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "rhythmic electronic",
-      "soulful deep house",
-      "electronic",
-      "afro",
-      "house"
+      "soulful deep house"
     ]
   },
   {
@@ -46420,9 +41601,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic",
-      "euphoric club dance",
-      "afro",
-      "house"
+      "euphoric club dance"
     ]
   },
   {
@@ -46445,10 +41624,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic dance",
-      "hypnotic club euphoric",
-      "electronic",
-      "afro",
-      "house"
+      "hypnotic club euphoric"
     ]
   },
   {
@@ -46471,11 +41647,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic",
-      "deep",
-      "hypnotic",
-      "rhythmic",
-      "afro",
-      "house"
+      "deep"
     ]
   },
   {
@@ -46498,11 +41670,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic",
-      "soulful",
-      "hypnotic",
-      "rhythmic",
-      "afro",
-      "house"
+      "soulful"
     ]
   },
   {
@@ -46525,10 +41693,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "tribal house",
-      "electronic dance",
-      "electronic",
-      "afro",
-      "house"
+      "electronic dance"
     ]
   },
   {
@@ -46551,10 +41716,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "tribal house",
-      "deep house",
-      "electronic",
-      "afro",
-      "house"
+      "deep house"
     ]
   },
   {
@@ -46577,10 +41739,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic dance",
-      "tribal house",
-      "electronic",
-      "afro",
-      "house"
+      "tribal house"
     ]
   },
   {
@@ -46603,10 +41762,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic dance",
-      "tribal house",
-      "electronic",
-      "afro",
-      "house"
+      "tribal house"
     ]
   },
   {
@@ -46629,9 +41785,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "deep house",
-      "electronic",
-      "afro",
-      "house"
+      "electronic"
     ]
   },
   {
@@ -46654,10 +41808,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic dance",
-      "tribal afrobeat dancehall",
-      "electronic",
-      "afro",
-      "house"
+      "tribal afrobeat dancehall"
     ]
   },
   {
@@ -46680,10 +41831,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "amapiano",
-      "deep house",
-      "electronic",
-      "afro",
-      "house"
+      "deep house"
     ]
   },
   {
@@ -46706,10 +41854,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "tribal house",
-      "deep house",
-      "electronic",
-      "afro",
-      "house"
+      "deep house"
     ]
   },
   {
@@ -46732,10 +41877,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "amapiano",
-      "deep house",
-      "electronic",
-      "afro",
-      "house"
+      "deep house"
     ]
   },
   {
@@ -46758,9 +41900,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic",
-      "tribal house",
-      "afro",
-      "house"
+      "tribal house"
     ]
   },
   {
@@ -46783,10 +41923,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic",
-      "tribal rhythmic",
-      "mystical",
-      "afro",
-      "house"
+      "tribal rhythmic"
     ]
   },
   {
@@ -46809,11 +41946,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic",
-      "festival ready",
-      "hypnotic",
-      "rhythmic",
-      "afro",
-      "house"
+      "festival ready"
     ]
   },
   {
@@ -46836,10 +41969,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic",
-      "tribal rhythmic",
-      "mystical",
-      "afro",
-      "house"
+      "tribal rhythmic"
     ]
   },
   {
@@ -46862,9 +41992,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic",
-      "tribal house",
-      "afro",
-      "house"
+      "tribal house"
     ]
   },
   {
@@ -46887,10 +42015,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic dance",
-      "hypnotic tribal",
-      "electronic",
-      "afro",
-      "house"
+      "hypnotic tribal"
     ]
   },
   {
@@ -46913,10 +42038,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "amapiano",
-      "tribal house",
-      "electronic",
-      "afro",
-      "house"
+      "tribal house"
     ]
   },
   {
@@ -46939,10 +42061,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "tribal house",
-      "electronic dance",
-      "electronic",
-      "afro",
-      "house"
+      "electronic dance"
     ]
   },
   {
@@ -46965,11 +42084,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic dance",
-      "tribal euphoric rhythmic",
-      "uplifting hypnotic",
-      "electronic",
-      "afro",
-      "house"
+      "tribal euphoric rhythmic"
     ]
   },
   {
@@ -46992,10 +42107,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic dance",
-      "tribal afrobeat dancehall",
-      "electronic",
-      "afro",
-      "house"
+      "tribal afrobeat dancehall"
     ]
   },
   {
@@ -47018,10 +42130,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic dance",
-      "hypnotic tribal",
-      "electronic",
-      "afro",
-      "house"
+      "hypnotic tribal"
     ]
   },
   {
@@ -47044,9 +42153,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic",
-      "euphoric club dance",
-      "afro",
-      "house"
+      "euphoric club dance"
     ]
   },
   {
@@ -47069,11 +42176,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic",
-      "deep",
-      "hypnotic",
-      "rhythmic",
-      "afro",
-      "house"
+      "deep"
     ]
   },
   {
@@ -47096,9 +42199,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic",
-      "tribal house",
-      "afro",
-      "house"
+      "tribal house"
     ]
   },
   {
@@ -47121,10 +42222,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic dance",
-      "hypnotic club euphoric",
-      "electronic",
-      "afro",
-      "house"
+      "hypnotic club euphoric"
     ]
   },
   {
@@ -47147,10 +42245,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic dance",
-      "rhythmic tribal house",
-      "electronic",
-      "afro",
-      "house"
+      "rhythmic tribal house"
     ]
   },
   {
@@ -47173,10 +42268,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "amapiano",
-      "hypnotic",
-      "electronic",
-      "afro",
-      "house"
+      "hypnotic"
     ]
   },
   {
@@ -47199,9 +42291,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic",
-      "tribal house",
-      "afro",
-      "house"
+      "tribal house"
     ]
   },
   {
@@ -47224,11 +42314,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic",
-      "dance",
-      "hypnotic",
-      "uplifting",
-      "afro",
-      "house"
+      "dance"
     ]
   },
   {
@@ -47251,11 +42337,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic",
-      "soulful",
-      "hypnotic",
-      "rhythmic",
-      "afro",
-      "house"
+      "soulful"
     ]
   },
   {
@@ -47278,10 +42360,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "amapiano",
-      "tribal house",
-      "electronic",
-      "afro",
-      "house"
+      "tribal house"
     ]
   },
   {
@@ -47304,11 +42383,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic dance",
-      "tribal euphoric rhythmic",
-      "uplifting hypnotic",
-      "electronic",
-      "afro",
-      "house"
+      "tribal euphoric rhythmic"
     ]
   },
   {
@@ -47331,9 +42406,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "deep house",
-      "electronic",
-      "afro",
-      "house"
+      "electronic"
     ]
   },
   {
@@ -47356,10 +42429,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic dance",
-      "tribal house",
-      "electronic",
-      "afro",
-      "house"
+      "tribal house"
     ]
   },
   {
@@ -47382,9 +42452,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic",
-      "club house",
-      "afro",
-      "house"
+      "club house"
     ]
   },
   {
@@ -47407,11 +42475,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic",
-      "festival ready",
-      "hypnotic",
-      "rhythmic",
-      "afro",
-      "house"
+      "festival ready"
     ]
   },
   {
@@ -47434,10 +42498,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "rhythmic electronic",
-      "soulful deep house",
-      "electronic",
-      "afro",
-      "house"
+      "soulful deep house"
     ]
   },
   {
@@ -47460,10 +42521,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "tribal house",
-      "electronic dance",
-      "electronic",
-      "afro",
-      "house"
+      "electronic dance"
     ]
   },
   {
@@ -47486,11 +42544,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic",
-      "deep hypnotic",
-      "uplifting",
-      "rhythmic",
-      "afro",
-      "house"
+      "deep hypnotic"
     ]
   },
   {
@@ -47513,10 +42567,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic dance",
-      "rhythmic tribal house",
-      "electronic",
-      "afro",
-      "house"
+      "rhythmic tribal house"
     ]
   },
   {
@@ -47539,10 +42590,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic dance",
-      "tribal house",
-      "electronic",
-      "afro",
-      "house"
+      "tribal house"
     ]
   },
   {
@@ -47565,10 +42613,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "amapiano",
-      "hypnotic",
-      "electronic",
-      "afro",
-      "house"
+      "hypnotic"
     ]
   },
   {
@@ -47591,11 +42636,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic",
-      "dance",
-      "hypnotic",
-      "uplifting",
-      "afro",
-      "house"
+      "dance"
     ]
   },
   {
@@ -47618,11 +42659,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic",
-      "deep hypnotic",
-      "uplifting",
-      "rhythmic",
-      "afro",
-      "house"
+      "deep hypnotic"
     ]
   },
   {
@@ -47645,10 +42682,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "tribal house",
-      "electronic dance",
-      "electronic",
-      "afro",
-      "house"
+      "electronic dance"
     ]
   },
   {
@@ -47671,9 +42705,7 @@ export const productionSongRecords = [
     "tags": [
       "afro house",
       "electronic",
-      "club house",
-      "afro",
-      "house"
+      "club house"
     ]
   },
   {
@@ -47696,9 +42728,7 @@ export const productionSongRecords = [
     "tags": [
       "indian phonk",
       "trap",
-      "cinematic dark orchestral",
-      "electronic",
-      "phonk"
+      "cinematic dark orchestral"
     ]
   },
   {
@@ -47721,9 +42751,7 @@ export const productionSongRecords = [
     "tags": [
       "indian phonk",
       "trap",
-      "cinematic dark orchestral",
-      "electronic",
-      "phonk"
+      "cinematic dark orchestral"
     ]
   },
   {
@@ -47746,9 +42774,7 @@ export const productionSongRecords = [
     "tags": [
       "indian phonk",
       "trap",
-      "cinematic dark orchestral",
-      "electronic",
-      "phonk"
+      "cinematic dark orchestral"
     ]
   },
   {
@@ -47771,9 +42797,7 @@ export const productionSongRecords = [
     "tags": [
       "indian phonk",
       "trap",
-      "cinematic dark orchestral",
-      "electronic",
-      "phonk"
+      "cinematic dark orchestral"
     ]
   },
   {
@@ -47796,9 +42820,7 @@ export const productionSongRecords = [
     "tags": [
       "indian phonk",
       "trap",
-      "cinematic dark orchestral",
-      "electronic",
-      "phonk"
+      "cinematic dark orchestral"
     ]
   },
   {
@@ -47821,9 +42843,7 @@ export const productionSongRecords = [
     "tags": [
       "indian phonk",
       "trap",
-      "cinematic dark orchestral",
-      "electronic",
-      "phonk"
+      "cinematic dark orchestral"
     ]
   },
   {
@@ -47846,9 +42866,7 @@ export const productionSongRecords = [
     "tags": [
       "indian phonk",
       "trap",
-      "cinematic dark orchestral",
-      "electronic",
-      "phonk"
+      "cinematic dark orchestral"
     ]
   },
   {
@@ -47871,9 +42889,7 @@ export const productionSongRecords = [
     "tags": [
       "indian phonk",
       "trap",
-      "cinematic dark orchestral",
-      "electronic",
-      "phonk"
+      "cinematic dark orchestral"
     ]
   },
   {
@@ -47896,9 +42912,7 @@ export const productionSongRecords = [
     "tags": [
       "indian phonk",
       "trap",
-      "cinematic dark orchestral",
-      "electronic",
-      "phonk"
+      "cinematic dark orchestral"
     ]
   },
   {
@@ -47921,16 +42935,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "distorted 808 slides",
-      "hypnotic cowbell loops",
-      "pre builds",
-      "deep sub rumble",
-      "skidding snare accents",
-      "lo fi",
-      "gritty",
-      "bass heavy",
-      "deep",
-      "hypnotic",
-      "electronic"
+      "hypnotic cowbell loops"
     ]
   },
   {
@@ -47953,9 +42958,7 @@ export const productionSongRecords = [
     "tags": [
       "indian phonk",
       "trap",
-      "cinematic dark orchestral",
-      "electronic",
-      "phonk"
+      "cinematic dark orchestral"
     ]
   },
   {
@@ -47976,8 +42979,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Phonk/Chaos Beneath the Temple Lights",
     "metadataText": "the Temple Lights Add a Caption Remix/Edit Phonk with dark cinematic Indian fusion\n\nat a driving midtempo pulse, syncopated trap drums and crushing sub-bass; verse rides sparse cowbell, tabla, and detuned sitar, pre-chorus opens with bansuri lifts and temple drone, chorus slams with dhol hits, orchestral stabs, and gang chants, Lead vocal is gritty and close-mic with doubled hook lines, ad-libs panned wide, delay throws on the last words, Tape grit, reversed swells, and rising crowd textures bridge sections; mix is heavy, wide, and festival-loud, rhythmic, raw, orchestral, hypnotic, deep",
     "tags": [
+      "phonk",
       "electronic",
-      "phonk"
+      "instrumental"
     ]
   },
   {
@@ -48000,9 +43004,7 @@ export const productionSongRecords = [
     "tags": [
       "indian phonk",
       "trap",
-      "cinematic dark orchestral",
-      "electronic",
-      "phonk"
+      "cinematic dark orchestral"
     ]
   },
   {
@@ -48025,8 +43027,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "dark trap",
-      "cinematic arabic inspired",
-      "electronic"
+      "cinematic arabic inspired"
     ]
   },
   {
@@ -48049,8 +43050,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "dark trap",
-      "cinematic arabic inspired",
-      "electronic"
+      "cinematic arabic inspired"
     ]
   },
   {
@@ -48073,8 +43073,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "dark trap",
-      "cinematic arabic inspired",
-      "electronic"
+      "cinematic arabic inspired"
     ]
   },
   {
@@ -48097,9 +43096,7 @@ export const productionSongRecords = [
     "tags": [
       "desi street phantom",
       "trap",
-      "cinematic orchestral",
-      "electronic",
-      "phonk"
+      "cinematic orchestral"
     ]
   },
   {
@@ -48122,8 +43119,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "dark trap",
-      "cinematic arabic inspired",
-      "electronic"
+      "cinematic arabic inspired"
     ]
   },
   {
@@ -48146,8 +43142,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "dark trap",
-      "cinematic arabic inspired",
-      "electronic"
+      "cinematic arabic inspired"
     ]
   },
   {
@@ -48170,8 +43165,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "dark cinematic electronic",
-      "electronic"
+      "dark cinematic electronic"
     ]
   },
   {
@@ -48194,8 +43188,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "dark cinematic electronic",
-      "electronic"
+      "dark cinematic electronic"
     ]
   },
   {
@@ -48218,8 +43211,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "dark cinematic electronic",
-      "electronic"
+      "dark cinematic electronic"
     ]
   },
   {
@@ -48242,8 +43234,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "dark cinematic electronic",
-      "electronic"
+      "dark cinematic electronic"
     ]
   },
   {
@@ -48266,8 +43257,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "dark cinematic electronic",
-      "electronic"
+      "dark cinematic electronic"
     ]
   },
   {
@@ -48290,8 +43280,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "dark cinematic electronic",
-      "electronic"
+      "dark cinematic electronic"
     ]
   },
   {
@@ -48314,8 +43303,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "dark cinematic electronic",
-      "electronic"
+      "dark cinematic electronic"
     ]
   },
   {
@@ -48338,8 +43326,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "dark cinematic electronic",
-      "electronic"
+      "dark cinematic electronic"
     ]
   },
   {
@@ -48362,8 +43349,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "dark cinematic electronic",
-      "electronic"
+      "dark cinematic electronic"
     ]
   },
   {
@@ -48386,8 +43372,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "dark cinematic electronic",
-      "electronic"
+      "dark cinematic electronic"
     ]
   },
   {
@@ -48410,8 +43395,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "dark cinematic electronic",
-      "electronic"
+      "dark cinematic electronic"
     ]
   },
   {
@@ -48434,8 +43418,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "dark cinematic electronic",
-      "electronic"
+      "dark cinematic electronic"
     ]
   },
   {
@@ -48458,8 +43441,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "dark cinematic electronic",
-      "electronic"
+      "dark cinematic electronic"
     ]
   },
   {
@@ -48482,8 +43464,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic orchestral",
-      "electronic"
+      "cinematic orchestral"
     ]
   },
   {
@@ -48506,8 +43487,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic orchestral",
-      "electronic"
+      "cinematic orchestral"
     ]
   },
   {
@@ -48530,8 +43510,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic orchestral",
-      "electronic"
+      "cinematic orchestral"
     ]
   },
   {
@@ -48554,8 +43533,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic orchestral",
-      "electronic"
+      "cinematic orchestral"
     ]
   },
   {
@@ -48578,8 +43556,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic orchestral",
-      "electronic"
+      "cinematic orchestral"
     ]
   },
   {
@@ -48602,8 +43579,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic orchestral",
-      "electronic"
+      "cinematic orchestral"
     ]
   },
   {
@@ -48626,8 +43602,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic orchestral",
-      "electronic"
+      "cinematic orchestral"
     ]
   },
   {
@@ -48650,8 +43625,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic orchestral",
-      "electronic"
+      "cinematic orchestral"
     ]
   },
   {
@@ -48674,8 +43648,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic orchestral",
-      "electronic"
+      "cinematic orchestral"
     ]
   },
   {
@@ -48698,8 +43671,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic orchestral",
-      "electronic"
+      "cinematic orchestral"
     ]
   },
   {
@@ -48722,8 +43694,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic orchestral",
-      "electronic"
+      "cinematic orchestral"
     ]
   },
   {
@@ -48746,8 +43717,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic orchestral",
-      "electronic"
+      "cinematic orchestral"
     ]
   },
   {
@@ -48770,8 +43740,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic orchestral",
-      "electronic"
+      "cinematic orchestral"
     ]
   },
   {
@@ -48794,8 +43763,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic orchestral",
-      "electronic"
+      "cinematic orchestral"
     ]
   },
   {
@@ -48818,8 +43786,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic orchestral",
-      "electronic"
+      "cinematic orchestral"
     ]
   },
   {
@@ -48842,8 +43809,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic orchestral",
-      "electronic"
+      "cinematic orchestral"
     ]
   },
   {
@@ -48866,8 +43832,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic grime indian",
-      "electronic"
+      "cinematic grime indian"
     ]
   },
   {
@@ -48890,8 +43855,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic grime indian",
-      "electronic"
+      "cinematic grime indian"
     ]
   },
   {
@@ -48914,8 +43878,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic grime indian",
-      "electronic"
+      "cinematic grime indian"
     ]
   },
   {
@@ -48938,8 +43901,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic grime indian",
-      "electronic"
+      "cinematic grime indian"
     ]
   },
   {
@@ -48962,8 +43924,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic grime indian",
-      "electronic"
+      "cinematic grime indian"
     ]
   },
   {
@@ -48986,8 +43947,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic grime indian",
-      "electronic"
+      "cinematic grime indian"
     ]
   },
   {
@@ -49010,8 +43970,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic grime indian",
-      "electronic"
+      "cinematic grime indian"
     ]
   },
   {
@@ -49034,8 +43993,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic grime indian",
-      "electronic"
+      "cinematic grime indian"
     ]
   },
   {
@@ -49058,8 +44016,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic grime indian",
-      "electronic"
+      "cinematic grime indian"
     ]
   },
   {
@@ -49082,8 +44039,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic grime indian",
-      "electronic"
+      "cinematic grime indian"
     ]
   },
   {
@@ -49106,8 +44062,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic grime indian",
-      "electronic"
+      "cinematic grime indian"
     ]
   },
   {
@@ -49130,8 +44085,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "cinematic grime indian",
-      "electronic"
+      "cinematic grime indian"
     ]
   },
   {
@@ -49154,7 +44108,8 @@ export const productionSongRecords = [
     "metadataText": "hyperpop, electronic, pop\n\nHyperpop anthem with glitchy synths, distorted basslines, high-energy electronic drums, pitch-shifted vocals, sugary catchy melodies, explosive transitions, sparkling arpeggios, and maximalist cyberpunk production; verse rides twitchy staccato pulses, pre-chorus strips to a vocal filter and rising shards, chorus hits with stacked hooks and detuned bass drops, bridge breaks into dreamy half-time haze before the final burst, Heavily processed lead vocal with octave doubles, chopped ad-libs, delay throws, and bright punchy mix with glossy digital sheen, emotional, vocal, experimental, hyperpop, pop, electronic",
     "tags": [
       "hyperpop",
-      "electronic"
+      "electronic",
+      "instrumental"
     ]
   },
   {
@@ -49369,7 +44324,8 @@ export const productionSongRecords = [
     "metadataText": "hyperpop, pop, electronic\n\nHyperpop anthem with frantic four-on-the-floor drums, warped bass swells, and candy-bright synth stabs; verse rides chopped rhythms and pitch-bent vocal turns, pre-chorus strips to filtered arps and rising static, chorus explodes with stacked hooks and vocal glitches, Bridge drops into dreamy half-time, then final chorus returns with bigger drops, sparkles, and hard digital crunch, Maximalist, glossy, electric mix, emotional, experimental, hyperpop, pop, vocal, electronic",
     "tags": [
       "hyperpop",
-      "electronic"
+      "electronic",
+      "instrumental"
     ]
   },
   {
@@ -49392,7 +44348,8 @@ export const productionSongRecords = [
     "metadataText": "electronic, hyperpop, pop\n\nHyperpop anthem with frantic half-time-to-double-time pulse, chopped kick patterns, squeaky sub drops, and jittery arps; verses ride sparse snaps and warped vocal chops, pre-chorus squeezes into filtered tension, chorus bursts with stacked doubles and gang chants, Bridge falls into dreamy haze, then final chorus detonates, Pitch-shifted lead, glossy harmonies, wide neon-bright mix with hard-edged bite, electronic, hyperpop, pop, vocal, emotional, experimental",
     "tags": [
       "electronic",
-      "hyperpop"
+      "hyperpop",
+      "instrumental"
     ]
   },
   {
@@ -49416,8 +44373,7 @@ export const productionSongRecords = [
     "tags": [
       "hyperpop",
       "experimental",
-      "anime",
-      "electronic"
+      "anime"
     ]
   },
   {
@@ -49441,8 +44397,7 @@ export const productionSongRecords = [
     "tags": [
       "hyperpop",
       "experimental",
-      "anime",
-      "electronic"
+      "anime"
     ]
   },
   {
@@ -49466,8 +44421,7 @@ export const productionSongRecords = [
     "tags": [
       "experimental",
       "hyperpop",
-      "anime",
-      "electronic"
+      "anime"
     ]
   },
   {
@@ -49491,8 +44445,7 @@ export const productionSongRecords = [
     "tags": [
       "hyperpop",
       "experimental",
-      "anime",
-      "electronic"
+      "anime"
     ]
   },
   {
@@ -49516,8 +44469,7 @@ export const productionSongRecords = [
     "tags": [
       "experimental",
       "hyperpop",
-      "anime",
-      "electronic"
+      "anime"
     ]
   },
   {
@@ -49541,8 +44493,7 @@ export const productionSongRecords = [
     "tags": [
       "experimental",
       "hyperpop",
-      "glitchy electronic",
-      "electronic"
+      "glitchy electronic"
     ]
   },
   {
@@ -49566,8 +44517,7 @@ export const productionSongRecords = [
     "tags": [
       "hyperpop",
       "experimental",
-      "glitch electronic",
-      "electronic"
+      "glitch electronic"
     ]
   },
   {
@@ -49591,8 +44541,7 @@ export const productionSongRecords = [
     "tags": [
       "hyperpop",
       "experimental",
-      "anime",
-      "electronic"
+      "anime"
     ]
   },
   {
@@ -49616,8 +44565,7 @@ export const productionSongRecords = [
     "tags": [
       "hyperpop",
       "japanese pop",
-      "city pop",
-      "electronic"
+      "city pop"
     ]
   },
   {
@@ -49641,9 +44589,7 @@ export const productionSongRecords = [
     "tags": [
       "hyperpop",
       "experimental electronic",
-      "glitchy",
-      "overcompressed neon synthpop",
-      "electronic"
+      "glitchy"
     ]
   },
   {
@@ -49689,8 +44635,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Hyperpop/Save File Heart",
     "metadataText": "",
     "tags": [
+      "hyperpop",
       "electronic",
-      "hyperpop"
+      "instrumental"
     ]
   },
   {
@@ -49714,8 +44661,7 @@ export const productionSongRecords = [
     "tags": [
       "hyperpop",
       "experimental",
-      "anime style",
-      "electronic"
+      "anime style"
     ]
   },
   {
@@ -49739,8 +44685,7 @@ export const productionSongRecords = [
     "tags": [
       "hyperpop",
       "experimental",
-      "anime",
-      "electronic"
+      "anime"
     ]
   },
   {
@@ -49764,8 +44709,7 @@ export const productionSongRecords = [
     "tags": [
       "experimental",
       "hyperpop",
-      "anime pop",
-      "electronic"
+      "anime pop"
     ]
   },
   {
@@ -49789,9 +44733,7 @@ export const productionSongRecords = [
     "tags": [
       "experimental hyperpop",
       "anime influenced pop",
-      "glitch club percussion",
-      "electronic",
-      "hyperpop"
+      "glitch club percussion"
     ]
   },
   {
@@ -49815,8 +44757,7 @@ export const productionSongRecords = [
     "tags": [
       "hyperpop",
       "experimental",
-      "anime",
-      "electronic"
+      "anime"
     ]
   },
   {
@@ -49840,9 +44781,7 @@ export const productionSongRecords = [
     "tags": [
       "hyperpop",
       "japanese pop",
-      "experimental",
-      "glitchy electronic",
-      "electronic"
+      "experimental"
     ]
   },
   {
@@ -49890,9 +44829,7 @@ export const productionSongRecords = [
     "tags": [
       "bossa nova",
       "salsa",
-      "tropical latin",
-      "culture",
-      "latin"
+      "tropical latin"
     ]
   },
   {
@@ -49915,9 +44852,7 @@ export const productionSongRecords = [
     "tags": [
       "bossa nova",
       "salsa",
-      "tropical latin",
-      "culture",
-      "latin"
+      "tropical latin"
     ]
   },
   {
@@ -49941,9 +44876,7 @@ export const productionSongRecords = [
     "tags": [
       "bossa nova",
       "salsa",
-      "tropical latin",
-      "culture",
-      "latin"
+      "tropical latin"
     ]
   },
   {
@@ -49966,9 +44899,7 @@ export const productionSongRecords = [
     "tags": [
       "bossa nova",
       "salsa",
-      "tropical latin",
-      "culture",
-      "latin"
+      "tropical latin"
     ]
   },
   {
@@ -49992,9 +44923,7 @@ export const productionSongRecords = [
     "tags": [
       "bossa nova",
       "salsa",
-      "tropical latin",
-      "culture",
-      "latin"
+      "tropical latin"
     ]
   },
   {
@@ -50017,9 +44946,7 @@ export const productionSongRecords = [
     "tags": [
       "bossa nova",
       "salsa",
-      "tropical latin",
-      "culture",
-      "latin"
+      "tropical latin"
     ]
   },
   {
@@ -50042,8 +44969,7 @@ export const productionSongRecords = [
     "tags": [
       "latin",
       "cinematic",
-      "tropical",
-      "culture"
+      "tropical"
     ]
   },
   {
@@ -50066,8 +44992,7 @@ export const productionSongRecords = [
     "tags": [
       "latin",
       "cinematic",
-      "tropical",
-      "culture"
+      "tropical"
     ]
   },
   {
@@ -50089,8 +45014,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/LATIN/Calor Del Sol",
     "metadataText": "",
     "tags": [
+      "latin",
       "culture",
-      "latin"
+      "instrumental"
     ]
   },
   {
@@ -50114,8 +45040,7 @@ export const productionSongRecords = [
     "tags": [
       "latin",
       "cinematic",
-      "tropical",
-      "culture"
+      "tropical"
     ]
   },
   {
@@ -50138,8 +45063,7 @@ export const productionSongRecords = [
     "tags": [
       "latin",
       "cinematic",
-      "tropical",
-      "culture"
+      "tropical"
     ]
   },
   {
@@ -50160,8 +45084,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/LATIN/Ecos del Caribe",
     "metadataText": "",
     "tags": [
+      "latin",
       "culture",
-      "latin"
+      "instrumental"
     ]
   },
   {
@@ -50184,8 +45109,7 @@ export const productionSongRecords = [
     "tags": [
       "latin",
       "cinematic",
-      "tropical",
-      "culture"
+      "tropical"
     ]
   },
   {
@@ -50209,8 +45133,7 @@ export const productionSongRecords = [
     "tags": [
       "latin",
       "cinematic",
-      "tropical",
-      "culture"
+      "tropical"
     ]
   },
   {
@@ -50233,8 +45156,7 @@ export const productionSongRecords = [
     "tags": [
       "latin",
       "cinematic",
-      "tropical",
-      "culture"
+      "tropical"
     ]
   },
   {
@@ -50257,9 +45179,7 @@ export const productionSongRecords = [
     "tags": [
       "reggaeton",
       "latin club",
-      "dance pop",
-      "culture",
-      "latin"
+      "dance pop"
     ]
   },
   {
@@ -50282,9 +45202,7 @@ export const productionSongRecords = [
     "tags": [
       "reggaeton",
       "latin club",
-      "dance pop",
-      "culture",
-      "latin"
+      "dance pop"
     ]
   },
   {
@@ -50308,9 +45226,7 @@ export const productionSongRecords = [
     "tags": [
       "reggaeton",
       "latin club",
-      "dance pop",
-      "culture",
-      "latin"
+      "dance pop"
     ]
   },
   {
@@ -50334,9 +45250,7 @@ export const productionSongRecords = [
     "tags": [
       "reggaeton",
       "latin club",
-      "dance pop",
-      "culture",
-      "latin"
+      "dance pop"
     ]
   },
   {
@@ -50359,9 +45273,7 @@ export const productionSongRecords = [
     "tags": [
       "reggaeton",
       "latin club",
-      "dance pop",
-      "culture",
-      "latin"
+      "dance pop"
     ]
   },
   {
@@ -50385,8 +45297,7 @@ export const productionSongRecords = [
     "tags": [
       "salsa",
       "latin",
-      "afro cuban",
-      "culture"
+      "afro cuban"
     ]
   },
   {
@@ -50410,8 +45321,7 @@ export const productionSongRecords = [
     "tags": [
       "salsa",
       "latin",
-      "afro cuban",
-      "culture"
+      "afro cuban"
     ]
   },
   {
@@ -50434,8 +45344,7 @@ export const productionSongRecords = [
     "tags": [
       "salsa",
       "latin",
-      "afro cuban",
-      "culture"
+      "afro cuban"
     ]
   },
   {
@@ -50459,10 +45368,7 @@ export const productionSongRecords = [
     "tags": [
       "bachata",
       "tropical latin",
-      "romantic",
-      "sensual",
-      "culture",
-      "latin"
+      "romantic"
     ]
   },
   {
@@ -50486,10 +45392,7 @@ export const productionSongRecords = [
     "tags": [
       "bachata",
       "tropical latin",
-      "romantic",
-      "sensual",
-      "culture",
-      "latin"
+      "romantic"
     ]
   },
   {
@@ -50512,10 +45415,7 @@ export const productionSongRecords = [
     "tags": [
       "bachata",
       "tropical latin",
-      "romantic",
-      "sensual",
-      "culture",
-      "latin"
+      "romantic"
     ]
   },
   {
@@ -50538,10 +45438,7 @@ export const productionSongRecords = [
     "tags": [
       "bachata",
       "tropical latin",
-      "romantic",
-      "sensual",
-      "culture",
-      "latin"
+      "romantic"
     ]
   },
   {
@@ -50564,9 +45461,7 @@ export const productionSongRecords = [
     "tags": [
       "latin",
       "tropical",
-      "cinematic instrumental",
-      "acoustic guitar",
-      "culture"
+      "cinematic instrumental"
     ]
   },
   {
@@ -50590,9 +45485,7 @@ export const productionSongRecords = [
     "tags": [
       "latin",
       "tropical",
-      "cinematic instrumental",
-      "acoustic guitar",
-      "culture"
+      "cinematic instrumental"
     ]
   },
   {
@@ -50615,9 +45508,7 @@ export const productionSongRecords = [
     "tags": [
       "bachata",
       "tropical latin",
-      "latin pop",
-      "culture",
-      "latin"
+      "latin pop"
     ]
   },
   {
@@ -50640,10 +45531,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "deep club dark",
-      "minimal",
-      "tech",
-      "house"
+      "deep club dark"
     ]
   },
   {
@@ -50666,10 +45554,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "deep club dark",
-      "minimal",
-      "tech",
-      "house"
+      "deep club dark"
     ]
   },
   {
@@ -50692,10 +45577,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "deep club dark",
-      "minimal",
-      "tech",
-      "house"
+      "deep club dark"
     ]
   },
   {
@@ -50718,10 +45600,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "deep club dark",
-      "minimal",
-      "tech",
-      "house"
+      "deep club dark"
     ]
   },
   {
@@ -50744,10 +45623,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "deep club dark",
-      "minimal",
-      "tech",
-      "house"
+      "deep club dark"
     ]
   },
   {
@@ -50770,10 +45646,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "deep club dark",
-      "minimal",
-      "tech",
-      "house"
+      "deep club dark"
     ]
   },
   {
@@ -50796,10 +45669,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "deep club dark",
-      "minimal",
-      "tech",
-      "house"
+      "deep club dark"
     ]
   },
   {
@@ -50822,10 +45692,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "deep club dark",
-      "minimal",
-      "tech",
-      "house"
+      "deep club dark"
     ]
   },
   {
@@ -50848,10 +45715,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "deep club dark",
-      "minimal",
-      "tech",
-      "house"
+      "deep club dark"
     ]
   },
   {
@@ -50874,10 +45738,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "deep club dark",
-      "minimal",
-      "tech",
-      "house"
+      "deep club dark"
     ]
   },
   {
@@ -50900,10 +45761,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "deep club dark",
-      "minimal",
-      "tech",
-      "house"
+      "deep club dark"
     ]
   },
   {
@@ -50926,10 +45784,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "deep club dark",
-      "minimal",
-      "tech",
-      "house"
+      "deep club dark"
     ]
   },
   {
@@ -50952,10 +45807,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "deep club dark",
-      "minimal",
-      "tech",
-      "house"
+      "deep club dark"
     ]
   },
   {
@@ -50978,10 +45830,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "deep club dark",
-      "minimal",
-      "tech",
-      "house"
+      "deep club dark"
     ]
   },
   {
@@ -51004,10 +45853,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "deep club dark",
-      "minimal",
-      "tech",
-      "house"
+      "deep club dark"
     ]
   },
   {
@@ -51028,9 +45874,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Tech House/Groove District",
     "metadataText": "",
     "tags": [
+      "tech house",
       "electronic",
-      "tech",
-      "house"
+      "instrumental"
     ]
   },
   {
@@ -51053,13 +45899,7 @@ export const productionSongRecords = [
     "tags": [
       "smooth",
       "bassline",
-      "hypnotic",
-      "deep",
-      "minimal",
-      "tech house",
-      "electronic",
-      "tech",
-      "house"
+      "hypnotic"
     ]
   },
   {
@@ -51082,13 +45922,7 @@ export const productionSongRecords = [
     "tags": [
       "smooth",
       "bassline",
-      "hypnotic",
-      "deep",
-      "minimal",
-      "tech house",
-      "electronic",
-      "tech",
-      "house"
+      "hypnotic"
     ]
   },
   {
@@ -51111,13 +45945,7 @@ export const productionSongRecords = [
     "tags": [
       "smooth",
       "bassline",
-      "hypnotic",
-      "deep",
-      "minimal",
-      "tech house",
-      "electronic",
-      "tech",
-      "house"
+      "hypnotic"
     ]
   },
   {
@@ -51140,13 +45968,7 @@ export const productionSongRecords = [
     "tags": [
       "smooth",
       "bassline",
-      "hypnotic",
-      "deep",
-      "minimal",
-      "tech house",
-      "electronic",
-      "tech",
-      "house"
+      "hypnotic"
     ]
   },
   {
@@ -51169,13 +45991,7 @@ export const productionSongRecords = [
     "tags": [
       "smooth",
       "bassline",
-      "hypnotic",
-      "deep",
-      "minimal",
-      "tech house",
-      "electronic",
-      "tech",
-      "house"
+      "hypnotic"
     ]
   },
   {
@@ -51198,13 +46014,7 @@ export const productionSongRecords = [
     "tags": [
       "smooth",
       "bassline",
-      "hypnotic",
-      "deep",
-      "minimal",
-      "tech house",
-      "electronic",
-      "tech",
-      "house"
+      "hypnotic"
     ]
   },
   {
@@ -51227,10 +46037,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "deep",
-      "hypnotic",
-      "tech",
-      "house"
+      "deep"
     ]
   },
   {
@@ -51253,10 +46060,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "deep",
-      "hypnotic",
-      "tech",
-      "house"
+      "deep"
     ]
   },
   {
@@ -51279,10 +46083,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "deep",
-      "hypnotic",
-      "tech",
-      "house"
+      "deep"
     ]
   },
   {
@@ -51305,10 +46106,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "deep",
-      "hypnotic",
-      "tech",
-      "house"
+      "deep"
     ]
   },
   {
@@ -51331,10 +46129,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "deep",
-      "hypnotic",
-      "tech",
-      "house"
+      "deep"
     ]
   },
   {
@@ -51357,9 +46152,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "hypnotic",
-      "tech",
-      "house"
+      "hypnotic"
     ]
   },
   {
@@ -51382,9 +46175,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "hypnotic",
-      "tech",
-      "house"
+      "hypnotic"
     ]
   },
   {
@@ -51407,9 +46198,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "hypnotic",
-      "tech",
-      "house"
+      "hypnotic"
     ]
   },
   {
@@ -51432,9 +46221,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "hypnotic",
-      "tech",
-      "house"
+      "hypnotic"
     ]
   },
   {
@@ -51457,9 +46244,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "hypnotic",
-      "tech",
-      "house"
+      "hypnotic"
     ]
   },
   {
@@ -51482,9 +46267,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "hypnotic",
-      "tech",
-      "house"
+      "hypnotic"
     ]
   },
   {
@@ -51507,9 +46290,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "hypnotic",
-      "tech",
-      "house"
+      "hypnotic"
     ]
   },
   {
@@ -51532,9 +46313,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "hypnotic",
-      "tech",
-      "house"
+      "hypnotic"
     ]
   },
   {
@@ -51557,9 +46336,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "hypnotic",
-      "tech",
-      "house"
+      "hypnotic"
     ]
   },
   {
@@ -51582,9 +46359,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "hypnotic",
-      "tech",
-      "house"
+      "hypnotic"
     ]
   },
   {
@@ -51607,9 +46382,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "deep minimal",
-      "tech",
-      "house"
+      "deep minimal"
     ]
   },
   {
@@ -51632,9 +46405,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "deep minimal",
-      "tech",
-      "house"
+      "deep minimal"
     ]
   },
   {
@@ -51657,9 +46428,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "deep minimal",
-      "tech",
-      "house"
+      "deep minimal"
     ]
   },
   {
@@ -51680,9 +46449,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/Tech House/The Ibiza Frequency",
     "metadataText": "",
     "tags": [
+      "tech house",
       "electronic",
-      "tech",
-      "house"
+      "instrumental"
     ]
   },
   {
@@ -51705,9 +46474,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "deep minimal",
-      "tech",
-      "house"
+      "deep minimal"
     ]
   },
   {
@@ -51730,9 +46497,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "deep minimal",
-      "tech",
-      "house"
+      "deep minimal"
     ]
   },
   {
@@ -51755,9 +46520,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "deep minimal",
-      "tech",
-      "house"
+      "deep minimal"
     ]
   },
   {
@@ -51780,9 +46543,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "deep minimal",
-      "tech",
-      "house"
+      "deep minimal"
     ]
   },
   {
@@ -51805,10 +46566,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "club warehouse minimal",
-      "hypnotic",
-      "tech",
-      "house"
+      "club warehouse minimal"
     ]
   },
   {
@@ -51831,10 +46589,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "club warehouse minimal",
-      "hypnotic",
-      "tech",
-      "house"
+      "club warehouse minimal"
     ]
   },
   {
@@ -51857,10 +46612,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "club warehouse minimal",
-      "hypnotic",
-      "tech",
-      "house"
+      "club warehouse minimal"
     ]
   },
   {
@@ -51883,10 +46635,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "club warehouse minimal",
-      "hypnotic",
-      "tech",
-      "house"
+      "club warehouse minimal"
     ]
   },
   {
@@ -51909,10 +46658,7 @@ export const productionSongRecords = [
     "tags": [
       "tech house",
       "electronic",
-      "club warehouse minimal",
-      "hypnotic",
-      "tech",
-      "house"
+      "club warehouse minimal"
     ]
   },
   {
@@ -51935,11 +46681,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "glitch",
-      "soundtrack",
-      "cyberpunk",
-      "occasion",
-      "gaming",
-      "streaming"
+      "soundtrack"
     ]
   },
   {
@@ -51962,10 +46704,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "orchestral",
-      "cinematic dramatic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "cinematic dramatic"
     ]
   },
   {
@@ -51988,10 +46727,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "soundtrack",
-      "orchestral fantasy",
-      "occasion",
-      "gaming",
-      "streaming"
+      "orchestral fantasy"
     ]
   },
   {
@@ -52014,10 +46750,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "glitch",
-      "soundtrack",
-      "occasion",
-      "gaming",
-      "streaming"
+      "soundtrack"
     ]
   },
   {
@@ -52040,12 +46773,7 @@ export const productionSongRecords = [
     "tags": [
       "cyberpunk edm",
       "electronic",
-      "glitch",
-      "dynamic",
-      "soundtrack",
-      "occasion",
-      "gaming",
-      "streaming"
+      "glitch"
     ]
   },
   {
@@ -52068,10 +46796,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "glitch",
-      "soundtrack",
-      "occasion",
-      "gaming",
-      "streaming"
+      "soundtrack"
     ]
   },
   {
@@ -52094,10 +46819,7 @@ export const productionSongRecords = [
     "tags": [
       "glitch",
       "electronic",
-      "cyberpunk edm",
-      "occasion",
-      "gaming",
-      "streaming"
+      "cyberpunk edm"
     ]
   },
   {
@@ -52120,10 +46842,7 @@ export const productionSongRecords = [
     "tags": [
       "glitch",
       "electronic",
-      "soundtrack",
-      "occasion",
-      "gaming",
-      "streaming"
+      "soundtrack"
     ]
   },
   {
@@ -52146,11 +46865,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic soundtrack",
       "orchestral",
-      "dramatic",
-      "heroic epic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "dramatic"
     ]
   },
   {
@@ -52173,10 +46888,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "orchestral",
-      "dramatic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "dramatic"
     ]
   },
   {
@@ -52199,10 +46911,7 @@ export const productionSongRecords = [
     "tags": [
       "cyberpunk edm",
       "glitch",
-      "electronic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "electronic"
     ]
   },
   {
@@ -52225,10 +46934,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "soundtrack",
-      "dramatic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "dramatic"
     ]
   },
   {
@@ -52251,11 +46957,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "soundtrack",
-      "cinematic",
-      "dramatic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "cinematic"
     ]
   },
   {
@@ -52278,10 +46980,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "glitch",
-      "cyberpunk edm",
-      "occasion",
-      "gaming",
-      "streaming"
+      "cyberpunk edm"
     ]
   },
   {
@@ -52304,11 +47003,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "orchestral",
-      "cinematic dramatic",
-      "fantasy",
-      "occasion",
-      "gaming",
-      "streaming"
+      "cinematic dramatic"
     ]
   },
   {
@@ -52331,10 +47026,7 @@ export const productionSongRecords = [
     "tags": [
       "dramatic orchestral soundtrack",
       "epic cinematic",
-      "trailer like orchestral",
-      "occasion",
-      "gaming",
-      "streaming"
+      "trailer like orchestral"
     ]
   },
   {
@@ -52357,10 +47049,7 @@ export const productionSongRecords = [
     "tags": [
       "synthwave",
       "vaporwave",
-      "electronic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "electronic"
     ]
   },
   {
@@ -52383,10 +47072,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "orchestral",
-      "dramatic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "dramatic"
     ]
   },
   {
@@ -52409,10 +47095,7 @@ export const productionSongRecords = [
     "tags": [
       "glitch",
       "electronic",
-      "cyberpunk edm",
-      "occasion",
-      "gaming",
-      "streaming"
+      "cyberpunk edm"
     ]
   },
   {
@@ -52435,10 +47118,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "glitch",
-      "cinematic soundtrack",
-      "occasion",
-      "gaming",
-      "streaming"
+      "cinematic soundtrack"
     ]
   },
   {
@@ -52461,10 +47141,7 @@ export const productionSongRecords = [
     "tags": [
       "cyberpunk edm",
       "electronic soundtrack",
-      "glitch",
-      "occasion",
-      "gaming",
-      "streaming"
+      "glitch"
     ]
   },
   {
@@ -52487,10 +47164,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "glitch",
-      "cyberpunk edm",
-      "occasion",
-      "gaming",
-      "streaming"
+      "cyberpunk edm"
     ]
   },
   {
@@ -52513,10 +47187,7 @@ export const productionSongRecords = [
     "tags": [
       "cyberpunk electronic",
       "glitch",
-      "electronic soundtrack",
-      "occasion",
-      "gaming",
-      "streaming"
+      "electronic soundtrack"
     ]
   },
   {
@@ -52539,10 +47210,7 @@ export const productionSongRecords = [
     "tags": [
       "cyberpunk edm",
       "electronic soundtrack",
-      "glitch",
-      "occasion",
-      "gaming",
-      "streaming"
+      "glitch"
     ]
   },
   {
@@ -52565,11 +47233,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "orchestral",
-      "cinematic",
-      "dramatic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "cinematic"
     ]
   },
   {
@@ -52592,11 +47256,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "orchestral soundtrack",
-      "dramatic",
-      "fantasy",
-      "occasion",
-      "gaming",
-      "streaming"
+      "dramatic"
     ]
   },
   {
@@ -52619,10 +47279,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "cinematic",
-      "soundtrack",
-      "occasion",
-      "gaming",
-      "streaming"
+      "soundtrack"
     ]
   },
   {
@@ -52645,10 +47302,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic soundtrack",
       "orchestral",
-      "dramatic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "dramatic"
     ]
   },
   {
@@ -52671,10 +47325,7 @@ export const productionSongRecords = [
     "tags": [
       "cyberpunk edm",
       "glitch",
-      "electronic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "electronic"
     ]
   },
   {
@@ -52697,10 +47348,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "orchestral",
-      "soundtrack",
-      "occasion",
-      "gaming",
-      "streaming"
+      "soundtrack"
     ]
   },
   {
@@ -52723,10 +47371,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "soundtrack",
-      "dramatic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "dramatic"
     ]
   },
   {
@@ -52749,10 +47394,7 @@ export const productionSongRecords = [
     "tags": [
       "epic orchestral",
       "cinematic soundtrack",
-      "dramatic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "dramatic"
     ]
   },
   {
@@ -52775,12 +47417,7 @@ export const productionSongRecords = [
     "tags": [
       "cyberpunk edm",
       "electronic",
-      "glitch",
-      "dynamic",
-      "soundtrack",
-      "occasion",
-      "gaming",
-      "streaming"
+      "glitch"
     ]
   },
   {
@@ -52803,10 +47440,7 @@ export const productionSongRecords = [
     "tags": [
       "synthwave",
       "vaporwave",
-      "electronic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "electronic"
     ]
   },
   {
@@ -52829,10 +47463,7 @@ export const productionSongRecords = [
     "tags": [
       "cyberpunk electronic",
       "glitch",
-      "electronic soundtrack",
-      "occasion",
-      "gaming",
-      "streaming"
+      "electronic soundtrack"
     ]
   },
   {
@@ -52855,10 +47486,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "epic soundtrack",
-      "orchestral fantasy",
-      "occasion",
-      "gaming",
-      "streaming"
+      "orchestral fantasy"
     ]
   },
   {
@@ -52881,10 +47509,7 @@ export const productionSongRecords = [
     "tags": [
       "cyberpunk edm",
       "glitch",
-      "electronic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "electronic"
     ]
   },
   {
@@ -52907,11 +47532,7 @@ export const productionSongRecords = [
     "tags": [
       "glitch",
       "electronic",
-      "dubstep",
-      "soundtrack",
-      "occasion",
-      "gaming",
-      "streaming"
+      "dubstep"
     ]
   },
   {
@@ -52934,10 +47555,7 @@ export const productionSongRecords = [
     "tags": [
       "synthwave",
       "vaporwave",
-      "electronic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "electronic"
     ]
   },
   {
@@ -52960,10 +47578,7 @@ export const productionSongRecords = [
     "tags": [
       "cyberpunk synthwave",
       "electronic",
-      "glitch",
-      "occasion",
-      "gaming",
-      "streaming"
+      "glitch"
     ]
   },
   {
@@ -52986,10 +47601,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "glitch",
-      "cinematic soundtrack",
-      "occasion",
-      "gaming",
-      "streaming"
+      "cinematic soundtrack"
     ]
   },
   {
@@ -53012,11 +47624,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "vaporwave",
-      "nostalgic",
-      "soundtrack",
-      "occasion",
-      "gaming",
-      "streaming"
+      "nostalgic"
     ]
   },
   {
@@ -53039,11 +47647,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "glitch",
-      "cyberpunk",
-      "soundtrack",
-      "occasion",
-      "gaming",
-      "streaming"
+      "cyberpunk"
     ]
   },
   {
@@ -53066,10 +47670,7 @@ export const productionSongRecords = [
     "tags": [
       "cyberpunk synthwave",
       "glitch",
-      "electronic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "electronic"
     ]
   },
   {
@@ -53092,10 +47693,7 @@ export const productionSongRecords = [
     "tags": [
       "cyberpunk synthwave",
       "glitch",
-      "electronic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "electronic"
     ]
   },
   {
@@ -53118,10 +47716,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic soundtrack",
       "orchestral",
-      "epic fantasy",
-      "occasion",
-      "gaming",
-      "streaming"
+      "epic fantasy"
     ]
   },
   {
@@ -53144,10 +47739,7 @@ export const productionSongRecords = [
     "tags": [
       "cyberpunk edm",
       "glitch",
-      "electronic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "electronic"
     ]
   },
   {
@@ -53170,10 +47762,7 @@ export const productionSongRecords = [
     "tags": [
       "cyberpunk synthwave",
       "glitch",
-      "electronic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "electronic"
     ]
   },
   {
@@ -53196,11 +47785,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "orchestral soundtrack",
-      "dramatic",
-      "fantasy",
-      "occasion",
-      "gaming",
-      "streaming"
+      "dramatic"
     ]
   },
   {
@@ -53223,10 +47808,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "orchestral",
-      "soundtrack",
-      "occasion",
-      "gaming",
-      "streaming"
+      "soundtrack"
     ]
   },
   {
@@ -53249,10 +47831,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "orchestral",
-      "dramatic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "dramatic"
     ]
   },
   {
@@ -53275,11 +47854,7 @@ export const productionSongRecords = [
     "tags": [
       "glitch",
       "electronic",
-      "dubstep",
-      "soundtrack",
-      "occasion",
-      "gaming",
-      "streaming"
+      "dubstep"
     ]
   },
   {
@@ -53302,11 +47877,7 @@ export const productionSongRecords = [
     "tags": [
       "hollywood",
       "soundtrack",
-      "electronic",
-      "glitch",
-      "occasion",
-      "gaming",
-      "streaming"
+      "electronic"
     ]
   },
   {
@@ -53329,10 +47900,7 @@ export const productionSongRecords = [
     "tags": [
       "cyberpunk synthwave",
       "electronic",
-      "glitch",
-      "occasion",
-      "gaming",
-      "streaming"
+      "glitch"
     ]
   },
   {
@@ -53355,10 +47923,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "dramatic",
-      "orchestral",
-      "occasion",
-      "gaming",
-      "streaming"
+      "orchestral"
     ]
   },
   {
@@ -53381,10 +47946,7 @@ export const productionSongRecords = [
     "tags": [
       "glitch",
       "electronic",
-      "soundtrack",
-      "occasion",
-      "gaming",
-      "streaming"
+      "soundtrack"
     ]
   },
   {
@@ -53407,11 +47969,7 @@ export const productionSongRecords = [
     "tags": [
       "hollywood",
       "soundtrack",
-      "electronic",
-      "glitch",
-      "occasion",
-      "gaming",
-      "streaming"
+      "electronic"
     ]
   },
   {
@@ -53434,10 +47992,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "orchestral",
-      "dramatic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "dramatic"
     ]
   },
   {
@@ -53460,11 +48015,7 @@ export const productionSongRecords = [
     "tags": [
       "cyberpunk trap",
       "glitch",
-      "electronic soundtrack",
-      "cinematic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "electronic soundtrack"
     ]
   },
   {
@@ -53487,10 +48038,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "soundtrack",
-      "epic orchestral",
-      "occasion",
-      "gaming",
-      "streaming"
+      "epic orchestral"
     ]
   },
   {
@@ -53513,11 +48061,7 @@ export const productionSongRecords = [
     "tags": [
       "synthwave",
       "electronic",
-      "soundtrack",
-      "glitch",
-      "occasion",
-      "gaming",
-      "streaming"
+      "soundtrack"
     ]
   },
   {
@@ -53540,10 +48084,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic soundtrack",
       "orchestral",
-      "dramatic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "dramatic"
     ]
   },
   {
@@ -53566,10 +48107,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "orchestral",
-      "soundtrack",
-      "occasion",
-      "gaming",
-      "streaming"
+      "soundtrack"
     ]
   },
   {
@@ -53592,11 +48130,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic soundtrack",
       "orchestral",
-      "dramatic",
-      "heroic epic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "dramatic"
     ]
   },
   {
@@ -53619,10 +48153,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "soundtrack",
-      "dramatic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "dramatic"
     ]
   },
   {
@@ -53645,10 +48176,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "dramatic",
-      "orchestral",
-      "occasion",
-      "gaming",
-      "streaming"
+      "orchestral"
     ]
   },
   {
@@ -53671,10 +48199,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic soundtrack",
       "orchestral",
-      "epic fantasy",
-      "occasion",
-      "gaming",
-      "streaming"
+      "epic fantasy"
     ]
   },
   {
@@ -53697,11 +48222,7 @@ export const productionSongRecords = [
     "tags": [
       "world",
       "orchestral",
-      "dramatic",
-      "soundtrack",
-      "occasion",
-      "gaming",
-      "streaming"
+      "dramatic"
     ]
   },
   {
@@ -53724,10 +48245,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "fantasy soundtrack",
-      "epic dramatic orchestral",
-      "occasion",
-      "gaming",
-      "streaming"
+      "epic dramatic orchestral"
     ]
   },
   {
@@ -53750,10 +48268,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "cinematic",
-      "soundtrack",
-      "occasion",
-      "gaming",
-      "streaming"
+      "soundtrack"
     ]
   },
   {
@@ -53776,10 +48291,7 @@ export const productionSongRecords = [
     "tags": [
       "epic orchestral",
       "cinematic soundtrack",
-      "dramatic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "dramatic"
     ]
   },
   {
@@ -53802,10 +48314,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "epic film score",
-      "soundtrack",
-      "occasion",
-      "gaming",
-      "streaming"
+      "soundtrack"
     ]
   },
   {
@@ -53828,10 +48337,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "soundtrack",
-      "orchestral fantasy",
-      "occasion",
-      "gaming",
-      "streaming"
+      "orchestral fantasy"
     ]
   },
   {
@@ -53854,11 +48360,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "soundtrack",
-      "cinematic",
-      "dramatic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "cinematic"
     ]
   },
   {
@@ -53881,11 +48383,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "orchestral",
-      "cinematic dramatic",
-      "fantasy",
-      "occasion",
-      "gaming",
-      "streaming"
+      "cinematic dramatic"
     ]
   },
   {
@@ -53908,10 +48406,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "soundtrack",
-      "dramatic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "dramatic"
     ]
   },
   {
@@ -53934,10 +48429,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "orchestral",
-      "soundtrack",
-      "occasion",
-      "gaming",
-      "streaming"
+      "soundtrack"
     ]
   },
   {
@@ -53960,10 +48452,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "orchestral",
-      "dramatic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "dramatic"
     ]
   },
   {
@@ -53986,11 +48475,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "orchestral",
-      "cinematic",
-      "dramatic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "cinematic"
     ]
   },
   {
@@ -54013,10 +48498,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "orchestral",
-      "dramatic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "dramatic"
     ]
   },
   {
@@ -54039,10 +48521,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "cinematic",
-      "soundtrack",
-      "occasion",
-      "gaming",
-      "streaming"
+      "soundtrack"
     ]
   },
   {
@@ -54065,10 +48544,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "orchestral",
-      "cinematic dramatic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "cinematic dramatic"
     ]
   },
   {
@@ -54091,10 +48567,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "orchestral",
-      "soundtrack",
-      "occasion",
-      "gaming",
-      "streaming"
+      "soundtrack"
     ]
   },
   {
@@ -54117,10 +48590,7 @@ export const productionSongRecords = [
     "tags": [
       "dramatic orchestral soundtrack",
       "epic cinematic",
-      "trailer like orchestral",
-      "occasion",
-      "gaming",
-      "streaming"
+      "trailer like orchestral"
     ]
   },
   {
@@ -54143,11 +48613,7 @@ export const productionSongRecords = [
     "tags": [
       "world",
       "orchestral",
-      "dramatic",
-      "soundtrack",
-      "occasion",
-      "gaming",
-      "streaming"
+      "dramatic"
     ]
   },
   {
@@ -54170,10 +48636,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "cinematic",
-      "soundtrack",
-      "occasion",
-      "gaming",
-      "streaming"
+      "soundtrack"
     ]
   },
   {
@@ -54196,10 +48659,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "dramatic",
-      "orchestral",
-      "occasion",
-      "gaming",
-      "streaming"
+      "orchestral"
     ]
   },
   {
@@ -54222,10 +48682,7 @@ export const productionSongRecords = [
     "tags": [
       "glitch",
       "electronic",
-      "cinematic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "cinematic"
     ]
   },
   {
@@ -54248,10 +48705,7 @@ export const productionSongRecords = [
     "tags": [
       "synthwave",
       "vaporwave",
-      "electronic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "electronic"
     ]
   },
   {
@@ -54274,10 +48728,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "dramatic",
-      "orchestral",
-      "occasion",
-      "gaming",
-      "streaming"
+      "orchestral"
     ]
   },
   {
@@ -54300,10 +48751,7 @@ export const productionSongRecords = [
     "tags": [
       "glitch",
       "electronic",
-      "cinematic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "cinematic"
     ]
   },
   {
@@ -54326,10 +48774,7 @@ export const productionSongRecords = [
     "tags": [
       "cyberpunk synthwave",
       "glitch",
-      "electronic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "electronic"
     ]
   },
   {
@@ -54352,11 +48797,7 @@ export const productionSongRecords = [
     "tags": [
       "glitch",
       "electronic",
-      "soundtrack",
-      "cyberpunk",
-      "occasion",
-      "gaming",
-      "streaming"
+      "soundtrack"
     ]
   },
   {
@@ -54379,11 +48820,7 @@ export const productionSongRecords = [
     "tags": [
       "hollywood",
       "soundtrack",
-      "electronic",
-      "glitch",
-      "occasion",
-      "gaming",
-      "streaming"
+      "electronic"
     ]
   },
   {
@@ -54406,11 +48843,7 @@ export const productionSongRecords = [
     "tags": [
       "cyberpunk trap",
       "glitch",
-      "electronic soundtrack",
-      "cinematic",
-      "occasion",
-      "gaming",
-      "streaming"
+      "electronic soundtrack"
     ]
   },
   {
@@ -54433,10 +48866,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "soundtrack",
-      "epic orchestral",
-      "occasion",
-      "gaming",
-      "streaming"
+      "epic orchestral"
     ]
   },
   {
@@ -54459,11 +48889,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "glitch",
-      "soundtrack",
-      "cinematic hollywood",
-      "occasion",
-      "gaming",
-      "streaming"
+      "soundtrack"
     ]
   },
   {
@@ -54486,10 +48912,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "orchestral",
-      "soundtrack",
-      "occasion",
-      "gaming",
-      "streaming"
+      "soundtrack"
     ]
   },
   {
@@ -54512,10 +48935,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "fantasy soundtrack",
-      "epic dramatic orchestral",
-      "occasion",
-      "gaming",
-      "streaming"
+      "epic dramatic orchestral"
     ]
   },
   {
@@ -54538,10 +48958,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "epic film score",
-      "soundtrack",
-      "occasion",
-      "gaming",
-      "streaming"
+      "soundtrack"
     ]
   },
   {
@@ -54564,10 +48981,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "world",
-      "meditative",
-      "occasion",
-      "meditation",
-      "yoga"
+      "meditative"
     ]
   },
   {
@@ -54590,9 +49004,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "meditation",
-      "world",
-      "occasion",
-      "yoga"
+      "world"
     ]
   },
   {
@@ -54615,9 +49027,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "meditation",
-      "world tibetan inspired",
-      "occasion",
-      "yoga"
+      "world"
     ]
   },
   {
@@ -54640,9 +49050,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "new age",
-      "meditation",
-      "occasion",
-      "yoga"
+      "meditation"
     ]
   },
   {
@@ -54665,10 +49073,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "world",
-      "meditation yoga instrumental",
-      "occasion",
-      "meditation",
-      "yoga"
+      "meditation"
     ]
   },
   {
@@ -54691,9 +49096,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "world",
-      "meditation",
-      "occasion",
-      "yoga"
+      "meditation"
     ]
   },
   {
@@ -54716,9 +49119,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "meditation",
-      "world music tibetan",
-      "occasion",
-      "yoga"
+      "world music"
     ]
   },
   {
@@ -54741,9 +49142,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "meditation",
-      "world",
-      "occasion",
-      "yoga"
+      "world"
     ]
   },
   {
@@ -54766,13 +49165,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient meditation",
       "world ambient",
-      "cinematic",
-      "serene",
-      "calming",
-      "tibetan inspired",
-      "occasion",
-      "meditation",
-      "yoga"
+      "cinematic"
     ]
   },
   {
@@ -54795,10 +49188,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "world",
-      "meditative",
-      "occasion",
-      "meditation",
-      "yoga"
+      "meditative"
     ]
   },
   {
@@ -54821,10 +49211,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "new age",
-      "world meditative instrumental",
-      "occasion",
-      "meditation",
-      "yoga"
+      "world"
     ]
   },
   {
@@ -54847,9 +49234,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "meditation",
-      "world",
-      "occasion",
-      "yoga"
+      "world"
     ]
   },
   {
@@ -54872,9 +49257,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "meditation",
-      "world",
-      "occasion",
-      "yoga"
+      "world"
     ]
   },
   {
@@ -54897,10 +49280,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "soothing",
-      "world",
-      "occasion",
-      "meditation",
-      "yoga"
+      "world"
     ]
   },
   {
@@ -54923,9 +49303,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "meditation",
-      "world music tibetan",
-      "occasion",
-      "yoga"
+      "world music"
     ]
   },
   {
@@ -54948,10 +49326,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "world",
-      "meditation healing",
-      "occasion",
-      "meditation",
-      "yoga"
+      "meditation healing"
     ]
   },
   {
@@ -54974,13 +49349,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient meditation",
       "world ambient",
-      "cinematic",
-      "serene",
-      "calming",
-      "tibetan inspired",
-      "occasion",
-      "meditation",
-      "yoga"
+      "cinematic"
     ]
   },
   {
@@ -55003,10 +49372,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "soothing",
-      "world",
-      "occasion",
-      "meditation",
-      "yoga"
+      "world"
     ]
   },
   {
@@ -55029,10 +49395,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "world",
-      "healing meditation",
-      "occasion",
-      "meditation",
-      "yoga"
+      "healing meditation"
     ]
   },
   {
@@ -55055,10 +49418,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "world",
-      "meditation healing",
-      "occasion",
-      "meditation",
-      "yoga"
+      "meditation healing"
     ]
   },
   {
@@ -55081,9 +49441,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "new age",
-      "meditation",
-      "occasion",
-      "yoga"
+      "meditation"
     ]
   },
   {
@@ -55106,9 +49464,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "meditation",
-      "world",
-      "occasion",
-      "yoga"
+      "world"
     ]
   },
   {
@@ -55131,11 +49487,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "meditation ambient",
-      "world tribal",
-      "cinematic",
-      "occasion",
-      "meditation",
-      "yoga"
+      "world tribal"
     ]
   },
   {
@@ -55158,10 +49510,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "world",
-      "meditation yoga instrumental",
-      "occasion",
-      "meditation",
-      "yoga"
+      "meditation"
     ]
   },
   {
@@ -55184,10 +49533,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "world",
-      "healing meditation",
-      "occasion",
-      "meditation",
-      "yoga"
+      "healing meditation"
     ]
   },
   {
@@ -55210,10 +49556,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "new age",
-      "world meditative instrumental",
-      "occasion",
-      "meditation",
-      "yoga"
+      "world"
     ]
   },
   {
@@ -55236,11 +49579,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "meditation ambient",
-      "world tribal",
-      "cinematic",
-      "occasion",
-      "meditation",
-      "yoga"
+      "world tribal"
     ]
   },
   {
@@ -55263,9 +49602,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "meditation",
-      "world",
-      "occasion",
-      "yoga"
+      "world"
     ]
   },
   {
@@ -55288,9 +49625,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "meditation",
-      "world tibetan inspired",
-      "occasion",
-      "yoga"
+      "world"
     ]
   },
   {
@@ -55313,9 +49648,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "world",
-      "meditation",
-      "occasion",
-      "yoga"
+      "meditation"
     ]
   },
   {
@@ -55338,10 +49671,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop",
       "feel good",
-      "soundtrack",
-      "occasion",
-      "content",
-      "creator"
+      "soundtrack"
     ]
   },
   {
@@ -55364,10 +49694,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "jazz inspired",
-      "instrumental",
-      "occasion",
-      "content",
-      "creator"
+      "instrumental"
     ]
   },
   {
@@ -55390,10 +49717,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic",
       "feel good",
-      "bright",
-      "occasion",
-      "content",
-      "creator"
+      "bright"
     ]
   },
   {
@@ -55416,9 +49740,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic",
       "feel good",
-      "occasion",
-      "content",
-      "creator"
+      "content creator"
     ]
   },
   {
@@ -55441,10 +49763,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "soundtrack",
-      "cinematic",
-      "occasion",
-      "content",
-      "creator"
+      "cinematic"
     ]
   },
   {
@@ -55467,10 +49786,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "uplifting soundtrack",
-      "occasion",
-      "content",
-      "creator"
+      "uplifting soundtrack"
     ]
   },
   {
@@ -55493,9 +49809,7 @@ export const productionSongRecords = [
     "tags": [
       "jazz influenced",
       "mellow",
-      "occasion",
-      "content",
-      "creator"
+      "content creator"
     ]
   },
   {
@@ -55518,10 +49832,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic",
       "feel good",
-      "bright",
-      "occasion",
-      "content",
-      "creator"
+      "bright"
     ]
   },
   {
@@ -55544,10 +49855,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic pop",
       "soundtrack pop",
-      "ambient pop",
-      "occasion",
-      "content",
-      "creator"
+      "ambient pop"
     ]
   },
   {
@@ -55570,10 +49878,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic pop",
       "dance pop",
-      "electronic beats",
-      "occasion",
-      "content",
-      "creator"
+      "electronic beats"
     ]
   },
   {
@@ -55596,10 +49901,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "ambient",
-      "cinematic",
-      "occasion",
-      "content",
-      "creator"
+      "cinematic"
     ]
   },
   {
@@ -55622,10 +49924,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "ambient",
-      "soundtrack",
-      "occasion",
-      "content",
-      "creator"
+      "soundtrack"
     ]
   },
   {
@@ -55648,10 +49947,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "soundtrack",
-      "occasion",
-      "content",
-      "creator"
+      "soundtrack"
     ]
   },
   {
@@ -55674,10 +49970,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic pop",
       "dance pop",
-      "electronic beats",
-      "occasion",
-      "content",
-      "creator"
+      "electronic beats"
     ]
   },
   {
@@ -55700,10 +49993,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "soundtrack",
-      "occasion",
-      "content",
-      "creator"
+      "soundtrack"
     ]
   },
   {
@@ -55726,10 +50016,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop",
       "feel good",
-      "soundtrack",
-      "occasion",
-      "content",
-      "creator"
+      "soundtrack"
     ]
   },
   {
@@ -55752,9 +50039,7 @@ export const productionSongRecords = [
     "tags": [
       "jazzy",
       "mellow",
-      "occasion",
-      "content",
-      "creator"
+      "content creator"
     ]
   },
   {
@@ -55777,10 +50062,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "jazzy",
-      "mellow",
-      "occasion",
-      "content",
-      "creator"
+      "mellow"
     ]
   },
   {
@@ -55803,9 +50085,7 @@ export const productionSongRecords = [
     "tags": [
       "jazz influenced",
       "mellow",
-      "occasion",
-      "content",
-      "creator"
+      "content creator"
     ]
   },
   {
@@ -55828,10 +50108,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "indie folk",
-      "feel good acoustic",
-      "occasion",
-      "content",
-      "creator"
+      "feel good acoustic"
     ]
   },
   {
@@ -55854,9 +50131,7 @@ export const productionSongRecords = [
     "tags": [
       "jazzy",
       "mellow",
-      "occasion",
-      "content",
-      "creator"
+      "content creator"
     ]
   },
   {
@@ -55879,11 +50154,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "soundtrack",
-      "cinematic",
-      "uplifting",
-      "occasion",
-      "content",
-      "creator"
+      "cinematic"
     ]
   },
   {
@@ -55906,10 +50177,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "soundtrack",
-      "cinematic",
-      "occasion",
-      "content",
-      "creator"
+      "cinematic"
     ]
   },
   {
@@ -55932,10 +50200,7 @@ export const productionSongRecords = [
     "tags": [
       "edm pop",
       "electronic dance",
-      "upbeat electronic",
-      "occasion",
-      "content",
-      "creator"
+      "upbeat electronic"
     ]
   },
   {
@@ -55958,10 +50223,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic pop",
       "soundtrack pop",
-      "ambient pop",
-      "occasion",
-      "content",
-      "creator"
+      "ambient pop"
     ]
   },
   {
@@ -55984,10 +50246,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "jazz",
-      "mellow",
-      "occasion",
-      "content",
-      "creator"
+      "mellow"
     ]
   },
   {
@@ -56010,10 +50269,7 @@ export const productionSongRecords = [
     "tags": [
       "o fi",
       "jazz inspired",
-      "instrumental",
-      "occasion",
-      "content",
-      "creator"
+      "instrumental"
     ]
   },
   {
@@ -56036,10 +50292,7 @@ export const productionSongRecords = [
     "tags": [
       "edm pop",
       "electronic dance",
-      "upbeat electronic",
-      "occasion",
-      "content",
-      "creator"
+      "upbeat electronic"
     ]
   },
   {
@@ -56062,10 +50315,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "uplifting soundtrack",
-      "occasion",
-      "content",
-      "creator"
+      "uplifting soundtrack"
     ]
   },
   {
@@ -56088,10 +50338,7 @@ export const productionSongRecords = [
     "tags": [
       "pop folk",
       "acoustic",
-      "upbeat",
-      "occasion",
-      "content",
-      "creator"
+      "upbeat"
     ]
   },
   {
@@ -56114,10 +50361,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "emotional",
-      "cinematic soundtrack",
-      "occasion",
-      "content",
-      "creator"
+      "cinematic soundtrack"
     ]
   },
   {
@@ -56140,10 +50384,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "indie folk",
-      "feel good acoustic",
-      "occasion",
-      "content",
-      "creator"
+      "feel good acoustic"
     ]
   },
   {
@@ -56166,10 +50407,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "dance edm",
-      "soundtrack",
-      "occasion",
-      "content",
-      "creator"
+      "soundtrack"
     ]
   },
   {
@@ -56192,10 +50430,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "soundtrack",
-      "cinematic",
-      "occasion",
-      "content",
-      "creator"
+      "cinematic"
     ]
   },
   {
@@ -56218,9 +50453,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic pop",
       "dance pop",
-      "occasion",
-      "content",
-      "creator"
+      "content creator"
     ]
   },
   {
@@ -56243,10 +50476,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "jazz",
-      "mellow",
-      "occasion",
-      "content",
-      "creator"
+      "mellow"
     ]
   },
   {
@@ -56269,10 +50499,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "ambient",
-      "soundtrack",
-      "occasion",
-      "content",
-      "creator"
+      "soundtrack"
     ]
   },
   {
@@ -56295,10 +50522,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "emotional",
-      "cinematic soundtrack",
-      "occasion",
-      "content",
-      "creator"
+      "cinematic soundtrack"
     ]
   },
   {
@@ -56321,10 +50545,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "ambient",
-      "inspiring",
-      "occasion",
-      "content",
-      "creator"
+      "inspiring"
     ]
   },
   {
@@ -56347,10 +50568,7 @@ export const productionSongRecords = [
     "tags": [
       "pop folk",
       "acoustic",
-      "upbeat",
-      "occasion",
-      "content",
-      "creator"
+      "upbeat"
     ]
   },
   {
@@ -56373,9 +50591,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic",
       "feel good",
-      "occasion",
-      "content",
-      "creator"
+      "content creator"
     ]
   },
   {
@@ -56398,10 +50614,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "jazzy",
-      "mellow",
-      "occasion",
-      "content",
-      "creator"
+      "mellow"
     ]
   },
   {
@@ -56424,10 +50637,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic pop",
       "dance pop",
-      "electronic beats",
-      "occasion",
-      "content",
-      "creator"
+      "electronic beats"
     ]
   },
   {
@@ -56450,10 +50660,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "soundtrack",
-      "cinematic",
-      "occasion",
-      "content",
-      "creator"
+      "cinematic"
     ]
   },
   {
@@ -56476,9 +50683,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic pop",
       "dance pop",
-      "occasion",
-      "content",
-      "creator"
+      "content creator"
     ]
   },
   {
@@ -56501,11 +50706,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "soundtrack",
-      "cinematic",
-      "uplifting",
-      "occasion",
-      "content",
-      "creator"
+      "cinematic"
     ]
   },
   {
@@ -56528,10 +50729,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "ambient",
-      "inspiring",
-      "occasion",
-      "content",
-      "creator"
+      "inspiring"
     ]
   },
   {
@@ -56554,10 +50752,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "dance edm",
-      "soundtrack",
-      "occasion",
-      "content",
-      "creator"
+      "soundtrack"
     ]
   },
   {
@@ -56580,10 +50775,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "ambient",
-      "cinematic",
-      "occasion",
-      "content",
-      "creator"
+      "cinematic"
     ]
   },
   {
@@ -56606,10 +50798,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic pop",
       "dance pop",
-      "electronic beats",
-      "occasion",
-      "content",
-      "creator"
+      "electronic beats"
     ]
   },
   {
@@ -56633,10 +50822,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "cinematic rap",
-      "occasion",
-      "fitness",
-      "workout"
+      "cinematic rap"
     ]
   },
   {
@@ -56659,10 +50845,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "electronic",
-      "soundtrack",
-      "occasion",
-      "fitness",
-      "workout"
+      "soundtrack"
     ]
   },
   {
@@ -56686,10 +50869,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "cinematic rap",
-      "occasion",
-      "fitness",
-      "workout"
+      "cinematic rap"
     ]
   },
   {
@@ -56712,11 +50892,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "cinematic soundtrack",
-      "orchestral",
-      "dramatic",
-      "occasion",
-      "fitness",
-      "workout"
+      "orchestral"
     ]
   },
   {
@@ -56739,11 +50915,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic soundtrack",
       "trailer music",
-      "orchestral hybrid",
-      "workout motivational",
-      "occasion",
-      "fitness",
-      "workout"
+      "orchestral hybrid"
     ]
   },
   {
@@ -56767,10 +50939,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "aggressive trap metal",
-      "occasion",
-      "fitness",
-      "workout"
+      "aggressive trap metal"
     ]
   },
   {
@@ -56793,10 +50962,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic trap",
       "trap",
-      "cinematic hip hop",
-      "occasion",
-      "fitness",
-      "workout"
+      "cinematic hip hop"
     ]
   },
   {
@@ -56819,9 +50985,7 @@ export const productionSongRecords = [
     "tags": [
       "rock",
       "workout",
-      "soundtrack",
-      "occasion",
-      "fitness"
+      "soundtrack"
     ]
   },
   {
@@ -56844,11 +51008,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "electronic",
-      "cinematic soundtrack",
-      "dramatic",
-      "workout",
-      "occasion",
-      "fitness"
+      "cinematic soundtrack"
     ]
   },
   {
@@ -56871,11 +51031,7 @@ export const productionSongRecords = [
     "tags": [
       "rock",
       "cinematic",
-      "arena rock",
-      "motivational",
-      "occasion",
-      "fitness",
-      "workout"
+      "arena rock"
     ]
   },
   {
@@ -56898,10 +51054,7 @@ export const productionSongRecords = [
     "tags": [
       "dance pop",
       "motivational bright upbeat",
-      "feel good",
-      "occasion",
-      "fitness",
-      "workout"
+      "feel good"
     ]
   },
   {
@@ -56924,10 +51077,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral soundtrack",
       "electronic",
-      "dramatic",
-      "occasion",
-      "fitness",
-      "workout"
+      "dramatic"
     ]
   },
   {
@@ -56950,9 +51100,7 @@ export const productionSongRecords = [
     "tags": [
       "dance pop",
       "upbeat electronic",
-      "occasion",
-      "fitness",
-      "workout"
+      "fitness and workout"
     ]
   },
   {
@@ -56975,11 +51123,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic soundtrack",
       "trailer music",
-      "orchestral hybrid",
-      "workout motivational",
-      "occasion",
-      "fitness",
-      "workout"
+      "orchestral hybrid"
     ]
   },
   {
@@ -57002,10 +51146,7 @@ export const productionSongRecords = [
     "tags": [
       "rock",
       "cinematic soundtrack",
-      "electric rock",
-      "occasion",
-      "fitness",
-      "workout"
+      "electric rock"
     ]
   },
   {
@@ -57029,10 +51170,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "cinematic edm club",
-      "occasion",
-      "fitness",
-      "workout"
+      "cinematic edm"
     ]
   },
   {
@@ -57055,10 +51193,7 @@ export const productionSongRecords = [
     "tags": [
       "rock",
       "anthem",
-      "stadium rock",
-      "occasion",
-      "fitness",
-      "workout"
+      "stadium rock"
     ]
   },
   {
@@ -57081,10 +51216,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic soundtrack",
       "dark orchestral",
-      "industrial epic workout",
-      "occasion",
-      "fitness",
-      "workout"
+      "industrial epic workout"
     ]
   },
   {
@@ -57108,10 +51240,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "aggressive workout banger",
-      "occasion",
-      "fitness",
-      "workout"
+      "aggressive workout banger"
     ]
   },
   {
@@ -57134,13 +51263,7 @@ export const productionSongRecords = [
     "tags": [
       "dance pop",
       "electronic dance",
-      "upbeat",
-      "motivational",
-      "bright",
-      "punchy",
-      "occasion",
-      "fitness",
-      "workout"
+      "upbeat"
     ]
   },
   {
@@ -57164,10 +51287,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "aggressive rap",
-      "occasion",
-      "fitness",
-      "workout"
+      "aggressive rap"
     ]
   },
   {
@@ -57190,11 +51310,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "trap",
-      "workout fitness soundtrack",
-      "dark aggressive",
-      "occasion",
-      "fitness",
-      "workout"
+      "workout fitness soundtrack"
     ]
   },
   {
@@ -57217,10 +51333,7 @@ export const productionSongRecords = [
     "tags": [
       "dance pop",
       "motivational bright upbeat",
-      "feel good",
-      "occasion",
-      "fitness",
-      "workout"
+      "feel good"
     ]
   },
   {
@@ -57244,10 +51357,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "cinematic edm club",
-      "occasion",
-      "fitness",
-      "workout"
+      "cinematic edm"
     ]
   },
   {
@@ -57270,9 +51380,7 @@ export const productionSongRecords = [
     "tags": [
       "dance pop",
       "upbeat electronic",
-      "occasion",
-      "fitness",
-      "workout"
+      "fitness and workout"
     ]
   },
   {
@@ -57295,9 +51403,7 @@ export const productionSongRecords = [
     "tags": [
       "motivational",
       "dance pop",
-      "occasion",
-      "fitness",
-      "workout"
+      "fitness and workout"
     ]
   },
   {
@@ -57321,10 +51427,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "aggressive workout banger",
-      "occasion",
-      "fitness",
-      "workout"
+      "aggressive workout banger"
     ]
   },
   {
@@ -57347,11 +51450,7 @@ export const productionSongRecords = [
     "tags": [
       "rock",
       "soundtrack",
-      "cinematic",
-      "motivational",
-      "occasion",
-      "fitness",
-      "workout"
+      "cinematic"
     ]
   },
   {
@@ -57374,11 +51473,7 @@ export const productionSongRecords = [
     "tags": [
       "workout",
       "cinematic soundtrack",
-      "electronic",
-      "orchestral",
-      "dramatic",
-      "occasion",
-      "fitness"
+      "electronic"
     ]
   },
   {
@@ -57402,10 +51497,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "aggressive rap",
-      "occasion",
-      "fitness",
-      "workout"
+      "aggressive rap"
     ]
   },
   {
@@ -57428,10 +51520,7 @@ export const productionSongRecords = [
     "tags": [
       "dance pop",
       "upbeat electronic",
-      "motivational",
-      "occasion",
-      "fitness",
-      "workout"
+      "motivational"
     ]
   },
   {
@@ -57454,10 +51543,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral soundtrack",
       "electronic",
-      "dramatic",
-      "occasion",
-      "fitness",
-      "workout"
+      "dramatic"
     ]
   },
   {
@@ -57480,13 +51566,7 @@ export const productionSongRecords = [
     "tags": [
       "dance pop",
       "electronic dance",
-      "upbeat",
-      "motivational",
-      "bright",
-      "punchy",
-      "occasion",
-      "fitness",
-      "workout"
+      "upbeat"
     ]
   },
   {
@@ -57509,9 +51589,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "workout",
-      "motivational",
-      "occasion",
-      "fitness"
+      "motivational"
     ]
   },
   {
@@ -57534,11 +51612,7 @@ export const productionSongRecords = [
     "tags": [
       "workout",
       "cinematic soundtrack",
-      "electronic",
-      "orchestral",
-      "dramatic",
-      "occasion",
-      "fitness"
+      "electronic"
     ]
   },
   {
@@ -57561,9 +51635,7 @@ export const productionSongRecords = [
     "tags": [
       "rock",
       "workout",
-      "soundtrack",
-      "occasion",
-      "fitness"
+      "soundtrack"
     ]
   },
   {
@@ -57586,10 +51658,7 @@ export const productionSongRecords = [
     "tags": [
       "dance pop",
       "upbeat electronic",
-      "motivational",
-      "occasion",
-      "fitness",
-      "workout"
+      "motivational"
     ]
   },
   {
@@ -57612,10 +51681,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic soundtrack",
       "dark orchestral",
-      "industrial epic workout",
-      "occasion",
-      "fitness",
-      "workout"
+      "industrial epic workout"
     ]
   },
   {
@@ -57638,10 +51704,7 @@ export const productionSongRecords = [
     "tags": [
       "rock",
       "cinematic soundtrack",
-      "electric rock",
-      "occasion",
-      "fitness",
-      "workout"
+      "electric rock"
     ]
   },
   {
@@ -57664,9 +51727,7 @@ export const productionSongRecords = [
     "tags": [
       "motivational",
       "dance pop",
-      "occasion",
-      "fitness",
-      "workout"
+      "fitness and workout"
     ]
   },
   {
@@ -57689,10 +51750,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic trap",
       "trap",
-      "cinematic hip hop",
-      "occasion",
-      "fitness",
-      "workout"
+      "cinematic hip hop"
     ]
   },
   {
@@ -57715,10 +51773,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "electronic",
-      "soundtrack",
-      "occasion",
-      "fitness",
-      "workout"
+      "soundtrack"
     ]
   },
   {
@@ -57741,11 +51796,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "cinematic soundtrack",
-      "orchestral",
-      "dramatic",
-      "occasion",
-      "fitness",
-      "workout"
+      "orchestral"
     ]
   },
   {
@@ -57768,11 +51819,7 @@ export const productionSongRecords = [
     "tags": [
       "rock",
       "soundtrack",
-      "cinematic",
-      "motivational",
-      "occasion",
-      "fitness",
-      "workout"
+      "cinematic"
     ]
   },
   {
@@ -57796,10 +51843,7 @@ export const productionSongRecords = [
     "tags": [
       "trap",
       "hip hop",
-      "aggressive trap metal",
-      "occasion",
-      "fitness",
-      "workout"
+      "aggressive trap metal"
     ]
   },
   {
@@ -57822,11 +51866,7 @@ export const productionSongRecords = [
     "tags": [
       "rock",
       "cinematic",
-      "arena rock",
-      "motivational",
-      "occasion",
-      "fitness",
-      "workout"
+      "arena rock"
     ]
   },
   {
@@ -57849,9 +51889,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "workout",
-      "motivational",
-      "occasion",
-      "fitness"
+      "motivational"
     ]
   },
   {
@@ -57874,11 +51912,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "electronic",
-      "cinematic soundtrack",
-      "dramatic",
-      "workout",
-      "occasion",
-      "fitness"
+      "cinematic soundtrack"
     ]
   },
   {
@@ -57901,10 +51935,7 @@ export const productionSongRecords = [
     "tags": [
       "rock",
       "anthem",
-      "stadium rock",
-      "occasion",
-      "fitness",
-      "workout"
+      "stadium rock"
     ]
   },
   {
@@ -57927,11 +51958,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "trap",
-      "workout fitness soundtrack",
-      "dark aggressive",
-      "occasion",
-      "fitness",
-      "workout"
+      "workout fitness soundtrack"
     ]
   },
   {
@@ -57954,9 +51981,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "electronic",
-      "occasion",
-      "podcast",
-      "interview"
+      "podcast and interview"
     ]
   },
   {
@@ -57979,10 +52004,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "electronic",
-      "downtempo",
-      "occasion",
-      "podcast",
-      "interview"
+      "downtempo"
     ]
   },
   {
@@ -58005,11 +52027,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "electronic",
-      "minimal",
-      "contemporary",
-      "occasion",
-      "podcast",
-      "interview"
+      "minimal"
     ]
   },
   {
@@ -58032,9 +52050,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "electronic",
-      "occasion",
-      "podcast",
-      "interview"
+      "podcast and interview"
     ]
   },
   {
@@ -58057,10 +52073,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "electronic",
-      "minimal",
-      "occasion",
-      "podcast",
-      "interview"
+      "minimal"
     ]
   },
   {
@@ -58083,11 +52096,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "electronic",
-      "minimal",
-      "rhythmic",
-      "occasion",
-      "podcast",
-      "interview"
+      "minimal"
     ]
   },
   {
@@ -58110,10 +52119,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "ambient",
-      "downtempo",
-      "occasion",
-      "podcast",
-      "interview"
+      "downtempo"
     ]
   },
   {
@@ -58136,10 +52142,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "electronic",
-      "minimal",
-      "occasion",
-      "podcast",
-      "interview"
+      "minimal"
     ]
   },
   {
@@ -58162,11 +52165,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient pop",
       "electronic",
-      "minimal",
-      "uplifting",
-      "occasion",
-      "podcast",
-      "interview"
+      "minimal"
     ]
   },
   {
@@ -58189,11 +52188,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient pop",
       "electronic",
-      "minimal",
-      "uplifting",
-      "occasion",
-      "podcast",
-      "interview"
+      "minimal"
     ]
   },
   {
@@ -58216,10 +52211,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary ambient",
       "downtempo electronic",
-      "minimalist rhythmic",
-      "occasion",
-      "podcast",
-      "interview"
+      "minimalist rhythmic"
     ]
   },
   {
@@ -58242,10 +52234,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient pop",
       "electronic",
-      "minimalist",
-      "occasion",
-      "podcast",
-      "interview"
+      "minimalist"
     ]
   },
   {
@@ -58268,10 +52257,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "electronic",
-      "downtempo",
-      "occasion",
-      "podcast",
-      "interview"
+      "downtempo"
     ]
   },
   {
@@ -58294,10 +52280,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "downtempo",
-      "electronic",
-      "occasion",
-      "podcast",
-      "interview"
+      "electronic"
     ]
   },
   {
@@ -58320,10 +52303,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "electronic",
-      "minimal",
-      "occasion",
-      "podcast",
-      "interview"
+      "minimal"
     ]
   },
   {
@@ -58346,10 +52326,7 @@ export const productionSongRecords = [
     "tags": [
       "contemporary ambient",
       "downtempo electronic",
-      "minimalist rhythmic",
-      "occasion",
-      "podcast",
-      "interview"
+      "minimalist rhythmic"
     ]
   },
   {
@@ -58372,10 +52349,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "downtempo",
-      "electronic",
-      "occasion",
-      "podcast",
-      "interview"
+      "electronic"
     ]
   },
   {
@@ -58398,9 +52372,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "electronic",
-      "occasion",
-      "podcast",
-      "interview"
+      "podcast and interview"
     ]
   },
   {
@@ -58423,10 +52395,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "electronic",
-      "minimal",
-      "occasion",
-      "podcast",
-      "interview"
+      "minimal"
     ]
   },
   {
@@ -58449,10 +52418,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient pop",
       "electronic",
-      "minimalist",
-      "occasion",
-      "podcast",
-      "interview"
+      "minimalist"
     ]
   },
   {
@@ -58475,11 +52441,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "electronic",
-      "minimal",
-      "rhythmic",
-      "occasion",
-      "podcast",
-      "interview"
+      "minimal"
     ]
   },
   {
@@ -58502,10 +52464,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "downtempo",
-      "electronic",
-      "occasion",
-      "podcast",
-      "interview"
+      "electronic"
     ]
   },
   {
@@ -58528,11 +52487,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "electronic",
-      "minimal",
-      "contemporary",
-      "occasion",
-      "podcast",
-      "interview"
+      "minimal"
     ]
   },
   {
@@ -58555,9 +52510,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "electronic",
-      "occasion",
-      "podcast",
-      "interview"
+      "podcast and interview"
     ]
   },
   {
@@ -58580,10 +52533,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "ambient",
-      "downtempo",
-      "occasion",
-      "podcast",
-      "interview"
+      "downtempo"
     ]
   },
   {
@@ -58606,10 +52556,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "electronic",
-      "minimal",
-      "occasion",
-      "podcast",
-      "interview"
+      "minimal"
     ]
   },
   {
@@ -58632,10 +52579,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "electronic",
-      "minimal",
-      "occasion",
-      "podcast",
-      "interview"
+      "minimal"
     ]
   },
   {
@@ -58658,10 +52602,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "downtempo",
-      "electronic",
-      "occasion",
-      "podcast",
-      "interview"
+      "electronic"
     ]
   },
   {
@@ -58684,10 +52625,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "electronic",
-      "downtempo",
-      "occasion",
-      "podcast",
-      "interview"
+      "downtempo"
     ]
   },
   {
@@ -58710,10 +52648,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "electronic",
-      "downtempo",
-      "occasion",
-      "podcast",
-      "interview"
+      "downtempo"
     ]
   },
   {
@@ -58736,10 +52671,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "ambient",
-      "world",
-      "occasion",
-      "travel",
-      "adventure"
+      "world"
     ]
   },
   {
@@ -58762,10 +52694,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "orchestral",
-      "ambient",
-      "occasion",
-      "travel",
-      "adventure"
+      "ambient"
     ]
   },
   {
@@ -58788,10 +52717,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic",
       "tropical",
-      "light percussion",
-      "occasion",
-      "travel",
-      "adventure"
+      "light percussion"
     ]
   },
   {
@@ -58814,10 +52740,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk pop",
       "indie folk",
-      "cinematic soundtrack",
-      "occasion",
-      "travel",
-      "adventure"
+      "cinematic soundtrack"
     ]
   },
   {
@@ -58840,11 +52763,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "cinematic",
-      "orchestral",
-      "ambient",
-      "occasion",
-      "travel",
-      "adventure"
+      "orchestral"
     ]
   },
   {
@@ -58867,10 +52786,7 @@ export const productionSongRecords = [
     "tags": [
       "tropical",
       "acoustic",
-      "chill laid back",
-      "occasion",
-      "travel",
-      "adventure"
+      "chill laid back"
     ]
   },
   {
@@ -58893,10 +52809,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "minimal piano",
-      "occasion",
-      "travel",
-      "adventure"
+      "minimal piano"
     ]
   },
   {
@@ -58919,10 +52832,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic",
       "tropical",
-      "light percussion",
-      "occasion",
-      "travel",
-      "adventure"
+      "light percussion"
     ]
   },
   {
@@ -58945,10 +52855,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "orchestral",
-      "soundtrack",
-      "occasion",
-      "travel",
-      "adventure"
+      "soundtrack"
     ]
   },
   {
@@ -58971,10 +52878,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "emotional",
-      "occasion",
-      "travel",
-      "adventure"
+      "emotional"
     ]
   },
   {
@@ -58997,10 +52901,7 @@ export const productionSongRecords = [
     "tags": [
       "tropical pop",
       "light acoustic",
-      "breezy tropical instrumental",
-      "occasion",
-      "travel",
-      "adventure"
+      "breezy tropical instrumental"
     ]
   },
   {
@@ -59023,10 +52924,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "ambient",
-      "soundtrack",
-      "occasion",
-      "travel",
-      "adventure"
+      "soundtrack"
     ]
   },
   {
@@ -59049,10 +52947,7 @@ export const productionSongRecords = [
     "tags": [
       "world music",
       "soundtrack",
-      "ambient",
-      "occasion",
-      "travel",
-      "adventure"
+      "ambient"
     ]
   },
   {
@@ -59075,10 +52970,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk pop",
       "indie folk",
-      "cinematic soundtrack",
-      "occasion",
-      "travel",
-      "adventure"
+      "cinematic soundtrack"
     ]
   },
   {
@@ -59101,10 +52993,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "calming",
-      "occasion",
-      "travel",
-      "adventure"
+      "calming"
     ]
   },
   {
@@ -59127,11 +53016,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "cinematic",
-      "orchestral",
-      "ambient",
-      "occasion",
-      "travel",
-      "adventure"
+      "orchestral"
     ]
   },
   {
@@ -59154,10 +53039,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "soundtrack",
-      "nostalgic acoustic",
-      "occasion",
-      "travel",
-      "adventure"
+      "nostalgic acoustic"
     ]
   },
   {
@@ -59180,10 +53062,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "calming",
-      "occasion",
-      "travel",
-      "adventure"
+      "calming"
     ]
   },
   {
@@ -59206,10 +53085,7 @@ export const productionSongRecords = [
     "tags": [
       "tropical pop",
       "light acoustic",
-      "breezy tropical instrumental",
-      "occasion",
-      "travel",
-      "adventure"
+      "breezy tropical instrumental"
     ]
   },
   {
@@ -59232,10 +53108,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "ambient",
-      "soundtrack",
-      "occasion",
-      "travel",
-      "adventure"
+      "soundtrack"
     ]
   },
   {
@@ -59258,10 +53131,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop folk",
       "indie pop",
-      "cinematic soundtrack",
-      "occasion",
-      "travel",
-      "adventure"
+      "cinematic soundtrack"
     ]
   },
   {
@@ -59284,10 +53154,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "world music",
-      "cinematic soundtrack",
-      "occasion",
-      "travel",
-      "adventure"
+      "cinematic soundtrack"
     ]
   },
   {
@@ -59310,10 +53177,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "film score",
-      "occasion",
-      "travel",
-      "adventure"
+      "film score"
     ]
   },
   {
@@ -59336,10 +53200,7 @@ export const productionSongRecords = [
     "tags": [
       "world",
       "soundtrack",
-      "ambient",
-      "occasion",
-      "travel",
-      "adventure"
+      "ambient"
     ]
   },
   {
@@ -59362,10 +53223,7 @@ export const productionSongRecords = [
     "tags": [
       "tropical",
       "acoustic",
-      "chill laid back",
-      "occasion",
-      "travel",
-      "adventure"
+      "chill laid back"
     ]
   },
   {
@@ -59388,10 +53246,7 @@ export const productionSongRecords = [
     "tags": [
       "world",
       "ambient",
-      "soundtrack",
-      "occasion",
-      "travel",
-      "adventure"
+      "soundtrack"
     ]
   },
   {
@@ -59414,10 +53269,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "instrumental",
-      "occasion",
-      "travel",
-      "adventure"
+      "instrumental"
     ]
   },
   {
@@ -59440,10 +53292,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk pop",
       "indie folk",
-      "soundtrack",
-      "occasion",
-      "travel",
-      "adventure"
+      "soundtrack"
     ]
   },
   {
@@ -59466,10 +53315,7 @@ export const productionSongRecords = [
     "tags": [
       "world music",
       "soundtrack",
-      "ambient",
-      "occasion",
-      "travel",
-      "adventure"
+      "ambient"
     ]
   },
   {
@@ -59492,11 +53338,7 @@ export const productionSongRecords = [
     "tags": [
       "tropical",
       "acoustic",
-      "light",
-      "marimba",
-      "occasion",
-      "travel",
-      "adventure"
+      "light"
     ]
   },
   {
@@ -59519,10 +53361,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "soundtrack",
-      "orchestral",
-      "occasion",
-      "travel",
-      "adventure"
+      "orchestral"
     ]
   },
   {
@@ -59545,10 +53384,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "ambient",
-      "world",
-      "occasion",
-      "travel",
-      "adventure"
+      "world"
     ]
   },
   {
@@ -59571,10 +53407,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "minimal piano",
-      "occasion",
-      "travel",
-      "adventure"
+      "minimal piano"
     ]
   },
   {
@@ -59597,10 +53430,7 @@ export const productionSongRecords = [
     "tags": [
       "tropical pop",
       "marimba",
-      "laid back island",
-      "occasion",
-      "travel",
-      "adventure"
+      "laid back island"
     ]
   },
   {
@@ -59623,10 +53453,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "emotional",
-      "occasion",
-      "travel",
-      "adventure"
+      "emotional"
     ]
   },
   {
@@ -59649,10 +53476,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "soundtrack",
-      "nostalgic acoustic",
-      "occasion",
-      "travel",
-      "adventure"
+      "nostalgic acoustic"
     ]
   },
   {
@@ -59675,10 +53499,7 @@ export const productionSongRecords = [
     "tags": [
       "tropical pop",
       "marimba",
-      "laid back island",
-      "occasion",
-      "travel",
-      "adventure"
+      "laid back island"
     ]
   },
   {
@@ -59701,10 +53522,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "world music",
-      "cinematic soundtrack",
-      "occasion",
-      "travel",
-      "adventure"
+      "cinematic soundtrack"
     ]
   },
   {
@@ -59727,10 +53545,7 @@ export const productionSongRecords = [
     "tags": [
       "world",
       "soundtrack",
-      "ambient",
-      "occasion",
-      "travel",
-      "adventure"
+      "ambient"
     ]
   },
   {
@@ -59753,10 +53568,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk pop",
       "indie folk",
-      "soundtrack",
-      "occasion",
-      "travel",
-      "adventure"
+      "soundtrack"
     ]
   },
   {
@@ -59779,10 +53591,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "orchestral",
-      "soundtrack",
-      "occasion",
-      "travel",
-      "adventure"
+      "soundtrack"
     ]
   },
   {
@@ -59805,10 +53614,7 @@ export const productionSongRecords = [
     "tags": [
       "world",
       "ambient",
-      "soundtrack",
-      "occasion",
-      "travel",
-      "adventure"
+      "soundtrack"
     ]
   },
   {
@@ -59831,10 +53637,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "film score",
-      "occasion",
-      "travel",
-      "adventure"
+      "film score"
     ]
   },
   {
@@ -59857,10 +53660,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "orchestral",
-      "ambient",
-      "occasion",
-      "travel",
-      "adventure"
+      "ambient"
     ]
   },
   {
@@ -59883,10 +53683,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop folk",
       "indie pop",
-      "cinematic soundtrack",
-      "occasion",
-      "travel",
-      "adventure"
+      "cinematic soundtrack"
     ]
   },
   {
@@ -59909,11 +53706,7 @@ export const productionSongRecords = [
     "tags": [
       "tropical",
       "acoustic",
-      "light",
-      "marimba",
-      "occasion",
-      "travel",
-      "adventure"
+      "light"
     ]
   },
   {
@@ -59936,11 +53729,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk pop",
       "indie folk",
-      "feel good acoustic",
-      "ambient soundtrack",
-      "occasion",
-      "travel",
-      "adventure"
+      "feel good acoustic"
     ]
   },
   {
@@ -59963,11 +53752,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk pop",
       "indie folk",
-      "feel good acoustic",
-      "ambient soundtrack",
-      "occasion",
-      "travel",
-      "adventure"
+      "feel good acoustic"
     ]
   },
   {
@@ -59990,10 +53775,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "soundtrack",
-      "orchestral",
-      "occasion",
-      "travel",
-      "adventure"
+      "orchestral"
     ]
   },
   {
@@ -60016,10 +53798,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "cinematic",
-      "instrumental",
-      "occasion",
-      "travel",
-      "adventure"
+      "instrumental"
     ]
   },
   {
@@ -60042,10 +53821,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "cinematic",
-      "orchestral",
-      "occasion",
-      "corporate",
-      "presentation"
+      "orchestral"
     ]
   },
   {
@@ -60068,10 +53844,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "cinematic",
-      "ambient",
-      "occasion",
-      "corporate",
-      "presentation"
+      "ambient"
     ]
   },
   {
@@ -60094,10 +53867,7 @@ export const productionSongRecords = [
     "tags": [
       "minimal",
       "electronic",
-      "ambient",
-      "occasion",
-      "corporate",
-      "presentation"
+      "ambient"
     ]
   },
   {
@@ -60120,10 +53890,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "ambient",
-      "orchestral",
-      "occasion",
-      "corporate",
-      "presentation"
+      "orchestral"
     ]
   },
   {
@@ -60146,10 +53913,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "ambient",
-      "orchestral",
-      "occasion",
-      "corporate",
-      "presentation"
+      "orchestral"
     ]
   },
   {
@@ -60172,10 +53936,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "ambient",
-      "cinematic",
-      "occasion",
-      "corporate",
-      "presentation"
+      "cinematic"
     ]
   },
   {
@@ -60198,10 +53959,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "ambient",
-      "orchestral",
-      "occasion",
-      "corporate",
-      "presentation"
+      "orchestral"
     ]
   },
   {
@@ -60224,10 +53982,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "ambient",
-      "orchestra",
-      "occasion",
-      "corporate",
-      "presentation"
+      "orchestra"
     ]
   },
   {
@@ -60250,10 +54005,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "ambient",
-      "cinematic",
-      "occasion",
-      "corporate",
-      "presentation"
+      "cinematic"
     ]
   },
   {
@@ -60276,10 +54028,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "ambient",
-      "cinematic",
-      "occasion",
-      "corporate",
-      "presentation"
+      "cinematic"
     ]
   },
   {
@@ -60302,10 +54051,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "ambient",
-      "cinematic",
-      "occasion",
-      "corporate",
-      "presentation"
+      "cinematic"
     ]
   },
   {
@@ -60328,10 +54074,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "cinematic",
-      "orchestral",
-      "occasion",
-      "corporate",
-      "presentation"
+      "orchestral"
     ]
   },
   {
@@ -60354,10 +54097,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "cinematic",
-      "uplifting",
-      "occasion",
-      "corporate",
-      "presentation"
+      "uplifting"
     ]
   },
   {
@@ -60380,10 +54120,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "cinematic",
-      "uplifting",
-      "occasion",
-      "corporate",
-      "presentation"
+      "uplifting"
     ]
   },
   {
@@ -60406,10 +54143,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "ambient",
-      "orchestral",
-      "occasion",
-      "corporate",
-      "presentation"
+      "orchestral"
     ]
   },
   {
@@ -60432,10 +54166,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "ambient",
-      "cinematic",
-      "occasion",
-      "corporate",
-      "presentation"
+      "cinematic"
     ]
   },
   {
@@ -60458,10 +54189,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "cinematic",
-      "ambient",
-      "occasion",
-      "corporate",
-      "presentation"
+      "ambient"
     ]
   },
   {
@@ -60484,10 +54212,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "ambient",
-      "orchestral",
-      "occasion",
-      "corporate",
-      "presentation"
+      "orchestral"
     ]
   },
   {
@@ -60510,10 +54235,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "orchestral",
-      "cinematic uplifting",
-      "occasion",
-      "corporate",
-      "presentation"
+      "cinematic"
     ]
   },
   {
@@ -60536,10 +54258,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "ambient",
-      "orchestral",
-      "occasion",
-      "corporate",
-      "presentation"
+      "orchestral"
     ]
   },
   {
@@ -60562,10 +54281,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "ambient",
-      "orchestral",
-      "occasion",
-      "corporate",
-      "presentation"
+      "orchestral"
     ]
   },
   {
@@ -60588,10 +54304,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "orchestral",
-      "cinematic uplifting",
-      "occasion",
-      "corporate",
-      "presentation"
+      "cinematic"
     ]
   },
   {
@@ -60614,10 +54327,7 @@ export const productionSongRecords = [
     "tags": [
       "minimal",
       "electronic",
-      "ambient",
-      "occasion",
-      "corporate",
-      "presentation"
+      "ambient"
     ]
   },
   {
@@ -60640,10 +54350,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "ambient",
-      "cinematic",
-      "occasion",
-      "corporate",
-      "presentation"
+      "cinematic"
     ]
   },
   {
@@ -60666,10 +54373,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop",
       "jazz influenced pop",
-      "feel good soundtrack",
-      "occasion",
-      "lifestyle",
-      "food"
+      "feel good soundtrack"
     ]
   },
   {
@@ -60692,10 +54396,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop jazz",
       "jazz pop",
-      "upbeat swung instrumental",
-      "occasion",
-      "lifestyle",
-      "food"
+      "upbeat swung instrumental"
     ]
   },
   {
@@ -60718,10 +54419,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop",
       "jazz influenced",
-      "upbeat swing",
-      "occasion",
-      "lifestyle",
-      "food"
+      "upbeat swing"
     ]
   },
   {
@@ -60744,10 +54442,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop",
       "jazz influenced",
-      "upbeat swing",
-      "occasion",
-      "lifestyle",
-      "food"
+      "upbeat swing"
     ]
   },
   {
@@ -60770,9 +54465,7 @@ export const productionSongRecords = [
     "tags": [
       "jazz influenced",
       "feel good groove",
-      "occasion",
-      "lifestyle",
-      "food"
+      "lifestyle and food"
     ]
   },
   {
@@ -60795,9 +54488,7 @@ export const productionSongRecords = [
     "tags": [
       "jazz influenced",
       "feel good groove",
-      "occasion",
-      "lifestyle",
-      "food"
+      "lifestyle and food"
     ]
   },
   {
@@ -60820,11 +54511,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop",
       "jazz pop",
-      "feel good",
-      "upbeat swung groove",
-      "occasion",
-      "lifestyle",
-      "food"
+      "feel good"
     ]
   },
   {
@@ -60847,10 +54534,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "indie folk",
-      "jazz pop",
-      "occasion",
-      "lifestyle",
-      "food"
+      "jazz pop"
     ]
   },
   {
@@ -60873,11 +54557,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop",
       "jazz pop",
-      "feel good",
-      "upbeat swung groove",
-      "occasion",
-      "lifestyle",
-      "food"
+      "feel good"
     ]
   },
   {
@@ -60900,10 +54580,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop",
       "jazz pop",
-      "feel good soundtrack",
-      "occasion",
-      "lifestyle",
-      "food"
+      "feel good soundtrack"
     ]
   },
   {
@@ -60926,10 +54603,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop",
       "jazz influenced",
-      "feel good soundtrack",
-      "occasion",
-      "lifestyle",
-      "food"
+      "feel good soundtrack"
     ]
   },
   {
@@ -60950,9 +54624,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Lifestyle & Food/Fresh Plates & Good Days",
     "metadataText": "",
     "tags": [
+      "lifestyle and food",
       "occasion",
-      "lifestyle",
-      "food"
+      "instrumental"
     ]
   },
   {
@@ -60975,10 +54649,7 @@ export const productionSongRecords = [
     "tags": [
       "jazz influenced pop",
       "acoustic pop",
-      "soundtrack lounge",
-      "occasion",
-      "lifestyle",
-      "food"
+      "soundtrack lounge"
     ]
   },
   {
@@ -60999,11 +54670,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Lifestyle & Food/Golden Hour Café",
     "metadataText": "pop, jazz (lounge), upbeat acoustic groove\n\nAcoustic pop groove with jazzy lounge touches, bright mid-tempo swing, light percussion, smooth bassline, and playful piano hooks; verse bed stays sparse with guitar, brushed clicks, and soft keys, pre-drop adds filtered hand percussion and a tiny riser, then the main section opens with cheerful chord lifts and a catchy piano motif, Airy close-mic mix, polished and glossy, with café-room warmth, subtle tape shimmer, and clean commercial sparkle, playful, jazzy, fresh, light, uplifting, acoustic, smooth, sonic, clean, stylish, bright, soundtrack, warm, feel-good",
     "tags": [
-      "jazz lounge",
+      "jazz",
       "upbeat acoustic groove",
-      "occasion",
-      "lifestyle",
-      "food"
+      "lifestyle and food"
     ]
   },
   {
@@ -61026,10 +54695,7 @@ export const productionSongRecords = [
     "tags": [
       "pop jazz",
       "jazz instrumental",
-      "acoustic pop",
-      "occasion",
-      "lifestyle",
-      "food"
+      "acoustic pop"
     ]
   },
   {
@@ -61050,11 +54716,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/Lifestyle & Food/Kitchen Stories",
     "metadataText": "pop, jazz (lounge), upbeat acoustic groove\n\nAcoustic pop groove with jazzy lounge touches, bright mid-tempo swing, light percussion, smooth bassline, and playful piano hooks; verse bed stays sparse with guitar, brushed clicks, and soft keys, pre-drop adds filtered hand percussion and a tiny riser, then the main section opens with cheerful chord lifts and a catchy piano motif, Airy close-mic mix, polished and glossy, with café-room warmth, subtle tape shimmer, and clean commercial sparkle, playful, jazzy, fresh, light, uplifting, acoustic, smooth, sonic, clean, stylish, bright, soundtrack, warm, feel-good",
     "tags": [
-      "jazz lounge",
+      "jazz",
       "upbeat acoustic groove",
-      "occasion",
-      "lifestyle",
-      "food"
+      "lifestyle and food"
     ]
   },
   {
@@ -61077,10 +54741,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop jazz",
       "jazz pop",
-      "upbeat swung instrumental",
-      "occasion",
-      "lifestyle",
-      "food"
+      "upbeat swung instrumental"
     ]
   },
   {
@@ -61103,10 +54764,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop",
       "jazz influenced swing",
-      "feel good upbeat",
-      "occasion",
-      "lifestyle",
-      "food"
+      "feel good upbeat"
     ]
   },
   {
@@ -61129,10 +54787,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "cinematic",
-      "jazz pop",
-      "occasion",
-      "lifestyle",
-      "food"
+      "jazz pop"
     ]
   },
   {
@@ -61155,10 +54810,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "cinematic",
-      "jazz pop",
-      "occasion",
-      "lifestyle",
-      "food"
+      "jazz pop"
     ]
   },
   {
@@ -61181,10 +54833,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop",
       "jazz pop",
-      "feel good soundtrack",
-      "occasion",
-      "lifestyle",
-      "food"
+      "feel good soundtrack"
     ]
   },
   {
@@ -61207,10 +54856,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop",
       "jazz influenced pop",
-      "feel good soundtrack",
-      "occasion",
-      "lifestyle",
-      "food"
+      "feel good soundtrack"
     ]
   },
   {
@@ -61233,10 +54879,7 @@ export const productionSongRecords = [
     "tags": [
       "jazz influenced pop",
       "acoustic pop",
-      "soundtrack lounge",
-      "occasion",
-      "lifestyle",
-      "food"
+      "soundtrack lounge"
     ]
   },
   {
@@ -61259,10 +54902,7 @@ export const productionSongRecords = [
     "tags": [
       "pop jazz",
       "jazz instrumental",
-      "acoustic pop",
-      "occasion",
-      "lifestyle",
-      "food"
+      "acoustic pop"
     ]
   },
   {
@@ -61285,10 +54925,7 @@ export const productionSongRecords = [
     "tags": [
       "indie pop",
       "indie folk",
-      "jazz pop",
-      "occasion",
-      "lifestyle",
-      "food"
+      "jazz pop"
     ]
   },
   {
@@ -61311,10 +54948,7 @@ export const productionSongRecords = [
     "tags": [
       "acoustic pop",
       "jazz influenced swing",
-      "feel good upbeat",
-      "occasion",
-      "lifestyle",
-      "food"
+      "feel good upbeat"
     ]
   },
   {
@@ -61337,10 +54971,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "orchestral",
-      "ambient",
-      "occasion",
-      "weddings",
-      "events"
+      "ambient"
     ]
   },
   {
@@ -61363,10 +54994,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "orchestral",
-      "ambient",
-      "occasion",
-      "weddings",
-      "events"
+      "ambient"
     ]
   },
   {
@@ -61389,10 +55017,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral pop",
       "romantic orchestral",
-      "ambient pop",
-      "occasion",
-      "weddings",
-      "events"
+      "ambient pop"
     ]
   },
   {
@@ -61415,12 +55040,7 @@ export const productionSongRecords = [
     "tags": [
       "uplifting",
       "orchestral",
-      "cinematic",
-      "romantic",
-      "ambient",
-      "occasion",
-      "weddings",
-      "events"
+      "cinematic"
     ]
   },
   {
@@ -61443,10 +55063,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "ballad",
-      "ambient",
-      "occasion",
-      "weddings",
-      "events"
+      "ambient"
     ]
   },
   {
@@ -61469,10 +55086,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "magical",
-      "romantic",
-      "occasion",
-      "weddings",
-      "events"
+      "romantic"
     ]
   },
   {
@@ -61495,12 +55109,7 @@ export const productionSongRecords = [
     "tags": [
       "uplifting",
       "orchestral",
-      "cinematic",
-      "romantic",
-      "ambient",
-      "occasion",
-      "weddings",
-      "events"
+      "cinematic"
     ]
   },
   {
@@ -61523,10 +55132,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "orchestral",
-      "romantic ambient",
-      "occasion",
-      "weddings",
-      "events"
+      "romantic ambient"
     ]
   },
   {
@@ -61549,10 +55155,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "orchestral",
-      "cinematic",
-      "occasion",
-      "weddings",
-      "events"
+      "cinematic"
     ]
   },
   {
@@ -61575,10 +55178,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "ballad",
-      "ambient",
-      "occasion",
-      "weddings",
-      "events"
+      "ambient"
     ]
   },
   {
@@ -61601,10 +55201,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "ambient",
-      "romantic",
-      "occasion",
-      "weddings",
-      "events"
+      "romantic"
     ]
   },
   {
@@ -61627,10 +55224,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "ambient",
-      "romantic",
-      "occasion",
-      "weddings",
-      "events"
+      "romantic"
     ]
   },
   {
@@ -61653,10 +55247,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "ambient",
-      "wedding instrumental",
-      "occasion",
-      "weddings",
-      "events"
+      "wedding instrumental"
     ]
   },
   {
@@ -61679,10 +55270,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "ambient",
-      "romantic",
-      "occasion",
-      "weddings",
-      "events"
+      "romantic"
     ]
   },
   {
@@ -61705,10 +55293,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral pop",
       "romantic orchestral",
-      "ambient pop",
-      "occasion",
-      "weddings",
-      "events"
+      "ambient pop"
     ]
   },
   {
@@ -61731,10 +55316,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "orchestral",
-      "cinematic",
-      "occasion",
-      "weddings",
-      "events"
+      "cinematic"
     ]
   },
   {
@@ -61757,10 +55339,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "orchestral",
-      "ambient",
-      "occasion",
-      "weddings",
-      "events"
+      "ambient"
     ]
   },
   {
@@ -61783,10 +55362,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "ambient",
-      "wedding instrumental",
-      "occasion",
-      "weddings",
-      "events"
+      "wedding instrumental"
     ]
   },
   {
@@ -61809,10 +55385,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "orchestral",
-      "romantic ambient",
-      "occasion",
-      "weddings",
-      "events"
+      "romantic ambient"
     ]
   },
   {
@@ -61835,10 +55408,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "ambient",
-      "romantic",
-      "occasion",
-      "weddings",
-      "events"
+      "romantic"
     ]
   },
   {
@@ -61861,10 +55431,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "ambient",
-      "romantic",
-      "occasion",
-      "weddings",
-      "events"
+      "romantic"
     ]
   },
   {
@@ -61887,10 +55454,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "ambient",
-      "romantic",
-      "occasion",
-      "weddings",
-      "events"
+      "romantic"
     ]
   },
   {
@@ -61913,10 +55477,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "ambient",
-      "romantic",
-      "occasion",
-      "weddings",
-      "events"
+      "romantic"
     ]
   },
   {
@@ -61939,10 +55500,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "orchestral",
-      "ambient",
-      "occasion",
-      "weddings",
-      "events"
+      "ambient"
     ]
   },
   {
@@ -61965,9 +55523,7 @@ export const productionSongRecords = [
     "tags": [
       "country folk",
       "folk",
-      "acoustic",
-      "culture",
-      "country"
+      "acoustic"
     ]
   },
   {
@@ -61991,9 +55547,7 @@ export const productionSongRecords = [
     "tags": [
       "country folk",
       "folk",
-      "acoustic",
-      "culture",
-      "country"
+      "acoustic"
     ]
   },
   {
@@ -62016,9 +55570,7 @@ export const productionSongRecords = [
     "tags": [
       "country folk",
       "folk",
-      "acoustic",
-      "culture",
-      "country"
+      "acoustic"
     ]
   },
   {
@@ -62041,9 +55593,7 @@ export const productionSongRecords = [
     "tags": [
       "country folk",
       "folk",
-      "acoustic",
-      "culture",
-      "country"
+      "acoustic"
     ]
   },
   {
@@ -62066,9 +55616,7 @@ export const productionSongRecords = [
     "tags": [
       "country folk",
       "folk",
-      "acoustic",
-      "culture",
-      "country"
+      "acoustic"
     ]
   },
   {
@@ -62091,9 +55639,7 @@ export const productionSongRecords = [
     "tags": [
       "country folk",
       "folk",
-      "acoustic",
-      "culture",
-      "country"
+      "acoustic"
     ]
   },
   {
@@ -62117,9 +55663,7 @@ export const productionSongRecords = [
     "tags": [
       "outlaw country",
       "country rock",
-      "electric",
-      "culture",
-      "country"
+      "electric"
     ]
   },
   {
@@ -62143,9 +55687,7 @@ export const productionSongRecords = [
     "tags": [
       "outlaw country",
       "country rock",
-      "electric",
-      "culture",
-      "country"
+      "electric"
     ]
   },
   {
@@ -62168,9 +55710,7 @@ export const productionSongRecords = [
     "tags": [
       "outlaw country",
       "country rock",
-      "electric",
-      "culture",
-      "country"
+      "electric"
     ]
   },
   {
@@ -62193,9 +55733,7 @@ export const productionSongRecords = [
     "tags": [
       "outlaw country",
       "country rock",
-      "electric",
-      "culture",
-      "country"
+      "electric"
     ]
   },
   {
@@ -62218,9 +55756,7 @@ export const productionSongRecords = [
     "tags": [
       "outlaw country",
       "country rock",
-      "electric",
-      "culture",
-      "country"
+      "electric"
     ]
   },
   {
@@ -62244,9 +55780,7 @@ export const productionSongRecords = [
     "tags": [
       "outlaw country",
       "country rock",
-      "electric",
-      "culture",
-      "country"
+      "electric"
     ]
   },
   {
@@ -62269,9 +55803,7 @@ export const productionSongRecords = [
     "tags": [
       "outlaw country",
       "country rock",
-      "electric",
-      "culture",
-      "country"
+      "electric"
     ]
   },
   {
@@ -62295,9 +55827,7 @@ export const productionSongRecords = [
     "tags": [
       "outlaw country",
       "country rock",
-      "electric",
-      "culture",
-      "country"
+      "electric"
     ]
   },
   {
@@ -62321,9 +55851,7 @@ export const productionSongRecords = [
     "tags": [
       "modern country",
       "country pop",
-      "uplifting",
-      "culture",
-      "country"
+      "uplifting"
     ]
   },
   {
@@ -62346,9 +55874,7 @@ export const productionSongRecords = [
     "tags": [
       "modern country",
       "country pop",
-      "uplifting",
-      "culture",
-      "country"
+      "uplifting"
     ]
   },
   {
@@ -62371,9 +55897,7 @@ export const productionSongRecords = [
     "tags": [
       "modern country",
       "country pop",
-      "uplifting",
-      "culture",
-      "country"
+      "uplifting"
     ]
   },
   {
@@ -62397,9 +55921,7 @@ export const productionSongRecords = [
     "tags": [
       "modern country",
       "country pop",
-      "uplifting",
-      "culture",
-      "country"
+      "uplifting"
     ]
   },
   {
@@ -62422,9 +55944,7 @@ export const productionSongRecords = [
     "tags": [
       "modern country",
       "country pop",
-      "uplifting",
-      "culture",
-      "country"
+      "uplifting"
     ]
   },
   {
@@ -62447,8 +55967,7 @@ export const productionSongRecords = [
     "tags": [
       "country",
       "ballad",
-      "soulful",
-      "culture"
+      "soulful"
     ]
   },
   {
@@ -62472,8 +55991,7 @@ export const productionSongRecords = [
     "tags": [
       "country",
       "ballad",
-      "soulful",
-      "culture"
+      "soulful"
     ]
   },
   {
@@ -62496,8 +56014,7 @@ export const productionSongRecords = [
     "tags": [
       "country",
       "ballad",
-      "soulful",
-      "culture"
+      "soulful"
     ]
   },
   {
@@ -62521,8 +56038,7 @@ export const productionSongRecords = [
     "tags": [
       "country",
       "ballad",
-      "soulful",
-      "culture"
+      "soulful"
     ]
   },
   {
@@ -62545,8 +56061,7 @@ export const productionSongRecords = [
     "tags": [
       "country",
       "ballad",
-      "soulful",
-      "culture"
+      "soulful"
     ]
   },
   {
@@ -62569,8 +56084,7 @@ export const productionSongRecords = [
     "tags": [
       "country",
       "ballad",
-      "soulful",
-      "culture"
+      "soulful"
     ]
   },
   {
@@ -62593,8 +56107,7 @@ export const productionSongRecords = [
     "tags": [
       "country",
       "modern country",
-      "nashville sound",
-      "culture"
+      "nashville sound"
     ]
   },
   {
@@ -62617,8 +56130,7 @@ export const productionSongRecords = [
     "tags": [
       "country",
       "modern country",
-      "nashville sound",
-      "culture"
+      "nashville sound"
     ]
   },
   {
@@ -62641,8 +56153,7 @@ export const productionSongRecords = [
     "tags": [
       "country",
       "modern country",
-      "nashville sound",
-      "culture"
+      "nashville sound"
     ]
   },
   {
@@ -62665,8 +56176,7 @@ export const productionSongRecords = [
     "tags": [
       "country",
       "modern country",
-      "nashville sound",
-      "culture"
+      "nashville sound"
     ]
   },
   {
@@ -62689,9 +56199,7 @@ export const productionSongRecords = [
     "tags": [
       "country folk",
       "folk",
-      "acoustic",
-      "culture",
-      "country"
+      "acoustic"
     ]
   },
   {
@@ -62714,10 +56222,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi chillhop",
       "jazz",
-      "ambient",
-      "occasion",
-      "study",
-      "productivity"
+      "ambient"
     ]
   },
   {
@@ -62740,11 +56245,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "chillhop",
-      "ambient",
-      "jazz inflected lo",
-      "occasion",
-      "study",
-      "productivity"
+      "ambient"
     ]
   },
   {
@@ -62767,10 +56268,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi chillhop",
       "chillhop",
-      "ambient jazz",
-      "occasion",
-      "study",
-      "productivity"
+      "ambient jazz"
     ]
   },
   {
@@ -62793,10 +56291,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "chillhop",
-      "ambient",
-      "occasion",
-      "study",
-      "productivity"
+      "ambient"
     ]
   },
   {
@@ -62819,10 +56314,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "chillhop",
-      "jazz influenced",
-      "occasion",
-      "study",
-      "productivity"
+      "jazz influenced"
     ]
   },
   {
@@ -62845,10 +56337,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "chillhop",
-      "ambient",
-      "occasion",
-      "study",
-      "productivity"
+      "ambient"
     ]
   },
   {
@@ -62871,11 +56360,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "chillhop",
-      "ambient",
-      "jazz inflected lo",
-      "occasion",
-      "study",
-      "productivity"
+      "ambient"
     ]
   },
   {
@@ -62898,10 +56383,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "chillhop",
-      "ambient",
-      "occasion",
-      "study",
-      "productivity"
+      "ambient"
     ]
   },
   {
@@ -62924,10 +56406,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "chillhop",
-      "jazz",
-      "occasion",
-      "study",
-      "productivity"
+      "jazz"
     ]
   },
   {
@@ -62950,11 +56429,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "chillhop",
-      "ambient",
-      "jazz",
-      "occasion",
-      "study",
-      "productivity"
+      "ambient"
     ]
   },
   {
@@ -62977,10 +56452,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "chillhop",
-      "ambient",
-      "occasion",
-      "study",
-      "productivity"
+      "ambient"
     ]
   },
   {
@@ -63003,11 +56475,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "chillhop",
-      "jazz",
-      "ambient",
-      "occasion",
-      "study",
-      "productivity"
+      "jazz"
     ]
   },
   {
@@ -63030,10 +56498,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "chillhop",
-      "jazz",
-      "occasion",
-      "study",
-      "productivity"
+      "jazz"
     ]
   },
   {
@@ -63056,11 +56521,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "chillhop",
-      "ambient",
-      "jazz",
-      "occasion",
-      "study",
-      "productivity"
+      "ambient"
     ]
   },
   {
@@ -63083,11 +56544,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "chillhop",
-      "jazz",
-      "ambient",
-      "occasion",
-      "study",
-      "productivity"
+      "jazz"
     ]
   },
   {
@@ -63110,10 +56567,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi chillhop",
       "jazz",
-      "ambient",
-      "occasion",
-      "study",
-      "productivity"
+      "ambient"
     ]
   },
   {
@@ -63136,10 +56590,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "chillhop",
-      "ambient",
-      "occasion",
-      "study",
-      "productivity"
+      "ambient"
     ]
   },
   {
@@ -63162,10 +56613,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "chillhop",
-      "ambient",
-      "occasion",
-      "study",
-      "productivity"
+      "ambient"
     ]
   },
   {
@@ -63188,20 +56636,7 @@ export const productionSongRecords = [
     "tags": [
       "swung drums",
       "warm ambient pads",
-      "mellow piano chord",
-      "subtle jazz brush",
-      "rounded bassline",
-      "light lift adds",
-      "cozy polished",
-      "softly detailed",
-      "smooth",
-      "calming",
-      "gentle",
-      "steady",
-      "lo fi",
-      "warm",
-      "inspiring",
-      "jazz"
+      "mellow piano chord"
     ]
   },
   {
@@ -63224,11 +56659,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi chillhop",
       "chillhop",
-      "lo fi jazz",
-      "ambient",
-      "occasion",
-      "study",
-      "productivity"
+      "lo fi jazz"
     ]
   },
   {
@@ -63251,10 +56682,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "chillhop",
-      "jazz influenced",
-      "occasion",
-      "study",
-      "productivity"
+      "jazz influenced"
     ]
   },
   {
@@ -63277,10 +56705,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "chillhop",
-      "ambient",
-      "occasion",
-      "study",
-      "productivity"
+      "ambient"
     ]
   },
   {
@@ -63303,11 +56728,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi chillhop",
       "chillhop",
-      "lo fi jazz",
-      "ambient",
-      "occasion",
-      "study",
-      "productivity"
+      "lo fi jazz"
     ]
   },
   {
@@ -63330,10 +56751,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi chillhop",
       "chillhop",
-      "ambient jazz",
-      "occasion",
-      "study",
-      "productivity"
+      "ambient jazz"
     ]
   },
   {
@@ -63356,10 +56774,7 @@ export const productionSongRecords = [
     "tags": [
       "downtempo fusion",
       "hip hop",
-      "jazzy lo fi",
-      "occasion",
-      "420",
-      "sesh"
+      "jazzy lo fi"
     ]
   },
   {
@@ -63382,9 +56797,7 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "downtempo",
-      "occasion",
-      "420",
-      "sesh"
+      "420 sesh"
     ]
   },
   {
@@ -63407,11 +56820,7 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "downtempo",
-      "lo fi",
-      "ambient",
-      "occasion",
-      "420",
-      "sesh"
+      "lo fi"
     ]
   },
   {
@@ -63434,11 +56843,7 @@ export const productionSongRecords = [
     "tags": [
       "chillhop downtempo fusion",
       "lo fi",
-      "jazz inflected hip",
-      "ambient",
-      "occasion",
-      "420",
-      "sesh"
+      "jazz inflected hip"
     ]
   },
   {
@@ -63461,11 +56866,7 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "downtempo",
-      "jazzy",
-      "ambient",
-      "occasion",
-      "420",
-      "sesh"
+      "jazzy"
     ]
   },
   {
@@ -63488,10 +56889,7 @@ export const productionSongRecords = [
     "tags": [
       "downtempo fusion",
       "hip hop",
-      "lo fi ambient",
-      "occasion",
-      "420",
-      "sesh"
+      "lo fi ambient"
     ]
   },
   {
@@ -63514,11 +56912,7 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "downtempo",
-      "jazzy",
-      "ambient",
-      "occasion",
-      "420",
-      "sesh"
+      "jazzy"
     ]
   },
   {
@@ -63541,9 +56935,7 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "downtempo",
-      "occasion",
-      "420",
-      "sesh"
+      "420 sesh"
     ]
   },
   {
@@ -63566,9 +56958,7 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "downtempo",
-      "occasion",
-      "420",
-      "sesh"
+      "420 sesh"
     ]
   },
   {
@@ -63591,10 +56981,7 @@ export const productionSongRecords = [
     "tags": [
       "downtempo fusion",
       "hip hop",
-      "jazzy lo fi",
-      "occasion",
-      "420",
-      "sesh"
+      "jazzy lo fi"
     ]
   },
   {
@@ -63617,11 +57004,7 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "downtempo",
-      "lo fi",
-      "ambient",
-      "occasion",
-      "420",
-      "sesh"
+      "lo fi"
     ]
   },
   {
@@ -63644,10 +57027,7 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "downtempo",
-      "hip hop",
-      "occasion",
-      "420",
-      "sesh"
+      "hip hop"
     ]
   },
   {
@@ -63670,11 +57050,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "lo fi",
-      "hip hop downtempo",
-      "jazz influenced",
-      "occasion",
-      "420",
-      "sesh"
+      "hip hop"
     ]
   },
   {
@@ -63697,10 +57073,7 @@ export const productionSongRecords = [
     "tags": [
       "downtempo fusion",
       "hip hop",
-      "lo fi ambient",
-      "occasion",
-      "420",
-      "sesh"
+      "lo fi ambient"
     ]
   },
   {
@@ -63723,12 +57096,7 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "downtempo",
-      "hip hop",
-      "lo fi",
-      "jazzy",
-      "occasion",
-      "420",
-      "sesh"
+      "hip hop"
     ]
   },
   {
@@ -63751,12 +57119,7 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "downtempo",
-      "hip hop",
-      "lo fi",
-      "jazzy",
-      "occasion",
-      "420",
-      "sesh"
+      "hip hop"
     ]
   },
   {
@@ -63779,9 +57142,7 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "downtempo",
-      "occasion",
-      "420",
-      "sesh"
+      "420 sesh"
     ]
   },
   {
@@ -63804,11 +57165,7 @@ export const productionSongRecords = [
     "tags": [
       "chillhop downtempo fusion",
       "lo fi",
-      "jazz inflected hip",
-      "ambient",
-      "occasion",
-      "420",
-      "sesh"
+      "jazz inflected hip"
     ]
   },
   {
@@ -63831,10 +57188,7 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "downtempo",
-      "hip hop",
-      "occasion",
-      "420",
-      "sesh"
+      "hip hop"
     ]
   },
   {
@@ -63857,9 +57211,7 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "downtempo fusion",
-      "occasion",
-      "420",
-      "sesh"
+      "420 sesh"
     ]
   },
   {
@@ -63882,10 +57234,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "hip hop",
-      "lo fi",
-      "occasion",
-      "420",
-      "sesh"
+      "lo fi"
     ]
   },
   {
@@ -63908,9 +57257,7 @@ export const productionSongRecords = [
     "tags": [
       "chillhop",
       "downtempo fusion",
-      "occasion",
-      "420",
-      "sesh"
+      "420 sesh"
     ]
   },
   {
@@ -63933,10 +57280,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "hip hop",
-      "lo fi",
-      "occasion",
-      "420",
-      "sesh"
+      "lo fi"
     ]
   },
   {
@@ -63959,11 +57303,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "lo fi",
-      "hip hop downtempo",
-      "jazz influenced",
-      "occasion",
-      "420",
-      "sesh"
+      "hip hop"
     ]
   },
   {
@@ -63986,10 +57326,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "cinematic soundtrack",
-      "ambient drama",
-      "occasion",
-      "movies",
-      "osts"
+      "ambient drama"
     ]
   },
   {
@@ -64012,10 +57349,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral soundtrack",
       "cinematic",
-      "ambient",
-      "occasion",
-      "movies",
-      "osts"
+      "ambient"
     ]
   },
   {
@@ -64038,10 +57372,7 @@ export const productionSongRecords = [
     "tags": [
       "dark cinematic",
       "modern noir",
-      "soundtrack",
-      "occasion",
-      "movies",
-      "osts"
+      "soundtrack"
     ]
   },
   {
@@ -64064,10 +57395,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "soundtrack",
-      "orchestral",
-      "occasion",
-      "movies",
-      "osts"
+      "orchestral"
     ]
   },
   {
@@ -64090,10 +57418,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "orchestral",
-      "cinematic",
-      "occasion",
-      "movies",
-      "osts"
+      "cinematic"
     ]
   },
   {
@@ -64116,10 +57441,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "action soundtrack",
-      "trailer music",
-      "occasion",
-      "movies",
-      "osts"
+      "trailer music"
     ]
   },
   {
@@ -64142,10 +57464,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "orchestral",
-      "soundtrack",
-      "occasion",
-      "movies",
-      "osts"
+      "soundtrack"
     ]
   },
   {
@@ -64168,10 +57487,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "orchestral",
-      "ambient",
-      "occasion",
-      "movies",
-      "osts"
+      "ambient"
     ]
   },
   {
@@ -64194,10 +57510,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "film score",
-      "noir thriller",
-      "occasion",
-      "movies",
-      "osts"
+      "noir thriller"
     ]
   },
   {
@@ -64220,10 +57533,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic soundtrack",
       "orchestral",
-      "ambient",
-      "occasion",
-      "movies",
-      "osts"
+      "ambient"
     ]
   },
   {
@@ -64246,10 +57556,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "thriller score",
-      "ambient industrial",
-      "occasion",
-      "movies",
-      "osts"
+      "ambient industrial"
     ]
   },
   {
@@ -64272,10 +57579,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral soundtrack",
       "cinematic",
-      "heartfelt emotional drama",
-      "occasion",
-      "movies",
-      "osts"
+      "heartfelt emotional drama"
     ]
   },
   {
@@ -64298,10 +57602,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "soundtrack",
-      "orchestral",
-      "occasion",
-      "movies",
-      "osts"
+      "orchestral"
     ]
   },
   {
@@ -64324,10 +57625,7 @@ export const productionSongRecords = [
     "tags": [
       "world",
       "orchestral",
-      "soundtrack",
-      "occasion",
-      "movies",
-      "osts"
+      "soundtrack"
     ]
   },
   {
@@ -64350,10 +57648,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "cinematic",
-      "orchestral",
-      "occasion",
-      "movies",
-      "osts"
+      "orchestral"
     ]
   },
   {
@@ -64376,10 +57671,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "cinematic soundtrack",
-      "fantasy",
-      "occasion",
-      "movies",
-      "osts"
+      "fantasy"
     ]
   },
   {
@@ -64402,10 +57694,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral soundtrack",
       "cinematic",
-      "ambient",
-      "occasion",
-      "movies",
-      "osts"
+      "ambient"
     ]
   },
   {
@@ -64428,10 +57717,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic action score",
       "orchestral hybrid",
-      "film soundtrack",
-      "occasion",
-      "movies",
-      "osts"
+      "film soundtrack"
     ]
   },
   {
@@ -64454,10 +57740,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic orchestral",
       "action soundtrack",
-      "trailer music",
-      "occasion",
-      "movies",
-      "osts"
+      "trailer music"
     ]
   },
   {
@@ -64480,10 +57763,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "orchestral",
-      "dramatic",
-      "occasion",
-      "movies",
-      "osts"
+      "dramatic"
     ]
   },
   {
@@ -64506,10 +57786,7 @@ export const productionSongRecords = [
     "tags": [
       "dark cinematic thriller",
       "ambient drone",
-      "noir orchestral",
-      "occasion",
-      "movies",
-      "osts"
+      "noir orchestral"
     ]
   },
   {
@@ -64532,10 +57809,7 @@ export const productionSongRecords = [
     "tags": [
       "film score",
       "orchestral action",
-      "trailer style cinematic",
-      "occasion",
-      "movies",
-      "osts"
+      "trailer style cinematic"
     ]
   },
   {
@@ -64558,10 +57832,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "cinematic",
-      "orchestral action score",
-      "occasion",
-      "movies",
-      "osts"
+      "orchestral action score"
     ]
   },
   {
@@ -64584,10 +57855,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "cinematic",
-      "orchestral",
-      "occasion",
-      "movies",
-      "osts"
+      "orchestral"
     ]
   },
   {
@@ -64610,10 +57878,7 @@ export const productionSongRecords = [
     "tags": [
       "film score",
       "orchestral",
-      "cinematic",
-      "occasion",
-      "movies",
-      "osts"
+      "cinematic"
     ]
   },
   {
@@ -64636,10 +57901,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "cinematic",
-      "orchestral action score",
-      "occasion",
-      "movies",
-      "osts"
+      "orchestral action score"
     ]
   },
   {
@@ -64662,10 +57924,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "thriller score",
-      "ambient industrial",
-      "occasion",
-      "movies",
-      "osts"
+      "ambient industrial"
     ]
   },
   {
@@ -64688,10 +57947,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "cinematic",
-      "orchestral",
-      "occasion",
-      "movies",
-      "osts"
+      "orchestral"
     ]
   },
   {
@@ -64714,10 +57970,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic action score",
       "hybrid orchestral electronic",
-      "film soundtrack",
-      "occasion",
-      "movies",
-      "osts"
+      "film soundtrack"
     ]
   },
   {
@@ -64740,10 +57993,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral soundtrack",
       "epic",
-      "cinematic",
-      "occasion",
-      "movies",
-      "osts"
+      "cinematic"
     ]
   },
   {
@@ -64766,10 +58016,7 @@ export const productionSongRecords = [
     "tags": [
       "epic cinematic",
       "orchestral soundtrack",
-      "fantasy orchestral",
-      "occasion",
-      "movies",
-      "osts"
+      "fantasy orchestral"
     ]
   },
   {
@@ -64792,10 +58039,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic action score",
       "hybrid orchestral electronic",
-      "film soundtrack",
-      "occasion",
-      "movies",
-      "osts"
+      "film soundtrack"
     ]
   },
   {
@@ -64818,10 +58062,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "cinematic soundtrack",
-      "fantasy",
-      "occasion",
-      "movies",
-      "osts"
+      "fantasy"
     ]
   },
   {
@@ -64844,10 +58085,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "orchestral",
-      "ambient",
-      "occasion",
-      "movies",
-      "osts"
+      "ambient"
     ]
   },
   {
@@ -64870,10 +58108,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "orchestral",
-      "dramatic",
-      "occasion",
-      "movies",
-      "osts"
+      "dramatic"
     ]
   },
   {
@@ -64896,10 +58131,7 @@ export const productionSongRecords = [
     "tags": [
       "epic cinematic",
       "orchestral soundtrack",
-      "fantasy orchestral",
-      "occasion",
-      "movies",
-      "osts"
+      "fantasy orchestral"
     ]
   },
   {
@@ -64922,10 +58154,7 @@ export const productionSongRecords = [
     "tags": [
       "dark cinematic",
       "psychological thriller soundtrack",
-      "noir electronic suspense",
-      "occasion",
-      "movies",
-      "osts"
+      "noir electronic suspense"
     ]
   },
   {
@@ -64948,10 +58177,7 @@ export const productionSongRecords = [
     "tags": [
       "world",
       "orchestral",
-      "soundtrack",
-      "occasion",
-      "movies",
-      "osts"
+      "soundtrack"
     ]
   },
   {
@@ -64974,10 +58200,7 @@ export const productionSongRecords = [
     "tags": [
       "film score",
       "orchestral",
-      "cinematic",
-      "occasion",
-      "movies",
-      "osts"
+      "cinematic"
     ]
   },
   {
@@ -65000,10 +58223,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "cinematic",
-      "orchestral",
-      "occasion",
-      "movies",
-      "osts"
+      "orchestral"
     ]
   },
   {
@@ -65026,10 +58246,7 @@ export const productionSongRecords = [
     "tags": [
       "dark cinematic",
       "modern noir",
-      "soundtrack",
-      "occasion",
-      "movies",
-      "osts"
+      "soundtrack"
     ]
   },
   {
@@ -65052,10 +58269,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "orchestral",
-      "cinematic",
-      "occasion",
-      "movies",
-      "osts"
+      "cinematic"
     ]
   },
   {
@@ -65078,10 +58292,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic",
       "film score",
-      "noir thriller",
-      "occasion",
-      "movies",
-      "osts"
+      "noir thriller"
     ]
   },
   {
@@ -65104,10 +58315,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "cinematic soundtrack",
-      "ambient drama",
-      "occasion",
-      "movies",
-      "osts"
+      "ambient drama"
     ]
   },
   {
@@ -65130,10 +58338,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic action score",
       "orchestral hybrid",
-      "film soundtrack",
-      "occasion",
-      "movies",
-      "osts"
+      "film soundtrack"
     ]
   },
   {
@@ -65156,10 +58361,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral soundtrack",
       "cinematic",
-      "heartfelt emotional drama",
-      "occasion",
-      "movies",
-      "osts"
+      "heartfelt emotional drama"
     ]
   },
   {
@@ -65182,10 +58384,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic soundtrack",
       "orchestral",
-      "ambient",
-      "occasion",
-      "movies",
-      "osts"
+      "ambient"
     ]
   },
   {
@@ -65208,10 +58407,7 @@ export const productionSongRecords = [
     "tags": [
       "dark cinematic thriller",
       "ambient drone",
-      "noir orchestral",
-      "occasion",
-      "movies",
-      "osts"
+      "noir orchestral"
     ]
   },
   {
@@ -65234,10 +58430,7 @@ export const productionSongRecords = [
     "tags": [
       "dark cinematic",
       "psychological thriller soundtrack",
-      "noir electronic suspense",
-      "occasion",
-      "movies",
-      "osts"
+      "noir electronic suspense"
     ]
   },
   {
@@ -65260,10 +58453,7 @@ export const productionSongRecords = [
     "tags": [
       "film score",
       "orchestral action",
-      "trailer style cinematic",
-      "occasion",
-      "movies",
-      "osts"
+      "trailer style cinematic"
     ]
   },
   {
@@ -65287,9 +58477,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "acoustic",
-      "folk pop",
-      "occasion",
-      "love"
+      "folk pop"
     ]
   },
   {
@@ -65313,9 +58501,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "acoustic",
-      "folk pop",
-      "occasion",
-      "love"
+      "folk pop"
     ]
   },
   {
@@ -65339,10 +58525,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi r",
       "lo fi",
-      "nostalgic",
-      "romantic",
-      "occasion",
-      "love"
+      "nostalgic"
     ]
   },
   {
@@ -65366,9 +58549,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi indie",
       "lo fi",
-      "indie pop",
-      "occasion",
-      "love"
+      "indie pop"
     ]
   },
   {
@@ -65392,9 +58573,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "acoustic folk pop",
-      "romantic singer songwriter",
-      "occasion",
-      "love"
+      "romantic singer songwriter"
     ]
   },
   {
@@ -65418,9 +58597,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi pop",
       "lo fi",
-      "ballad",
-      "occasion",
-      "love"
+      "ballad"
     ]
   },
   {
@@ -65444,7 +58621,6 @@ export const productionSongRecords = [
     "tags": [
       "upbeat dance pop",
       "feel good",
-      "occasion",
       "love"
     ]
   },
@@ -65469,9 +58645,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi pop",
       "lo fi",
-      "soft romantic indie",
-      "occasion",
-      "love"
+      "soft romantic indie"
     ]
   },
   {
@@ -65495,7 +58669,6 @@ export const productionSongRecords = [
     "tags": [
       "ballad",
       "soundtrack",
-      "occasion",
       "love"
     ]
   },
@@ -65520,9 +58693,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "acoustic folk pop",
-      "singer songwriter",
-      "occasion",
-      "love"
+      "singer songwriter"
     ]
   },
   {
@@ -65546,9 +58717,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi pop",
       "lo fi",
-      "indie pop",
-      "occasion",
-      "love"
+      "indie pop"
     ]
   },
   {
@@ -65572,9 +58741,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi",
       "romantic",
-      "mellow",
-      "occasion",
-      "love"
+      "mellow"
     ]
   },
   {
@@ -65598,7 +58765,6 @@ export const productionSongRecords = [
     "tags": [
       "bright",
       "feel good",
-      "occasion",
       "love"
     ]
   },
@@ -65623,9 +58789,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi pop",
       "indie pop",
-      "dreamy",
-      "occasion",
-      "love"
+      "dreamy"
     ]
   },
   {
@@ -65649,7 +58813,6 @@ export const productionSongRecords = [
     "tags": [
       "upbeat feel good",
       "bright indie pop",
-      "occasion",
       "love"
     ]
   },
@@ -65674,9 +58837,7 @@ export const productionSongRecords = [
     "tags": [
       "dance pop",
       "upbeat",
-      "joyful",
-      "occasion",
-      "love"
+      "joyful"
     ]
   },
   {
@@ -65700,9 +58861,7 @@ export const productionSongRecords = [
     "tags": [
       "pop ballad",
       "ambient",
-      "soundtrack",
-      "occasion",
-      "love"
+      "soundtrack"
     ]
   },
   {
@@ -65726,11 +58885,7 @@ export const productionSongRecords = [
     "tags": [
       "pop ballad",
       "cinematic soundtrack",
-      "ambient",
-      "romantic",
-      "emotional",
-      "occasion",
-      "love"
+      "ambient"
     ]
   },
   {
@@ -65754,9 +58909,7 @@ export const productionSongRecords = [
     "tags": [
       "pop ballad",
       "cinematic",
-      "romantic",
-      "occasion",
-      "love"
+      "romantic"
     ]
   },
   {
@@ -65780,9 +58933,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi indie",
       "indie pop",
-      "lo fi",
-      "occasion",
-      "love"
+      "lo fi"
     ]
   },
   {
@@ -65806,9 +58957,7 @@ export const productionSongRecords = [
     "tags": [
       "dance pop",
       "feel good",
-      "joyful",
-      "occasion",
-      "love"
+      "joyful"
     ]
   },
   {
@@ -65832,9 +58981,7 @@ export const productionSongRecords = [
     "tags": [
       "indie folk",
       "folk pop",
-      "acoustic singer songwriter",
-      "occasion",
-      "love"
+      "acoustic singer songwriter"
     ]
   },
   {
@@ -65858,7 +59005,6 @@ export const productionSongRecords = [
     "tags": [
       "ballad",
       "soundtrack",
-      "occasion",
       "love"
     ]
   },
@@ -65883,9 +59029,7 @@ export const productionSongRecords = [
     "tags": [
       "lo fi indie",
       "lo fi",
-      "indie pop",
-      "occasion",
-      "love"
+      "indie pop"
     ]
   },
   {
@@ -65908,9 +59052,7 @@ export const productionSongRecords = [
     "tags": [
       "psychedelic soundtrack",
       "downtempo",
-      "hypnotic",
-      "occasion",
-      "trippy"
+      "hypnotic"
     ]
   },
   {
@@ -65933,9 +59075,7 @@ export const productionSongRecords = [
     "tags": [
       "downtempo",
       "psychedelic",
-      "soundtrack",
-      "occasion",
-      "trippy"
+      "soundtrack"
     ]
   },
   {
@@ -65958,9 +59098,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "psychedelic",
-      "downtempo",
-      "occasion",
-      "trippy"
+      "downtempo"
     ]
   },
   {
@@ -65983,10 +59121,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "downtempo",
-      "psychedelic",
-      "hypnotic",
-      "occasion",
-      "trippy"
+      "psychedelic"
     ]
   },
   {
@@ -66009,9 +59144,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "downtempo",
-      "psychedelic",
-      "occasion",
-      "trippy"
+      "psychedelic"
     ]
   },
   {
@@ -66034,10 +59167,7 @@ export const productionSongRecords = [
     "tags": [
       "downtempo",
       "psychedelic",
-      "soundtrack",
-      "hypnotic",
-      "occasion",
-      "trippy"
+      "soundtrack"
     ]
   },
   {
@@ -66060,9 +59190,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "downtempo",
-      "psychedelic",
-      "occasion",
-      "trippy"
+      "psychedelic"
     ]
   },
   {
@@ -66085,9 +59213,7 @@ export const productionSongRecords = [
     "tags": [
       "psychedelic ambient",
       "ambient",
-      "downtempo",
-      "occasion",
-      "trippy"
+      "downtempo"
     ]
   },
   {
@@ -66110,9 +59236,7 @@ export const productionSongRecords = [
     "tags": [
       "psychedelic",
       "downtempo",
-      "soundtrack",
-      "occasion",
-      "trippy"
+      "soundtrack"
     ]
   },
   {
@@ -66135,9 +59259,7 @@ export const productionSongRecords = [
     "tags": [
       "psychedelic",
       "downtempo",
-      "soundtrack",
-      "occasion",
-      "trippy"
+      "soundtrack"
     ]
   },
   {
@@ -66160,9 +59282,7 @@ export const productionSongRecords = [
     "tags": [
       "psychedelic",
       "ambient",
-      "hypnotic",
-      "occasion",
-      "trippy"
+      "hypnotic"
     ]
   },
   {
@@ -66185,9 +59305,7 @@ export const productionSongRecords = [
     "tags": [
       "psychedelic",
       "downtempo",
-      "soundtrack",
-      "occasion",
-      "trippy"
+      "soundtrack"
     ]
   },
   {
@@ -66210,9 +59328,7 @@ export const productionSongRecords = [
     "tags": [
       "psychedelic",
       "downtempo",
-      "soundtrack",
-      "occasion",
-      "trippy"
+      "soundtrack"
     ]
   },
   {
@@ -66235,9 +59351,7 @@ export const productionSongRecords = [
     "tags": [
       "psychedelic soundtrack",
       "downtempo",
-      "hypnotic",
-      "occasion",
-      "trippy"
+      "hypnotic"
     ]
   },
   {
@@ -66260,9 +59374,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "downtempo",
-      "psychedelic",
-      "occasion",
-      "trippy"
+      "psychedelic"
     ]
   },
   {
@@ -66285,9 +59397,7 @@ export const productionSongRecords = [
     "tags": [
       "psychedelic downtempo",
       "ambient",
-      "cinematic",
-      "occasion",
-      "trippy"
+      "cinematic"
     ]
   },
   {
@@ -66310,9 +59420,7 @@ export const productionSongRecords = [
     "tags": [
       "psychedelic",
       "downtempo",
-      "soundtrack",
-      "occasion",
-      "trippy"
+      "soundtrack"
     ]
   },
   {
@@ -66335,9 +59443,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "downtempo",
-      "psychedelic",
-      "occasion",
-      "trippy"
+      "psychedelic"
     ]
   },
   {
@@ -66360,9 +59466,7 @@ export const productionSongRecords = [
     "tags": [
       "psychedelic soundtrack",
       "downtempo",
-      "hypnotic",
-      "occasion",
-      "trippy"
+      "hypnotic"
     ]
   },
   {
@@ -66385,9 +59489,7 @@ export const productionSongRecords = [
     "tags": [
       "psychedelic ambient",
       "ambient electronic",
-      "cinematic",
-      "occasion",
-      "trippy"
+      "cinematic"
     ]
   },
   {
@@ -66410,9 +59512,7 @@ export const productionSongRecords = [
     "tags": [
       "ambient",
       "psychedelic",
-      "downtempo",
-      "occasion",
-      "trippy"
+      "downtempo"
     ]
   },
   {
@@ -66435,9 +59535,7 @@ export const productionSongRecords = [
     "tags": [
       "psychedelic soundtrack",
       "downtempo",
-      "hypnotic",
-      "occasion",
-      "trippy"
+      "hypnotic"
     ]
   },
   {
@@ -66460,9 +59558,7 @@ export const productionSongRecords = [
     "tags": [
       "psychedelic soundtrack",
       "downtempo",
-      "hypnotic",
-      "occasion",
-      "trippy"
+      "hypnotic"
     ]
   },
   {
@@ -66485,9 +59581,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "downtempo",
-      "psychedelic",
-      "occasion",
-      "trippy"
+      "psychedelic"
     ]
   },
   {
@@ -66510,10 +59604,7 @@ export const productionSongRecords = [
     "tags": [
       "downtempo",
       "soundtrack",
-      "psychedelic hypnotic",
-      "surreal",
-      "occasion",
-      "trippy"
+      "psychedelic hypnotic"
     ]
   },
   {
@@ -66536,10 +59627,7 @@ export const productionSongRecords = [
     "tags": [
       "downtempo",
       "psychedelic",
-      "soundtrack",
-      "hypnotic",
-      "occasion",
-      "trippy"
+      "soundtrack"
     ]
   },
   {
@@ -66562,9 +59650,7 @@ export const productionSongRecords = [
     "tags": [
       "hypnotic",
       "downtempo",
-      "soundtrack",
-      "occasion",
-      "trippy"
+      "soundtrack"
     ]
   },
   {
@@ -66587,9 +59673,7 @@ export const productionSongRecords = [
     "tags": [
       "downtempo",
       "psychedelic",
-      "cinematic soundtrack",
-      "occasion",
-      "trippy"
+      "cinematic soundtrack"
     ]
   },
   {
@@ -66612,9 +59696,7 @@ export const productionSongRecords = [
     "tags": [
       "downtempo",
       "psychedelic",
-      "soundtrack",
-      "occasion",
-      "trippy"
+      "soundtrack"
     ]
   },
   {
@@ -66637,9 +59719,7 @@ export const productionSongRecords = [
     "tags": [
       "psychedelic downtempo",
       "trip hop",
-      "ambient soundtrack",
-      "occasion",
-      "trippy"
+      "ambient soundtrack"
     ]
   },
   {
@@ -66662,9 +59742,7 @@ export const productionSongRecords = [
     "tags": [
       "psychedelic",
       "ambient",
-      "hypnotic",
-      "occasion",
-      "trippy"
+      "hypnotic"
     ]
   },
   {
@@ -66687,9 +59765,7 @@ export const productionSongRecords = [
     "tags": [
       "downtempo",
       "psychedelic",
-      "soundtrack",
-      "occasion",
-      "trippy"
+      "soundtrack"
     ]
   },
   {
@@ -66712,9 +59788,7 @@ export const productionSongRecords = [
     "tags": [
       "psychedelic downtempo",
       "trip hop",
-      "ambient soundtrack",
-      "occasion",
-      "trippy"
+      "ambient soundtrack"
     ]
   },
   {
@@ -66737,9 +59811,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "downtempo",
-      "psychedelic",
-      "occasion",
-      "trippy"
+      "psychedelic"
     ]
   },
   {
@@ -66762,9 +59834,7 @@ export const productionSongRecords = [
     "tags": [
       "downtempo",
       "psychedelic",
-      "cinematic soundtrack",
-      "occasion",
-      "trippy"
+      "cinematic soundtrack"
     ]
   },
   {
@@ -66787,9 +59857,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "downtempo",
-      "psychedelic",
-      "occasion",
-      "trippy"
+      "psychedelic"
     ]
   },
   {
@@ -66812,9 +59880,7 @@ export const productionSongRecords = [
     "tags": [
       "psychedelic",
       "downtempo",
-      "soundtrack",
-      "occasion",
-      "trippy"
+      "soundtrack"
     ]
   },
   {
@@ -66837,9 +59903,7 @@ export const productionSongRecords = [
     "tags": [
       "psychedelic downtempo",
       "ambient",
-      "cinematic",
-      "occasion",
-      "trippy"
+      "cinematic"
     ]
   },
   {
@@ -66862,9 +59926,7 @@ export const productionSongRecords = [
     "tags": [
       "psychedelic",
       "downtempo",
-      "soundtrack",
-      "occasion",
-      "trippy"
+      "soundtrack"
     ]
   },
   {
@@ -66887,9 +59949,7 @@ export const productionSongRecords = [
     "tags": [
       "downtempo",
       "psychedelic",
-      "soundtrack",
-      "occasion",
-      "trippy"
+      "soundtrack"
     ]
   },
   {
@@ -66912,9 +59972,7 @@ export const productionSongRecords = [
     "tags": [
       "psychedelic",
       "downtempo",
-      "soundtrack",
-      "occasion",
-      "trippy"
+      "soundtrack"
     ]
   },
   {
@@ -66937,9 +59995,7 @@ export const productionSongRecords = [
     "tags": [
       "psychedelic ambient",
       "ambient",
-      "downtempo",
-      "occasion",
-      "trippy"
+      "downtempo"
     ]
   },
   {
@@ -66962,9 +60018,7 @@ export const productionSongRecords = [
     "tags": [
       "downtempo",
       "psychedelic",
-      "soundtrack",
-      "occasion",
-      "trippy"
+      "soundtrack"
     ]
   },
   {
@@ -66987,9 +60041,7 @@ export const productionSongRecords = [
     "tags": [
       "psychedelic ambient",
       "ambient electronic",
-      "cinematic",
-      "occasion",
-      "trippy"
+      "cinematic"
     ]
   },
   {
@@ -67012,9 +60064,7 @@ export const productionSongRecords = [
     "tags": [
       "downtempo",
       "psychedelic",
-      "soundtrack",
-      "occasion",
-      "trippy"
+      "soundtrack"
     ]
   },
   {
@@ -67037,9 +60087,7 @@ export const productionSongRecords = [
     "tags": [
       "hypnotic",
       "downtempo",
-      "soundtrack",
-      "occasion",
-      "trippy"
+      "soundtrack"
     ]
   },
   {
@@ -67060,8 +60108,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Occasion/TRIPPY/Through the Cosmic Fog",
     "metadataText": "",
     "tags": [
+      "trippy",
       "occasion",
-      "trippy"
+      "instrumental"
     ]
   },
   {
@@ -67084,9 +60133,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "downtempo",
-      "psychedelic",
-      "occasion",
-      "trippy"
+      "psychedelic"
     ]
   },
   {
@@ -67109,10 +60156,7 @@ export const productionSongRecords = [
     "tags": [
       "downtempo",
       "soundtrack",
-      "psychedelic hypnotic",
-      "surreal",
-      "occasion",
-      "trippy"
+      "psychedelic hypnotic"
     ]
   },
   {
@@ -67135,10 +60179,7 @@ export const productionSongRecords = [
     "tags": [
       "soundtrack",
       "downtempo",
-      "psychedelic",
-      "hypnotic",
-      "occasion",
-      "trippy"
+      "psychedelic"
     ]
   },
   {
@@ -67161,9 +60202,7 @@ export const productionSongRecords = [
     "tags": [
       "afrobeat",
       "tropical house",
-      "electronic",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -67186,10 +60225,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "trap",
-      "cinematic",
-      "orchestral",
-      "edm",
-      "dance"
+      "cinematic"
     ]
   },
   {
@@ -67212,8 +60248,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "orchestral",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -67236,9 +60271,7 @@ export const productionSongRecords = [
     "tags": [
       "glitch",
       "electronic",
-      "dubstep",
-      "edm",
-      "dance"
+      "dubstep"
     ]
   },
   {
@@ -67261,8 +60294,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "electronic",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -67285,11 +60317,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic rock",
       "orchestral",
-      "electric rock",
-      "arena anthem",
-      "electronic",
-      "edm",
-      "dance"
+      "electric rock"
     ]
   },
   {
@@ -67312,9 +60340,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "glitch",
-      "electronic",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -67337,10 +60363,7 @@ export const productionSongRecords = [
     "tags": [
       "tropical house",
       "afrobeat",
-      "dance pop",
-      "electronic",
-      "edm",
-      "dance"
+      "dance pop"
     ]
   },
   {
@@ -67363,9 +60386,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "uplifting",
-      "dance anthem",
-      "edm",
-      "dance"
+      "dance anthem"
     ]
   },
   {
@@ -67388,8 +60409,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "electronic",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -67412,8 +60432,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "electronic",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -67436,11 +60455,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "dubstep",
-      "glitch",
-      "electronic",
-      "edm",
-      "dance"
+      "dubstep"
     ]
   },
   {
@@ -67463,10 +60478,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "dubstep",
-      "electronic",
-      "edm",
-      "dance"
+      "dubstep"
     ]
   },
   {
@@ -67489,9 +60501,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "phonk",
-      "electronic",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -67514,8 +60524,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "orchestral",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -67538,8 +60547,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "orchestral",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -67562,8 +60570,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "orchestral",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -67586,10 +60593,7 @@ export const productionSongRecords = [
     "tags": [
       "afrobeat",
       "tropical house",
-      "feel good",
-      "electronic",
-      "edm",
-      "dance"
+      "feel good"
     ]
   },
   {
@@ -67612,8 +60616,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "uplifting",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -67636,11 +60639,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "electric",
-      "emotional",
-      "rock",
-      "electronic",
-      "edm",
-      "dance"
+      "emotional"
     ]
   },
   {
@@ -67663,10 +60662,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "trap",
-      "cinematic",
-      "orchestral",
-      "edm",
-      "dance"
+      "cinematic"
     ]
   },
   {
@@ -67689,9 +60685,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "uplifting",
-      "dance anthem",
-      "edm",
-      "dance"
+      "dance anthem"
     ]
   },
   {
@@ -67714,8 +60708,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "uplifting",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -67738,9 +60731,7 @@ export const productionSongRecords = [
     "tags": [
       "afrobeat",
       "tropical house",
-      "electronic",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -67763,9 +60754,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "electric rock",
-      "electronic",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -67788,9 +60777,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "glitch",
-      "electronic",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -67813,9 +60800,7 @@ export const productionSongRecords = [
     "tags": [
       "afrobeat",
       "tropical house",
-      "electronic",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -67838,9 +60823,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "uplifting",
-      "dance anthem",
-      "edm",
-      "dance"
+      "dance anthem"
     ]
   },
   {
@@ -67863,8 +60846,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "uplifting",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -67887,12 +60869,7 @@ export const productionSongRecords = [
     "tags": [
       "tropical house",
       "afrobeat",
-      "feel good",
-      "uplifting",
-      "bright",
-      "electronic",
-      "edm",
-      "dance"
+      "feel good"
     ]
   },
   {
@@ -67915,9 +60892,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "rock",
-      "electronic",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -67940,8 +60915,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "orchestral",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -67964,8 +60938,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "orchestral",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -67988,9 +60961,7 @@ export const productionSongRecords = [
     "tags": [
       "dubstep",
       "phonk",
-      "electronic",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -68011,9 +60982,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/EDM  Dance/Neon Dreams Alive",
     "metadataText": "",
     "tags": [
+      "edm dance",
       "electronic",
-      "edm",
-      "dance"
+      "instrumental"
     ]
   },
   {
@@ -68034,9 +61005,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/EDM  Dance/Neon Riot Anthem",
     "metadataText": "",
     "tags": [
+      "edm dance",
       "electronic",
-      "edm",
-      "dance"
+      "instrumental"
     ]
   },
   {
@@ -68057,9 +61028,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/Electronic/EDM  Dance/Pulse of the Night",
     "metadataText": "",
     "tags": [
+      "edm dance",
       "electronic",
-      "edm",
-      "dance"
+      "instrumental"
     ]
   },
   {
@@ -68082,11 +61053,7 @@ export const productionSongRecords = [
     "tags": [
       "cinematic rock",
       "orchestral",
-      "electric rock",
-      "arena anthem",
-      "electronic",
-      "edm",
-      "dance"
+      "electric rock"
     ]
   },
   {
@@ -68109,10 +61076,7 @@ export const productionSongRecords = [
     "tags": [
       "afrobeat",
       "tropical house",
-      "feel good",
-      "electronic",
-      "edm",
-      "dance"
+      "feel good"
     ]
   },
   {
@@ -68135,8 +61099,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "electronic",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -68159,9 +61122,7 @@ export const productionSongRecords = [
     "tags": [
       "glitch",
       "electronic",
-      "dubstep",
-      "edm",
-      "dance"
+      "dubstep"
     ]
   },
   {
@@ -68184,8 +61145,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "orchestral",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -68208,8 +61168,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "orchestral",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -68232,9 +61191,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "uplifting",
-      "dance anthem",
-      "edm",
-      "dance"
+      "dance anthem"
     ]
   },
   {
@@ -68257,9 +61214,7 @@ export const productionSongRecords = [
     "tags": [
       "rock",
       "cinematic orchestral",
-      "electronic",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -68282,9 +61237,7 @@ export const productionSongRecords = [
     "tags": [
       "afrobeat",
       "tropical house",
-      "electronic",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -68307,8 +61260,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "electronic",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -68331,12 +61283,7 @@ export const productionSongRecords = [
     "tags": [
       "tropical house",
       "afrobeat",
-      "feel good",
-      "uplifting",
-      "bright",
-      "electronic",
-      "edm",
-      "dance"
+      "feel good"
     ]
   },
   {
@@ -68359,10 +61306,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "dubstep",
-      "electronic",
-      "edm",
-      "dance"
+      "dubstep"
     ]
   },
   {
@@ -68385,8 +61329,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "orchestral",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -68409,9 +61352,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "electric rock",
-      "electronic",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -68434,8 +61375,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "orchestral",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -68458,8 +61398,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "electronic",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -68482,9 +61421,7 @@ export const productionSongRecords = [
     "tags": [
       "rock",
       "cinematic orchestral",
-      "electronic",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -68507,8 +61444,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "electronic",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -68531,8 +61467,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "uplifting",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -68555,11 +61490,7 @@ export const productionSongRecords = [
     "tags": [
       "phonk",
       "trap",
-      "dubstep",
-      "glitch",
-      "electronic",
-      "edm",
-      "dance"
+      "dubstep"
     ]
   },
   {
@@ -68582,8 +61513,7 @@ export const productionSongRecords = [
     "tags": [
       "electronic",
       "orchestral",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -68606,10 +61536,7 @@ export const productionSongRecords = [
     "tags": [
       "tropical house",
       "afrobeat",
-      "dance pop",
-      "electronic",
-      "edm",
-      "dance"
+      "dance pop"
     ]
   },
   {
@@ -68632,9 +61559,7 @@ export const productionSongRecords = [
     "tags": [
       "orchestral",
       "rock",
-      "electronic",
-      "edm",
-      "dance"
+      "edm dance"
     ]
   },
   {
@@ -68658,8 +61583,7 @@ export const productionSongRecords = [
     "tags": [
       "korean r",
       "cinematic urban pop",
-      "culture",
-      "pop"
+      "k pop"
     ]
   },
   {
@@ -68683,8 +61607,7 @@ export const productionSongRecords = [
     "tags": [
       "korean r",
       "cinematic urban pop",
-      "culture",
-      "pop"
+      "k pop"
     ]
   },
   {
@@ -68708,8 +61631,7 @@ export const productionSongRecords = [
     "tags": [
       "korean r",
       "cinematic urban pop",
-      "culture",
-      "pop"
+      "k pop"
     ]
   },
   {
@@ -68733,8 +61655,7 @@ export const productionSongRecords = [
     "tags": [
       "korean r",
       "cinematic urban pop",
-      "culture",
-      "pop"
+      "k pop"
     ]
   },
   {
@@ -68758,8 +61679,7 @@ export const productionSongRecords = [
     "tags": [
       "korean r",
       "cinematic urban pop",
-      "culture",
-      "pop"
+      "k pop"
     ]
   },
   {
@@ -68783,8 +61703,7 @@ export const productionSongRecords = [
     "tags": [
       "korean r",
       "cinematic urban pop",
-      "culture",
-      "pop"
+      "k pop"
     ]
   },
   {
@@ -68808,8 +61727,7 @@ export const productionSongRecords = [
     "tags": [
       "korean r",
       "cinematic urban pop",
-      "culture",
-      "pop"
+      "k pop"
     ]
   },
   {
@@ -68833,9 +61751,7 @@ export const productionSongRecords = [
     "tags": [
       "korean r",
       "soul",
-      "cinematic urban pop",
-      "culture",
-      "pop"
+      "cinematic urban pop"
     ]
   },
   {
@@ -68859,9 +61775,7 @@ export const productionSongRecords = [
     "tags": [
       "korean r",
       "soul",
-      "cinematic urban pop",
-      "culture",
-      "pop"
+      "cinematic urban pop"
     ]
   },
   {
@@ -68885,9 +61799,7 @@ export const productionSongRecords = [
     "tags": [
       "korean r",
       "soul",
-      "cinematic urban pop",
-      "culture",
-      "pop"
+      "cinematic urban pop"
     ]
   },
   {
@@ -68911,9 +61823,7 @@ export const productionSongRecords = [
     "tags": [
       "korean r",
       "soul",
-      "cinematic urban pop",
-      "culture",
-      "pop"
+      "cinematic urban pop"
     ]
   },
   {
@@ -68937,9 +61847,7 @@ export const productionSongRecords = [
     "tags": [
       "korean r",
       "soul",
-      "cinematic urban pop",
-      "culture",
-      "pop"
+      "cinematic urban pop"
     ]
   },
   {
@@ -68963,9 +61871,7 @@ export const productionSongRecords = [
     "tags": [
       "korean hip hop",
       "trap",
-      "aggressive hip hop",
-      "culture",
-      "pop"
+      "aggressive hip hop"
     ]
   },
   {
@@ -68989,9 +61895,7 @@ export const productionSongRecords = [
     "tags": [
       "korean hip hop",
       "trap",
-      "aggressive hip hop",
-      "culture",
-      "pop"
+      "aggressive hip hop"
     ]
   },
   {
@@ -69015,9 +61919,7 @@ export const productionSongRecords = [
     "tags": [
       "korean hip hop",
       "trap",
-      "aggressive hip hop",
-      "culture",
-      "pop"
+      "aggressive hip hop"
     ]
   },
   {
@@ -69041,9 +61943,7 @@ export const productionSongRecords = [
     "tags": [
       "korean indie ballad",
       "indie folk",
-      "cinematic ballad",
-      "culture",
-      "pop"
+      "cinematic ballad"
     ]
   },
   {
@@ -69067,9 +61967,7 @@ export const productionSongRecords = [
     "tags": [
       "korean indie ballad",
       "indie folk",
-      "cinematic ballad",
-      "culture",
-      "pop"
+      "cinematic ballad"
     ]
   },
   {
@@ -69093,9 +61991,7 @@ export const productionSongRecords = [
     "tags": [
       "korean indie ballad",
       "indie folk",
-      "cinematic ballad",
-      "culture",
-      "pop"
+      "cinematic ballad"
     ]
   },
   {
@@ -69119,9 +62015,7 @@ export const productionSongRecords = [
     "tags": [
       "korean indie ballad",
       "indie folk",
-      "cinematic ballad",
-      "culture",
-      "pop"
+      "cinematic ballad"
     ]
   },
   {
@@ -69145,9 +62039,7 @@ export const productionSongRecords = [
     "tags": [
       "korean indie ballad",
       "indie folk",
-      "cinematic ballad",
-      "culture",
-      "pop"
+      "cinematic ballad"
     ]
   },
   {
@@ -69171,9 +62063,7 @@ export const productionSongRecords = [
     "tags": [
       "k pop",
       "electronic pop",
-      "dance pop",
-      "culture",
-      "pop"
+      "dance pop"
     ]
   },
   {
@@ -69197,9 +62087,7 @@ export const productionSongRecords = [
     "tags": [
       "k pop",
       "electronic pop",
-      "dance pop",
-      "culture",
-      "pop"
+      "dance pop"
     ]
   },
   {
@@ -69223,9 +62111,7 @@ export const productionSongRecords = [
     "tags": [
       "k pop",
       "electronic pop",
-      "dance pop",
-      "culture",
-      "pop"
+      "dance pop"
     ]
   },
   {
@@ -69249,9 +62135,7 @@ export const productionSongRecords = [
     "tags": [
       "k pop",
       "electronic pop",
-      "dance pop",
-      "culture",
-      "pop"
+      "dance pop"
     ]
   },
   {
@@ -69275,9 +62159,7 @@ export const productionSongRecords = [
     "tags": [
       "k pop",
       "electronic pop",
-      "dance pop",
-      "culture",
-      "pop"
+      "dance pop"
     ]
   },
   {
@@ -69301,9 +62183,7 @@ export const productionSongRecords = [
     "tags": [
       "k pop",
       "electronic pop",
-      "dance pop",
-      "culture",
-      "pop"
+      "dance pop"
     ]
   },
   {
@@ -69327,8 +62207,7 @@ export const productionSongRecords = [
     "tags": [
       "k pop",
       "electronic dance",
-      "culture",
-      "pop"
+      "culture"
     ]
   },
   {
@@ -69352,8 +62231,7 @@ export const productionSongRecords = [
     "tags": [
       "k pop",
       "electronic dance",
-      "culture",
-      "pop"
+      "culture"
     ]
   },
   {
@@ -69377,8 +62255,7 @@ export const productionSongRecords = [
     "tags": [
       "k pop",
       "electronic dance",
-      "culture",
-      "pop"
+      "culture"
     ]
   },
   {
@@ -69608,8 +62485,7 @@ export const productionSongRecords = [
     "tags": [
       "reggae",
       "acoustic",
-      "tropical",
-      "culture"
+      "tropical"
     ]
   },
   {
@@ -69632,8 +62508,7 @@ export const productionSongRecords = [
     "tags": [
       "reggae",
       "acoustic",
-      "tropical",
-      "culture"
+      "tropical"
     ]
   },
   {
@@ -69656,8 +62531,7 @@ export const productionSongRecords = [
     "tags": [
       "reggae",
       "acoustic",
-      "tropical",
-      "culture"
+      "tropical"
     ]
   },
   {
@@ -69680,8 +62554,7 @@ export const productionSongRecords = [
     "tags": [
       "reggae",
       "acoustic",
-      "tropical",
-      "culture"
+      "tropical"
     ]
   },
   {
@@ -69704,8 +62577,7 @@ export const productionSongRecords = [
     "tags": [
       "reggae",
       "acoustic",
-      "tropical",
-      "culture"
+      "tropical"
     ]
   },
   {
@@ -69728,8 +62600,7 @@ export const productionSongRecords = [
     "tags": [
       "reggae",
       "acoustic",
-      "tropical",
-      "culture"
+      "tropical"
     ]
   },
   {
@@ -69752,8 +62623,7 @@ export const productionSongRecords = [
     "tags": [
       "reggae",
       "acoustic",
-      "tropical",
-      "culture"
+      "tropical"
     ]
   },
   {
@@ -69776,8 +62646,7 @@ export const productionSongRecords = [
     "tags": [
       "reggae",
       "jazz",
-      "lounge",
-      "culture"
+      "lounge"
     ]
   },
   {
@@ -69800,8 +62669,7 @@ export const productionSongRecords = [
     "tags": [
       "reggae",
       "jazz",
-      "lounge",
-      "culture"
+      "lounge"
     ]
   },
   {
@@ -69824,8 +62692,7 @@ export const productionSongRecords = [
     "tags": [
       "reggae",
       "jazz",
-      "lounge",
-      "culture"
+      "lounge"
     ]
   },
   {
@@ -69848,8 +62715,7 @@ export const productionSongRecords = [
     "tags": [
       "reggae",
       "jazz",
-      "lounge",
-      "culture"
+      "lounge"
     ]
   },
   {
@@ -69872,8 +62738,7 @@ export const productionSongRecords = [
     "tags": [
       "reggae",
       "jazz",
-      "lounge",
-      "culture"
+      "lounge"
     ]
   },
   {
@@ -69896,8 +62761,7 @@ export const productionSongRecords = [
     "tags": [
       "reggae",
       "acoustic",
-      "mellow tropical",
-      "culture"
+      "mellow tropical"
     ]
   },
   {
@@ -69920,8 +62784,7 @@ export const productionSongRecords = [
     "tags": [
       "reggae",
       "acoustic",
-      "mellow tropical",
-      "culture"
+      "mellow tropical"
     ]
   },
   {
@@ -69944,8 +62807,7 @@ export const productionSongRecords = [
     "tags": [
       "reggae",
       "acoustic",
-      "tropical",
-      "culture"
+      "tropical"
     ]
   },
   {
@@ -69968,8 +62830,7 @@ export const productionSongRecords = [
     "tags": [
       "reggae",
       "acoustic",
-      "tropical",
-      "culture"
+      "tropical"
     ]
   },
   {
@@ -69990,8 +62851,9 @@ export const productionSongRecords = [
     "sourcePath": "keval-packs/SOUND PACKS(Main Version)/CULTURE/REGGAE/Palm Sunset",
     "metadataText": "",
     "tags": [
+      "reggae",
       "culture",
-      "reggae"
+      "instrumental"
     ]
   },
   {
@@ -70014,8 +62876,7 @@ export const productionSongRecords = [
     "tags": [
       "reggae",
       "acoustic",
-      "tropical",
-      "culture"
+      "tropical"
     ]
   },
   {
@@ -70038,8 +62899,7 @@ export const productionSongRecords = [
     "tags": [
       "reggae",
       "acoustic",
-      "tropical",
-      "culture"
+      "tropical"
     ]
   },
   {
@@ -70062,9 +62922,7 @@ export const productionSongRecords = [
     "tags": [
       "reggae fusion",
       "electronic",
-      "tropical",
-      "culture",
-      "reggae"
+      "tropical"
     ]
   },
   {
@@ -70087,9 +62945,7 @@ export const productionSongRecords = [
     "tags": [
       "reggae fusion",
       "electronic",
-      "tropical",
-      "culture",
-      "reggae"
+      "tropical"
     ]
   },
   {
@@ -70112,9 +62968,7 @@ export const productionSongRecords = [
     "tags": [
       "reggae fusion",
       "electronic",
-      "tropical",
-      "culture",
-      "reggae"
+      "tropical"
     ]
   },
   {
@@ -70137,9 +62991,7 @@ export const productionSongRecords = [
     "tags": [
       "reggae fusion",
       "electronic",
-      "tropical",
-      "culture",
-      "reggae"
+      "tropical"
     ]
   },
   {
@@ -70162,9 +63014,7 @@ export const productionSongRecords = [
     "tags": [
       "reggae fusion",
       "electronic",
-      "tropical",
-      "culture",
-      "reggae"
+      "tropical"
     ]
   },
   {
@@ -70187,9 +63037,7 @@ export const productionSongRecords = [
     "tags": [
       "reggae fusion",
       "electronic",
-      "tropical",
-      "culture",
-      "reggae"
+      "tropical"
     ]
   },
   {
@@ -70212,9 +63060,7 @@ export const productionSongRecords = [
     "tags": [
       "reggae fusion",
       "electronic",
-      "tropical",
-      "culture",
-      "reggae"
+      "tropical"
     ]
   },
   {
@@ -70237,9 +63083,7 @@ export const productionSongRecords = [
     "tags": [
       "reggae fusion",
       "electronic",
-      "tropical",
-      "culture",
-      "reggae"
+      "tropical"
     ]
   },
   {
@@ -70262,9 +63106,7 @@ export const productionSongRecords = [
     "tags": [
       "reggae fusion",
       "electronic",
-      "tropical",
-      "culture",
-      "reggae"
+      "tropical"
     ]
   },
   {
@@ -70333,9 +63175,7 @@ export const productionSongRecords = [
     "tags": [
       "reggae fusion",
       "tropical",
-      "mellow electronic",
-      "culture",
-      "reggae"
+      "mellow electronic"
     ]
   }
 ] satisfies ProductionSongRecord[];
