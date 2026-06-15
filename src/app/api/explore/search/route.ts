@@ -1,10 +1,10 @@
 import { auth } from "@clerk/nextjs/server";
-import { searchExploreTracksSmart } from "@/lib/vector-explore-search";
+import { searchExploreTracks } from "@/lib/explore-search";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-const DEFAULT_PAGE_SIZE = 96;
+const DEFAULT_PAGE_SIZE = 48;
 const MAX_PAGE_SIZE = 120;
 const MAX_SEARCH_WINDOW = 3000;
 
@@ -36,7 +36,11 @@ export async function GET(request: Request) {
     ? Math.min(Math.max(Math.trunc(offsetParam), 0), MAX_SEARCH_WINDOW)
     : 0;
   const searchWindow = Math.min(offset + limit, MAX_SEARCH_WINDOW);
-  const result = await searchExploreTracksSmart(query, genre, searchWindow);
+  const result = query.trim()
+    ? await import("@/lib/vector-explore-search").then(({ searchExploreTracksSmart }) =>
+        searchExploreTracksSmart(query, genre, searchWindow)
+      )
+    : searchExploreTracks(query, genre, searchWindow);
 
   return json({
     ...result,

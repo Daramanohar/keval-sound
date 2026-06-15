@@ -40,7 +40,7 @@ type SearchErrorState = {
   message: string;
 };
 
-const EXPLORE_PAGE_SIZE = 96;
+const EXPLORE_PAGE_SIZE = 48;
 
 function normalizeGenre(genre: string) {
   return genre === "All" || genre === defaultFilters.genre
@@ -71,6 +71,7 @@ export default function ExplorePage() {
   const currentPayload = payload?.requestKey === requestKey ? payload : null;
   const isLoading = !currentPayload && errorState?.requestKey !== requestKey;
   const error = errorState?.requestKey === requestKey ? errorState.message : null;
+  const isUpdatingResults = isLoading && displayedTracks.length > 0;
 
   useEffect(() => {
     const controller = new AbortController();
@@ -108,7 +109,7 @@ export default function ExplorePage() {
     return () => controller.abort();
   }, [activeGenre, cleanQuery, requestKey]);
 
-  const filteredTracks = currentPayload ? displayedTracks : [];
+  const filteredTracks = currentPayload || isUpdatingResults ? displayedTracks : [];
   const totalTracks = currentPayload?.total ?? 0;
   const hasMoreTracks = filteredTracks.length < totalTracks;
 
@@ -124,7 +125,6 @@ export default function ExplorePage() {
     params.set("q", trimmedQuery);
     setFilters(defaultFilters);
     setPayload(null);
-    setDisplayedTracks([]);
     setErrorState(null);
     setShowMobileFilters(false);
 
@@ -136,7 +136,6 @@ export default function ExplorePage() {
   const handleResetDiscovery = () => {
     setFilters(defaultFilters);
     setPayload(null);
-    setDisplayedTracks([]);
     setErrorState(null);
     setShowMobileFilters(false);
     setResetVersion((current) => current + 1);
@@ -350,7 +349,7 @@ export default function ExplorePage() {
               </motion.div>
             )}
 
-            {isLoading && !currentPayload ? (
+            {isLoading && !currentPayload && !displayedTracks.length ? (
               <div className="flex items-center justify-center py-24 text-muted">
                 <Loader2 className="mr-2 h-5 w-5 animate-spin text-vivid-blue" />
                 Searching the Keval music library...
@@ -361,6 +360,13 @@ export default function ExplorePage() {
               </div>
             ) : filteredTracks.length > 0 ? (
               <div className="space-y-5">
+                {isUpdatingResults ? (
+                  <div className="inline-flex items-center gap-2 rounded-full border border-vivid-blue/15 bg-vivid-blue/[0.07] px-3 py-1.5 text-xs text-vivid-blue">
+                    <Loader2 className="h-3.5 w-3.5 animate-spin" />
+                    Updating results
+                  </div>
+                ) : null}
+
                 {currentPayload?.acknowledgement ? (
                   <motion.div
                     initial={{ opacity: 0, y: 8 }}
@@ -378,7 +384,8 @@ export default function ExplorePage() {
 
                 <div
                   className={cn(
-                    "grid gap-4 md:gap-6",
+                    "grid gap-4 md:gap-6 transition-opacity duration-200",
+                    isUpdatingResults && "opacity-60",
                     view === "grid"
                       ? "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4"
                       : "grid-cols-1 sm:grid-cols-2"

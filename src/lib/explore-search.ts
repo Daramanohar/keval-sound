@@ -50,6 +50,11 @@ const INTENT_EXPANSIONS: Array<[RegExp, string[]]> = [
   [/\b(indian|desi|bollywood|hindi)\b/, ["hindi", "bollywood", "indian", "fusion"]],
 ];
 
+const normalizedTagCache = new Map<string, string[]>();
+const searchFieldCache = new Map<string, ReturnType<typeof createSearchFields>>();
+let cachedExploreGenres: ExploreGenreOption[] | null = null;
+let cachedExploreCategories: ExploreCategoryOption[] | null = null;
+
 export type ExploreGenreOption = {
   name: string;
   count: number;
@@ -124,6 +129,18 @@ function displayTagName(tag: string) {
     .replace(/\b\w/g, (character) => character.toUpperCase());
 }
 
+function createSearchFields(record: ProductionSongRecord) {
+  const title = normalizeText(record.title);
+  const pack = normalizeText(record.packTitle);
+  const category = normalizeText(record.category);
+  const sourceCategory = normalizeText(record.sourceCategory);
+  const tags = getNormalizedTags(record);
+  const metadata = normalizeText(record.metadataText);
+  const source = normalizeText(record.sourcePath);
+
+  return { title, pack, category, sourceCategory, tags, metadata, source };
+}
+
 function countIncludes(values: string[], token: string, weight: number) {
   return values.reduce((score, value) => score + (value.includes(token) ? weight : 0), 0);
 }
@@ -192,16 +209,22 @@ export function recordToExploreTrack(record: ProductionSongRecord, index: number
   };
 }
 
-function getSearchFields(record: ProductionSongRecord) {
-  const title = normalizeText(record.title);
-  const pack = normalizeText(record.packTitle);
-  const category = normalizeText(record.category);
-  const sourceCategory = normalizeText(record.sourceCategory);
-  const tags = record.tags.map(normalizeText);
-  const metadata = normalizeText(record.metadataText);
-  const source = normalizeText(record.sourcePath);
+function getNormalizedTags(record: ProductionSongRecord) {
+  const cached = normalizedTagCache.get(record.id);
+  if (cached) return cached;
 
-  return { title, pack, category, sourceCategory, tags, metadata, source };
+  const tags = record.tags.map(normalizeText);
+  normalizedTagCache.set(record.id, tags);
+  return tags;
+}
+
+function getSearchFields(record: ProductionSongRecord) {
+  const cached = searchFieldCache.get(record.id);
+  if (cached) return cached;
+
+  const fields = createSearchFields(record);
+  searchFieldCache.set(record.id, fields);
+  return fields;
 }
 
 export function matchesExploreFilter(record: ProductionSongRecord, filter: string) {
@@ -211,9 +234,7 @@ export function matchesExploreFilter(record: ProductionSongRecord, filter: strin
   const phrase = normalizeText(normalizedFilter);
   if (!phrase) return true;
 
-  const fields = getSearchFields(record);
-
-  return fields.tags.some((tag) => tag === phrase || tag.includes(phrase));
+  return getNormalizedTags(record).some((tag) => tag === phrase || tag.includes(phrase));
 }
 
 function scoreRecord(record: ProductionSongRecord, query: string, tokens: string[]) {
@@ -317,6 +338,8 @@ export function diversifyRecordsAcrossPacks(records: ProductionSongRecord[], lim
 }
 
 export function getExploreGenres(): ExploreGenreOption[] {
+  if (cachedExploreGenres) return cachedExploreGenres;
+
   const counts = new Map<string, ExploreGenreOption>();
 
   for (const record of productionSongRecords) {
@@ -339,16 +362,20 @@ export function getExploreGenres(): ExploreGenreOption[] {
     }
   }
 
-  return Array.from(counts.values())
+  cachedExploreGenres = Array.from(counts.values())
     .sort(
       (left, right) =>
         left.name.localeCompare(right.name) ||
         left.category.localeCompare(right.category) ||
         right.count - left.count
     );
+
+  return cachedExploreGenres;
 }
 
 export function getExploreCategories(): ExploreCategoryOption[] {
+  if (cachedExploreCategories) return cachedExploreCategories;
+
   const counts = new Map<string, number>();
 
   for (const record of productionSongRecords) {
@@ -356,9 +383,11 @@ export function getExploreCategories(): ExploreCategoryOption[] {
     counts.set(record.category, (counts.get(record.category) ?? 0) + 1);
   }
 
-  return Array.from(counts.entries())
+  cachedExploreCategories = Array.from(counts.entries())
     .map(([name, count]) => ({ name, count }))
     .sort((left, right) => left.name.localeCompare(right.name));
+
+  return cachedExploreCategories;
 }
 
 export function searchExploreTracks(query: string, genre = "All Genres", limit = MAX_RESULTS) {
