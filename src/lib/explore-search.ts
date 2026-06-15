@@ -213,9 +213,7 @@ export function matchesExploreFilter(record: ProductionSongRecord, filter: strin
 
   const fields = getSearchFields(record);
 
-  return (
-    fields.tags.some((tag) => tag === phrase || tag.includes(phrase) || phrase.includes(tag))
-  );
+  return fields.tags.some((tag) => tag === phrase || tag.includes(phrase));
 }
 
 function scoreRecord(record: ProductionSongRecord, query: string, tokens: string[]) {
@@ -342,7 +340,6 @@ export function getExploreGenres(): ExploreGenreOption[] {
   }
 
   return Array.from(counts.values())
-    .filter((option) => option.count > 1)
     .sort(
       (left, right) =>
         right.count - left.count ||

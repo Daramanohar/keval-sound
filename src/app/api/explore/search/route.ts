@@ -23,10 +23,10 @@ export async function GET(request: Request) {
   const url = new URL(request.url);
   const query = url.searchParams.get("q") ?? "";
   const genre = url.searchParams.get("genre") ?? "All Genres";
-  const limitParam = Number(url.searchParams.get("limit") ?? "160");
+  const limitParam = Number(url.searchParams.get("limit") ?? "3000");
   const limit = Number.isFinite(limitParam)
-    ? Math.min(Math.max(Math.trunc(limitParam), 1), 240)
-    : 160;
+    ? Math.min(Math.max(Math.trunc(limitParam), 1), 3000)
+    : 3000;
 
   return json(await searchExploreTracksSmart(query, genre, limit));
 }

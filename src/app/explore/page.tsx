@@ -72,7 +72,7 @@ export default function ExplorePage() {
 
     if (cleanQuery) params.set("q", cleanQuery);
     if (activeGenre !== defaultFilters.genre) params.set("genre", activeGenre);
-    params.set("limit", "160");
+    params.set("limit", "3000");
 
     fetch(`/api/explore/search?${params.toString()}`, {
       signal: controller.signal,
