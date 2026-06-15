@@ -32,7 +32,8 @@ export default function TrendingDiscoveryPanel() {
     []
   );
 
-  const featuredPack = rankedPacks[0];
+  const featuredPack =
+    productionHomePacks.find((pack) => pack.id === "pack-1") ?? rankedPacks[0];
   if (!featuredPack) return null;
 
   const isFeaturedActive = activePackId === featuredPack.id;
