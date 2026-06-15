@@ -50,7 +50,99 @@ const INTENT_EXPANSIONS: Array<[RegExp, string[]]> = [
   [/\b(indian|desi|bollywood|hindi)\b/, ["hindi", "bollywood", "indian", "fusion"]],
 ];
 
+const CATEGORY_DISCOVERY_ORDER = ["Culture", "Commercial", "Electronic", "Bollywood", "Indie", "Occasion", "Classic"];
+const PACK_DISCOVERY_ORDER = ["Pop", "R&B", "Hip-Hop / Rap", "Rock", "Electronic"];
+
+const CANONICAL_TAG_RULES: Array<[string, RegExp[]]> = [
+  ["Lo-Fi", [/\blo\s*fi\b/, /\blofi\b/, /\bchillhop\b/]],
+  ["R&B", [/\br\s*and\s*b\b/, /\br&b\b/, /\brnb\b/]],
+  ["Drum & Bass", [/\bdrum\s*and\s*bass\b/, /\bdnb\b/]],
+  ["Hip-Hop / Rap", [/\bhip\s*hop\b/, /\brap\b/, /\bboom bap\b/]],
+  ["Dubstep", [/\bdubstep\b/]],
+  ["Phonk", [/\bphonk\b/]],
+  ["Trap", [/\btrap\b/]],
+  ["Techno", [/\btechno\b/]],
+  ["House", [/\bhouse\b/]],
+  ["Trance", [/\btrance\b/, /\bpsy\s*trance\b/]],
+  ["EDM", [/\bedm\b/]],
+  ["Amapiano", [/\bamapiano\b/]],
+  ["Breakbeat", [/\bbreakbeat\b/]],
+  ["Downtempo", [/\bdowntempo\b/]],
+  ["Hardstyle", [/\bhardstyle\b/]],
+  ["Neurofunk", [/\bneurofunk\b/]],
+  ["Synthwave", [/\bsynthwave\b/]],
+  ["Hyperpop", [/\bhyperpop\b/]],
+  ["Electronic", [/\belectronic\b/, /\belectro\b/, /\bsynth\b/, /\bbass music\b/]],
+  ["Metal", [/\bmetal\b/, /\bmetalcore\b/]],
+  ["Punk", [/\bpunk\b/]],
+  ["Rock", [/\brock\b/]],
+  ["Indie", [/\bindie\b/]],
+  ["Pop", [/\bpop\b/]],
+  ["Acoustic", [/\bacoustic\b/]],
+  ["Ambient", [/\bambient\b/, /\bdrone\b/]],
+  ["Cinematic", [/\bcinematic\b/, /\bfilm\b/, /\bmovie\b/, /\bscore\b/]],
+  ["Orchestral", [/\borchestral\b/, /\borchestra\b/]],
+  ["Soundtrack", [/\bsoundtrack\b/]],
+  ["Classical", [/\bclassical\b/]],
+  ["Jazz", [/\bjazz\b/, /\bjazzy\b/]],
+  ["Blues", [/\bblues\b/]],
+  ["Soul", [/\bsoul\b/, /\bsoulful\b/]],
+  ["Gospel", [/\bgospel\b/]],
+  ["Folk", [/\bfolk\b/]],
+  ["Country", [/\bcountry\b/]],
+  ["Reggae", [/\breggae\b/, /\bdub reggae\b/]],
+  ["Latin", [/\blatin\b/, /\btropical latin\b/]],
+  ["Salsa", [/\bsalsa\b/]],
+  ["Bachata", [/\bbachata\b/]],
+  ["Bossa Nova", [/\bbossa\s*nova\b/]],
+  ["Samba", [/\bsamba\b/]],
+  ["Reggaeton", [/\breggaeton\b/]],
+  ["Afrobeat", [/\bafrobeat\b/, /\bafro\s*house\b/]],
+  ["Funk", [/\bfunk\b/, /\bmotown\b/, /\bdisco\b/]],
+  ["Bollywood", [/\bbollywood\b/]],
+  ["Hindi", [/\bhindi\b/]],
+  ["Indian Classical", [/\bindian classical\b/, /\bcarnatic\b/, /\bsitar\b/]],
+  ["Desi", [/\bdesi\b/]],
+  ["Arabic", [/\barabic\b/, /\bmiddle eastern\b/, /\bdesert\b/]],
+  ["K-Pop", [/\bk\s*pop\b/, /\bkorean\b/]],
+  ["Anime", [/\banime\b/]],
+  ["Chinese", [/\bchinese\b/]],
+  ["Japanese", [/\bjapanese\b/]],
+  ["Brazilian", [/\bbrazilian\b/, /\bbaile\b/, /\bcarnival\b/]],
+  ["Devotional", [/\bdevotional\b/, /\bspiritual\b/, /\bchant\b/]],
+  ["Meditation", [/\bmeditation\b/, /\byoga\b/, /\bhealing\b/]],
+  ["Dance", [/\bdance\b/, /\bclub\b/, /\bfestival\b/]],
+  ["Workout", [/\bworkout\b/, /\bgym\b/, /\bfitness\b/]],
+  ["Ballad", [/\bballad\b/]],
+  ["Romantic", [/\bromantic\b/, /\blove\b/, /\bheartfelt\b/]],
+  ["Uplifting", [/\buplifting\b/, /\bfeel good\b/, /\bcelebratory\b/]],
+  ["Dark", [/\bdark\b/, /\bgothic\b/, /\bthriller\b/, /\bsuspense\b/]],
+  ["Dramatic", [/\bdramatic\b/, /\bepic\b/]],
+  ["Hypnotic", [/\bhypnotic\b/]],
+  ["Glitch", [/\bglitch\b/, /\bglitchy\b/]],
+  ["Experimental", [/\bexperimental\b/, /\bpsychedelic\b/]],
+  ["Mellow", [/\bmellow\b/, /\bchill\b/]],
+  ["Calming", [/\bcalm\b/, /\bcalming\b/, /\bsoothing\b/, /\bpeaceful\b/]],
+  ["Emotional", [/\bemotional\b/]],
+  ["Bright", [/\bbright\b/]],
+  ["Moody", [/\bmoody\b/]],
+  ["Motivational", [/\bmotivational\b/, /\binspiring\b/]],
+  ["Nostalgic", [/\bnostalgic\b/, /\bvintage\b/]],
+  ["Minimal", [/\bminimal\b/, /\bminimalist\b/]],
+  ["Smooth", [/\bsmooth\b/, /\blounge\b/]],
+  ["Aggressive", [/\baggressive\b/, /\bhard hitting\b/, /\bheavy\b/]],
+  ["Dreamy", [/\bdreamy\b/]],
+  ["Warm", [/\bwarm\b/]],
+  ["Piano", [/\bpiano\b/]],
+  ["Guitar", [/\bguitar\b/]],
+  ["Drums", [/\bdrum\b/, /\bpercussion\b/]],
+  ["Bass", [/\bbass\b/, /\b808\b/]],
+  ["Vocal", [/\bvocal\b/, /\blyrical\b/]],
+  ["Instrumental", [/\binstrumental\b/]],
+];
+
 const normalizedTagCache = new Map<string, string[]>();
+const canonicalTagCache = new Map<string, string[]>();
 const searchFieldCache = new Map<string, ReturnType<typeof createSearchFields>>();
 let cachedExploreGenres: ExploreGenreOption[] | null = null;
 let cachedExploreCategories: ExploreCategoryOption[] | null = null;
@@ -129,6 +221,28 @@ function displayTagName(tag: string) {
     .replace(/\b\w/g, (character) => character.toUpperCase());
 }
 
+function getCategoryRank(category: string) {
+  const rank = CATEGORY_DISCOVERY_ORDER.indexOf(category);
+  return rank === -1 ? CATEGORY_DISCOVERY_ORDER.length : rank;
+}
+
+function getPackRank(packTitle: string) {
+  const normalizedPack = normalizeText(packTitle);
+  const rank = PACK_DISCOVERY_ORDER.findIndex((pack) => normalizeText(pack) === normalizedPack);
+  return rank === -1 ? PACK_DISCOVERY_ORDER.length : rank;
+}
+
+function canonicalizeTag(tag: string) {
+  const normalized = normalizeText(tag);
+  if (!normalized || normalized.length < 3) return null;
+
+  const rule = CANONICAL_TAG_RULES.find(([, patterns]) =>
+    patterns.some((pattern) => pattern.test(normalized))
+  );
+
+  return rule?.[0] ?? null;
+}
+
 function createSearchFields(record: ProductionSongRecord) {
   const title = normalizeText(record.title);
   const pack = normalizeText(record.packTitle);
@@ -198,7 +312,7 @@ export function recordToExploreTrack(record: ProductionSongRecord, index: number
     price: 99,
     coverUrl: record.coverUrl,
     waveform: generateWaveform(record.id),
-    tags: record.tags,
+    tags: getCanonicalTags(record),
     isExclusive: true,
     isTrending: index < 12,
     isSellingFast: record.category === "Occasion" && index < 48,
@@ -213,8 +327,23 @@ function getNormalizedTags(record: ProductionSongRecord) {
   const cached = normalizedTagCache.get(record.id);
   if (cached) return cached;
 
-  const tags = record.tags.map(normalizeText);
+  const tags = getCanonicalTags(record).map(normalizeText);
   normalizedTagCache.set(record.id, tags);
+  return tags;
+}
+
+function getCanonicalTags(record: ProductionSongRecord) {
+  const cached = canonicalTagCache.get(record.id);
+  if (cached) return cached;
+
+  const tags = Array.from(
+    new Set(record.tags.map(canonicalizeTag).filter((tag): tag is string => Boolean(tag)))
+  );
+  if (!tags.length) {
+    const fallback = canonicalizeTag(record.packTitle) ?? canonicalizeTag(record.category);
+    tags.push(fallback ?? displayTagName(record.packTitle));
+  }
+  canonicalTagCache.set(record.id, tags);
   return tags;
 }
 
@@ -234,7 +363,7 @@ export function matchesExploreFilter(record: ProductionSongRecord, filter: strin
   const phrase = normalizeText(normalizedFilter);
   if (!phrase) return true;
 
-  return getNormalizedTags(record).some((tag) => tag === phrase || tag.includes(phrase));
+  return getNormalizedTags(record).some((tag) => tag === phrase);
 }
 
 function scoreRecord(record: ProductionSongRecord, query: string, tokens: string[]) {
@@ -284,7 +413,9 @@ function mixRecordsAcrossPacks(records: ProductionSongRecord[]) {
   const sortedBuckets = Array.from(buckets.values()).sort((left, right) => {
     const leftFirst = left[0];
     const rightFirst = right[0];
-    return leftFirst.category.localeCompare(rightFirst.category) ||
+    return getCategoryRank(leftFirst.category) - getCategoryRank(rightFirst.category) ||
+      getPackRank(leftFirst.packTitle) - getPackRank(rightFirst.packTitle) ||
+      leftFirst.category.localeCompare(rightFirst.category) ||
       leftFirst.packTitle.localeCompare(rightFirst.packTitle);
   });
   const maxBucketLength = Math.max(...sortedBuckets.map((bucket) => bucket.length));
@@ -345,16 +476,15 @@ export function getExploreGenres(): ExploreGenreOption[] {
   for (const record of productionSongRecords) {
     if (!record.hasMp3) continue;
 
-    for (const tag of record.tags) {
+    for (const tag of getCanonicalTags(record)) {
       const normalizedTag = normalizeText(tag);
-      if (!normalizedTag || normalizedTag.length < 3) continue;
 
       const current = counts.get(normalizedTag);
       if (current) {
         current.count += 1;
       } else {
         counts.set(normalizedTag, {
-          name: displayTagName(tag),
+          name: tag,
           count: 1,
           category: record.category,
         });
