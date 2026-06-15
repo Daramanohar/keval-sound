@@ -4,6 +4,10 @@ import { searchExploreTracksSmart } from "@/lib/vector-explore-search";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
+const DEFAULT_PAGE_SIZE = 96;
+const MAX_PAGE_SIZE = 120;
+const MAX_SEARCH_WINDOW = 3000;
+
 function json(body: unknown, status = 200) {
   return Response.json(body, {
     status,
@@ -23,10 +27,21 @@ export async function GET(request: Request) {
   const url = new URL(request.url);
   const query = url.searchParams.get("q") ?? "";
   const genre = url.searchParams.get("genre") ?? "All Genres";
-  const limitParam = Number(url.searchParams.get("limit") ?? "3000");
+  const limitParam = Number(url.searchParams.get("limit") ?? `${DEFAULT_PAGE_SIZE}`);
+  const offsetParam = Number(url.searchParams.get("offset") ?? "0");
   const limit = Number.isFinite(limitParam)
-    ? Math.min(Math.max(Math.trunc(limitParam), 1), 3000)
-    : 3000;
+    ? Math.min(Math.max(Math.trunc(limitParam), 1), MAX_PAGE_SIZE)
+    : DEFAULT_PAGE_SIZE;
+  const offset = Number.isFinite(offsetParam)
+    ? Math.min(Math.max(Math.trunc(offsetParam), 0), MAX_SEARCH_WINDOW)
+    : 0;
+  const searchWindow = Math.min(offset + limit, MAX_SEARCH_WINDOW);
+  const result = await searchExploreTracksSmart(query, genre, searchWindow);
 
-  return json(await searchExploreTracksSmart(query, genre, limit));
+  return json({
+    ...result,
+    limit,
+    offset,
+    tracks: result.tracks.slice(offset, offset + limit),
+  });
 }

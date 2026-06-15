@@ -130,28 +130,27 @@ export default function HeroCarousel() {
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      {/* All banner images stay mounted and crossfade — no refetch, no flash, no latency */}
-      {slides.map((item, index) => (
+      <AnimatePresence initial={false}>
         <motion.div
-          key={item.id}
-          initial={false}
-          animate={{ opacity: index === current ? 1 : 0 }}
+          key={slide.id}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="absolute inset-0"
-          aria-hidden={index !== current}
         >
           <Image
-            src={item.image}
-            alt={item.title}
+            src={slide.image}
+            alt={slide.title}
             fill
-            priority={index === 0}
+            priority={current === 0}
             sizes="(max-width: 1024px) 100vw, 1024px"
             quality={82}
             className="object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-vampire-black/90 via-vampire-black/45 to-vampire-black/10" />
         </motion.div>
-      ))}
+      </AnimatePresence>
 
       <div className="relative z-10 h-full w-full flex items-center">
         <AnimatePresence custom={direction} mode="wait">

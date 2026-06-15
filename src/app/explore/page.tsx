@@ -26,6 +26,7 @@ type ExploreSearchPayload = {
   genre: string;
   total: number;
   limit: number;
+  offset?: number;
   tracks: Track[];
   genres: ExploreGenreOption[];
 };
@@ -38,6 +39,8 @@ type SearchErrorState = {
   requestKey: string;
   message: string;
 };
+
+const EXPLORE_PAGE_SIZE = 96;
 
 function normalizeGenre(genre: string) {
   return genre === "All" || genre === defaultFilters.genre
@@ -63,7 +66,10 @@ export default function ExplorePage() {
   );
   const [payload, setPayload] = useState<SearchPayloadState | null>(null);
   const [errorState, setErrorState] = useState<SearchErrorState | null>(null);
-  const isLoading = payload?.requestKey !== requestKey && errorState?.requestKey !== requestKey;
+  const [displayedTracks, setDisplayedTracks] = useState<Track[]>([]);
+  const [isLoadingMore, setIsLoadingMore] = useState(false);
+  const currentPayload = payload?.requestKey === requestKey ? payload : null;
+  const isLoading = !currentPayload && errorState?.requestKey !== requestKey;
   const error = errorState?.requestKey === requestKey ? errorState.message : null;
 
   useEffect(() => {
@@ -72,7 +78,8 @@ export default function ExplorePage() {
 
     if (cleanQuery) params.set("q", cleanQuery);
     if (activeGenre !== defaultFilters.genre) params.set("genre", activeGenre);
-    params.set("limit", "3000");
+    params.set("limit", `${EXPLORE_PAGE_SIZE}`);
+    params.set("offset", "0");
 
     fetch(`/api/explore/search?${params.toString()}`, {
       signal: controller.signal,
@@ -88,6 +95,7 @@ export default function ExplorePage() {
         }
 
         setPayload({ ...(data as ExploreSearchPayload), requestKey });
+        setDisplayedTracks((data as ExploreSearchPayload).tracks ?? []);
       })
       .catch((searchError) => {
         if (searchError.name === "AbortError") return;
@@ -100,7 +108,9 @@ export default function ExplorePage() {
     return () => controller.abort();
   }, [activeGenre, cleanQuery, requestKey]);
 
-  const filteredTracks = payload?.tracks ?? [];
+  const filteredTracks = currentPayload ? displayedTracks : [];
+  const totalTracks = currentPayload?.total ?? 0;
+  const hasMoreTracks = filteredTracks.length < totalTracks;
 
   const handleSearch = (nextQuery: string) => {
     const trimmedQuery = nextQuery.trim();
@@ -114,6 +124,7 @@ export default function ExplorePage() {
     params.set("q", trimmedQuery);
     setFilters(defaultFilters);
     setPayload(null);
+    setDisplayedTracks([]);
     setErrorState(null);
     setShowMobileFilters(false);
 
@@ -125,6 +136,7 @@ export default function ExplorePage() {
   const handleResetDiscovery = () => {
     setFilters(defaultFilters);
     setPayload(null);
+    setDisplayedTracks([]);
     setErrorState(null);
     setShowMobileFilters(false);
     setResetVersion((current) => current + 1);
@@ -149,15 +161,55 @@ export default function ExplorePage() {
     setFilters({ genre: nextGenre });
   };
 
+  const handleLoadMore = async () => {
+    if (!currentPayload || isLoadingMore || !hasMoreTracks) return;
+
+    const params = new URLSearchParams();
+    if (cleanQuery) params.set("q", cleanQuery);
+    if (activeGenre !== defaultFilters.genre) params.set("genre", activeGenre);
+    params.set("limit", `${EXPLORE_PAGE_SIZE}`);
+    params.set("offset", `${filteredTracks.length}`);
+    setIsLoadingMore(true);
+
+    try {
+      const response = await fetch(`/api/explore/search?${params.toString()}`, {
+        headers: {
+          Accept: "application/json",
+        },
+      });
+      const data = await response.json().catch(() => null);
+
+      if (!response.ok) {
+        throw new Error(data?.error ?? "search_failed");
+      }
+
+      const nextPayload = data as ExploreSearchPayload;
+      setPayload({ ...nextPayload, requestKey });
+      setDisplayedTracks((currentTracks) => {
+        const existingIds = new Set(currentTracks.map((track) => track.id));
+        const newTracks = (nextPayload.tracks ?? []).filter((track) => !existingIds.has(track.id));
+        return [...currentTracks, ...newTracks];
+      });
+      setErrorState(null);
+    } catch (loadError) {
+      setErrorState({
+        requestKey,
+        message: loadError instanceof Error ? loadError.message : "search_failed",
+      });
+    } finally {
+      setIsLoadingMore(false);
+    }
+  };
+
   const searchSummary = useMemo(() => {
-    if (isLoading && !payload) return "Searching the Keval catalog";
+    if (isLoading && !currentPayload) return "Searching the Keval catalog";
     if (cleanQuery && activeGenre !== defaultFilters.genre) {
       return `Results for "${cleanQuery}" in ${activeGenre}`;
     }
     if (cleanQuery) return `Results for "${cleanQuery}"`;
     if (activeGenre !== defaultFilters.genre) return `${activeGenre} selections from the catalog`;
     return "Mixed discovery across the production catalog";
-  }, [activeGenre, cleanQuery, isLoading, payload]);
+  }, [activeGenre, cleanQuery, currentPayload, isLoading]);
 
   const resultLabel = useMemo(() => {
     if (cleanQuery) return "Curated matches";
@@ -212,7 +264,7 @@ export default function ExplorePage() {
               <FilterPanel
                 value={filters}
                 onFilterChange={handleFilterChange}
-                genreOptions={payload?.genres ?? []}
+                genreOptions={currentPayload?.genres ?? payload?.genres ?? []}
               />
             </div>
           </aside>
@@ -293,12 +345,12 @@ export default function ExplorePage() {
                 <FilterPanel
                   value={filters}
                   onFilterChange={handleFilterChange}
-                  genreOptions={payload?.genres ?? []}
+                  genreOptions={currentPayload?.genres ?? payload?.genres ?? []}
                 />
               </motion.div>
             )}
 
-            {isLoading && !payload ? (
+            {isLoading && !currentPayload ? (
               <div className="flex items-center justify-center py-24 text-muted">
                 <Loader2 className="mr-2 h-5 w-5 animate-spin text-vivid-blue" />
                 Searching the Keval music library...
@@ -309,16 +361,16 @@ export default function ExplorePage() {
               </div>
             ) : filteredTracks.length > 0 ? (
               <div className="space-y-5">
-                {payload?.acknowledgement ? (
+                {currentPayload?.acknowledgement ? (
                   <motion.div
                     initial={{ opacity: 0, y: 8 }}
                     animate={{ opacity: 1, y: 0 }}
                     className="rounded-2xl border border-vivid-blue/15 bg-vivid-blue/[0.07] px-4 py-3 text-sm text-white/82"
                   >
-                    <p>{payload.acknowledgement}</p>
-                    {payload.optimizedQuery ? (
+                    <p>{currentPayload.acknowledgement}</p>
+                    {currentPayload.optimizedQuery ? (
                       <p className="mt-1 text-xs text-muted">
-                        Optimized search: <span className="text-vivid-blue">{payload.optimizedQuery}</span>
+                        Optimized search: <span className="text-vivid-blue">{currentPayload.optimizedQuery}</span>
                       </p>
                     ) : null}
                   </motion.div>
@@ -341,6 +393,26 @@ export default function ExplorePage() {
                     />
                   ))}
                 </div>
+
+                {hasMoreTracks ? (
+                  <div className="flex justify-center pt-2">
+                    <button
+                      type="button"
+                      onClick={handleLoadMore}
+                      disabled={isLoadingMore}
+                      className="inline-flex min-w-40 items-center justify-center gap-2 rounded-xl border border-white/[0.08] bg-white/[0.05] px-5 py-3 text-sm font-semibold text-white/82 transition-colors hover:border-vivid-blue/35 hover:bg-vivid-blue/10 hover:text-white disabled:cursor-wait disabled:opacity-60"
+                    >
+                      {isLoadingMore ? (
+                        <>
+                          <Loader2 className="h-4 w-4 animate-spin" />
+                          Loading
+                        </>
+                      ) : (
+                        "Show more tracks"
+                      )}
+                    </button>
+                  </div>
+                ) : null}
               </div>
             ) : (
               <div className="text-center py-24">
