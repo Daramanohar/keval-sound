@@ -78,91 +78,92 @@ export default function SamplesPage() {
 
   return (
     <PageTransition>
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-grey-azure/10 via-transparent to-transparent pointer-events-none" />
-        <div className="relative z-10 pt-12 pb-8">
+      <div className="relative overflow-hidden rounded-3xl border border-grey-azure/15 bg-vampire-black">
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-grey-azure/18 via-vampire-black to-vampire-black" />
+        <div className="pointer-events-none absolute right-[-10%] top-[-18%] h-72 w-72 rounded-full bg-mid-purple/18 blur-3xl" />
+        <div className="pointer-events-none absolute bottom-[-18%] left-[-10%] h-72 w-72 rounded-full bg-zesty-red/10 blur-3xl" />
+
+        <div className="relative z-10 px-6 pt-10 md:px-8 md:pt-12">
           <SectionHeader
             title="Samples & Loops"
             subtitle="Professional-grade Indian instrument samples, loops, and one-shots"
             gradient
           />
-
-          <div className="pointer-events-none mt-6 flex select-none flex-col gap-4 opacity-20 blur-3xl sm:flex-row">
-            <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted" />
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(event) => setSearchQuery(event.target.value)}
-                placeholder="Search samples by name, instrument, genre..."
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl glass-subtle bg-transparent text-sm text-white placeholder:text-muted/60 outline-none focus:ring-1 focus:ring-vivid-blue/50 transition-all"
-              />
-            </div>
-
-            <div className="flex gap-2 flex-wrap">
-              {typeLabels.map((type) => (
-                <button
-                  key={type.value}
-                  type="button"
-                  onClick={() => setTypeFilter(type.value)}
-                  className={cn(
-                    "px-3 py-2 rounded-lg text-xs font-medium transition-all",
-                    typeFilter === type.value
-                      ? "bg-vivid-blue text-white"
-                      : "glass-subtle text-muted hover:text-white"
-                  )}
-                >
-                  {type.label}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="relative pb-16">
-        <div className="pointer-events-none select-none opacity-15 blur-3xl">
-          <div className="glass rounded-2xl overflow-hidden">
-          <div className="hidden md:grid grid-cols-[40px_1fr_100px_80px_100px_100px_80px_100px] gap-4 items-center px-6 py-3 border-b border-border">
-            <div />
-            <SortHeader label="Name" sortKeyName="name" active={sortKey === "name"} onSort={handleSort} />
-            <span className="text-xs font-medium uppercase tracking-wider text-muted">Type</span>
-            <span className="text-xs font-medium uppercase tracking-wider text-muted">Key</span>
-            <SortHeader label="Duration" sortKeyName="duration" active={sortKey === "duration"} onSort={handleSort} />
-            <SortHeader label="Instrument" sortKeyName="instrument" active={sortKey === "instrument"} onSort={handleSort} />
-            <SortHeader label="Price" sortKeyName="price" active={sortKey === "price"} onSort={handleSort} />
-            <div />
-          </div>
-
-          <div className="divide-y divide-border">
-            {filteredSamples.map((sample, index) => (
-              <SampleRow key={sample.id} sample={sample} index={index} />
-            ))}
-          </div>
-
-          {filteredSamples.length === 0 && (
-            <div className="text-center py-16">
-              <p className="text-muted">No samples match your search.</p>
-            </div>
-          )}
         </div>
 
-          <p className="text-center text-xs text-muted mt-6">
-            All samples include instant licensing.
-          </p>
-        </div>
-
-        <div className="absolute inset-x-0 top-6 z-10 flex justify-center px-4 md:top-16">
-          <div className="max-w-xl rounded-3xl border border-white/[0.12] bg-[#0c0d1c]/85 p-6 text-center shadow-2xl shadow-black/40 backdrop-blur-2xl md:p-8">
-            <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-vivid-blue/15 text-vivid-blue">
+        <div className="relative z-10 px-6 pb-36 pt-6 md:px-8">
+          <div className="mx-auto max-w-xl rounded-3xl border border-dandelion/20 bg-vampire-black/92 p-6 text-center shadow-2xl shadow-grey-azure/20 backdrop-blur-xl md:p-8">
+            <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl border border-vivid-blue/20 bg-vivid-blue/12 text-vivid-blue">
               <Lock className="h-5 w-5" />
             </div>
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-vivid-blue">
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-dandelion">
               Coming soon
             </p>
-            <h2 className="mt-3 text-2xl font-bold text-white">Samples are being prepared with care.</h2>
+            <h2 className="mt-3 text-2xl font-bold text-light-grey">Samples are being prepared with care.</h2>
             <p className="mt-3 text-sm leading-6 text-muted">
               The Keval team is refining this library for clean previews, organized metadata, and licensing-ready downloads. This section will open once the experience meets production quality.
+            </p>
+          </div>
+
+          <div className="pointer-events-none mt-8 select-none opacity-25 blur-md">
+            <div className="mb-5 flex flex-col gap-4 sm:flex-row">
+              <div className="relative max-w-md flex-1">
+                <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-vivid-blue" />
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(event) => setSearchQuery(event.target.value)}
+                  placeholder="Search samples by name, instrument, genre..."
+                  className="w-full rounded-xl border border-grey-azure/20 bg-mid-purple/10 py-2.5 pl-10 pr-4 text-sm text-light-grey placeholder:text-muted/60 outline-none"
+                />
+              </div>
+
+              <div className="flex flex-wrap gap-2">
+                {typeLabels.map((type) => (
+                  <button
+                    key={type.value}
+                    type="button"
+                    onClick={() => setTypeFilter(type.value)}
+                    className={cn(
+                      "rounded-lg px-3 py-2 text-xs font-medium transition-all",
+                      typeFilter === type.value
+                        ? "bg-vivid-blue text-light-grey"
+                        : "border border-grey-azure/15 bg-mid-purple/10 text-muted"
+                    )}
+                  >
+                    {type.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="overflow-hidden rounded-2xl border border-grey-azure/15 bg-mid-purple/10">
+              <div className="hidden grid-cols-[40px_1fr_100px_80px_100px_100px_80px_100px] items-center gap-4 border-b border-grey-azure/15 px-6 py-3 md:grid">
+                <div />
+                <SortHeader label="Name" sortKeyName="name" active={sortKey === "name"} onSort={handleSort} />
+                <span className="text-xs font-medium uppercase tracking-wider text-muted">Type</span>
+                <span className="text-xs font-medium uppercase tracking-wider text-muted">Key</span>
+                <SortHeader label="Duration" sortKeyName="duration" active={sortKey === "duration"} onSort={handleSort} />
+                <SortHeader label="Instrument" sortKeyName="instrument" active={sortKey === "instrument"} onSort={handleSort} />
+                <SortHeader label="Price" sortKeyName="price" active={sortKey === "price"} onSort={handleSort} />
+                <div />
+              </div>
+
+              <div className="divide-y divide-grey-azure/15">
+                {filteredSamples.map((sample, index) => (
+                  <SampleRow key={sample.id} sample={sample} index={index} />
+                ))}
+              </div>
+
+              {filteredSamples.length === 0 && (
+                <div className="py-16 text-center">
+                  <p className="text-muted">No samples match your search.</p>
+                </div>
+              )}
+            </div>
+
+            <p className="mt-6 text-center text-xs text-muted">
+              All samples include instant licensing.
             </p>
           </div>
         </div>
