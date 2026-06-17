@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowUpDown,
+  Lock,
   Pause,
   Play,
   Search,
@@ -86,7 +87,7 @@ export default function SamplesPage() {
             gradient
           />
 
-          <div className="flex flex-col sm:flex-row gap-4 mt-6">
+          <div className="pointer-events-none mt-6 flex select-none flex-col gap-4 opacity-20 blur-3xl sm:flex-row">
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted" />
               <input
@@ -119,8 +120,9 @@ export default function SamplesPage() {
         </div>
       </div>
 
-      <div className="pb-16">
-        <div className="glass rounded-2xl overflow-hidden">
+      <div className="relative pb-16">
+        <div className="pointer-events-none select-none opacity-15 blur-3xl">
+          <div className="glass rounded-2xl overflow-hidden">
           <div className="hidden md:grid grid-cols-[40px_1fr_100px_80px_100px_100px_80px_100px] gap-4 items-center px-6 py-3 border-b border-border">
             <div />
             <SortHeader label="Name" sortKeyName="name" active={sortKey === "name"} onSort={handleSort} />
@@ -145,9 +147,25 @@ export default function SamplesPage() {
           )}
         </div>
 
-        <p className="text-center text-xs text-muted mt-6">
-          All samples include instant licensing.
-        </p>
+          <p className="text-center text-xs text-muted mt-6">
+            All samples include instant licensing.
+          </p>
+        </div>
+
+        <div className="absolute inset-x-0 top-6 z-10 flex justify-center px-4 md:top-16">
+          <div className="max-w-xl rounded-3xl border border-white/[0.12] bg-[#0c0d1c]/85 p-6 text-center shadow-2xl shadow-black/40 backdrop-blur-2xl md:p-8">
+            <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-vivid-blue/15 text-vivid-blue">
+              <Lock className="h-5 w-5" />
+            </div>
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-vivid-blue">
+              Coming soon
+            </p>
+            <h2 className="mt-3 text-2xl font-bold text-white">Samples are being prepared with care.</h2>
+            <p className="mt-3 text-sm leading-6 text-muted">
+              The Keval team is refining this library for clean previews, organized metadata, and licensing-ready downloads. This section will open once the experience meets production quality.
+            </p>
+          </div>
+        </div>
       </div>
     </PageTransition>
   );

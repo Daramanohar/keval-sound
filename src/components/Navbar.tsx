@@ -18,8 +18,10 @@ import { useStore } from "@/lib/store-context";
 import KevalLogo from "./KevalLogo";
 
 const navItems = [
-  { label: "Home", href: "/" },
+  { label: "Browse", href: "/" },
   { label: "Explore", href: "/explore" },
+  { label: "Playlists", href: "/playlists" },
+  { label: "Radio", href: "/radio" },
   { label: "Packs", href: "/packs" },
   { label: "Samples", href: "/samples" },
 ];

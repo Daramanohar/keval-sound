@@ -3,7 +3,9 @@
 import { useDeferredValue, useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import {
+  ChevronDown,
   Headphones,
   Heart,
   Lock,
@@ -14,6 +16,8 @@ import {
   Sparkles,
 } from "lucide-react";
 import { usePlayerControls } from "@/lib/player-context";
+import { searchExploreTracks } from "@/lib/explore-search";
+import type { Track } from "@/lib/mock-data";
 import { useStore } from "@/lib/store-context";
 import { useToast } from "@/lib/toast-context";
 import type {
@@ -28,6 +32,98 @@ import TrackTagLine from "./TrackTagLine";
 
 const INITIAL_PACK_ROWS = 4;
 const PACK_ROW_BATCH_SIZE = 4;
+
+const CURATED_PLAYLISTS = [
+  {
+    title: "Cinematic Focus",
+    tag: "Cinematic",
+    description: "Scene-ready cues for edits, shorts, and visual storytelling.",
+    coverUrl: "/packs/pack-1.png",
+  },
+  {
+    title: "Electronic Motion",
+    tag: "Electronic",
+    description: "Forward-driving electronic picks for modern creator cuts.",
+    coverUrl: "/packs/pack-2.png",
+  },
+  {
+    title: "Ambient Spaces",
+    tag: "Ambient",
+    description: "Atmospheric beds for calm, premium, and reflective moments.",
+    coverUrl: "/packs/pack-3.png",
+  },
+  {
+    title: "Orchestral Drama",
+    tag: "Orchestral",
+    description: "Rich score cues for emotional builds and grand reveals.",
+    coverUrl: "/packs/pack-4.png",
+  },
+  {
+    title: "Trap Energy",
+    tag: "Trap",
+    description: "Hard-hitting rhythms for bold reels and street visuals.",
+    coverUrl: "/packs/pack-5.png",
+  },
+  {
+    title: "Lo-Fi Room",
+    tag: "Lo-Fi",
+    description: "Warm, low-pressure beats for study, flow, and soft vlogs.",
+    coverUrl: "/packs/pack-6.png",
+  },
+  {
+    title: "Soundtrack Selects",
+    tag: "Soundtrack",
+    description: "Editorial music shaped for stories, montages, and trailers.",
+    coverUrl: "/packs/pack-7.png",
+  },
+  {
+    title: "Hip-Hop Pulse",
+    tag: "Hip-Hop / Rap",
+    description: "Rhythmic cuts with confident bounce and creator-friendly punch.",
+    coverUrl: "/packs/pack-8.png",
+  },
+  {
+    title: "Dubstep Voltage",
+    tag: "Dubstep",
+    description: "High-impact bass drops for gaming, sports, and tech edits.",
+    coverUrl: "/packs/pack-9.png",
+  },
+  {
+    title: "Rock Frames",
+    tag: "Rock",
+    description: "Guitar-led selections for action, attitude, and momentum.",
+    coverUrl: "/packs/pack-10.png",
+  },
+  {
+    title: "Acoustic Warmth",
+    tag: "Acoustic",
+    description: "Organic, intimate sounds for human stories and lifestyle films.",
+    coverUrl: "/packs/pack-11.png",
+  },
+  {
+    title: "Uplifting Cuts",
+    tag: "Uplifting",
+    description: "Positive tracks for launches, brand films, and celebrations.",
+    coverUrl: "/packs/pack-12.png",
+  },
+  {
+    title: "Trance Drive",
+    tag: "Trance",
+    description: "Hypnotic movement for long-form energy and night visuals.",
+    coverUrl: "/packs/pack-13.png",
+  },
+  {
+    title: "Bollywood Spark",
+    tag: "Bollywood",
+    description: "Desi-inspired selections shaped for vibrant moments.",
+    coverUrl: "/packs/pack-14.png",
+  },
+] as const;
+
+type CuratedPlaylist = (typeof CURATED_PLAYLISTS)[number] & {
+  count: number;
+  tracks: Track[];
+};
 
 type ProductionCatalogModule = typeof import("@/lib/production-catalog");
 
@@ -63,6 +159,19 @@ export default function KevalPlayer() {
   const searchResults = useMemo(
     () => catalog?.searchProductionTracks(deferredQuery, { category: activeCategory, limit: 48 }) ?? [],
     [activeCategory, catalog, deferredQuery]
+  );
+  const curatedPlaylists = useMemo<CuratedPlaylist[]>(
+    () =>
+      CURATED_PLAYLISTS.map((playlist) => {
+        const result = searchExploreTracks("", playlist.tag, 24);
+
+        return {
+          ...playlist,
+          count: result.total,
+          tracks: result.tracks,
+        };
+      }),
+    []
   );
   const hasQuery = deferredQuery.trim().length > 0;
   const visiblePackLimit =
@@ -141,17 +250,17 @@ export default function KevalPlayer() {
                 </div>
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.24em] text-vivid-blue">
-                    Keval Player
+                    Keval Playlists
                   </p>
                   <h1 className="text-3xl font-bold tracking-tight text-white md:text-5xl">
-                    Listen first. License when it lands.
+                    Curated playlists. Listen first, license when it lands.
                   </h1>
                 </div>
               </div>
               <div className="flex flex-wrap gap-2">
                 {[
+                  "Keval team curated",
                   "Production catalog",
-                  "Instrumental and vocal cues",
                   "Cloud-secured previews",
                 ].map((label) => (
                   <span
@@ -191,6 +300,27 @@ export default function KevalPlayer() {
               <StatCell label="WAV" value={catalog.productionCatalogStats.wavTracks} />
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="space-y-4">
+        <SectionTitle
+          title="Playlists curated by the Keval team"
+          subtitle="Handpicked tag-based collections. Open any playlist to see the same songs surfaced from Explore for that sound."
+        />
+        <div className="grid grid-cols-2 items-start gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+          {curatedPlaylists.map((playlist, index) => (
+            <PlaylistCard
+              key={playlist.tag}
+              playlist={playlist}
+              index={index}
+              isItemPlaying={isItemPlaying}
+              onPlay={(track) => toggleTrack(track, { queue: playlist.tracks })}
+              onAddToCart={addTrackToCart}
+              isSaved={(track) => isInWishlist(track.id, "track")}
+              onToggleSave={toggleTrackWishlist}
+            />
+          ))}
         </div>
       </section>
 
@@ -279,6 +409,146 @@ export default function KevalPlayer() {
         </section>
       )}
     </div>
+  );
+}
+
+function PlaylistCard({
+  playlist,
+  index,
+  isItemPlaying,
+  onPlay,
+  onAddToCart,
+  isSaved,
+  onToggleSave,
+}: {
+  playlist: CuratedPlaylist;
+  index: number;
+  isItemPlaying: (id: string, type?: "track" | "sample") => boolean;
+  onPlay: (track: Track) => void;
+  onAddToCart: (track: Track) => void;
+  isSaved: (track: Track) => boolean;
+  onToggleSave: (track: Track) => void;
+}) {
+  const [expanded, setExpanded] = useState(false);
+  const leadTrack = playlist.tracks[0];
+  const active = playlist.tracks.some((track) => isItemPlaying(track.id, "track"));
+
+  return (
+    <motion.article
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.035, duration: 0.35 }}
+      className="glass-card flex flex-col overflow-hidden rounded-2xl"
+    >
+      <button
+        type="button"
+        onClick={() => setExpanded((current) => !current)}
+        className="group relative aspect-square w-full overflow-hidden bg-white/[0.04]"
+        aria-label={`Open ${playlist.title}`}
+      >
+        <Image
+          src={playlist.coverUrl}
+          alt={playlist.title}
+          fill
+          sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 20vw"
+          className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-vampire-black/85 via-vampire-black/10 to-transparent" />
+        <span className="absolute left-2 top-2 rounded-full bg-black/45 px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-white/75 backdrop-blur">
+          {playlist.tag}
+        </span>
+        <div className="absolute bottom-3 left-3 right-3 text-left">
+          <p className="text-base font-bold leading-tight text-white">{playlist.title}</p>
+          <p className="mt-1 text-[11px] text-white/65">{playlist.count} Explore matches</p>
+        </div>
+      </button>
+
+      <div className="space-y-3 p-3">
+        <p className="line-clamp-2 min-h-9 text-xs leading-relaxed text-muted">
+          {playlist.description}
+        </p>
+        <div className="flex items-center gap-1.5">
+          <button
+            type="button"
+            onClick={() => leadTrack && onPlay(leadTrack)}
+            disabled={!leadTrack}
+            className="flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-vivid-blue/10 px-3 py-2 text-xs font-semibold text-vivid-blue transition-colors hover:bg-vivid-blue/20 disabled:cursor-not-allowed disabled:opacity-50"
+          >
+            {active ? <Pause className="h-3 w-3" /> : <Play className="h-3 w-3 fill-current" />}
+            {active ? "Pause" : "Play"}
+          </button>
+          <button
+            type="button"
+            onClick={() => setExpanded((current) => !current)}
+            aria-expanded={expanded}
+            className={cn(
+              "flex h-8 w-8 shrink-0 items-center justify-center rounded-lg transition-colors",
+              expanded
+                ? "bg-vivid-blue/15 text-vivid-blue"
+                : "bg-white/[0.05] text-muted hover:bg-white/[0.1] hover:text-white"
+            )}
+          >
+            <ChevronDown className={cn("h-3.5 w-3.5 transition-transform", expanded && "rotate-180")} />
+          </button>
+        </div>
+      </div>
+
+      {expanded ? (
+        <div className="border-t border-white/[0.04] p-2">
+          <div className="max-h-80 space-y-1 overflow-y-auto pr-1 scrollbar-hide">
+            {playlist.tracks.map((track, trackIndex) => {
+              const trackPlaying = isItemPlaying(track.id, "track");
+              const saved = isSaved(track);
+
+              return (
+                <div
+                  key={track.id}
+                  className="group flex items-center gap-2 rounded-lg px-2 py-1.5 transition-colors hover:bg-white/[0.04]"
+                >
+                  <button
+                    type="button"
+                    onClick={() => onPlay(track)}
+                    className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white/[0.06] transition-colors group-hover:bg-vivid-blue/20"
+                    aria-label={trackPlaying ? `Pause ${track.title}` : `Play ${track.title}`}
+                  >
+                    {trackPlaying ? (
+                      <Pause className="h-2.5 w-2.5 text-vivid-blue" />
+                    ) : (
+                      <Play className="ml-0.5 h-2.5 w-2.5 text-muted" />
+                    )}
+                  </button>
+                  <span className="w-4 shrink-0 text-center text-[9px] text-muted/50">
+                    {trackIndex + 1}
+                  </span>
+                  <div className="min-w-0 flex-1">
+                    <p className="truncate text-[11px] font-medium text-white">{track.title}</p>
+                    <TrackTagLine track={track} className="mt-0.5 gap-x-1.5 text-[9px] text-muted/45" />
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => onToggleSave(track)}
+                    className={cn(
+                      "flex h-6 w-6 shrink-0 items-center justify-center rounded-md transition-colors",
+                      saved ? "bg-zesty-red/15 text-zesty-red" : "bg-white/[0.05] text-muted hover:text-white"
+                    )}
+                    aria-label={saved ? "Remove from wishlist" : "Save track"}
+                  >
+                    <Heart className={cn("h-3 w-3", saved && "fill-current")} />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => onAddToCart(track)}
+                    className="shrink-0 rounded-md bg-vivid-blue/10 px-1.5 py-0.5 text-[10px] font-semibold text-vivid-blue transition-colors hover:bg-vivid-blue/20"
+                  >
+                    ₹99
+                  </button>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      ) : null}
+    </motion.article>
   );
 }
 

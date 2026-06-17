@@ -1,5 +1,5 @@
-import KevalPlayerEntry from "@/components/KevalPlayerEntry";
+import { redirect } from "next/navigation";
 
 export default function PlayerPage() {
-  return <KevalPlayerEntry />;
+  redirect("/playlists");
 }

@@ -15,6 +15,7 @@ import {
   Library,
   ListMusic,
   Menu,
+  Radio,
   Receipt,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -25,10 +26,11 @@ import KevalLogo from "./KevalLogo";
 
 const mainNav = [
   { label: "Browse", href: "/", icon: Compass },
-  { label: "Player", href: "/player", icon: Headphones },
   { label: "Explore", href: "/explore", icon: LayoutGrid },
+  { label: "Playlists", href: "/playlists", icon: ListMusic },
+  { label: "Radio", href: "/radio", icon: Radio, soon: true },
   { label: "Packs", href: "/packs", icon: Library },
-  { label: "Samples", href: "/samples", icon: Disc3 },
+  { label: "Samples", href: "/samples", icon: Disc3, soon: true },
 ];
 
 const libraryNav = [
@@ -153,7 +155,7 @@ export default function Sidebar({
 
   const prepareNavItem = (href: string) => {
     router.prefetch(href);
-    if (href === "/player") {
+    if (href === "/playlists" || href === "/player") {
       void preloadKevalPlayer();
     }
   };
@@ -281,6 +283,11 @@ export default function Sidebar({
                     >
                       {item.label}
                     </span>
+                    {item.soon && !collapsed ? (
+                      <span className="relative z-10 ml-auto rounded-full bg-dandelion/10 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wide text-dandelion/80">
+                        Soon
+                      </span>
+                    ) : null}
                   </div>
                 </Link>
               );
