@@ -18,6 +18,7 @@ import {
 import { usePlayerControls } from "@/lib/player-context";
 import { searchExploreTracks } from "@/lib/explore-search";
 import type { Track } from "@/lib/mock-data";
+import { CURATED_PLAYLISTS, type CuratedPlaylistDefinition } from "@/lib/playlist-catalog";
 import { useStore } from "@/lib/store-context";
 import { useToast } from "@/lib/toast-context";
 import type {
@@ -33,88 +34,7 @@ import TrackTagLine from "./TrackTagLine";
 const INITIAL_PACK_ROWS = 4;
 const PACK_ROW_BATCH_SIZE = 4;
 
-const CURATED_PLAYLISTS = [
-  {
-    title: "Acoustic",
-    tag: "Acoustic",
-    description: "Organic guitar-led warmth for lifestyle films, intimate edits, and human stories.",
-    coverUrl: "/playlists/acoustic.webp",
-  },
-  {
-    title: "Ambient",
-    tag: "Ambient",
-    description: "Atmospheric beds for calm scenes, premium visuals, and reflective creator work.",
-    coverUrl: "/playlists/ambient.webp",
-  },
-  {
-    title: "Bollywood",
-    tag: "Bollywood",
-    description: "Desi-flavoured hooks, rhythms, and cinematic cues built for vibrant moments.",
-    coverUrl: "/playlists/bollywood.webp",
-  },
-  {
-    title: "Cinematic",
-    tag: "Cinematic",
-    description: "Scene-ready cues for edits, trailers, shorts, and visual storytelling.",
-    coverUrl: "/playlists/cinematic.webp",
-  },
-  {
-    title: "Dance",
-    tag: "Dance",
-    description: "High-energy movement tracks for reels, events, fashion edits, and celebrations.",
-    coverUrl: "/playlists/dance.webp",
-  },
-  {
-    title: "Downtempo",
-    tag: "Downtempo",
-    description: "Laid-back grooves and slow-burn textures for soft cuts and understated scenes.",
-    coverUrl: "/playlists/downtempo.webp",
-  },
-  {
-    title: "Electronic",
-    tag: "Electronic",
-    description: "Forward-driving electronic picks for modern creator cuts and digital visuals.",
-    coverUrl: "/playlists/electronic.webp",
-  },
-  {
-    title: "Experimental",
-    tag: "Experimental",
-    description: "Unusual textures, left-field rhythms, and bold ideas for distinctive edits.",
-    coverUrl: "/playlists/experimental.webp",
-  },
-  {
-    title: "House",
-    tag: "House",
-    description: "Clean club pulse and polished grooves for fashion, nightlife, and motion work.",
-    coverUrl: "/playlists/house.webp",
-  },
-  {
-    title: "Lo-Fi",
-    tag: "Lo-Fi",
-    description: "Warm, low-pressure beats for study, flow, and soft vlogs.",
-    coverUrl: "/playlists/lofi.webp",
-  },
-  {
-    title: "Orchestral",
-    tag: "Orchestral",
-    description: "Rich score cues for emotional builds, grand reveals, and dramatic storytelling.",
-    coverUrl: "/playlists/orchestral.webp",
-  },
-  {
-    title: "Rock",
-    tag: "Rock",
-    description: "Guitar-led selections for action, attitude, momentum, and bold creator frames.",
-    coverUrl: "/playlists/rock.webp",
-  },
-  {
-    title: "Workout",
-    tag: "Workout",
-    description: "Punchy, active tracks for sports edits, training clips, and energetic pacing.",
-    coverUrl: "/playlists/workout.webp",
-  },
-] as const;
-
-type CuratedPlaylist = (typeof CURATED_PLAYLISTS)[number] & {
+type CuratedPlaylist = CuratedPlaylistDefinition & {
   tracks: Track[];
 };
 
@@ -432,11 +352,10 @@ function PlaylistCard({
       transition={{ delay: index * 0.035, duration: 0.35 }}
       className="glass-card flex flex-col overflow-hidden rounded-2xl"
     >
-      <button
-        type="button"
-        onClick={() => setExpanded((current) => !current)}
+      <Link
+        href={`/playlists/${playlist.slug}`}
         className="group relative aspect-square w-full overflow-hidden bg-white/[0.04]"
-        aria-label={`Open ${playlist.title}`}
+        aria-label={`Open ${playlist.title} playlist`}
       >
         <Image
           src={playlist.coverUrl}
@@ -453,7 +372,7 @@ function PlaylistCard({
           <p className="text-base font-bold leading-tight text-white">{playlist.title}</p>
           <p className="mt-1 text-[11px] text-white/65">Curated by Keval team</p>
         </div>
-      </button>
+      </Link>
 
       <div className="space-y-3 p-3">
         <p className="line-clamp-2 min-h-9 text-xs leading-relaxed text-muted">
@@ -469,6 +388,12 @@ function PlaylistCard({
             {active ? <Pause className="h-3 w-3" /> : <Play className="h-3 w-3 fill-current" />}
             {active ? "Pause" : "Play"}
           </button>
+          <Link
+            href={`/playlists/${playlist.slug}`}
+            className="flex h-8 shrink-0 items-center justify-center rounded-lg bg-white/[0.05] px-3 text-xs font-semibold text-white/75 transition-colors hover:bg-white/[0.1] hover:text-white"
+          >
+            Open
+          </Link>
           <button
             type="button"
             onClick={() => setExpanded((current) => !current)}
@@ -509,6 +434,9 @@ function PlaylistCard({
                       <Play className="ml-0.5 h-2.5 w-2.5 text-muted" />
                     )}
                   </button>
+                  <div className="relative h-8 w-8 shrink-0 overflow-hidden rounded-md bg-white/[0.04]">
+                    <Image src={track.coverUrl} alt="" fill sizes="32px" className="object-cover" />
+                  </div>
                   <span className="w-4 shrink-0 text-center text-[9px] text-muted/50">
                     {trackIndex + 1}
                   </span>
