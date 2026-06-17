@@ -35,93 +35,86 @@ const PACK_ROW_BATCH_SIZE = 4;
 
 const CURATED_PLAYLISTS = [
   {
-    title: "Cinematic Focus",
-    tag: "Cinematic",
-    description: "Scene-ready cues for edits, shorts, and visual storytelling.",
-    coverUrl: "/packs/pack-1.png",
+    title: "Acoustic",
+    tag: "Acoustic",
+    description: "Organic guitar-led warmth for lifestyle films, intimate edits, and human stories.",
+    coverUrl: "/playlists/acoustic.webp",
   },
   {
-    title: "Electronic Motion",
-    tag: "Electronic",
-    description: "Forward-driving electronic picks for modern creator cuts.",
-    coverUrl: "/packs/pack-2.png",
-  },
-  {
-    title: "Ambient Spaces",
+    title: "Ambient",
     tag: "Ambient",
-    description: "Atmospheric beds for calm, premium, and reflective moments.",
-    coverUrl: "/packs/pack-3.png",
+    description: "Atmospheric beds for calm scenes, premium visuals, and reflective creator work.",
+    coverUrl: "/playlists/ambient.webp",
   },
   {
-    title: "Orchestral Drama",
-    tag: "Orchestral",
-    description: "Rich score cues for emotional builds and grand reveals.",
-    coverUrl: "/packs/pack-4.png",
+    title: "Bollywood",
+    tag: "Bollywood",
+    description: "Desi-flavoured hooks, rhythms, and cinematic cues built for vibrant moments.",
+    coverUrl: "/playlists/bollywood.webp",
   },
   {
-    title: "Trap Energy",
-    tag: "Trap",
-    description: "Hard-hitting rhythms for bold reels and street visuals.",
-    coverUrl: "/packs/pack-5.png",
+    title: "Cinematic",
+    tag: "Cinematic",
+    description: "Scene-ready cues for edits, trailers, shorts, and visual storytelling.",
+    coverUrl: "/playlists/cinematic.webp",
   },
   {
-    title: "Lo-Fi Room",
+    title: "Dance",
+    tag: "Dance",
+    description: "High-energy movement tracks for reels, events, fashion edits, and celebrations.",
+    coverUrl: "/playlists/dance.webp",
+  },
+  {
+    title: "Downtempo",
+    tag: "Downtempo",
+    description: "Laid-back grooves and slow-burn textures for soft cuts and understated scenes.",
+    coverUrl: "/playlists/downtempo.webp",
+  },
+  {
+    title: "Electronic",
+    tag: "Electronic",
+    description: "Forward-driving electronic picks for modern creator cuts and digital visuals.",
+    coverUrl: "/playlists/electronic.webp",
+  },
+  {
+    title: "Experimental",
+    tag: "Experimental",
+    description: "Unusual textures, left-field rhythms, and bold ideas for distinctive edits.",
+    coverUrl: "/playlists/experimental.webp",
+  },
+  {
+    title: "House",
+    tag: "House",
+    description: "Clean club pulse and polished grooves for fashion, nightlife, and motion work.",
+    coverUrl: "/playlists/house.webp",
+  },
+  {
+    title: "Lo-Fi",
     tag: "Lo-Fi",
     description: "Warm, low-pressure beats for study, flow, and soft vlogs.",
-    coverUrl: "/packs/pack-6.png",
+    coverUrl: "/playlists/lofi.webp",
   },
   {
-    title: "Soundtrack Selects",
-    tag: "Soundtrack",
-    description: "Editorial music shaped for stories, montages, and trailers.",
-    coverUrl: "/packs/pack-7.png",
+    title: "Orchestral",
+    tag: "Orchestral",
+    description: "Rich score cues for emotional builds, grand reveals, and dramatic storytelling.",
+    coverUrl: "/playlists/orchestral.webp",
   },
   {
-    title: "Hip-Hop Pulse",
-    tag: "Hip-Hop / Rap",
-    description: "Rhythmic cuts with confident bounce and creator-friendly punch.",
-    coverUrl: "/packs/pack-8.png",
-  },
-  {
-    title: "Dubstep Voltage",
-    tag: "Dubstep",
-    description: "High-impact bass drops for gaming, sports, and tech edits.",
-    coverUrl: "/packs/pack-9.png",
-  },
-  {
-    title: "Rock Frames",
+    title: "Rock",
     tag: "Rock",
-    description: "Guitar-led selections for action, attitude, and momentum.",
-    coverUrl: "/packs/pack-10.png",
+    description: "Guitar-led selections for action, attitude, momentum, and bold creator frames.",
+    coverUrl: "/playlists/rock.webp",
   },
   {
-    title: "Acoustic Warmth",
-    tag: "Acoustic",
-    description: "Organic, intimate sounds for human stories and lifestyle films.",
-    coverUrl: "/packs/pack-11.png",
-  },
-  {
-    title: "Uplifting Cuts",
-    tag: "Uplifting",
-    description: "Positive tracks for launches, brand films, and celebrations.",
-    coverUrl: "/packs/pack-12.png",
-  },
-  {
-    title: "Trance Drive",
-    tag: "Trance",
-    description: "Hypnotic movement for long-form energy and night visuals.",
-    coverUrl: "/packs/pack-13.png",
-  },
-  {
-    title: "Bollywood Spark",
-    tag: "Bollywood",
-    description: "Desi-inspired selections shaped for vibrant moments.",
-    coverUrl: "/packs/pack-14.png",
+    title: "Workout",
+    tag: "Workout",
+    description: "Punchy, active tracks for sports edits, training clips, and energetic pacing.",
+    coverUrl: "/playlists/workout.webp",
   },
 ] as const;
 
 type CuratedPlaylist = (typeof CURATED_PLAYLISTS)[number] & {
-  count: number;
   tracks: Track[];
 };
 
@@ -167,7 +160,6 @@ export default function KevalPlayer() {
 
         return {
           ...playlist,
-          count: result.total,
           tracks: result.tracks,
         };
       }),
@@ -459,7 +451,7 @@ function PlaylistCard({
         </span>
         <div className="absolute bottom-3 left-3 right-3 text-left">
           <p className="text-base font-bold leading-tight text-white">{playlist.title}</p>
-          <p className="mt-1 text-[11px] text-white/65">{playlist.count} Explore matches</p>
+          <p className="mt-1 text-[11px] text-white/65">Curated by Keval team</p>
         </div>
       </button>
 
