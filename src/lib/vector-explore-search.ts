@@ -14,6 +14,7 @@ import {
   getExploreGenres,
   matchesExploreFilter,
   recordToExploreTrack,
+  searchExploreTitleMatches,
   searchExploreTracks,
   type ExploreSearchResponse,
 } from "@/lib/explore-search";
@@ -132,6 +133,18 @@ export async function searchExploreTracksSmart(query: string, genre = "All Genre
 
   if (!originalQuery) {
     return fallback();
+  }
+
+  const directTitleMatches = searchExploreTitleMatches(originalQuery, genre, limit);
+  if (directTitleMatches) {
+    return withSearchMode(
+      directTitleMatches,
+      "metadata",
+      false,
+      "direct_title_match",
+      originalQuery,
+      originalQuery
+    );
   }
 
   const config = getEmbeddingConfig();

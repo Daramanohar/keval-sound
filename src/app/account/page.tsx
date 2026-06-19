@@ -11,7 +11,6 @@ import {
   Headphones,
   Heart,
   Library,
-  ListMusic,
   Monitor,
   Play,
   Receipt,
@@ -32,7 +31,6 @@ const workspaceTabs = [
   { id: "recent", label: "Recently Played", icon: Library },
   { id: "history", label: "Purchases", icon: Receipt },
   { id: "downloads", label: "Downloads", icon: Download },
-  { id: "playlists", label: "Playlists", icon: ListMusic },
 ];
 
 const allTabs = new Set([
@@ -47,7 +45,6 @@ const allTabs = new Set([
   "legal",
   "recent",
   "downloads",
-  "playlists",
 ]);
 
 function downloadTextFile(filename: string, content: string) {
@@ -135,30 +132,6 @@ export default function AccountPage() {
       },
     ],
     [latestOrder, purchasedItems.length, recentlyPlayed.length, wishlist.length]
-  );
-
-  const autoPlaylists = useMemo(
-    () => [
-      {
-        id: "saved",
-        title: "Saved for Later",
-        count: wishlist.length,
-        description: "Tracks and packs you marked for follow-up licensing decisions.",
-      },
-      {
-        id: "recent",
-        title: "Recent Inspiration",
-        count: recentlyPlayed.length,
-        description: "Previewed tracks you can revisit quickly while refining a brief.",
-      },
-      {
-        id: "owned",
-        title: "Owned Library",
-        count: purchasedItems.length,
-        description: "Assets you now control permanently with KEVAL SOUND ownership records.",
-      },
-    ],
-    [purchasedItems.length, recentlyPlayed.length, wishlist.length]
   );
 
   return (
@@ -472,34 +445,6 @@ export default function AccountPage() {
               ) : (
                 <EmptyState text="Purchased tracks and packs become downloadable here once you complete checkout." />
               )}
-            </section>
-          )}
-
-          {activeTab === "playlists" && (
-            <section className="glass rounded-2xl p-6">
-              <SectionTitle
-                title="Playlists"
-                subtitle="Organize your saved, recent, and owned assets into focused working collections."
-              />
-              <div className="grid gap-4 md:grid-cols-3">
-                {autoPlaylists.map((playlist) => (
-                  <div
-                    key={playlist.id}
-                    className="rounded-2xl border border-white/[0.06] bg-white/[0.03] p-5"
-                  >
-                    <p className="text-sm font-semibold text-white">{playlist.title}</p>
-                    <p className="mt-2 text-sm leading-relaxed text-muted">{playlist.description}</p>
-                    <div className="mt-4 flex items-center justify-between">
-                      <span className="text-xs uppercase tracking-wider text-muted/60">
-                        {playlist.count} items
-                      </span>
-                      <span className="rounded-full bg-white/[0.05] px-2.5 py-1 text-[10px] uppercase tracking-wider text-white/75">
-                        Smart List
-                      </span>
-                    </div>
-                  </div>
-                ))}
-              </div>
             </section>
           )}
 

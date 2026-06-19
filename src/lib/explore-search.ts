@@ -399,6 +399,22 @@ function scoreRecord(record: ProductionSongRecord, query: string, tokens: string
   return score;
 }
 
+function findDirectTitleMatches(records: ProductionSongRecord[], query: string) {
+  const phrase = normalizeText(query);
+  const tokens = tokenize(query);
+  if (!phrase) return [];
+
+  const exactMatches = records.filter((record) => getSearchFields(record).title === phrase);
+  if (exactMatches.length) return exactMatches;
+
+  if (tokens.length < 2) return [];
+
+  const prefixMatches = records.filter((record) => getSearchFields(record).title.startsWith(phrase));
+  if (prefixMatches.length) return prefixMatches;
+
+  return records.filter((record) => getSearchFields(record).title.includes(phrase));
+}
+
 function mixRecordsAcrossPacks(records: ProductionSongRecord[]) {
   if (!records.length) return [];
 
@@ -544,6 +560,21 @@ export function searchExploreTracks(query: string, genre = "All Genres", limit =
     } satisfies ExploreSearchResponse;
   }
 
+  const directTitleRecords = findDirectTitleMatches(scopedRecords, cleanQuery);
+  if (directTitleRecords.length) {
+    return {
+      query: cleanQuery,
+      genre: normalizedGenre,
+      total: directTitleRecords.length,
+      limit,
+      tracks: directTitleRecords
+        .slice(0, limit)
+        .map((record, index) => recordToExploreTrack(record, index)),
+      genres: getExploreGenres(),
+      categories: getExploreCategories(),
+    } satisfies ExploreSearchResponse;
+  }
+
   const candidates = scopedRecords
     .map((record, index) => ({
       record,
@@ -566,6 +597,31 @@ export function searchExploreTracks(query: string, genre = "All Genres", limit =
       candidates.map((result) => result.record),
       limit
     ).map((record, index) => recordToExploreTrack(record, index)),
+    genres: getExploreGenres(),
+    categories: getExploreCategories(),
+  } satisfies ExploreSearchResponse;
+}
+
+export function searchExploreTitleMatches(query: string, genre = "All Genres", limit = MAX_RESULTS) {
+  const normalizedGenre = genre === "All" ? "All Genres" : genre;
+  const cleanQuery = query.trim();
+  if (!cleanQuery) return null;
+
+  const scopedRecords = productionSongRecords
+    .filter((record) => record.hasMp3)
+    .filter((record) => matchesExploreFilter(record, normalizedGenre));
+  const directTitleRecords = findDirectTitleMatches(scopedRecords, cleanQuery);
+
+  if (!directTitleRecords.length) return null;
+
+  return {
+    query: cleanQuery,
+    genre: normalizedGenre,
+    total: directTitleRecords.length,
+    limit,
+    tracks: directTitleRecords
+      .slice(0, limit)
+      .map((record, index) => recordToExploreTrack(record, index)),
     genres: getExploreGenres(),
     categories: getExploreCategories(),
   } satisfies ExploreSearchResponse;

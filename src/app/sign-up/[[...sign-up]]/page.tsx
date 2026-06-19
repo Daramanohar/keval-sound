@@ -8,7 +8,7 @@ import KevalLogo from "@/components/KevalLogo";
 
 export const metadata = {
   title: "Create your Keval Sound account",
-  description: "Sign up for Keval Sound — exclusive Indian music licensing.",
+  description: "Sign up for Keval Sound - exclusive Indian music licensing.",
 };
 
 export default function SignUpPage() {
@@ -31,9 +31,9 @@ export default function SignUpPage() {
         </Link>
       </header>
 
-      <main className="relative z-10 flex flex-1 items-center justify-center px-4 py-10">
-        <div className="w-full max-w-md">
-          <div className="rounded-3xl bg-white p-8 shadow-2xl shadow-black/40 sm:p-10">
+      <main className="relative z-10 flex flex-1 items-center justify-center px-4 py-10 sm:px-6">
+        <div className="mx-auto flex w-full max-w-[520px] flex-col items-center">
+          <div className="w-full rounded-3xl bg-white p-8 shadow-2xl shadow-black/40 sm:p-10">
             <div className="mb-6 flex flex-col items-center text-center">
               <div className="flex items-center gap-2.5">
                 <Image
@@ -63,8 +63,8 @@ export default function SignUpPage() {
               forceRedirectUrl="/onboarding"
               appearance={{
                 elements: {
-                  rootBox: "w-full",
-                  card: "shadow-none bg-transparent p-0",
+                  rootBox: "mx-auto flex w-full justify-center",
+                  card: "mx-auto w-full max-w-[408px] shadow-none bg-transparent p-0",
                   headerTitle: "hidden",
                   headerSubtitle: "hidden",
                   footer: "hidden",

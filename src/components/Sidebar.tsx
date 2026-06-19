@@ -43,7 +43,6 @@ const libraryNav = [
   },
   { label: "Purchases", href: "/account?tab=history", icon: Receipt, tab: "history" },
   { label: "Downloads", href: "/account?tab=downloads", icon: Download, tab: "downloads" },
-  { label: "Playlists", href: "/account?tab=playlists", icon: ListMusic, tab: "playlists" },
 ];
 
 interface SidebarProps {
