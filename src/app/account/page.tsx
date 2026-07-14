@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, type ReactNode } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import {
@@ -68,6 +68,7 @@ function itemBadge(type: "track" | "pack" | "sample") {
 export default function AccountPage() {
   const searchParams = useSearchParams();
   const { user } = useAuth();
+  const [kevalUserId, setKevalUserId] = useState<string | null>(null);
   const {
     orders,
     wishlist,
@@ -79,6 +80,26 @@ export default function AccountPage() {
   } = useStore();
   const { recentlyPlayed, toggleTrack } = usePlayerControls();
   const { showToast } = useToast();
+
+  useEffect(() => {
+    const controller = new AbortController();
+
+    void fetch("/api/account/profile", {
+      signal: controller.signal,
+      headers: { Accept: "application/json" },
+    })
+      .then(async (response) => {
+        if (!response.ok) throw new Error("profile_unavailable");
+        return response.json() as Promise<{ kevalUserId?: string }>;
+      })
+      .then((profile) => setKevalUserId(profile.kevalUserId ?? null))
+      .catch((error: unknown) => {
+        if (error instanceof DOMException && error.name === "AbortError") return;
+        setKevalUserId(null);
+      });
+
+    return () => controller.abort();
+  }, []);
 
   const handleRecentTrackAdd = (trackId: string) => {
     const track = findTrackById(trackId);
@@ -150,7 +171,7 @@ export default function AccountPage() {
                 </div>
                 <span className="ml-auto inline-flex items-center gap-1 rounded-full bg-vivid-blue/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-vivid-blue lg:ml-0">
                   <BadgeCheck className="h-3 w-3" />
-                  Pro
+                  Member
                 </span>
               </div>
               <h1 className="text-3xl font-bold text-white">Your Library Workspace</h1>
@@ -458,7 +479,8 @@ export default function AccountPage() {
                 items={[
                   { label: "Display name", value: user?.name ?? "Unknown" },
                   { label: "Email", value: user?.email ?? "Unknown" },
-                  { label: "Member tier", value: "Pro Creator" },
+                  { label: "KEVAL USER ID", value: kevalUserId ?? "Assigning securely..." },
+                  { label: "Member tier", value: "Free" },
                   { label: "Latest order", value: latestOrder?.id ?? "No purchases yet" },
                 ]}
               />

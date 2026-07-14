@@ -1,4 +1,5 @@
 import { getPrisma, isDatabaseConfigured } from "@/lib/db";
+import { createKevalUserId } from "@/lib/keval-user-id";
 
 type ClerkEmailAddress = {
   id?: string | null;
@@ -91,6 +92,7 @@ export async function upsertUserFromClerk(
     where: { clerkUserId: data.id },
     create: {
       clerkUserId: data.id,
+      kevalUserId: createKevalUserId(),
       email,
       firstName,
       lastName,
