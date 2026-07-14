@@ -54,7 +54,6 @@ interface SidebarProps {
 
 const SidebarNowPlaying = memo(function SidebarNowPlaying({ collapsed }: { collapsed: boolean }) {
   const { currentItem } = usePlayerControls();
-  const { progress } = usePlayerProgress();
 
   return (
     <div className={cn("shrink-0 pb-4", collapsed ? "px-1" : "px-3")}>
@@ -85,14 +84,21 @@ const SidebarNowPlaying = memo(function SidebarNowPlaying({ collapsed }: { colla
         </div>
         <div className={cn("mt-2", collapsed && "mt-1")}>
           <div className="h-[2px] rounded-full bg-white/[0.08]">
-            <div
-              className="h-full rounded-full bg-gradient-to-r from-vivid-blue to-mid-purple transition-all"
-              style={{ width: `${Math.max(progress * 100, currentItem ? 6 : 0)}%` }}
-            />
+            <SidebarNowPlayingProgress />
           </div>
         </div>
       </div>
     </div>
+  );
+});
+
+const SidebarNowPlayingProgress = memo(function SidebarNowPlayingProgress() {
+  const { progress } = usePlayerProgress();
+  return (
+    <div
+      className="h-full rounded-full bg-gradient-to-r from-zesty-red to-dandelion"
+      style={{ width: `${progress * 100}%` }}
+    />
   );
 });
 

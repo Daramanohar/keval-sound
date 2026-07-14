@@ -282,7 +282,7 @@ function AuthenticatedHome() {
         >
           {trendingTracks.map((track, index) => (
             <div key={track.id} className="snap-start flex-shrink-0 w-[160px]">
-              <MusicCard track={track} index={index} variant="compact" />
+              <MusicCard track={track} queue={trendingTracks} index={index} variant="compact" />
             </div>
           ))}
         </ContentSection>
@@ -297,7 +297,7 @@ function AuthenticatedHome() {
         >
           {sellingFast.map((track, index) => (
             <div key={track.id} className="snap-start flex-shrink-0 w-[160px]">
-              <MusicCard track={track} index={index} variant="compact" />
+              <MusicCard track={track} queue={sellingFast} index={index} variant="compact" />
             </div>
           ))}
         </ContentSection>
@@ -311,7 +311,7 @@ function AuthenticatedHome() {
         >
           {freshFinds.map((track, index) => (
             <div key={track.id} className="snap-start flex-shrink-0 w-[160px]">
-              <MusicCard track={track} index={index} variant="compact" />
+              <MusicCard track={track} queue={freshFinds} index={index} variant="compact" />
             </div>
           ))}
         </ContentSection>
@@ -325,7 +325,7 @@ function AuthenticatedHome() {
         >
           {regionalRoots.map((track, index) => (
             <div key={track.id} className="snap-start flex-shrink-0 w-[160px]">
-              <MusicCard track={track} index={index} variant="compact" />
+              <MusicCard track={track} queue={regionalRoots} index={index} variant="compact" />
             </div>
           ))}
         </ContentSection>
@@ -339,7 +339,7 @@ function AuthenticatedHome() {
         >
           {sonicSelections.map((track, index) => (
             <div key={track.id} className="snap-start flex-shrink-0 w-[160px]">
-              <MusicCard track={track} index={index} variant="compact" />
+              <MusicCard track={track} queue={sonicSelections} index={index} variant="compact" />
             </div>
           ))}
         </ContentSection>
@@ -353,7 +353,7 @@ function AuthenticatedHome() {
         >
           {moodDrops.map((track, index) => (
             <div key={track.id} className="snap-start flex-shrink-0 w-[160px]">
-              <MusicCard track={track} index={index} variant="compact" />
+              <MusicCard track={track} queue={moodDrops} index={index} variant="compact" />
             </div>
           ))}
         </ContentSection>
@@ -412,7 +412,7 @@ function AuthenticatedHome() {
         >
           {stageBuilders.map((track, index) => (
             <div key={track.id} className="snap-start flex-shrink-0 w-[160px]">
-              <MusicCard track={track} index={index} variant="compact" />
+              <MusicCard track={track} queue={stageBuilders} index={index} variant="compact" />
             </div>
           ))}
         </ContentSection>
@@ -427,7 +427,7 @@ function AuthenticatedHome() {
         >
           {sampleLabTracks.map((track, index) => (
             <div key={track.id} className="snap-start flex-shrink-0 w-[160px]">
-              <MusicCard track={track} index={index} variant="compact" />
+              <MusicCard track={track} queue={sampleLabTracks} index={index} variant="compact" />
             </div>
           ))}
         </ContentSection>

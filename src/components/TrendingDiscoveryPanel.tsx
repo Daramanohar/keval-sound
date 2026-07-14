@@ -13,12 +13,11 @@ import {
 import WaveformVisualizer from "./WaveformVisualizer";
 import { productionHomePacks } from "@/lib/production-home.generated";
 import { resampleWaveform } from "@/lib/utils";
-import { usePlayerControls, usePlayerProgress } from "@/lib/player-context";
+import { usePlayerControls } from "@/lib/player-context";
 import { useStore } from "@/lib/store-context";
 
 export default function TrendingDiscoveryPanel() {
   const { playPack, togglePlayback, activePackId, isPlaying } = usePlayerControls();
-  const { progress } = usePlayerProgress();
   const { isOwned } = useStore();
 
   const rankedPacks = useMemo(
@@ -92,7 +91,7 @@ export default function TrendingDiscoveryPanel() {
               <WaveformVisualizer
                 data={featuredWaveform}
                 isPlaying={isFeaturedActive && isPlaying}
-                progress={isFeaturedActive ? progress : 0}
+                progress={0}
                 height={18}
                 gap={2}
                 stretch
@@ -151,7 +150,7 @@ export default function TrendingDiscoveryPanel() {
         <div className="divide-y divide-white/[0.04]">
           {rankedPacks.map((pack, index) => {
             const packPlaying = activePackId === pack.id && isPlaying;
-            const packProgress = activePackId === pack.id ? progress : 0;
+            const packProgress = 0;
             const packWaveform = resampleWaveform(pack.tracks[0]?.waveform ?? [], 28);
             const owned = isOwned(pack.id, "pack");
 

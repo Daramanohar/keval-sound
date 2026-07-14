@@ -395,6 +395,7 @@ export default function ExplorePage() {
                     <TrackCard
                       key={track.id}
                       track={track}
+                      queue={filteredTracks}
                       index={index}
                       rank={query ? index + 1 : undefined}
                     />

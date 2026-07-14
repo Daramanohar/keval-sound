@@ -13,11 +13,12 @@ import TrackTagLine from "./TrackTagLine";
 
 interface TrackCardProps {
   track: Track;
+  queue?: Track[];
   index?: number;
   rank?: number;
 }
 
-const TrackCard = memo(function TrackCard({ track, index = 0, rank }: TrackCardProps) {
+const TrackCard = memo(function TrackCard({ track, queue, index = 0, rank }: TrackCardProps) {
   const [isHovered, setIsHovered] = useState(false);
   const [cartPulse, setCartPulse] = useState(false);
   const { toggleTrack, isItemPlaying } = usePlayerControls();
@@ -37,8 +38,8 @@ const TrackCard = memo(function TrackCard({ track, index = 0, rank }: TrackCardP
   const hasImageCover = track.coverUrl.startsWith("/") || track.coverUrl.startsWith("http");
 
   const handlePreview = useCallback(() => {
-    toggleTrack(track);
-  }, [toggleTrack, track]);
+    toggleTrack(track, queue?.length ? { queue } : undefined);
+  }, [queue, toggleTrack, track]);
 
   const handleAddToCart = useCallback(() => {
     if (owned) {

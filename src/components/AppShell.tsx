@@ -3,6 +3,7 @@
 import { Suspense, useCallback, useEffect, useState, type ReactNode } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { useAuth } from "@/lib/auth-context";
+import { usePlayerControls } from "@/lib/player-context";
 
 // Routes that render their own full-bleed layout and must NOT be wrapped
 // in the authenticated sidebar/topbar shell.
@@ -63,6 +64,7 @@ function RouteLoading() {
 
 export default function AppShell({ children }: AppShellProps) {
   const { isAuthenticated, isReady } = useAuth();
+  const { isVisible: isPlayerVisible } = usePlayerControls();
   const pathname = usePathname();
   const router = useRouter();
 
@@ -146,6 +148,7 @@ export default function AppShell({ children }: AppShellProps) {
       <div
         className={cn(
           "flex min-h-screen flex-col transition-[padding] duration-200 ease-[cubic-bezier(0.22,0.61,0.36,1)]",
+          isPlayerVisible && "pb-[68px] md:pb-[92px]",
           sidebarCollapsed ? "lg:pl-[76px]" : "lg:pl-[248px]"
         )}
       >

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { Heart, Pause, Play, ShoppingCart } from "lucide-react";
 import { cn, formatPrice } from "@/lib/utils";
 import type { Track } from "@/lib/mock-data";
-import { usePlayerControls, usePlayerProgress } from "@/lib/player-context";
+import { usePlayerControls } from "@/lib/player-context";
 import { useStore } from "@/lib/store-context";
 import { useToast } from "@/lib/toast-context";
 import WaveformVisualizer from "./WaveformVisualizer";
@@ -14,17 +14,18 @@ import TrackTagLine from "./TrackTagLine";
 
 interface MusicCardProps {
   track: Track;
+  queue?: Track[];
   index?: number;
   variant?: "default" | "compact" | "wide";
 }
 
 const MusicCard = memo(function MusicCard({
   track,
+  queue,
   variant = "default",
 }: MusicCardProps) {
   const [cartPulse, setCartPulse] = useState(false);
   const { toggleTrack, isItemActive, isItemPlaying } = usePlayerControls();
-  const { currentTime, duration } = usePlayerProgress();
   const {
     addTrackToCart,
     isInCart,
@@ -36,14 +37,13 @@ const MusicCard = memo(function MusicCard({
 
   const isActive = isItemActive(track.id, "track");
   const isPlaying = isItemPlaying(track.id, "track");
-  const progress = isActive && duration > 0 ? Math.min(Math.max(currentTime / duration, 0), 1) : 0;
   const liked = isInWishlist(track.id, "track");
   const inCart = isInCart(track.id, "track");
   const owned = isOwned(track.id, "track");
 
   const handlePreview = useCallback(() => {
-    toggleTrack(track);
-  }, [toggleTrack, track]);
+    toggleTrack(track, queue?.length ? { queue } : undefined);
+  }, [queue, toggleTrack, track]);
 
   const handleAddToCart = useCallback(() => {
     if (owned) {
@@ -169,7 +169,7 @@ const MusicCard = memo(function MusicCard({
               <WaveformVisualizer
                 data={track.waveform}
                 isPlaying={isPlaying}
-                progress={progress}
+                progress={0}
                 height={14}
                 gap={1}
                 stretch
@@ -280,7 +280,7 @@ const MusicCard = memo(function MusicCard({
             <WaveformVisualizer
               data={track.waveform}
               isPlaying={isPlaying}
-              progress={progress}
+              progress={0}
               height={16}
               gap={1}
               stretch
