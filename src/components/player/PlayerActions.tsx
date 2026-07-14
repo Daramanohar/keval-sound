@@ -1,6 +1,7 @@
 "use client";
 
 import { Download, ExternalLink, Heart, Info, MessageCircle, Share2, ShoppingCart } from "lucide-react";
+import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { usePlayerControls } from "@/lib/player-context";
 import { useStore } from "@/lib/store-context";
@@ -11,11 +12,18 @@ import { useResolvedPlayerTrack } from "./useResolvedPlayerTrack";
 
 export default function PlayerActions({ compact = false }: { compact?: boolean }) {
   const router = useRouter();
-  const { currentItem } = usePlayerControls();
-  const { track, pack } = useResolvedPlayerTrack(currentItem?.id);
+  const { currentItem, closeFullPlayer } = usePlayerControls();
+  const { track } = useResolvedPlayerTrack(currentItem?.id);
   const { addTrackToCart, isInCart, isInWishlist, isOwned, toggleTrackWishlist, getLicense } = useStore();
   const { showToast } = useToast();
-  const { openSong } = useSongDetail();
+  const { close: closeSongDetail } = useSongDetail();
+  const activeTrackId = currentItem?.type === "track" ? currentItem.id : track?.id;
+  const trackHref = activeTrackId ? `/song/${encodeURIComponent(activeTrackId)}` : null;
+
+  useEffect(() => {
+    if (trackHref) router.prefetch(trackHref);
+  }, [router, trackHref]);
+
   if (!currentItem || currentItem.type !== "track") return null;
 
   const liked = track ? isInWishlist(track.id, "track") : false;
@@ -31,6 +39,13 @@ export default function PlayerActions({ compact = false }: { compact?: boolean }
       else await navigator.clipboard.writeText(url);
       showToast({ tone: "info", title: "Track link ready to share" });
     } catch {}
+  };
+
+  const openTrackPage = (section?: "comments") => {
+    if (!trackHref) return;
+    closeSongDetail();
+    closeFullPlayer();
+    router.push(section ? `${trackHref}#${section}` : trackHref);
   };
 
   if (compact) {
@@ -50,9 +65,8 @@ export default function PlayerActions({ compact = false }: { compact?: boolean }
         <Heart className={cn("h-4 w-4", liked && "fill-current")} />
       </ActionButton>
       <ActionButton label="Share track" text="Share" onClick={() => void share()}><Share2 className="h-4 w-4" /></ActionButton>
-      <ActionButton label="Open comments" text="Comments" onClick={() => showToast({ tone: "info", title: "Comments are being prepared for launch" })}><MessageCircle className="h-4 w-4" /></ActionButton>
-      <ActionButton label="Open track details" text="Details" onClick={() => track && openSong(track, pack)}><Info className="h-4 w-4" /></ActionButton>
-      <ActionButton label="Open track page" text="Track page" onClick={() => track && router.push(`/song/${track.id}`)}><ExternalLink className="h-4 w-4" /></ActionButton>
+      <ActionButton label="Open comments" text="Comments" onClick={() => openTrackPage("comments")}><MessageCircle className="h-4 w-4" /></ActionButton>
+      <ActionButton label="Open track details" text="Details" onClick={() => openTrackPage()}><Info className="h-4 w-4" /></ActionButton>
       {owned ? (
         <ActionButton label="Open purchased downloads" text="Downloads" onClick={() => router.push("/account?tab=downloads")}><Download className="h-4 w-4" /></ActionButton>
       ) : (
