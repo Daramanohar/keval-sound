@@ -268,7 +268,7 @@
   .why-head::before{content:'';position:absolute;left:50%;top:-30px;transform:translateX(-50%);width:min(1100px,92vw);height:calc(100% + 80px);background:radial-gradient(ellipse 60% 70% at 50% 50%,rgba(0,0,0,.55) 0%,rgba(0,0,0,.35) 35%,transparent 70%);z-index:-1;pointer-events:none}
 
   /* 4-column row — wider gaps + breathing room (per reference image) */
-  .why-feed{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;max-width:1400px;width:100%;margin:0 auto;padding:0 32px;align-items:stretch;position:relative;z-index:2}
+  .why-feed{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;max-width:1400px;width:100%;margin:clamp(40px,5vh,72px) auto 0;padding:0 32px;align-items:stretch;position:relative;z-index:2}
 
   /* Glass card — "fake glass": static gradient instead of backdrop-filter for scroll perf.
      With 11 cards visible + 4 looping background videos, real backdrop-filter forces
