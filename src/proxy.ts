@@ -31,7 +31,7 @@ export const config = {
     // Skip Next.js internals + static assets. /api/media is still matched so
     // route handlers can call auth() and read the session, but it is gated
     // inside the handler to return clean 401 JSON instead of a redirect.
-    "/((?!_next/|_next/static|_next/image|favicon.ico|logo/|packs/|.*\\.(?:png|jpg|jpeg|gif|webp|svg|ico|mp3|wav|txt|woff2?)$).*)",
+    "/((?!contact(?:/|$)|_next/|_next/static|_next/image|favicon.ico|logo/|packs/|legal/|.*\\.(?:png|jpg|jpeg|gif|webp|svg|ico|mp3|wav|txt|pdf|woff2?)$).*)",
     "/(api/.*)",
   ],
 };

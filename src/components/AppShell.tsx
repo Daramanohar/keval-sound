@@ -8,6 +8,7 @@ import { usePlayerControls } from "@/lib/player-context";
 // Routes that render their own full-bleed layout and must NOT be wrapped
 // in the authenticated sidebar/topbar shell.
 const BARE_ROUTE_PREFIXES = ["/sign-in", "/sign-up", "/auth"];
+const PUBLIC_MARKETING_ROUTES = ["/contact"];
 import { cn } from "@/lib/utils";
 import Sidebar from "./Sidebar";
 import TopBar from "./TopBar";
@@ -71,6 +72,7 @@ export default function AppShell({ children }: AppShellProps) {
   const isBareRoute = BARE_ROUTE_PREFIXES.some((prefix) =>
     pathname === prefix || pathname.startsWith(`${prefix}/`)
   );
+  const isPublicMarketingRoute = PUBLIC_MARKETING_ROUTES.includes(pathname);
 
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
   // Lazy initializer reads localStorage once at mount — avoids the
@@ -128,12 +130,13 @@ export default function AppShell({ children }: AppShellProps) {
 
   // Unauthenticated visitor on a public route (e.g. `/` landing). Show the
   // marketing Navbar instead of the authenticated sidebar shell.
-  if (!isAuthenticated) {
+  if (!isAuthenticated || isPublicMarketingRoute) {
     return (
-      <>
+      <div className="flex min-h-screen flex-col">
         <Navbar />
         <main className="flex-1 pt-[72px]">{children}</main>
-      </>
+        <Footer />
+      </div>
     );
   }
 

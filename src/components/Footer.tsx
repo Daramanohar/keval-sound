@@ -1,56 +1,79 @@
 "use client";
 
+import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import KevalLogo from "./KevalLogo";
 
-const footerColumns = {
-  Discover: [
-    { label: "Browse Tracks", href: "/explore" },
-    { label: "Explore Song Packs", href: "/packs" },
-    { label: "Samples & Loops", href: "/samples" },
-    { label: "Trending Exclusives", href: "/explore" },
-  ],
-  Ownership: [
-    { label: "How Licensing Works", href: "/account?tab=licensing" },
-    { label: "Purchases", href: "/account?tab=history" },
-    { label: "Downloads", href: "/account?tab=downloads" },
-    { label: "Wishlist", href: "/account?tab=wishlist" },
-  ],
-  Creators: [
-    { label: "For Filmmakers", href: "/explore" },
-    { label: "For Content Creators", href: "/explore" },
-    { label: "For Musicians", href: "/explore" },
-    { label: "Recently Played", href: "/account?tab=recent" },
-  ],
-  Support: [
-    { label: "Customer Support", href: "/account?tab=support" },
-    { label: "Billing", href: "/account?tab=billing" },
-    { label: "Desktop App", href: "/account?tab=desktop" },
-    { label: "Settings", href: "/account?tab=settings" },
-  ],
-  Company: [
-    { label: "About KEVAL SOUND", href: "/" },
-    { label: "Privacy Policy", href: "/account?tab=legal" },
-    { label: "Terms of Service", href: "/account?tab=legal" },
-    { label: "Licensing Agreement", href: "/account?tab=licensing" },
-  ],
-};
+interface FooterLink {
+  label: string;
+  href: string;
+  document?: boolean;
+}
 
-const legalLinks = [
-  { label: "Terms", href: "/account?tab=legal" },
-  { label: "Privacy", href: "/account?tab=legal" },
-  { label: "Licenses", href: "/account?tab=licensing" },
-  { label: "Support", href: "/account?tab=support" },
+const footerColumns: Array<{ title: string; links: FooterLink[] }> = [
+  {
+    title: "Company",
+    links: [
+      { label: "About Us", href: "/legal/about-us.pdf", document: true },
+      { label: "Pricing", href: "/legal/pricing.pdf", document: true },
+    ],
+  },
+  {
+    title: "Policies",
+    links: [
+      { label: "Privacy Policy", href: "/legal/privacy-policy.pdf", document: true },
+      { label: "Terms of Service", href: "/legal/terms-of-service.pdf", document: true },
+      {
+        label: "Refund & Cancellation Policy",
+        href: "/legal/refund-and-cancellation-policy.pdf",
+        document: true,
+      },
+      {
+        label: "Digital Delivery Policy",
+        href: "/legal/digital-delivery-policy.pdf",
+        document: true,
+      },
+    ],
+  },
+  {
+    title: "Rights & Earnings",
+    links: [
+      { label: "License Terms", href: "/legal/license-terms.pdf", document: true },
+      { label: "Monetization Policy", href: "/legal/monetization-policy.pdf", document: true },
+    ],
+  },
 ];
 
 function getContextLine(pathname: string): string {
-  if (pathname === "/explore") return "Search exclusive songs by mood, genre, language, and regional character.";
-  if (pathname === "/packs") return "Bundle pricing for full packs, or license the exact songs you need one by one.";
-  if (pathname === "/samples") return "Production-ready Indian loops, one-shots, and stems for faster sessions.";
-  if (pathname === "/cart") return "Review your mixed cart of single tracks, packs, and samples before checkout.";
-  if (pathname.startsWith("/pack/")) return "Preview the full pack, then choose between a bundle purchase or individual tracks.";
-  return "Exclusive Indian music licensing built for creators who want sounds they can truly own.";
+  if (pathname === "/contact") {
+    return "Support, privacy assistance, and payment-related help from the KEVAL SOUND team.";
+  }
+
+  return "Exclusive music discovery and licensing for creators, producers, brands, and listeners.";
+}
+
+function FooterNavLink({ link }: { link: FooterLink }) {
+  const className =
+    "group inline-flex items-center gap-1.5 text-sm leading-6 text-muted/65 transition-colors hover:text-white focus-visible:text-white";
+
+  if (link.document) {
+    return (
+      <a href={link.href} target="_blank" rel="noopener noreferrer" className={className}>
+        <span>{link.label}</span>
+        <ExternalLink
+          aria-hidden="true"
+          className="h-3.5 w-3.5 shrink-0 text-muted/35 transition-colors group-hover:text-dandelion"
+        />
+      </a>
+    );
+  }
+
+  return (
+    <Link href={link.href} className={className}>
+      {link.label}
+    </Link>
+  );
 }
 
 export default function Footer() {
@@ -58,75 +81,50 @@ export default function Footer() {
 
   if (pathname === "/auth") return null;
 
-  const socialLinks = [
-    { label: "Instagram", href: "https://instagram.com" },
-    { label: "YouTube", href: "https://youtube.com" },
-    { label: "LinkedIn", href: "https://linkedin.com" },
-    { label: "X", href: "https://x.com" },
-  ];
-
   return (
-    <footer className="relative border-t border-white/[0.06] bg-[#08091a]">
-      <div className="mx-auto max-w-7xl px-6 pb-10 pt-14">
-        <div className="grid gap-10 md:grid-cols-[1.15fr_repeat(5,minmax(0,1fr))]">
-          <div>
-            <KevalLogo size="sm" showTagline={false} />
-            <p className="mt-4 max-w-[260px] text-xs leading-relaxed text-muted/60">
-              {getContextLine(pathname)}
-            </p>
+    <footer className="relative border-t border-white/[0.07] bg-[#08091a]">
+      <div className="h-px bg-gradient-to-r from-transparent via-zesty-red/70 to-dandelion/70" />
 
-            <div className="mt-6 flex flex-wrap items-center gap-2">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-xl bg-white/[0.04] px-3 py-2 text-[11px] font-medium text-muted/50 transition-colors hover:bg-white/[0.08] hover:text-white"
-                >
-                  {social.label}
-                </a>
-              ))}
-            </div>
-          </div>
-
-          {Object.entries(footerColumns).map(([category, links]) => (
-            <div key={category}>
-              <h4 className="mb-4 text-xs font-semibold uppercase tracking-wider text-white">
-                {category}
-              </h4>
-              <ul className="space-y-2.5">
-                {links.map((link) => (
-                  <li key={link.label}>
-                    <Link
-                      href={link.href}
-                      className="text-xs text-muted/55 transition-colors hover:text-white"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+      <div className="mx-auto grid max-w-7xl gap-12 px-6 py-12 sm:grid-cols-2 lg:grid-cols-[1.35fr_0.7fr_1.15fr_0.85fr] lg:gap-10 lg:py-14">
+        <div className="sm:col-span-2 lg:col-span-1">
+          <KevalLogo size="sm" showTagline={false} />
+          <p className="mt-4 max-w-sm text-sm leading-6 text-muted/60">
+            {getContextLine(pathname)}
+          </p>
+          <Link
+            href="/contact"
+            className="mt-6 inline-flex h-10 items-center justify-center rounded-md border border-dandelion/30 bg-dandelion/10 px-4 text-sm font-semibold text-dandelion transition-colors hover:border-dandelion/55 hover:bg-dandelion/15"
+          >
+            Contact Us
+          </Link>
         </div>
+
+        {footerColumns.map((column) => (
+          <nav key={column.title} aria-label={`${column.title} footer links`}>
+            <h2 className="mb-4 text-xs font-semibold uppercase text-light-grey/80">
+              {column.title}
+            </h2>
+            <ul className="space-y-2.5">
+              {column.links.map((link) => (
+                <li key={link.label}>
+                  <FooterNavLink link={link} />
+                </li>
+              ))}
+            </ul>
+          </nav>
+        ))}
       </div>
 
-      <div className="border-t border-white/[0.04]">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-5 sm:flex-row">
-          <p className="text-[11px] text-muted/35">
-            © 2026 KEVAL SOUND Pvt. Ltd. Exclusive music licensing for creators across India.
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-5">
-            {legalLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="text-[11px] text-muted/35 transition-colors hover:text-muted/75"
-              >
-                {link.label}
-              </Link>
-            ))}
+      <div className="border-t border-white/[0.05]">
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-5 text-[11px] text-muted/40 sm:flex-row sm:items-center sm:justify-between">
+          <p>&copy; 2026 KEVAL SOUND. All rights reserved.</p>
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+            <a href="mailto:privacy@kevalsound.com" className="transition-colors hover:text-light-grey">
+              privacy@kevalsound.com
+            </a>
+            <a href="mailto:support@kevalsound.com" className="transition-colors hover:text-light-grey">
+              support@kevalsound.com
+            </a>
           </div>
         </div>
       </div>
