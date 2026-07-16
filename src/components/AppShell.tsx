@@ -8,11 +8,9 @@ import { usePlayerControls } from "@/lib/player-context";
 // Routes that render their own full-bleed layout and must NOT be wrapped
 // in the authenticated sidebar/topbar shell.
 const BARE_ROUTE_PREFIXES = ["/sign-in", "/sign-up", "/auth"];
-const PUBLIC_MARKETING_ROUTES = ["/contact"];
 import { cn } from "@/lib/utils";
 import Sidebar from "./Sidebar";
 import TopBar from "./TopBar";
-import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 const SIDEBAR_COLLAPSED_KEY = "keval-sidebar-collapsed";
@@ -72,8 +70,6 @@ export default function AppShell({ children }: AppShellProps) {
   const isBareRoute = BARE_ROUTE_PREFIXES.some((prefix) =>
     pathname === prefix || pathname.startsWith(`${prefix}/`)
   );
-  const isPublicMarketingRoute = PUBLIC_MARKETING_ROUTES.includes(pathname);
-
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
   // Lazy initializer reads localStorage once at mount — avoids the
   // setState-in-effect lint rule and prevents a width-flash on first paint.
@@ -128,16 +124,11 @@ export default function AppShell({ children }: AppShellProps) {
     return <ShellLoading />;
   }
 
-  // Unauthenticated visitor on a public route (e.g. `/` landing). Show the
-  // marketing Navbar instead of the authenticated sidebar shell.
-  if (!isAuthenticated || isPublicMarketingRoute) {
-    return (
-      <div className="flex min-h-screen flex-col">
-        <Navbar />
-        <main className="flex-1 pt-[72px]">{children}</main>
-        <Footer />
-      </div>
-    );
+  // The public marketing site lives at www.kevalsound.com. The app root
+  // redirects signed-out visitors there, so no duplicate marketing shell is
+  // rendered on app.kevalsound.com.
+  if (!isAuthenticated) {
+    return <main className="min-h-screen flex-1">{children}</main>;
   }
 
   return (
@@ -159,6 +150,7 @@ export default function AppShell({ children }: AppShellProps) {
         <main className="flex-1 px-6 pt-3 pb-8">
           <Suspense fallback={<RouteLoading />}>{children}</Suspense>
         </main>
+        <Footer />
       </div>
     </>
   );

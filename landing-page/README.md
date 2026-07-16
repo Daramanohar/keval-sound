@@ -19,6 +19,8 @@ npx serve .
 ```
 landing-page/
 ├── index.html        # Main landing page
+├── contact/          # Public Contact Us page
+├── legal/            # Stripe-facing legal and policy PDFs
 ├── assets/           # Videos, posters, logo SVGs
 └── vercel.json       # Static hosting config (caching)
 ```

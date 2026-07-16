@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Keval Sound — Exclusive licensing meets lossless streaming</title>
+<link rel="icon" href="/assets/keval-mark.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Sora:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
@@ -463,7 +464,7 @@
   .fin p{color:rgba(255,255,255,.6);margin:22px auto 36px;max-width:520px;font-size:15.5px;line-height:1.65;font-weight:300}
 
   /* ========== FOOTER ========== */
-  footer.foot{padding:80px 48px 48px;border-top:1px solid rgba(255,255,255,.06);max-width:1440px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;font-size:13px;align-items:start;position:relative}
+  footer.foot{padding:80px 48px 48px;border-top:1px solid rgba(255,255,255,.06);max-width:1440px;margin:0 auto;display:grid;grid-template-columns:minmax(260px,1.35fr) repeat(3,minmax(150px,.72fr));gap:52px;font-size:13px;align-items:start;position:relative}
   footer.foot::before{content:'';position:absolute;top:-1px;left:20%;right:20%;height:1px;background:linear-gradient(90deg,transparent,rgba(199,70,143,.4),rgba(79,137,255,.4),transparent)}
   footer.foot h4{font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:18px;font-weight:500}
   footer.foot ul{list-style:none;display:flex;flex-direction:column;gap:10px}
@@ -475,19 +476,24 @@
   .foot-socials{display:flex;gap:8px}
   .foot-socials a{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.7);transition:all .3s}
   .foot-socials a:hover{background:rgba(199,70,143,.18);border-color:rgba(199,70,143,.5);color:#fff;transform:translateY(-3px)}
-  .foot-newsletter{display:flex;margin-top:14px;padding:4px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
-  .foot-newsletter input{flex:1;background:transparent;border:none;outline:none;color:#fff;font:inherit;font-size:13px;padding:8px 14px}
+  .foot-waitlist{margin-top:26px;max-width:340px}
+  .foot-waitlist h4{margin-bottom:9px}
+  .foot-waitlist p{color:rgba(255,255,255,.48);font-size:11.5px;line-height:1.55}
+  .foot-newsletter{display:flex;margin-top:12px;padding:4px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
+  .foot-newsletter input{min-width:0;flex:1;background:transparent;border:none;outline:none;color:#fff;font:inherit;font-size:12px;padding:8px 12px}
   .foot-newsletter input::placeholder{color:rgba(255,255,255,.35)}
-  .foot-newsletter button{padding:8px 18px;border-radius:999px;background:#fff;color:#000;font-size:12px;font-weight:600;transition:all .3s}
+  .foot-newsletter button{padding:8px 15px;border-radius:999px;background:#fff;color:#000;font-size:11px;font-weight:600;transition:background .2s}
   .foot-newsletter button:hover{background:#ffeb99}
-  .foot-langs{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
-  .foot-lang{font-size:11px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.65);letter-spacing:.03em;transition:all .2s}
-  .foot-lang:hover{background:rgba(199,70,143,.15);border-color:rgba(199,70,143,.3);color:#fff}
-  .foot-bottom{display:none;max-width:1280px;margin:0 auto;padding:22px 24px;justify-content:space-between;font-size:11px;color:rgba(255,255,255,.4);border-top:1px solid rgba(255,255,255,.06);font-family:var(--font-mono);letter-spacing:.08em}
-  .foot-news{justify-self:end;max-width:380px;width:100%}
-  .foot-news h4{margin-bottom:10px;margin-top:0}
-  .foot-news .foot-news-desc{color:rgba(255,255,255,.55);font-size:12.5px;line-height:1.55;margin-bottom:16px;max-width:340px}
-  @media(max-width:900px){footer.foot{grid-template-columns:1fr;gap:48px}.foot-news{justify-self:start}}
+  .foot-contact{display:inline-flex;align-items:center;justify-content:center;margin-top:22px;padding:10px 16px;border-radius:999px;border:1px solid rgba(255,235,153,.3);background:rgba(255,235,153,.08);color:#ffeb99!important;font-size:12px;font-weight:600;transition:background .2s,border-color .2s,transform .2s}
+  .foot-contact:hover{background:rgba(255,235,153,.14);border-color:rgba(255,235,153,.55);transform:translateY(-2px)}
+  .foot-links a{display:inline-flex;align-items:center;gap:6px;line-height:1.6}
+  .foot-links a::after{content:'\2197';font-size:10px;color:rgba(255,235,153,.45)}
+  .foot-bottom{display:flex;max-width:1344px;margin:0 auto;padding:22px 48px;justify-content:space-between;gap:24px;font-size:11px;color:rgba(255,255,255,.4);border-top:1px solid rgba(255,255,255,.06);font-family:var(--font-mono);letter-spacing:.04em}
+  .foot-bottom-links{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:20px}
+  .foot-bottom a{color:rgba(255,255,255,.55);transition:color .2s}
+  .foot-bottom a:hover{color:#fff}
+  @media(max-width:1100px){footer.foot{grid-template-columns:1.2fr 1fr 1fr;gap:44px}.foot-brand{grid-column:1/-1}}
+  @media(max-width:760px){footer.foot{grid-template-columns:1fr;padding:60px 24px 38px;gap:38px}.foot-brand{grid-column:auto}.foot-bottom{padding:20px 24px;flex-direction:column}.foot-bottom-links{justify-content:flex-start}}
 
 </style>
 <style id="pStyle">@keyframes pFloat{0%,100%{transform:translate(0,0)}25%{transform:translate(20px,-30px)}50%{transform:translate(-15px,-60px)}75%{transform:translate(10px,-30px)}}@keyframes pTwinkle{0%,100%{opacity:.2}50%{opacity:1}}</style><link id="gfont-Poppins" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap"></head>
@@ -510,8 +516,8 @@
       </div>
     </div>
     <div class="nav-right">
-      <a href="#" class="nav-signin">Sign in</a>
-      <a href="#pricing" class="nav-cta lg">Get Started</a>
+      <a href="https://app.kevalsound.com/sign-in" class="nav-signin">Sign in</a>
+      <a href="https://app.kevalsound.com/sign-up" class="nav-cta lg">Get Started</a>
     </div>
   </div>
 </nav>
@@ -546,7 +552,7 @@
     </div>
 
     <div class="hero-ctas rv rv-d5 on">
-      <a href="https://app.kevalsound.com" class="btn btn-w">Start Licensing
+      <a href="https://app.kevalsound.com/sign-up" class="btn btn-w">Start Licensing
         <span class="arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></span>
       </a>
       <a href="#pricing" class="btn btn-g lg">
@@ -791,7 +797,7 @@
   <div class="fin-card rv">
     <h2>Give your next project<br><em><span class="grad-text">a sound signature.</span></em></h2>
     <p>Find rare tracks, lossless discovery, exclusive samples, and creative tools made for work that needs its own identity.</p>
-    <a href="https://app.kevalsound.com" class="btn btn-w">Find Your Sound <span class="arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></span></a>
+    <a href="https://app.kevalsound.com/sign-up" class="btn btn-w">Find Your Sound <span class="arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></span></a>
   </div>
 </section>
 
@@ -800,22 +806,53 @@
   <div class="foot-brand">
     <h4>BRAND</h4>
     <div class="foot-brand-row"><span class="nav-dot"></span><span style="font-weight:600">Keval <span class="grad-text">Sound</span></span></div>
-    <p class="foot-desc">World’s first truly exclusive music licensing platform. Find authentic sound and own it forever.</p>
+    <p class="foot-desc">Exclusive music discovery and licensing for creators, producers, brands, and listeners.</p>
     <div class="foot-socials">
       <a href="https://x.com/kevalsound" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 3h3.4l-7.4 8.5L24 21h-6.8l-5.3-7-6.1 7H2.4l8-9.1L2 3h7l4.8 6.4L18.9 3Zm-1.2 16h1.9L6.4 5h-2L17.7 19Z"></path></svg></a>
       <a href="https://www.instagram.com/keval_sound" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"></circle></svg></a>
     </div>
+    <div class="foot-waitlist">
+      <h4>GET NOTIFIED</h4>
+      <p>Get early access updates and KEVAL SOUND offers.</p>
+      <form class="foot-newsletter" id="waitlistForm" novalidate>
+        <input type="email" name="email" placeholder="you@studio.com" required autocomplete="email">
+        <button type="submit">Notify</button>
+      </form>
+      <p id="waitlistMsg" style="margin-top:8px;min-height:14px"></p>
+    </div>
+    <a class="foot-contact" href="/contact">Contact Us</a>
   </div>
-  <div class="foot-news">
-    <h4>GET NOTIFIED</h4>
-    <p class="foot-news-desc">Sign up with your email to get early access to our platform and offers.</p>
-    <form class="foot-newsletter" id="waitlistForm" novalidate>
-      <input type="email" name="email" placeholder="you@studio.com" required autocomplete="email">
-      <button type="submit">Notify</button>
-    </form>
-    <p id="waitlistMsg" style="margin-top:10px;font-size:11.5px;color:rgba(255,255,255,.55);min-height:14px;line-height:1.4"></p>
-  </div>
+  <nav class="foot-links" aria-label="Company legal documents">
+    <h4>COMPANY</h4>
+    <ul>
+      <li><a href="/legal/about-us.pdf" target="_blank" rel="noopener noreferrer">About Us</a></li>
+      <li><a href="/legal/pricing.pdf" target="_blank" rel="noopener noreferrer">Pricing</a></li>
+    </ul>
+  </nav>
+  <nav class="foot-links" aria-label="Policies">
+    <h4>POLICIES</h4>
+    <ul>
+      <li><a href="/legal/privacy-policy.pdf" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+      <li><a href="/legal/terms-of-service.pdf" target="_blank" rel="noopener noreferrer">Terms of Service</a></li>
+      <li><a href="/legal/refund-and-cancellation-policy.pdf" target="_blank" rel="noopener noreferrer">Refund &amp; Cancellation Policy</a></li>
+      <li><a href="/legal/digital-delivery-policy.pdf" target="_blank" rel="noopener noreferrer">Digital Delivery Policy</a></li>
+    </ul>
+  </nav>
+  <nav class="foot-links" aria-label="Rights and earnings">
+    <h4>RIGHTS &amp; EARNINGS</h4>
+    <ul>
+      <li><a href="/legal/license-terms.pdf" target="_blank" rel="noopener noreferrer">License Terms</a></li>
+      <li><a href="/legal/monetization-policy.pdf" target="_blank" rel="noopener noreferrer">Monetization Policy</a></li>
+    </ul>
+  </nav>
 </footer>
+<div class="foot-bottom">
+  <span>&copy; 2026 KEVAL SOUND. All rights reserved.</span>
+  <div class="foot-bottom-links">
+    <a href="mailto:privacy@kevalsound.com">privacy@kevalsound.com</a>
+    <a href="mailto:support@kevalsound.com">support@kevalsound.com</a>
+  </div>
+</div>
 <audio id="heroAudio" loop preload="none">
   <source src="assets/hero-loop.flac?v=opt1" type="audio/flac">
   <source src="assets/hero-loop.wav?v=hidden-gateway" type="audio/wav">

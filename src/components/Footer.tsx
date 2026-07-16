@@ -1,9 +1,9 @@
 "use client";
 
 import { ExternalLink } from "lucide-react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import KevalLogo from "./KevalLogo";
+
+const LANDING_ORIGIN = "https://www.kevalsound.com";
 
 interface FooterLink {
   label: string;
@@ -15,23 +15,23 @@ const footerColumns: Array<{ title: string; links: FooterLink[] }> = [
   {
     title: "Company",
     links: [
-      { label: "About Us", href: "/legal/about-us.pdf", document: true },
-      { label: "Pricing", href: "/legal/pricing.pdf", document: true },
+      { label: "About Us", href: `${LANDING_ORIGIN}/legal/about-us.pdf`, document: true },
+      { label: "Pricing", href: `${LANDING_ORIGIN}/legal/pricing.pdf`, document: true },
     ],
   },
   {
     title: "Policies",
     links: [
-      { label: "Privacy Policy", href: "/legal/privacy-policy.pdf", document: true },
-      { label: "Terms of Service", href: "/legal/terms-of-service.pdf", document: true },
+      { label: "Privacy Policy", href: `${LANDING_ORIGIN}/legal/privacy-policy.pdf`, document: true },
+      { label: "Terms of Service", href: `${LANDING_ORIGIN}/legal/terms-of-service.pdf`, document: true },
       {
         label: "Refund & Cancellation Policy",
-        href: "/legal/refund-and-cancellation-policy.pdf",
+        href: `${LANDING_ORIGIN}/legal/refund-and-cancellation-policy.pdf`,
         document: true,
       },
       {
         label: "Digital Delivery Policy",
-        href: "/legal/digital-delivery-policy.pdf",
+        href: `${LANDING_ORIGIN}/legal/digital-delivery-policy.pdf`,
         document: true,
       },
     ],
@@ -39,19 +39,11 @@ const footerColumns: Array<{ title: string; links: FooterLink[] }> = [
   {
     title: "Rights & Earnings",
     links: [
-      { label: "License Terms", href: "/legal/license-terms.pdf", document: true },
-      { label: "Monetization Policy", href: "/legal/monetization-policy.pdf", document: true },
+      { label: "License Terms", href: `${LANDING_ORIGIN}/legal/license-terms.pdf`, document: true },
+      { label: "Monetization Policy", href: `${LANDING_ORIGIN}/legal/monetization-policy.pdf`, document: true },
     ],
   },
 ];
-
-function getContextLine(pathname: string): string {
-  if (pathname === "/contact") {
-    return "Support, privacy assistance, and payment-related help from the KEVAL SOUND team.";
-  }
-
-  return "Exclusive music discovery and licensing for creators, producers, brands, and listeners.";
-}
 
 function FooterNavLink({ link }: { link: FooterLink }) {
   const className =
@@ -69,18 +61,10 @@ function FooterNavLink({ link }: { link: FooterLink }) {
     );
   }
 
-  return (
-    <Link href={link.href} className={className}>
-      {link.label}
-    </Link>
-  );
+  return <a href={link.href} className={className}>{link.label}</a>;
 }
 
 export default function Footer() {
-  const pathname = usePathname();
-
-  if (pathname === "/auth") return null;
-
   return (
     <footer className="relative border-t border-white/[0.07] bg-[#08091a]">
       <div className="h-px bg-gradient-to-r from-transparent via-zesty-red/70 to-dandelion/70" />
@@ -89,14 +73,14 @@ export default function Footer() {
         <div className="sm:col-span-2 lg:col-span-1">
           <KevalLogo size="sm" showTagline={false} />
           <p className="mt-4 max-w-sm text-sm leading-6 text-muted/60">
-            {getContextLine(pathname)}
+            Exclusive music discovery and licensing for creators, producers, brands, and listeners.
           </p>
-          <Link
-            href="/contact"
+          <a
+            href={`${LANDING_ORIGIN}/contact`}
             className="mt-6 inline-flex h-10 items-center justify-center rounded-md border border-dandelion/30 bg-dandelion/10 px-4 text-sm font-semibold text-dandelion transition-colors hover:border-dandelion/55 hover:bg-dandelion/15"
           >
             Contact Us
-          </Link>
+          </a>
         </div>
 
         {footerColumns.map((column) => (

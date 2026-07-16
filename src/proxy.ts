@@ -3,6 +3,7 @@
 // TODO(security): add Cloudflare Turnstile / Clerk bot protection in a
 // follow-up milestone. Auth comes first; bot protection layers on top.
 import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
+import { NextResponse } from "next/server";
 
 const isProtectedRoute = createRouteMatcher([
   "/browse(.*)",
@@ -21,6 +22,13 @@ const isProtectedRoute = createRouteMatcher([
 ]);
 
 export default clerkMiddleware(async (auth, req) => {
+  if (req.nextUrl.pathname === "/") {
+    const { userId } = await auth();
+    if (!userId) {
+      return NextResponse.redirect("https://www.kevalsound.com/");
+    }
+  }
+
   if (isProtectedRoute(req)) {
     await auth.protect();
   }
@@ -31,7 +39,7 @@ export const config = {
     // Skip Next.js internals + static assets. /api/media is still matched so
     // route handlers can call auth() and read the session, but it is gated
     // inside the handler to return clean 401 JSON instead of a redirect.
-    "/((?!contact(?:/|$)|_next/|_next/static|_next/image|favicon.ico|logo/|packs/|legal/|.*\\.(?:png|jpg|jpeg|gif|webp|svg|ico|mp3|wav|txt|pdf|woff2?)$).*)",
+    "/((?!_next/|_next/static|_next/image|favicon.ico|logo/|packs/|.*\\.(?:png|jpg|jpeg|gif|webp|svg|ico|mp3|wav|txt|pdf|woff2?)$).*)",
     "/(api/.*)",
   ],
 };
