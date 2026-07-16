@@ -159,7 +159,6 @@ export default function AppShell({ children }: AppShellProps) {
         <main className="flex-1 px-6 pt-3 pb-8">
           <Suspense fallback={<RouteLoading />}>{children}</Suspense>
         </main>
-        <Footer />
       </div>
     </>
   );
