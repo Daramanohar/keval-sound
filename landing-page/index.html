@@ -107,8 +107,8 @@
   .nav-pill{pointer-events:auto;display:flex;align-items:center;gap:8px;padding:8px 8px 8px 20px;border-radius:999px;width:100%;max-width:920px;justify-content:space-between}
   .nav-left{display:flex;align-items:center;gap:32px}
   .nav-brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:600;font-size:15px}
-  .nav-dot{width:14px;height:14px;border-radius:50%;background:linear-gradient(135deg,#4f89ff,#c7468f 60%,#ff8a3d);position:relative;box-shadow:0 0 10px rgba(199,70,143,.6)}
-  .nav-dot::after{content:'';position:absolute;inset:-4px;border-radius:50%;border:1.5px solid rgba(255,255,255,.25)}
+  .brand-mark{position:relative;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;width:24px;height:24px;overflow:hidden}
+  .brand-mark img{display:block;width:100%;height:100%;object-fit:contain;transform:scale(2.6)}
   .nav-links{display:flex;gap:26px;font-size:13px}
   .nav-links a{color:rgba(255,255,255,.65);font-weight:400;transition:color .2s;position:relative}
   .nav-links a:hover{color:#fff}
@@ -471,7 +471,7 @@
   footer.foot a{color:rgba(255,255,255,.7);transition:color .2s}
   footer.foot a:hover{color:#fff}
   .foot-brand-row{display:flex;align-items:center;gap:10px;margin-top:0;margin-bottom:14px;font-size:17px}
-  .foot-brand-row .nav-dot{width:18px;height:18px;background:linear-gradient(135deg,#c7468f,#4f89ff)}
+  .foot-brand-row .brand-mark{width:32px;height:32px}
   .foot-desc{color:rgba(255,255,255,.5);max-width:340px;line-height:1.6;font-size:13px;margin-bottom:20px}
   .foot-socials{display:flex;gap:8px}
   .foot-socials a{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.7);transition:all .3s}
@@ -500,7 +500,7 @@
 <nav class="top" id="nav">
   <div class="nav-pill lg">
     <div class="nav-left">
-      <a href="#" class="nav-brand"><span class="nav-dot"></span>Keval <span class="grad-text" style="display:inline">Sound</span></a>
+      <a href="#" class="nav-brand"><span class="brand-mark"><img src="/assets/keval-logo.png" alt=""></span>Keval <span class="grad-text" style="display:inline">Sound</span></a>
       <div class="nav-links">
         <a href="#why">Why Keval</a>
         <a href="#features">Features</a>
@@ -797,8 +797,8 @@
 <footer class="foot">
   <div class="foot-brand">
     <h4>BRAND</h4>
-    <div class="foot-brand-row"><span class="nav-dot"></span><span style="font-weight:600">Keval <span class="grad-text">Sound</span></span></div>
-    <p class="foot-desc">Exclusive music discovery and licensing for creators, producers, brands, and listeners.</p>
+    <div class="foot-brand-row"><span class="brand-mark"><img src="/assets/keval-logo.png" alt=""></span><span style="font-weight:600">Keval <span class="grad-text">Sound</span></span></div>
+    <p class="foot-desc">KEVAL SOUND lists only music and samples it owns or is authorized to license. Purchases are subject to the applicable license terms.</p>
     <div class="foot-socials">
       <a href="https://x.com/KevalSound" target="_blank" rel="noopener noreferrer" aria-label="X"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 3h3.4l-7.4 8.5L24 21h-6.8l-5.3-7-6.1 7H2.4l8-9.1L2 3h7l4.8 6.4L18.9 3Zm-1.2 16h1.9L6.4 5h-2L17.7 19Z"></path></svg></a>
       <a href="https://www.instagram.com/keval_sound/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"></circle></svg></a>
