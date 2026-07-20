@@ -21,10 +21,11 @@ landing-page/
 ├── index.html        # Main landing page
 ├── contact/          # Public Contact Us page
 ├── legal/            # Stripe-facing legal and policy PDFs
-├── assets/           # Videos, posters, logo SVGs
+├── assets/           # Responsive WebP backdrops and brand assets
 └── vercel.json       # Static hosting config (caching)
 ```
 
 ## Notes
-- Videos are full-bleed and autoplay muted; preserve `autoplay muted loop playsinline` on `<video>` tags.
+- Landing backdrops use responsive desktop/mobile WebP images to keep the page usable on slower networks.
+- The hero image loads with high priority; below-the-fold section images lazy-load.
 - Long-cache headers are set on `/assets/*` (immutable, 1 year). HTML is no-cache so updates ship instantly.

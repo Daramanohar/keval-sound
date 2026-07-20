@@ -147,10 +147,6 @@
   .vinyl::after{content:'';position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 50% 50%,transparent 45%,rgba(3,3,8,.35) 70%,rgba(3,3,8,.85) 100%);mix-blend-mode:multiply;pointer-events:none}
   @keyframes vinylSpin{from{transform:rotate(0deg) translateZ(0)}to{transform:rotate(360deg) translateZ(0)}}
 
-  /* Splash layer: soft float, no blur filter (blur is expensive) */
-  .hero-splash{position:absolute;inset:-5%;z-index:0;background-image:url('assets/hero-poster.jpg');background-size:cover;background-position:center;mix-blend-mode:screen;opacity:.65;will-change:transform;animation:splashFloat 14s ease-in-out infinite alternate;transform:translateZ(0)}
-  @keyframes splashFloat{0%{transform:translate3d(0,0,0) scale(1.02)}100%{transform:translate3d(-1.2%,1%,0) scale(1.08)}}
-
   /* Volumetric light rays — one layer only, slower, GPU */
   .hero-rays{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden}
   .hero-rays::before{content:'';position:absolute;width:150%;height:150%;top:-25%;left:-25%;background:conic-gradient(from 0deg at 50% 50%,transparent 0deg,rgba(79,137,255,.08) 10deg,transparent 25deg,transparent 150deg,rgba(255,235,153,.1) 160deg,transparent 180deg,transparent 300deg,rgba(199,70,143,.08) 310deg,transparent 330deg);mix-blend-mode:screen;will-change:transform;animation:rayRotate 80s linear infinite;transform:translateZ(0)}
@@ -160,8 +156,9 @@
   .hero-particles{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden}
   .hero-particles span{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;box-shadow:0 0 6px currentColor;will-change:transform,opacity;transform:translateZ(0)}
 
-  /* Cinematic grade on the hero video so brand colors read on top */
-  .hero-video{filter:saturate(.92) contrast(1.05) brightness(.88)}
+  /* Responsive still backdrop: no autoplay media or large background downloads. */
+  .hero-media{position:absolute;inset:0;z-index:0;display:block;overflow:hidden;opacity:1;transition:opacity 1.2s ease;will-change:transform,opacity}
+  .hero-media img{width:100%;height:100%;display:block;object-fit:cover;object-position:center;filter:saturate(.92) contrast(1.05) brightness(.88);transform:scale(1.01)}
 
   .hero-img-mask{position:absolute;inset:0;z-index:2;pointer-events:none;background:
     /* Left-side legibility wash — protects the headline column */
@@ -200,10 +197,6 @@
 
   .hero-waveform{display:flex;align-items:flex-end;justify-content:center;gap:3px;height:38px;margin:48px auto 0;max-width:380px;opacity:.7}
   .hero-waveform .bar{width:2.5px;background:linear-gradient(to top,#4f89ff,#c7468f 60%,#ff8a3d);border-radius:2px;height:20%;transition:height .05s linear;opacity:.85}
-  .audio-toggle{position:absolute;right:28px;bottom:28px;z-index:4;display:flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;font-size:11px;color:rgba(255,255,255,.75);letter-spacing:.12em;text-transform:uppercase;transition:background .25s,color .25s,box-shadow .25s}
-  .audio-toggle:hover{color:rgba(255,255,255,.95)}
-  .audio-toggle.on{background:linear-gradient(135deg,rgba(255,138,61,.32),rgba(255,138,61,.16));color:#ffd9b3;box-shadow:0 0 0 1px rgba(255,138,61,.6),0 8px 26px rgba(255,138,61,.3)}
-  .audio-toggle.on .spk{color:#ff8a3d}
   .scroll-ind{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:4;display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,.4);font-size:10px;letter-spacing:.3em;text-transform:uppercase}
   .scroll-ind .rail{width:1px;height:40px;background:linear-gradient(to bottom,rgba(255,255,255,.5),transparent);position:relative;overflow:hidden}
   .scroll-ind .rail::after{content:'';position:absolute;top:-40%;left:0;right:0;height:40%;background:linear-gradient(to bottom,transparent,#fff);animation:scrollDot 2s ease-in-out infinite}
@@ -244,20 +237,19 @@
 
   /* ========== Scroll perf: skip rendering off-screen sections ==========
      content-visibility: auto skips layout/paint for sections not near the viewport.
-     IMPORTANT: we do NOT apply this to sections containing background videos
-     (.why, .feat, .pricing) because CV can pause/throttle embedded media,
-     which would break the seamless infinite loop the user requires. */
+     Image-backed sections remain eager enough for predictable transitions. */
   .cta,footer{content-visibility:auto;contain-intrinsic-size:1px 80vh}
 
   /* ========== WHY KEVAL — full-bleed living backdrop + floating glass cards ========== */
   .why{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:space-between;padding:90px 0 40px;overflow:hidden;isolation:isolate}
-  /* Full-section continuous video — runs behind everything, "Production evolved" style */
+  /* Full-section responsive still backdrop. */
   .why-bg{position:absolute;inset:0;z-index:0;overflow:hidden;border-radius:0}
   .why-bg::after{content:'';position:absolute;inset:0;background:
     radial-gradient(ellipse 100% 60% at 50% 50%,transparent 0%,rgba(3,3,8,.35) 60%,rgba(3,3,8,.85) 100%),
     linear-gradient(180deg,rgba(3,3,8,.55) 0%,transparent 22%,transparent 60%,rgba(3,3,8,.92) 100%);
     pointer-events:none}
-  .why-img{width:100%;height:100%;object-fit:cover;filter:saturate(1.12) contrast(1.06)}
+  .why-bg picture,.feat-bg picture,.pr-bg picture{display:block;width:100%;height:100%}
+  .why-img{width:100%;height:100%;display:block;object-fit:cover;object-position:center;filter:saturate(1.12) contrast(1.06)}
 
   /* Headline floats on top of the live scene */
   .why-head{text-align:center;max-width:880px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
@@ -265,14 +257,14 @@
   .why-head .why-intro{color:rgba(255,255,255,.92);font-size:18px;font-weight:400;letter-spacing:.005em;text-shadow:0 2px 20px rgba(0,0,0,.9),0 0 30px rgba(0,0,0,.7),0 0 60px rgba(3,3,8,.5)}
   .why-head .why-intro b{color:#fff;font-weight:500}
   .why-head .sec-h{text-shadow:0 4px 30px rgba(0,0,0,.85),0 2px 14px rgba(0,0,0,.7),0 0 40px rgba(0,0,0,.5)}
-  /* Localized darkening behind the title only — keeps the cinematic video visible elsewhere */
+  /* Localized darkening behind the title keeps the image visible elsewhere. */
   .why-head::before{content:'';position:absolute;left:50%;top:-30px;transform:translateX(-50%);width:min(1100px,92vw);height:calc(100% + 80px);background:radial-gradient(ellipse 60% 70% at 50% 50%,rgba(0,0,0,.55) 0%,rgba(0,0,0,.35) 35%,transparent 70%);z-index:-1;pointer-events:none}
 
   /* 4-column row — wider gaps + breathing room (per reference image) */
   .why-feed{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;max-width:1400px;width:100%;margin:clamp(40px,5vh,72px) auto 0;padding:0 32px;align-items:stretch;position:relative;z-index:2}
 
   /* Glass card — "fake glass": static gradient instead of backdrop-filter for scroll perf.
-     With 11 cards visible + 4 looping background videos, real backdrop-filter forces
+     With 11 cards visible over large backgrounds, real backdrop-filter forces
      constant GPU recomposition even when not scrolling. This treatment looks ~95%
      identical to the real thing but stays static, freeing the GPU for compositor work. */
   .why-pillar{padding:30px 28px 32px;border-radius:22px;
@@ -319,20 +311,20 @@
   @media(max-width:1100px){.why-feed{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:640px){.why-feed{grid-template-columns:1fr}}
 
-  /* ========== FEATURES — Why-style full-bleed video + floating glass cards ========== */
+  /* ========== FEATURES — full-bleed image + floating glass cards ========== */
   .feat{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:space-between;padding:90px 0 8px;overflow:hidden;isolation:isolate}
   .feat-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
   .feat-bg::after{content:'';position:absolute;inset:0;background:
     radial-gradient(ellipse 100% 60% at 50% 50%,transparent 0%,rgba(3,3,8,.35) 60%,rgba(3,3,8,.85) 100%),
     linear-gradient(180deg,rgba(3,3,8,.55) 0%,transparent 22%,transparent 60%,rgba(3,3,8,.92) 100%);
     pointer-events:none}
-  .feat-img{width:100%;height:100%;object-fit:cover;filter:saturate(1.12) contrast(1.06)}
+  .feat-img{width:100%;height:100%;display:block;object-fit:cover;object-position:center;filter:saturate(1.12) contrast(1.06)}
 
   /* Headline floats on top of the live scene */
   .feat-head{text-align:center;max-width:1080px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
   .feat-head .sec-label{text-shadow:0 2px 12px rgba(0,0,0,.7)}
   .feat-head .sec-h{text-shadow:0 6px 40px rgba(0,0,0,.95),0 3px 18px rgba(0,0,0,.85),0 0 60px rgba(0,0,0,.7),0 1px 0 rgba(0,0,0,.6)}
-  /* Localized darkening behind the title only — keeps the cinematic video visible elsewhere */
+  /* Localized darkening behind the title keeps the image visible elsewhere. */
   .feat-head::before{content:'';position:absolute;left:50%;top:-40px;transform:translateX(-50%);width:min(1200px,96vw);height:calc(100% + 120px);background:radial-gradient(ellipse 65% 75% at 50% 50%,rgba(0,0,0,.78) 0%,rgba(0,0,0,.55) 30%,rgba(0,0,0,.25) 55%,transparent 75%);z-index:-1;pointer-events:none;filter:blur(8px)}
   /* Add an extra darkening pad behind ONLY the italic line to combat the bright waveform that often sits behind it */
   .feat-head .sec-h em{position:relative;display:inline-block}
@@ -365,11 +357,9 @@
 
   /* ========== PRICING (cinematic vinyl stage) ========== */
   .pricing{padding:90px 0 100px;position:relative;overflow:hidden;isolation:isolate}
-  /* Full-bleed looping vinyl video as background */
+  /* Full-bleed responsive still as background. */
   .pr-bg{position:absolute;inset:0;z-index:-2;overflow:hidden;pointer-events:none}
-  .pr-bg video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(1.1) contrast(1.05) brightness(.9);transform:scale(1.08);transition:transform 1.2s cubic-bezier(.16,1,.3,1);will-change:transform}
-  /* Crop the Veo watermark (bottom-right corner) — mask bottom-right to transparent, rest stays */
-  .pr-bg video{-webkit-mask-image:radial-gradient(ellipse 18% 14% at 92% 94%,transparent 40%,#000 75%);mask-image:radial-gradient(ellipse 18% 14% at 92% 94%,transparent 40%,#000 75%)}
+  .pr-bg img{width:100%;height:100%;display:block;object-fit:cover;object-position:center;filter:saturate(1.1) contrast(1.05) brightness(.9);transform:scale(1.04)}
   /* Vignette + top/bottom fade to bg, and a center scrim so cards sit on pure black */
   .pr-bg::before{content:'';position:absolute;inset:0;background:
     linear-gradient(180deg,#030308 0%,transparent 18%,transparent 55%,rgba(3,3,8,.85) 88%,#030308 100%),
@@ -458,10 +448,14 @@
 
   /* ========== FINAL CTA ========== */
   .fin{padding:60px 24px 90px;position:relative}
-  .fin-card{max-width:1100px;margin:0 auto;padding:90px 40px;border-radius:36px;text-align:center;overflow:hidden;position:relative;background:radial-gradient(ellipse 80% 60% at 50% 20%,rgba(199,70,143,.2),transparent 70%),radial-gradient(ellipse 60% 80% at 80% 80%,rgba(79,137,255,.15),transparent 70%),linear-gradient(180deg,rgba(10,10,30,.6),rgba(3,3,8,.8));border:1px solid rgba(255,255,255,.08)}
-  .fin-card::before{content:'';position:absolute;top:-1px;left:25%;right:25%;height:1px;background:linear-gradient(90deg,transparent,rgba(199,70,143,.5),rgba(79,137,255,.5),transparent)}
-  .fin h2{font-family:var(--font-serif);font-size:clamp(40px,5.2vw,72px);font-weight:400;letter-spacing:-.02em;line-height:1.04;color:#fff}
-  .fin p{color:rgba(255,255,255,.6);margin:22px auto 36px;max-width:520px;font-size:15.5px;line-height:1.65;font-weight:300}
+  .fin-card{max-width:1100px;margin:0 auto;padding:90px 40px;border-radius:36px;text-align:center;overflow:hidden;position:relative;background:#080813;border:1px solid rgba(255,255,255,.08);isolation:isolate}
+  .fin-card::before{content:'';position:absolute;top:-1px;left:25%;right:25%;height:1px;background:linear-gradient(90deg,transparent,rgba(199,70,143,.5),rgba(255,235,153,.55),transparent);z-index:3}
+  .fin-card::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,3,8,.86),rgba(3,3,8,.58) 50%,rgba(3,3,8,.78)),linear-gradient(180deg,rgba(3,3,8,.2),rgba(3,3,8,.72));z-index:1;pointer-events:none}
+  .fin-media{position:absolute;inset:0;z-index:0;display:block}
+  .fin-media img{width:100%;height:100%;display:block;object-fit:cover;object-position:center;filter:saturate(.94) contrast(1.04)}
+  .fin-card>h2,.fin-card>p,.fin-card>a{position:relative;z-index:2}
+  .fin h2{font-family:var(--font-serif);font-size:clamp(40px,5.2vw,72px);font-weight:400;letter-spacing:-.02em;line-height:1.04;color:#fff;text-shadow:0 4px 30px rgba(0,0,0,.7)}
+  .fin p{color:rgba(255,255,255,.82);margin:22px auto 36px;max-width:520px;font-size:15.5px;line-height:1.65;font-weight:300;text-shadow:0 2px 16px rgba(0,0,0,.8)}
 
   /* ========== FOOTER ========== */
   footer.foot{padding:80px 48px 48px;border-top:1px solid rgba(255,255,255,.06);max-width:1440px;margin:0 auto;display:grid;grid-template-columns:minmax(260px,1.35fr) repeat(3,minmax(150px,.72fr));gap:52px;font-size:13px;align-items:start;position:relative}
@@ -516,8 +510,10 @@
 
 <!-- ========== HERO ========== -->
 <section class="hero" id="home" data-ax-zone="hero" data-screen-label="01 Hero" style="--heroOpacity: 1;">
-  <!-- Pure cinematic video backdrop (no overlay layers) -->
-  <video class="hero-video" id="heroVideo" src="assets/hero.mp4?v=opt1" poster="assets/hero-poster.jpg" autoplay muted loop playsinline preload="auto" data-bg-video style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:1;transition:opacity 1.2s ease"></video>
+  <picture class="hero-media" id="heroMedia" aria-hidden="true">
+    <source media="(max-width: 720px)" srcset="assets/landing-hero-mobile.webp">
+    <img src="assets/landing-hero.webp" alt="" width="1920" height="1080" fetchpriority="high" decoding="async">
+  </picture>
 
   <!-- Minimal vignette mask for text legibility -->
   <div class="hero-img-mask"></div>
@@ -563,11 +559,6 @@
     </div>
   </div>
 
-  <button class="audio-toggle lg" id="audioToggle">
-    <span class="spk"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="spkIcon"><path d="M11 5 6 9H2v6h4l5 4z"></path><path d="M15 9a3 3 0 0 1 0 6" id="wave1" style="opacity: 0.3;"></path><path d="M18 6a7 7 0 0 1 0 12" id="wave2" style="opacity: 0.3;"></path></svg></span>
-    <span id="audioLbl">Tap to play</span>
-  </button>
-
   <div class="scroll-ind">
     <span>Scroll</span>
     <div class="rail"></div>
@@ -589,7 +580,10 @@
   </div>
 
   <div class="why-bg" aria-hidden="true">
-    <video class="why-img" id="whyImg" data-src="assets/why.mp4?v=opt1" poster="assets/why.jpg" muted loop playsinline preload="none" data-bg-video data-lazy-video></video>
+    <picture>
+      <source media="(max-width: 720px)" srcset="assets/landing-why-mobile.webp">
+      <img class="why-img" src="assets/landing-why.webp" alt="" width="1672" height="941" loading="lazy" decoding="async">
+    </picture>
   </div>
 
   <div class="why-feed">
@@ -650,10 +644,13 @@
   <span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span>
 </div>
 
-<!-- ========== FEATURES (Why-style: full-bleed video + floating cards) ========== -->
+<!-- ========== FEATURES (full-bleed image + floating cards) ========== -->
 <section class="feat zoom-sec" id="features" data-screen-label="03 Features">
   <div class="feat-bg" aria-hidden="true">
-    <video class="feat-img" id="featImg" data-src="assets/features.mp4?v=opt1" poster="assets/features.jpg" muted loop playsinline preload="none" data-bg-video data-lazy-video></video>
+    <picture>
+      <source media="(max-width: 720px)" srcset="assets/landing-features-mobile.webp">
+      <img class="feat-img" src="assets/landing-features.webp" alt="" width="1672" height="941" loading="lazy" decoding="async">
+    </picture>
   </div>
 
   <div class="feat-head rv on">
@@ -696,7 +693,10 @@
 <!-- ========== PRICING ========== -->
 <section class="pricing zoom-sec" id="pricing" data-ax-zone="pricing" data-screen-label="04 Pricing">
   <div class="pr-bg" aria-hidden="true">
-    <video data-src="assets/pricing-vinyl.mp4?v=opt1" poster="assets/pricing.jpg" muted loop playsinline preload="none" data-bg-video data-lazy-video></video>
+    <picture>
+      <source media="(max-width: 720px)" srcset="assets/landing-pricing-mobile.webp">
+      <img src="assets/landing-pricing.webp" alt="" width="1672" height="941" loading="lazy" decoding="async">
+    </picture>
   </div>
 
   <div class="pr-head rv">
@@ -787,6 +787,10 @@
 <!-- FINAL CTA -->
 <section class="fin">
   <div class="fin-card rv">
+    <picture class="fin-media" aria-hidden="true">
+      <source media="(max-width: 720px)" srcset="assets/landing-final-mobile.webp">
+      <img src="assets/landing-final.webp" alt="" width="1920" height="1080" loading="lazy" decoding="async">
+    </picture>
     <h2>Give your next project<br><em><span class="grad-text">a sound signature.</span></em></h2>
     <p>Find rare tracks, lossless discovery, exclusive samples, and creative tools made for work that needs its own identity.</p>
     <a href="https://app.kevalsound.com/sign-up" class="btn btn-w">Find Your Sound <span class="arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></span></a>
@@ -836,11 +840,6 @@
     <a href="mailto:support@kevalsound.com">support@kevalsound.com</a>
   </div>
 </div>
-<audio id="heroAudio" loop preload="none">
-  <source src="assets/hero-loop.flac?v=opt1" type="audio/flac">
-  <source src="assets/hero-loop.wav?v=hidden-gateway" type="audio/wav">
-</audio>
-
 <script>
 // ========== 1. Cursor glow (pointer-throttled — only animates while mouse moves) ==========
 (function(){
@@ -907,108 +906,35 @@ setTimeout(()=>{
   document.getElementById('marquee').innerHTML=names.concat(names).map(n=>`<span class="mq-logo">${n}</span>`).join('');
 })();
 
-// ========== 5. Waveform (procedural + audio-reactive) ==========
+// ========== 5. Lightweight decorative waveform ==========
 (function(){
   const BARS=48;
   const wf=document.getElementById('waveform');
+  const hero=document.querySelector('.hero');
+  if(!wf||!hero) return;
+  wf.replaceChildren();
   const bars=[];
   for(let i=0;i<BARS;i++){const b=document.createElement('div');b.className='bar';wf.appendChild(b);bars.push(b);}
-  let t=0,running=false;
-  function proc(){
-    if(window._audioActive){running=false;return;} // hand off to audio-reactive tickAudio
+  let t=0,running=false,frame=0,visible=true;
+  function draw(){
+    if(!running) return;
     t+=0.05;
     for(let i=0;i<BARS;i++){
       const n=Math.sin(t+i*0.3)*.5+.5;
       const m=Math.sin(t*.7+i*.15)*.3+.4;
       bars[i].style.height=(20+n*m*80)+'%';
     }
-    requestAnimationFrame(proc);
+    frame=requestAnimationFrame(draw);
   }
-  function startProc(){if(running)return;running=true;requestAnimationFrame(proc);}
-  startProc();
-  window._wfBars=bars;
-  window._wfProc=startProc; // let the audio toggle resume the idle waveform on pause
+  function sync(){
+    const shouldRun=visible&&!document.hidden&&!matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(shouldRun&&!running){running=true;frame=requestAnimationFrame(draw);}
+    else if(!shouldRun&&running){running=false;cancelAnimationFrame(frame);}
+  }
+  new IntersectionObserver(([entry])=>{visible=entry.isIntersecting;sync();},{rootMargin:'120px 0px'}).observe(hero);
+  document.addEventListener('visibilitychange',sync);
+  sync();
 })();
-
-// ========== 6. Audio unlock + seamless infinite loop ==========
-var audioCtx=null,analyser=null,dataArr=null,audioSource=null;
-const audio=document.getElementById('heroAudio');
-const toggle=document.getElementById('audioToggle');
-const audioLbl=document.getElementById('audioLbl');
-
-// Belt-and-suspenders gapless looping. The HTMLMediaElement `loop` attr is gapless
-// on modern browsers when the buffer has no leading/trailing silence, but we wire
-// extra safety:
-//   - explicit JS `loop = true` (some old browsers ignore the attribute)
-//   - `ended` listener restarts play() if the loop attr ever fails to fire
-//   - visibilitychange resumes if the tab was backgrounded by the OS
-audio.loop = true;
-audio.addEventListener('ended', ()=>{
-  if(window._audioActive){ audio.currentTime = 0; audio.play().catch(()=>{}); }
-});
-document.addEventListener('visibilitychange', ()=>{
-  if(!document.hidden && window._audioActive && audio.paused){ audio.play().catch(()=>{}); }
-});
-
-// Flip the button + speaker-icon state synchronously. Called the instant you click so the
-// UI is never out of sync with intent — it does NOT wait on the audio to buffer/decode.
-function setAudioUI(on){
-  toggle.classList.toggle('on',on);
-  audioLbl.textContent=on?'Playing':'Tap to play';
-  const w1=document.getElementById('wave1'),w2=document.getElementById('wave2');
-  if(w1) w1.style.opacity=on?1:.3;
-  if(w2) w2.style.opacity=on?.7:.3;
-}
-
-toggle.addEventListener('click',async()=>{
-  // One-time Web Audio graph setup, used only for the reactive waveform. If it fails
-  // (e.g. file:// quirks), we fall back to plain <audio> playback so sound still works.
-  if(!audioCtx){
-    try{
-      audioCtx=new (window.AudioContext||window.webkitAudioContext)();
-      audioSource=audioCtx.createMediaElementSource(audio);
-      analyser=audioCtx.createAnalyser();
-      analyser.fftSize=128;
-      audioSource.connect(analyser);analyser.connect(audioCtx.destination);
-      dataArr=new Uint8Array(analyser.frequencyBinCount);
-      tickAudio();
-    }catch(e){ console.warn('WebAudio unavailable, using direct playback',e); analyser=null; }
-  }
-  // Autoplay policy starts the context 'suspended'. Because createMediaElementSource routes
-  // ALL output through the graph, a suspended context = total silence even though play()
-  // "succeeds" — this was the "button does nothing" bug. Resume it inside the user gesture.
-  if(audioCtx && audioCtx.state==='suspended'){ try{ await audioCtx.resume(); }catch(e){} }
-
-  const wantPlay=audio.paused;
-  // Update the UI immediately (optimistic) so the button turns orange / reverts on the click.
-  window._audioActive=wantPlay;
-  setAudioUI(wantPlay);
-  if(!wantPlay && window._wfProc) window._wfProc(); // resume the idle procedural waveform
-
-  try{
-    if(wantPlay){ await audio.play(); }
-    else { audio.pause(); }
-  }catch(e){
-    // Playback blocked/failed — reconcile the UI back to the real (stopped) state.
-    console.warn('audio toggle failed',e);
-    window._audioActive=false;
-    setAudioUI(false);
-    if(window._wfProc) window._wfProc();
-  }
-});
-
-function tickAudio(){
-  requestAnimationFrame(tickAudio);
-  if(!analyser||!window._audioActive) return; // idle: let the procedural waveform drive
-  analyser.getByteFrequencyData(dataArr);
-  const bars=window._wfBars,BARS=bars.length;
-  for(let i=0;i<BARS;i++){
-    const idx=Math.floor(i/BARS*dataArr.length*0.7);
-    const v=dataArr[idx]/255;
-    bars[i].style.height=(20+v*80)+'%';
-  }
-  window._audioLevel=dataArr.reduce((a,b)=>a+b,0)/dataArr.length/255;
-}
 
 // ========== 7. Reveal on scroll ==========
 (function(){
@@ -1071,9 +997,9 @@ window.__attachCardGlow = function(scope){
 };
 window.__attachCardGlow();
 
-// ========== 8. Hero: 3D zoom on scroll (video + text) ==========
+// ========== 8. Hero: 3D zoom on scroll (image + text) ==========
 (function(){
-  const video=document.getElementById('heroVideo');
+  const media=document.getElementById('heroMedia');
   const inner=document.querySelector('.hero-inner');
   const stats=document.querySelector('.hero-stats');
   const hero=document.querySelector('.hero');
@@ -1084,15 +1010,15 @@ window.__attachCardGlow();
     if(Math.abs(y-lastY)<0.6) return;
     // Skip entirely once hero is past viewport — nothing to update
     if(y>vh*1.1){ if(lastY<=vh*1.1){
-      if(video) video.style.transform='translate3d(0,-40px,0) scale(1.08)';
+      if(media) media.style.transform='translate3d(0,-40px,0) scale(1.08)';
       if(inner) inner.style.transform='translate3d(0,-80px,0) scale(.92)';
     } lastY=y; return; }
     lastY=y;
     const prog=Math.min(1,y/vh);
     const ease=prog*prog*(3-2*prog); // smoothstep
-    if(video){
-      video.style.transform=`translate3d(0,${-ease*40}px,0) scale(${1+ease*.08})`;
-      video.style.opacity=Math.max(0,1-ease*.9);
+    if(media){
+      media.style.transform=`translate3d(0,${-ease*40}px,0) scale(${1+ease*.08})`;
+      media.style.opacity=Math.max(0,1-ease*.9);
     }
     if(inner){
       inner.style.transform=`translate3d(0,${-ease*80}px,0) scale(${1-ease*.08})`;
@@ -1118,8 +1044,7 @@ window.__attachCardGlow();
 })();
 
 // ========== 9. Why image — parallax DISABLED for scroll smoothness ==========
-// (Transforming a 1080p video while glass cards w/ backdrop-filter sit on top forces
-//  a full recomposite of every blurred card per frame. The video is cinematic on its own.)
+// (Keep section backdrops static while glass cards are visible to avoid expensive recompositing.)
 
 // ========== 10. Why pillars active highlight on scroll ==========
 (function(){
@@ -1174,111 +1099,6 @@ window.__attachCardGlow();
     });
   });
 })();
-// ========== 13. Cinematic video backdrops — continuous infinite loop, never paused ==========
-// User requirement: zero visible pause/break, even at section boundaries. So we DO NOT
-// pause off-screen videos (which would create a stutter on re-entry) — we let them keep
-// looping in the background. Browsers throttle off-screen muted video automatically
-// for power; that's fine and invisible. We also avoid the manual timeupdate rewind hack,
-// because the native `loop` attribute on muted, autoplaying video is already gapless.
-(function(){
-  // Lazy videos (below the fold) are handled by the dedicated loader below — this block
-  // only manages videos that carry a src up front (the hero), so landing loads just the hero.
-  const videos = document.querySelectorAll('video[data-bg-video]:not([data-lazy-video])');
-  if(!videos.length) return;
-  const slow = 0.7; // hypnotic playback rate
-  const heroVid = document.getElementById('heroVideo');
-
-  if(heroVid){
-    const reveal = ()=>{
-      heroVid.style.opacity = '1';
-      heroVid.playbackRate = slow;
-      heroVid.play().catch(()=>{});
-    };
-    heroVid.addEventListener('loadeddata', reveal);
-    heroVid.addEventListener('canplay', reveal);
-    if(heroVid.readyState >= 2) reveal();
-    heroVid.addEventListener('error', ()=>{ heroVid.style.display = 'none'; });
-    // Re-kick if the tab was backgrounded (visibilitychange is the only resume needed)
-    document.addEventListener('visibilitychange', ()=>{
-      if(!document.hidden && heroVid.paused) heroVid.play().catch(()=>{});
-    });
-  }
-
-  // Kick every video once and trust native `loop` for seamless looping. Re-kick on
-  // visibility change in case the tab was backgrounded.
-  videos.forEach(v=>{
-    v.loop = true;
-    v.playbackRate = slow;
-    const kick = ()=>{ const p=v.play(); if(p&&p.catch) p.catch(()=>{}); };
-    kick();
-    v.addEventListener('canplay', kick, { once:false });
-  });
-  document.addEventListener('visibilitychange', ()=>{
-    if(document.hidden) return;
-    videos.forEach(v=>{ if(v.paused){ const p=v.play(); if(p&&p.catch) p.catch(()=>{}); } });
-  });
-})();
-
-// ========== 13b. Lazy-load below-the-fold background videos ==========
-// The landing view only needs the hero video. The why / features / pricing clips (~21MB
-// combined) previously loaded immediately and starved the hero of bandwidth. Here we hold
-// their src in data-src and only assign it (start the download) ~600px before the section
-// scrolls into view. Their poster JPEGs show instantly in the meantime. Once loaded, a
-// video keeps looping forever — we never unload it, so the seamless-loop requirement holds.
-(function(){
-  const lazy = document.querySelectorAll('video[data-lazy-video]');
-  if(!lazy.length) return;
-  const slow = 0.7;
-  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const load = (v)=>{
-    if(v.dataset.loaded) return;
-    v.dataset.loaded = '1';
-    // Reduced motion: keep the still poster, skip the video download + playback entirely.
-    if(reduce) return;
-    const src = v.getAttribute('data-src');
-    if(src && !v.src){ v.src = src; }
-    v.loop = true;
-    v.preload = 'auto';
-    v.load();
-    const go = ()=>{ v.playbackRate = slow; const p=v.play(); if(p&&p.catch) p.catch(()=>{}); };
-    v.addEventListener('canplay', go);
-    if(v.readyState >= 3) go();
-    v.addEventListener('error', ()=>{ /* leave the poster in place if the clip fails */ }, {once:true});
-  };
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{ if(e.isIntersecting){ load(e.target); io.unobserve(e.target); } });
-  }, { rootMargin: '400px 0px' }); // lead time so the clip is ready just before it scrolls in
-
-  // The Why section sits just below the fold, so start observing (and thus preloading) only
-  // AFTER the hero has buffered — this keeps the whole landing bandwidth on the hero video.
-  // Fast scrollers and a fallback timer also trigger activation so nothing gets stuck.
-  let activated = false;
-  const activate = ()=>{ if(activated) return; activated = true; lazy.forEach(v=>io.observe(v)); };
-  const hero = document.getElementById('heroVideo');
-  if(hero){
-    if(hero.readyState >= 4) activate();
-    else hero.addEventListener('canplaythrough', activate, {once:true});
-  }
-  window.addEventListener('scroll', activate, {once:true, passive:true});
-  setTimeout(activate, 3500); // fallback if the hero never reaches canplaythrough
-
-  // Keep lazily-loaded clips alive after a tab switch, same as the hero.
-  document.addEventListener('visibilitychange', ()=>{
-    if(document.hidden) return;
-    lazy.forEach(v=>{ if(v.dataset.loaded && v.src && v.paused){ const p=v.play(); if(p&&p.catch) p.catch(()=>{}); } });
-  });
-})();
-
-// ========== 14. Reduced motion fallback ==========
-(function(){
-  if(!matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  document.querySelectorAll('video[data-bg-video]').forEach(v=>{
-    v.removeAttribute('autoplay');
-    v.pause();
-  });
-  document.documentElement.style.setProperty('--reduce-motion','1');
-})();
-
 </script>
 
 
