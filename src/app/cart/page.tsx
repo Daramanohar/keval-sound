@@ -1,208 +1,119 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import {
+  AlertCircle,
   ArrowRight,
   CheckCircle,
   CreditCard,
+  LoaderCircle,
   Music,
   Shield,
   ShoppingCart,
-  Tag,
   Trash2,
 } from "lucide-react";
 import PageTransition from "@/components/PageTransition";
-import { useStore, type PurchaseOrder } from "@/lib/store-context";
+import { openRazorpayCheckout } from "@/lib/razorpay-checkout";
+import type { RazorpayTrackCheckout } from "@/lib/razorpay-types";
+import { useStore } from "@/lib/store-context";
 import { cn, formatPrice } from "@/lib/utils";
 
+type ApiFailure = {
+  error?: string;
+  message?: string;
+};
+
+function createIdempotencyKey() {
+  return globalThis.crypto?.randomUUID?.() ??
+    `${Date.now().toString(36)}_${Math.random().toString(36).slice(2)}`;
+}
+
 export default function CartPage() {
-  const [promoCode, setPromoCode] = useState("");
-  const [promoApplied, setPromoApplied] = useState(false);
-  const [completedOrder, setCompletedOrder] = useState<PurchaseOrder | null>(null);
+  const router = useRouter();
+  const { cart, removeFromCart, clearCart } = useStore();
+  const [isCheckingOut, setIsCheckingOut] = useState(false);
+  const [checkoutError, setCheckoutError] = useState<string | null>(null);
+  const checkoutKeyRef = useRef(createIdempotencyKey());
 
-  const { cart, removeFromCart, checkout } = useStore();
+  const trackItems = useMemo(() => cart.filter((item) => item.type === "track"), [cart]);
+  const unsupportedItems = useMemo(() => cart.filter((item) => item.type !== "track"), [cart]);
+  const subtotal = trackItems.length * 99;
 
-  const totals = useMemo(() => {
-    const subtotal = cart.reduce((sum, item) => sum + item.price, 0);
-    const discount = promoApplied ? Math.round(subtotal * 0.1) : 0;
-    const tax = Math.round((subtotal - discount) * 0.18);
-    const total = subtotal - discount + tax;
+  const handleCheckout = async () => {
+    if (!trackItems.length || unsupportedItems.length || isCheckingOut) return;
+    setIsCheckingOut(true);
+    setCheckoutError(null);
 
-    return { subtotal, discount, tax, total };
-  }, [cart, promoApplied]);
-
-  const itemBreakdown = useMemo(
-    () => ({
-      track: cart.filter((item) => item.type === "track").length,
-      pack: cart.filter((item) => item.type === "pack").length,
-      sample: cart.filter((item) => item.type === "sample").length,
-    }),
-    [cart]
-  );
-
-  const applyPromo = () => {
-    if (promoCode.trim().toLowerCase() === "keval10") {
-      setPromoApplied(true);
+    try {
+      const response = await fetch("/api/checkout/sessions", {
+        method: "POST",
+        credentials: "same-origin",
+        headers: {
+          "Content-Type": "application/json",
+          "Idempotency-Key": checkoutKeyRef.current,
+        },
+        body: JSON.stringify({
+          mode: "tracks",
+          trackIds: trackItems.map((item) => item.id),
+        }),
+      });
+      const body = (await response.json().catch(() => null)) as
+        | (RazorpayTrackCheckout & ApiFailure)
+        | null;
+      if (!response.ok || body?.provider !== "razorpay" || body.flow !== "track_purchase") {
+        throw new Error(body?.message || "Checkout could not be started. Please try again.");
+      }
+      const payment = await openRazorpayCheckout(body);
+      const verification = await fetch("/api/checkout/razorpay/verify", {
+        method: "POST",
+        credentials: "same-origin",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          appOrderId: body.appOrderId,
+          razorpay_order_id: payment.razorpay_order_id ?? body.providerOrderId,
+          razorpay_payment_id: payment.razorpay_payment_id,
+          razorpay_signature: payment.razorpay_signature,
+        }),
+      });
+      const verificationBody = (await verification.json().catch(() => null)) as ApiFailure | null;
+      if (!verification.ok) {
+        throw new Error(
+          verificationBody?.message ||
+            "Payment was received but confirmation is still pending. Check Purchases shortly."
+        );
+      }
+      clearCart();
+      router.push("/account?tab=history&checkout=success");
+    } catch (error) {
+      setCheckoutError(
+        error instanceof Error ? error.message : "Checkout could not be started. Please try again."
+      );
+      setIsCheckingOut(false);
     }
   };
-
-  const handleCheckout = () => {
-    const order = checkout({
-      discountRate: promoApplied ? 0.1 : 0,
-      promoCode: promoApplied ? promoCode : undefined,
-    });
-
-    if (order) {
-      setCompletedOrder(order);
-      setPromoCode("");
-      setPromoApplied(false);
-    }
-  };
-
-  if (completedOrder) {
-    return (
-      <PageTransition>
-        <div className="mx-auto max-w-5xl px-6 pt-12 pb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="glass rounded-3xl p-8 md:p-10"
-          >
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-2xl bg-vivid-blue/15 flex items-center justify-center">
-                <CheckCircle className="w-6 h-6 text-vivid-blue" />
-              </div>
-              <div>
-                <h1 className="text-2xl font-bold text-white">Purchase complete</h1>
-                <p className="text-sm text-muted">
-                  Your ownership and license details are ready right away.
-                </p>
-              </div>
-            </div>
-
-            <div className="grid lg:grid-cols-[1fr_320px] gap-6">
-              <div className="space-y-4">
-                <div className="rounded-2xl bg-white/[0.03] border border-white/[0.06] p-5">
-                  <h2 className="text-sm font-semibold text-white mb-4">Ownership summary</h2>
-                  <div className="space-y-3">
-                    {completedOrder.items.map((item) => (
-                      <div
-                        key={`${item.type}-${item.id}`}
-                        className="rounded-xl bg-white/[0.03] border border-white/[0.06] p-4"
-                      >
-                        <div className="flex items-start justify-between gap-4">
-                          <div>
-                            <div className="flex items-center gap-2">
-                              <p className="text-sm font-semibold text-white">{item.title}</p>
-                              <span
-                                className={cn(
-                                  "rounded-full px-2 py-0.5 text-[10px] font-bold uppercase",
-                                  item.type === "pack"
-                                    ? "bg-mid-purple/25 text-light-grey"
-                                    : item.type === "sample"
-                                      ? "bg-grey-azure/18 text-grey-azure"
-                                      : "bg-vivid-blue/12 text-vivid-blue"
-                                )}
-                              >
-                                {item.type}
-                              </span>
-                            </div>
-                            <p className="text-xs text-muted mt-1">{item.artist}</p>
-                          </div>
-                          <span className="text-xs font-semibold text-dandelion uppercase">
-                            {item.license} license
-                          </span>
-                        </div>
-                        <div className="mt-3 flex flex-wrap items-center gap-3 text-xs">
-                          <span className="text-muted">License ID</span>
-                          <span className="px-2.5 py-1 rounded-lg bg-vivid-blue/10 text-vivid-blue">
-                            {completedOrder.licenses[`${item.type}:${item.id}`]}
-                          </span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="flex flex-wrap gap-3">
-                  <Link
-                    href="/account?tab=history"
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-vivid-blue to-mid-purple text-white font-semibold hover:shadow-lg hover:shadow-vivid-blue/20 transition-all"
-                  >
-                    View Purchase History
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                  <Link
-                    href="/explore"
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/[0.06] text-white font-semibold hover:bg-white/[0.1] transition-all"
-                  >
-                    Continue Browsing
-                  </Link>
-                </div>
-              </div>
-
-              <div className="rounded-2xl bg-white/[0.03] border border-white/[0.06] p-5 h-fit">
-                <h2 className="text-sm font-semibold text-white mb-4">Order receipt</h2>
-                <div className="space-y-3 text-sm">
-                  <div className="flex justify-between text-muted">
-                    <span>Order ID</span>
-                    <span>{completedOrder.id}</span>
-                  </div>
-                  <div className="flex justify-between text-muted">
-                    <span>Subtotal</span>
-                    <span>{formatPrice(completedOrder.subtotal)}</span>
-                  </div>
-                  <div className="flex justify-between text-muted">
-                    <span>Discount</span>
-                    <span>-{formatPrice(completedOrder.discount)}</span>
-                  </div>
-                  <div className="flex justify-between text-muted">
-                    <span>GST</span>
-                    <span>{formatPrice(completedOrder.tax)}</span>
-                  </div>
-                  <div className="pt-3 border-t border-white/[0.06] flex justify-between text-white font-semibold">
-                    <span>Total Paid</span>
-                    <span>{formatPrice(completedOrder.total)}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </PageTransition>
-    );
-  }
 
   return (
     <PageTransition>
-      <div className="pt-12 pb-16">
+      <div className="pt-8 pb-20">
         <h1 className="text-3xl font-bold text-white mb-2">Your Cart</h1>
-        <p className="text-sm text-muted mb-10">
-          {cart.length} {cart.length === 1 ? "item" : "items"} ready for checkout across single-track and full-pack licensing.
+        <p className="text-sm text-muted mb-8">
+          Review your exclusive track licenses before secure checkout.
         </p>
 
         {cart.length > 0 ? (
-          <div className="grid lg:grid-cols-[1fr_380px] gap-8">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_380px]">
             <div className="space-y-3">
-              <div className="flex flex-wrap gap-2">
-                {itemBreakdown.track ? (
-                  <span className="rounded-full bg-vivid-blue/12 px-3 py-1 text-xs font-semibold text-vivid-blue">
-                    {itemBreakdown.track} single-track {itemBreakdown.track === 1 ? "license" : "licenses"}
-                  </span>
-                ) : null}
-                {itemBreakdown.pack ? (
-                  <span className="rounded-full bg-mid-purple/25 px-3 py-1 text-xs font-semibold text-light-grey">
-                    {itemBreakdown.pack} full {itemBreakdown.pack === 1 ? "pack" : "packs"}
-                  </span>
-                ) : null}
-                {itemBreakdown.sample ? (
-                  <span className="rounded-full bg-grey-azure/18 px-3 py-1 text-xs font-semibold text-grey-azure">
-                    {itemBreakdown.sample} sample {itemBreakdown.sample === 1 ? "license" : "licenses"}
-                  </span>
-                ) : null}
-              </div>
+              {unsupportedItems.length > 0 ? (
+                <div className="flex items-start gap-3 rounded-lg border border-dandelion/30 bg-dandelion/8 p-4 text-sm text-dandelion">
+                  <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />
+                  <p>
+                    Checkout currently supports individual songs only. Remove pack or sample items to continue.
+                  </p>
+                </div>
+              ) : null}
 
               <AnimatePresence mode="popLayout">
                 {cart.map((item) => (
@@ -211,59 +122,48 @@ export default function CartPage() {
                     layout
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, x: -100, height: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="glass-card rounded-xl p-4 flex items-center gap-4"
+                    exit={{ opacity: 0, x: -80 }}
+                    transition={{ duration: 0.22 }}
+                    className="glass-card flex items-center gap-4 rounded-lg p-4"
                   >
                     <div
                       className={cn(
-                        "w-16 h-16 rounded-lg bg-gradient-to-br shrink-0 flex items-center justify-center",
+                        "flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-md bg-gradient-to-br",
                         item.coverUrl
                       )}
                     >
-                      <Music className="w-6 h-6 text-white/60" />
+                      {item.coverUrl?.startsWith("/") ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src={item.coverUrl} alt="" className="h-full w-full object-cover" />
+                      ) : (
+                        <Music className="h-6 w-6 text-white/60" />
+                      )}
                     </div>
 
-                    <div className="flex-1 min-w-0">
+                    <div className="min-w-0 flex-1">
                       <div className="flex items-center gap-2">
-                        <h3 className="text-sm font-semibold text-white truncate">{item.title}</h3>
-                        <span
-                          className={cn(
-                            "px-2 py-0.5 rounded-full text-[10px] font-bold uppercase",
-                            item.type === "pack"
-                              ? "bg-mid-purple/30 text-light-grey"
-                              : item.type === "sample"
-                                ? "bg-grey-azure/20 text-grey-azure"
-                                : "bg-vivid-blue/20 text-vivid-blue"
-                          )}
-                        >
+                        <h2 className="truncate text-sm font-semibold text-white">{item.title}</h2>
+                        <span className="rounded-full bg-dandelion/12 px-2 py-0.5 text-[10px] font-bold uppercase text-dandelion">
                           {item.type}
                         </span>
                       </div>
-                      <p className="text-xs text-muted mt-0.5">{item.artist}</p>
-                      <p className="text-[11px] text-muted/70 mt-1">
-                        {item.type === "pack"
-                          ? "Full pack purchase"
-                          : item.type === "track"
-                            ? "Single-track license"
-                            : "Sample license"}
-                      </p>
-                      <div className="flex items-center gap-2 mt-2">
-                        <Shield className="w-3 h-3 text-green-400" />
-                        <span className="text-[10px] text-green-400 uppercase font-medium tracking-wider">
-                          {item.license} license
-                        </span>
+                      <p className="mt-0.5 text-xs text-muted">{item.artist}</p>
+                      <div className="mt-2 flex items-center gap-2 text-[10px] font-medium uppercase tracking-wider text-dandelion">
+                        <Shield className="h-3 w-3" />
+                        Exclusive license
                       </div>
                     </div>
 
-                    <div className="text-right shrink-0">
-                      <p className="text-lg font-bold text-white">{formatPrice(item.price)}</p>
+                    <div className="shrink-0 text-right">
+                      <p className="text-lg font-bold text-white">
+                        {item.type === "track" ? formatPrice(99) : formatPrice(item.price)}
+                      </p>
                       <button
                         type="button"
                         onClick={() => removeFromCart(item.id, item.type)}
-                        className="flex items-center gap-1 text-xs text-muted hover:text-zesty-red transition-colors mt-1 ml-auto"
+                        className="ml-auto mt-1 flex items-center gap-1 text-xs text-muted transition-colors hover:text-zesty-red"
                       >
-                        <Trash2 className="w-3 h-3" />
+                        <Trash2 className="h-3 w-3" />
                         Remove
                       </button>
                     </div>
@@ -272,109 +172,82 @@ export default function CartPage() {
               </AnimatePresence>
             </div>
 
-            <div className="lg:sticky lg:top-24 h-fit">
-              <div className="glass rounded-2xl p-6">
-                <h3 className="text-lg font-bold text-white mb-6">Order Summary</h3>
-
-                <div className="mb-6">
-                  <label className="text-xs text-muted font-medium mb-2 block">Promo Code</label>
-                  <div className="flex gap-2">
-                    <input
-                      type="text"
-                      value={promoCode}
-                      onChange={(event) => setPromoCode(event.target.value)}
-                      placeholder="Enter code"
-                      disabled={promoApplied}
-                      className="flex-1 px-3 py-2 rounded-lg glass-subtle bg-transparent text-sm text-white placeholder:text-muted/60 outline-none focus:ring-1 focus:ring-vivid-blue/50 disabled:opacity-50"
-                    />
-                    <button
-                      type="button"
-                      onClick={applyPromo}
-                      disabled={promoApplied || !promoCode}
-                      className={cn(
-                        "px-4 py-2 rounded-lg text-sm font-medium transition-all",
-                        promoApplied
-                          ? "bg-green-500/20 text-green-400"
-                          : "bg-vivid-blue/20 text-vivid-blue hover:bg-vivid-blue hover:text-white disabled:opacity-50"
-                      )}
-                    >
-                      {promoApplied ? <CheckCircle className="w-4 h-4" /> : "Apply"}
-                    </button>
-                  </div>
-                  {promoApplied && (
-                    <p className="text-xs text-green-400 mt-1">10% discount applied.</p>
-                  )}
-                  <p className="text-[10px] text-muted mt-1">Try KEVAL10 for 10% off.</p>
-                </div>
-
+            <aside className="h-fit lg:sticky lg:top-24">
+              <div className="glass rounded-lg p-6">
+                <h2 className="mb-6 text-lg font-bold text-white">Order Summary</h2>
                 <div className="space-y-3 text-sm">
                   <div className="flex justify-between text-muted">
-                    <span>Subtotal ({cart.length} items)</span>
-                    <span>{formatPrice(totals.subtotal)}</span>
+                    <span>{trackItems.length} licensed {trackItems.length === 1 ? "song" : "songs"}</span>
+                    <span>{formatPrice(subtotal)}</span>
                   </div>
-                  {totals.discount > 0 && (
-                    <div className="flex justify-between text-green-400">
-                      <span className="flex items-center gap-1">
-                        <Tag className="w-3 h-3" /> Promo Discount
-                      </span>
-                      <span>-{formatPrice(totals.discount)}</span>
-                    </div>
-                  )}
                   <div className="flex justify-between text-muted">
-                    <span>GST (18%)</span>
-                    <span>{formatPrice(totals.tax)}</span>
+                    <span>Delivery</span>
+                    <span>Digital</span>
                   </div>
-                  <div className="border-t border-border pt-3 flex justify-between text-white font-bold text-base">
+                  <div className="flex justify-between text-muted">
+                    <span>Secure payment</span>
+                    <span>Razorpay</span>
+                  </div>
+                  <div className="flex justify-between border-t border-border pt-3 text-base font-bold text-white">
                     <span>Total</span>
-                    <span>{formatPrice(totals.total)}</span>
+                    <span>{formatPrice(subtotal)}</span>
                   </div>
                 </div>
+
+                {checkoutError ? (
+                  <div role="alert" className="mt-5 flex items-start gap-2 rounded-md border border-zesty-red/30 bg-zesty-red/8 p-3 text-xs text-zesty-red">
+                    <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />
+                    <span>{checkoutError}</span>
+                  </div>
+                ) : null}
 
                 <button
                   type="button"
                   onClick={handleCheckout}
-                  className="mt-6 w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-gradient-to-r from-vivid-blue to-mid-purple text-white font-semibold text-base hover:shadow-lg hover:shadow-vivid-blue/20 transition-all hover:-translate-y-0.5"
+                  disabled={!trackItems.length || unsupportedItems.length > 0 || isCheckingOut}
+                  className="mt-6 flex w-full items-center justify-center gap-2 rounded-lg bg-dandelion px-6 py-4 text-base font-semibold text-vampire-black transition-all hover:brightness-105 disabled:cursor-not-allowed disabled:opacity-45"
                 >
-                  <CreditCard className="w-5 h-5" />
-                  Complete Purchase
+                  {isCheckingOut ? (
+                    <LoaderCircle className="h-5 w-5 animate-spin" />
+                  ) : (
+                    <CreditCard className="h-5 w-5" />
+                  )}
+                  {isCheckingOut ? "Opening secure checkout..." : "Continue to Razorpay"}
                 </button>
 
-                <div className="mt-6 flex flex-col gap-2">
+                <div className="mt-6 space-y-2">
                   {[
-                    "Exclusive ownership guaranteed",
-                    "Single tracks and full packs can be purchased in one order",
-                    "Tracks and packs are removed from the catalog after purchase",
-                    "Secure checkout flow with instant confirmation",
-                    "Immediate license delivery after payment",
+                    "The server rechecks price and availability",
+                    "Payment is processed securely by Razorpay",
+                    "One MP3, one WAV, a license PDF, and an invoice after payment",
+                    "Purchased songs become sold out for future buyers",
                   ].map((text) => (
-                    <div key={text} className="flex items-center gap-2 text-xs text-muted">
-                      <CheckCircle className="w-3 h-3 text-green-400 shrink-0" />
+                    <div key={text} className="flex items-start gap-2 text-xs text-muted">
+                      <CheckCircle className="mt-0.5 h-3 w-3 shrink-0 text-dandelion" />
                       {text}
                     </div>
                   ))}
                 </div>
               </div>
-            </div>
+            </aside>
           </div>
         ) : (
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center py-24"
+            className="py-24 text-center"
           >
-            <div className="w-20 h-20 rounded-full bg-white/[0.04] flex items-center justify-center mx-auto mb-6">
-              <ShoppingCart className="w-8 h-8 text-muted" />
+            <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-white/[0.04]">
+              <ShoppingCart className="h-8 w-8 text-muted" />
             </div>
-            <h2 className="text-xl font-bold text-white mb-2">Your cart is empty</h2>
-            <p className="text-muted mb-8">
-              Browse exclusive tracks, packs, and samples to start building your collection.
-            </p>
+            <h2 className="mb-2 text-xl font-bold text-white">Your cart is empty</h2>
+            <p className="mb-8 text-muted">Find a song, preview it, and add its exclusive license here.</p>
             <Link
               href="/explore"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-vivid-blue to-mid-purple text-white font-semibold hover:shadow-lg hover:shadow-vivid-blue/20 transition-all"
+              className="inline-flex items-center gap-2 rounded-lg bg-dandelion px-6 py-3 font-semibold text-vampire-black transition-all hover:brightness-105"
             >
               Explore Catalog
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="h-4 w-4" />
             </Link>
           </motion.div>
         )}

@@ -8,6 +8,8 @@
     "postinstall": "prisma generate",
     "start": "next start",
     "lint": "eslint",
+    "test": "vitest run",
+    "test:payments": "vitest run src/server/payments src/server/commerce/dispute-state.test.ts",
     "catalog:generate": "node scripts/generate-production-catalog.mjs",
     "r2:stage-public": "node scripts/stage-r2-public-assets.mjs",
     "r2:stage-wav": "node scripts/stage-r2-private-wavs.mjs",
@@ -20,23 +22,28 @@
     "db:setup-vector": "node scripts/setup-neon-vector-search.mjs",
     "catalog:sync-db": "node scripts/sync-production-catalog-to-neon.mjs",
     "ai:embed-tracks": "node scripts/embed-tracks.mjs",
-    "ai:test-search": "node scripts/query-track-similarity.mjs"
+    "ai:test-search": "node scripts/query-track-similarity.mjs",
+    "razorpay:sync-plans": "node scripts/sync-razorpay-plans.mjs",
+    "razorpay:verify": "node scripts/verify-razorpay-readiness.mjs"
   },
   "dependencies": {
     "@clerk/backend": "^3.5.0",
     "@clerk/nextjs": "^7.4.3",
     "@gsap/react": "^2.1.2",
-    "@prisma/adapter-pg": "^7.8.0",
-    "@prisma/client": "^7.8.0",
+    "@prisma/adapter-pg": "^7.9.1",
+    "@prisma/client": "^7.9.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.38.0",
     "gsap": "^3.14.2",
     "lucide-react": "^1.7.0",
-    "next": "16.2.2",
+    "next": "16.3.0",
+    "pdf-lib": "^1.17.1",
     "pg": "^8.21.0",
-    "prisma": "^7.8.0",
+    "razorpay": "^2.9.8",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "server-only": "^0.0.1",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -45,8 +52,10 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.2.2",
+    "eslint-config-next": "16.3.0",
+    "prisma": "^7.9.1",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^4.1.10"
   }
 }
