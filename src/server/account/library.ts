@@ -184,6 +184,12 @@ export async function listAccountOrders(userId: string, input: { cursor?: string
           taxPaise: true,
           totalPaise: true,
           currency: true,
+          track: {
+            select: {
+              saleStatus: true,
+              pack: { select: { coverUrl: true } },
+            },
+          },
           license: {
             select: {
               licenseNumber: true,
@@ -209,7 +215,17 @@ export async function listAccountOrders(userId: string, input: { cursor?: string
       refundedAt: order.refundedAt?.toISOString() ?? null,
       createdAt: order.createdAt.toISOString(),
       items: order.items.map((item) => ({
-        ...item,
+        id: item.id,
+        trackId: item.trackId,
+        titleSnapshot: item.titleSnapshot,
+        packTitleSnapshot: item.packTitleSnapshot,
+        categorySnapshot: item.categorySnapshot,
+        unitAmountPaise: item.unitAmountPaise,
+        taxPaise: item.taxPaise,
+        totalPaise: item.totalPaise,
+        currency: item.currency,
+        coverUrl: item.track.pack.coverUrl,
+        saleStatus: item.track.saleStatus,
         license: item.license
           ? {
               ...item.license,

@@ -34,7 +34,7 @@ const mainNav = [
 ];
 
 const libraryNav = [
-  { label: "Wishlist", href: "/account?tab=wishlist", icon: Heart, tab: "wishlist" },
+  { label: "Liked Songs", href: "/account?tab=liked", icon: Heart, tab: "liked" },
   {
     label: "Recently Played",
     href: "/account?tab=recent",

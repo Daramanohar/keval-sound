@@ -236,7 +236,7 @@ export default function PackDetailPage() {
             <button
               type="button"
               onClick={() => togglePackWishlist(pack)}
-              aria-label={liked ? "Remove from wishlist" : "Add to wishlist"}
+              aria-label={liked ? "Remove saved pack" : "Save pack"}
               className={cn(
                 "rounded-xl p-3 transition-all",
                 liked
@@ -395,12 +395,12 @@ export default function PackDetailPage() {
                     {trackOwned ? "Owned" : `₹${SONG_PRICE}`}
                   </span>
 
-                  {/* Loved — per-row wishlist toggle (Heart) */}
+                  {/* Per-row Liked Songs toggle */}
                   <div className="flex items-center lg:justify-center">
                     <button
                       type="button"
                       onClick={() => toggleTrackWishlist(track)}
-                      aria-label={trackSaved ? "Remove from wishlist" : "Add to wishlist"}
+                      aria-label={trackSaved ? "Remove from Liked Songs" : "Add to Liked Songs"}
                       aria-pressed={trackSaved}
                       className={cn(
                         "flex h-8 w-8 items-center justify-center rounded-lg transition-colors",

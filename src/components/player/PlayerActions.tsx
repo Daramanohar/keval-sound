@@ -48,11 +48,39 @@ export default function PlayerActions({ compact = false }: { compact?: boolean }
     router.push(section ? `${trackHref}#${section}` : trackHref);
   };
 
+  const openCommerce = () => {
+    if (!track) return;
+    if (owned) {
+      closeFullPlayer();
+      router.push("/account?tab=downloads");
+      return;
+    }
+    if (inCart) {
+      closeFullPlayer();
+      router.push("/cart");
+      return;
+    }
+
+    const added = addTrackToCart(track);
+    showToast({
+      tone: added ? "success" : "info",
+      title: added ? `${track.title} added to cart` : `${track.title} is already in your cart`,
+      description: `${formatPrice(track.price)} | MP3, WAV, license PDF, and invoice after purchase`,
+    });
+  };
+
   if (compact) {
     return (
       <div className="flex items-center gap-1">
-        <ActionButton label={liked ? "Remove from wishlist" : "Save to wishlist"} active={liked} onClick={() => track && toggleTrackWishlist(track)}>
+        <ActionButton label={liked ? "Remove from Liked Songs" : "Add to Liked Songs"} active={liked} onClick={() => track && toggleTrackWishlist(track)}>
           <Heart className={cn("h-4 w-4", liked && "fill-current")} />
+        </ActionButton>
+        <ActionButton
+          label={owned ? "Open purchased downloads" : inCart ? "Open cart" : "Add track to cart"}
+          active={inCart}
+          onClick={openCommerce}
+        >
+          {owned ? <Download className="h-4 w-4" /> : <ShoppingCart className="h-4 w-4" />}
         </ActionButton>
         <ActionButton label="Share track" onClick={() => void share()}><Share2 className="h-4 w-4" /></ActionButton>
       </div>
@@ -61,7 +89,7 @@ export default function PlayerActions({ compact = false }: { compact?: boolean }
 
   return (
     <div className="flex flex-wrap items-center justify-center gap-2">
-      <ActionButton label={liked ? "Remove from wishlist" : "Save to wishlist"} text={liked ? "Saved" : "Save"} active={liked} onClick={() => track && toggleTrackWishlist(track)}>
+      <ActionButton label={liked ? "Remove from Liked Songs" : "Add to Liked Songs"} text={liked ? "Liked" : "Like"} active={liked} onClick={() => track && toggleTrackWishlist(track)}>
         <Heart className={cn("h-4 w-4", liked && "fill-current")} />
       </ActionButton>
       <ActionButton label="Share track" text="Share" onClick={() => void share()}><Share2 className="h-4 w-4" /></ActionButton>
@@ -73,19 +101,11 @@ export default function PlayerActions({ compact = false }: { compact?: boolean }
         <button
           type="button"
           disabled={!track}
-          onClick={() => {
-            if (!track) return;
-            const added = addTrackToCart(track);
-            showToast({
-              tone: added ? "success" : "info",
-              title: added ? `${track.title} added to cart` : `${track.title} is already in your cart`,
-              description: `${formatPrice(track.price)} · MP3, WAV and license after purchase`,
-            });
-          }}
+          onClick={openCommerce}
           className="inline-flex h-10 items-center gap-2 rounded-md bg-zesty-red px-4 text-xs font-semibold text-white outline-none transition-colors hover:bg-zesty-red/85 focus-visible:ring-2 focus-visible:ring-dandelion disabled:opacity-40"
         >
           <ShoppingCart className="h-4 w-4" />
-          {inCart ? "In cart" : `Buy license · ${formatPrice(currentItem.price ?? 99)}`}
+          {inCart ? "Open cart" : `Buy license | ${formatPrice(currentItem.price ?? 99)}`}
         </button>
       )}
       {license ? (

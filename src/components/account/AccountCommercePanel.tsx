@@ -1,7 +1,10 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 import {
+  Archive,
   Check,
   CreditCard,
   Download,
@@ -13,6 +16,7 @@ import {
   Receipt,
   ShieldCheck,
 } from "lucide-react";
+import { downloadTrackPackage } from "@/lib/download-bundle";
 import { openRazorpayCheckout } from "@/lib/razorpay-checkout";
 import type { RazorpaySubscriptionCheckout } from "@/lib/razorpay-types";
 import { cn } from "@/lib/utils";
@@ -50,6 +54,8 @@ type OrderHistory = {
       taxPaise: number;
       totalPaise: number;
       currency: string;
+      coverUrl: string | null;
+      saleStatus: string;
       license: {
         licenseNumber: string;
         documentStatus: string;
@@ -221,32 +227,62 @@ function PurchaseHistory() {
                     <p className="font-semibold text-white">{order.orderNumber}</p>
                     <StatusPill status={order.status} />
                   </div>
-                  <p className="mt-1 text-xs text-muted">Created {formatDate(order.createdAt)}</p>
+                  <p className="mt-1 text-xs text-muted">
+                    {order.paidAt
+                      ? `Paid ${formatDate(order.paidAt)}`
+                      : `Created ${formatDate(order.createdAt)}`}
+                  </p>
                 </div>
                 <div className="sm:text-right">
                   <p className="font-semibold text-dandelion">{formatMoney(order.totalPaise, order.currency)}</p>
-                  <p className="mt-1 text-[11px] text-muted">
-                    Includes {formatMoney(order.taxPaise, order.currency)} tax
-                  </p>
+                  {order.taxPaise > 0 ? (
+                    <p className="mt-1 text-[11px] text-muted">
+                      Includes {formatMoney(order.taxPaise, order.currency)} tax
+                    </p>
+                  ) : null}
                 </div>
               </div>
               <div className="divide-y divide-white/[0.06]">
                 {order.items.map((item) => (
-                  <div key={item.id} className="flex flex-col gap-3 py-4 sm:flex-row sm:items-center sm:justify-between">
-                    <div className="min-w-0">
-                      <p className="truncate text-sm font-semibold text-white">{item.titleSnapshot}</p>
+                  <div key={item.id} className="flex flex-col gap-4 py-4 sm:flex-row sm:items-center">
+                    <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg bg-white/[0.04]">
+                      {item.coverUrl ? (
+                        <Image src={item.coverUrl} alt="" fill sizes="64px" className="object-cover" />
+                      ) : (
+                        <FileAudio className="absolute inset-0 m-auto h-5 w-5 text-muted" />
+                      )}
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <p className="truncate text-sm font-semibold text-white">{item.titleSnapshot}</p>
+                        <span className="rounded-full bg-dandelion/10 px-2 py-0.5 text-[9px] font-bold uppercase text-dandelion">
+                          Licensed
+                        </span>
+                      </div>
                       <p className="mt-1 text-xs text-muted">
-                        {item.packTitleSnapshot} · {item.categorySnapshot}
+                        {item.packTitleSnapshot} | {item.categorySnapshot}
+                      </p>
+                      <p className="mt-2 text-[11px] text-muted">
+                        MP3, WAV master, license PDF, and invoice included
                       </p>
                       {item.license ? (
-                        <p className="mt-2 text-[11px] font-medium text-dandelion">
+                        <p className="mt-1 text-[11px] font-medium text-dandelion">
                           License {item.license.licenseNumber}
                         </p>
                       ) : null}
                     </div>
-                    <p className="text-sm font-semibold text-white">
-                      {formatMoney(item.totalPaise, item.currency)}
-                    </p>
+                    <div className="flex shrink-0 items-center gap-3 sm:flex-col sm:items-end">
+                      <p className="text-sm font-semibold text-white">
+                        {formatMoney(item.totalPaise, item.currency)}
+                      </p>
+                      <Link
+                        href="/account?tab=downloads"
+                        className="inline-flex items-center gap-1.5 text-xs font-semibold text-dandelion transition-colors hover:text-white"
+                      >
+                        Open files
+                        <Download className="h-3.5 w-3.5" />
+                      </Link>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -273,6 +309,12 @@ function SecureDownloads() {
   const [library, setLibrary] = useState<DownloadLibrary | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [activeDownload, setActiveDownload] = useState<string | null>(null);
+  const [bundleProgress, setBundleProgress] = useState<{
+    itemId: string;
+    completed: number;
+    total: number;
+    label: string;
+  } | null>(null);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -306,12 +348,41 @@ function SecureDownloads() {
     }
   }, []);
 
+  const requestBundle = useCallback(async (item: DownloadLibrary["downloads"][number]) => {
+    if (!item.license) {
+      setError("The official license is still being prepared. Try again shortly.");
+      return;
+    }
+
+    const actionId = `${item.trackId}:BUNDLE`;
+    setActiveDownload(actionId);
+    setError(null);
+    try {
+      await downloadTrackPackage({
+        trackId: item.trackId,
+        title: item.title,
+        licenseNumber: item.license.licenseNumber,
+        orderNumber: item.order.orderNumber,
+        onProgress: (progress) => setBundleProgress({ itemId: item.orderItemId, ...progress }),
+      });
+    } catch (failure) {
+      setError(
+        failure instanceof Error
+          ? failure.message
+          : "The licensed package could not be prepared."
+      );
+    } finally {
+      setActiveDownload(null);
+      setBundleProgress(null);
+    }
+  }, []);
+
   return (
     <section className="glass rounded-2xl p-6">
       <PanelHeading
         icon={Download}
         title="Downloads"
-        subtitle="Each button creates a one-use, 15-minute entitlement grant. Master storage paths remain private."
+        subtitle="Download the complete licensed package as one ZIP, or retrieve any authorized file separately."
       />
       {error ? <ErrorNotice message={error} /> : null}
       {!library && !error ? <LoadingPanel /> : null}
@@ -319,22 +390,78 @@ function SecureDownloads() {
         <EmptyPanel>Purchased MP3, WAV, license, and invoice files will be delivered here.</EmptyPanel>
       ) : null}
       {library?.downloads.length ? (
-        <div className="grid gap-4 xl:grid-cols-2">
+        <div className="space-y-4">
           {library.downloads.map((item) => (
             <article key={item.orderItemId} className="rounded-2xl border border-white/[0.07] bg-white/[0.025] p-5">
-              <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-zesty-red/12 text-zesty-red">
-                  <FileAudio className="h-5 w-5" />
+              <div className="flex flex-col gap-5 lg:flex-row lg:items-center">
+                <div className="flex min-w-0 flex-1 items-start gap-4">
+                  <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg bg-zesty-red/12 text-zesty-red">
+                    {item.coverUrl ? (
+                      <Image src={item.coverUrl} alt="" fill sizes="64px" className="object-cover" />
+                    ) : (
+                      <FileAudio className="absolute inset-0 m-auto h-5 w-5" />
+                    )}
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <p className="truncate text-sm font-semibold text-white">{item.title}</p>
+                      <span className="rounded-full bg-dandelion/10 px-2 py-0.5 text-[9px] font-bold uppercase text-dandelion">
+                        4 files ready
+                      </span>
+                    </div>
+                    <p className="mt-1 truncate text-xs text-muted">{item.packTitle} | {item.category}</p>
+                    <p className="mt-2 text-[11px] text-dandelion">
+                      {item.license?.licenseNumber || "License preparing"}
+                    </p>
+                    <p className="mt-1 text-[10px] text-muted/70">
+                      Order {item.order.orderNumber} | Fulfilled {formatDate(item.order.fulfilledAt)}
+                    </p>
+                  </div>
                 </div>
-                <div className="min-w-0 flex-1">
-                  <p className="truncate text-sm font-semibold text-white">{item.title}</p>
-                  <p className="mt-1 truncate text-xs text-muted">{item.packTitle} · {item.category}</p>
-                  <p className="mt-2 text-[11px] text-dandelion">
-                    {item.license?.licenseNumber || "License preparing"}
-                  </p>
-                </div>
+                <button
+                  type="button"
+                  onClick={() => requestBundle(item)}
+                  disabled={
+                    activeDownload === `${item.trackId}:BUNDLE` ||
+                    !item.assets.mp3 ||
+                    !item.assets.wav ||
+                    !item.assets.licensePdf ||
+                    !item.assets.invoice
+                  }
+                  className="inline-flex h-12 shrink-0 items-center justify-center gap-2 rounded-lg bg-dandelion px-5 text-sm font-bold text-vampire-black transition-all hover:brightness-105 disabled:cursor-not-allowed disabled:opacity-45"
+                >
+                  {activeDownload === `${item.trackId}:BUNDLE` ? (
+                    <LoaderCircle className="h-4 w-4 animate-spin" />
+                  ) : (
+                    <Archive className="h-4 w-4" />
+                  )}
+                  {activeDownload === `${item.trackId}:BUNDLE`
+                    ? "Preparing package"
+                    : "Download complete package"}
+                </button>
               </div>
-              <div className="mt-5 grid grid-cols-2 gap-2 sm:grid-cols-4">
+
+              {bundleProgress?.itemId === item.orderItemId ? (
+                <div className="mt-4" aria-live="polite">
+                  <div className="mb-2 flex items-center justify-between gap-3 text-[11px] text-muted">
+                    <span>{bundleProgress.label}</span>
+                    <span>{bundleProgress.completed}/{bundleProgress.total}</span>
+                  </div>
+                  <div className="h-1.5 overflow-hidden rounded-full bg-white/[0.06]">
+                    <div
+                      className="h-full rounded-full bg-dandelion transition-[width] duration-200"
+                      style={{
+                        width: `${Math.max(
+                          5,
+                          (bundleProgress.completed / bundleProgress.total) * 100
+                        )}%`,
+                      }}
+                    />
+                  </div>
+                </div>
+              ) : null}
+
+              <div className="mt-5 grid grid-cols-2 gap-2 sm:grid-cols-4 lg:max-w-2xl">
                 <AssetButton
                   label="MP3"
                   icon={FileAudio}
@@ -364,9 +491,10 @@ function SecureDownloads() {
                   onClick={() => requestDownload(item.trackId, "INVOICE_PDF")}
                 />
               </div>
-              <p className="mt-4 text-[10px] text-muted/70">
-                Order {item.order.orderNumber} · Fulfilled {formatDate(item.order.fulfilledAt)}
-              </p>
+              <div className="mt-4 flex items-start gap-2 text-[10px] leading-relaxed text-muted/70">
+                <ShieldCheck className="mt-0.5 h-3.5 w-3.5 shrink-0 text-dandelion" />
+                Every request uses a short-lived, one-use authorization. Private WAV paths are never exposed as public R2 links.
+              </div>
             </article>
           ))}
         </div>

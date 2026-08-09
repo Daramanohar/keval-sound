@@ -243,7 +243,7 @@ export default function SongDetailPageClient({ track, pack }: SongDetailPageClie
             <button
               type="button"
               onClick={() => toggleTrackWishlist(track)}
-              aria-label={trackSaved ? "Remove from wishlist" : "Save to wishlist"}
+              aria-label={trackSaved ? "Remove from Liked Songs" : "Add to Liked Songs"}
               className={cn(
                 "rounded-xl p-3 transition-all",
                 trackSaved

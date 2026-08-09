@@ -33,7 +33,7 @@ function createIdempotencyKey() {
 
 export default function CartPage() {
   const router = useRouter();
-  const { cart, removeFromCart, clearCart } = useStore();
+  const { cart, removeFromCart, clearCart, refreshOwnedItems } = useStore();
   const [isCheckingOut, setIsCheckingOut] = useState(false);
   const [checkoutError, setCheckoutError] = useState<string | null>(null);
   const checkoutKeyRef = useRef(createIdempotencyKey());
@@ -85,6 +85,7 @@ export default function CartPage() {
             "Payment was received but confirmation is still pending. Check Purchases shortly."
         );
       }
+      await refreshOwnedItems();
       clearCart();
       router.push("/account?tab=history&checkout=success");
     } catch (error) {

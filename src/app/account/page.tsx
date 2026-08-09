@@ -20,14 +20,16 @@ import {
 } from "lucide-react";
 import PageTransition from "@/components/PageTransition";
 import AccountCommercePanel from "@/components/account/AccountCommercePanel";
+import LikedSongsPanel from "@/components/account/LikedSongsPanel";
 import { useAuth } from "@/lib/auth-context";
+import { useLikedSongs } from "@/lib/liked-songs-context";
 import { usePlayerControls } from "@/lib/player-context";
 import { findTrackById, useStore } from "@/lib/store-context";
 import { useToast } from "@/lib/toast-context";
 import { cn, formatPrice } from "@/lib/utils";
 
 const workspaceTabs = [
-  { id: "wishlist", label: "Wishlist", icon: Heart },
+  { id: "liked", label: "Liked Songs", icon: Heart },
   { id: "recent", label: "Recently Played", icon: Library },
   { id: "history", label: "Purchases", icon: Receipt },
   { id: "downloads", label: "Downloads", icon: Download },
@@ -37,6 +39,7 @@ const allTabs = new Set([
   "profile",
   "billing",
   "history",
+  "liked",
   "wishlist",
   "settings",
   "licensing",
@@ -46,14 +49,6 @@ const allTabs = new Set([
   "recent",
   "downloads",
 ]);
-
-function itemBadge(type: "track" | "pack" | "sample") {
-  return type === "pack"
-    ? "bg-mid-purple/25 text-light-grey"
-    : type === "sample"
-      ? "bg-grey-azure/20 text-grey-azure"
-      : "bg-vivid-blue/15 text-vivid-blue";
-}
 
 export default function AccountPage() {
   const searchParams = useSearchParams();
@@ -69,12 +64,8 @@ export default function AccountPage() {
     ownedAssets: number;
     latestOrderNumber: string | null;
   } | null>(null);
-  const {
-    wishlist,
-    isInCart,
-    isOwned,
-    addTrackToCart,
-  } = useStore();
+  const { isInCart, isOwned, addTrackToCart } = useStore();
+  const { likedCount } = useLikedSongs();
   const { recentlyPlayed, toggleTrack } = usePlayerControls();
   const { showToast } = useToast();
 
@@ -174,13 +165,16 @@ export default function AccountPage() {
     );
   };
 
-  const activeTab = allTabs.has(searchParams.get("tab") ?? "")
-    ? (searchParams.get("tab") as string)
-    : "wishlist";
+  const requestedTab = searchParams.get("tab") ?? "";
+  const activeTab = requestedTab === "wishlist"
+    ? "liked"
+    : allTabs.has(requestedTab)
+      ? requestedTab
+      : "liked";
 
   const libraryStats = useMemo(
     () => [
-      { label: "Saved", value: wishlist.length, tone: "text-vivid-blue" },
+      { label: "Liked", value: likedCount, tone: "text-zesty-red" },
       { label: "Recently Played", value: recentlyPlayed.length, tone: "text-dandelion" },
       { label: "Owned Assets", value: purchaseSummary?.ownedAssets ?? 0, tone: "text-white" },
       {
@@ -189,7 +183,7 @@ export default function AccountPage() {
         tone: "text-grey-azure",
       },
     ],
-    [purchaseSummary, recentlyPlayed.length, wishlist.length]
+    [likedCount, purchaseSummary, recentlyPlayed.length]
   );
 
   return (
@@ -225,7 +219,7 @@ export default function AccountPage() {
               </div>
               <h1 className="text-3xl font-bold text-white">Your Library Workspace</h1>
               <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted">
-                Manage saved tracks, recent previews, purchases, downloads, and playlists from one focused workspace.
+                Manage Liked Songs, recent previews, purchases, downloads, and playlists from one focused workspace.
               </p>
             </div>
 
@@ -268,41 +262,7 @@ export default function AccountPage() {
         </div>
 
         <div className="space-y-6">
-          {activeTab === "wishlist" && (
-            <section className="glass rounded-2xl p-6">
-              <SectionTitle
-                title="Wishlist"
-                subtitle="Saved songs and packs you may want to license next."
-              />
-              {wishlist.length ? (
-                <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-                  {wishlist.map((item) => (
-                    <div
-                      key={`${item.type}-${item.id}`}
-                      className={cn("rounded-2xl bg-gradient-to-br p-[1px]", item.coverUrl)}
-                    >
-                      <div className="h-full rounded-2xl bg-[#0c0d1c]/90 p-5 backdrop-blur">
-                        <div className="flex items-start justify-between gap-3">
-                          <div>
-                            <p className="text-sm font-semibold text-white">{item.title}</p>
-                            <p className="mt-1 text-xs text-muted">{item.artist}</p>
-                          </div>
-                          <span className={cn("rounded-full px-2 py-1 text-[10px] font-bold uppercase", itemBadge(item.type))}>
-                            {item.type}
-                          </span>
-                        </div>
-                        <p className="mt-4 text-sm font-semibold text-vivid-blue">
-                          {formatPrice(item.price)}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <EmptyState text="Save tracks and packs to your wishlist so your shortlist stays organized." />
-              )}
-            </section>
-          )}
+          {activeTab === "liked" && <LikedSongsPanel />}
 
           {activeTab === "recent" && (
             <section className="glass rounded-2xl p-6">
@@ -453,7 +413,7 @@ export default function AccountPage() {
               <div className="space-y-4 text-sm leading-relaxed text-muted">
                 <p>Every completed purchase generates a unique KEVAL SOUND license code tied to your account.</p>
                 <p>Exclusive tracks and full packs are removed from the live catalog immediately after purchase.</p>
-                <p>Use Purchases and Downloads to retrieve order receipts, ownership proof, and exportable manifests.</p>
+                <p>Use Purchases and Downloads to retrieve each licensed MP3, WAV master, license PDF, and invoice PDF.</p>
               </div>
             </SimplePanel>
           )}

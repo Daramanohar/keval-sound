@@ -167,7 +167,7 @@ export default function TopBar({ onMenuToggle, mobileOpen }: TopBarProps) {
       "/radio",
       "/packs",
       "/cart",
-      "/account?tab=wishlist",
+      "/account?tab=liked",
       "/account?tab=recent",
       "/account?tab=history",
       "/account?tab=settings",
@@ -396,9 +396,9 @@ export default function TopBar({ onMenuToggle, mobileOpen }: TopBarProps) {
         </div>
 
         <Link
-          href="/account?tab=wishlist"
+          href="/account?tab=liked"
           className="relative flex h-10 w-10 items-center justify-center rounded-xl text-muted hover:text-white hover:bg-white/[0.05] transition-all"
-          aria-label="Open wishlist"
+          aria-label="Open Liked Songs"
         >
           <Heart className="w-[18px] h-[18px]" />
           {wishlistCount > 0 && (

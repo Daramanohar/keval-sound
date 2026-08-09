@@ -706,7 +706,7 @@ function PlaylistCard({
                       "flex h-6 w-6 shrink-0 items-center justify-center rounded-md transition-colors",
                       saved ? "bg-zesty-red/15 text-zesty-red" : "bg-white/[0.05] text-muted hover:text-white"
                     )}
-                    aria-label={saved ? "Remove from wishlist" : "Save track"}
+                    aria-label={saved ? "Remove from Liked Songs" : "Add to Liked Songs"}
                   >
                     <Heart className={cn("h-3 w-3", saved && "fill-current")} />
                   </button>
@@ -884,7 +884,7 @@ function TrackTile({
               "flex h-8 w-8 items-center justify-center rounded-full transition-colors",
               saved ? "bg-zesty-red/15 text-zesty-red" : "bg-white/[0.06] text-muted hover:text-white"
             )}
-            aria-label={saved ? "Remove from wishlist" : "Save to wishlist"}
+            aria-label={saved ? "Remove from Liked Songs" : "Add to Liked Songs"}
           >
             <Heart className={cn("h-4 w-4", saved && "fill-current")} />
           </button>
@@ -941,7 +941,7 @@ function SearchResultRow({
             "flex h-9 w-9 items-center justify-center rounded-full transition-colors",
             saved ? "bg-zesty-red/15 text-zesty-red" : "bg-white/[0.06] text-muted hover:text-white"
           )}
-          aria-label={saved ? "Remove from wishlist" : "Save"}
+          aria-label={saved ? "Remove from Liked Songs" : "Add to Liked Songs"}
         >
           <Heart className={cn("h-4 w-4", saved && "fill-current")} />
         </button>
