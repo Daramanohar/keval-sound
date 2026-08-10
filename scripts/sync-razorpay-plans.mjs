@@ -20,6 +20,21 @@ if (livemode && (!allowLive || process.env.RAZORPAY_ALLOW_LIVE_MODE !== "true"))
 
 const razorpay = new Razorpay({ key_id: keyId, key_secret: keySecret });
 const providerColumn = livemode ? "razorpay_live_plan_id" : "razorpay_test_plan_id";
+const gstRateBps = Number(process.env.KEVAL_GST_RATE_BPS ?? "1800");
+const taxMode = (process.env.KEVAL_TAX_PRICING_MODE ?? "inclusive").toLowerCase();
+
+if (!Number.isInteger(gstRateBps) || gstRateBps < 0 || gstRateBps > 10_000) {
+  throw new Error("KEVAL_GST_RATE_BPS must be an integer between 0 and 10000.");
+}
+if (taxMode !== "inclusive" && taxMode !== "exclusive") {
+  throw new Error("KEVAL_TAX_PRICING_MODE must be inclusive or exclusive.");
+}
+
+function providerAmount(advertisedAmountPaise) {
+  return taxMode === "inclusive"
+    ? advertisedAmountPaise
+    : advertisedAmountPaise + Math.round((advertisedAmountPaise * gstRateBps) / 10_000);
+}
 
 function note(plan, key) {
   const value = plan.notes?.[key];
@@ -27,10 +42,11 @@ function note(plan, key) {
 }
 
 function assertPlanMatches(providerPlan, plan) {
+  const expectedAmount = providerAmount(plan.amount_paise);
   const matches =
     providerPlan.period === "monthly" &&
     Number(providerPlan.interval) === 1 &&
-    Number(providerPlan.item.amount) === plan.amount_paise &&
+    Number(providerPlan.item.amount) === expectedAmount &&
     providerPlan.item.currency.toUpperCase() === plan.currency.toUpperCase();
   if (!matches) {
     throw new Error(
@@ -40,6 +56,7 @@ function assertPlanMatches(providerPlan, plan) {
 }
 
 async function resolveProviderPlan(plan, knownPlans) {
+  const expectedAmount = providerAmount(plan.amount_paise);
   if (plan.provider_plan_id) {
     const existing = await razorpay.plans.fetch(plan.provider_plan_id);
     assertPlanMatches(existing, plan);
@@ -51,7 +68,7 @@ async function resolveProviderPlan(plan, knownPlans) {
       note(candidate, "keval_plan_code") === plan.code &&
       candidate.period === "monthly" &&
       Number(candidate.interval) === 1 &&
-      Number(candidate.item.amount) === plan.amount_paise &&
+      Number(candidate.item.amount) === expectedAmount &&
       candidate.item.currency.toUpperCase() === plan.currency.toUpperCase()
   );
   if (reusable) return reusable;
@@ -62,12 +79,14 @@ async function resolveProviderPlan(plan, knownPlans) {
     item: {
       name: `KEVAL SOUND - ${plan.name}`,
       description: plan.description,
-      amount: plan.amount_paise,
+      amount: expectedAmount,
       currency: plan.currency,
     },
     notes: {
       keval_plan_code: plan.code,
       keval_environment: livemode ? "live" : "test",
+      gst_rate_bps: String(gstRateBps),
+      tax_mode: taxMode,
     },
   });
 }

@@ -22,6 +22,7 @@ import {
   licenseFilename,
 } from "@/server/documents/license-pdf";
 import { generateInvoice, invoiceFilename } from "@/server/documents/invoice-pdf";
+import { allocateInvoiceNumber } from "@/server/documents/invoice-number";
 import { ApiError } from "@/server/http/api";
 import { createSignedMediaUrl } from "@/server/media/token";
 
@@ -232,14 +233,26 @@ export async function redeemTrackDownloadGrant(input: {
               id: true,
               orderNumber: true,
               paymentProvider: true,
+              providerLivemode: true,
               customerNameSnapshot: true,
               customerEmailSnapshot: true,
+              billingAddressSnapshot: true,
+              customerGstinSnapshot: true,
+              placeOfSupplyCode: true,
               kevalUserIdSnapshot: true,
               currency: true,
               subtotalPaise: true,
               taxPaise: true,
               totalPaise: true,
+              taxRateBps: true,
+              taxMode: true,
+              sacCode: true,
               paidAt: true,
+              documents: {
+                where: { type: OrderDocumentType.INVOICE },
+                take: 1,
+                select: { invoiceNumber: true },
+              },
               payments: {
                 where: { status: PaymentStatus.SUCCEEDED },
                 orderBy: { succeededAt: "desc" },
@@ -266,19 +279,42 @@ export async function redeemTrackDownloadGrant(input: {
         throw new ApiError(409, "invoice_not_ready", "The paid invoice is not ready yet. Try again shortly.");
       }
       const issuedAt = order.paidAt ?? now;
+      const invoiceNumber =
+        order.documents[0]?.invoiceNumber ??
+        (await allocateInvoiceNumber(tx, issuedAt, order.providerLivemode));
+      const rawAddress = order.billingAddressSnapshot;
+      const billingAddress =
+        rawAddress && typeof rawAddress === "object" && !Array.isArray(rawAddress)
+          ? (rawAddress as {
+              addressLine1: string;
+              addressLine2?: string | null;
+              city: string;
+              stateName: string;
+              stateCode?: string | null;
+              postalCode: string;
+              countryCode: string;
+            })
+          : null;
       const generated = await generateInvoice({
-        invoiceNumber: `INV-${order.orderNumber}`,
+        invoiceNumber,
         orderNumber: order.orderNumber,
         issuedAt,
         paymentProvider: order.paymentProvider,
         providerPaymentId,
         customerName: order.customerNameSnapshot ?? input.user.kevalUserId,
         customerEmail: order.customerEmailSnapshot,
+        billingAddress,
+        customerGstin: order.customerGstinSnapshot,
+        placeOfSupplyCode: order.placeOfSupplyCode,
         kevalUserId: order.kevalUserIdSnapshot,
         currency: order.currency,
         subtotalPaise: order.subtotalPaise,
         taxPaise: order.taxPaise,
         totalPaise: order.totalPaise,
+        taxRateBps: order.taxRateBps,
+        taxMode: order.taxMode,
+        sacCode: order.sacCode,
+        providerLivemode: order.providerLivemode,
         items: order.items.map((item) => ({
           title: item.titleSnapshot,
           licenseNumber: item.license?.licenseNumber ?? "Preparing",
@@ -294,6 +330,7 @@ export async function redeemTrackDownloadGrant(input: {
         create: {
           orderId: order.id,
           type: OrderDocumentType.INVOICE,
+          invoiceNumber,
           status: DocumentStatus.READY,
           provider: PaymentProvider.RAZORPAY,
           providerLivemode: currentPaymentLivemode(),
@@ -301,6 +338,7 @@ export async function redeemTrackDownloadGrant(input: {
           generatedAt: issuedAt,
         },
         update: {
+          invoiceNumber,
           status: DocumentStatus.READY,
           fileSha256: generated.sha256,
           generatedAt: issuedAt,

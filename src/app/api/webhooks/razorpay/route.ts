@@ -6,6 +6,7 @@ import type { Subscriptions } from "razorpay/dist/types/subscriptions";
 import type { Disputes } from "razorpay/dist/types/disputes";
 import { getPrisma } from "@/lib/db";
 import { syncRazorpaySubscription } from "@/server/billing/plans";
+import { recordRazorpaySubscriptionPayment } from "@/server/billing/subscription-payments";
 import { syncRazorpayDispute } from "@/server/commerce/disputes";
 import {
   fulfillTrackPayment,
@@ -119,6 +120,11 @@ async function processEvent(event: RazorpayWebhook) {
       const subscription = event.payload?.subscription?.entity;
       if (!subscription) throw new Error(`${event.event} payload has no subscription entity.`);
       await syncRazorpaySubscription(subscription);
+      if (event.event === "subscription.charged") {
+        const payment = event.payload?.payment?.entity;
+        if (!payment) throw new Error("subscription.charged payload has no payment entity.");
+        await recordRazorpaySubscriptionPayment(subscription.id, payment);
+      }
       return true;
     }
     case "payment.dispute.created":

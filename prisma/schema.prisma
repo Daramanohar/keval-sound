@@ -217,9 +217,29 @@ model User {
   playlists             UserPlaylist[]
   auditLogs             AuditLog[]             @relation("AuditActor")
   idempotencyRecords    IdempotencyRecord[]
+  billingProfile        BillingProfile?
 
   @@index([role])
   @@map("users")
+}
+
+model BillingProfile {
+  id           String   @id @default(cuid())
+  userId       String   @unique @map("user_id")
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  legalName    String   @map("legal_name") @db.VarChar(160)
+  addressLine1 String   @map("address_line_1") @db.VarChar(240)
+  addressLine2 String?  @map("address_line_2") @db.VarChar(240)
+  city         String   @db.VarChar(120)
+  stateName    String   @map("state_name") @db.VarChar(120)
+  stateCode    String?  @map("state_code") @db.VarChar(2)
+  postalCode   String   @map("postal_code") @db.VarChar(20)
+  countryCode  String   @default("IN") @map("country_code") @db.VarChar(2)
+  gstin        String?  @db.VarChar(15)
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  @@map("billing_profiles")
 }
 
 model MusicPack {
@@ -332,6 +352,13 @@ model Order {
   customerEmailSnapshot  String?                @map("customer_email_snapshot")
   customerNameSnapshot   String?                @map("customer_name_snapshot")
   kevalUserIdSnapshot    String                 @map("keval_user_id_snapshot")
+  billingAddressSnapshot Json?                  @map("billing_address_snapshot")
+  customerGstinSnapshot  String?                @map("customer_gstin_snapshot") @db.VarChar(15)
+  placeOfSupplyCode      String?                @map("place_of_supply_code") @db.VarChar(2)
+  taxRateBps             Int                    @default(0) @map("tax_rate_bps")
+  taxMode                String                 @default("none") @map("tax_mode") @db.VarChar(16)
+  sacCode                String?                @map("sac_code") @db.VarChar(8)
+  taxConfigVersion       String?                @map("tax_config_version") @db.VarChar(40)
   paymentProvider        PaymentProvider        @default(RAZORPAY) @map("payment_provider")
   providerLivemode       Boolean                @default(false) @map("provider_livemode")
   providerOrderId        String?                @map("provider_order_id")
@@ -503,29 +530,60 @@ model Plan {
 }
 
 model Subscription {
-  id                     String             @id @default(cuid())
-  userId                 String             @map("user_id")
-  user                   User               @relation(fields: [userId], references: [id], onDelete: Restrict)
-  planId                 String             @map("plan_id")
-  plan                   Plan               @relation(fields: [planId], references: [id], onDelete: Restrict)
-  provider               PaymentProvider    @default(RAZORPAY)
-  providerLivemode       Boolean            @default(false) @map("provider_livemode")
-  providerSubscriptionId String             @map("provider_subscription_id")
-  providerPlanId         String             @map("provider_plan_id")
+  id                     String                @id @default(cuid())
+  userId                 String                @map("user_id")
+  user                   User                  @relation(fields: [userId], references: [id], onDelete: Restrict)
+  planId                 String                @map("plan_id")
+  plan                   Plan                  @relation(fields: [planId], references: [id], onDelete: Restrict)
+  provider               PaymentProvider       @default(RAZORPAY)
+  providerLivemode       Boolean               @default(false) @map("provider_livemode")
+  providerSubscriptionId String                @map("provider_subscription_id")
+  providerPlanId         String                @map("provider_plan_id")
+  billingAddressSnapshot Json?                 @map("billing_address_snapshot")
+  customerGstinSnapshot  String?               @map("customer_gstin_snapshot") @db.VarChar(15)
+  placeOfSupplyCode      String?               @map("place_of_supply_code") @db.VarChar(2)
+  taxRateBps             Int                   @default(0) @map("tax_rate_bps")
+  taxMode                String                @default("none") @map("tax_mode") @db.VarChar(16)
+  sacCode                String?               @map("sac_code") @db.VarChar(8)
+  taxConfigVersion       String?               @map("tax_config_version") @db.VarChar(40)
   status                 SubscriptionStatus
-  cancelAtPeriodEnd      Boolean            @default(false) @map("cancel_at_period_end")
-  currentPeriodStart     DateTime?          @map("current_period_start")
-  currentPeriodEnd       DateTime?          @map("current_period_end")
-  canceledAt             DateTime?          @map("canceled_at")
-  endedAt                DateTime?          @map("ended_at")
-  createdAt              DateTime           @default(now()) @map("created_at")
-  updatedAt              DateTime           @updatedAt @map("updated_at")
+  cancelAtPeriodEnd      Boolean               @default(false) @map("cancel_at_period_end")
+  currentPeriodStart     DateTime?             @map("current_period_start")
+  currentPeriodEnd       DateTime?             @map("current_period_end")
+  canceledAt             DateTime?             @map("canceled_at")
+  endedAt                DateTime?             @map("ended_at")
+  createdAt              DateTime              @default(now()) @map("created_at")
+  updatedAt              DateTime              @updatedAt @map("updated_at")
   entitlements           Entitlement[]
+  payments               SubscriptionPayment[]
 
   @@unique([provider, providerLivemode, providerSubscriptionId])
   @@index([userId, status])
   @@index([planId])
   @@map("subscriptions")
+}
+
+model SubscriptionPayment {
+  id                 String          @id @default(cuid())
+  subscriptionId     String          @map("subscription_id")
+  subscription       Subscription    @relation(fields: [subscriptionId], references: [id], onDelete: Restrict)
+  provider           PaymentProvider @default(RAZORPAY)
+  providerLivemode   Boolean         @default(false) @map("provider_livemode")
+  providerPaymentId  String          @map("provider_payment_id")
+  providerInvoiceId  String?         @map("provider_invoice_id")
+  invoiceNumber      String          @unique @map("invoice_number") @db.VarChar(16)
+  amountPaise        Int             @map("amount_paise")
+  taxableAmountPaise Int             @map("taxable_amount_paise")
+  taxPaise           Int             @default(0) @map("tax_paise")
+  currency           String          @default("INR") @db.VarChar(3)
+  status             PaymentStatus   @default(SUCCEEDED)
+  paidAt             DateTime        @map("paid_at")
+  createdAt          DateTime        @default(now()) @map("created_at")
+  updatedAt          DateTime        @updatedAt @map("updated_at")
+
+  @@unique([provider, providerLivemode, providerPaymentId])
+  @@index([subscriptionId, paidAt])
+  @@map("subscription_payments")
 }
 
 model Entitlement {
@@ -591,6 +649,7 @@ model OrderDocument {
   providerDocumentId String?           @map("provider_document_id")
   providerLivemode   Boolean?          @map("provider_livemode")
   providerUrl        String?           @map("provider_url") @db.Text
+  invoiceNumber      String?           @unique @map("invoice_number") @db.VarChar(16)
   filePath           String?           @map("file_path")
   fileSha256         String?           @map("file_sha256")
   generatedAt        DateTime?         @map("generated_at")
@@ -601,6 +660,14 @@ model OrderDocument {
   @@unique([orderId, type])
   @@unique([provider, providerLivemode, providerDocumentId])
   @@map("order_documents")
+}
+
+model InvoiceSequence {
+  key       String   @id @db.VarChar(32)
+  nextValue Int      @default(1) @map("next_value")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("invoice_sequences")
 }
 
 model DownloadGrant {

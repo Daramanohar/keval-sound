@@ -2,6 +2,7 @@ import "server-only";
 
 import crypto from "node:crypto";
 import { PDFDocument, StandardFonts, rgb, type PDFFont } from "pdf-lib";
+import { taxBreakdown } from "@/server/commerce/tax";
 
 const A4: [number, number] = [595.28, 841.89];
 const COLORS = {
@@ -22,11 +23,26 @@ export type InvoiceData = {
   providerPaymentId: string;
   customerName: string;
   customerEmail: string | null;
+  billingAddress: {
+    addressLine1: string;
+    addressLine2?: string | null;
+    city: string;
+    stateName: string;
+    stateCode?: string | null;
+    postalCode: string;
+    countryCode: string;
+  } | null;
+  customerGstin: string | null;
+  placeOfSupplyCode: string | null;
   kevalUserId: string;
   currency: string;
   subtotalPaise: number;
   taxPaise: number;
   totalPaise: number;
+  taxRateBps: number;
+  taxMode: string;
+  sacCode: string | null;
+  providerLivemode: boolean;
   items: Array<{
     title: string;
     licenseNumber: string;
@@ -77,8 +93,9 @@ export async function generateInvoice(data: InvoiceData) {
     font: regular,
     color: COLORS.yellow,
   });
-  page.drawText("PAID INVOICE", {
-    x: rightAlignedX("PAID INVOICE", bold, 19, width - 42),
+  const invoiceHeading = data.providerLivemode ? "TAX INVOICE" : "TEST INVOICE";
+  page.drawText(invoiceHeading, {
+    x: rightAlignedX(invoiceHeading, bold, 19, width - 42),
     y: height - 58,
     size: 19,
     font: bold,
@@ -112,9 +129,24 @@ export async function generateInvoice(data: InvoiceData) {
     font: regular,
     color: COLORS.muted,
   });
-  page.drawText(`KEVAL User ID: ${data.kevalUserId}`, { x: 310, y: 637, size: 8, font: bold, color: COLORS.ink });
+  const address = data.billingAddress;
+  page.drawText(address?.addressLine1.slice(0, 52) || "Billing address unavailable", {
+    x: 310,
+    y: 639,
+    size: 7.5,
+    font: regular,
+    color: COLORS.muted,
+  });
+  const locality = address
+    ? `${address.city}, ${address.stateName} ${address.postalCode}`.slice(0, 58)
+    : "";
+  page.drawText(locality, { x: 310, y: 626, size: 7.5, font: regular, color: COLORS.muted });
+  page.drawText(`KEVAL ID ${data.kevalUserId}`, { x: 310, y: 613, size: 7.5, font: bold, color: COLORS.ink });
+  if (data.customerGstin) {
+    page.drawText(`Customer GSTIN ${data.customerGstin}`, { x: 310, y: 600, size: 7.5, font: bold, color: COLORS.ink });
+  }
 
-  page.drawRectangle({ x: 42, y: 562, width: 511, height: 48, color: COLORS.pale });
+  page.drawRectangle({ x: 42, y: 544, width: 511, height: 48, color: COLORS.pale });
   const details = [
     ["INVOICE", data.invoiceNumber],
     ["ORDER", data.orderNumber],
@@ -123,16 +155,21 @@ export async function generateInvoice(data: InvoiceData) {
   ];
   details.forEach(([label, value], index) => {
     const x = 55 + index * 126;
-    page.drawText(label, { x, y: 591, size: 6.5, font: bold, color: COLORS.muted });
-    page.drawText(value.slice(0, 22), { x, y: 574, size: 8.5, font: bold, color: COLORS.ink });
+    page.drawText(label, { x, y: 573, size: 6.5, font: bold, color: COLORS.muted });
+    page.drawText(value.slice(0, 22), { x, y: 556, size: 8.5, font: bold, color: COLORS.ink });
   });
 
-  page.drawRectangle({ x: 42, y: 526, width: 511, height: 24, color: COLORS.ink });
-  page.drawText("LICENSED TRACK", { x: 52, y: 534, size: 7, font: bold, color: COLORS.white });
-  page.drawText("LICENSE ID", { x: 310, y: 534, size: 7, font: bold, color: COLORS.white });
-  page.drawText("AMOUNT", { x: 475, y: 534, size: 7, font: bold, color: COLORS.white });
+  page.drawText(
+    `Place of supply: ${data.placeOfSupplyCode || "Not recorded"}  |  SAC: ${data.sacCode || "Not recorded"}  |  GST: ${(data.taxRateBps / 100).toFixed(2)}% (${data.taxMode})`,
+    { x: 42, y: 526, size: 7.2, font: regular, color: COLORS.muted }
+  );
 
-  let y = 506;
+  page.drawRectangle({ x: 42, y: 492, width: 511, height: 24, color: COLORS.ink });
+  page.drawText("LICENSED ITEM", { x: 52, y: 500, size: 7, font: bold, color: COLORS.white });
+  page.drawText("REFERENCE", { x: 310, y: 500, size: 7, font: bold, color: COLORS.white });
+  page.drawText("AMOUNT", { x: 475, y: 500, size: 7, font: bold, color: COLORS.white });
+
+  let y = 472;
   for (const item of data.items.slice(0, 20)) {
     page.drawText(item.title.slice(0, 48), { x: 52, y, size: 8.5, font: regular, color: COLORS.ink });
     page.drawText(item.licenseNumber.slice(0, 28), { x: 310, y, size: 7.5, font: regular, color: COLORS.muted });
@@ -149,26 +186,34 @@ export async function generateInvoice(data: InvoiceData) {
   }
 
   const totalsTop = Math.max(102, y - 12);
+  const customerCountryCode = address?.countryCode || "IN";
+  const breakdown = taxBreakdown(data.taxPaise, customerCountryCode, data.placeOfSupplyCode);
   const totalRows = [
-    ["Subtotal", money(data.subtotalPaise, data.currency)],
-    ["Tax", money(data.taxPaise, data.currency)],
+    ["Taxable value", money(data.subtotalPaise, data.currency)],
+    ...(breakdown.kind === "CGST_SGST"
+      ? [
+          ["CGST", money(breakdown.cgstPaise, data.currency)],
+          ["SGST", money(breakdown.sgstPaise, data.currency)],
+        ]
+      : [["IGST", money(breakdown.igstPaise, data.currency)]]),
     ["Total paid", money(data.totalPaise, data.currency)],
   ];
   totalRows.forEach(([label, value], index) => {
-    const rowY = totalsTop - index * 20;
+    const rowY = totalsTop - index * 18;
+    const isTotal = index === totalRows.length - 1;
     page.drawText(label, {
       x: 382,
       y: rowY,
-      size: index === 2 ? 10 : 8.5,
-      font: index === 2 ? bold : regular,
-      color: index === 2 ? COLORS.ink : COLORS.muted,
+      size: isTotal ? 10 : 8.5,
+      font: isTotal ? bold : regular,
+      color: isTotal ? COLORS.ink : COLORS.muted,
     });
     page.drawText(value, {
-      x: rightAlignedX(value, index === 2 ? bold : regular, index === 2 ? 10 : 8.5, 543),
+      x: rightAlignedX(value, isTotal ? bold : regular, isTotal ? 10 : 8.5, 543),
       y: rowY,
-      size: index === 2 ? 10 : 8.5,
-      font: index === 2 ? bold : regular,
-      color: index === 2 ? COLORS.red : COLORS.ink,
+      size: isTotal ? 10 : 8.5,
+      font: isTotal ? bold : regular,
+      color: isTotal ? COLORS.red : COLORS.ink,
     });
   });
 
@@ -180,6 +225,16 @@ export async function generateInvoice(data: InvoiceData) {
     font: regular,
     color: COLORS.muted,
   });
+  if (!data.providerLivemode) {
+    page.drawRectangle({ x: 42, y: 67, width: 511, height: 22, color: COLORS.yellow });
+    page.drawText("TEST MODE - NOT A VALID TAX INVOICE OR PROOF OF PAYMENT", {
+      x: 128,
+      y: 74,
+      size: 7.5,
+      font: bold,
+      color: COLORS.ink,
+    });
+  }
   page.drawText("support@kevalsound.com | www.kevalsound.com", {
     x: rightAlignedX("support@kevalsound.com | www.kevalsound.com", regular, 7, 553),
     y: 38,

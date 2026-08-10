@@ -15,6 +15,10 @@ import type { AppUser } from "@/server/auth/current-user";
 import { CHECKOUT_RESERVATION_MINUTES } from "@/server/domain/constants";
 import { ApiError } from "@/server/http/api";
 import {
+  assertTaxConfigurationReady,
+  calculateTax,
+} from "@/server/commerce/tax";
+import {
   getRazorpay,
   getRazorpayPublicKey,
   isRazorpayLivemode,
@@ -137,18 +141,27 @@ export async function listActivePlans() {
     },
   });
 
-  return plans.map((plan) => ({
-    code: plan.code,
-    name: plan.name,
-    description: plan.description,
-    amountPaise: plan.amountPaise,
-    currency: plan.currency,
-    interval: plan.interval,
-    features: Array.isArray(plan.features)
-      ? plan.features.filter((feature): feature is string => typeof feature === "string")
-      : [],
-    available: plan.isPurchasable && Boolean(planIdForMode(plan)),
-  }));
+  return plans.map((plan) => {
+    const quote = calculateTax(plan.amountPaise, "SUBSCRIPTION");
+    return {
+      code: plan.code,
+      name: plan.name,
+      description: plan.description,
+      amountPaise: quote.totalPaise,
+      advertisedAmountPaise: plan.amountPaise,
+      taxableAmountPaise: quote.taxablePaise,
+      taxPaise: quote.taxPaise,
+      taxRateBps: quote.config.rateBps,
+      taxMode: quote.config.pricingMode,
+      sacCode: quote.config.sacCode,
+      currency: plan.currency,
+      interval: plan.interval,
+      features: Array.isArray(plan.features)
+        ? plan.features.filter((feature): feature is string => typeof feature === "string")
+        : [],
+      available: plan.isPurchasable && Boolean(planIdForMode(plan)),
+    };
+  });
 }
 
 function subscriptionCheckoutResponse(input: {
@@ -160,6 +173,8 @@ function subscriptionCheckoutResponse(input: {
     amountPaise: number;
     currency: string;
   };
+  taxRateBps: number;
+  sacCode: string;
   appSubscriptionId: string;
   providerSubscriptionId: string;
 }) {
@@ -172,7 +187,7 @@ function subscriptionCheckoutResponse(input: {
     providerSubscriptionId: input.providerSubscriptionId,
     planCode: input.plan.code,
     keyId: getRazorpayPublicKey(),
-    amount: input.plan.amountPaise,
+    amount: calculateTax(input.plan.amountPaise, "SUBSCRIPTION").totalPaise,
     currency: input.plan.currency,
     name: "KEVAL SOUND",
     description: `${input.plan.name} monthly plan`,
@@ -184,6 +199,8 @@ function subscriptionCheckoutResponse(input: {
     notes: {
       keval_plan_code: input.plan.code,
       keval_user_id: input.user.kevalUserId,
+      gst_rate_bps: String(input.taxRateBps),
+      sac_code: input.sacCode,
     },
     theme: { color: "#e5422e", backdropColor: "#0c0d1c" },
     timeoutSeconds: CHECKOUT_RESERVATION_MINUTES * 60,
@@ -197,6 +214,8 @@ async function findOrCreateProviderSubscription(input: {
   planDatabaseId: string;
   user: AppUser;
   checkoutKeyHash: string;
+  taxRateBps: number;
+  sacCode: string;
 }) {
   const razorpay = getRazorpay();
   const existing = await razorpay.subscriptions.all({ plan_id: input.planId, count: 100 });
@@ -218,6 +237,8 @@ async function findOrCreateProviderSubscription(input: {
       keval_user_id: input.user.kevalUserId,
       app_user_id: input.user.id,
       keval_checkout_key: input.checkoutKeyHash,
+      gst_rate_bps: String(input.taxRateBps),
+      sac_code: input.sacCode,
     },
   });
 }
@@ -229,11 +250,32 @@ export async function createSubscriptionCheckout(
 ) {
   const prisma = getPrisma();
   const livemode = isRazorpayLivemode();
+  const taxConfig = assertTaxConfigurationReady("SUBSCRIPTION");
   const plan = await prisma.plan.findUnique({ where: { code: planCode } });
   const providerPlanId = plan ? planIdForMode(plan) : null;
   if (!plan || !plan.isActive || !plan.isPurchasable || !providerPlanId) {
     throw new ApiError(409, "plan_not_available", "This plan is not available for checkout yet.");
   }
+  const billingProfile = await prisma.billingProfile.findUnique({
+    where: { userId: user.id },
+  });
+  if (!billingProfile) {
+    throw new ApiError(
+      409,
+      "billing_profile_required",
+      "Add your billing address before starting a subscription."
+    );
+  }
+  const billingAddressSnapshot = {
+    legalName: billingProfile.legalName,
+    addressLine1: billingProfile.addressLine1,
+    addressLine2: billingProfile.addressLine2,
+    city: billingProfile.city,
+    stateName: billingProfile.stateName,
+    stateCode: billingProfile.stateCode,
+    postalCode: billingProfile.postalCode,
+    countryCode: billingProfile.countryCode,
+  } satisfies Prisma.InputJsonObject;
 
   const existingSubscription = await prisma.subscription.findFirst({
     where: {
@@ -288,6 +330,8 @@ export async function createSubscriptionCheckout(
     planDatabaseId: plan.id,
     user,
     checkoutKeyHash: keyHash,
+    taxRateBps: taxConfig.rateBps,
+    sacCode: taxConfig.sacCode,
   });
   const saved = await prisma.subscription.upsert({
     where: {
@@ -304,6 +348,14 @@ export async function createSubscriptionCheckout(
       providerLivemode: livemode,
       providerSubscriptionId: providerSubscription.id,
       providerPlanId,
+      billingAddressSnapshot,
+      customerGstinSnapshot: billingProfile.gstin,
+      placeOfSupplyCode:
+        billingProfile.countryCode === "IN" ? billingProfile.stateCode : "96",
+      taxRateBps: taxConfig.rateBps,
+      taxMode: taxConfig.pricingMode,
+      sacCode: taxConfig.sacCode,
+      taxConfigVersion: taxConfig.version,
       status: mapSubscriptionStatus(providerSubscription.status),
       currentPeriodStart: timestamp(providerSubscription.current_start),
       currentPeriodEnd: timestamp(providerSubscription.current_end),
@@ -313,6 +365,14 @@ export async function createSubscriptionCheckout(
       userId: user.id,
       planId: plan.id,
       providerPlanId,
+      billingAddressSnapshot,
+      customerGstinSnapshot: billingProfile.gstin,
+      placeOfSupplyCode:
+        billingProfile.countryCode === "IN" ? billingProfile.stateCode : "96",
+      taxRateBps: taxConfig.rateBps,
+      taxMode: taxConfig.pricingMode,
+      sacCode: taxConfig.sacCode,
+      taxConfigVersion: taxConfig.version,
       status: mapSubscriptionStatus(providerSubscription.status),
       currentPeriodStart: timestamp(providerSubscription.current_start),
       currentPeriodEnd: timestamp(providerSubscription.current_end),
@@ -324,6 +384,8 @@ export async function createSubscriptionCheckout(
     plan,
     appSubscriptionId: saved.id,
     providerSubscriptionId: providerSubscription.id,
+    taxRateBps: taxConfig.rateBps,
+    sacCode: taxConfig.sacCode,
   });
   await prisma.idempotencyRecord.update({
     where: { userId_scope_key: { userId: user.id, scope, key: keyHash } },

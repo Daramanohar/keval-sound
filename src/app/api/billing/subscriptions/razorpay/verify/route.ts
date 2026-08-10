@@ -3,6 +3,7 @@ import { PaymentProvider } from "@prisma/client";
 import { getPrisma } from "@/lib/db";
 import { requireAppUser } from "@/server/auth/current-user";
 import { syncRazorpaySubscription } from "@/server/billing/plans";
+import { recordRazorpaySubscriptionPayment } from "@/server/billing/subscription-payments";
 import { apiJson, assertTrustedMutationOrigin, readJson, withApiHandler } from "@/server/http/api";
 import {
   getRazorpay,
@@ -53,9 +54,15 @@ export const POST = withApiHandler(async (request, _context, requestId) => {
     subscription.providerSubscriptionId
   );
   const saved = await syncRazorpaySubscription(providerSubscription);
+  const providerPayment = await getRazorpay().payments.fetch(input.razorpay_payment_id);
+  const subscriptionPayment = await recordRazorpaySubscriptionPayment(
+    subscription.providerSubscriptionId,
+    providerPayment
+  );
   return apiJson(
     {
       subscriptionId: saved.id,
+      invoiceNumber: subscriptionPayment.invoiceNumber,
       status: saved.status,
       currentPeriodEnd: saved.currentPeriodEnd?.toISOString() ?? null,
     },

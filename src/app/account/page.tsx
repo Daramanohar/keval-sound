@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import {
   BadgeCheck,
+  CreditCard,
   Download,
   ExternalLink,
   Headphones,
@@ -33,6 +34,7 @@ const workspaceTabs = [
   { id: "recent", label: "Recently Played", icon: Library },
   { id: "history", label: "Purchases", icon: Receipt },
   { id: "downloads", label: "Downloads", icon: Download },
+  { id: "billing", label: "Plans & Billing", icon: CreditCard },
 ];
 
 const allTabs = new Set([
@@ -221,6 +223,13 @@ export default function AccountPage() {
               <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted">
                 Manage Liked Songs, recent previews, purchases, downloads, and playlists from one focused workspace.
               </p>
+              <Link
+                href="/account?tab=billing"
+                className="mt-5 inline-flex items-center gap-2 rounded-xl bg-dandelion px-4 py-2.5 text-sm font-bold text-vampire-black transition-all hover:brightness-105"
+              >
+                <CreditCard className="h-4 w-4" />
+                View plans and billing
+              </Link>
             </div>
 
             <div className="grid grid-cols-2 gap-3 md:grid-cols-4">

@@ -29,7 +29,7 @@ export default function HomePage() {
   }
 
   if (!isAuthenticated) {
-    redirect("https://www.kevalsound.com/");
+    redirect("/sign-in");
   }
 
   return <AuthenticatedHome />;

@@ -20,6 +20,10 @@ import {
 import { createOrderNumber } from "@/server/domain/identifiers";
 import { ApiError } from "@/server/http/api";
 import {
+  assertTaxConfigurationReady,
+  calculateTax,
+} from "@/server/commerce/tax";
+import {
   getRazorpay,
   getRazorpayPublicKey,
   isRazorpayLivemode,
@@ -120,10 +124,23 @@ async function createReservedOrder(
     checkoutExpiresAt.getTime() + CHECKOUT_RESERVATION_GRACE_MINUTES * 60_000
   );
   const livemode = isRazorpayLivemode();
+  const taxConfig = assertTaxConfigurationReady("TRACK_LICENSE");
+  const itemQuote = calculateTax(TRACK_PRICE_PAISE, "TRACK_LICENSE");
 
   return prisma.$transaction(
     async (tx) => {
       await releaseExpiredReservations(tx, trackIds, new Date());
+
+      const billingProfile = await tx.billingProfile.findUnique({
+        where: { userId: user.id },
+      });
+      if (!billingProfile) {
+        throw new ApiError(
+          409,
+          "billing_profile_required",
+          "Add your billing address in Plans & Billing before starting checkout."
+        );
+      }
 
       const tracks = await tx.track.findMany({
         where: { id: { in: trackIds } },
@@ -153,7 +170,19 @@ async function createReservedOrder(
         }
       }
 
-      const subtotalPaise = orderedTracks.length * TRACK_PRICE_PAISE;
+      const subtotalPaise = orderedTracks.length * itemQuote.taxablePaise;
+      const taxPaise = orderedTracks.length * itemQuote.taxPaise;
+      const totalPaise = orderedTracks.length * itemQuote.totalPaise;
+      const billingAddressSnapshot = {
+        legalName: billingProfile.legalName,
+        addressLine1: billingProfile.addressLine1,
+        addressLine2: billingProfile.addressLine2,
+        city: billingProfile.city,
+        stateName: billingProfile.stateName,
+        stateCode: billingProfile.stateCode,
+        postalCode: billingProfile.postalCode,
+        countryCode: billingProfile.countryCode,
+      } satisfies Prisma.InputJsonObject;
       const order = await tx.order.create({
         data: {
           orderNumber: createOrderNumber(),
@@ -161,12 +190,19 @@ async function createReservedOrder(
           status: OrderStatus.DRAFT,
           currency: COMMERCE_CURRENCY,
           subtotalPaise,
-          taxPaise: 0,
-          totalPaise: subtotalPaise,
+          taxPaise,
+          totalPaise,
           customerEmailSnapshot: user.email,
-          customerNameSnapshot:
-            [user.firstName, user.lastName].filter(Boolean).join(" ").trim() || user.kevalUserId,
+          customerNameSnapshot: billingProfile.legalName,
           kevalUserIdSnapshot: user.kevalUserId,
+          billingAddressSnapshot,
+          customerGstinSnapshot: billingProfile.gstin,
+          placeOfSupplyCode:
+            billingProfile.countryCode === "IN" ? billingProfile.stateCode : "96",
+          taxRateBps: taxConfig.rateBps,
+          taxMode: taxConfig.pricingMode,
+          sacCode: taxConfig.sacCode,
+          taxConfigVersion: taxConfig.version,
           paymentProvider: PaymentProvider.RAZORPAY,
           providerLivemode: livemode,
           checkoutIdempotencyKey: checkoutKeyHash,
@@ -180,9 +216,9 @@ async function createReservedOrder(
                       titleSnapshot: track.title,
                       packTitleSnapshot: track.pack.title,
                       categorySnapshot: track.category,
-                      unitAmountPaise: TRACK_PRICE_PAISE,
-                      taxPaise: 0,
-                      totalPaise: TRACK_PRICE_PAISE,
+                      unitAmountPaise: itemQuote.taxablePaise,
+                      taxPaise: itemQuote.taxPaise,
+                      totalPaise: itemQuote.totalPaise,
                       currency: COMMERCE_CURRENCY,
                       licenseTermsVersion: LICENSE_TERMS_VERSION,
                     },
@@ -195,7 +231,7 @@ async function createReservedOrder(
               provider: PaymentProvider.RAZORPAY,
               providerLivemode: livemode,
               status: PaymentStatus.PENDING,
-              amountPaise: subtotalPaise,
+              amountPaise: totalPaise,
               currency: COMMERCE_CURRENCY,
             },
           },
@@ -316,6 +352,9 @@ function checkoutResponse(user: AppUser, order: CheckoutOrder, providerOrderId: 
     notes: {
       keval_order_number: order.orderNumber,
       keval_user_id: user.kevalUserId,
+      tax_mode: order.taxMode,
+      gst_rate_bps: String(order.taxRateBps),
+      sac_code: order.sacCode ?? "",
     },
     theme: { color: "#e5422e", backdropColor: "#0c0d1c" },
     timeoutSeconds: CHECKOUT_RESERVATION_MINUTES * 60,
@@ -345,6 +384,8 @@ async function findOrCreateRazorpayOrder(order: CheckoutOrder) {
       keval_order_number: order.orderNumber,
       app_user_id: order.userId,
       keval_user_id: order.kevalUserIdSnapshot,
+      gst_rate_bps: String(order.taxRateBps),
+      sac_code: order.sacCode ?? "",
     },
     payment: {
       capture: "automatic",

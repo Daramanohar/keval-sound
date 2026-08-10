@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
@@ -26,6 +26,19 @@ type ApiFailure = {
   message?: string;
 };
 
+type BillingQuote = {
+  profile: { id: string } | null;
+  tax: {
+    track: {
+      taxablePaise: number;
+      taxPaise: number;
+      totalPaise: number;
+      ratePercent: number;
+      sacCode: string;
+    };
+  };
+};
+
 function createIdempotencyKey() {
   return globalThis.crypto?.randomUUID?.() ??
     `${Date.now().toString(36)}_${Math.random().toString(36).slice(2)}`;
@@ -36,11 +49,40 @@ export default function CartPage() {
   const { cart, removeFromCart, clearCart, refreshOwnedItems } = useStore();
   const [isCheckingOut, setIsCheckingOut] = useState(false);
   const [checkoutError, setCheckoutError] = useState<string | null>(null);
+  const [billingQuote, setBillingQuote] = useState<BillingQuote | null>(null);
   const checkoutKeyRef = useRef(createIdempotencyKey());
 
   const trackItems = useMemo(() => cart.filter((item) => item.type === "track"), [cart]);
   const unsupportedItems = useMemo(() => cart.filter((item) => item.type !== "track"), [cart]);
   const subtotal = trackItems.length * 99;
+  const taxableTotal = billingQuote
+    ? (billingQuote.tax.track.taxablePaise * trackItems.length) / 100
+    : subtotal;
+  const taxTotal = billingQuote
+    ? (billingQuote.tax.track.taxPaise * trackItems.length) / 100
+    : 0;
+  const payableTotal = billingQuote
+    ? (billingQuote.tax.track.totalPaise * trackItems.length) / 100
+    : subtotal;
+
+  useEffect(() => {
+    const controller = new AbortController();
+    void fetch("/api/account/billing-profile", {
+      credentials: "same-origin",
+      cache: "no-store",
+      signal: controller.signal,
+    })
+      .then(async (response) => {
+        if (!response.ok) throw new Error("Billing details are unavailable.");
+        return response.json() as Promise<BillingQuote>;
+      })
+      .then(setBillingQuote)
+      .catch((error: unknown) => {
+        if (error instanceof DOMException && error.name === "AbortError") return;
+        setCheckoutError(error instanceof Error ? error.message : "Billing details are unavailable.");
+      });
+    return () => controller.abort();
+  }, []);
 
   const handleCheckout = async () => {
     if (!trackItems.length || unsupportedItems.length || isCheckingOut) return;
@@ -178,8 +220,12 @@ export default function CartPage() {
                 <h2 className="mb-6 text-lg font-bold text-white">Order Summary</h2>
                 <div className="space-y-3 text-sm">
                   <div className="flex justify-between text-muted">
-                    <span>{trackItems.length} licensed {trackItems.length === 1 ? "song" : "songs"}</span>
-                    <span>{formatPrice(subtotal)}</span>
+                    <span>Taxable value</span>
+                    <span>{formatPrice(taxableTotal)}</span>
+                  </div>
+                  <div className="flex justify-between text-muted">
+                    <span>GST {billingQuote ? `(${billingQuote.tax.track.ratePercent}%)` : ""}</span>
+                    <span>{formatPrice(taxTotal)}</span>
                   </div>
                   <div className="flex justify-between text-muted">
                     <span>Delivery</span>
@@ -191,9 +237,18 @@ export default function CartPage() {
                   </div>
                   <div className="flex justify-between border-t border-border pt-3 text-base font-bold text-white">
                     <span>Total</span>
-                    <span>{formatPrice(subtotal)}</span>
+                    <span>{formatPrice(payableTotal)}</span>
                   </div>
                 </div>
+
+                {billingQuote && !billingQuote.profile ? (
+                  <div className="mt-5 rounded-lg border border-dandelion/30 bg-dandelion/[0.06] p-3 text-xs leading-relaxed text-muted">
+                    A billing identity is required for the invoice and secure checkout. {" "}
+                    <Link href="/account?tab=billing" className="font-semibold text-dandelion hover:text-white">
+                      Add billing details
+                    </Link>
+                  </div>
+                ) : null}
 
                 {checkoutError ? (
                   <div role="alert" className="mt-5 flex items-start gap-2 rounded-md border border-zesty-red/30 bg-zesty-red/8 p-3 text-xs text-zesty-red">
@@ -205,7 +260,7 @@ export default function CartPage() {
                 <button
                   type="button"
                   onClick={handleCheckout}
-                  disabled={!trackItems.length || unsupportedItems.length > 0 || isCheckingOut}
+                  disabled={!trackItems.length || unsupportedItems.length > 0 || isCheckingOut || !billingQuote?.profile}
                   className="mt-6 flex w-full items-center justify-center gap-2 rounded-lg bg-dandelion px-6 py-4 text-base font-semibold text-vampire-black transition-all hover:brightness-105 disabled:cursor-not-allowed disabled:opacity-45"
                 >
                   {isCheckingOut ? (

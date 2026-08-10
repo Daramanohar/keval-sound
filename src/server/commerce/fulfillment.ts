@@ -17,6 +17,7 @@ import type { Payments } from "razorpay/dist/types/payments";
 import { getPrisma } from "@/lib/db";
 import { requestSystemPaymentRefund } from "@/server/commerce/refunds";
 import { createLicenseNumber } from "@/server/domain/identifiers";
+import { allocateInvoiceNumber } from "@/server/documents/invoice-number";
 import { ApiError } from "@/server/http/api";
 import { getRazorpay, isRazorpayLivemode } from "@/server/payments/razorpay";
 
@@ -440,16 +441,29 @@ export async function fulfillTrackPayment(providerOrderId: string, providerPayme
         livemode,
       });
 
+      const existingInvoice = await tx.orderDocument.findUnique({
+        where: { orderId_type: { orderId: order.id, type: OrderDocumentType.INVOICE } },
+        select: { invoiceNumber: true },
+      });
+      const invoiceNumber =
+        existingInvoice?.invoiceNumber ??
+        (await allocateInvoiceNumber(
+          tx,
+          timestamp(payment.created_at) ?? new Date(),
+          livemode
+        ));
       await tx.orderDocument.upsert({
         where: { orderId_type: { orderId: order.id, type: OrderDocumentType.INVOICE } },
         create: {
           orderId: order.id,
           type: OrderDocumentType.INVOICE,
+          invoiceNumber,
           status: DocumentStatus.PENDING,
           provider: PaymentProvider.RAZORPAY,
           providerLivemode: livemode,
         },
         update: {
+          invoiceNumber,
           status: DocumentStatus.PENDING,
           provider: PaymentProvider.RAZORPAY,
           providerLivemode: livemode,

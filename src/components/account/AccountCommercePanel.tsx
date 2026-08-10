@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import {
   Archive,
   Check,
@@ -12,9 +13,12 @@ import {
   FileAudio,
   FileText,
   LoaderCircle,
+  MapPin,
   Radio,
   Receipt,
+  Save,
   ShieldCheck,
+  TestTube2,
 } from "lucide-react";
 import { downloadTrackPackage } from "@/lib/download-bundle";
 import { openRazorpayCheckout } from "@/lib/razorpay-checkout";
@@ -129,11 +133,79 @@ type PlansResponse = {
     name: string;
     description: string;
     amountPaise: number;
+    advertisedAmountPaise: number;
+    taxableAmountPaise: number;
+    taxPaise: number;
+    taxRateBps: number;
+    taxMode: "inclusive" | "exclusive";
+    sacCode: string;
     currency: string;
     interval: string;
     features: string[];
     available: boolean;
   }>;
+};
+
+type BillingProfile = {
+  legalName: string;
+  addressLine1: string;
+  addressLine2: string | null;
+  city: string;
+  stateName: string;
+  stateCode: string | null;
+  postalCode: string;
+  countryCode: string;
+  gstin: string | null;
+};
+
+type BillingProfileResponse = {
+  profile: BillingProfile | null;
+  tax: {
+    environment: "test" | "live";
+    merchant: { legalName: string; gstin: string };
+    track: {
+      advertisedPaise: number;
+      taxablePaise: number;
+      taxPaise: number;
+      totalPaise: number;
+      ratePercent: number;
+      pricingMode: "inclusive" | "exclusive";
+      sacCode: string;
+    };
+    subscription: {
+      ratePercent: number;
+      pricingMode: "inclusive" | "exclusive";
+      sacCode: string;
+    };
+    reviewedForLive: boolean;
+  };
+};
+
+type BillingHistory = {
+  payments: Array<{
+    id: string;
+    invoiceNumber: string;
+    amountPaise: number;
+    taxableAmountPaise: number;
+    taxPaise: number;
+    currency: string;
+    status: string;
+    paidAt: string;
+    invoiceUrl: string;
+    subscription: { plan: { code: string; name: string } };
+  }>;
+};
+
+const EMPTY_BILLING_PROFILE: BillingProfile = {
+  legalName: "",
+  addressLine1: "",
+  addressLine2: "",
+  city: "",
+  stateName: "",
+  stateCode: "",
+  postalCode: "",
+  countryCode: "IN",
+  gstin: "",
 };
 
 function formatMoney(amountPaise: number, currency = "INR") {
@@ -504,18 +576,28 @@ function SecureDownloads() {
 }
 
 function BillingWorkspace() {
+  const searchParams = useSearchParams();
   const [access, setAccess] = useState<AccountAccess | null>(null);
   const [plans, setPlans] = useState<PlansResponse | null>(null);
+  const [billing, setBilling] = useState<BillingProfileResponse | null>(null);
+  const [billingHistory, setBillingHistory] = useState<BillingHistory | null>(null);
+  const [profileForm, setProfileForm] = useState<BillingProfile>(EMPTY_BILLING_PROFILE);
   const [error, setError] = useState<string | null>(null);
   const [pendingAction, setPendingAction] = useState<string | null>(null);
+  const requestedPlan = searchParams.get("plan")?.trim().toUpperCase() ?? "";
 
   const refreshBilling = useCallback(async (signal?: AbortSignal) => {
-    const [nextAccess, nextPlans] = await Promise.all([
+    const [nextAccess, nextPlans, nextBilling, nextHistory] = await Promise.all([
       readApi<AccountAccess>("/api/account/access", { signal }),
       readApi<PlansResponse>("/api/billing/plans", { signal }),
+      readApi<BillingProfileResponse>("/api/account/billing-profile", { signal }),
+      readApi<BillingHistory>("/api/account/billing/history", { signal }),
     ]);
     setAccess(nextAccess);
     setPlans(nextPlans);
+    setBilling(nextBilling);
+    setBillingHistory(nextHistory);
+    setProfileForm(nextBilling.profile ?? EMPTY_BILLING_PROFILE);
   }, []);
 
   useEffect(() => {
@@ -529,6 +611,11 @@ function BillingWorkspace() {
   }, [refreshBilling]);
 
   const startCheckout = async (planCode: string) => {
+    if (!billing?.profile) {
+      setError("Save your billing identity before starting Razorpay checkout.");
+      document.getElementById("billing-profile")?.scrollIntoView({ behavior: "smooth" });
+      return;
+    }
     setPendingAction(planCode);
     setError(null);
     try {
@@ -558,6 +645,28 @@ function BillingWorkspace() {
     } finally {
       setPendingAction(null);
     }
+  };
+
+  const saveBillingProfile = async () => {
+    setPendingAction("billing-profile");
+    setError(null);
+    try {
+      const saved = await readApi<BillingProfileResponse>("/api/account/billing-profile", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(profileForm),
+      });
+      setBilling(saved);
+      setProfileForm(saved.profile ?? EMPTY_BILLING_PROFILE);
+    } catch (failure) {
+      setError(failure instanceof Error ? failure.message : "The billing profile could not be saved.");
+    } finally {
+      setPendingAction(null);
+    }
+  };
+
+  const updateProfileField = (field: keyof BillingProfile, value: string) => {
+    setProfileForm((current) => ({ ...current, [field]: value }));
   };
 
   const cancelSubscription = async () => {
@@ -592,8 +701,8 @@ function BillingWorkspace() {
         subtitle="Razorpay securely processes subscriptions; access is controlled by verified server events."
       />
       {error ? <ErrorNotice message={error} /> : null}
-      {!access || !plans ? <LoadingPanel /> : null}
-      {access && plans ? (
+      {!access || !plans || !billing || !billingHistory ? <LoadingPanel /> : null}
+      {access && plans && billing && billingHistory ? (
         <>
           <div className="mb-6 grid gap-3 md:grid-cols-3">
             <Metric label="Current plan" value={access.subscription?.plan.name || "Free"} />
@@ -605,6 +714,62 @@ function BillingWorkspace() {
               label="Audio quality"
               value={access.streaming.lossless ? "Lossless WAV" : "MP3 preview"}
             />
+          </div>
+
+          {billing.tax.environment === "test" ? (
+            <div className="mb-6 flex items-start gap-3 rounded-xl border border-dandelion/25 bg-dandelion/[0.06] px-4 py-3 text-sm text-dandelion">
+              <TestTube2 className="mt-0.5 h-4 w-4 shrink-0" />
+              <div>
+                <p className="font-semibold">Razorpay test mode</p>
+                <p className="mt-1 text-xs leading-relaxed text-muted">
+                  Test payments create test orders, entitlements, and clearly marked test invoices. No real money is charged.
+                </p>
+              </div>
+            </div>
+          ) : null}
+
+          <div id="billing-profile" className="mb-6 rounded-2xl border border-white/[0.08] bg-white/[0.025] p-5 scroll-mt-28">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+              <div>
+                <div className="flex items-center gap-2 text-white">
+                  <MapPin className="h-4 w-4 text-zesty-red" />
+                  <h3 className="text-base font-bold">Billing identity</h3>
+                </div>
+                <p className="mt-2 max-w-2xl text-xs leading-relaxed text-muted">
+                  This address is frozen into each paid order or subscription receipt. GSTIN is optional for individual buyers.
+                </p>
+              </div>
+              <span className={cn(
+                "w-fit rounded-full px-2.5 py-1 text-[10px] font-bold uppercase",
+                billing.profile ? "bg-dandelion/12 text-dandelion" : "bg-zesty-red/12 text-zesty-red"
+              )}>
+                {billing.profile ? "Ready for checkout" : "Required before checkout"}
+              </span>
+            </div>
+            <div className="mt-5 grid gap-4 md:grid-cols-2">
+              <BillingField label="Legal name" value={profileForm.legalName} onChange={(value) => updateProfileField("legalName", value)} />
+              <BillingField label="GSTIN (optional)" value={profileForm.gstin ?? ""} onChange={(value) => updateProfileField("gstin", value.toUpperCase())} maxLength={15} />
+              <BillingField label="Address line 1" value={profileForm.addressLine1} onChange={(value) => updateProfileField("addressLine1", value)} />
+              <BillingField label="Address line 2 (optional)" value={profileForm.addressLine2 ?? ""} onChange={(value) => updateProfileField("addressLine2", value)} />
+              <BillingField label="City" value={profileForm.city} onChange={(value) => updateProfileField("city", value)} />
+              <BillingField label="State" value={profileForm.stateName} onChange={(value) => updateProfileField("stateName", value)} />
+              <BillingField label="GST state code" value={profileForm.stateCode ?? ""} onChange={(value) => updateProfileField("stateCode", value.replace(/\D/g, "").slice(0, 2))} maxLength={2} hint="Karnataka is 29" />
+              <BillingField label="Postal code" value={profileForm.postalCode} onChange={(value) => updateProfileField("postalCode", value)} />
+            </div>
+            <div className="mt-5 flex flex-col gap-4 border-t border-white/[0.06] pt-5 sm:flex-row sm:items-center sm:justify-between">
+              <p className="text-xs leading-relaxed text-muted">
+                ₹99 track price: {formatMoney(billing.tax.track.taxablePaise)} taxable value + {formatMoney(billing.tax.track.taxPaise)} GST = {formatMoney(billing.tax.track.totalPaise)} total. SAC {billing.tax.track.sacCode}.
+              </p>
+              <button
+                type="button"
+                onClick={saveBillingProfile}
+                disabled={pendingAction === "billing-profile"}
+                className="inline-flex h-10 shrink-0 items-center justify-center gap-2 rounded-lg bg-dandelion px-4 text-sm font-bold text-vampire-black transition-all hover:brightness-105 disabled:opacity-50"
+              >
+                {pendingAction === "billing-profile" ? <LoaderCircle className="h-4 w-4 animate-spin" /> : <Save className="h-4 w-4" />}
+                Save billing identity
+              </button>
+            </div>
           </div>
 
           {access.subscription ? (
@@ -633,13 +798,16 @@ function BillingWorkspace() {
           <div className="grid gap-4 lg:grid-cols-2 2xl:grid-cols-4">
             {plans.plans.map((plan) => {
               const current = access.subscription?.plan.code === plan.code;
+              const requested = requestedPlan === plan.code;
               return (
                 <article
                   key={plan.code}
                   className={cn(
-                    "flex min-h-[390px] flex-col rounded-2xl border p-5",
+                    "flex min-h-[410px] flex-col rounded-2xl border p-5 transition-colors",
                     current
                       ? "border-dandelion/45 bg-dandelion/[0.055]"
+                      : requested
+                        ? "border-zesty-red/55 bg-zesty-red/[0.055]"
                       : "border-white/[0.07] bg-white/[0.025]"
                   )}
                 >
@@ -650,10 +818,17 @@ function BillingWorkspace() {
                         {formatMoney(plan.amountPaise, plan.currency)}
                         <span className="ml-1 text-xs font-medium text-muted">/{plan.interval}</span>
                       </p>
+                      <p className="mt-1 text-[10px] text-muted">
+                        Includes {formatMoney(plan.taxPaise, plan.currency)} GST | SAC {plan.sacCode}
+                      </p>
                     </div>
                     {current ? (
                       <span className="rounded-full bg-dandelion px-2 py-1 text-[10px] font-bold uppercase text-vampire-black">
                         Current
+                      </span>
+                    ) : requested ? (
+                      <span className="rounded-full bg-zesty-red px-2 py-1 text-[10px] font-bold uppercase text-white">
+                        Selected
                       </span>
                     ) : null}
                   </div>
@@ -688,9 +863,71 @@ function BillingWorkspace() {
           <p className="mt-5 text-xs leading-relaxed text-muted">
             Plans renew monthly until cancelled. Access is granted only after Razorpay confirms the subscription and Keval verifies the signed callback or webhook on the server.
           </p>
+          <div className="mt-8 border-t border-white/[0.07] pt-6">
+            <div className="mb-4 flex items-center gap-2">
+              <Receipt className="h-4 w-4 text-zesty-red" />
+              <h3 className="text-base font-bold text-white">Subscription invoices</h3>
+            </div>
+            {billingHistory.payments.length === 0 ? (
+              <EmptyPanel>Verified subscription charges and downloadable invoices will appear here.</EmptyPanel>
+            ) : (
+              <div className="space-y-2">
+                {billingHistory.payments.map((payment) => (
+                  <div key={payment.id} className="flex flex-col gap-3 rounded-xl border border-white/[0.07] bg-white/[0.025] p-4 sm:flex-row sm:items-center sm:justify-between">
+                    <div>
+                      <p className="text-sm font-semibold text-white">{payment.subscription.plan.name}</p>
+                      <p className="mt-1 text-[11px] text-muted">
+                        {payment.invoiceNumber} | Paid {formatDate(payment.paidAt)} | GST {formatMoney(payment.taxPaise, payment.currency)}
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <p className="text-sm font-bold text-dandelion">{formatMoney(payment.amountPaise, payment.currency)}</p>
+                      <a
+                        href={payment.invoiceUrl}
+                        className="inline-flex h-9 items-center gap-2 rounded-lg border border-white/[0.09] bg-white/[0.04] px-3 text-xs font-semibold text-white transition-colors hover:border-dandelion/40 hover:text-dandelion"
+                      >
+                        <Download className="h-3.5 w-3.5" />
+                        Invoice
+                      </a>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
         </>
       ) : null}
     </section>
+  );
+}
+
+function BillingField({
+  label,
+  value,
+  onChange,
+  maxLength,
+  hint,
+}: {
+  label: string;
+  value: string;
+  onChange: (value: string) => void;
+  maxLength?: number;
+  hint?: string;
+}) {
+  return (
+    <label className="block">
+      <span className="mb-2 flex items-center justify-between gap-2 text-[11px] font-semibold text-light-grey/80">
+        {label}
+        {hint ? <span className="font-normal text-muted/70">{hint}</span> : null}
+      </span>
+      <input
+        value={value}
+        onChange={(event) => onChange(event.target.value)}
+        maxLength={maxLength}
+        autoComplete="billing street-address"
+        className="h-11 w-full rounded-lg border border-white/[0.09] bg-vampire-black/45 px-3 text-sm text-white outline-none transition-colors placeholder:text-muted/40 focus:border-dandelion/55"
+      />
+    </label>
   );
 }
 
