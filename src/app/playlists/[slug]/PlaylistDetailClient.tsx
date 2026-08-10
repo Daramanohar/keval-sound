@@ -276,7 +276,7 @@ function PlaylistTrackRow({
           <button
             type="button"
             onClick={onToggleSave}
-            aria-label={isSaved ? "Remove from wishlist" : "Add to wishlist"}
+            aria-label={isSaved ? "Remove from Liked Songs" : "Add to Liked Songs"}
             aria-pressed={isSaved}
             className={cn(
               "flex h-8 w-8 items-center justify-center rounded-lg transition-colors",

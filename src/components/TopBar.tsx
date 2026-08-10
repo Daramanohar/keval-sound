@@ -13,6 +13,7 @@ import {
   Headphones,
   Heart,
   HelpCircle,
+  LayoutDashboard,
   LogOut,
   Menu,
   MessageCircle,
@@ -129,6 +130,11 @@ export default function TopBar({ onMenuToggle, mobileOpen }: TopBarProps) {
   const [supportOpen, setSupportOpen] = useState(false);
   const [userOpen, setUserOpen] = useState(false);
   const [optimizing, setOptimizing] = useState(false);
+  const [accountStatus, setAccountStatus] = useState<{
+    planName: string;
+    isPaid: boolean;
+    role: string;
+  }>({ planName: "Member", isPaid: false, role: "USER" });
 
   const supportRef = useRef<HTMLDivElement>(null);
   const userRef = useRef<HTMLDivElement>(null);
@@ -167,9 +173,10 @@ export default function TopBar({ onMenuToggle, mobileOpen }: TopBarProps) {
       "/radio",
       "/packs",
       "/cart",
-      "/account?tab=wishlist",
+      "/account?tab=liked",
       "/account?tab=recent",
       "/account?tab=history",
+      "/account?tab=billing",
       "/account?tab=settings",
       "/account?tab=support",
       "/account?tab=licensing",
@@ -179,6 +186,40 @@ export default function TopBar({ onMenuToggle, mobileOpen }: TopBarProps) {
       router.prefetch(route);
     });
   }, [isAuthenticated, router]);
+
+  useEffect(() => {
+    if (!isAuthenticated) {
+      return;
+    }
+
+    const controller = new AbortController();
+    void Promise.all([
+      fetch("/api/account/access", {
+        signal: controller.signal,
+        credentials: "same-origin",
+        headers: { Accept: "application/json" },
+      }).then((response) => (response.ok ? response.json() : null)),
+      fetch("/api/account/profile", {
+        signal: controller.signal,
+        credentials: "same-origin",
+        headers: { Accept: "application/json" },
+      }).then((response) => (response.ok ? response.json() : null)),
+    ])
+      .then(([access, profile]) => {
+        const planName = access?.subscription?.plan?.name?.trim();
+        setAccountStatus({
+          planName: planName || "Member",
+          isPaid: Boolean(access?.subscription),
+          role: typeof profile?.role === "string" ? profile.role : "USER",
+        });
+      })
+      .catch((error: unknown) => {
+        if (error instanceof DOMException && error.name === "AbortError") return;
+        setAccountStatus({ planName: "Member", isPaid: false, role: "USER" });
+      });
+
+    return () => controller.abort();
+  }, [isAuthenticated]);
 
   const handleSearch = useCallback(() => {
     const trimmedQuery = query.trim();
@@ -396,9 +437,9 @@ export default function TopBar({ onMenuToggle, mobileOpen }: TopBarProps) {
         </div>
 
         <Link
-          href="/account?tab=wishlist"
+          href="/account?tab=liked"
           className="relative flex h-10 w-10 items-center justify-center rounded-xl text-muted hover:text-white hover:bg-white/[0.05] transition-all"
-          aria-label="Open wishlist"
+          aria-label="Open Liked Songs"
         >
           <Heart className="w-[18px] h-[18px]" />
           {wishlistCount > 0 && (
@@ -437,10 +478,16 @@ export default function TopBar({ onMenuToggle, mobileOpen }: TopBarProps) {
               <img
                 src={user.avatar}
                 alt={user.name}
-                className="w-7 h-7 rounded-full object-cover ring-2 ring-vivid-blue/30"
+                className={cn(
+                  "w-7 h-7 rounded-full object-cover ring-2",
+                  accountStatus.isPaid ? "ring-dandelion/70" : "ring-vivid-blue/30"
+                )}
               />
             ) : (
-              <div className="w-7 h-7 rounded-full bg-gradient-to-br from-vivid-blue to-mid-purple flex items-center justify-center text-[11px] font-bold text-white ring-2 ring-vivid-blue/30">
+              <div className={cn(
+                "w-7 h-7 rounded-full bg-gradient-to-br from-vivid-blue to-mid-purple flex items-center justify-center text-[11px] font-bold text-white ring-2",
+                accountStatus.isPaid ? "ring-dandelion/70" : "ring-vivid-blue/30"
+              )}>
                 {user?.name?.[0]?.toUpperCase() || "U"}
               </div>
             )}
@@ -469,10 +516,16 @@ export default function TopBar({ onMenuToggle, mobileOpen }: TopBarProps) {
                     <img
                       src={user.avatar}
                       alt={user.name}
-                      className="w-10 h-10 rounded-full object-cover shrink-0 ring-2 ring-vivid-blue/30"
+                      className={cn(
+                        "w-10 h-10 rounded-full object-cover shrink-0 ring-2",
+                        accountStatus.isPaid ? "ring-dandelion/70" : "ring-vivid-blue/30"
+                      )}
                     />
                   ) : (
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-vivid-blue to-mid-purple flex items-center justify-center text-base font-bold text-white shrink-0 ring-2 ring-vivid-blue/30">
+                    <div className={cn(
+                      "w-10 h-10 rounded-full bg-gradient-to-br from-vivid-blue to-mid-purple flex items-center justify-center text-base font-bold text-white shrink-0 ring-2",
+                      accountStatus.isPaid ? "ring-dandelion/70" : "ring-vivid-blue/30"
+                    )}>
                       {user?.name?.[0]?.toUpperCase() || "U"}
                     </div>
                   )}
@@ -480,9 +533,14 @@ export default function TopBar({ onMenuToggle, mobileOpen }: TopBarProps) {
                     <p className="text-sm font-semibold text-white truncate">{user?.name}</p>
                     <p className="text-[11px] text-muted truncate">{user?.email}</p>
                   </div>
-                  <div className="ml-auto shrink-0 flex items-center gap-1 px-2 py-0.5 rounded-full bg-vivid-blue/10 text-vivid-blue text-[9px] font-bold uppercase">
+                  <div className={cn(
+                    "ml-auto shrink-0 flex items-center gap-1 px-2 py-0.5 rounded-full text-[9px] font-bold uppercase",
+                    accountStatus.isPaid
+                      ? "bg-dandelion/12 text-dandelion"
+                      : "bg-vivid-blue/10 text-vivid-blue"
+                  )}>
                     <BadgeCheck className="w-3 h-3" />
-                    Pro
+                    {accountStatus.planName}
                   </div>
                 </div>
 
@@ -507,6 +565,23 @@ export default function TopBar({ onMenuToggle, mobileOpen }: TopBarProps) {
                       <ChevronRight className="w-3 h-3 text-muted/20 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
                     </Link>
                   ))}
+
+                  {(accountStatus.role === "ADMIN" || accountStatus.role === "FINANCE") ? (
+                    <Link
+                      href="/admin"
+                      onClick={() => setUserOpen(false)}
+                      className="flex items-center gap-3 w-full px-3 py-2 rounded-xl text-left hover:bg-white/[0.05] transition-colors group"
+                    >
+                      <div className="w-7 h-7 rounded-lg bg-dandelion/10 flex items-center justify-center shrink-0">
+                        <LayoutDashboard className="w-3.5 h-3.5 text-dandelion" />
+                      </div>
+                      <div className="min-w-0">
+                        <p className="text-xs font-medium text-white/80">Operations Console</p>
+                        <p className="text-[10px] text-muted/40">Orders, users, billing, and refunds</p>
+                      </div>
+                      <ChevronRight className="w-3 h-3 text-muted/20 ml-auto" />
+                    </Link>
+                  ) : null}
 
                   <p className="px-3 py-1.5 mt-2 text-[9px] text-white/25 font-semibold uppercase tracking-wider border-t border-white/[0.04] pt-3">
                     Support

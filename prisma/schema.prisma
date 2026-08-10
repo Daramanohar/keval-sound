@@ -6,45 +6,255 @@ datasource db {
   provider = "postgresql"
 }
 
-model User {
-  id                    String          @id @default(cuid())
-  clerkUserId           String          @unique @map("clerk_user_id")
-  kevalUserId           String          @unique @map("keval_user_id")
-  email                 String?         @unique
-  firstName             String?         @map("first_name")
-  lastName              String?         @map("last_name")
-  imageUrl              String?         @map("image_url")
-  onboardingUseCase     String?         @map("onboarding_use_case")
-  onboardingSounds      Json?           @map("onboarding_sounds")
-  onboardingCompletedAt DateTime?       @map("onboarding_completed_at")
-  clerkCreatedAt        DateTime?       @map("clerk_created_at")
-  clerkUpdatedAt        DateTime?       @map("clerk_updated_at")
-  deletedAt             DateTime?       @map("deleted_at")
-  createdAt             DateTime        @default(now()) @map("created_at")
-  updatedAt             DateTime        @updatedAt @map("updated_at")
-  purchases             Purchase[]
-  subscriptions         Subscription[]
-  licenses              License[]
-  downloadEvents        DownloadEvent[]
-  streamEvents          StreamEvent[]
+enum UserRole {
+  USER
+  SUPPORT
+  CATALOG_MANAGER
+  FINANCE
+  ADMIN
+}
 
+enum TrackSaleStatus {
+  AVAILABLE
+  RESERVED
+  SOLD
+  WITHDRAWN
+}
+
+enum OrderStatus {
+  DRAFT
+  CHECKOUT_PENDING
+  PAID
+  FULFILLING
+  FULFILLED
+  PAYMENT_FAILED
+  EXPIRED
+  CANCELLED
+  REFUND_PENDING
+  PARTIALLY_REFUNDED
+  REFUNDED
+  DISPUTED
+}
+
+enum OrderItemType {
+  TRACK_LICENSE
+}
+
+enum PaymentProvider {
+  STRIPE
+  RAZORPAY
+}
+
+enum PaymentStatus {
+  PENDING
+  PROCESSING
+  SUCCEEDED
+  FAILED
+  CANCELLED
+  PARTIALLY_REFUNDED
+  REFUNDED
+  DISPUTED
+}
+
+enum RefundStatus {
+  PENDING
+  SUCCEEDED
+  FAILED
+  CANCELLED
+}
+
+enum PaymentDisputeStatus {
+  OPEN
+  ACTION_REQUIRED
+  UNDER_REVIEW
+  WON
+  LOST
+  CLOSED
+}
+
+enum PlanCode {
+  KEVAL_RADIO
+  STANDARD
+  PRO
+  ENTERPRISE
+}
+
+enum SubscriptionStatus {
+  INCOMPLETE
+  INCOMPLETE_EXPIRED
+  TRIALING
+  ACTIVE
+  PAST_DUE
+  PAUSED
+  CANCELED
+  UNPAID
+}
+
+enum EntitlementKind {
+  TRACK_LICENSE
+  MP3_DOWNLOAD
+  WAV_DOWNLOAD
+  RADIO_STREAM
+  LOSSLESS_STREAM
+  SAMPLES_ACCESS
+  STEMS_ACCESS
+  CREATIVE_TOOLS
+  ENTERPRISE_SUPPORT
+}
+
+enum EntitlementStatus {
+  ACTIVE
+  REVOKED
+  EXPIRED
+}
+
+enum OrderDocumentType {
+  INVOICE
+  RECEIPT
+}
+
+enum DocumentStatus {
+  PENDING
+  READY
+  FAILED
+  REVOKED
+}
+
+enum StreamFormat {
+  MP3
+  WAV
+}
+
+enum StreamAccessMode {
+  FREE_DAILY
+  SUBSCRIPTION
+  PURCHASED
+  REVIEWER
+}
+
+enum StreamSessionStatus {
+  RESERVED
+  STARTED
+  QUALIFIED
+  COMPLETED
+  EXPIRED
+  FAILED
+}
+
+enum DownloadAssetType {
+  MP3
+  WAV
+  LICENSE_PDF
+  INVOICE_PDF
+}
+
+enum WebhookProvider {
+  CLERK
+  STRIPE
+  RAZORPAY
+}
+
+enum WebhookStatus {
+  RECEIVED
+  PROCESSING
+  PROCESSED
+  FAILED
+  IGNORED
+}
+
+enum OutboxStatus {
+  PENDING
+  PROCESSING
+  COMPLETED
+  FAILED
+}
+
+enum AuditActorType {
+  USER
+  ADMIN
+  SUPPORT
+  SYSTEM
+  WEBHOOK
+}
+
+enum CommentStatus {
+  VISIBLE
+  HIDDEN
+  DELETED
+}
+
+model User {
+  id                    String                 @id @default(cuid())
+  clerkUserId           String                 @unique @map("clerk_user_id")
+  kevalUserId           String                 @unique @map("keval_user_id")
+  role                  UserRole               @default(USER)
+  email                 String?                @unique
+  firstName             String?                @map("first_name")
+  lastName              String?                @map("last_name")
+  imageUrl              String?                @map("image_url")
+  onboardingUseCase     String?                @map("onboarding_use_case")
+  onboardingSounds      Json?                  @map("onboarding_sounds")
+  onboardingCompletedAt DateTime?              @map("onboarding_completed_at")
+  clerkCreatedAt        DateTime?              @map("clerk_created_at")
+  clerkUpdatedAt        DateTime?              @map("clerk_updated_at")
+  deletedAt             DateTime?              @map("deleted_at")
+  createdAt             DateTime               @default(now()) @map("created_at")
+  updatedAt             DateTime               @updatedAt @map("updated_at")
+  ownedTracks           Track[]                @relation("ExclusiveTrackOwner")
+  cart                  Cart?
+  orders                Order[]
+  inventoryReservations InventoryReservation[]
+  subscriptions         Subscription[]
+  entitlements          Entitlement[]
+  licenses              License[]
+  downloadGrants        DownloadGrant[]
+  downloadEvents        DownloadEvent[]
+  streamSessions        StreamSession[]
+  streamEvents          StreamEvent[]          @relation("StreamListener")
+  streamEarnings        StreamEvent[]          @relation("StreamOwner")
+  trackLikes            TrackLike[]
+  comments              TrackComment[]
+  playlists             UserPlaylist[]
+  auditLogs             AuditLog[]             @relation("AuditActor")
+  idempotencyRecords    IdempotencyRecord[]
+  billingProfile        BillingProfile?
+
+  @@index([role])
   @@map("users")
 }
 
+model BillingProfile {
+  id           String   @id @default(cuid())
+  userId       String   @unique @map("user_id")
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  legalName    String   @map("legal_name") @db.VarChar(160)
+  addressLine1 String   @map("address_line_1") @db.VarChar(240)
+  addressLine2 String?  @map("address_line_2") @db.VarChar(240)
+  city         String   @db.VarChar(120)
+  stateName    String   @map("state_name") @db.VarChar(120)
+  stateCode    String?  @map("state_code") @db.VarChar(2)
+  postalCode   String   @map("postal_code") @db.VarChar(20)
+  countryCode  String   @default("IN") @map("country_code") @db.VarChar(2)
+  gstin        String?  @db.VarChar(15)
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  @@map("billing_profiles")
+}
+
 model MusicPack {
-  id            String     @id
+  id            String   @id
   title         String
   category      String
-  coverUrl      String?    @map("cover_url")
+  coverUrl      String?  @map("cover_url")
   tagline       String?
-  description   String?    @db.Text
-  trackCount    Int        @default(0) @map("track_count")
-  totalDuration Int        @default(0) @map("total_duration")
-  sourceStatus  String     @default("ready") @map("source_status")
-  createdAt     DateTime   @default(now()) @map("created_at")
-  updatedAt     DateTime   @updatedAt @map("updated_at")
+  description   String?  @db.Text
+  trackCount    Int      @default(0) @map("track_count")
+  totalDuration Int      @default(0) @map("total_duration")
+  sourceStatus  String   @default("ready") @map("source_status")
+  createdAt     DateTime @default(now()) @map("created_at")
+  updatedAt     DateTime @updatedAt @map("updated_at")
   tracks        Track[]
-  purchases     Purchase[]
 
   @@index([category])
   @@map("music_packs")
@@ -73,108 +283,620 @@ model Track {
   embeddingDimensions Int?                         @map("embedding_dimensions")
   embedding           Unsupported("vector(1024)")?
   tags                Json?
+  saleStatus          TrackSaleStatus              @default(AVAILABLE) @map("sale_status")
+  pricePaise          Int                          @default(9900) @map("price_paise")
+  currency            String                       @default("INR") @db.VarChar(3)
+  exclusiveOwnerId    String?                      @map("exclusive_owner_id")
+  exclusiveOwner      User?                        @relation("ExclusiveTrackOwner", fields: [exclusiveOwnerId], references: [id], onDelete: SetNull)
+  soldAt              DateTime?                    @map("sold_at")
+  version             Int                          @default(0)
   createdAt           DateTime                     @default(now()) @map("created_at")
   updatedAt           DateTime                     @updatedAt @map("updated_at")
-  purchases           Purchase[]
+  cartItems           CartItem[]
+  orderItems          OrderItem[]
+  reservation         InventoryReservation?
+  entitlements        Entitlement[]
   licenses            License[]
+  downloadGrants      DownloadGrant[]
   downloadEvents      DownloadEvent[]
+  streamSessions      StreamSession[]
   streamEvents        StreamEvent[]
+  likes               TrackLike[]
+  comments            TrackComment[]
+  playlistTracks      UserPlaylistTrack[]
 
   @@index([packId])
   @@index([category])
+  @@index([saleStatus])
+  @@index([exclusiveOwnerId])
   @@map("tracks")
 }
 
-model Purchase {
-  id                String     @id @default(cuid())
-  userId            String     @map("user_id")
-  user              User       @relation(fields: [userId], references: [id], onDelete: Cascade)
-  trackId           String?    @map("track_id")
-  track             Track?     @relation(fields: [trackId], references: [id], onDelete: SetNull)
-  packId            String?    @map("pack_id")
-  pack              MusicPack? @relation(fields: [packId], references: [id], onDelete: SetNull)
-  provider          String
-  providerPaymentId String?    @unique @map("provider_payment_id")
-  amountPaise       Int        @map("amount_paise")
-  currency          String     @default("INR")
-  status            String
-  createdAt         DateTime   @default(now()) @map("created_at")
-  updatedAt         DateTime   @updatedAt @map("updated_at")
-  licenses          License[]
+model Cart {
+  id        String     @id @default(cuid())
+  userId    String     @unique @map("user_id")
+  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt DateTime   @default(now()) @map("created_at")
+  updatedAt DateTime   @updatedAt @map("updated_at")
+  items     CartItem[]
 
-  @@index([userId])
+  @@map("carts")
+}
+
+model CartItem {
+  id                      String   @id @default(cuid())
+  cartId                  String   @map("cart_id")
+  cart                    Cart     @relation(fields: [cartId], references: [id], onDelete: Cascade)
+  trackId                 String   @map("track_id")
+  track                   Track    @relation(fields: [trackId], references: [id], onDelete: Restrict)
+  unitAmountPaiseSnapshot Int      @map("unit_amount_paise_snapshot")
+  currencySnapshot        String   @default("INR") @map("currency_snapshot") @db.VarChar(3)
+  createdAt               DateTime @default(now()) @map("created_at")
+  updatedAt               DateTime @updatedAt @map("updated_at")
+
+  @@unique([cartId, trackId])
   @@index([trackId])
-  @@index([packId])
-  @@index([status])
-  @@map("purchases")
+  @@map("cart_items")
+}
+
+model Order {
+  id                     String                 @id @default(cuid())
+  orderNumber            String                 @unique @map("order_number")
+  userId                 String                 @map("user_id")
+  user                   User                   @relation(fields: [userId], references: [id], onDelete: Restrict)
+  status                 OrderStatus            @default(DRAFT)
+  currency               String                 @default("INR") @db.VarChar(3)
+  subtotalPaise          Int                    @map("subtotal_paise")
+  taxPaise               Int                    @default(0) @map("tax_paise")
+  totalPaise             Int                    @map("total_paise")
+  customerEmailSnapshot  String?                @map("customer_email_snapshot")
+  customerNameSnapshot   String?                @map("customer_name_snapshot")
+  kevalUserIdSnapshot    String                 @map("keval_user_id_snapshot")
+  billingAddressSnapshot Json?                  @map("billing_address_snapshot")
+  customerGstinSnapshot  String?                @map("customer_gstin_snapshot") @db.VarChar(15)
+  placeOfSupplyCode      String?                @map("place_of_supply_code") @db.VarChar(2)
+  taxRateBps             Int                    @default(0) @map("tax_rate_bps")
+  taxMode                String                 @default("none") @map("tax_mode") @db.VarChar(16)
+  sacCode                String?                @map("sac_code") @db.VarChar(8)
+  taxConfigVersion       String?                @map("tax_config_version") @db.VarChar(40)
+  paymentProvider        PaymentProvider        @default(RAZORPAY) @map("payment_provider")
+  providerLivemode       Boolean                @default(false) @map("provider_livemode")
+  providerOrderId        String?                @map("provider_order_id")
+  providerInvoiceId      String?                @map("provider_invoice_id")
+  hostedInvoiceUrl       String?                @map("hosted_invoice_url") @db.Text
+  invoicePdfUrl          String?                @map("invoice_pdf_url") @db.Text
+  checkoutIdempotencyKey String?                @unique @map("checkout_idempotency_key")
+  expiresAt              DateTime?              @map("expires_at")
+  paidAt                 DateTime?              @map("paid_at")
+  fulfilledAt            DateTime?              @map("fulfilled_at")
+  cancelledAt            DateTime?              @map("cancelled_at")
+  refundedAt             DateTime?              @map("refunded_at")
+  createdAt              DateTime               @default(now()) @map("created_at")
+  updatedAt              DateTime               @updatedAt @map("updated_at")
+  items                  OrderItem[]
+  inventoryReservations  InventoryReservation[]
+  payments               Payment[]
+  refunds                Refund[]
+  disputes               PaymentDispute[]
+  documents              OrderDocument[]
+
+  @@unique([paymentProvider, providerLivemode, providerOrderId])
+  @@unique([paymentProvider, providerLivemode, providerInvoiceId])
+  @@index([userId, createdAt])
+  @@index([status, createdAt])
+  @@map("orders")
+}
+
+model OrderItem {
+  id                  String        @id @default(cuid())
+  orderId             String        @map("order_id")
+  order               Order         @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  itemType            OrderItemType @default(TRACK_LICENSE) @map("item_type")
+  trackId             String        @map("track_id")
+  track               Track         @relation(fields: [trackId], references: [id], onDelete: Restrict)
+  titleSnapshot       String        @map("title_snapshot")
+  packTitleSnapshot   String        @map("pack_title_snapshot")
+  categorySnapshot    String        @map("category_snapshot")
+  unitAmountPaise     Int           @map("unit_amount_paise")
+  taxPaise            Int           @default(0) @map("tax_paise")
+  totalPaise          Int           @map("total_paise")
+  currency            String        @default("INR") @db.VarChar(3)
+  licenseTermsVersion String        @map("license_terms_version")
+  createdAt           DateTime      @default(now()) @map("created_at")
+  updatedAt           DateTime      @updatedAt @map("updated_at")
+  entitlements        Entitlement[]
+  license             License?
+
+  @@unique([orderId, trackId])
+  @@index([trackId])
+  @@map("order_items")
+}
+
+model InventoryReservation {
+  id        String   @id @default(cuid())
+  trackId   String   @unique @map("track_id")
+  track     Track    @relation(fields: [trackId], references: [id], onDelete: Cascade)
+  orderId   String   @map("order_id")
+  order     Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  userId    String   @map("user_id")
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt DateTime @map("expires_at")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@index([expiresAt])
+  @@index([orderId])
+  @@map("inventory_reservations")
+}
+
+model Payment {
+  id                String           @id @default(cuid())
+  orderId           String           @map("order_id")
+  order             Order            @relation(fields: [orderId], references: [id], onDelete: Restrict)
+  provider          PaymentProvider  @default(RAZORPAY)
+  providerLivemode  Boolean          @default(false) @map("provider_livemode")
+  providerPaymentId String?          @map("provider_payment_id")
+  status            PaymentStatus    @default(PENDING)
+  amountPaise       Int              @map("amount_paise")
+  currency          String           @default("INR") @db.VarChar(3)
+  failureCode       String?          @map("failure_code")
+  failureMessage    String?          @map("failure_message") @db.Text
+  providerCreatedAt DateTime?        @map("provider_created_at")
+  succeededAt       DateTime?        @map("succeeded_at")
+  createdAt         DateTime         @default(now()) @map("created_at")
+  updatedAt         DateTime         @updatedAt @map("updated_at")
+  refunds           Refund[]
+  disputes          PaymentDispute[]
+
+  @@unique([provider, providerLivemode, providerPaymentId])
+  @@index([orderId])
+  @@index([status, createdAt])
+  @@map("payments")
+}
+
+model Refund {
+  id                 String          @id @default(cuid())
+  orderId            String          @map("order_id")
+  order              Order           @relation(fields: [orderId], references: [id], onDelete: Restrict)
+  paymentId          String          @map("payment_id")
+  payment            Payment         @relation(fields: [paymentId], references: [id], onDelete: Restrict)
+  provider           PaymentProvider @default(RAZORPAY)
+  providerLivemode   Boolean         @default(false) @map("provider_livemode")
+  providerRefundId   String?         @map("provider_refund_id")
+  idempotencyKey     String          @unique @map("idempotency_key")
+  status             RefundStatus    @default(PENDING)
+  amountPaise        Int             @map("amount_paise")
+  currency           String          @default("INR") @db.VarChar(3)
+  reason             String?
+  failureReason      String?         @map("failure_reason") @db.Text
+  affectsOrderAccess Boolean         @default(true) @map("affects_order_access")
+  requestedAt        DateTime        @default(now()) @map("requested_at")
+  completedAt        DateTime?       @map("completed_at")
+  createdAt          DateTime        @default(now()) @map("created_at")
+  updatedAt          DateTime        @updatedAt @map("updated_at")
+
+  @@unique([provider, providerLivemode, providerRefundId])
+  @@index([orderId])
+  @@index([status, createdAt])
+  @@map("refunds")
+}
+
+model PaymentDispute {
+  id                 String               @id @default(cuid())
+  orderId            String               @map("order_id")
+  order              Order                @relation(fields: [orderId], references: [id], onDelete: Restrict)
+  paymentId          String               @map("payment_id")
+  payment            Payment              @relation(fields: [paymentId], references: [id], onDelete: Restrict)
+  provider           PaymentProvider      @default(RAZORPAY)
+  providerLivemode   Boolean              @default(false) @map("provider_livemode")
+  providerDisputeId  String               @map("provider_dispute_id")
+  status             PaymentDisputeStatus
+  lastEventType      String               @map("last_event_type")
+  affectsOrderAccess Boolean              @default(true) @map("affects_order_access")
+  amountPaise        Int                  @map("amount_paise")
+  currency           String               @default("INR") @db.VarChar(3)
+  reasonCode         String?              @map("reason_code")
+  phase              String?
+  respondBy          DateTime?            @map("respond_by")
+  providerCreatedAt  DateTime?            @map("provider_created_at")
+  resolvedAt         DateTime?            @map("resolved_at")
+  createdAt          DateTime             @default(now()) @map("created_at")
+  updatedAt          DateTime             @updatedAt @map("updated_at")
+
+  @@unique([provider, providerLivemode, providerDisputeId])
+  @@index([orderId, status])
+  @@index([paymentId])
+  @@index([status, respondBy])
+  @@map("payment_disputes")
+}
+
+model Plan {
+  id                 String         @id @default(cuid())
+  code               PlanCode       @unique
+  name               String
+  description        String         @db.Text
+  amountPaise        Int            @map("amount_paise")
+  currency           String         @default("INR") @db.VarChar(3)
+  interval           String         @default("month") @db.VarChar(16)
+  features           Json
+  razorpayTestPlanId String?        @unique @map("razorpay_test_plan_id")
+  razorpayLivePlanId String?        @unique @map("razorpay_live_plan_id")
+  isActive           Boolean        @default(true) @map("is_active")
+  isPurchasable      Boolean        @default(false) @map("is_purchasable")
+  createdAt          DateTime       @default(now()) @map("created_at")
+  updatedAt          DateTime       @updatedAt @map("updated_at")
+  subscriptions      Subscription[]
+
+  @@map("plans")
 }
 
 model Subscription {
-  id                     String    @id @default(cuid())
-  userId                 String    @map("user_id")
-  user                   User      @relation(fields: [userId], references: [id], onDelete: Cascade)
-  plan                   String
-  provider               String
-  providerSubscriptionId String?   @unique @map("provider_subscription_id")
-  status                 String
-  currentPeriodStart     DateTime? @map("current_period_start")
-  currentPeriodEnd       DateTime? @map("current_period_end")
-  createdAt              DateTime  @default(now()) @map("created_at")
-  updatedAt              DateTime  @updatedAt @map("updated_at")
+  id                     String                @id @default(cuid())
+  userId                 String                @map("user_id")
+  user                   User                  @relation(fields: [userId], references: [id], onDelete: Restrict)
+  planId                 String                @map("plan_id")
+  plan                   Plan                  @relation(fields: [planId], references: [id], onDelete: Restrict)
+  provider               PaymentProvider       @default(RAZORPAY)
+  providerLivemode       Boolean               @default(false) @map("provider_livemode")
+  providerSubscriptionId String                @map("provider_subscription_id")
+  providerPlanId         String                @map("provider_plan_id")
+  billingAddressSnapshot Json?                 @map("billing_address_snapshot")
+  customerGstinSnapshot  String?               @map("customer_gstin_snapshot") @db.VarChar(15)
+  placeOfSupplyCode      String?               @map("place_of_supply_code") @db.VarChar(2)
+  taxRateBps             Int                   @default(0) @map("tax_rate_bps")
+  taxMode                String                @default("none") @map("tax_mode") @db.VarChar(16)
+  sacCode                String?               @map("sac_code") @db.VarChar(8)
+  taxConfigVersion       String?               @map("tax_config_version") @db.VarChar(40)
+  status                 SubscriptionStatus
+  cancelAtPeriodEnd      Boolean               @default(false) @map("cancel_at_period_end")
+  currentPeriodStart     DateTime?             @map("current_period_start")
+  currentPeriodEnd       DateTime?             @map("current_period_end")
+  canceledAt             DateTime?             @map("canceled_at")
+  endedAt                DateTime?             @map("ended_at")
+  createdAt              DateTime              @default(now()) @map("created_at")
+  updatedAt              DateTime              @updatedAt @map("updated_at")
+  entitlements           Entitlement[]
+  payments               SubscriptionPayment[]
 
-  @@index([userId])
-  @@index([status])
+  @@unique([provider, providerLivemode, providerSubscriptionId])
+  @@index([userId, status])
+  @@index([planId])
   @@map("subscriptions")
 }
 
-model License {
-  id            String    @id @default(cuid())
-  userId        String    @map("user_id")
-  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
-  purchaseId    String?   @unique @map("purchase_id")
-  purchase      Purchase? @relation(fields: [purchaseId], references: [id], onDelete: SetNull)
-  trackId       String?   @map("track_id")
-  track         Track?    @relation(fields: [trackId], references: [id], onDelete: SetNull)
-  licenseNumber String    @unique @map("license_number")
-  filePath      String?   @map("file_path")
-  issuedAt      DateTime  @default(now()) @map("issued_at")
-  createdAt     DateTime  @default(now()) @map("created_at")
-  updatedAt     DateTime  @updatedAt @map("updated_at")
+model SubscriptionPayment {
+  id                 String          @id @default(cuid())
+  subscriptionId     String          @map("subscription_id")
+  subscription       Subscription    @relation(fields: [subscriptionId], references: [id], onDelete: Restrict)
+  provider           PaymentProvider @default(RAZORPAY)
+  providerLivemode   Boolean         @default(false) @map("provider_livemode")
+  providerPaymentId  String          @map("provider_payment_id")
+  providerInvoiceId  String?         @map("provider_invoice_id")
+  invoiceNumber      String          @unique @map("invoice_number") @db.VarChar(16)
+  amountPaise        Int             @map("amount_paise")
+  taxableAmountPaise Int             @map("taxable_amount_paise")
+  taxPaise           Int             @default(0) @map("tax_paise")
+  currency           String          @default("INR") @db.VarChar(3)
+  status             PaymentStatus   @default(SUCCEEDED)
+  paidAt             DateTime        @map("paid_at")
+  createdAt          DateTime        @default(now()) @map("created_at")
+  updatedAt          DateTime        @updatedAt @map("updated_at")
 
-  @@index([userId])
+  @@unique([provider, providerLivemode, providerPaymentId])
+  @@index([subscriptionId, paidAt])
+  @@map("subscription_payments")
+}
+
+model Entitlement {
+  id             String            @id @default(cuid())
+  userId         String            @map("user_id")
+  user           User              @relation(fields: [userId], references: [id], onDelete: Restrict)
+  kind           EntitlementKind
+  status         EntitlementStatus @default(ACTIVE)
+  trackId        String?           @map("track_id")
+  track          Track?            @relation(fields: [trackId], references: [id], onDelete: Restrict)
+  orderItemId    String?           @map("order_item_id")
+  orderItem      OrderItem?        @relation(fields: [orderItemId], references: [id], onDelete: Restrict)
+  subscriptionId String?           @map("subscription_id")
+  subscription   Subscription?     @relation(fields: [subscriptionId], references: [id], onDelete: Restrict)
+  startsAt       DateTime          @default(now()) @map("starts_at")
+  endsAt         DateTime?         @map("ends_at")
+  revokedAt      DateTime?         @map("revoked_at")
+  revokeReason   String?           @map("revoke_reason")
+  createdAt      DateTime          @default(now()) @map("created_at")
+  updatedAt      DateTime          @updatedAt @map("updated_at")
+  downloadGrants DownloadGrant[]
+
+  @@unique([orderItemId, kind])
+  @@unique([subscriptionId, kind])
+  @@index([userId, kind, status])
+  @@index([trackId, kind, status])
+  @@map("entitlements")
+}
+
+model License {
+  id                    String         @id @default(cuid())
+  userId                String         @map("user_id")
+  user                  User           @relation(fields: [userId], references: [id], onDelete: Restrict)
+  orderItemId           String         @unique @map("order_item_id")
+  orderItem             OrderItem      @relation(fields: [orderItemId], references: [id], onDelete: Restrict)
+  trackId               String         @map("track_id")
+  track                 Track          @relation(fields: [trackId], references: [id], onDelete: Restrict)
+  licenseNumber         String         @unique @map("license_number")
+  termsVersion          String         @map("terms_version")
+  licenseeNameSnapshot  String         @map("licensee_name_snapshot")
+  licenseeEmailSnapshot String?        @map("licensee_email_snapshot")
+  kevalUserIdSnapshot   String         @map("keval_user_id_snapshot")
+  trackTitleSnapshot    String         @map("track_title_snapshot")
+  filePath              String?        @map("file_path")
+  fileSha256            String?        @map("file_sha256")
+  documentStatus        DocumentStatus @default(PENDING) @map("document_status")
+  issuedAt              DateTime?      @map("issued_at")
+  createdAt             DateTime       @default(now()) @map("created_at")
+  updatedAt             DateTime       @updatedAt @map("updated_at")
+
+  @@index([userId, createdAt])
   @@index([trackId])
   @@map("licenses")
 }
 
-model DownloadEvent {
-  id        String   @id @default(cuid())
-  userId    String   @map("user_id")
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  trackId   String?  @map("track_id")
-  track     Track?   @relation(fields: [trackId], references: [id], onDelete: SetNull)
-  format    String
-  ipHash    String?  @map("ip_hash")
-  userAgent String?  @map("user_agent")
-  createdAt DateTime @default(now()) @map("created_at")
+model OrderDocument {
+  id                 String            @id @default(cuid())
+  orderId            String            @map("order_id")
+  order              Order             @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  type               OrderDocumentType
+  status             DocumentStatus    @default(PENDING)
+  provider           PaymentProvider?
+  providerDocumentId String?           @map("provider_document_id")
+  providerLivemode   Boolean?          @map("provider_livemode")
+  providerUrl        String?           @map("provider_url") @db.Text
+  invoiceNumber      String?           @unique @map("invoice_number") @db.VarChar(16)
+  filePath           String?           @map("file_path")
+  fileSha256         String?           @map("file_sha256")
+  generatedAt        DateTime?         @map("generated_at")
+  errorMessage       String?           @map("error_message") @db.Text
+  createdAt          DateTime          @default(now()) @map("created_at")
+  updatedAt          DateTime          @updatedAt @map("updated_at")
 
-  @@index([userId])
-  @@index([trackId])
+  @@unique([orderId, type])
+  @@unique([provider, providerLivemode, providerDocumentId])
+  @@map("order_documents")
+}
+
+model InvoiceSequence {
+  key       String   @id @db.VarChar(32)
+  nextValue Int      @default(1) @map("next_value")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("invoice_sequences")
+}
+
+model DownloadGrant {
+  id            String            @id @default(cuid())
+  userId        String            @map("user_id")
+  user          User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  trackId       String            @map("track_id")
+  track         Track             @relation(fields: [trackId], references: [id], onDelete: Restrict)
+  entitlementId String?           @map("entitlement_id")
+  entitlement   Entitlement?      @relation(fields: [entitlementId], references: [id], onDelete: Restrict)
+  assetType     DownloadAssetType @map("asset_type")
+  tokenHash     String            @unique @map("token_hash")
+  expiresAt     DateTime          @map("expires_at")
+  maxUses       Int               @default(1) @map("max_uses")
+  useCount      Int               @default(0) @map("use_count")
+  revokedAt     DateTime?         @map("revoked_at")
+  createdAt     DateTime          @default(now()) @map("created_at")
+  events        DownloadEvent[]
+
+  @@index([userId, createdAt])
+  @@index([expiresAt])
+  @@map("download_grants")
+}
+
+model DownloadEvent {
+  id        String            @id @default(cuid())
+  grantId   String            @map("grant_id")
+  grant     DownloadGrant     @relation(fields: [grantId], references: [id], onDelete: Restrict)
+  userId    String            @map("user_id")
+  user      User              @relation(fields: [userId], references: [id], onDelete: Restrict)
+  trackId   String            @map("track_id")
+  track     Track             @relation(fields: [trackId], references: [id], onDelete: Restrict)
+  assetType DownloadAssetType @map("asset_type")
+  ipHash    String?           @map("ip_hash")
+  userAgent String?           @map("user_agent") @db.Text
+  createdAt DateTime          @default(now()) @map("created_at")
+
+  @@index([userId, createdAt])
+  @@index([trackId, createdAt])
   @@map("download_events")
 }
 
+model StreamSession {
+  id                  String              @id @default(cuid())
+  userId              String              @map("user_id")
+  user                User                @relation(fields: [userId], references: [id], onDelete: Cascade)
+  trackId             String              @map("track_id")
+  track               Track               @relation(fields: [trackId], references: [id], onDelete: Restrict)
+  clientPlaybackId    String              @map("client_playback_id")
+  format              StreamFormat
+  accessMode          StreamAccessMode    @map("access_mode")
+  status              StreamSessionStatus @default(RESERVED)
+  reservedAt          DateTime            @default(now()) @map("reserved_at")
+  startedAt           DateTime?           @map("started_at")
+  qualifiedAt         DateTime?           @map("qualified_at")
+  completedAt         DateTime?           @map("completed_at")
+  expiresAt           DateTime            @map("expires_at")
+  lastPositionSeconds Int                 @default(0) @map("last_position_seconds")
+  durationSeconds     Int                 @map("duration_seconds")
+  ipHash              String?             @map("ip_hash")
+  userAgent           String?             @map("user_agent") @db.Text
+  createdAt           DateTime            @default(now()) @map("created_at")
+  updatedAt           DateTime            @updatedAt @map("updated_at")
+  event               StreamEvent?
+
+  @@unique([userId, clientPlaybackId])
+  @@index([userId, status, expiresAt])
+  @@index([trackId, createdAt])
+  @@map("stream_sessions")
+}
+
 model StreamEvent {
+  id              String           @id @default(cuid())
+  sessionId       String           @unique @map("session_id")
+  session         StreamSession    @relation(fields: [sessionId], references: [id], onDelete: Restrict)
+  userId          String           @map("user_id")
+  user            User             @relation("StreamListener", fields: [userId], references: [id], onDelete: Restrict)
+  trackId         String           @map("track_id")
+  track           Track            @relation(fields: [trackId], references: [id], onDelete: Restrict)
+  ownerUserId     String?          @map("owner_user_id")
+  ownerUser       User?            @relation("StreamOwner", fields: [ownerUserId], references: [id], onDelete: SetNull)
+  format          StreamFormat
+  mode            StreamAccessMode
+  listenedSeconds Int              @map("listened_seconds")
+  qualifiedAt     DateTime         @map("qualified_at")
+  isMonetizable   Boolean          @default(false) @map("is_monetizable")
+  ipHash          String?          @map("ip_hash")
+  userAgent       String?          @map("user_agent") @db.Text
+  createdAt       DateTime         @default(now()) @map("created_at")
+
+  @@index([userId, qualifiedAt])
+  @@index([trackId, qualifiedAt])
+  @@index([ownerUserId, isMonetizable, qualifiedAt])
+  @@map("stream_events")
+}
+
+model TrackLike {
   id        String   @id @default(cuid())
   userId    String   @map("user_id")
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  trackId   String?  @map("track_id")
-  track     Track?   @relation(fields: [trackId], references: [id], onDelete: SetNull)
-  format    String
-  mode      String
-  ipHash    String?  @map("ip_hash")
-  userAgent String?  @map("user_agent")
+  trackId   String   @map("track_id")
+  track     Track    @relation(fields: [trackId], references: [id], onDelete: Cascade)
   createdAt DateTime @default(now()) @map("created_at")
 
-  @@index([userId])
+  @@unique([userId, trackId])
+  @@index([trackId, createdAt])
+  @@map("track_likes")
+}
+
+model TrackComment {
+  id        String        @id @default(cuid())
+  userId    String        @map("user_id")
+  user      User          @relation(fields: [userId], references: [id], onDelete: Restrict)
+  trackId   String        @map("track_id")
+  track     Track         @relation(fields: [trackId], references: [id], onDelete: Cascade)
+  body      String        @db.VarChar(2000)
+  status    CommentStatus @default(VISIBLE)
+  createdAt DateTime      @default(now()) @map("created_at")
+  updatedAt DateTime      @updatedAt @map("updated_at")
+  deletedAt DateTime?     @map("deleted_at")
+
+  @@index([trackId, status, createdAt])
+  @@index([userId, createdAt])
+  @@map("track_comments")
+}
+
+model UserPlaylist {
+  id          String              @id @default(cuid())
+  userId      String              @map("user_id")
+  user        User                @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name        String              @db.VarChar(120)
+  description String?             @db.VarChar(500)
+  isPublic    Boolean             @default(false) @map("is_public")
+  createdAt   DateTime            @default(now()) @map("created_at")
+  updatedAt   DateTime            @updatedAt @map("updated_at")
+  tracks      UserPlaylistTrack[]
+
+  @@index([userId, updatedAt])
+  @@map("user_playlists")
+}
+
+model UserPlaylistTrack {
+  id         String       @id @default(cuid())
+  playlistId String       @map("playlist_id")
+  playlist   UserPlaylist @relation(fields: [playlistId], references: [id], onDelete: Cascade)
+  trackId    String       @map("track_id")
+  track      Track        @relation(fields: [trackId], references: [id], onDelete: Cascade)
+  position   Int
+  createdAt  DateTime     @default(now()) @map("created_at")
+
+  @@unique([playlistId, trackId])
+  @@unique([playlistId, position])
   @@index([trackId])
-  @@map("stream_events")
+  @@map("user_playlist_tracks")
+}
+
+model WebhookEvent {
+  id               String          @id @default(cuid())
+  provider         WebhookProvider
+  providerEventId  String          @map("provider_event_id")
+  providerLivemode Boolean?        @map("provider_livemode")
+  eventType        String          @map("event_type")
+  objectId         String?         @map("object_id")
+  payloadHash      String          @map("payload_hash")
+  status           WebhookStatus   @default(RECEIVED)
+  attempts         Int             @default(0)
+  lastError        String?         @map("last_error") @db.Text
+  receivedAt       DateTime        @default(now()) @map("received_at")
+  processedAt      DateTime?       @map("processed_at")
+  createdAt        DateTime        @default(now()) @map("created_at")
+  updatedAt        DateTime        @updatedAt @map("updated_at")
+
+  @@unique([provider, providerEventId])
+  @@index([status, receivedAt])
+  @@map("webhook_events")
+}
+
+model OutboxEvent {
+  id            String       @id @default(cuid())
+  topic         String
+  aggregateType String       @map("aggregate_type")
+  aggregateId   String       @map("aggregate_id")
+  payload       Json
+  status        OutboxStatus @default(PENDING)
+  attempts      Int          @default(0)
+  availableAt   DateTime     @default(now()) @map("available_at")
+  processedAt   DateTime?    @map("processed_at")
+  lastError     String?      @map("last_error") @db.Text
+  createdAt     DateTime     @default(now()) @map("created_at")
+  updatedAt     DateTime     @updatedAt @map("updated_at")
+
+  @@index([status, availableAt])
+  @@index([aggregateType, aggregateId])
+  @@map("outbox_events")
+}
+
+model AuditLog {
+  id          String         @id @default(cuid())
+  actorType   AuditActorType @map("actor_type")
+  actorUserId String?        @map("actor_user_id")
+  actorUser   User?          @relation("AuditActor", fields: [actorUserId], references: [id], onDelete: SetNull)
+  action      String
+  targetType  String         @map("target_type")
+  targetId    String?        @map("target_id")
+  requestId   String?        @map("request_id")
+  ipHash      String?        @map("ip_hash")
+  metadata    Json?
+  createdAt   DateTime       @default(now()) @map("created_at")
+
+  @@index([actorUserId, createdAt])
+  @@index([targetType, targetId, createdAt])
+  @@index([requestId])
+  @@map("audit_logs")
+}
+
+model IdempotencyRecord {
+  id             String   @id @default(cuid())
+  userId         String   @map("user_id")
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  scope          String
+  key            String
+  requestHash    String   @map("request_hash")
+  responseStatus Int?     @map("response_status")
+  responseBody   Json?    @map("response_body")
+  expiresAt      DateTime @map("expires_at")
+  createdAt      DateTime @default(now()) @map("created_at")
+  updatedAt      DateTime @updatedAt @map("updated_at")
+
+  @@unique([userId, scope, key])
+  @@index([expiresAt])
+  @@map("idempotency_records")
 }

@@ -20,23 +20,28 @@ import {
   User,
 } from "lucide-react";
 import PageTransition from "@/components/PageTransition";
+import AccountCommercePanel from "@/components/account/AccountCommercePanel";
+import LikedSongsPanel from "@/components/account/LikedSongsPanel";
 import { useAuth } from "@/lib/auth-context";
+import { useLikedSongs } from "@/lib/liked-songs-context";
 import { usePlayerControls } from "@/lib/player-context";
 import { findTrackById, useStore } from "@/lib/store-context";
 import { useToast } from "@/lib/toast-context";
 import { cn, formatPrice } from "@/lib/utils";
 
 const workspaceTabs = [
-  { id: "wishlist", label: "Wishlist", icon: Heart },
+  { id: "liked", label: "Liked Songs", icon: Heart },
   { id: "recent", label: "Recently Played", icon: Library },
   { id: "history", label: "Purchases", icon: Receipt },
   { id: "downloads", label: "Downloads", icon: Download },
+  { id: "billing", label: "Plans & Billing", icon: CreditCard },
 ];
 
 const allTabs = new Set([
   "profile",
   "billing",
   "history",
+  "liked",
   "wishlist",
   "settings",
   "licensing",
@@ -47,37 +52,22 @@ const allTabs = new Set([
   "downloads",
 ]);
 
-function downloadTextFile(filename: string, content: string) {
-  const blob = new Blob([content], { type: "text/plain;charset=utf-8" });
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement("a");
-  link.href = url;
-  link.download = filename;
-  link.click();
-  URL.revokeObjectURL(url);
-}
-
-function itemBadge(type: "track" | "pack" | "sample") {
-  return type === "pack"
-    ? "bg-mid-purple/25 text-light-grey"
-    : type === "sample"
-      ? "bg-grey-azure/20 text-grey-azure"
-      : "bg-vivid-blue/15 text-vivid-blue";
-}
-
 export default function AccountPage() {
   const searchParams = useSearchParams();
   const { user } = useAuth();
   const [kevalUserId, setKevalUserId] = useState<string | null>(null);
-  const {
-    orders,
-    wishlist,
-    latestOrder,
-    getLicense,
-    isInCart,
-    isOwned,
-    addTrackToCart,
-  } = useStore();
+  const [membership, setMembership] = useState<{
+    planName: string;
+    isPaid: boolean;
+    lossless: boolean;
+    remainingToday: number | null;
+  } | null>(null);
+  const [purchaseSummary, setPurchaseSummary] = useState<{
+    ownedAssets: number;
+    latestOrderNumber: string | null;
+  } | null>(null);
+  const { isInCart, isOwned, addTrackToCart } = useStore();
+  const { likedCount } = useLikedSongs();
   const { recentlyPlayed, toggleTrack } = usePlayerControls();
   const { showToast } = useToast();
 
@@ -96,6 +86,53 @@ export default function AccountPage() {
       .catch((error: unknown) => {
         if (error instanceof DOMException && error.name === "AbortError") return;
         setKevalUserId(null);
+      });
+
+    void fetch("/api/account/access", {
+      signal: controller.signal,
+      headers: { Accept: "application/json" },
+    })
+      .then(async (response) => {
+        if (!response.ok) throw new Error("access_unavailable");
+        return response.json() as Promise<{
+          subscription?: { plan?: { name?: string } } | null;
+          streaming?: { lossless?: boolean; remainingToday?: number | null };
+        }>;
+      })
+      .then((access) => {
+        const planName = access.subscription?.plan?.name?.trim() || "Free";
+        setMembership({
+          planName,
+          isPaid: Boolean(access.subscription),
+          lossless: Boolean(access.streaming?.lossless),
+          remainingToday: access.streaming?.remainingToday ?? null,
+        });
+      })
+      .catch((error: unknown) => {
+        if (error instanceof DOMException && error.name === "AbortError") return;
+        setMembership(null);
+      });
+
+    void fetch("/api/account/orders?limit=50", {
+      signal: controller.signal,
+      headers: { Accept: "application/json" },
+    })
+      .then(async (response) => {
+        if (!response.ok) throw new Error("orders_unavailable");
+        return response.json() as Promise<{
+          orders?: Array<{ orderNumber?: string; items?: unknown[] }>;
+        }>;
+      })
+      .then((history) => {
+        const serverOrders = history.orders ?? [];
+        setPurchaseSummary({
+          ownedAssets: serverOrders.reduce((total, order) => total + (order.items?.length ?? 0), 0),
+          latestOrderNumber: serverOrders[0]?.orderNumber ?? null,
+        });
+      })
+      .catch((error: unknown) => {
+        if (error instanceof DOMException && error.name === "AbortError") return;
+        setPurchaseSummary(null);
       });
 
     return () => controller.abort();
@@ -130,29 +167,25 @@ export default function AccountPage() {
     );
   };
 
-  const activeTab = allTabs.has(searchParams.get("tab") ?? "")
-    ? (searchParams.get("tab") as string)
-    : "wishlist";
-
-  const purchasedItems = useMemo(
-    () => orders.flatMap((order) => order.items.map((item) => ({ ...item, order }))),
-    [orders]
-  );
+  const requestedTab = searchParams.get("tab") ?? "";
+  const activeTab = requestedTab === "wishlist"
+    ? "liked"
+    : allTabs.has(requestedTab)
+      ? requestedTab
+      : "liked";
 
   const libraryStats = useMemo(
     () => [
-      { label: "Saved", value: wishlist.length, tone: "text-vivid-blue" },
+      { label: "Liked", value: likedCount, tone: "text-zesty-red" },
       { label: "Recently Played", value: recentlyPlayed.length, tone: "text-dandelion" },
-      { label: "Owned Assets", value: purchasedItems.length, tone: "text-white" },
+      { label: "Owned Assets", value: purchaseSummary?.ownedAssets ?? 0, tone: "text-white" },
       {
         label: "Latest Order",
-        value: latestOrder
-          ? `#${latestOrder.id.replace("order-", "").slice(0, 12)}`
-          : "None",
+        value: purchaseSummary?.latestOrderNumber ?? "None",
         tone: "text-grey-azure",
       },
     ],
-    [latestOrder, purchasedItems.length, recentlyPlayed.length, wishlist.length]
+    [likedCount, purchaseSummary, recentlyPlayed.length]
   );
 
   return (
@@ -162,22 +195,41 @@ export default function AccountPage() {
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-2xl">
               <div className="mb-4 flex items-center gap-3">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-vivid-blue to-mid-purple text-xl font-bold text-white">
+                <div
+                  className={cn(
+                    "flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-vivid-blue to-mid-purple text-xl font-bold text-white",
+                    membership?.isPaid && "border-2 border-dandelion shadow-[0_0_24px_rgba(255,235,153,0.2)]"
+                  )}
+                >
                   {user?.name?.[0]?.toUpperCase() || "U"}
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-white">{user?.name}</p>
                   <p className="text-xs text-muted">{user?.email}</p>
                 </div>
-                <span className="ml-auto inline-flex items-center gap-1 rounded-full bg-vivid-blue/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-vivid-blue lg:ml-0">
+                <span
+                  className={cn(
+                    "ml-auto inline-flex items-center gap-1 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider lg:ml-0",
+                    membership?.isPaid
+                      ? "bg-dandelion/12 text-dandelion"
+                      : "bg-vivid-blue/10 text-vivid-blue"
+                  )}
+                >
                   <BadgeCheck className="h-3 w-3" />
-                  Member
+                  {membership?.planName || "Member"}
                 </span>
               </div>
               <h1 className="text-3xl font-bold text-white">Your Library Workspace</h1>
               <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted">
-                Manage saved tracks, recent previews, purchases, downloads, and playlists from one focused workspace.
+                Manage Liked Songs, recent previews, purchases, downloads, and playlists from one focused workspace.
               </p>
+              <Link
+                href="/account?tab=billing"
+                className="mt-5 inline-flex items-center gap-2 rounded-xl bg-dandelion px-4 py-2.5 text-sm font-bold text-vampire-black transition-all hover:brightness-105"
+              >
+                <CreditCard className="h-4 w-4" />
+                View plans and billing
+              </Link>
             </div>
 
             <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
@@ -219,41 +271,7 @@ export default function AccountPage() {
         </div>
 
         <div className="space-y-6">
-          {activeTab === "wishlist" && (
-            <section className="glass rounded-2xl p-6">
-              <SectionTitle
-                title="Wishlist"
-                subtitle="Saved songs and packs you may want to license next."
-              />
-              {wishlist.length ? (
-                <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-                  {wishlist.map((item) => (
-                    <div
-                      key={`${item.type}-${item.id}`}
-                      className={cn("rounded-2xl bg-gradient-to-br p-[1px]", item.coverUrl)}
-                    >
-                      <div className="h-full rounded-2xl bg-[#0c0d1c]/90 p-5 backdrop-blur">
-                        <div className="flex items-start justify-between gap-3">
-                          <div>
-                            <p className="text-sm font-semibold text-white">{item.title}</p>
-                            <p className="mt-1 text-xs text-muted">{item.artist}</p>
-                          </div>
-                          <span className={cn("rounded-full px-2 py-1 text-[10px] font-bold uppercase", itemBadge(item.type))}>
-                            {item.type}
-                          </span>
-                        </div>
-                        <p className="mt-4 text-sm font-semibold text-vivid-blue">
-                          {formatPrice(item.price)}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <EmptyState text="Save tracks and packs to your wishlist so your shortlist stays organized." />
-              )}
-            </section>
-          )}
+          {activeTab === "liked" && <LikedSongsPanel />}
 
           {activeTab === "recent" && (
             <section className="glass rounded-2xl p-6">
@@ -330,143 +348,11 @@ export default function AccountPage() {
           )}
 
           {activeTab === "history" && (
-            <section className="glass rounded-2xl p-6">
-              <SectionTitle
-                title="Purchases"
-                subtitle="Owned songs, packs, and licenses delivered through your completed orders."
-              />
-              {orders.length ? (
-                <div className="space-y-4">
-                  {orders.map((order) => (
-                    <div
-                      key={order.id}
-                      className="rounded-2xl border border-white/[0.06] bg-white/[0.03] p-5"
-                    >
-                      <div className="flex flex-wrap items-center justify-between gap-3">
-                        <div>
-                          <p className="text-sm font-semibold text-white">{order.id}</p>
-                          <p className="mt-1 text-xs text-muted">
-                            {new Date(order.createdAt).toLocaleString("en-IN")}
-                          </p>
-                        </div>
-                        <span className="text-sm font-semibold text-vivid-blue">
-                          {formatPrice(order.total)}
-                        </span>
-                      </div>
-
-                      <div className="mt-4 space-y-3">
-                        {order.items.map((item) => (
-                          <div
-                            key={`${item.type}-${item.id}`}
-                            className="rounded-xl border border-white/[0.06] bg-white/[0.03] p-4"
-                          >
-                            <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-                              <div>
-                                <div className="flex items-center gap-2">
-                                  <p className="text-sm font-medium text-white">{item.title}</p>
-                                  <span className={cn("rounded-full px-2 py-0.5 text-[10px] font-bold uppercase", itemBadge(item.type))}>
-                                    {item.type}
-                                  </span>
-                                </div>
-                                <p className="mt-1 text-xs text-muted">{item.artist}</p>
-                              </div>
-                              <div className="flex flex-wrap items-center gap-2">
-                                <span className="rounded-lg bg-vivid-blue/10 px-2.5 py-1 text-xs text-vivid-blue">
-                                  {order.licenses[`${item.type}:${item.id}`]}
-                                </span>
-                                <span className="text-xs font-semibold text-white">
-                                  {formatPrice(item.price)}
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <EmptyState text="Your purchases will appear here after checkout with license codes and ownership records." />
-              )}
-            </section>
+            <AccountCommercePanel view="history" />
           )}
 
           {activeTab === "downloads" && (
-            <section className="glass rounded-2xl p-6">
-              <SectionTitle
-                title="Downloads"
-                subtitle="Export ownership manifests and license-ready references for purchased assets."
-              />
-              {purchasedItems.length ? (
-                <div className="grid gap-4 md:grid-cols-2">
-                  {purchasedItems.map((item) => {
-                    const license = getLicense(item.id, item.type) ?? "Pending";
-
-                    return (
-                      <div
-                        key={`${item.type}-${item.id}`}
-                        className="rounded-2xl border border-white/[0.06] bg-white/[0.03] p-5"
-                      >
-                        <div className="flex items-start justify-between gap-3">
-                          <div>
-                            <div className="flex items-center gap-2">
-                              <p className="text-sm font-semibold text-white">{item.title}</p>
-                              <span className={cn("rounded-full px-2 py-0.5 text-[10px] font-bold uppercase", itemBadge(item.type))}>
-                                {item.type}
-                              </span>
-                            </div>
-                            <p className="mt-1 text-xs text-muted">{item.artist}</p>
-                            <p className="mt-3 text-[11px] text-muted">License: {license}</p>
-                          </div>
-                          <button
-                            type="button"
-                            onClick={() => {
-                              const trackMeta = item.type === "track" ? findTrackById(item.id) : null;
-                              downloadTextFile(
-                                `${item.title.replace(/\s+/g, "-").toLowerCase()}-license.txt`,
-                                [
-                                  "=== KEVAL SOUND Ownership Manifest ===",
-                                  "",
-                                  "[ Asset Details ]",
-                                  `Title      : ${item.title}`,
-                                  `Type       : ${item.type}`,
-                                  `Artist     : ${item.artist ?? "N/A"}`,
-                                  "",
-                                  "[ Technical Metadata ]",
-                                  trackMeta ? `Genre      : ${trackMeta.genre}` : null,
-                                  trackMeta ? `Key        : ${trackMeta.key}` : null,
-                                  trackMeta ? `Mood       : ${trackMeta.mood}` : null,
-                                  trackMeta ? `Region     : ${trackMeta.region}` : null,
-                                  trackMeta ? `Language   : ${trackMeta.language}` : null,
-                                  trackMeta ? `Duration   : ${trackMeta.duration}s` : null,
-                                  trackMeta ? `Stems      : ${trackMeta.stems ? "Yes" : "No"}` : null,
-                                  trackMeta ? `Tags       : ${trackMeta.tags.join(", ")}` : null,
-                                  "",
-                                  "[ License Details ]",
-                                  `License    : ${license}`,
-                                  `Price Paid : ${formatPrice(item.price)}`,
-                                  `Purchased  : ${user?.name} <${user?.email}>`,
-                                  "",
-                                  "=== End of Manifest ===",
-                                ]
-                                  .filter((line) => line !== null)
-                                  .join("\n")
-                              );
-                            }}
-                            className="inline-flex items-center gap-2 rounded-xl bg-vivid-blue/10 px-4 py-2.5 text-sm font-semibold text-vivid-blue transition-colors hover:bg-vivid-blue/20"
-                          >
-                            <Download className="h-4 w-4" />
-                            Download
-                          </button>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              ) : (
-                <EmptyState text="Purchased tracks and packs become downloadable here once you complete checkout." />
-              )}
-            </section>
+            <AccountCommercePanel view="downloads" />
           )}
 
           {activeTab === "profile" && (
@@ -480,28 +366,28 @@ export default function AccountPage() {
                   { label: "Display name", value: user?.name ?? "Unknown" },
                   { label: "Email", value: user?.email ?? "Unknown" },
                   { label: "KEVAL USER ID", value: kevalUserId ?? "Assigning securely..." },
-                  { label: "Member tier", value: "Free" },
-                  { label: "Latest order", value: latestOrder?.id ?? "No purchases yet" },
+                  { label: "Member tier", value: membership?.planName ?? "Free" },
+                  {
+                    label: "Streaming access",
+                    value: !membership
+                      ? "Checking allowance..."
+                      : membership.lossless
+                        ? "Unlimited lossless WAV"
+                        : membership.remainingToday === null
+                          ? "Unlimited streaming"
+                          : `${membership.remainingToday} free streams remaining today`,
+                  },
+                  {
+                    label: "Latest order",
+                    value: purchaseSummary?.latestOrderNumber ?? "No purchases yet",
+                  },
                 ]}
               />
             </SimplePanel>
           )}
 
           {activeTab === "billing" && (
-            <SimplePanel
-              title="Billing"
-              subtitle="Review your plan, saved payment method, and billing posture."
-              icon={CreditCard}
-            >
-              <InfoGrid
-                items={[
-                  { label: "Plan", value: "Pro Creator" },
-                  { label: "Payment method", value: "Added at checkout (stored securely by payment gateway)" },
-                  { label: "Billing model", value: "One-time ownership purchases" },
-                  { label: "Invoices", value: "Auto-generated for every completed order" },
-                ]}
-              />
-            </SimplePanel>
+            <AccountCommercePanel view="billing" />
           )}
 
           {activeTab === "settings" && (
@@ -536,7 +422,7 @@ export default function AccountPage() {
               <div className="space-y-4 text-sm leading-relaxed text-muted">
                 <p>Every completed purchase generates a unique KEVAL SOUND license code tied to your account.</p>
                 <p>Exclusive tracks and full packs are removed from the live catalog immediately after purchase.</p>
-                <p>Use Purchases and Downloads to retrieve order receipts, ownership proof, and exportable manifests.</p>
+                <p>Use Purchases and Downloads to retrieve each licensed MP3, WAV master, license PDF, and invoice PDF.</p>
               </div>
             </SimplePanel>
           )}

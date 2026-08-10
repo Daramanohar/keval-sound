@@ -16,6 +16,7 @@ const isProtectedRoute = createRouteMatcher([
   "/samples(.*)",
   "/song(.*)",
   "/account(.*)",
+  "/admin(.*)",
   "/cart(.*)",
   "/onboarding(.*)",
   "/api/protected(.*)",
@@ -25,6 +26,16 @@ export default clerkMiddleware(async (auth, req) => {
   if (req.nextUrl.pathname === "/") {
     const { userId } = await auth();
     if (!userId) {
+      const isNonProductionHost =
+        process.env.VERCEL_ENV !== "production" ||
+        req.nextUrl.hostname.endsWith(".vercel.app") ||
+        req.nextUrl.hostname === "localhost" ||
+        req.nextUrl.hostname === "127.0.0.1";
+
+      if (isNonProductionHost) {
+        return NextResponse.redirect(new URL("/sign-in", req.url));
+      }
+
       return NextResponse.redirect("https://www.kevalsound.com/");
     }
   }

@@ -131,7 +131,7 @@ const TrackCard = memo(function TrackCard({ track, queue, index = 0, rank }: Tra
               ? "bg-zesty-red text-white"
               : "bg-black/30 text-white/70 hover:bg-black/50 hover:text-white"
           )}
-          aria-label="Toggle wishlist"
+          aria-label={isFavorited ? `Remove ${track.title} from Liked Songs` : `Add ${track.title} to Liked Songs`}
         >
           <Heart className={cn("h-3.5 w-3.5", isFavorited && "fill-current")} />
         </button>

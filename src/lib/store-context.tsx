@@ -10,6 +10,7 @@ import {
   type ReactNode,
 } from "react";
 import { useAuth } from "./auth-context";
+import { useLikedSongs } from "./liked-songs-context";
 import {
   packs,
   samples,
@@ -54,6 +55,7 @@ interface StoreContextType extends StoreState {
   addSampleToCart: (sample: Sample) => boolean;
   removeFromCart: (id: string, type?: CatalogType) => void;
   clearCart: () => void;
+  refreshOwnedItems: () => Promise<void>;
   toggleTrackWishlist: (track: Track) => void;
   togglePackWishlist: (pack: Pack) => void;
   toggleSampleWishlist: (sample: Sample) => void;
@@ -81,6 +83,7 @@ const emptyContext: StoreContextType = {
   addSampleToCart: () => false,
   removeFromCart: () => {},
   clearCart: () => {},
+  refreshOwnedItems: async () => {},
   toggleTrackWishlist: () => {},
   togglePackWishlist: () => {},
   toggleSampleWishlist: () => {},
@@ -154,6 +157,24 @@ function writeStore(storageKey: string, state: StoreState) {
   window.localStorage.setItem(storageKey, JSON.stringify(state));
 }
 
+async function readServerOwnedTrackIds(signal?: AbortSignal) {
+  const response = await fetch("/api/account/downloads", {
+    credentials: "same-origin",
+    cache: "no-store",
+    signal,
+    headers: { Accept: "application/json" },
+  });
+  if (!response.ok) return null;
+  const body = (await response.json()) as {
+    downloads?: Array<{ trackId?: unknown }>;
+  };
+  return new Set(
+    (body.downloads ?? [])
+      .map((item) => item.trackId)
+      .filter((trackId): trackId is string => typeof trackId === "string")
+  );
+}
+
 function createLicenseCode(item: CartItem, orderId: string) {
   return `KVL-${item.type.slice(0, 1).toUpperCase()}${item.id.toUpperCase()}-${orderId.slice(-5).toUpperCase()}`;
 }
@@ -166,13 +187,38 @@ function StoreSessionProvider({
   storageKey: string;
 }) {
   const [state, setState] = useState<StoreState>(() => readStore(storageKey));
+  const [serverOwnedTrackIds, setServerOwnedTrackIds] = useState<Set<string>>(() => new Set());
+  const { likedSongs, likedCount, isLiked, toggleLike } = useLikedSongs();
+
+  const refreshOwnedItems = useCallback(async () => {
+    try {
+      const trackIds = await readServerOwnedTrackIds();
+      if (trackIds) setServerOwnedTrackIds(trackIds);
+    } catch {
+      // Commerce routes still validate ownership even if this UI hydration fails.
+    }
+  }, []);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    void readServerOwnedTrackIds(controller.signal)
+      .then((trackIds) => {
+        if (trackIds) setServerOwnedTrackIds(trackIds);
+      })
+      .catch(() => {
+        // Commerce routes still validate ownership even if this UI hydration fails.
+      });
+    return () => controller.abort();
+  }, []);
 
   useEffect(() => {
     writeStore(storageKey, state);
   }, [state, storageKey]);
 
   const ownedItems = useMemo(() => {
-    const owned = new Set<string>();
+    const owned = new Set<string>(
+      Array.from(serverOwnedTrackIds, (trackId) => itemKey(trackId, "track"))
+    );
 
     state.orders.forEach((order) => {
       order.items.forEach((item) => {
@@ -181,7 +227,15 @@ function StoreSessionProvider({
     });
 
     return owned;
-  }, [state.orders]);
+  }, [serverOwnedTrackIds, state.orders]);
+
+  const visibleWishlist = useMemo(
+    () => [
+      ...likedSongs.map((item) => createTrackItem(item.track)),
+      ...state.wishlist.filter((item) => item.type !== "track"),
+    ],
+    [likedSongs, state.wishlist]
+  );
 
   const addItemToCollection = useCallback((item: CartItem) => {
     let added = false;
@@ -265,8 +319,10 @@ function StoreSessionProvider({
 
   const isInWishlist = useCallback(
     (id: string, type: CatalogType = "track") =>
-      state.wishlist.some((item) => itemKey(item.id, item.type) === itemKey(id, type)),
-    [state.wishlist]
+      type === "track"
+        ? isLiked(id)
+        : state.wishlist.some((item) => itemKey(item.id, item.type) === itemKey(id, type)),
+    [isLiked, state.wishlist]
   );
 
   const isOwned = useCallback(
@@ -336,15 +392,17 @@ function StoreSessionProvider({
   const value = useMemo<StoreContextType>(
     () => ({
       ...state,
+      wishlist: visibleWishlist,
       isReady: true,
       cartCount: state.cart.length,
-      wishlistCount: state.wishlist.length,
+      wishlistCount: likedCount,
       addTrackToCart,
       addPackToCart,
       addSampleToCart,
       removeFromCart,
       clearCart,
-      toggleTrackWishlist: (track) => toggleWishlistItem(createTrackItem(track)),
+      refreshOwnedItems,
+      toggleTrackWishlist: (track) => void toggleLike(track),
       togglePackWishlist: (pack) => toggleWishlistItem(createPackItem(pack)),
       toggleSampleWishlist: (sample) => toggleWishlistItem(createSampleItem(sample)),
       isInCart,
@@ -364,9 +422,13 @@ function StoreSessionProvider({
       isInCart,
       isInWishlist,
       isOwned,
+      likedCount,
       removeFromCart,
+      refreshOwnedItems,
       state,
+      toggleLike,
       toggleWishlistItem,
+      visibleWishlist,
     ]
   );
 

@@ -45,7 +45,7 @@ const PackCard = memo(function PackCard({ pack, index = 0 }: PackCardProps) {
       togglePackWishlist(pack);
       showToast({
         tone: "info",
-        title: liked ? `${pack.title} removed from wishlist` : `${pack.title} saved to wishlist`,
+        title: liked ? `${pack.title} removed from saved packs` : `${pack.title} saved for later`,
       });
     },
     [liked, pack, showToast, togglePackWishlist]
@@ -194,7 +194,7 @@ const PackCard = memo(function PackCard({ pack, index = 0 }: PackCardProps) {
         <button
           type="button"
           onClick={handleSave}
-          aria-label={liked ? "Remove from wishlist" : "Add to wishlist"}
+          aria-label={liked ? "Remove saved pack" : "Save pack"}
           className={cn(
             "flex h-8 w-8 shrink-0 items-center justify-center rounded-lg transition-colors",
             liked

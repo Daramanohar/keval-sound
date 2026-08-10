@@ -171,6 +171,23 @@ function getAudioErrorMessage(audio: HTMLAudioElement) {
   }
 }
 
+type StreamAuthorizationResponse = {
+  streamUrl: string;
+  streamSessionId: string;
+  format: "mp3" | "wav";
+  accessMode: string;
+  remainingFreeStreams: number | null;
+};
+
+function isProtectedStreamRoute(audioUrl: string) {
+  return audioUrl.startsWith("/api/media/stream/");
+}
+
+function createPlaybackId() {
+  return globalThis.crypto?.randomUUID?.() ??
+    `${Date.now().toString(36)}_${Math.random().toString(36).slice(2)}_${Math.random().toString(36).slice(2)}`;
+}
+
 function PlayerSessionProvider({ children, storageKey }: { children: ReactNode; storageKey: string }) {
   const { user } = useAuth();
   const useWavReview = isWavReviewerEmail(user?.email);
@@ -190,6 +207,8 @@ function PlayerSessionProvider({ children, storageKey }: { children: ReactNode; 
   const [dismissed, setDismissed] = useState(false);
   const [isFullPlayerOpen, setIsFullPlayerOpen] = useState(false);
   const [isQueueOpen, setIsQueueOpen] = useState(false);
+  const [resolvedAudioUrl, setResolvedAudioUrl] = useState<string | null>(null);
+  const [playbackAttempt, setPlaybackAttempt] = useState(0);
   const [recentlyPlayed, setRecentlyPlayed] = useState<RecentPreviewItem[]>(() =>
     readRecentPreviews(storageKey)
   );
@@ -199,6 +218,8 @@ function PlayerSessionProvider({ children, storageKey }: { children: ReactNode; 
   const shuffleHistoryRef = useRef<number[]>([]);
   const currentTimeRef = useRef(0);
   const playbackRequestedRef = useRef(false);
+  const streamSessionIdRef = useRef<string | null>(null);
+  const lastReportedPositionRef = useRef(0);
 
   const currentItem = queue[currentIndex] ?? null;
   const duration = mediaDuration > 0 ? mediaDuration : currentItem?.duration ?? 0;
@@ -241,6 +262,7 @@ function PlayerSessionProvider({ children, storageKey }: { children: ReactNode; 
     setIsBuffering(false);
     setIsPlaying(false);
     setPlaybackIntent(Boolean(nextItem.audioUrl));
+    setPlaybackAttempt((attempt) => attempt + 1);
     setDismissed(false);
     shuffleHistoryRef.current = [safeIndex];
     rememberRecentTrack(nextItem);
@@ -258,6 +280,13 @@ function PlayerSessionProvider({ children, storageKey }: { children: ReactNode; 
 
   const toggleTrack = useCallback((track: Track, options?: TrackPlaybackOptions) => {
     if (currentItem?.id === track.id && currentItem.type === "track") {
+      if (!playbackRequestedRef.current && audioRef.current?.ended) {
+        setCurrentTime(0);
+        setPlaybackAttempt((attempt) => attempt + 1);
+        setPlaybackIntent(true);
+        setDismissed(false);
+        return;
+      }
       setPlaybackIntent(!playbackRequestedRef.current);
       setDismissed(false);
       return;
@@ -296,6 +325,7 @@ function PlayerSessionProvider({ children, storageKey }: { children: ReactNode; 
     setIsBuffering(false);
     setIsPlaying(false);
     setPlaybackIntent(Boolean(nextItem.audioUrl));
+    setPlaybackAttempt((attempt) => attempt + 1);
     setDismissed(false);
     rememberRecentTrack(nextItem);
   }, [queue, rememberRecentTrack, setPlaybackIntent]);
@@ -364,14 +394,20 @@ function PlayerSessionProvider({ children, storageKey }: { children: ReactNode; 
 
   const handleTrackEnd = useCallback(() => {
     const audio = audioRef.current;
+    const sessionId = streamSessionIdRef.current;
+    if (sessionId && audio) {
+      void fetch(`/api/media/sessions/${encodeURIComponent(sessionId)}/progress`, {
+        method: "POST",
+        credentials: "same-origin",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ positionSeconds: audio.duration || audio.currentTime, completed: true }),
+        keepalive: true,
+      }).catch(() => {});
+    }
     if (repeatMode === "one" && audio) {
-      audio.currentTime = 0;
       setCurrentTime(0);
+      setPlaybackAttempt((attempt) => attempt + 1);
       setPlaybackIntent(true);
-      void audio.play().catch(() => {
-        setIsPlaying(false);
-        setPlaybackIntent(false);
-      });
       return;
     }
     nextTrack();
@@ -391,17 +427,69 @@ function PlayerSessionProvider({ children, storageKey }: { children: ReactNode; 
   }, []);
 
   useEffect(() => {
+    const audioUrl = currentItem?.audioUrl;
+    let cancelled = false;
+    streamSessionIdRef.current = null;
+    lastReportedPositionRef.current = 0;
+    setResolvedAudioUrl(null);
+
+    if (!audioUrl) return;
+    if (!isProtectedStreamRoute(audioUrl)) {
+      setResolvedAudioUrl(audioUrl);
+      return;
+    }
+
+    const resolveProtectedStream = async () => {
+      try {
+        setIsLoading(true);
+        setError(null);
+        const authorizationUrl = new URL(audioUrl, window.location.origin);
+        authorizationUrl.searchParams.set("response", "json");
+        authorizationUrl.searchParams.set("playbackId", createPlaybackId());
+        const response = await fetch(authorizationUrl, {
+          credentials: "same-origin",
+          cache: "no-store",
+        });
+        const body = (await response.json().catch(() => null)) as
+          | (Partial<StreamAuthorizationResponse> & { message?: string })
+          | null;
+        if (!response.ok || !body?.streamUrl || !body.streamSessionId) {
+          throw new Error(body?.message || "Playback authorization failed. Try again.");
+        }
+        if (cancelled) return;
+        streamSessionIdRef.current = body.streamSessionId;
+        setResolvedAudioUrl(body.streamUrl);
+      } catch (authorizationError) {
+        if (cancelled) return;
+        setIsLoading(false);
+        setIsBuffering(false);
+        setPlaybackIntent(false);
+        setError(
+          authorizationError instanceof Error
+            ? authorizationError.message
+            : "Playback authorization failed. Try again."
+        );
+      }
+    };
+
+    void resolveProtectedStream();
+    return () => {
+      cancelled = true;
+    };
+  }, [currentItem?.audioUrl, currentItem?.id, playbackAttempt, setPlaybackIntent]);
+
+  useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
-    if (!currentItem?.audioUrl) {
-      audio.pause();
+    audio.pause();
+    if (!resolvedAudioUrl) {
       audio.removeAttribute("src");
       audio.load();
       return;
     }
-    audio.src = currentItem.audioUrl;
+    audio.src = resolvedAudioUrl;
     audio.load();
-  }, [currentItem?.audioUrl, currentItem?.id]);
+  }, [resolvedAudioUrl]);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -412,7 +500,7 @@ function PlayerSessionProvider({ children, storageKey }: { children: ReactNode; 
 
   useEffect(() => {
     const audio = audioRef.current;
-    if (!audio || !currentItem?.audioUrl) return;
+    if (!audio || !currentItem?.audioUrl || !resolvedAudioUrl) return;
     if (!playbackRequested) {
       audio.pause();
       return;
@@ -448,7 +536,7 @@ function PlayerSessionProvider({ children, storageKey }: { children: ReactNode; 
       cancelled = true;
       if (retryTimer !== undefined) window.clearTimeout(retryTimer);
     };
-  }, [currentItem?.audioUrl, currentItem?.id, playbackRequested, setPlaybackIntent]);
+  }, [currentItem?.audioUrl, currentItem?.id, playbackRequested, resolvedAudioUrl, setPlaybackIntent]);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -530,6 +618,26 @@ function PlayerSessionProvider({ children, storageKey }: { children: ReactNode; 
   }, [currentItem?.audioUrl, isPlaying]);
 
   useEffect(() => {
+    if (!isPlaying) return;
+    const reportProgress = () => {
+      const audio = audioRef.current;
+      const sessionId = streamSessionIdRef.current;
+      if (!audio || !sessionId) return;
+      const positionSeconds = Math.floor(audio.currentTime);
+      if (positionSeconds - lastReportedPositionRef.current < 15) return;
+      lastReportedPositionRef.current = positionSeconds;
+      void fetch(`/api/media/sessions/${encodeURIComponent(sessionId)}/progress`, {
+        method: "POST",
+        credentials: "same-origin",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ positionSeconds, completed: false }),
+      }).catch(() => {});
+    };
+    const timer = window.setInterval(reportProgress, 15_000);
+    return () => window.clearInterval(timer);
+  }, [isPlaying]);
+
+  useEffect(() => {
     const nextItem = queue[currentIndex + 1];
     if (!nextItem?.coverUrl?.startsWith("/") && !nextItem?.coverUrl?.startsWith("http")) return;
     const image = new Image();
@@ -550,6 +658,12 @@ function PlayerSessionProvider({ children, storageKey }: { children: ReactNode; 
     }
     setDismissed(false);
     setError(null);
+    if (!playbackRequestedRef.current && audioRef.current?.ended) {
+      setCurrentTime(0);
+      setPlaybackAttempt((attempt) => attempt + 1);
+      setPlaybackIntent(true);
+      return;
+    }
     setPlaybackIntent(!playbackRequestedRef.current);
   }, [currentItem?.audioUrl, setPlaybackIntent]);
 
@@ -558,9 +672,14 @@ function PlayerSessionProvider({ children, storageKey }: { children: ReactNode; 
     if (!audio || !currentItem?.audioUrl) return;
     setError(null);
     setIsLoading(true);
+    if (!resolvedAudioUrl) {
+      setPlaybackAttempt((attempt) => attempt + 1);
+      setPlaybackIntent(true);
+      return;
+    }
     audio.load();
     setPlaybackIntent(true);
-  }, [currentItem?.audioUrl, setPlaybackIntent]);
+  }, [currentItem?.audioUrl, resolvedAudioUrl, setPlaybackIntent]);
 
   const addToQueue = useCallback((track: Track, pack?: Pack) => {
     setQueue((current) => [...current, toPlayableTrack(track, pack, useWavReview)]);

@@ -110,7 +110,7 @@ const MusicCard = memo(function MusicCard({
             )}
           </div>
 
-          {/* Wishlist */}
+          {/* Liked Songs */}
           <button
             type="button"
             onClick={() => toggleTrackWishlist(track)}
@@ -120,7 +120,7 @@ const MusicCard = memo(function MusicCard({
                 ? "bg-zesty-red/85 text-white"
                 : "bg-black/35 text-white/0 group-hover:text-white/70 hover:bg-black/50 hover:text-white"
             )}
-            aria-label="Toggle wishlist"
+            aria-label={liked ? `Remove ${track.title} from Liked Songs` : `Add ${track.title} to Liked Songs`}
           >
             <Heart className={cn("h-3 w-3", liked && "fill-current")} />
           </button>
@@ -142,26 +142,6 @@ const MusicCard = memo(function MusicCard({
               {isPlaying ? <Pause className="h-4 w-4" /> : <Play className="ml-0.5 h-4 w-4" />}
             </motion.button>
           </div>
-
-          {/* Cart shortcut on hover */}
-          <motion.button
-            type="button"
-            whileTap={{ scale: 0.9 }}
-            animate={cartPulse ? { scale: [1, 1.08, 1] } : undefined}
-            onClick={handleAddToCart}
-            className={cn(
-              "absolute bottom-2 right-2 flex h-7 w-7 items-center justify-center rounded-full backdrop-blur-sm transition-all duration-200",
-              "opacity-0 group-hover:opacity-100",
-              owned
-                ? "bg-white/20 text-white/60"
-                : inCart
-                  ? "bg-vivid-blue text-white"
-                  : "bg-black/40 text-white/80 hover:bg-vivid-blue hover:text-white"
-            )}
-            aria-label={owned ? "Already owned" : inCart ? "In cart" : "Add to cart"}
-          >
-            <ShoppingCart className="h-3 w-3" />
-          </motion.button>
 
           {/* Active waveform */}
           {isActive && (
@@ -193,6 +173,25 @@ const MusicCard = memo(function MusicCard({
           </div>
           <p className="mt-0.5 truncate text-[10px] text-muted/70">{track.artist}</p>
           <TrackTagLine track={track} className="mt-1 text-[10px] text-muted/55" />
+          <motion.button
+            type="button"
+            whileTap={{ scale: 0.97 }}
+            animate={cartPulse ? { scale: [1, 1.04, 1] } : undefined}
+            onClick={handleAddToCart}
+            disabled={owned}
+            className={cn(
+              "mt-2 inline-flex h-8 w-full items-center justify-center gap-1.5 rounded-lg text-[10px] font-bold transition-colors",
+              owned
+                ? "cursor-default bg-white/[0.05] text-muted"
+                : inCart
+                  ? "bg-dandelion text-vampire-black"
+                  : "bg-dandelion/10 text-dandelion hover:bg-dandelion hover:text-vampire-black"
+            )}
+            aria-label={owned ? `${track.title} is already owned` : inCart ? `${track.title} is in cart` : `Add ${track.title} to cart`}
+          >
+            <ShoppingCart className="h-3 w-3" />
+            {owned ? "Owned" : inCart ? "In cart" : "Add to cart"}
+          </motion.button>
         </div>
       </div>
     );
@@ -252,7 +251,7 @@ const MusicCard = memo(function MusicCard({
                 ? "bg-zesty-red/85 text-white"
                 : "bg-black/35 text-white/70 hover:bg-black/50 hover:text-white"
             )}
-            aria-label="Toggle wishlist"
+            aria-label={liked ? `Remove ${track.title} from Liked Songs` : `Add ${track.title} to Liked Songs`}
           >
             <Heart className={cn("h-3.5 w-3.5", liked && "fill-current")} />
           </button>

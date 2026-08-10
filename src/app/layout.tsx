@@ -7,6 +7,7 @@ import { PlayerProvider } from "@/lib/player-context";
 import { StoreProvider } from "@/lib/store-context";
 import { ToastProvider } from "@/lib/toast-context";
 import { SongDetailProvider } from "@/lib/song-detail-context";
+import { LikedSongsProvider } from "@/lib/liked-songs-context";
 import AppShell from "@/components/AppShell";
 import PersistentPlayer from "@/components/PersistentPlayer";
 import SongDetailDrawer from "@/components/SongDetailDrawer";
@@ -50,18 +51,20 @@ export default function RootLayout({
       <html lang="en" className={`${sora.variable} h-full antialiased`}>
         <body className="min-h-full flex flex-col bg-vampire-black text-light-grey font-body">
           <AuthProvider>
-            <StoreProvider>
-              <ToastProvider>
-                <PlayerProvider>
-                  <SongDetailProvider>
-                    <div className="aurora-bg" aria-hidden="true" />
-                    <AppShell>{children}</AppShell>
-                    <PersistentPlayer />
-                    <SongDetailDrawer />
-                  </SongDetailProvider>
-                </PlayerProvider>
-              </ToastProvider>
-            </StoreProvider>
+            <LikedSongsProvider>
+              <StoreProvider>
+                <ToastProvider>
+                  <PlayerProvider>
+                    <SongDetailProvider>
+                      <div className="aurora-bg" aria-hidden="true" />
+                      <AppShell>{children}</AppShell>
+                      <PersistentPlayer />
+                      <SongDetailDrawer />
+                    </SongDetailProvider>
+                  </PlayerProvider>
+                </ToastProvider>
+              </StoreProvider>
+            </LikedSongsProvider>
           </AuthProvider>
         </body>
       </html>
